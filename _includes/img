@@ -1,0 +1,18 @@
+<div class="text-center" style="padding:30px;">
+  {% if include.date %}
+  {% capture path %}{{include.date}}/{{include.src}}{% endcapture %}
+  {% else %}
+  {% capture path %}{{include.src}}{% endcapture %}
+  {% endif %}
+  <img  src="{{site.base}}/images/{{path}}" 
+        class="img-responsive center-block"
+      />
+      
+  {% if include.caption %}
+  <br/><em>{{include.caption}}</em>
+  
+  {% if include.link %}
+    <a href="{{include.link}}">{% include fa name="arrow-circle-right" %}</a><br/>
+  {% endif %}
+  {% endif %}
+</div>

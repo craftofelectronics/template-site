@@ -1,0 +1,42 @@
+
+<script>
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("active");
+});
+</script>
+
+
+{% if page.categories contains "learn" %}
+
+<script> 
+{% capture date_length %}{{ page.date | size | minus: 9 }}{% endcapture %}
+{% capture date %}{{page.date}}{% endcapture %}
+{% if date_length contains '-' %}
+  {% if site.classtime %}
+    {% capture date %}{{page.date}}{{site.classtime}}{% endcapture %}
+  {% else %}
+    {% capture date %}{{page.date}}0000{% endcapture %}
+  {% endif %}
+{% endif %}
+
+  today = moment();
+  m     = moment();
+  m = parseDueDate("{{date}}");
+
+  var diff = m.diff(today, 'days');
+  var difference = "";
+  if (diff >= 0) {
+    difference = m.from(moment());
+  }
+
+  difference = "<div style='padding:35px;' class='pull-right'><span style='font-size:24px;' class='label " + 
+      getRangeColor(m) + 
+      " pull-right'>" +
+      "Due " + difference + "."
+      "</span></div>";
+
+  $("#assignmentduein").html(difference);
+  </script>
+
+{% endif %}

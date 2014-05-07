@@ -1,0 +1,46 @@
+# Course details
+name: Craft of Electronics
+number: TAD 265
+twitter: craftoe
+classtime: 1300
+url: http://craftofelectronics.org
+phone: 925-238-3692
+
+# Logos should be roughly 180 x 120
+# They go in /css/images/
+# convert -scale 180x104 logo-www.png logo-www-small.png
+# nav_logo: logo-www-small.png
+nav_logo: craftoe-logo-180.png
+
+# I recommend 
+# http://colorschemedesigner.com/#
+# with "Triad" for color selection.
+
+# Blue
+# nav_color: "rgb(28, 72, 117)"  482f92
+# Kenyon Purple
+nav_color: "rgb(72, 37, 146)"  
+# Rich Red (Digi)
+# nav_color: "rgb(204, 0, 0)"  
+# White
+nav_link_color: "rgba(255,255,255,0.3)"
+# Green
+nav_hover_color: "rgb(120, 180, 50)"
+
+# The base should be defined in the breakout config
+# base: 
+
+inclass:
+  - interact
+  
+todo:
+  - learn
+#  - tutorial
+
+# These values probably have no impact whatsoever.
+markdown: redcarpet
+redcarpet:
+    extensions: [with_toc_data]
+# Needed for Moustache.js
+moustache: "{{=[[ ]]=}}"
+

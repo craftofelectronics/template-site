@@ -1,0 +1,15 @@
+{% if include.width %}
+  {% assign width = include.width %}
+{% else %}
+  {% assign width = "40%" %}
+{% endif %}
+
+
+<a href="{{site.base}}/images/{{include.name}}">
+  <img  src="{{site.base}}/images/{{include.name}}" 
+        alt="{{include.alt}}" 
+        width="{{width}}" 
+        class="img-responsive" 
+        style="float:right;margin:20px;" 
+        />
+</a>

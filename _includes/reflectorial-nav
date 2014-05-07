@@ -1,0 +1,26 @@
+{% assign src = page.nav %}
+{% assign meta = site.data.reflectorials[src] %}
+
+<div class="row">
+
+  <div class="col-md-10">
+    <ul class="pagination">
+      {% for section in meta.toc %}
+        {% assign class = "" %}
+        {% if page.url contains section.file %}
+          {% assign class = "active" %}
+        {% endif %}
+        <li class="{{class}}">
+          <a href="{{section.file}}.html">{{section.short}}</a>
+        </li>
+      {% endfor %}
+    </ul>  
+  </div>
+
+  <div class="col-md-2">
+    <img class="img-responsive pull-right"
+       src="images/banner.png" 
+       alt="Image CC licensed by {{meta.banner.user}}, {{meta.banner.url}}."/>
+   </div>
+
+ </div>

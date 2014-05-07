@@ -1,0 +1,60 @@
+---
+---
+body {
+  font-size: 2em;
+}
+
+.top-buffer { margin-top: 20px; }
+  
+.navbar {
+  background: {{site.nav_color}};
+  padding-top: 0px;
+  height: 80px;
+}
+
+  
+.navbar-collapse, .in {
+  background-color: {{site.nav_color}} !important; 
+}
+
+ul.nav a:hover { color: #CCCCFF !important; }
+
+.videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@media print {
+/* To prevent printing of an element, add this class*/
+  .noprint {
+    display:none;
+  }
+}
+
+@media all {
+	.page-break	{ display: none; }
+}
+
+@media print {
+	.page-break	{ display: block; page-break-before: always; }
+}

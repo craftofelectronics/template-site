@@ -1,0 +1,5 @@
+<ol>
+{% for tuple in page.toc %}
+  <li> <a href="#{{tuple[1]}}">{{tuple[0]}}</a> </li>
+{% endfor %}
+</ol>

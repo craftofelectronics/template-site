@@ -1,0 +1,102 @@
+tmp36:
+  publish: later
+  title: Testing the TMP36
+  blurb: This is a blurb.
+  banner:
+    url: http://www.flickr.com/photos/leisamarie/368660664/
+    user: leisamarie
+  toc:
+    - file: index
+      short: Objectives
+    - file: preparation
+      short: Preparation
+    - file: circuit
+      short: Circuit
+    - file: practice
+      short: Do It!
+    - file: reading
+      short: Further Reading
+    - file: reflection
+      short: Reflection
+      
+exploring-transistors:
+  publish: now
+  title: Exploring Transistors
+  blurb: Using both NPN and PNP transistors as switches.
+  banner:
+    url: http://www.flickr.com/photos/calliope/2396656773/
+    user: calliope
+  toc:
+    - file: index
+      short: Objectives
+    - file: preparation
+      short: Preparation
+    - file: circuit
+      short: Circuit
+    - file: safety
+      short: Safety
+    - file: practice
+      short: Do It!
+    - file: reflection
+      short: Reflection
+
+building-gates:
+  publish: now
+  title: Building Gates
+  blurb: Using NPN transistors to build logic gates.
+  banner:
+    url: http://www.flickr.com/photos/12289718@N00/7235256692/
+    user: schill
+  toc:
+    - file: index
+      short: Objectives
+    - file: puzzling
+      short: Puzzling
+    - file: safety
+      short: Safety
+    - file: practice
+      short: Do It!
+    - file: reflection
+      short: Reflection
+
+
+scope:
+  publish: now
+  title: Oscilloscope Basics
+  blurb: Getting into the oscilloscope.
+  banner:
+    url: http://www.flickr.com/photos/51035609472@N01/30326527/
+    user: mrpattersonsir
+  toc:
+    - file: index
+      short: Objectives
+    - file: safety
+      short: Safety
+    - file: virtual
+      short: Virtual
+    - file: actual
+      short: Actual
+    - file: reflection
+      short: Reflection
+
+
+transistor-oscillator:
+  publish: later
+  title: Oscilloscope Basics
+  blurb: Getting into the oscilloscope.
+  banner:
+    url: http://www.flickr.com/photos/72139255@N00/4631038832/
+    user: veggiefrog
+  toc:
+    - file: index
+      short: Objectives
+    - file: virtual
+      short: Virtual
+    - file: actual
+      short: Actual
+    - file: safety
+      short: Safety
+    - file: practice
+      short: Do It!
+    - file: reflection
+      short: Reflection
