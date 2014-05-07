@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 .DS_Store
 _site/
 _old/
 *.swp
 *~
 _raw/
+=======
+_site/
+>>>>>>> 79eb0dfec3d051045e16f20192d6f96813b771a6
