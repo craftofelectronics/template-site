@@ -4,45 +4,47 @@ resource: local
 layout: default
 ---
 
-{% include twocol label="Course" value=site.name %}
-{% include twocol label="Number" value=site.number %}
-{% include twocol label="Instructor" value="Matt Jadud" %}
-{% include twocol label="Office" value="Danforth Tech 102B" %}
-{% include twocol label="Phone" value=site.phone %}
-{% include twocol label="Email" value="jadudm" %}
 
-## Office Hours
+<div id="drawing"> </div>
 
-I am more than happy to chat, and sometimes you can stop by during office hours and I'll be free; however, I schedule my time pretty tightly, so it is possible I may ask you to make an appointment and/or follow up via email.
+<script type="text/javascript">
+// Creates canvas 320 × 200 at 10, 50
+var paper = Raphael("drawing", 320, 200);
 
-## Course Goals
+// x,y,width,height,corner radius
 
-Course goals are the "big picture" themes of the course. These will be reinforced through our learning activities, in and out of class.
+var title = paper.rect(0,0,120,25);
+var txt = paper.text(60, 15, "Community").scale(1.5, 1.5);
 
-<br/>
+var dims = paper.rect(0,25,120,25);
 
-If this was the *only* course in electricity and electronics you take at Berea College, and you never touch or study the subject again while you are a student, what do we hope you will remember 10 years from now?
+var dimensions = Array(6);
+var colors = ['#006', '#006600', '#660099', '#FF0033', '#FF6600', '#FFFF99'];
+for (i = 0 ; i < 6; i++) {
+  dimensions[i] = paper.rect(0 + i*20, 25, 20, 25);  
+  dimensions[i].attr("fill", colors[i]);
+}
 
-<br/>
+// Sets the stroke attribute of the circle to white
+circle.attr("stroke", "#000");
 
-1. **We want to be safe in everything we do**. <br/>
-  
-  People who do not respect electricity are dangerous to themselves and others. Safety is the most important thing you can learn in *Craft of Electronics*.
-  
-1. **We want to build things**. <br/>
-  
-  We will learn to think with our hands as we build electrical systems; if you can hold a pencil, you can build electronics.
+</script>
 
-1. **We want to design solutions to our own problems**. <br/>
-  
-  We study electricity and electronics because it enables us to better understand ourselves and our environment---and control that environment as well.
+{% callout info %}
+We will explore the details of this syllabus together throughout the term. Feel free to dive in now if you like. (Use the {% icon sign-in %} icons.)
+{% endcallout %}
 
-1. **We want to communicate our efforts with excellence.** <br/>
 
-  We design, we build, and we **share**. That communication, be it via text, live presentation, or video, must be clearly articulated and professional in nature.
+## Course Goals  [{% icon sign-in %}](syllabus/course-goals.html)
+If this was the *only* course in electricity and electronics you take at Berea College, and you never touch or study the subject again while you are a student, what questions do I hope you will be able to answer 10 years from now?
 
-Throughout the course, we will highlight when we are learning about **safety**, focusing on **building**, or **designing** circuits and systems.
+1. **How can I be safe in everything I do?** <br/>
 
+1. **How can I design electrical systems to sense and interact with the world?** <br/>
+
+1. **How do I build and program those systems?** <br/>
+
+1. **How do I communicate, with clarity, the results of my efforts?** <br/>
 
 ## Course Learning Objectives
 
@@ -60,6 +62,14 @@ Learning objectives describe what I expect you to be able to demonstrate as know
 1. Given a PCB, the student will be able to produce a schematic of that circuit.
 
 1. A student will demonstrate the ability to reflect critically on their learning process.
+
+## Course Policies [{% icon sign-in %}](syllabus/course-policies.html)
+
+I have some policies that I use as a foundation for all of my courses. We discuss these, and then develop any additional policies together.
+
+## Office Hours
+
+I am more than happy to chat, and sometimes you can stop by during office hours and I'll be free; however, I schedule my time pretty tightly, so it is possible I may ask you to make an appointment and/or follow up via email.
 
 
 
@@ -118,3 +128,11 @@ The Computing and Digital Crafts Lab is open Sunday through Thursday from 7:00 t
 ## Statement Regarding Disability
 
 Berea College will provide reasonable accommodations for all persons with disabilities so that learning experiences are accessible. If you experience physical or academic barriers based on disability, please see Lisa Ladanyi (Disability & Accessibility Services, 110 Lincoln Hall, 859-985-3327, lisa.ladanyi@berea.edu) to discuss options. Students must provide their instructor(s) with an accommodation letter before any accommodations can be provided. Accommodations cannot be provided retroactively. Please meet with your instructor(s) in a confidential environment to discuss arrangements for these accommodations.
+
+
+{% include twocol label="Course" value=site.name %}
+{% include twocol label="Number" value=site.number %}
+{% include twocol label="Instructor" value="Matt Jadud" %}
+{% include twocol label="Office" value="Danforth Tech 102B" %}
+{% include twocol label="Phone" value=site.phone %}
+{% include twocol label="Email" value="jadudm" %}

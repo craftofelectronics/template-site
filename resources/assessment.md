@@ -4,13 +4,21 @@ resource: local
 layout: default
 ---
 
+<!-- success, info, warning, danger -->
+{% callout danger %}
+Your learning and success depends on understanding how to respond to feedback.
+{% endcallout %}
 
-## Feedback
 
+## How I Will Give You Feedback
 
+Something about how I will engage in feedback, and how they need to respond
 
-## Assessment
+## How You Need To Respond To Feedback
 
+## How I Will Assess You
+
+## What Assessment Might Mean To You
 
 ### Grading Scale
 
