@@ -4,32 +4,6 @@ resource: local
 layout: default
 ---
 
-
-<div id="drawing"> </div>
-
-<script type="text/javascript">
-// Creates canvas 320 × 200 at 10, 50
-var paper = Raphael("drawing", 320, 200);
-
-// x,y,width,height,corner radius
-
-var title = paper.rect(0,0,120,25);
-var txt = paper.text(60, 15, "Community").scale(1.5, 1.5);
-
-var dims = paper.rect(0,25,120,25);
-
-var dimensions = Array(6);
-var colors = ['#006', '#006600', '#660099', '#FF0033', '#FF6600', '#FFFF99'];
-for (i = 0 ; i < 6; i++) {
-  dimensions[i] = paper.rect(0 + i*20, 25, 20, 25);  
-  dimensions[i].attr("fill", colors[i]);
-}
-
-// Sets the stroke attribute of the circle to white
-circle.attr("stroke", "#000");
-
-</script>
-
 {% callout info %}
 We will explore the details of this syllabus together throughout the term. Feel free to dive in now if you like. (Use the {% icon sign-in %} icons.)
 {% endcallout %}
@@ -45,6 +19,15 @@ If this was the *only* course in electricity and electronics you take at Berea C
 1. **How do I build and program those systems?** <br/>
 
 1. **How do I communicate, with clarity, the results of my efforts?** <br/>
+
+{% finkblock Community F A HD %}
+ 
+{% finkblock Theory C HD LL %}
+
+{% fink Meta F C HD %}
+ This is some explanation.
+{% endfink %}
+
 
 ## Course Learning Objectives
 

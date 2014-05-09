@@ -1,6 +1,54 @@
 ---
 ---
 
+
+var fink = function (category, htmlelement, elements) {
+  var FULLHEIGHT= 60;
+  var HALFHEIGHT = 30;
+  var FULLWIDTH = 120;
+  var HALFWIDTH = 60;
+  var STROKE = 2;
+  
+  var paper = Raphael(htmlelement, FULLWIDTH, FULLHEIGHT);
+
+  // x,y,width,height,corner radius
+  var title = paper.rect(0,0, FULLWIDTH, HALFHEIGHT);
+  title.attr("stroke-width", STROKE);
+  
+  var txt = paper.text(HALFWIDTH, FULLHEIGHT / 4, category).scale(1.5, 1.5);
+
+  var dims = paper.rect(0, HALFHEIGHT, FULLWIDTH, HALFHEIGHT);
+  dims.attr("stroke-width", STROKE);
+
+  var dimensions = Array(6);
+  var colors = ['#006', '#006600', '#660099', '#FF0033', '#FF6600', '#FFFF99'];
+  var labels = ['F', 'A', 'I', 'HD', 'C', 'LL'];
+  var txtcolor = ['#FFF', '#FFF', '#FFF', '#000', '#000', '#000'];
+  
+  for (i = 0 ; i < 6; i++) {
+    dimensions[i] = paper.rect(0 + i * (FULLWIDTH / 6), HALFHEIGHT, (FULLWIDTH / 6), HALFHEIGHT);  
+    dimensions[i].attr("stroke-width", STROKE);
+    if (elements & 0x01) {
+      // console.log("elements: " + elements);
+      dimensions[i].attr("fill", colors[i]);
+      var lab = paper.text(dimensions[i].getBBox().x + ((FULLWIDTH / 6) / 2), (dimensions[i].getBBox().y / 2) + HALFHEIGHT, labels[i]);
+      lab.attr("fill", txtcolor[i]);
+    }
+    elements = elements >> 1;
+  }
+  
+  var outer = paper.rect(0,0, FULLWIDTH, FULLHEIGHT);
+  outer.attr("stroke-width", STROKE * 2);
+};
+// Attach the categories to the function.
+fink.F  =    0x01;
+fink.A  =  fink.F << 1;
+fink.I  =  fink.A << 1;
+fink.HD =  fink.I << 1;
+fink.C  = fink.HD << 1;
+fink.LL =  fink.C << 1;
+
+
 String.prototype.contains = function(it) { return this.indexOf(it) != -1; };
 
 var dayName = function (d) {
@@ -18,12 +66,12 @@ var member = function (ls, v) {
     }
   }
   return result;
-}
+};
 
 
 var awesome = function (ico) {
   return '<i class="fa fa-' + ico + '"></i>'
-}
+};
 
 var icons = { "reading"     : awesome("book"), 
               "pdf"         : "<img src='{{site.base}}/images/pdf.png'/>",
@@ -46,7 +94,7 @@ var icons = { "reading"     : awesome("book"),
               "proto"       : awesome("wrench"),
               "prototyping" : awesome("wrench"),              
               "making"      : awesome("wrench"),
-            }
+            };
             
 var getIcon = function (allcats) {
   result = "";
@@ -64,7 +112,7 @@ var getIcon = function (allcats) {
     }
   }
   return result;
-}
+};
 
 var isReleased = function (after) { 
   /* Here's a way to cheat when testing on localhost. 
@@ -100,7 +148,7 @@ var onlyInFuture = function (due, txt) {
   }
     
   return returnText;
-}
+};
 
 // 5 or less days, RED
 // 8 or less days, YELLOW
@@ -119,11 +167,11 @@ var getRangeColor = function (mom) {
   } else {
     return "label-default";
   }
-}
+};
 
 var isValidDueDate = function (due) {
   return (due.length == 12 || due.length == 8);
-}
+};
 
 var parseDueDate = function (due) {
   var m;
@@ -134,4 +182,4 @@ var parseDueDate = function (due) {
   }
   
   return m;
-}
+};
