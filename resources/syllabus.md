@@ -5,7 +5,7 @@ layout: default
 ---
 
 {% callout info %}
-We will explore the details of this syllabus together throughout the term. Feel free to dive in now if you like. (Use the {% icon sign-in %} icons.)
+We will explore the details of this syllabus together throughout the term.
 {% endcallout %}
 
 
@@ -20,14 +20,6 @@ If this was the *only* course in electricity and electronics you take at Berea C
 
 1. **How do I communicate, with clarity, the results of my efforts?** <br/>
 
-{% finkblock Community F A HD %}
- 
-{% finkblock Theory C HD LL %}
-
-{% fink Meta F C HD %}
- This is some explanation.
-{% endfink %}
-
 
 ## Course Learning Objectives
 
@@ -36,15 +28,19 @@ If this was the *only* course in electricity and electronics you take at Berea C
 <!-- http://www.cmu.edu/teaching/designteach/design/learningobjectives-samples/index.html -->
 <!-- http://www.cmu.edu/teaching/designteach/design/learningobjectives.html -->
 
-Learning objectives describe what I expect you to be able to demonstrate as knowledge, skills, and practices at the end of the term.
+Learning objectives involve the kinds of knowledge you will gain regarding electricity and electronics, the ability to apply and integrate it, as well as the human connections and opportunities for lifelong learning in the field. As the course progresses, we will work together to develop answers to the following questions.
 
+1. **MAKER**: What tools do I need to use to take part in the global electronics maker community?
 
+1. **THEORY**: What are the connections between the theories of electricity and electronics to our daily lives?
 
-1. Given a schematic, the student will be able to produce a PCB design of that circuit. 
+1. **READ**: How do I interpret the many representations of electronics, and use that information to build circuits that work?
 
-1. Given a PCB, the student will be able to produce a schematic of that circuit.
+1. **DESIGN**: What knowledge of electronic components do I need to design circuits to sense and automate the world around me?
 
-1. A student will demonstrate the ability to reflect critically on their learning process.
+1. **LEARN**: How can I prepare myself to program systems that sense and automate the world around me, even if I've never programmed a computer before?
+
+1. **QUESTION**: What questions can I ask about myself and the world around me, now and in the future, that sensing and automation systems can help me answer?
 
 ## Course Policies [{% icon sign-in %}](syllabus/course-policies.html)
 
@@ -119,3 +115,9 @@ Berea College will provide reasonable accommodations for all persons with disabi
 {% include twocol label="Office" value="Danforth Tech 102B" %}
 {% include twocol label="Phone" value=site.phone %}
 {% include twocol label="Email" value="jadudm" %}
+
+{% callout danger %}
+This syllabus is a living document. It may change.
+<p style="margin-top:15px;" />
+Because I respect you, we will probably discuss possible changes together. But please, do not confuse my course with a democracy: I am in charge here.
+{% endcallout %}

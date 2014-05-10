@@ -33,4 +33,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('fink', Jekyll::FinkExplained)
+Liquid::Template.register_tag('finkexplained', Jekyll::FinkExplained)

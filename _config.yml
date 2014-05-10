@@ -38,9 +38,9 @@ todo:
 #  - tutorial
 
 # These values probably have no impact whatsoever.
-markdown: redcarpet
-redcarpet:
-    extensions: [with_toc_data]
+markdown: kramdown
+#redcarpet:
+#    extensions: [with_toc_data]
 # Needed for Moustache.js
 moustache: "{{=[[ ]]=}}"
 

@@ -1,0 +1,24 @@
+sleep:
+  question: The Question For This Thing
+  base: sleep
+  parts:
+    - title: Reading About Sleep
+      file: reading
+      due: 20141011
+
+    - title: Components Jigsaw
+      file: jigsaw
+      due: 20141014
+      inclass: true
+
+solar:
+  question: How Big Is the Sun?
+  parts:
+    - title: All Hotdogs
+      file: reading-about-sleep
+      due: 20141011
+      
+    - title: Giving Back
+      file: components-jigsaw
+      due: 20141014
+

@@ -12,21 +12,21 @@ module Jekyll
       random = rand(1000000).to_s;
       elements = arr.slice(1,6)
       
-      html = "<div>\n<span id='" + tag + random + "'> </span>\n"
-      html += "<script type=\"text/javascript\">\n"
-      html += "\tfink('" + tag + "', "
+      html = "<div> <span id='" + tag + random + "'> </span> "
+      html += "<script type=\"text/javascript\"> "
+      html += "fink('" + tag + "', "
       html += "'" + tag + random + "', 0 "
       
       elements.each do |elem|
         html += " | fink." + elem
       end
             
-      html += ");\n</script>\n"
-      html += "</div>\n\n"
+      html += "); </script> "
+      html += "</div>"
       html
       
     end
   end
 end
 
-Liquid::Template.register_tag('finkblock', Jekyll::FinkBlock)
+Liquid::Template.register_tag('fink', Jekyll::FinkBlock)
