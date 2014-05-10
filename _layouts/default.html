@@ -15,8 +15,10 @@
     {% include top-nav.html %}
       
     <div class="container" style="margin-bottom: 10px;">
+
+      
       <div class="row">            
-        <div class="col-md-12">
+        <div class="col-md-8">
           {% unless page.hideTitle %}
           {% if page.nav %}
             {% assign title = site.data.reflectorials[page.nav].title %}
@@ -28,10 +30,25 @@
           {% if page.nav %}
             {% include reflectorial-nav %}
           {% endif %}
-
+        </div>
+        <div class="col-md-4">
+          <div id="assignmentduein"> </div>
+        </div>
+      </div>
+        
           <div class="row top-buffer">
             <div class="col-md-12">
-              <div id="assignmentduein"> </div>
+
+              {% for todo in site.data.todo %}
+                {% for part in todo[1].parts %}
+                {% if part.title == page.title %}
+                <div style="padding:35px;" class="pull-right" id="{{part.due}}" > </div>
+                <script type='text/javascript'> 
+                  dueIn("assignmentduein", "{{part.due}}", "false", "Due ", "160%"); 
+                </script>
+                {% endif %}
+              {% endfor %}
+              {% endfor %}
               
               {{content}}
             </div>

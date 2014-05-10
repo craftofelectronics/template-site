@@ -32,13 +32,13 @@ Learning objectives involve the kinds of knowledge you will gain regarding elect
 
 1. **MAKER**: What tools do I need to use to take part in the global electronics maker community?
 
-1. **THEORY**: What are the connections between the theories of electricity and electronics to our daily lives?
+1. **CONNECTIONS**: What are the connections between the theories of electricity and electronics to our daily lives?
 
-1. **READ**: How do I interpret the many representations of electronics, and use that information to build circuits that work?
+1. **LANGUAGE**: How do I interpret the many representations of electronics, and use that information to build circuits that work?
 
 1. **DESIGN**: What knowledge of electronic components do I need to design circuits to sense and automate the world around me?
 
-1. **LEARN**: How can I prepare myself to program systems that sense and automate the world around me, even if I've never programmed a computer before?
+1. **CODE**: How can I prepare myself to program systems that sense and automate the world around me, even if I've never programmed a computer before?
 
 1. **QUESTION**: What questions can I ask about myself and the world around me, now and in the future, that sensing and automation systems can help me answer?
 

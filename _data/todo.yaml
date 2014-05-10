@@ -4,7 +4,7 @@ sleep:
   parts:
     - title: Reading About Sleep
       file: reading
-      due: 20141011
+      due: 20140811
 
     - title: Components Jigsaw
       file: jigsaw
@@ -16,9 +16,9 @@ solar:
   parts:
     - title: All Hotdogs
       file: reading-about-sleep
-      due: 20141011
+      due: 20140611
       
     - title: Giving Back
       file: components-jigsaw
-      due: 20141014
+      due: 20140528
 
