@@ -18,9 +18,24 @@
 
       
       <div class="row">            
+        
         <div class="col-md-8">
+          
           {% unless page.hideTitle %}
-          {% if page.nav %}
+          {% if page.todo %}
+          
+          {% for todo in site.data.todo %}
+            {% if todo[0] == page.todo %}
+              {% for part in todo[1].parts %}
+                {% if page.file == part.file %}
+                  {% assign title = part.title %}
+                  {% assign base = todo[0] %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+          
+          {% elsif page.nav %}
             {% assign title = site.data.reflectorials[page.nav].title %}
           {% else %}
             {% assign title = page.title %}
@@ -34,15 +49,22 @@
         <div class="col-md-4">
           <div id="assignmentduein"> </div>
         </div>
-      </div>
-        
+      </div> 
           <div class="row top-buffer">
             <div class="col-md-12">
-
+              
+              {% comment %}
+              <!-- 
+              {% if page.image %}
+              <div class="pull-right" style="width: 200px; height: 200px; background-image: url(images/{{page.image}}); background-size: cover; display: block; border-radius: 100px; -webkit-border-radius: 100px; -moz-border-radius: 100px; box-shadow: 0 0 8px rgba(0, 0, 0, .8); -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);"> </div>
+              {% endif %}
+              -->
+              {% endcomment %}
+              
               {% for todo in site.data.todo %}
                 {% for part in todo[1].parts %}
                 {% if part.title == page.title %}
-                <div style="padding:35px;" class="pull-right" id="{{part.due}}" > </div>
+                <!-- <div style="padding:35px;" class="pull-right" id="{{part.due}}" > </div> -->
                 <script type='text/javascript'> 
                   dueIn("assignmentduein", "{{part.due}}", "false", "Due ", "160%"); 
                 </script>

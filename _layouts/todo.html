@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{site.name}}: {{page.title}}</title>
+    {% include css.html %}
+  </head>
+
+  <body>
+    {% include javascript-top.html %}
+    {% include top-nav.html %}
+      
+    <div class="container" style="margin-bottom: 10px;">
+
+      
+      <div class="row">            
+        <div class="col-md-8">
+          
+            <h1>{{title}}</h1>
+          
+        </div>
+        <div class="col-md-4">
+          <div id="assignmentduein"> </div>
+        </div>
+      </div>
+        
+          <div class="row top-buffer">
+            <div class="col-md-12">
+
+              {% for todo in site.data.todo %}
+                {% for part in todo[1].parts %}
+                {% if part.title == page.title %}
+                <div style="padding:35px;" class="pull-right" id="{{part.due}}" > </div>
+                <script type='text/javascript'> 
+                  dueIn("assignmentduein", "{{part.due}}", "false", "Due ", "160%"); 
+                </script>
+                {% endif %}
+              {% endfor %}
+              {% endfor %}
+              
+              {{content}}
+            </div>
+          </div>
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+      {% include javascript-bottom.html %}
+  </body>
+</html>

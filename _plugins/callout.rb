@@ -21,7 +21,7 @@ module Jekyll
         @alert = 'danger'
       end
       
-      "<div style='margin: 15px;' class=\"alert alert-#{@alert}\">\n" + super + "\n</div>\n"
+      "<div style='margin: 15px;' class=\"bs-callout bs-callout-#{@alert}\">\n" + super + "\n</div>\n"
     end
   end
 end

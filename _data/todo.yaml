@@ -1,24 +1,48 @@
 sleep:
-  question: The Question For This Thing
+  question: Why Does Sleep Matter?
   base: sleep
   parts:
-    - title: Reading About Sleep
+    - title: Reading About Slee... zzz...
       file: reading
-      due: 20140811
+      date: 20140514
 
-    - title: Components Jigsaw
-      file: jigsaw
-      due: 20141014
+    - title: Working with Switches
+      file: switch-prototype
+      date: 20140514
       inclass: true
 
-solar:
-  question: How Big Is the Sun?
-  parts:
-    - title: All Hotdogs
-      file: reading-about-sleep
-      due: 20140611
+    - title: Components - Pull-Up, Pull-Down, and Switches
+      file: monitor-design
+      date: 20140519
       
-    - title: Giving Back
-      file: components-jigsaw
-      due: 20140528
+    - title: Designing a Sleep Monitor
+      file: monitor-design
+      date: 20140519
+      inclass: true
+
+    - title: Documenting The Design
+      file: monitor-design
+      date: 20140521
+
+    - title: Monitor Build
+      file: monitor-design
+      date: 20140521
+      inclass: true
+      
+    - title: Documenting the Build
+      file: monitor-design
+      date: 20140526
+
+    
+
+solar:
+  question: What Can the Sun Do for Me?
+  parts:
+    - title: Cooking Hot Dogs the Natural Way
+      file: cooking-hot-dogs
+      date: 20140611
+      
+    - title: Powering the World
+      file: powering-world
+      date: 20140528
 
