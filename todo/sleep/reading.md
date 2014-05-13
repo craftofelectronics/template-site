@@ -52,7 +52,7 @@ Finally, when you're done, I'd like you to blog about two things.
 
 Again, when it comes to these three motivating questions, **they are just suggestions**. Your blog is your own, and my only request is that this points us at an interesting article (and summarizes it), and the rest of your post is a personal reflection regarding your relationship with sleep, be it past, present, or future.
 
-### Submission
+## Submission
 
 When you're done, share a link to your blog post. You can submit it below, [or visit the full form here][form]. 
 
@@ -60,7 +60,13 @@ When you're done, share a link to your blog post. You can submit it below, [or v
   <iframe src="https://docs.google.com/forms/d/1NBHcyCFyZshStIxxaquBpthXZGipZ84-i5c1yYw6XEs/viewform?embedded=true" width="760" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 </div>
 
-### Learning Objectives
+## Feedback
+
+The feedback you receive will focus on the quality and depth of your reflections that appear in your blog post.
+
+{% include rubric-blog.html %}
+
+## Learning Objectives
 
 This assignment speaks to two different learning objectives.
 
