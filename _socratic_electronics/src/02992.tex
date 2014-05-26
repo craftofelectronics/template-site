@@ -1,0 +1,31 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+If your event sensing switch is mechanical in nature, you will likely have to deal with {\it contact bounce}.  Explain what contact "bounce" is and how you can mitigate the problem.
+
+\underbar{file 02992}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Contact "bounce" is the physical bouncing and interference of metal switch contacts as they come to a closed state, causing spurious pulses which will be interpreted by the counter as multiple events.  Perhaps the simplest way to mitigate the effects of contact bounce is to use a passive low-pass filter (RC integrator) circuit followed by a Schmitt trigger gate.  Using a serial-in/serial-out shift register is a more sophisticated approach, but requires more components (including a clock signal generator).
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Contact bounce can be a big problem in counter circuits getting their input from mechanical switches.  Learning how to detect and eliminate this problem is a very practical exercise for electronics technicians.
+
+%(END_NOTES)
+
+

@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The equation relating probability of continued performance for a component or a system versus time may be expressed as follows:
+
+$$x = e^{-t / m}$$
+
+\noindent
+Where,
+
+$x$ = Probability (a number between 0 and 1, inclusive)
+
+$e$ = Euler's constant ($\approx$ 2.7182818)
+
+$t$ = Time of continuous operation
+
+$m$ = Mean Time Between Failure of the component or system
+
+\vskip 10pt
+
+The unit of time for both $t$ and $m$ must be the same.  That is, if $t$ is measured in years, then $m$ must also be expressed in years or else the equation will give very misleading answers.
+
+Suppose, though, we were given $m$ in years, and the operating time $t$ in {\bf days}.  Substitute the relationship $t_d = 365 t_y$ into the reliability equation so that we will have a new equation that can take $t$ in days ($t_d$) and $m$ in years, and still provide the correct answer.
+
+\underbar{file 04069}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$x = e^{-t_d / 365 m}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is really nothing more than a simple exercise in mathematical substitution.
+
+\vskip 10pt
+
+The equation came from the {\it Standard Handbook of Engineering Calculations} by Tyler G Hicks, P.E. (1972), page 5-21.
+
+%INDEX% MTBF
+%INDEX% Mean Time Between Failure
+
+%(END_NOTES)
+
+

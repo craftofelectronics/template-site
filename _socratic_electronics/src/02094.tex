@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Explain the operation of this JFET audio signal switch circuit:
+
+$$\epsfbox{02094x01.eps}$$
+
+What sort of signal is necessary at pin $V_{control}$ to allow the audio signal to pass through the JFET, and what sort of signal turns the JFET off?  Also, explain the purpose of each of these components in the audio switching circuit:
+
+\medskip
+\goodbreak
+\item{$\bullet$} Diode $D_1$
+\item{$\bullet$} Resistor $R_1$
+\item{$\bullet$} Resistor $R_2$
+\item{$\bullet$} Resistor $R_3$
+\medskip
+
+\vskip 10pt
+
+Challenge question: what is the greatest peak audio signal voltage that this circuit will tolerate before misbehaving, in relation to the positive and negative DC supply voltages (+V and -V)?
+
+\underbar{file 02094}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Diode $D_1$ prevents resistor $R_2$ from loading the audio signal source, and resistor $R_1$ provides a condition of $V_{GS}$ = 0 volts whenever transistor $Q_2$ is in a state of cutoff.  I'll let you determine the proper $V_{control}$ voltage levels for "on" and "off" control states.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This circuit was taken from the February 2004 edition of {\it Electronics World} magazine, in an article written by Douglas Self.  The article's original circuit showed component values, but I show it here in generic form, and somewhat rearranged.
+
+%INDEX% Transistor switch circuit (JFET), for AC signals
+
+%(END_NOTES)
+
+

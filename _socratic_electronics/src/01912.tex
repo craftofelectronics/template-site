@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Large electric motors and other pieces of rotating machinery are often equipped with {\it vibration sensors} to detect imbalances.  These sensors are typically linked to an automatic shutdown system so that the machine will turn itself off it the sensors detect excessive vibration.
+
+Some of the more popular industrial-grade sensors generate a DC voltage proportional to the physical distance between the end of the sensor and the nearest metallic surface.  A typical sensor installation might look like this:
+
+$$\epsfbox{01912x01.eps}$$
+
+If the machine is running smoothly (or if it is shut down and not turning at all), the output voltage from the sensor will be pure DC, indicating a constant distance between the sensor end and the shaft surface.  On the other hand, if the shaft becomes imbalanced it will bend ever so slightly, causing the distance to the sensor tip to periodically fluctuate as it rotates beneath the sensor.  The result will be a sensor output signal that is an AC "ripple" superimposed on a DC bias, the frequency of that ripple voltage being equal to the frequency of the shaft's rotation:
+
+$$\epsfbox{01912x02.eps}$$
+
+The vibration sensing circuitry measures the amplitude of this ripple and initiates a shutdown if it exceeds a pre-determined value.
+
+An additional sensor often provided on large rotating machines is a {\it sync pulse} sensor.  This sensor works just like the other vibration sensors, except that it is intentionally placed in such a position that it "sees" a keyway or other irregularity on the rotating shaft surface.  Consequently, the "sync" sensor outputs a square-wave "notch" pulse, once per shaft revolution:
+
+$$\epsfbox{01912x03.eps}$$
+
+The purpose of this "sync" pulse is to provide an angular reference point, so any vibration peaks seen on any of the other sensor signals may be located relative to the sync pulse.  This allows a technician or engineer to determine {\it where} in the shaft's rotation any peaks are originating.
+
+Your question is this: explain how you would use the sync pulse output to trigger an oscilloscope, so that every sweep of the electron beam across the oscilloscope's screen begins at that point in time.
+
+\vskip 10pt
+
+
+
+\underbar{file 01912}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Connect the "sync" pulse output to the "External Input" connector on the oscilloscope's front panel, and set the trigger source accordingly:
+
+$$\epsfbox{01912x04.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+There are many electronic (non-mechanical) examples one could use to illustrate the use of external triggering.  I like to introduce something like this once in a while to broaden students' thoughts beyond the world of tiny components and circuit boards.  The practical applications of electronics are legion!
+
+%INDEX% Oscilloscope, external trigger source
+
+%(END_NOTES)
+
+

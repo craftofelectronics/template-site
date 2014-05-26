@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Electrical engineers often represent impedances in rectangular form for the sake of algebraic manipulation: to be able to construct and manipulate equations involving impedance, in terms of the components' fundamental values (resistors in ohms, capacitors in farads, and inductors in henrys).
+
+For example, the impedance of a series-connected resistor ($R$) and inductor ($L$) would be represented as follows, with angular velocity ($\omega$) being equal to $2 \pi f$:
+
+$${\bf Z} = R + j \omega L$$
+
+Using the same algebraic notation, represent each of the following complex quantities:
+
+\medskip
+\goodbreak
+\item{$\bullet$} Impedance of a single capacitor ($C$) = 
+\item{$\bullet$} Impedance of a series resistor-capacitor ($R$, $C$) network =
+\item{$\bullet$} Admittance of a parallel inductor-resistor ($L$, $R$) network =
+\item{$\bullet$} Admittance of a parallel resistor-capacitor ($R$, $C$) network =
+\medskip
+
+\underbar{file 02117}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\goodbreak
+\item{$\bullet$} Impedance of a single capacitor ($C$) = $-j {1 \over \omega C}$
+\vskip 5pt
+\item{$\bullet$} Impedance of a series resistor-capacitor ($R$, $C$) network = $R -j {1 \over \omega C}$
+\vskip 5pt
+\item{$\bullet$} Admittance of a parallel inductor-resistor ($L$, $R$) network = ${1 \over R} -j {1 \over \omega L}$
+\vskip 5pt
+\item{$\bullet$} Admittance of a parallel resistor-capacitor ($R$, $C$) network = ${1 \over R} +j \omega C$
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+One possible point of confusion here is the sign of $j$ after inversion.  If it is not evident from the answers, ${1 \over j}$ is equal to $-j$, so that the impedance of an inductor ($j \omega L$) becomes $-j {1 \over {\omega L}}$ when converted into an admittance.
+
+%INDEX% Admittance, in rectangular algebraic form
+%INDEX% Impedance, in rectangular algebraic form
+
+%(END_NOTES)
+
+

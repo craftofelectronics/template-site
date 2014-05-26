@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student attempts to calculate the voltage gain of the following common-emitter amplifier circuit, and arrives at an incalculable value (divide-by-zero error):
+
+$$\epsfbox{02232x01.eps}$$
+
+According to a simple formula for approximating the voltage gain of this type of amplifier, it would indeed seem as though this circuit would have infinite voltage gain with zero emitter resistance.  However, even with no emitter resistor installed in such a circuit, the transistor itself contains a small amount of resistance intrinsic to the semiconductor material, commonly symbolized as $r'_e$:
+
+$$\epsfbox{02232x02.eps}$$
+
+The problem is, this resistance value $r'_e$ is far from stable.  Determine some of the factors influencing the value of the transistor's intrinsic emitter resistance, and explain why a circuit such as the one first shown in this question would be very unstable (possibly resulting in the self-destruction of the transistor!).
+
+\underbar{file 02232}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The emitter resistance of a transistor dynamically changes with emitter current and with semiconductor temperature, which is why it is often called the {\it dynamic emitter resistance}.  A commonly approximation for its value is this:
+
+$$r'_e \approx {\hbox{25 mV} \over I_E}$$
+
+\vskip 10pt
+
+Follow-up question: explain why this dynamic emitter resistance is often ignored when calculating voltage gain in a common-emitter circuit such as this:
+
+$$\epsfbox{02232x03.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question may serve as a good starting point for a discussion on thermal runaway, discussing how $r'_e$ decreases with temperature, increasing $I_E$, once again decreasing $r'_e$, an infinitum, ad {\it destructum}.
+
+The follow-up question provides a good opportunity to discuss the engineering principle of {\it swamping}: when two quantities are unequal to the extent that one renders the other relatively insignificant.  This concept is very important in analysis because it allows us to construct simpler models of realistic processes than we could if we had to take every factor into account.  It is also important in design because it allows us to overshadow certain unwanted effects.
+
+%INDEX% BJT intrinsic emitter resistance
+%INDEX% Dynamic emitter resistance (r'e)
+%INDEX% Emitter resistance, intrinsic to BJT
+
+%(END_NOTES)
+
+

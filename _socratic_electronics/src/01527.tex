@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Stepper motor coils typically draw a lot of current, requiring the use of power transistors to "buffer" the control circuitry to the motor.  A typical stepper motor final drive circuit looks something like this (only one of the four output transistors is shown, for brevity):
+
+$$\epsfbox{01527x01.eps}$$
+
+The diode is installed, of course, to prevent high-voltage surges from destroying the output transistor each time it turns off.  However, this causes a different problem: with the free-wheeling diodes in place, the magnetic field formed in each coil takes longer to "decay" when its respective transistor turns off.  This delay in time imposes a maximum rotational speed on the stepper motor, because the motor will not move to the next step until the magnetic field(s) from the previous step have dissipated.
+
+What modification may be made to this circuit to allow the transistors to switch faster, driving the stepper motor at a higher rotational speed?  Explain in detail why your solution will work.
+
+\underbar{file 01527}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01527x02.eps}$$
+
+I won't explain exactly why this solution works, but I'll let Michael Faraday give you a mathematical "hint:"
+
+$$v = N {d \phi \over dt}$$
+
+\vskip 10pt
+
+Follow-up question: what factors determine the resistance value of the new resistor shown in the diagram? 
+
+\vskip 10pt
+
+Challenge question: determine how to calculate the magnitude of the voltage "spike" seen at the transistor's collector terminal given a certain resistance value, diode specifications, and full-load motor coil current.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to describe the rate-of-change of magnetic flux in each coil upon transistor turn-off, with no commutating diodes in place (assuming the transistor could withstand the transient voltages produced by the inductor).  It should become clear to your students that the inclusion of diodes to prevent the high-voltage "spikes" literally creates the problem of magnetic field decay time.
+
+%INDEX% Commutating diode, in stepper motor drive circuit
+%INDEX% Free-wheeling diode, in stepper motor drive circuit
+
+%(END_NOTES)
+
+

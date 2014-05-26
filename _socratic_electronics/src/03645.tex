@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+In calculus, differentiation is the {\it inverse operation} of something else called {\it integration}.  That is to say, differentiation "un-does" integration to arrive back at the original function (or signal).  To illustrate this electronically, we may connect a differentiator circuit to the output of an integrator circuit and (ideally) get the exact same signal out that we put in:
+
+$$\epsfbox{03645x01.eps}$$
+
+Based on what you know about differentiation and differentiator circuits, what must the signal look like in between the integrator and differentiator circuits to produce a final square-wave output?  In other words, if we were to connect an oscilloscope in between these two circuits, what sort of signal would it show us?
+
+$$\epsfbox{03645x02.eps}$$
+
+\underbar{file 03645}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{03645x03.eps}$$
+
+\vskip 10pt
+
+Follow-up question: what do the schematic diagrams of passive integrator and differentiator circuits look like?  How are they similar to one another and how do they differ?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question introduces students to the concept of integration, following their prior familiarity with differentiation.  Since they should already be familiar with other examples of inverse mathematical functions (arcfunctions in trigonometry, logs and powers, squares and roots, etc.), this should not be too much of a stretch.  The fact that we may show them the cancellation of integration with differentiation should be proof enough.
+
+In case you wish to demonstrate this principle "live" in the classroom, I suggest you bring a signal generator and oscilloscope to the class, and build the following circuit on a breadboard:
+
+$$\epsfbox{03645x04.eps}$$
+
+The output is not a perfect square wave, given the loading effects of the differentiator circuit on the integrator circuit, and also the imperfections of each operation (being passive rather than active integrator and differentiator circuits).  However, the wave-shapes are clear enough to illustrate the basic concept.
+
+%INDEX% Calculus, integration and differentiation as inverse functions
+
+%(END_NOTES)
+
+

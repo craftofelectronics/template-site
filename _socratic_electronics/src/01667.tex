@@ -1,0 +1,33 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Totem-pole TTL gates usually differ greatly in their maximum source current versus maximum sink current ($I_{OH}$ versus $I_{OL}$).  Identify which current rating is usually greater, and also explain why this is.
+
+\underbar{file 01667}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$I_{OL}$ is typically much greater than $I_{OH}$ for a TTL gate with totem-pole output circuitry.  The reason for this should be obvious from inspection of the internal circuitry.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It should be noted that totem-pole TTL gates can actually source far more current than what is advertised without sustaining damage.  The severe limitation on sourcing current is more a function of staying within the permitted output voltage margins for TTL than it is a function of chip heating.  Thus, you may generally use a totem-pole TTL gate to source 20 mA to an LED without harm, though the "high" state output voltage (when the LED is lit) will be significantly below the acceptable threshold for a TTL gate {\it input}.
+
+%INDEX% Totem-pole output current asymmetry, TTL
+
+%(END_NOTES)
+
+

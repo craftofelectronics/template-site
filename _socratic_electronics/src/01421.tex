@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Write equations for the charging and discharging times of the capacitor, given the values of $R_1$, $R_2$, and $C$ in a circuit of this design:
+
+$$\epsfbox{01421x01.eps}$$
+
+Base your equations on the general rules of RC time constant circuits.  Don't just copy the completed equations from some reference book!  Assume that the 555's discharge transistor is a perfect switch when turned on (0 volts drop).  Note that the supply voltage is irrelevant to these calculations, so long as it remains constant during the charging cycle.
+
+\underbar{file 01421}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$t_{charge} = - \ln 0.5 (R_1 + R_2) C$$
+
+$$t_{discharge} = - \ln 0.5 R_2 C$$
+
+\vskip 10pt
+
+Follow-up questions: write an equation for the circuit's frequency, given values of $R_1$, $R_2$, and $C$.  Then, write another equation for the circuit's duty cycle.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Have your students show you how they mathematically derived their answer based on their knowledge of how capacitors charge and discharge.  Many textbooks and datasheets provide this same equation, but it is important for students to be able to derive it themselves from what they already know of capacitors and RC time constants.  Why is this important?  Because in ten years they won't remember these specialized equations, but they will probably still remember the general time constant equation from all the time they spent learning it in their basic DC electricity courses (and applying it on the job).  My motto is, "never remember what you can figure out."
+
+The challenge questions are worthwhile to do in class, even if few students were able to derive them on their own.  If nothing else, such an exercise reviews the meaning of "frequency" and its relationship with period, as well as the definition of "duty cycle."
+
+%INDEX% 555 timer, astable operation
+%INDEX% Algebra, manipulating equations
+
+%(END_NOTES)
+
+

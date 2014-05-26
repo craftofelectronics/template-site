@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose you were testing this step-down transformer, moving the selector switch between its various positions and measuring the transformer's output voltage at each switch position:
+
+$$\epsfbox{00056x01.eps}$$
+
+You notice something strange: when the switch is moved to the position producing the greatest output voltage, the transformer audibly "buzzes."  It produces no noticeable noise in any of the other switch positions.  Why is this happening?
+
+Hint: if the switch is left in the "buzzing" position for any substantial amount of time, the transformer temperature begins to increase.
+
+\underbar{file 00056}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The transformer core is {\it saturating} when the switch is in that one position.  This accounts for both the noise and the heating.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss with your students {\it why} the transformer core saturates only in that one switch position.  Why not in any of the other switch positions?
+
+In a non-tapped transformer, what condition(s) lead to core saturation?  How does this relate to the scenario shown here with a tapped transformer?
+
+Ideally, power transformer circuits should be designed to avoid core saturation, but this is not always the case in cheap designs.  I once encountered a tapped transformer, much like the one shown in the diagram, from an automotive battery charger which acted like this.  It was an excellent example for my students to feel and hear magnetic saturation.
+
+%INDEX% Saturation, transformer
+%INDEX% Transformer taps
+%INDEX% Taps, transformer winding
+
+%(END_NOTES)
+
+

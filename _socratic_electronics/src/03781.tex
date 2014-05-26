@@ -1,0 +1,59 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how the operation of this summer circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03781x01.eps}$$
+
+\medskip
+\item{$\bullet$} Resistor $R_1$ fails open:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_2$ fails open:
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across resistor $R_3$:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_4$ fails open:
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across resistor $R_4$:
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03781}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Resistor $R_1$ fails open: {\it $V_{out}$ becomes (inverted) sum of $V_2$ and $V_3$ only.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_2$ fails open: {\it $V_{out}$ becomes (inverted) sum of $V_1$ and $V_3$ only.}
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across resistor $R_3$: {\it $V_{out}$ saturates in a negative direction.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_4$ fails open: {\it $V_{out}$ saturates in a negative direction.}
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across resistor $R_4$: {\it $V_{out}$ goes to 0 volts.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in inverting summer circuit
+
+%(END_NOTES)
+
+

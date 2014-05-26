@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Where are the power supply pins most commonly located for integrated circuits in the standard "DIP" form?  Some manufacturers of high-speed digital ICs are now relocating power supply pins to the middle of the package, like this:
+
+$$\epsfbox{01425x01.eps}$$
+
+Explain the rationale for this non-traditional pin assignment.
+
+\underbar{file 01425}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Power supply pins on DIP chips are usually located in the upper left and lower-right corners (pins 14 and 7 on a 14-pin DIP, pins 16 and 8 on a 16-pin DIP), {\it but this is not always the case!}.
+
+Centered power supply pins on modern high-speed DIPs exhibit less parasitic inductance than corner-located pins.
+
+\vskip 10pt
+
+Follow-up question: what is the best way to determine pin assignments on any given integrated circuit?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Let your students know that even some of the older integrated circuits had "weird" power supply pin locations, so they cannot assume corner-pins for every older DIP they see!  An example of this is the 2102L static RAM, or the 4049 CMOS hex inverting buffer.
+
+Even stranger is DIP chips with {\it multiple} +V and GND pins.  Good examples of this include the 74AC11004 and the 74AUC16373.
+
+%INDEX% Power supply pin locations, on integrated circuits
+%INDEX% IC, power supply pin locations
+
+%(END_NOTES)
+
+

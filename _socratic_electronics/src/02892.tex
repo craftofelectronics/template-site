@@ -1,0 +1,59 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The output of the following gate circuit is always low, no matter what states the input switches are in.  Assume that CMOS logic gates are being used here:
+
+$$\epsfbox{02892x01.eps}$$
+
+Identify which of these possibilities could account for the output always being low:
+
+\medskip
+\goodbreak
+\item{$\bullet$} Output of $U_1$ stuck in a high state
+\item{$\bullet$} Output of $U_1$ stuck in a low state
+\item{$\bullet$} $R_1$ failed open
+\item{$\bullet$} Switch C failed open
+\item{$\bullet$} Switch B failed open
+\item{$\bullet$} Switch A failed shorted
+\medskip
+
+\underbar{file 02892}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Only these two possibilities could account for the output always being low:
+
+\medskip
+\goodbreak
+\item{$\bullet$} Output of $U_1$ stuck in a low state
+\item{$\bullet$} Switch C failed open
+\medskip
+
+\vskip 10pt
+
+Follow-up question: determine what each of the other faults would do to the circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Questions like this help students hone their troubleshooting skills by forcing them to think through the consequences of each possibility.  This is an essential step in troubleshooting, and it requires a firm understanding of circuit function.
+
+If a student suggests switch B failing open could cause the output to remain low, they are either misunderstanding the operation of an OR gate, or they are assuming switch A has also failed open (or something else happening that keeps input A low all the time).  I find this kind of assumption frequently in students new to troubleshooting: assuming multiple faults.  While multiple faults are not impossible, they are less likely than single faults.  Therefore, the good technician {\it first} looks for single faults capable of accounting for all observed states before looking for (less likely) combinations of faults.  This is a practical application of Occam's Razor.
+
+%INDEX% Troubleshooting, logic gate circuit
+
+%(END_NOTES)
+
+

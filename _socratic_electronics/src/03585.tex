@@ -1,0 +1,265 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student is troubleshooting a two-resistor voltage divider circuit, using a table to keep track of his test measurements and conclusions.  The table lists all components and wires in the circuit so that the student may document their known status with each successive measurement:
+
+$$\epsfbox{03585x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Measurement taken & Battery & Wire +/1 & $R_1$ & Wire 2/3 & $R_2$ & Wire 4/- \cr
+%
+\noalign{\hrule}
+%
+% Another row
+  &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+  &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+  &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Prior to beginning troubleshooting, the student is told there is no voltage across $R_2$.  Thus, the very first entry into the table looks like this:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Measurement taken & Battery & Wire +/1 & $R_1$ & Wire 2/3 & $R_2$ & Wire 4/- \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{R2}$ = 0 V &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+  &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+  &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Based on this data, the student then determines possible faults which could cause this to happen, marking each possibility in the table using letters as symbols.  The assumption here is that there is only one fault in the circuit, and that it is either a complete break (open) or a direct short:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Measurement taken & Battery & Wire +/1 & $R_1$ & Wire 2/3 & $R_2$ & Wire 4/- \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{R2}$ = 0 V & O & O & O & O & S & O \cr
+%
+\noalign{\hrule}
+%
+% Another row
+  &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+  &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+"O" symbolizes a possible "open" fault, while "S" symbolizes a possible "shorted" fault.
+
+\vskip 10pt
+
+Next, the student measures between terminals 1 and 4, obtaining a full 6 volt reading.  This is documented on the table as well, along with some updated conclusions regarding the status of all wires and components:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Measurement taken & Battery & Wire +/1 & $R_1$ & Wire 2/3 & $R_2$ & Wire 4/- \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{R2}$ = 0 V & O & O & O & O & S & O \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{1-4}$ = 6 V & OK & OK & O & O & S & OK \cr
+%
+\noalign{\hrule}
+%
+% Another row
+  &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\vskip 10pt
+
+After this, the student measures between terminals 1 and 2 (across resistor $R_1$), and gets a reading of 0 volts.  Complete the table based on this last piece of data:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Measurement taken & Battery & Wire +/1 & $R_1$ & Wire 2/3 & $R_2$ & Wire 4/- \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{R2}$ = 0 V & O & O & O & O & S & O \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{1-4}$ = 6 V & OK & OK & O & O & S & OK \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{R1}$ = 0 V &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 03585}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Measurement taken & Battery & Wire +/1 & $R_1$ & Wire 2/3 & $R_2$ & Wire 4/- \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{R2}$ = 0 V & O & O & O & O & S & O \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{1-4}$ = 6 V & OK & OK & O & O & S & OK \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{R1}$ = 0 V & OK & OK & OK & O & OK & OK \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Conclusion: there is an open fault (break) between terminals 2 and 3.  This is the only {\it single} fault which will account for all the data.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The main purpose of this question is to introduce students to this style of documentation and strategy for use in troubleshooting a circuit.  For each successive reading, the student is required to re-assess the status of each component, figuring out what single failure could account for all data up to that point.
+
+%INDEX% Troubleshooting, simple circuit
+
+%(END_NOTES)
+
+

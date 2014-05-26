@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The circuit shown here is a four-bit analog-to-digital converter (ADC).  Specifically, it is a {\it flash} converter, so named because of its high speed:
+
+$$\epsfbox{01413x01.eps}$$
+
+Explain why we must use a {\it priority} encoder to encode the comparator outputs into a four-bit binary code, and not a regular encoder.  What problem(s) would we have if we were to use a non-priority encoder in this ADC circuit?
+
+\underbar{file 01413}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I won't directly answer this question, but instead pose a "thought experiment."  Suppose the analog input voltage ($V_{in}$) were slowly increased from 0 volts to the reference voltage ($V_{ref}$).  What do the outputs of the comparators do, one at a time, as the analog input voltage increases?  What input conditions does the encoder see?  How would a primitive "diode network" type of encoder (which we know does {\it not} encode based on priority) interpret the comparator outputs?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Here, I show students a very practical application of a priority encoder, in which the necessity of priority encoding should be apparent after some analysis of the circuit.
+
+%INDEX% ADC
+%INDEX% Analog-to-digital conversion
+%INDEX% Priority encoder
+
+%(END_NOTES)
+
+

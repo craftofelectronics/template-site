@@ -1,0 +1,54 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The {\it unijunction transistor}, or {\it UJT}, is an interesting device, exhibiting hysteresis just like SCRs and TRIACs.  Its schematic symbol is as follows:
+
+$$\epsfbox{02139x01.eps}$$
+
+One equivalent circuit diagram for the UJT uses a pair of transistors and a pair of resistors:
+
+$$\epsfbox{02139x02.eps}$$
+
+When the two base terminals of a UJT are connected across a source of DC voltage, the two base resistances ($R_{B1}$ and $R_{B2}$) form a voltage divider, splitting the applied voltage into lesser portions:
+
+$$\epsfbox{02139x03.eps}$$
+
+How much voltage, and of what polarity, must be applied to the emitter terminal of the UJT to turn it on?  Write an equation solving for the magnitude of this triggering voltage (symbolized as $V_P$), given $R_{B1}$, $R_{B2}$, and $V_{BB}$.
+
+\underbar{file 02139}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$V_P \approx {{V_{BB} R_{B1}} \over {R_{B1} + R_{B2}}} + 0.7$$
+
+\vskip 10pt
+
+Follow-up question: how is the the {\it standoff ratio} defined for a UJT, and how might this equation be re-written to include it?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The standoff ratio is perhaps the most important UJT parameter, given the hysteretic switching function of this device.  Writing the equation for trigger voltage ($V_P$) and understanding the definition for standoff ratio requires that students remember the voltage divider formula from their studies in DC circuits:
+
+$$V_R = V_{total} \left( {R \over R_{total}} \right)$$
+
+This question provides a good opportunity to review the operation of voltage divider circuits, and this formula in particular.
+
+%INDEX% UJT, defined
+%INDEX% Unijunction transistor, defined
+
+%(END_NOTES)
+
+

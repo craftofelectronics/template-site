@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An {\it electric arc welder} is a low-voltage, high-current power source used to generate hot arcs capable of melting metal.  Note the voltage and current measurements taken for this particular welder:
+
+$$\epsfbox{03665x01.eps}$$
+
+Determine two Th\'evenin equivalent circuits for the arc welder.  The first circuit will simply be an AC voltage source and an internal impedance.  The second circuit will be a voltage source and internal impedance connected through an ideal transformer with a step-down ratio of 8 to 1:
+
+$$\epsfbox{03665x02.eps}$$
+
+\underbar{file 03665}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\noindent
+{\bf Simple equivalent circuit}
+
+$V_{Th}$ = 45.8 volts
+
+$Z_{Th}$ = 0.2478 $\Omega$
+
+\vskip 10pt
+
+\noindent
+{\bf Equivalent circuit with transformer}
+
+$V_{Th}$ = 366.4 volts
+
+$Z_{Th}$ = 15.86 $\Omega$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This practical scenario shows how Th\'evenin's theorem may be used to "model" a complex device as two simple components (voltage source and resistor).  Of course, we must make certain assumptions when modeling in this fashion: we assume, for instance, that the arc welder is a linear device, which may or may not be true.
+
+%INDEX% Thevenin's theorem, experimentally determining Thevenin voltage and Thevenin impedance of network
+
+%(END_NOTES)
+
+

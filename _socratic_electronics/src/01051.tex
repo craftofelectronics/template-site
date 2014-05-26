@@ -1,0 +1,61 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Write the KVL equations for this circuit, given the following mesh current directions, and then solve for the charging current through battery \#1:
+
+$$\epsfbox{01051x01.eps}$$
+
+Now, write the KVL equations for the same circuit, after reversing the direction of mesh current $I_2$.  How does this reversal of mesh current $I_2$ affect the writing of the two KVL equations, and also the calculation of the answer for battery \#1's charging current?
+
+$$\epsfbox{01051x02.eps}$$
+
+\underbar{file 01051}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+KVL equations with currents $I_1$ and $I_2$ meshing {\it with} each other through battery \#1:
+
+\vskip 5pt
+
+$0.5I_1 + 0.2I_1 + 0.2(I_1 + I_2) + 1.5(I_1 + I_2) + 23.5 - 29 = 0$
+
+\vskip 5pt
+
+$1.5(I_1 + I_2) + 0.2(I_1 + I_2) + 0.2I_2 + I_2 - 24.1 + 23.5 = 0$
+
+\vskip 20pt
+
+KVL equations with currents $I_1$ and $I_2$ meshing {\it against} each other through battery \#1:
+
+\vskip 5pt
+
+$0.5I_1 + 0.2I_1 + 0.2(I_1 - I_2) + 1.5(I_1 - I_2) + 23.5 - 29 = 0$
+
+\vskip 5pt
+
+$1.5(I_2 - I_1) + 0.2(I_2 - I_1) + 0.2I_2 + I_2 + 24.1 - 23.5 = 0$
+
+\vskip 10pt
+
+$I_{bat1} = 1.7248$ A
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Your students may find the setup of KVL equations easier with the two mesh currents going in the same direction through battery \#1, but they should be able to arrive at the same answer either way.  It is very important to your students' understanding of the Mesh Current technique that they are able to handle both situations!
+
+%(END_NOTES)
+
+

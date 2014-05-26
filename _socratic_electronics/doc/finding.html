@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+
+<html>
+<body>
+
+<a href="../index.html">Back to Main page</a>
+
+<br>
+
+<h1>How do I find a question file for a particular topic among all the questions that have already been written?</h1>
+
+<hr>
+
+<h2>Short answer:</h2>
+
+<p>
+Peruse the <a href="q_index.txt">question index</a>, or use the <tt>grep</tt> text searching utility to locate the question file by word-search.
+</p>
+
+<hr>
+
+<h2>Long answer:</h2>
+
+<p>
+Suppose you are compiling your own worksheet, and need a question dealing with the topic of <i>negative resistance</i>.  Of course, you could write your own question file, but the whole point of this website is to provide pre-written resources for you, to save you time and effort in developing your own worksheets.
+</p>
+
+<p>
+There is a <a href="q_index.txt">text listing</a> of nearly all the existing questions which you may look through to find a particular type of question.  The topics are arranged alphabetically, with the file numbers showing which questions the topics belong to.  Many question files have multiple index markers, making it easier for you to find what you want.
+</p>
+
+<p>
+Another way to locate the question(s) you want is to use a great little computer utility program named <tt>grep</tt>.  This is a UNIX tool, but there are versions available for free to run on Microsoft DOS/Windows operating systems as well.  It is a command-line text searching program, displaying any lines of text that contain the word of phrase you are looking for, for the files you told it to search.
+</p>
+
+<p>
+To use <tt>grep</tt> to search for any question files containing the phrase "negative resistance", first go to the directory where all the question files are located.  Then type this (telling the computer to search all files with names ending in ".tex" for the text string "negative resistance"):
+</p>
+
+<br>
+
+<p>
+<tt>grep "negative resistance" *.tex</tt>
+</p>
+
+<br>
+
+<p>
+The result, when I executed this command on my own computer on December 31, 2003, was this:
+</p>
+
+<br>
+
+<p>
+<tt>00092.tex:What is {\it negative resistance}?</tt>
+</p>
+
+<p>
+<tt>00092.tex:Not only do many gas-discharge devices exhibit negative resistance over certain portions of their operating range, but many semiconductor devices do as well.</tt>
+</p>
+
+<br>
+
+<p>
+Note how <tt>grep</tt> returns the file name containing the matching lines, and also displays the lines themselves.  It appears that the only question file containing the phrase "negative resistance" is <tt>00092.tex</tt>.
+</p>
+
+<p>
+Beware the fact that <tt>grep</tt> searches in a very literal manner.  Whatever is placed between the quotation marks will be what is searched for, no more and no less.  I recommend repeating searches with the first letter capitalized ("Negative resistance", for example), to be sure you don't miss any question files beginning sentences with your phrase.
+</p>
+
+<p>
+Suppose now that you wish to see what this question file looks like in its compiled form, within a worksheet.  You know that it must be included in at least one of the pre-compiled worksheets, but which one?  To find out, use <tt>grep</tt> again to search all the sequence files for the number "00092":
+</p>
+
+<br>
+
+<p>
+<tt>grep 00092 *.seq</tt>
+</p>
+
+<br>
+
+<p>
+The results returned on my computer are as follows:
+</p>
+
+<br>
+
+<p>
+<tt>ohm.seq:00092.tex \</tt>
+</p>
+
+<p>
+<tt>ohm_law.seq:00092.tex \</tt>
+</p>
+
+<br>
+
+<p>
+It appears there are two worksheets making use of the same question file: "ohm" and "ohm_law".  PDF versions of both these worksheets are located in the "output" subdirectory.
+</p>
+
+
+
+<br>
+
+<a href="../index.html">Back to Main page</a>
+
+</body>
+</html>
+
+

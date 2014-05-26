@@ -1,0 +1,64 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Many manufacturing processes are {\it electrochemical} in nature, meaning that electricity is used to promote or force chemical reactions to occur.  One such industry is aluminum smelting, where large amounts of DC current (typically several {\it hundred thousand} amperes!) is used to turn alumina (Al$_{2}$O$_{3}$) into pure metallic aluminum (Al):
+
+$$\epsfbox{01726x01.eps}$$
+
+The alumina/electrolyte mixture is a molten bath of chemicals, lighter than pure aluminum itself.  Molecules of pure aluminum precipitate out of this mix and settle at the bottom of the "pot" where the molten metal is periodically pumped out for further refining and processing.  Fresh alumina powder is periodically dropped into the top of the pot to replenish what is converted into aluminum metal.
+
+Although the amount of current necessary to smelt aluminum in this manner is huge, the voltage drop across each pot is only about 4 volts.  In order to keep the voltage and current levels reasonable in a large smelting facility, many of these pots are connected in series, where they act somewhat like resistors (being energy {\it loads} rather than energy {\it sources}):
+
+$$\epsfbox{01726x02.eps}$$
+
+A typical "pot-line" might have 240 pots connected in series.  With a voltage drop of just over 4 volts apiece, the total voltage powering this huge series circuit averages around 1000 volts DC:
+
+$$\epsfbox{01726x03.eps}$$
+
+With this level of voltage in use, electrical safety is a serious consideration!  To ensure the safety of personnel if they must perform work around a pot, the system is equipped with a "movable ground," consisting of a large switch on wheels that may be connected to the steel frame of the shelter (with concrete pilings penetrating deep into the soil) and to the desired pot.  Assuming a voltage drop of exactly 4.2 volts across each pot, note what effect the ground's position has on the voltages around the circuit measured with respect to ground:
+
+$$\epsfbox{01726x04.eps}$$
+
+Determine the voltages (with respect to earth ground) for each of the points (dots) in the following schematic diagram, for the ground location shown:
+
+$$\epsfbox{01726x05.eps}$$
+
+\underbar{file 01726}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01726x06.eps}$$
+
+\vskip 10pt
+
+Follow-up question: assuming each of the pots acts exactly like a large resistor (which is not entirely true, incidentally), what is the resistance of each pot if the total "potline" current is 150 kA at 4.2 volts drop per pot?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I (Tony Kuphaldt) worked for over six years at an aluminum smelter in northwest Washington state (United States of America), where part of my job as an electronics technician was to maintain the measurement and control instrumentation for three such "potlines."  Very interesting work.  The magnetic field emanating from the busbars conducting the 150 kA of current was strong enough to hold a screwdriver vertical, if you let it stand on the palm of your hand, assuming your hand was just a few feet away from the horizontal bus and even with its centerline!
+
+Discuss with your students how voltage measured with respect to ground is an important factor in determining personnel safety.  Being that your feet constitute an electrical contact point with the earth (albeit a fairly high-resistance contact), it becomes possible to be shocked by touching only one point in a grounded circuit.
+
+In your discussion, it is quite possible that someone will ask, "Why not eliminate the ground entirely, and leave the whole potline floating?  Then there would be no shock hazard from a single-point contact, would there?"  The answer to this (very good) question is that accidental groundings are impossible to prevent, and so by {\it not} having a firm (galvanic) ground connection in the circuit, no point in that circuit will have a {\it predictable} voltage with respect to earth ground.  This lack of predictability is a worse situation than having {\it known} dangerous voltages at certain points in a grounded system.
+
+%INDEX% Aluminum smelting
+%INDEX% Electrolytic "pot"
+%INDEX% Ground location, series circuit
+%INDEX% Series circuit, electrochemical "pots"
+
+%(END_NOTES)
+
+

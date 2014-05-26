@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose we were measuring the interior temperature of an insulated box recently removed from a refrigerator, as it was being warmed by the ambient air around it:
+
+$$\epsfbox{01218x01.eps}$$
+
+Graphing the box's temperature over time, we see a curve that looks something like this:
+
+$$\epsfbox{01218x02.eps}$$
+
+An engineer approaches you and says she wants you to build an electrical circuit that {\it models} this thermal system.  What kind of circuit would you consider building for the engineer, to make a realistic electrical analogue of the box's temperature?  Be as specific as you can in your answer.
+
+\underbar{file 01218}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Usually, voltage is the electrical variable used to represent the physical quantity being modeled (in this case, temperature), so we need a circuit where voltage starts to increase rapidly, then gradually approaches a maximum value over time.
+
+I won't show you a schematic diagram for the correct circuit, but I will give you several hints:
+
+\medskip
+\item{$\bullet$} The circuit uses a capacitor and a resistor.
+\item{$\bullet$} It is sometimes referred to as a {\it passive integrator} circuit.
+\item{$\bullet$} Engineers sometimes refer to it as a {\it first-order lag network}.
+\item{$\bullet$} You've seen this circuit before, just not in the context of modeling a physical process!
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I like to show this question to beginning students because it shows them an aspect of electrical circuits that they probably never thought to consider: that the behavior of a circuit might mimic the behavior of some other type of physical system or process, and that this principle might be exploited as a modeling tool for engineers.  Before the advent of inexpensive digital computers, the {\it analog computer} was the simulation tool of choice among engineers of all persuasions.  Using resistors, capacitors, and amplifier circuits, these marvelous machines modeled all kinds of physical systems, as electrical constructs of mathematical equations.
+
+But even without knowing anything about calculus, amplifier circuits, or any advanced electronic concepts, beginning students should be able to understand the principle at work in this question.
+
+%INDEX% Integrator circuit, passive
+%INDEX% Passive integrator circuit
+
+%(END_NOTES)
+
+

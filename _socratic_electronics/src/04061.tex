@@ -1,0 +1,63 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose we have a simple two-pole AC generator, or {\it alternator}, the two stator windings on either side of the rotor connected together so as to function as a single winding:
+
+$$\epsfbox{04061x01.eps}$$
+
+Ideally, this machine will generate a sinusoidal output voltage as the rotor turns.  Suppose now that we write index marks on the rotor shaft to measure its position as it turns, and we represent that position with the Greek letter "Theta" ($\Theta$).  It is purely arbitrary where we label the "zero" position on the shaft, so we choose to mark that point at some easily-identified point on the output waveform: the place where the coil output voltage peaks positive while rotating counter-clockwise.  When spun, the instantaneous output voltage will then match the {\it cosine} function.  In other words, the instantaneous output voltage will be proportional to the cosine of the shaft angle:
+
+$$\epsfbox{04061x03.eps}$$
+
+We may represent the coil's voltage with the equation $v_{coil} = V_0 \cos \Theta$.  If we precisely know the peak voltage value ($V_0$) and the shaft position ($\Theta$), we may precisely predict the coil voltage at any instant in time ($v_{coil}$).
+
+However, there is a more complete way of describing what is happening in this alternator.  The equation $v_{coil} = V_0 \cos \Theta$ is adequate for predicting coil voltage from shaft position, but it is not adequate for doing the reverse: predicting shaft position from coil voltage.  Note that there are only two points on the voltage waveform where a voltage value corresponds to a {\it unique} shaft position, and those points are the positive and negative peaks.  At any other value of instantaneous voltage ($-V_0 < v_{coil} < V_0$), there are {\it multiple} possible shaft positions.  The most obvious example of this is where $v_{coil} = 0$.  Here, the shaft position could be $\pi \over 2$ radians, or it could be ${3 \pi} \over 2$ radians.  Note that we consider the positive peak to occur at only one position (0 radians) and not two positions (0 and $2 \pi$ radians) in one revolution because $2 \pi$ radians is identical to 0 radians just as 360 degrees is equivalent to 0 degrees.
+
+In order to uniquely describe the alternator's shaft position in terms of output voltage, we need more information than just the instantaneous voltage at one coil.  What we need is another coil, an {\it imaginary coil}, shifted in angular position from the first coil:
+
+$$\epsfbox{04061x02.eps}$$
+
+Like the first coil (the {\it real} coil), the imaginary coil's output voltage will also be sinusoidal.  However, it will generate an output voltage at a different phase than the real coil's output voltage.
+
+Plot the waveform of the imaginary coil's voltage, superimposed on the waveform of the real coil's output voltage, and then write an equation expressing both instantaneous voltages as a complex sum: the real coil's voltage as a real number and the imaginary coil's voltage as an imaginary number (complete with the $j$ prefix).  Then, use Euler's relation to re-write this complex sum as a complex exponential expression.
+
+$$\epsfbox{04061x04.eps}$$
+
+\underbar{file 04061}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{04061x05.eps}$$
+
+Alternator output as a complex sum:
+
+$${\bf V_{out}} = V_0 \cos \Theta + j V_0 \sin \Theta$$
+
+\vskip 10pt
+
+Alternator output as a complex exponential:
+
+$${\bf V_{out}} = V_0 e^{j \Theta}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Here, I tried my best to give simple, real-world meaning to phasor notation.  Interestingly, the oft-lamented label of "imaginary" actually works to my advantage, describing the output of a coil that has no useful purpose but to define the alternator's shaft position in terms of a quadrature voltage.
+
+%INDEX% Alternator, two-phase (used to illustrate real and imaginary voltages)
+
+%(END_NOTES)
+
+

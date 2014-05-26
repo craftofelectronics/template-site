@@ -1,0 +1,60 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This circuit is supposed to energize a lamp when the input voltage ($V_{in}$) falls between the two reference voltages set by $R_{pot1}$ and $R_{pot2}$.  Predict how the operation of this circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03837x01.eps}$$
+
+\medskip
+\item{$\bullet$} Comparator $U_1$ output fails low:
+\vskip 5pt
+\item{$\bullet$} Comparator $U_1$ output fails high:
+\vskip 5pt
+\item{$\bullet$} Comparator $U_2$ output fails low:
+\vskip 5pt
+\item{$\bullet$} Comparator $U_2$ output fails high:
+\vskip 5pt
+\item{$\bullet$} Wire connecting $V_{DD}$ to $R_{pot1}$ fails open:
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03837}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Comparator $U_1$ output fails low: {\it Lamp energizes when $V_{in} > V_{ref(low)}$, even if $V_{in} > V_{ref(high)}$.}
+\vskip 5pt
+\item{$\bullet$} Comparator $U_1$ output fails high: {\it Lamp energizes only when $V_{in} < V_{ref(low)}$.}
+\vskip 5pt
+\item{$\bullet$} Comparator $U_2$ output fails low: {\it Lamp energizes only when $V_{in} > V_{ref(high)}$.}
+\vskip 5pt
+\item{$\bullet$} Comparator $U_2$ output fails high: {\it Lamp energizes when $V_{in} < V_{ref(high)}$, even if $V_{in} < V_{ref(low)}$.}
+\vskip 5pt
+\item{$\bullet$} Wire connecting $V_{DD}$ to $R_{pot1}$ fails open: {\it Lamp refuses to energize.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in logic gate circuit
+%INDEX% Window comparator circuit
+
+%(END_NOTES)
+
+

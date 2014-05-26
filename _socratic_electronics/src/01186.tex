@@ -1,0 +1,63 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This relaxation oscillator circuit uses a resistor-capacitor combination ($R_1$ - $C_1$) to establish the time delay between output pulses:
+
+$$\epsfbox{01186x01.eps}$$
+
+The voltage measured between TP1 and ground looks like this on the oscilloscope display:
+
+$$\epsfbox{01186x02.eps}$$
+
+A slightly different version of this circuit adds a JFET to the capacitor's charge current path:
+
+$$\epsfbox{01186x03.eps}$$
+
+Now, the voltage at TP1 looks like this:
+
+$$\epsfbox{01186x04.eps}$$
+
+What function does the JFET perform in this circuit, based on your analysis of the new TP1 signal waveform?  The straight-line charging voltage pattern shown on the second oscilloscope display indicates what the JFET is doing in this circuit.  
+
+Hint: you don't need to know anything about the function of the unijunction transistor (at the circuit's output) other than it acts as an on/off switch to periodically discharge the capacitor when the TP1 voltage reaches a certain threshold level.
+
+\vskip 10pt
+
+Challenge question: write a formula predicting the {\it slope} of the ramping voltage waveform measured at TP1.
+
+\underbar{file 01186}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The JFET in this circuit functions as a constant current regulator.
+
+\vskip 10pt
+
+Answer to challenge question: Slope = $dv \over dt$ = ${I_D \over C}$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students how they would know to relate "constant current" to the peculiar charging action of this capacitor.  Ask them to explain this mathematically.
+
+Then, ask them to explain exactly how the JFET works to regulate charging current.
+
+Note: the schematic diagram for this circuit was derived from one found on page 958 of John Markus' \underbar{Guidebook of Electronic Circuits}, first edition.  Apparently, the design originated from a Motorola publication on using unijunction transistors ("Unijunction Transistor Timers and Oscillators," AN-294, 1972).
+
+%INDEX% Relaxation oscillator, UJT
+
+%(END_NOTES)
+
+

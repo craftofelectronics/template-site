@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+"Split" or "dual" DC power supplies are essential for powering many types of electronic circuits, especially certain types of operational amplifier circuits.  If only a "single" DC power supply is not available, a "split" power supply may be roughly simulated through the use of a resistive voltage divider:
+
+$$\epsfbox{02293x01.eps}$$
+
+The problem with doing this is loading: if more current is drawn from one of the power supply rails than from the other, the "split" of voltage will become uneven.  The only way that +V and -V will have the same (absolute) voltage value at the load is if the load impedance is balanced evenly between those rails and ground.  This scenario is unlikely.  Take for instance this example:
+
+$$\epsfbox{02293x02.eps}$$
+
+A simple opamp circuit, though, can correct this problem and maintain an even "split" of voltage between +V, Ground, and -V:
+
+$$\epsfbox{02293x03.eps}$$
+
+Explain how this circuit works.  What function do the two resistors perform?  How is negative feedback being used in this circuit?
+
+\underbar{file 02293}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The two resistors establish a reference voltage exactly between +V and -V, which will be the "Ground" voltage seen by the load.  The opamp keeps the actual Ground conductor at that reference potential through negative feedback, driving either transistor as hard as necessary to keep Ground potential centered between +V and -V.
+
+\vskip 10pt
+
+Challenge question: if you plan on building this sort of circuit, placing a pair of bypass capacitors across the outputs is highly recommended.  Explain why:
+
+$$\epsfbox{02293x04.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This circuit is not only worthwhile to discuss with your students as an example of negative feedback in action, but it is also practical for them to use as an impromptu power supply "splitter" when only a single supply is available.  If you do decide to build this circuit, be careful of the transistors' power dissipations!  Determine the maximum imbalance current to the load (how much current will be drawn through the Ground terminal), and then multiply that current by +V (or -V, absolute).  This will be the maximum power dissipation value either transistor may have to safely handle.
+
+In response to the challenge question, the wisdom of the bypass capacitors will be evident if a pulsating load (such as a brush-type DC motor) is placed between either "rail" and Ground.  The opamp must swing its output back and forth very rapidly to turn on each transistor fast enough to counter dips in voltage caused by the pulsating load.  Capacitors naturally resist change in voltage, and so are ideal for mitigating such voltage dips, easing the burden placed on the opamp.
+
+%INDEX% Negative feedback, in opamp-controlled "split" power supply circuit
+
+%(END_NOTES)
+
+

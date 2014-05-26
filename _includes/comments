@@ -1,14 +1,14 @@
-<div id='vanilla-comments' style=padding:20px; class=col-md-8 offset-1> </div>
+<div id='vanilla-comments' style='padding:20px;' class='col-md-12'> </div>
 <script type='text/javascript'>
   var vanilla_forum_url = 'http://craftofelectronics.org/ask/';
-  var vanilla_identifier = '{{include.tag}}';
-  var vanilla_category_id = '4';
+  var vanilla_identifier = '{{page.todo}}_{{page.file}}';
+  var vanilla_category_id = '1';
 
   (function() {
      var vanilla = document.createElement('script');
      vanilla.type = 'text/javascript';
      var timestamp = new Date().getTime();
-    vanilla.src = vanilla_forum_url + '/js/embed.js';
+    vanilla.src = vanilla_forum_url + 'js/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(vanilla);
   })();
 </script>

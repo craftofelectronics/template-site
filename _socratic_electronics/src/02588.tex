@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{02588x01.eps}$$
+
+\underbar{file 02588}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I also recommend having students use an oscilloscope to measure AC voltage in a circuit such as this, because some digital multimeters have difficulty accurately measuring AC voltage much beyond line frequency range.  I find it particularly helpful to set the oscilloscope to the "X-Y" mode so that it draws a thin line on the screen rather than sweeps across the screen to show an actual waveform.  This makes it easier to measure peak-to-peak voltage.
+
+Values that have proven to work well for this exercise are given here, although of course many other values are possible:
+
+\medskip
+\goodbreak
+\item{$\bullet$} +V = +12 volts
+\item{$\bullet$} -V = -12 volts
+\item{$\bullet$} $R_1$ = 10 k$\Omega$
+\item{$\bullet$} $R_2$ = 10 k$\Omega$
+\item{$\bullet$} $R_3$ = 5 k$\Omega$ (actually, two 10 k$\Omega$ resistors in parallel)
+\item{$\bullet$} $R_4$ = 100 k$\Omega$
+\item{$\bullet$} $C_1$ = 0.001 $\mu$F
+\item{$\bullet$} $C_2$ = 0.001 $\mu$F
+\item{$\bullet$} $C_3$ = 0.002 $\mu$F (actually, two 0.001 $\mu$F capacitors in parallel)
+\item{$\bullet$} $U_1$ = one-half of LM1458 dual operational amplifier
+\medskip
+
+This combination of components gave a predicted center frequency of 15.92 kHz, with an actual cutoff frequency (not factoring in component tolerances) of 15.63 kHz.
+
+%INDEX% Assessment, performance-based (Twin-T active bandpass filter)
+
+%(END_NOTES)
+
+

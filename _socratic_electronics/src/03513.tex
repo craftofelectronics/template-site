@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A very common sort of graph used in electronics work is the {\it load line}, showing all possibilities of load voltage and load current that a particular power source is able to supply to a load:
+
+$$\epsfbox{03513x01.eps}$$
+
+Note how the load line shows the voltage "sag" of the power source in relation to the amount of current drawn by the load.  At high currents, the output voltage will be very low (upper-left end of load line).  At low currents, the output voltage will be near its maximum (lower-right end of load line).  If all internal components of the power source are {\it linear} in nature, the load line will always be perfectly straight.
+
+Plot the load line for a power source having an internal voltage ($V_{internal}$) of 11 volts and an internal resistance ($R_{internal}$) of 1.2 k$\Omega$.  Superimpose your load line onto the load line graph shown above.  Hint: it only takes two points to define a line!
+
+\underbar{file 03513}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{03513x02.eps}$$
+
+\vskip 10pt
+
+Hint: the easiest points on find on this load line are the points representing open-circuit and short-circuit conditions (i.e. $R_{load} = \infty$ $\Omega$ and $R_{load}$ = 0 $\Omega$, respectively).
+
+\vskip 10pt
+
+Follow-up questions: what will happen to the load line if we change the internal resistance of the power source circuit?  What will happen to the load line if we change the internal voltage value of the power source circuit?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to lend an analytical geometric perspective to the subject of power source behavior, by showing how the output voltage and current may be plotted on a graph.  The condition of circuit linearity is important, as it permits us to confidently plot the load line by finding only two points on it.
+
+%INDEX% Load line, used to characterize simple DC power source
+
+%(END_NOTES)
+
+

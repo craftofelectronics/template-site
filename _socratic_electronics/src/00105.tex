@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A modern method of electrical power control involves inserting a fast-operating switch in-line with an electrical load, to switch power on and off to it very rapidly over time.  Usually, a solid-state device such as a {\it transistor} is used:
+
+$$\epsfbox{00105x01.eps}$$
+
+This circuit has been greatly simplified from that of a real, pulse-control power circuit.  Just the transistor is shown (and not the "pulse" circuit which is needed to command it to turn on and off) for simplicity.  All you need to be aware of is the fact that the transistor operates like a simple, single-pole single-throw (SPST) switch, except that it is controlled by an electrical current rather than by a mechanical force, and that it is able to switch on and off millions of times per second without wear or fatigue.
+
+If the transistor is pulsed on and off fast enough, power to the light bulb may be varied as smoothly as if controlled by a variable resistor.  However, there is very little energy wasted when using a fast-switching transistor to control electrical power, unlike when a variable resistance is used for the same task.  This mode of electrical power control is commonly referred to as {\it Pulse-Width Modulation}, or {\it PWM}.  
+
+Explain why PWM power control is much more efficient than controlling load power by using a series resistance.
+
+\underbar{file 00105}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+When the transistor is on, is acts like a closed switch: passing full load current, but dropping little voltage.  Thus, its "ON" power ($P = I E$) dissipation is minimal.  Conversely, when the transistor is off, it acts like an open switch: passing no current at all.  Thus, its "OFF" power dissipation ($P = I E$) is zero.  The power dissipated by the load (the light bulb) is the time-averaged power dissipated between "ON" and "OFF" transistor cycles.  Thus, load power is controlled without "wasting" power across the control device.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Students may have a hard time grasping how a light bulb may be {\it dimmed} by turning it on and off really fast.  The key to understanding this concept is to realize that the transistor's switching time must be much faster than the time it takes for the light bulb's filament to fully heat or fully cool.  The situation is analogous to throttling the speed of an automobile by rapidly "pumping" the accelerator pedal.  If done slowly, the result is a varying car speed.  If done rapidly enough, though, the car's mass averages the "ON"/"OFF" cycling of the pedal and results in a nearly steady speed.
+
+This technique is very popular in industrial power control, and is gaining popularity as an audio amplification technique (known as {\it Class D}).  The benefits of minimal wasted power by the control device are many.
+
+%INDEX% Power control, pulsed
+%INDEX% Pulse-width modulation (PWM)
+%INDEX% PWM (pulse-width modulation) power control, defined
+
+%(END_NOTES)
+
+

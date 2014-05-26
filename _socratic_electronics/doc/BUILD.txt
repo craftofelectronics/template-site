@@ -1,0 +1,41 @@
+The following describes the automated build process for all worksheets
+----------------------------------------------------------------------
+
+
+When "make" is typed at the root directory, the master Makefile directs to a special GNU-make makefile located in the /src directory.  This "GNUmakefile" identifies all sequence files ("*.seq") as dependencies for making PDF versions of the worksheets.  Thus, the decision to build a new worksheet is based on whether or not the corresponding sequence file has a newer time/date than the final output file.
+
+When building a new PDF-format worksheet, the first shell script called by "GNUmakefile" is "pdfmake.bash" script, located in the /scripts directory.  In "pdfmake.bash", the sequence file for the worksheet "(worksheet_name).seq" is first executed, that file being a simple shell script concatenating all the listed .tex source files into a single file named "all.tex", stored temporarily in the /src directory.
+
+Then, "pdfmake.bash" calls another script, "texwrap.bash", which assembles the TeX preamble file ("preamble.tex") and collates the contents of "all.tex" (separating the front-matter, questions, answers, and notes into three different sections) into a TeX source file suitable for processing.  The "texwrap.bash" script makes use of a few SED scripts ("frontmatter.sed", "question.sed", "answer.sed", and "notes.sed") along the way to locate and re-name special comment lines from all the .tex source files into commands meaningful to TeX.  The final product of the "texwrap.bash" script is a file named "output.tex", also stored temporarily in the /src directory.
+
+If selected, the GNUmakefile may call "pdfmake.bash" again with special arguments to create instructor's version worksheets, short version worksheets, etc.  In these cases, special "texwrap" scripts such as "texwrap_instructor.bash" and "texwrap_short.bash" assemble and collate the TeX file in different ways.  In the case of the instructor's version, all question file contents are shown together (i.e. Question, Answer, and Notes one right after the other instead of residing in seperate sections: Q1A1N1, Q2A2N2, Q3A3N3, instead of Q1Q2Q3, A1A2A3, N1N2N3).  This may involve unique sed scripts for collation.
+
+The "pdfmake.bash" script then invokes TeX to process the "output.tex" file, producing a DVI file named "output.dvi".  "pdfmake.bash" then calls DVIPS to convert this output into PostScript format, re-naming it to the worksheet's filename and placing it in the /output directory.  "pdfmake.bash" then does some housecleaning by removing "all.tex" and "output.tex" from the /src directory, as well as any PostScript files in the /output directory.
+
+
+
+The following describes the manual build process for exams
+---------------------------------------------------
+
+
+Exams are built a little differently than worksheets, since I want exams to remain "private" on the instructor's computer and not "public" on the archive website.
+
+Instead of a sequence file ending with the extension ".seq", exam sequence files always end with the extension ".exam".  This excludes them from automatic archival by the "make today" command (at the root project directory) along with all the worksheet sequence files, question files, sed scripts, etc.
+
+Building an exam requires a shell script be manually invoked from the /src directory.  This script is named "exammake", and it is similar to "dvimake" which I use frequently when writing a new worksheet (to manually build a worksheet in DVI format only before I commit to generating the final PDF format file).  When run, exammake checks for the presence of the .exam sequence file and also for the presence of TeX, then invokes a script named "texwrap_exam.bash", located in the /scripts directory.
+
+When invoked, texwrap_exam.bash begins a .tex file with a special preamble file (preamble_exam.tex), and adds to it the title page of the exam (<NAME>.tex), just as with any worksheet.  Then, instead of running the sed scripts "question.sed", "answer.sed", and "notes.sed", it runs a special sed script named "exam_q.sed" which collects only the questions specified by the .exam sequence file (no answers, no notes), and also strips away any filename reference lines.  This script also pads each question with an extra bit of vertical space to give students room to show their work or write short-answer responses.  Unlike the normal "question.sed", "answer.sed", and "notes.sed" scripts, which isolate questions, answers, and notes, respectively by deleting all but what is desired, "exam_q.sed" deletes the specific sections not desired (e.g. deletes answers and notes only, leaving everything else), making it possible for other TeX commands in the .exam sequence file to be included.  This is important for exams because not all questions are of the same type or carry the same weighting, and these details need to be delineated in the .exam sequence file.
+
+A sample exam sequence file is archived in the project as "core.exam".
+
+
+
+
+
+
+The following describes the automated build process for exams
+---------------------------------------------------
+
+Another script called "randomexammake" invokes an AWK script that examines the exam file (ending with the extension ".exam") and randomly selects one question from each group.  The final output is a PDF file with a name including the UNIX time code (number of seconds elapsed since 1970) to make it unique.
+
+

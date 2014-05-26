@@ -1,0 +1,236 @@
+"To Do" list for Socratic Electronics project
+
+
+Project management ideas:
+----------------------------------------------------
+
+* [Troubleshooting] Write troubleshooting questions that ask the student to critique someone's flawed diagnosis.  This will help them understand the need to "check their work" after reaching a conclusion: does the conclusion account for *all* the symptoms?
+
+
+
+Ideas for questions:
+----------------------------------------------------
+
+* [ALL] Modify troubleshooting questions on exams, replacing questions of what components are okay with an essay question asking for an explanation of why one of the fault possibilities could be true.
+
+* [Safety] Write a question about a GFCI tripping on ground loop current, formed by (wrongly) connecting neutral and ground together at the load (past the GFCI).  This happened to me in the 2nd year lab at BTC, troubleshooting a process simulator.
+
+* [DC] More examples of potentiometer use, so students may understand (better) how to use them as voltage dividers, and which direction of shaft rotation results in which direction of wiper movement.
+
+* [AC] Specific transmission line questions regarding pulse distortion with improper termination impedance (set up experiment to verify answers).
+
+* [AC] Using parametric equations to plot Lissajous figures on a graphing calculator, showing how to set frequency ratio and phase shift.
+
+* [AC] Specific transmission line questions regarding pulse distortion with improper termination impedance (set up experiment to verify answers).
+
+* [AC] Write questions about tertiary transformer windings: calculating voltages and currents for transformers with more than just primary and secondary windings.  RESEARCH: is a tertiary winding just another name for multiple secondary windings?
+
+* [AC] Write a question on external oscilloscope triggering (similar to #01912) where the #1 spark plug firing signal is used to synchronize a six-cylinder spark signal display, so that #1 cylinder is always the first to appear on the left-hand side of the screen.
+
+* [AC] Write more questions giving students practice with three-phase Delta/Wye circuit calculations.
+
+* [Semi] Write questions using the "other" symbols for N-channel and P-channel MOSFETS (one with a bubble at the gate).
+
+* [Semi] Write questions about Wilson and Widlar current mirror circuits.
+
+* [Semi] Write questions about programmable unijunction transistor (PUT) devices.
+
+* [Semi] Cite opamp input impedance changes resulting from negative feedback as an example of "bootstrapping."
+
+* [Opamp] Eliminate switched-capacitor circuits from ELTR135_sec1 worksheet.  Replace with more questions on
+
+* [Digital] Write more questions asking students to figure out proper schematics for pull-up and pull-down resistors on the inputs of gate circuits.
+
+* [Digital] Make exam ELTR140_x1 tougher.  First run through produced way too many A's!  Class average was 91.6%, with 17 students taking it -- 14 A's, 2 B's, and 1 D.
+
+* [Digital] Research more on FAMOS and FLOTOX transistors, the types used in Flash memory cells.  Then write some questions on these devices.
+
+* [Digital] Write some more descriptive questions on addressing solid-state memory devices.  Students over the years seem to have a hard time grasping how addressing works: that inputting a binary number to the address lines of a RAM or ROM chip selects a particular memory cell, and how data stored in that cell will appear at the data lines (or will accept data at the data lines).  I was thinking of having questions where little boxes with specific numbers on them inside the RAM or ROM chip would be highlighted (colored) as certain address input lines were activated.  Also, a question or two asking the student to determine the proper sequence of input line activation to either read or write from/to a particular memory address would be great, similar to the question I wrote eariler on shift register input sequencing (#02997).
+
+
+Lab/Performance Assessment list:
+----------------------------------------------------
+
+* Capacitor identification and function
+
+* DC motor
+
+* DC generator
+
+* Impedance matching 
+
+* Unbalanced Wheatstone bridge
+
+* Passive averager circuit
+
+* Three-phase generator and load
+
+* H-drive power control circuit (BJT)
+
+* H-drive power control circuit (MOSFET)
+
+* TRIAC operation
+
+* Clapp oscillator
+
+* Characteristic curves of different devices (diodes and transistors)
+
+* SCR/TRIAC power controller
+
+* Instrumentation amplifier
+
+* Phase-locked loop (monolithic IC)
+
+* Phase-locked loop (from discrete components or separate IC's)
+
+* Analog multiplier (Analog Devices ADD633 or equivalent) used as an Amplitude Modulator
+
+* Digital communication
+
+* Memory chip programming
+
+
+
+Project list:
+----------------------------------------------------
+
+* High voltage inverter project using automotive ignition coil.  A good coil to specify for this is the DIS (Distributorless Ignition System) coil from 1988 Chevrolet Celebrity cars.  It has an ungrounded secondary winding with two high-voltage posts, is very popular with GM products, and reasonably priced.
+
+
+
+Video list:
+----------------------------------------------------
+
+* MATH DEMONSTRATIONS!
+--> Manipulating equations (again and again . . .)
+
+[X] Soldering videos
+
+[ ] Static electricity (capacitive voltmeter, neon bulb, etc.)
+
+[ ] Ohm's Law with one voltage source and one resistor (voltmeter and ammeter usage)
+
+[ ] Series resistor circuit
+
+[ ] Fuse or circuit breaker 
+
+[ ] Parallel resistor circuit
+
+[ ] Temperature coefficient of resistance
+
+[ ] Series-parallel resistor circuit
+
+[ ] Voltage "sag" with resistive divider circuit
+
+[ ] Thevenin's Theorem
+
+[ ] Superposition Theorem
+
+[ ] RC discharge circuit
+
+[ ] Lenz's Law with aluminum coin and strong magnets
+
+[ ] Lenz's Law with dynamometer
+
+[ ] Basic oscilloscope operation
+
+[ ] AC concepts: amplitude & frequency demonstrated through sound
+
+[ ] Phase shifting with an RC circuit
+
+[ ] Measuring phase shift in the time domain and with Lissajous figures
+
+[ ] Superposition 
+
+[ ] Lowpass filter (plotting data on a log scale)
+
+[ ] Highpass filter (plotting data on a log scale)
+
+[ ] Twin-tee notch filter
+
+[ ] Resonance
+
+[ ] Resonant filter circuits
+
+[ ] Making a transformer
+
+[ ] Transformer step ratio (using Variac to vary input to power xfmr)
+
+[ ] Power factor correction with small AC motor
+
+[ ] Polyphase motor/generator 
+
+[ ] Spectrum analyzer usage
+
+[ ] Passive differentiator
+
+[ ] Passive integrator
+
+[ ] Diode testing and usage
+
+[ ] Rectifier circuits
+
+[ ] BJT identification
+
+[ ] Curve tracer circuit (diodes and transistors)
+
+[ ] BJT switching circuit
+
+[ ] Clipper circuit
+
+[ ] Clamper circuit
+
+[ ] Voltage multiplier circuit
+
+[ ] PWM power control circuit
+
+[ ] BJT current mirror
+
+[ ] C-C amplifier
+
+[ ] C-E amplifier (swamped and bypassed)
+
+[ ] C-B amplifier
+
+[ ] JFET current regulator
+
+[ ] Push-pull amplifier with and without crossover distortion
+
+[ ] AM transmitter using signal generator with modulation capability
+
+[ ] Operational amplifier used as a comparator
+
+[ ] Operational amplifier used as a voltage buffer
+
+[ ] Opamp in a voltage regulator circuit
+
+[ ] Noninverting opamp circuit with precise gain
+
+[ ] Inverting opamp circuit with precise gain
+
+[ ] Summer circuit
+
+[ ] Slew rate of different opamps
+
+[ ] GBW product of different opamps
+
+[ ] Active lowpass filter
+
+[ ] Active highpass filter
+
+[ ] Active differentiator circuit
+
+[ ] Active integrator circuit
+
+[ ] Discrete-state behavior of an inverter gate
+
+[ ] AND gate as a "steering" gate for a pulse signal
+
+[ ] Relay-based motor start/stop circuit
+
+[ ] 555 timer circuit
+
+[ ] RAM memory programming (?)
+
+[ ] Telephone mux circuit
+

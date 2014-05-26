@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+One of the first popular operational amplifiers was manufactured by Philbrick Researches, and it was called the K2-W.  Built with two dual-triode vacuum tubes, its original schematic diagram looked like this:
+
+$$\epsfbox{02590x01.eps}$$
+
+To make this opamp circuit easier for modern students to understand, I'll substitute equivalent solid-state components for all tubes in the original design:
+
+$$\epsfbox{02590x02.eps}$$
+
+Explain the configuration (common-source, common-drain, or common-gate) of each transistor in the modernized schematic, identifying the function of each in the operational amplifier circuit.
+
+\underbar{file 02590}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$Q_1$ and $Q_2$ form a {\it differential pair}, outputting a signal proportional to the difference in voltage between the two inputs.  $Q_3$ is a (bypassed) common-source voltage amplifier, while $Q_4$ is a source-follower (common-drain), providing voltage gain and current gain, respectively.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The answer as given is incomplete.  One could elaborate more on the function of each transistor, and by doing so understand the original amplifier circuit a little better.  Explore this circuit with your students, challenging them to follow through the logic of the design, trying to figure out what the designer(s) intended.
+
+This question also provides the opportunity to draw parallels between D-type MOSFET operation and the behavior of triode-type vacuum tubes.  As with D-type MOSFETs, triodes were "normally half-on" devices, whose plate-cathode current conduction could be enhanced or depleted by applying voltage to the grid (with respect to the cathode).
+
+%INDEX% Opamp, internal schematic of Philbrick K2-W
+
+%(END_NOTES)
+
+

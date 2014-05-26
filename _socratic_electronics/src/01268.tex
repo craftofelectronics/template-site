@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Logic gates are limited in the number of gate inputs which one output can reliably drive.  This limit is referred to as {\it fan-out}:
+
+$$\epsfbox{01268x01.eps}$$
+
+Explain why this limit exists.  What is it about the construction of CMOS logic gates that inherently limits the number of CMOS inputs that any one CMOS output can drive?  What might happen if this limit is exceeded?
+
+Fan-out for CMOS is a quite different than fan-out for TTL.  Most importantly is that CMOS fan-out is inversely proportional to operating frequency.  Explain why.
+
+\underbar{file 01268}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A fan-out limit for CMOS exists because CMOS outputs have to source and sink {\it capacitive} charging and discharging current from the CMOS inputs.  I'll let you determine why this limit is frequency-dependent.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+For the relatively simple digital circuits that beginning students build, fan-out is rarely a problem.  More likely is that students will try to drive a load that is too "heavy," causing the same voltage level problem.
+
+%INDEX% Fan-out, defined for CMOS digital gate
+
+%(END_NOTES)
+
+

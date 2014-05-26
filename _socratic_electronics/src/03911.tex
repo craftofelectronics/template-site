@@ -1,0 +1,93 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Identify which diode is failed in this circuit, given the following truth table (showing the actual operation of the encoder circuit, not what it {\it should} do):
+
+$$\epsfbox{03911x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Switch position & Output code \cr
+%
+\noalign{\hrule}
+%
+% Another row
+0 & {\tt 000} \cr
+%
+\noalign{\hrule}
+%
+% Another row
+1 & {\tt 111} \cr
+%
+\noalign{\hrule}
+%
+% Another row
+2 & {\tt 010} \cr
+%
+\noalign{\hrule}
+%
+% Another row
+3 & {\tt 111} \cr
+%
+\noalign{\hrule}
+%
+% Another row
+4 & {\tt 100} \cr
+%
+\noalign{\hrule}
+%
+% Another row
+5 & {\tt 111} \cr
+%
+\noalign{\hrule}
+%
+% Another row
+6 & {\tt 110} \cr
+%
+\noalign{\hrule}
+%
+% Another row
+7 & {\tt 111} \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Be sure to specify whether you think the failed diode is {\it open} or {\it shorted}.
+
+\underbar{file 03911}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{03911x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question helps students understand the purpose of the diodes in this type of encoder circuit: to steer the power to the appropriate output lines, and {\it only} to those lines.
+
+%INDEX% Troubleshooting, diode encoder circuit
+
+%(END_NOTES)
+
+

@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following circuit used to work fine, but does not work as it should anymore.  The lamp does not come on, no matter what is done with the switch:
+
+$$\epsfbox{03720x01.eps}$$
+
+The very first thing you do is use your multimeter to check for source voltage, TP4 to ground.  Between those points you find 24 volts DC, just as it should be.  Next you measure voltage between TP2 and ground with the switch pressed and unpressed.  With the switch pressed, there is no voltage between TP2 and ground, but there is voltage (about 23.5 volts) when the switch is unpressed.
+
+\vskip 10pt
+
+From this information, determine at least two possible failures in the circuit which could cause the lamp not to energize, and also account for the voltage measurements taken.
+
+\underbar{file 03720}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\noindent
+{\bf Possible circuit faults:}
+
+\medskip
+\item{$\bullet$} Lamp burned out
+\item{$\bullet$} Transistor failed open at collector terminal
+\item{$\bullet$} Bad (open) connection between lamp and transistor
+\item{$\bullet$} Bad (open) connection between lamp and ground
+\medskip
+
+\vskip 10pt
+
+Follow-up question: explain why we may say with confidence that there is no problem with the resistor or the switch.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss with your students how to reason from the empirical data to a set of possible faults in the circuit, and also how certain areas of the circuit (or individual components) may be safely eliminated from the list of possible faults.
+
+%INDEX% Troubleshooting, transistor lamp control circuit (BJT switch)
+
+%(END_NOTES)
+
+

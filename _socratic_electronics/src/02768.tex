@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In a common-collector transistor amplifier circuit with voltage divider biasing, the input impedance ($Z_{in}$) is a function of load impedance, emitter resistance ($R_E$), and the two biasing resistances ($R_1$ and $R_2$).  Often, the biasing resistances are of sufficiently low value to swamp the input impedance of the transistor, so that $R_1$ and $R_2$ constitute the heaviest load for any input signals driving the amplifier.
+
+$$\epsfbox{02768x01.eps}$$
+
+$$Z_{in} \approx R_1 \> || \> R_2 \> || \> (\beta + 1)[r'_e + (R_E \> || \> R_{load})]$$
+
+This is a shame, because the only practical purpose served by $R_1$ and $R_2$ is to provide a stable bias voltage so the transistor always functions in class A mode.  In order to provide a stable bias, these resistors have to be relatively low in value compared to the impedance seen at the base of the transistor (resulting from the load).  Otherwise, changes in dynamic emitter resistance ($r'_e$) could result in significant bias shifts.  So, the naturally high input impedance of the common-collector transistor configuration is spoiled by the necessary presence of $R_1$ and $R_2$.
+
+A clever way to recover some of that naturally large input impedance is to add a bit of {\it regenerative} (positive) feedback to the circuit in the form of a capacitor and another resistor.  This technique is given an equally clever name: {\it bootstrapping}.
+
+$$\epsfbox{02768x02.eps}$$
+
+Explain how bootstrapping works, and why that particular name is given to the technique.
+
+\underbar{file 02768}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+By feeding some of the emitter signal to the base of the transistor, the transistor helps drive itself, reducing the load on the signal source (connected at $V_{in}$).  This is analogous to the fanciful scenario of someone making themselves lighter by pulling up on their own bootstraps.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Bootstrapping is an oft-used technique to boost amplifier input impedance, and it hints at the amazing potential of signal feedback in amplifier circuits.  You might want to mention that bootstrapping is practical only if the feedback gain is slightly {\it less} than 1.  If there is too much positive feedback, the amplifier will turn into an oscillator!
+
+%INDEX% Bootstrapping, used in common-collector circuit
+
+%(END_NOTES)
+
+

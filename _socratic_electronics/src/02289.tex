@@ -1,0 +1,163 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Complete the table of voltages for this opamp "voltage follower" circuit:
+
+$$\epsfbox{02289x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_{in}$ & $V_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 volts & 0 volts \cr
+%
+\noalign{\hrule}
+%
+% Third row
++5 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
++10 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
++15 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
++20 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+-5 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+-10 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+-15 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Tenth row
+-20 volts &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 02289}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_{in}$ & $V_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 volts & 0 volts \cr
+%
+\noalign{\hrule}
+%
+% Third row
++5 volts & +5 volts \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
++10 volts & +10 volts \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
++15 volts & +15 volts \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
++20 volts & +15 volts \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+-5 volts & -5 volts \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+-10 volts & -10 volts \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+-15 volts & -15 volts \cr
+%
+\noalign{\hrule}
+%
+% Tenth row
+-20 volts & -15 volts \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\vskip 10pt
+
+Follow-up question: the output voltage values given in this table are ideal.  A real opamp would probably not be able to achieve even what is shown here, due to idiosyncrasies of these amplifier circuits.  Explain what would probably be different in a {\it real} opamp circuit from what is shown here.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+A common mistake I see students new to opamps make is assuming that the output voltage will magically attain whatever value the gain equation predicts, with no regard for power supply rail voltage limits.
+
+Another good follow-up question to ask your students is this: "How much voltage is there between the two input terminals in each of the situations described in the table?"  They will find that the "golden rule" of closed-loop opamp circuits can be violated!
+
+If students have difficulty answering the follow-up question, drop these two hints: (1) {\it Rail-to-rail output swing} and (2) {\it Latch-up}.
+
+%INDEX% Opamp, output voltage limits
+
+%(END_NOTES)
+
+

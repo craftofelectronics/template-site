@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{01685x01.eps}$$
+
+\underbar{file 01685}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The meter measurements you take will constitute the "final word" for validating your predictions.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+When presenting this as a performance assessment for a group of students, you will need to show the voltage/current waveforms as part of the "given" conditions.  A good way to do this is to use a PC-based oscilloscope to measure the waveforms, and then display the image using a video projector.
+
+I have found that small synchronous AC motors such as those used in clock mechanisms and in some appliances (microwave oven carousels, for example) will run satisfactorily at 24 volts AC.  Small shaded-pole motors such as those used in household bathroom fans and household appliances (microwave oven cooling fans, for example) may be operated in a relatively safe manner from low-voltage AC power by stepping the voltage up through a power transformer connected directly to the motor.  Use a "step down" power transformer operating in reverse (as a step-up unit), with the higher voltage wires connected and taped to the motor so that the only "loose" wire connections are on the low-voltage side.  Here is a power supply circuit I recommend for the task:
+
+$$\epsfbox{01685x02.eps}$$
+
+This circuit ensures the motor only receives about 60 volts, reducing shock hazard somewhat and allowing the use of capacitors rated for 100 volts (a common mylar capacitor rating).  The smaller the motor, the less capacitance will be required to correct for power factor.  Remind your students that the capacitors used in this exercise must be {\it non-polarized}, since they must operate on AC and not DC!
+
+A shunt resistor value of 1 ohm is recommended, but not absolutely required.  You just need a low-value resistor that will provide a ready point of measurement for current (with the oscilloscope) without imposing too much series resistance in the motor circuit.
+
+%INDEX% Assessment, performance-based (Power factor correction for small AC motor)
+
+%(END_NOTES)
+
+

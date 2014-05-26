@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Here is the block symbol for the 74HC147 decimal-to-BCD encoder:
+
+$$\epsfbox{03004x01.eps}$$
+
+Describe what sort of input conditions would be required to make it generate the code for the number 7, and how that numerical quantity would be represented on the output ($Y$) lines.
+
+\underbar{file 03004}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+To encode the number 7, you would have to make the $I_7$ line low (connect it to ground).  This would make the outputs assume the following states:
+
+\medskip
+\item{$\bullet$} $Y_0$ = low
+\item{$\bullet$} $Y_1$ = low
+\item{$\bullet$} $Y_2$ = low
+\item{$\bullet$} $Y_3$ = high
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a good review of active-low inputs, how they are drawn on schematics, and what they mean in practical digital circuits.  A potentially confusing aspect of this question is the presence of active-low inputs {\it and} outputs, but it is well worth your time to review with students, because like it or not there are many ICs with active-low I/O lines.
+
+%INDEX% 74HC147 encoder IC
+%INDEX% Encoder, 74HC147 IC
+
+%(END_NOTES)
+
+

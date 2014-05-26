@@ -1,0 +1,85 @@
+#!/bin/bash
+
+
+# "Concatenating" all selected questions/answers/notes into a single TeX file.
+# This is where you specify the questions you want included in your worksheet, in the
+# order you want them to appear.
+cat \
+03447.tex \
+01832.tex \
+01834.tex \
+00850.tex \
+01844.tex \
+01566.tex \
+01827.tex \
+00639.tex \
+04042.tex \
+01828.tex \
+03784.tex \
+02103.tex \
+00853.tex \
+01845.tex \
+01836.tex \
+01846.tex \
+02108.tex \
+01837.tex \
+01833.tex \
+01838.tex \
+01835.tex \
+02080.tex \
+02079.tex \
+02104.tex \
+01847.tex \
+01830.tex \
+01831.tex \
+01848.tex \
+01849.tex \
+01829.tex \
+02114.tex \
+01839.tex \
+01840.tex \
+02106.tex \
+02105.tex \
+01850.tex \
+00638.tex \
+03748.tex \
+02620.tex \
+02621.tex \
+00637.tex \
+02623.tex \
+02622.tex \
+02626.tex \
+02625.tex \
+03282.tex \
+03283.tex \
+03280.tex \
+03281.tex \
+03284.tex \
+03285.tex \
+03287.tex \
+03818.tex \
+03819.tex \
+01841.tex \
+01842.tex \
+01851.tex \
+01852.tex \
+01853.tex \
+04065.tex \
+02109.tex \
+03611.tex \
+02110.tex \
+02111.tex \
+02112.tex \
+00851.tex \
+00852.tex \
+01554.tex \
+00640.tex \
+00644.tex \
+00854.tex \
+01541.tex \
+01542.tex \
+00645.tex \
+00605.tex \
+> all.tex
+
+

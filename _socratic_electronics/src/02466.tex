@@ -1,0 +1,38 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{02466x01.eps}$$
+
+\underbar{file 02466}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Use a dual-voltage, regulated power supply to supply power to the opamp.  Specify all four resistors as equal value, between 1 k$\Omega$ and 100 k$\Omega$ (1k5, 2k2, 2k7, 3k3, 4k7, 5k1, 6k8, 10k, 22k, 33k, 39k 47k, 68k, etc.).  This will ensure a differential voltage gain of unity.  If you {\it want} to have a different voltage gain, then by all means specify these resistor values however you see fit!
+
+Differential gain is calculated by averaging the quotients of each measured $V_{out}$ value with its respective $V_{in(+)} - V_{in(-)}$ differential input voltage.  Common-mode gain is calculated by dividing the difference in output voltages ($\Delta V_{out}$) by the difference in common-mode input voltages ($\Delta V_{in}$).
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (Opamp difference amplifier)
+
+%(END_NOTES)
+
+

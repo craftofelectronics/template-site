@@ -1,0 +1,71 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In this Wien bridge circuit (with equal-value components all around), both output voltages will have the same phase angle only at one frequency:
+
+$$\epsfbox{02262x01.eps}$$
+
+At this same frequency, $V_{out2}$ will be exactly one-third the amplitude of $V_{in}$.  Write an equation in terms of $R$ and $C$ to solve for this frequency.
+
+\underbar{file 02262}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+It's your luck day!  Here, I show one method of solution:
+
+$$R - j{1 \over \omega C} = 2 \left({1 \over {{1 \over R} + j \omega C}}\right)$$
+
+$$R - j{1 \over \omega C} = {2 \over {{1 \over R} + j \omega C}}$$
+
+$$\left( R - j{1 \over \omega C} \right) \left( {{1 \over R} + j \omega C} \right) = 2$$
+
+$${R \over R} + j \omega RC - j {1 \over {\omega R C}} - j^2 {{\omega C} \over {\omega C}} = 2$$
+
+$$1 + j \omega RC - j {1 \over {\omega R C}} + 1 = 2$$
+
+$$j \omega RC - j {1 \over {\omega R C}} = 0$$
+
+$$j \omega RC = j {1 \over {\omega R C}}$$
+
+$$\omega RC = {1 \over {\omega R C}}$$
+
+$$\omega^2 = {1 \over {R^2 C^2}}$$
+
+$$\omega = {1 \over {R C}}$$
+
+$$2 \pi f = {1 \over {R C}}$$
+
+$$f = {1 \over {2 \pi R C}}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I chose to show the method of solution here because I find many of my students weak in manipulating imaginary algebraic terms (anything with a $j$ in it).  The answer is not exactly a give-away, as students still have to figure out how I arrived at the first equation.  This involves both an understanding of the voltage divider formula as well as the algebraic expression of series impedances and parallel admittances.
+
+It is also possible to solve for the frequency by only considering phase angles and not amplitudes.  Since the only way $V_{out2}$ can have a phase angle of zero degrees in relation to the excitation voltage is for the upper and lower arms of that side of the bridge to have equal impedance phase angles, one might approach the problem in this fashion:
+
+$$\theta = \tan^{-1} \left( {X_{series} \over R_{series}} \right)$$
+
+$$\theta = \tan^{-1} \left( {B_{parallel} \over G_{parallel}} \right)$$
+
+$${X_{series} \over R_{series}} = {B_{parallel} \over G_{parallel}}$$
+
+You might try presenting this solution to your students if imaginary algebra is too much for them at this point.
+
+%INDEX% Wien bridge circuit calculations
+
+%(END_NOTES)
+
+

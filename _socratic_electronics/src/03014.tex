@@ -1,0 +1,40 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Liquid crystal display (LCD) elements require the application of {\it AC} voltage rather than {\it DC} voltage to prevent certain undesirable effects.  Since logic circuits typically operate on DC power ($V_{CC}$ or $V_{DD}$ and Ground), there must be some clever way of generating the necessary AC from DC logic power in order to drive these power-thrifty display devices.  Indeed, it just so happens that Exclusive-OR gates do the trick quite nicely:
+
+$$\epsfbox{03014x01.eps}$$
+
+Consider the square wave voltage source in this schematic as a source of alternating "high" and "low" logic states, 5 volts and 0 volts respectively.  Determine what sort of voltage exists across the liquid crystal fluid with the switch in the open position as well as the closed position, and from this determine which switch position results in a {\it darkened} LCD versus a {\it transparent} LCD.
+
+\underbar{file 03014}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Closing the switch makes the LCD opaque; opening the switch makes the LCD transparent.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Note that I did not specify anywhere in the question or in the answer whether the application of voltage across an LCD segment darkened or lightened that segment.  This is a detail I leave up to students to research!
+
+The particular method of generating AC from DC using an XOR gate is quite clever.  Essentially, we are using the XOR's ability as a controlled inverter/buffer to reverse "polarity" of the square wave signal.  Be sure to have your students explain how AC is applied across the LCD in this circuit.
+
+%INDEX% Exclusive-OR gate, used to drive LCD
+%INDEX% LCD drive circuit, using exclusive-OR gate
+
+%(END_NOTES)
+
+

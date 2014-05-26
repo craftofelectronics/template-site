@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This operational amplifier circuit is often referred to as a {\it voltage buffer}, because it has unity gain (0 dB) and therefore simply reproduces, or "buffers," the input voltage:
+
+$$\epsfbox{03801x01.eps}$$
+
+What possible use is a circuit such as this, which offers no voltage gain or any other form of signal modification?  Wouldn't a straight piece of wire do the same thing?  Explain your answers.
+
+$$\epsfbox{03801x02.eps}$$
+
+\underbar{file 03801}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+While this circuit offers no voltage gain, it does offer {\it current gain} and {\it impedance transformation}.  Much like the common-collector (or common-drain) single transistor amplifier circuits which also had voltage gains of (near) unity, opamp buffer circuits are useful whenever one must drive a relatively "heavy" (low impedance) load with a signal coming from a "weak" (high impedance) source.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I have found that some students have difficulty with the terms "heavy" and "light" in reference to load characteristics.  That a "heavy" load would have very few ohms of impedance, and a "light" load would have many ohms of impedance seems counter-intuitive to some.  It all makes sense, though, once students realize the terms "heavy" and "light" refer to the amount of {\it current} drawn by the respective loads.
+
+Ask your students to explain why the straight piece of wire fails to "buffer" the voltage signal in the same way the the opamp follower circuit does.
+
+%INDEX% Voltage buffer, practical uses for
+
+%(END_NOTES)
+
+

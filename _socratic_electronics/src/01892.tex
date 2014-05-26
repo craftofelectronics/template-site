@@ -1,0 +1,87 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Note the effect of adding the second harmonic of a waveform to the fundamental, and compare that effect with adding the {\it third} harmonic of a waveform to the fundamental:
+
+$$\epsfbox{01892x02.eps} \hskip 20pt \epsfbox{01892x03.eps}$$
+
+$$\epsfbox{01892x01.eps} \hskip 20pt \epsfbox{01892x04.eps}$$
+
+Now compare the sums of a fundamental with its fourth harmonic, versus with its fifth harmonic:
+
+$$\epsfbox{01892x05.eps} \hskip 20pt \epsfbox{01892x06.eps}$$
+
+$$\epsfbox{01892x07.eps} \hskip 20pt \epsfbox{01892x08.eps}$$
+
+And again for the 1st + 6th, versus the 1st + 7th harmonics:
+
+$$\epsfbox{01892x09.eps} \hskip 20pt \epsfbox{01892x10.eps}$$
+
+$$\epsfbox{01892x11.eps} \hskip 20pt \epsfbox{01892x12.eps}$$
+
+Examine these sets of harmonic sums, and indicate the trend you see with regard to harmonic number and symmetry of the final (Sum) waveforms.  Specifically, how does the addition of an {\it even} harmonic compare to the addition of an {\it odd} harmonic, in terms of final waveshape?
+
+\underbar{file 01892}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The addition of an even harmonic introduces asymmetry about the horizontal axis.  The addition of odd harmonics does not.
+
+\vskip 10pt
+
+Challenge question: explain {\it why} this is the case, any way you can.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Although the sequence of images presented in the question by no means constitutes a formal proof, it should lead students to observe a trend: that odd harmonics do not make a waveform unsymmetrical about the horizontal axis, whereas even harmonics do.  Given these two facts, we may make qualitative judgments about the harmonic content of a waveform simply by visually checking for symmetry about the horizontal axis.
+
+Incidentally, some students have a difficult time grasping the concept of symmetry about the horizontal axis of a waveform.  Take this simple example, which {\it is} symmetrical about its horizontal centerline:
+
+$$\epsfbox{01892x13.eps}$$
+
+Some students will protest that this waveform is {\it not} symmetrical about its centerline, because it does not look exactly the same as before after flipping.  They must bear in mind, though, that this is just one cycle of a continuous waveform.  In reality, the waveform looks like this before and after flipping:
+
+$$\epsfbox{01892x14.eps}$$
+
+All one needs to do to see that these two waveforms are indeed identical is to do a 180 degree phase shift (shifting either to the left or to the right):
+
+$$\epsfbox{01892x15.eps}$$
+
+By contrast, a waveform without symmetry about the horizontal axis cannot be made to look the same after flipping, no matter what subsequent phase shift is given to it:
+
+$$\epsfbox{01892x16.eps}$$
+
+Another way to describe this asymmetry is in terms of the waveform's departure from the centerline, compared to its return to the centerline.  Is the rate-of-change ($dv \over dt$ for a voltage waveform) equal in magnitude and opposite in sign at each of these points, or is there a difference in magnitude as well?  Discuss ways to identify this type of asymmetry, and what it means in terms of harmonic content.
+
+Mathematically, this symmetry is defined as such:
+
+$$f(t) = -f \left(t + {T \over 2} \right)$$
+
+\noindent
+Where,
+
+$f(t) = $ Function of waveform with time as the independent variable
+
+$t = $ Time
+
+$T = $ Period of waveform, in same units of time as $t$
+
+%INDEX% Even harmonics versus odd harmonics, effects on waveshape symmetry
+%INDEX% Odd harmonics versus even harmonics, effects on waveshape symmetry
+
+%(END_NOTES)
+
+

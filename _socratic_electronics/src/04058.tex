@@ -1,0 +1,61 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Compare these three mathematical series, one for $e^x$, one for $\cos x$, and one for $\sin x$:
+
+$$e^x = 1 + x + {x^2 \over 2!} + {x^3 \over 3!} + {x^4 \over 4!} + {x^5 \over 5!} + {x^6 \over 6!} + {x^7 \over 7!} + \cdots $$
+
+$$\cos x = 1 - {x^2 \over 2!} + {x^4 \over 4!} - {x^6 \over 6!} + \cdots $$
+
+$$\sin x = x - {x^3 \over 3!} + {x^5 \over 5!} - {x^7 \over 7!} + \cdots $$
+
+Note similarities in the terms of these three series.  Aside from signs, it would appear the cosine series contains all the even-powered terms of $e^x$ and the sine series contains all the odd-powered terms of $e^x$.  Leonhard Euler, the Swiss mathematician who lived from 1707 to 1783, found a connection between these three series which became known as {\it Euler's relation}.
+
+You too can find this same connection if you substitute $jx$ for $x$ in the first ($e^x$) series, and then multiply all terms in the sine series by $j$.  Leave the cosine series unaltered.  Remember that $j = \sqrt{-1}$ and that $j^2 = -1$, $j^3 = -j$, $j^4 = 1$, $j^5 = j$, etc.
+
+\underbar{file 04058}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+First, I'll perform the substitutions and multiplications for you:
+
+$$e^{jx} = 1 + jx + {(jx)^2 \over 2!} + {(jx)^3 \over 3!} + {(jx)^4 \over 4!} + {(jx)^5 \over 5!} + {(jx)^6 \over 6!} + {(jx)^7 \over 7!} + \cdots $$
+
+$$\cos x = 1 - {x^2 \over 2!} + {x^4 \over 4!} - {x^6 \over 6!} + \cdots $$
+
+$$j \sin x = jx - j{x^3 \over 3!} + j{x^5 \over 5!} - j{x^7 \over 7!} + \cdots $$
+
+\vskip 10pt
+
+If you properly calculate all the powers of $j$, you will find this relationship between these three series:
+
+$$e^{jx} = \cos x + j \sin x$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+For those students who need a little more help, here is the $e^{jx}$ series before and after simplification:
+
+$$e^{jx} = 1 + jx + {(jx)^2 \over 2!} + {(jx)^3 \over 3!} + {(jx)^4 \over 4!} + {(jx)^5 \over 5!} + {(jx)^6 \over 6!} + {(jx)^7 \over 7!} + \cdots $$
+
+$$e^{jx} = 1 + jx - {x^2 \over 2!} - j{x^3 \over 3!} + {x^4 \over 4!} + j{x^5 \over 5!} - {x^6 \over 6!} - j{x^7 \over 7!} + \cdots $$
+
+Now, the composition of the $e^{jx}$ series as being the sum of the $\cos x$ series and the $j \sin x$ series should be more evident.
+
+%INDEX% Euler's relation
+
+%(END_NOTES)
+
+

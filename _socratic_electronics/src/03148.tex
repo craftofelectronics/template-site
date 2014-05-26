@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following ladder logic diagram is for a reversing motor control circuit:
+
+$$\epsfbox{03148x01.eps}$$
+
+Study this diagram, then explain how motor reversal is accomplished.  Also, identify the function of each "M" contact in the control circuit, especially those normally-closed contacts in series with the motor starter coils.
+
+\vskip 10pt
+
+\goodbreak
+
+Now consider the following modification made to the reversing motor control circuit (motor and power contacts not shown here):
+
+$$\epsfbox{03148x02.eps}$$
+
+What extra functionality do the time-delay relays contribute to this motor control circuit?
+
+\underbar{file 03148}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The normally-open and normally-closed "M" contacts provide seal-in and interlock functions, respectively.  The time-delay relays prevent the motor from being {\it immediately} reversed.
+
+\vskip 10pt
+
+Follow-up question: figure out how to simplify the time-delay relay circuit.  Hint: integrate the time-delay and interlocking functions into a single contact (per rung).
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This circuit provides students an opportunity to analyze the workings of a delayed-start, reversing motor control circuit.  Have your students present both their analyses and the methods behind the analyses as you work through this question with them.
+
+%INDEX% Interlock contact, motor control circuit
+%INDEX% Time delay relay circuit, electric motor control
+
+%(END_NOTES)
+
+

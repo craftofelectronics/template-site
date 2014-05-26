@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The part number 74HCT163 integrated circuit is a high-speed CMOS, four-bit, synchronous binary counter.  It is a pre-packaged unit, will all the necessary flip-flops and selection logic enclosed to make your design work easier than if you had to build a counter circuit from individual flip-flops.  Its block diagram looks something like this (power supply terminals omitted, for simplicity):
+
+$$\epsfbox{01403x01.eps}$$
+
+Research the function of this integrated circuit, from manufacturers' datasheets, and explain the function of each input and output terminal.
+
+\underbar{file 01403}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} $P_0$, $P_1$, $P_2$, and $P_3$ = parallel load data inputs
+\item{$\bullet$} $Q_0$, $Q_1$, $Q_2$, and $Q_3$ = count outputs
+\item{$\bullet$} $CP$ = Clock pulse input
+\item{$\bullet$} $\overline{MR}$ = Master reset input
+\item{$\bullet$} $\overline{SPE}$ = Synchronous parallel enable input
+\item{$\bullet$} $PE$ = Enable input
+\item{$\bullet$} $TE$ = Enable input
+\item{$\bullet$} $TC$ = Terminal count output (sometimes called {\it ripple carry output}, or $RCO$)
+\medskip
+
+\vskip 10pt
+
+Follow-up question: both the reset ($\overline{MR}$) and preset ($\overline{SPE}$) inputs are synchronous for this particular counter circuit.  Explain the significance of this fact in regard to how we use this IC.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ultimately, your students will most likely be working with pre-packaged counters more often than counters made up of individual flip-flops.  Thus, they need to understand the nomenclature of counters, their common pin functions, etc.  If possible, allow for the group presentation of datasheets by having a computer projector available, so students may show the datasheets they've downloaded from the internet to the rest of the class.
+
+Something your students may notice when researching datasheets is how different manufacturers give the same IC pins different names.  This may make the interpretation of inputs and outputs on the given symbol more difficult, if the particular datasheet researched by the student does not use the same labels as I do!  This is a great illustration of datasheet variability, covered in a way that students are not likely to forget.
+
+%INDEX% Counters, prepackaged
+%INDEX% Counter cascading
+
+%(END_NOTES)
+
+

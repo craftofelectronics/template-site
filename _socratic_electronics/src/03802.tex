@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The purpose of this circuit is to provide a pushbutton-adjustable voltage.  Pressing one button causes the output voltage to increase, while pressing the other button causes the output voltage to decrease.  When neither button is pressed, the voltage remains stable.  Essentially, it is an active {\it integrator} circuit, with resistors $R_1$ and $R_2$ and capacitor $C_1$ setting the rates of integration: 
+
+$$\epsfbox{03802x01.eps}$$
+
+After working just fine for quite a long while, the circuit suddenly fails: now it only outputs zero volts DC all the time.  Identify at least one component or wiring failure that would account for the circuit's faulty behavior, and explain why that fault would cause the circuit to act like this.
+
+\underbar{file 03802}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The wire connecting the junction of $R_1$ and $R_2$ with the inverting input of the opamp could be broken open.  Also, $C_1$ could be failed shorted.
+
+\vskip 10pt
+
+Challenge question: why do you suppose I specify a CA3130 operational amplifier for this particular circuit?  What is special about this opamp that qualifies it for the task?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I purposely omitted the explanations for the possible faults listed in the answer, because I want the students to think this through, and to do so in class with you present so you may hear their reasoning.
+
+%INDEX% Troubleshooting, pushbutton voltage adjustment circuit
+
+%(END_NOTES)
+
+

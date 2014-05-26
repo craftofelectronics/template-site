@@ -1,0 +1,35 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+For those of you who are used to working with regular opamps, the presence of resistor $R_4$ may be a mystery.  It is necessary because of a special limitation of the type LM339 comparator IC.  Research and explain what this limitation is.
+
+\underbar{file 03197}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The LM339 comparator is only able to {\it sink} current at its output.  Therefore, $R_4$ acts as a {\it pullup} resistor.
+
+\vskip 10pt
+
+Follow-up question: is this (overall) circuit capable of sourcing current to a load?  Explain why or why not.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This characteristic of the LM339 caused problems for me the first few times I tried to use it in my designs.  Despite this limitation, though, the LM339 is very aptly suited for this application with its fast response and very wide power supply voltage limits.
+
+%(END_NOTES)
+
+

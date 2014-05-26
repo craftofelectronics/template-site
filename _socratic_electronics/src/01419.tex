@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This astable 555 circuit has a potentiometer allowing for variable duty cycle:
+
+$$\epsfbox{01419x01.eps}$$
+
+With the diode in place, the output waveform's duty cycle may be adjusted to less than 50\% if desired.  Explain why the diode is necessary for that capability.  Also, identify which way the potentiometer wiper must be moved to decrease the duty cycle.
+
+\underbar{file 01419}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The diode allows part of the potentiometer's resistance to be bypassed during the capacitor's charging cycle, allowing (potentially) less resistance in the charging circuit than in the discharging circuit.
+
+To decrease the duty cycle, move the wiper up (toward the fixed resistor, away from the capacitor).
+
+\vskip 10pt
+
+Challenge question: write an equation solving for the average current drawn by the 555 timer circuit as it charges and discharges the capacitor while generating a 50\% duty cycle pulse.  Assume that no current is drawn from the power supply by the circuit while the capacitor is discharging, and use this approximation of the capacitor "Ohm's Law" equation for figuring average current through the charge cycle:
+
+$$i = C {dv \over dt} \hbox{\hskip 10pt True "Ohm's Law" for a capacitor}$$
+
+$$I_{avg} = C {\Delta V \over \Delta t} \hbox{\hskip 10pt Capacitive "Ohm's Law" solving for {\it average} current}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question really probes students' conceptual understanding of the 555 timer, used as an astable multivibrator (oscillator).  If some students just can't seem to grasp the function of the diode, illuminate their understanding by having them trace the charging and discharging current paths.  Once they understand which way current goes in both cycles of the timer, they should be able to recognize what the diode does and why it is necessary.
+
+%INDEX% 555 timer, astable operation
+%INDEX% 555 timer, variable duty cycle
+
+%(END_NOTES)
+
+

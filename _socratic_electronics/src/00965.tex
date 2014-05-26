@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A popular method of "reclaiming" some of the lost voltage gain resulting from the addition of an emitter resistor ($R_E$) to a common-emitter amplifier circuit is to connect a "bypass" capacitor in parallel with that resistor:
+
+$$\epsfbox{00965x01.eps}$$
+
+Explain why this technique works to increase the circuit's AC voltage gain, without leading to the problems associated with directly grounding the emitter.
+
+\underbar{file 00965}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+To an AC signal, a large capacitor "looks" like a lower impedance than the emitter resistor.  Usually, this capacitor is sized such that $X_C$ is very small.
+
+The addition of a bypass capacitor maintains DC stability, because DC cannot go through the capacitor but must go through the emitter resistor ($R_E$) just as if the bypass capacitor were not there at all.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question provides a good opportunity to review capacitive reactance ($X_C$).  The polarized capacitor symbol hints at the capacitor's relatively large value, and your students should realize that a large capacitor's reactance will be relatively low to most AC signals.  An idea to help communicate the "bypass" concept is to have one of your students re-draw the circuit as "seen" from the perspective of an AC signal, not a DC signal.  With the capacitor effectively acting as a short-circuit to AC signals, what does the amplifier circuit look like to those signals?
+
+%INDEX% Bypass capacitor, common-emitter amplifier
+
+%(END_NOTES)
+
+

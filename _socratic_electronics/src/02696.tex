@@ -1,0 +1,61 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+If an object moves in a straight line, such as an automobile traveling down a straight road, there are three common measurements we may apply to it: {\it position} ($x$), {\it velocity} ($v$), and {\it acceleration} ($a$).  Position, of course, is nothing more than a measure of how far the object has traveled from its starting point.  Velocity is a measure of how {\it fast} its position is changing over time.  Acceleration is a measure of how fast the velocity is changing over time.
+
+These three measurements are excellent illustrations of calculus in action.  Whenever we speak of "rates of change," we are really referring to what mathematicians call {\it derivatives}.  Thus, when we say that velocity ($v$) is a measure of how fast the object's position ($x$) is changing over time, what we are really saying is that velocity is the "time-derivative" of position.  Symbolically, we would express this using the following notation:
+
+$$v = {dx \over dt}$$
+
+Likewise, if acceleration ($a$) is a measure of how fast the object's velocity ($v$) is changing over time, we could use the same notation and say that acceleration is the time-derivative of velocity:
+
+$$a = {dv \over dt}$$
+
+Since it took two differentiations to get from position to acceleration, we could also say that acceleration is the {\it second} time-derivative of position:
+
+$$a = {d^2x \over dt^2}$$
+
+"What has this got to do with electronics," you ask?  Quite a bit!  Suppose we were to measure the velocity of an automobile using a tachogenerator sensor connected to one of the wheels: the faster the wheel turns, the more DC voltage is output by the generator, so that voltage becomes a direct representation of velocity.  Now we send this voltage signal to the input of a {\it differentiator} circuit, which performs the time-differentiation function on that signal.  What would the output of this differentiator circuit then represent with respect to the automobile, {\it position} or {\it acceleration}?  What practical use do you see for such a circuit?
+
+Now suppose we send the same tachogenerator voltage signal (representing the automobile's velocity) to the input of an {\it integrator} circuit, which performs the time-integration function on that signal (which is the mathematical inverse of differentiation, just as multiplication is the mathematical inverse of division).  What would the output of this integrator then represent with respect to the automobile, {\it position} or {\it acceleration}?  What practical use do you see for such a circuit?
+
+\underbar{file 02696}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The differentiator's output signal would be proportional to the automobile's {\it acceleration}, while the integrator's output signal would be proportional to the automobile's {\it position}.
+
+$$a \propto {dv \over dt} \hbox{\hskip 20pt Output of differentiator}$$
+
+$$x \propto \int_0^T v \> dt \hbox{\hskip 20pt Output of integrator}$$
+
+\vskip 10pt
+
+Follow-up question: draw the schematic diagrams for these two circuits (differentiator and integrator).
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The calculus relationships between position, velocity, and acceleration are fantastic examples of how time-differentiation and time-integration works, primarily because everyone has first-hand, tangible experience with all three.  Everyone inherently understands the relationship between distance, velocity, and time, because everyone has had to travel somewhere at some point in their lives.  Whenever you as an instructor can help bridge difficult conceptual leaps by appeal to common experience, do so!
+
+%INDEX% Calculus, derivative (applied to motion)
+%INDEX% Calculus, integral (applied to motion)
+
+%(END_NOTES)
+
+

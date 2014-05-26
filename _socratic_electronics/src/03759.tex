@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This Wien bridge oscillator circuit is very sensitive to changes in the gain.  Note how the potentiometer used in this circuit is the "trimmer" variety, adjustable with a screwdriver rather than by a knob or other hand control:
+
+$$\epsfbox{03759x01.eps}$$
+
+The reason for this choice in potentiometers is to make accidental changes in circuit gain less probable.  If you build this circuit, you will see that tiny changes in this potentiometer's setting make a huge difference in the quality of the output sine wave.  A little too much gain, and the sine wave becomes noticeably distorted.  Too little gain, and the circuit stops oscillating altogether!
+
+Obviously, it is not good to have such sensitivity to minor changes in any practical circuit expected to reliably perform day after day.  One solution to this problem is to add a {\it limiting network} to the circuit comprised of two diodes and two resistors:
+
+$$\epsfbox{03759x02.eps}$$
+
+With this network in place, the circuit gain may be adjusted well above the threshold for oscillation (Barkhausen criterion) without exhibiting excessive distortion as it would have without the limiting network.  Explain why the limiting network makes this possible.
+
+\underbar{file 03759}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The limiting network attenuates the circuit gain as peak voltage begins to exceed 0.7 volts.  This attenuation helps to prevent the opamp from clipping.
+
+\vskip 10pt
+
+Follow-up question: what effect does this "limiting network" have on the purity of the oscillator's output signal spectrum?  In other words, does the limiting network increase or decrease the harmonic content of the output waveform?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This circuit is important for students to encounter, as it reveals a very practical limitation of the "textbook" version of the Wien bridge oscillator circuit.  It is not enough that a circuit design work in ideal conditions -- a practical circuit must be able to tolerate some variance in component values or else it will not operate reliably.
+
+%INDEX% Wien bridge oscillator circuit (opamp, with limiting)
+%INDEX% Oscillator circuit, Wien bridge (opamp, with limiting)
+
+%(END_NOTES)
+
+

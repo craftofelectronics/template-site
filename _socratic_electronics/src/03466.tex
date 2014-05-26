@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This phase-shifting bridge circuit is supposed to provide an output voltage with a variable phase shift from -45$^{o}$ (lagging) to +45$^{o}$ (leading), depending on the position of the potentiometer wiper:
+
+$$\epsfbox{03466x01.eps}$$
+
+Suppose, though, that the output signal registers as it should with the potentiometer wiper fully to the right, but diminishes greatly in amplitude as the wiper is moved to the left, until there is practically zero output voltage at the full-left position.  Identify a likely failure that could cause this to happen, and explain why this failure could account for the circuit's strange behavior.
+
+\underbar{file 03466}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+An open failure of the fixed resistor in the upper-left arm of the bridge could cause this to happen:
+
+$$\epsfbox{03466x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: identify another possible component failure that would exhibit the same symptoms.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It is essential, of course, that students understand the operational principle of this circuit before they may even attempt to diagnose possible faults.  You may find it necessary to discuss this circuit in detail with your students before they are ready to troubleshoot it.
+
+In case anyone asks, the symbolism $R_{pot} >> R$ means "potentiometer resistance is {\it much} greater than the fixed resistance value."
+
+%INDEX% Phase shifter circuit, adjustable
+%INDEX% Troubleshooting, phase-shifter bridge circuit
+
+%(END_NOTES)
+
+

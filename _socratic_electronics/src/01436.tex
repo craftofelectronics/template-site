@@ -1,0 +1,54 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Pulse Width Modulation, or {\it PWM}, is a very popular means of controlling power to an electrical load such as a light bulb or a DC motor.  With PWM control, the duty cycle of a high-frequency digital (on/off) signal is varied, with the effect of varying power dissipation at the load:
+
+$$\epsfbox{01436x01.eps}$$
+
+One of the major advantages to using PWM to proportion power to a load is that the final switching transistor operates with minimal heat dissipation.  If we were to use a transistor in its linear ("active") mode, it would dissipate far more heat when controlling the speed of this motor!  By dissipating less heat, the circuit wastes less power.
+
+Explain why the power transistor in this circuit runs cooler when buffering the PWM signal from the 555 timer, rather than if it were operated in linear mode.  Also, identify which direction the potentiometer wiper must be moved to increase the speed of the motor.
+
+\vskip 10pt
+
+Challenge question: suppose we needed to control the power of a DC motor, when the motor's operating voltage was far in excess of the 555 timer's operating voltage.  Obviously, we need a separate power supply for the motor, but how would we safely interface the 555's output with the power transistor to control the motor speed?  Draw a schematic diagram to accompany your answer.
+
+\underbar{file 01436}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I'll let you research the answer to why PWM is a more energy-efficient way to control load power.  This is a very important concept in power electronics!
+
+To increase the speed of the motor, move the potentiometer wiper {\it up} (as pictured in the schematic).
+
+\vskip 10pt
+
+Here is one possible solution to the problem of interfacing a 555 timer to a high-voltage DC motor:
+
+$$\epsfbox{01436x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+There is much literature available discussing PWM power control, and its advantages over linear power control.  Your students should have no difficulty finding it on their own!
+
+Discuss with them the proposed solution to the high-voltage motor problem.  What purpose(s) do/does the solid-state relay serve?  Is there a way to achieve PWM control over the motor without using an optocoupled device?  If so, how?  Let your students show their solutions and discuss the practicality of each.
+
+%INDEX% Power control, pulsed
+%INDEX% Pulse-width modulation (PWM)
+
+%(END_NOTES)
+
+

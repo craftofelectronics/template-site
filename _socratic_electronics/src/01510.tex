@@ -1,0 +1,99 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+Differential equations may be used to model the charging behavior of an RC circuit.  Take, for instance, this simple RC circuit:
+
+$$\epsfbox{01510x01.eps}$$
+
+We may develop a loop equation based on Kirchhoff's Voltage Law, knowing that the voltage of the power source is constant (30 volts), and that the voltage drops across the capacitor and resistor are $V_C = {Q \over C}$ and $V_R = IR$, respectively:
+
+$$30 - IR - {Q \over C} = 0$$
+
+To turn this into a true differential equation, we must express one of the variables as the derivative of the other.  In this case, it makes sense to define $I$ as the time-derivative of $Q$:
+
+$$30 - {dQ \over dt}R - {Q \over C} = 0$$
+
+Show that the specific solution to this differential equation, assuming an initial condition of $Q = 0$ at $t = 0$, is as follows:
+
+$$Q = 0.0003(1 - e^{-50t})$$
+
+Also, show this solution in a form where it solves for capacitor voltage ($V_C$) instead of capacitor charge ($Q$).
+
+\underbar{file 01510}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$30 - {dQ \over dt}R - {Q \over C} = 0$$
+
+$$30 - {Q \over C} = {dQ \over dt}R$$
+
+$${{30 - {Q \over C}} \over R} = {dQ \over dt}$$
+
+$${{{30C \over C} - {Q \over C}} \over R} = {dQ \over dt}$$
+
+$${{30C - Q} \over RC} = {dQ \over dt}$$
+
+$${dt \over RC} = {dQ \over {30C - Q}}$$
+
+$$\int {1 \over RC} \> dt = \int {1 \over {30C - Q}} \> dQ$$
+
+$$\hbox{Substitution: } u = 30C - Q \hbox{\hskip 10pt ; \hskip 10pt} {du \over dQ} = -1 \hbox{\hskip 10pt ; \hskip 10pt} dQ = -du$$
+
+$${1 \over RC} \int dt = - \int {1 \over u} \> du$$
+
+$${t \over RC} + K_1 = - | \ln u |$$
+
+$$-{t \over RC} - K_1 = | \ln u |$$
+
+$$e^{-{t \over RC} - K_1} = | u |$$
+
+$$K_2e^{-{t \over RC}} = u$$
+
+$$K_2e^{-{t \over RC}} = 30C - Q$$
+
+$$\hbox{General solution: } Q = 30C - K_2e^{-{t \over RC}}$$
+
+Given the initial condition that the charge stored in the capacitor is zero ($Q = 0$) at time zero ($t = 0$), the constant of integration must be equal to $30C$ in our specific solution:
+
+$$Q = 30C - 30Ce^{-{t \over RC}}$$
+
+$$Q = 30C (1 - e^{-{t \over RC}})$$
+
+Substituting the given component values into this specific solution gives us the final equation:
+
+$$Q = 0.0003(1 - e^{-50t})$$
+
+Showing a final equation in terms of capacitor voltage instead of capacitor charge:
+
+$${Q \over C} = {30C \over C}(1 - e^{-{t \over RC}})$$
+
+$$V_C = 30(1 - e^{-50t})$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+RC time constant circuits are an excellent example of how to apply simple differential equations.  In this case, we see that the differential equation is first-order, with separable variables, making it comparatively easy to solve.
+
+It should also be evident to students that {\it any} initial condition of capacitor charge may be set into the general solution (by changing the value of the constant).
+
+%INDEX% Kirchhoff's Voltage Law
+%INDEX% Differential equation, RC time constant circuit
+
+%(END_NOTES)
+
+

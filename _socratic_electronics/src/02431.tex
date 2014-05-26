@@ -1,0 +1,58 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following schematic diagram is of a simple {\it curve tracer circuit}, used to plot the current/voltage characteristics of different electronic components on an oscilloscope screen:
+
+$$\epsfbox{02431x01.eps}$$
+
+The way it works is by applying an AC voltage across the terminals of the device under test, outputting two different voltage signals to the oscilloscope.  One signal, driving the horizontal axis of the oscilloscope, represents the voltage across the two terminals of the device.  The other signal, driving the vertical axis of the oscilloscope, is the voltage dropped across the shunt resistor, representing current through the device.  With the oscilloscope set for "X-Y" mode, the electron beam traces the device's characteristic curve. 
+
+For example, a simple resistor would generate this oscilloscope display:
+
+$$\epsfbox{02431x02.eps}$$
+
+A resistor of greater value (more ohms of resistance) would generate a characteristic plot with a shallower slope, representing less current for the same amount of applied voltage:
+
+$$\epsfbox{02431x03.eps}$$
+
+Curve tracer circuits find their real value in testing semiconductor components, whose voltage/current behaviors are nonlinear.  Take for instance this characteristic curve for an ordinary rectifying diode:
+
+$$\epsfbox{02431x04.eps}$$
+
+The trace is flat everywhere left of center where the applied voltage is negative, indicating no diode current when it is reverse-biased.  To the right of center, though, the trace bends sharply upward, indicating exponential diode current with increasing applied voltage (forward-biased) just as the "diode equation" predicts.
+
+On the following grids, plot the characteristic curve for a diode that is failed shorted, and also for one that is failed open:
+
+$$\epsfbox{02431x05.eps}$$
+
+\underbar{file 02431}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{02431x06.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Characteristic curves are not the easiest concept for some students to grasp, but they are incredibly informative.  Not only can they illustrate the electrical behavior of a nonlinear device, but they can also be used to diagnose otherwise hard-to-measure faults.  Letting students figure out what shorted and open curves look like is a good way to open their minds to this diagnostic tool, and to the nature of characteristic curves in general.
+
+Although it is far from obvious, one of the oscilloscope channels will have to be "inverted" in order for the characteristic curve to appear in the correct quadrant(s) of the display.  Most dual-trace oscilloscopes have a "channel invert" function that works well for this purpose.  If engaging the channel invert function on the oscilloscope flips the wrong axis, you may reverse the connections of the test device to the curve tracer circuit, flipping both axes simultaneously.  Between reversing device connections and reversing one channel of the oscilloscope, you can get the curve to plot any way you want it to!
+
+%INDEX% Characteristic curve, PN junction diode
+%INDEX% Curve tracer circuit, simple
+
+%(END_NOTES)
+
+

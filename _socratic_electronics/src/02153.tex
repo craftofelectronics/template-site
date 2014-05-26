@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A resistive DC load receives pulse-width modulated (PWM) power from a controller circuit, and an oscilloscope shows the load voltage waveform as such:
+
+$$\epsfbox{02153x01.eps}$$
+
+Calculate the duty cycle of this waveform, and also the average power dissipated by the load assuming a load resistance of 2.5 $\Omega$.
+
+\underbar{file 02153}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Duty cycle $\approx$ 42\%
+
+$P_{average}$ $\approx$ 1.5 W
+
+\vskip 10pt
+
+Follow-up question: which oscilloscope setup parameters (vertical sensitivity, probe ratio, coupling, and timebase) are necessary for performing these calculations?  Which parameters are unnecessary, and why?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Calculating the duty cycle should be easy.  Calculating load power dissipation requires some thought.  If your students do not know how to calculate average power, suggest this thought experiment: calculating power dissipation at 0\% duty cycle, at 100\% duty cycle, and at 50\% duty cycle.  The relationship between duty cycle and average power dissipation is rather intuitive if one considers these conditions.
+
+If a more rigorous approach is required to satisfy student queries, you may wish to pose another thought experiment: calculate the {\it energy} (in units of Joules) delivered to the load for a 50\% duty cycle, recalling that Watts equals Joules per second.  Average power, then, is calculated by dividing Joules by seconds over a period of one or more whole waveform cycles.  From this, the linear relationship between duty cycle and average power dissipation should be clear.
+
+%INDEX% Duty cycle, measuring with oscilloscope
+%INDEX% PWM control, load power calculation
+
+%(END_NOTES)
+
+

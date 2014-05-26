@@ -1,0 +1,58 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+Both the input and the output of this circuit are square waves, although the output waveform is slightly distorted and also has much less amplitude:
+
+$$\epsfbox{01902x01.eps}$$
+
+You recognize one of the RC networks as a passive integrator, and the other as a passive differentiator.  What does the likeness of the output waveform compared to the input waveform indicate to you about differentiation and integration as {\it functions} applied to waveforms?
+
+\underbar{file 01902}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Differentiation and integration are mathematically inverse functions of one another.  With regard to waveshape, either function is reversible by subsequently applying the other function.
+
+\vskip 10pt
+
+Follow-up question: this circuit will not work as shown if both $R$ values are the same, and both $C$ values are the same as well.  Explain why, and also describe what value(s) would have to be different to allow the original square-waveshape to be recovered at the final output terminals.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+That integration and differentiation are inverse functions will probably be obvious already to your more mathematically inclined students.  To others, it may be a revelation.
+
+If time permits, you might want to elaborate on the limits of this complementarity.  As anyone with calculus background knows, integration introduces an arbitrary constant of integration.  So, if the integrator stage follows the differentiator stage, there may be a DC bias added to the output that is not present in the input (or visa-versa!).  
+
+$$\int {d \over dx} \left[ f(x) \right] \> dx = f(x) + C$$
+
+In a circuit such as this where integration precedes differentiation, ideally there is no DC bias (constant) loss:
+
+$${d \over dx} \left[ \int f(x) \> dx \right] = f(x)$$
+
+
+However, since these are actually first-order "lag" and "lead" networks rather than true integration and differentiation stages, respectively, a DC bias applied to the input will {\it not} be faithfully reproduced on the output.  Whereas a true integrator would take a DC bias input and produce an output with a linearly ramping bias, a passive integrator will assume an output bias equal to the input bias.\footnote{$^{\dag}$}{If this is not apparent to you, I suggest performing Superposition analysis on a passive integrator (consider AC, then consider DC separately), and verify that $V_{DC(out)}$ = $V_{DC(in)}$.  A passive differentiator circuit would have to possess an infinite time constant ($\tau = \infty$) in order to generate this ramping output bias!}  Therefore, the subsequent differentiation stage, perfect or not, has no slope to differentiate, and thus there will be no DC bias on the output.
+
+Incidentally, the following values work well for a demonstration circuit:  
+
+$$\epsfbox{01902x02.eps}$$
+
+%INDEX% Calculus, integration and differentiation as inverse functions
+
+%(END_NOTES)
+
+

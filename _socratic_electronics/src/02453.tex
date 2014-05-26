@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A common set of equations for calculating input and output impedances of common-collector amplifier circuits is as follows:
+
+$$Z_{in} \approx R_1 \> || \> R_2 \> || \> (\beta + 1)[r'_e + (R_E \> || \> R_{load})]$$
+
+$$Z_{out} \approx R_E \> || \> \left( r'_e + {{R_1 \> || \> R_2 \> || \> R_{source}} \over {\beta + 1}} \right) $$
+
+If precision is not required, we may greatly simplify these equations by assuming the transistor to be ideal; i.e. having an infinite current gain ($\beta = \infty$).  Re-write these equations accordingly, and explain how you simplified each one.
+
+\underbar{file 02453}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$Z_{in} \approx R_1 \> || \> R_2$$
+
+$$Z_{out} \approx R_E \> || \> r'_e$$
+
+Much simpler, don't you think?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is for students to see how (more) approximate predictions for circuits may be obtained through simplification.  A good exercise is to calculate impedances for a given amplifier circuit using both the original and the simplified equations, to see just how "approximate" the simplified answers are.  Knowing how to eliminate complicated terms in equations (and what terms may be safely eliminated!) is key to estimating in the absence of a calculator.
+
+%INDEX% Approximations for common-collector amplifier circuit
+%INDEX% Common-collector circuit, approximations for multiple parameters
+%INDEX% Impedance, amplifier input
+%INDEX% Impedance, amplifier output
+%INDEX% Input impedance, amplifier
+%INDEX% Output impedance, amplifier
+
+%(END_NOTES)
+
+

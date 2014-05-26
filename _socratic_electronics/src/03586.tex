@@ -1,0 +1,132 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This voltage divider circuit has a problem: there is no voltage output between terminals 7 and 8.
+
+$$\epsfbox{03586x01.eps}$$
+
+A technician has taken several measurements with a voltmeter, documenting them chronologically from top to bottom in the far-left column:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Measurement & Batt & (+)/1 & $R_1$ & 2/3 & $R_2$ & 4/5 & $R_3$ & 6/7 & $R_4$ & 8/(-) \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{1-8}$ = 6 V  &      &       &        &    &       &     &       &     &       &       \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{1-5}$ = 0 V  &      &       &        &    &       &     &       &     &       &       \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{5-7}$ = 6 V  &      &       &        &    &       &     &       &     &       &       \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\goodbreak
+Fill in all cells of this table with one of three different symbols, representing the status of each component or wire (numbers separated by a slash indicate the wire connecting those terminals):
+
+\medskip
+\item{$\bullet$} {\bf O} for an "open" fault
+\item{$\bullet$} {\bf S} for an "short" fault
+\item{$\bullet$} {\bf OK} for no fault
+\medskip
+
+You are to assume that there is only one fault in this circuit, and that it is either a complete break (open) or a direct short (zero resistance).  After completing the table, assess whether or not the exact fault may be known from the data recorded thus far.  If not, suggest the next logical voltage measurement to take.
+
+\underbar{file 03586}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Measurement & Batt & (+)/1 & $R_1$ & 2/3 & $R_2$ & 4/5 & $R_3$ & 6/7 & $R_4$ & 8/(-) \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{1-8}$ = 6 V  & OK & OK & O & O & O & O & O & O & S & OK \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{1-5}$ = 0 V  & OK & OK & OK & OK & OK & OK & O & O & S & OK \cr
+%
+\noalign{\hrule}
+%
+% Another row
+$V_{5-7}$ = 6 V  & OK & OK & OK & OK & OK & OK & O & O & OK & OK \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+We do not yet have enough information to determine whether resistor $R_3$ or wire 6/7 is failed open.  A good voltage measurement to take now would be across the resistor (terminals 5 and 6), or between terminals 6 and 7.
+
+\vskip 10pt
+
+Follow-up question: describe how much voltage you would expect to find between either of these terminal pairs, given an open fault with either suspected component.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to defend their answers for each component status, for each of the successive measurements.  What you will find is that this forces students to rigorously analyze the possibilities of a fault in each portion of the circuit.  Not only is this beneficial for reinforcing basic circuit principles, but it also teaches students to consider all possibilities when troubleshooting a circuit.
+
+%INDEX% Troubleshooting, voltage divider
+
+%(END_NOTES)
+
+

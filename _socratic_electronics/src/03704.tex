@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how all component voltages and currents in this circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03704x01.eps}$$
+
+\medskip
+\item{$\bullet$} Zener diode fails shorted:
+\vskip 5pt
+\item{$\bullet$} Zener diode fails open:
+\vskip 5pt
+\item{$\bullet$} Series resistor fails open:
+\vskip 5pt
+\item{$\bullet$} Series resistor fails shorted:
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03704}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Zener diode fails shorted: {\it Little voltage across load, increased voltage across $R_{series}$, increased current through source and $R_{series}$.}
+\vskip 5pt
+\item{$\bullet$} Zener diode fails open: {\it Increased voltage across load, decreased voltage across $R_{series}$, decreased current through source and $R_{series}$.}
+\vskip 5pt
+\item{$\bullet$} Series resistor fails open: {\it No voltage across $D_1$ or load, no current through $D_1$ or load, no current through source.}
+\vskip 5pt
+\item{$\bullet$} Series resistor fails shorted: {\it Full source voltage across load and $D_1$, greatly increased current through $D_1$, increased current through source, $D_1$ will most likely overheat and fail.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in zener diode circuit
+
+%(END_NOTES)
+
+

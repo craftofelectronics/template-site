@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the power dissipated by this circuit's load at two different source frequencies: 0 Hz (DC), and $f_{cutoff}$.
+
+$$\epsfbox{00646x01.eps}$$
+
+What do these figures tell you about the nature of this filter circuit (whether it is a low-pass or a high-pass filter), and also about the definition of {\it cutoff frequency} (also referred to as $f_{-3 dB}$)?
+
+\underbar{file 00646}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$P_{load}$ @ $f =$ 0 Hz = 64 mW
+
+\vskip 10pt
+
+$P_{load}$ @ $f_{cutoff}$ = 32 mW
+
+\vskip 10pt
+
+These load dissipation figures prove this circuit is a {\it low-pass} filter.  They also demonstrate that the load dissipation at $f_{cutoff}$ is exactly half the amount of power the filter is capable of passing to the load under ideal (maximum) conditions.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+If your students have never encountered decibel (dB) ratings before, you should explain to them that -3 dB is an expression meaning "one-half power," and that this is why the cutoff frequency of a filter is often referred to as the {\it half-power point}.  
+
+The important lesson to be learned here about cutoff frequency is that its definition means something in terms of load power.  It is not as though someone decided to arbitrarily define $f_{cutoff}$ as the point at which the load receives 70.7\% of the source voltage!
+
+%INDEX% Cutoff frequency, defined by half-power dissipation
+%INDEX% Half-power point
+%INDEX% -3 dB point
+
+%(END_NOTES)
+
+

@@ -1,0 +1,124 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The decay of a variable over time in an RC or LR circuit follows this mathematical expression:
+
+$$e^{-{t \over \tau}}$$
+
+\noindent
+Where,
+
+$e =$ Euler's constant ($\approx 2.718281828$)
+
+$t =$ Time, in seconds
+
+$\tau =$ Time constant of circuit, in seconds
+
+\vskip 10pt
+
+For example, if we were to evaluate this expression and arrive at a value of 0.398, we would know the variable in question has decayed from 100\% to 39.8\% over the period of time specified.
+
+However, calculating the amount of time it takes for a decaying variable to reach a specified percentage is more difficult.  We would have to manipulate the equation to solve for $t$, which is part of an exponent.
+
+Show how the following equation could be algebraically manipulated to solve for $t$, where $x$ is the number between 0 and 1 (inclusive) representing the percentage of original value for the variable in question:
+
+$$x = e^{-{t \over \tau}}$$
+
+Note: the "trick" here is how to isolate the exponent $-t \over \tau$.  You will have to use the natural logarithm function!
+
+\underbar{file 02001}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Showing all the necessary steps:
+
+$$x = e^{-{t \over \tau}}$$
+
+$$\ln x = \ln \left( e^{-{t \over \tau}} \right)$$
+
+$$\ln x = {-{t \over \tau}}$$
+
+$$t = -\tau \ln x$$
+
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In my experience, most American high school graduates are extremely weak in logarithms.  Apparently this is not taught very well at the high school level, which is a shame because logarithms are a powerful mathematical tool.  You may find it necessary to explain to your students what a logarithm is, and exactly why it "un-does" the exponent.
+
+When forced to give a quick presentation on logarithms, I usually start with a generic definition:
+
+$$\hbox{Given: } b^a = c$$
+
+$$\hbox{Logarithm defined: } \log_b c = a$$
+
+Verbally defined, the logarithm function asks us to find the power ($a$) of the base ($b$) that will yield $c$.
+
+\vskip 10pt
+
+Next, I introduce the common logarithm.  This, of course, is a logarithm with a base of 10.  A few quick calculator exercises help students grasp what the common logarithm function is all about:
+
+$$\log 10 = $$
+
+$$\log 100 = $$
+
+$$\log 1000 = $$
+
+$$\log 10000 = $$
+
+$$\log 100000 = $$
+
+$$\log {1 \over 10} = $$
+
+$$\log {1 \over 100} = $$
+
+$$\log {1 \over 1000} = $$
+
+After this, I introduce the {\it natural logarithm}: a logarithm with a base of $e$ (Euler's constant):
+
+$$\hbox{Natural logarithm defined: } \ln x = \log_e x$$
+
+Have your students do this simple calculation on their calculators, and explain the result:
+
+$$\ln 2.71828 = $$
+
+Next comes an exercise to help them understand how logarithms can "undo" exponentiation.  Have your students calculate the following values:
+
+$$e^2 = $$
+
+$$e^3 = $$
+
+$$e^4 = $$
+
+Now, have them take the natural logarithms of each of those answers.  They will find that they arrive at the original exponent values (2, 3, and 4, respectively).  Write this relationship on the board as such for your students to view:
+
+$$\ln e^2 = 2$$
+
+$$\ln e^3 = 3$$
+
+$$\ln e^4 = 4$$
+
+Ask your students to express this relationship in general form, using the variable $x$ for the power instead of an actual number:
+
+$$\ln e^x = x$$
+
+It should now be apparent that the natural logarithm function has the ability to "undo" a power of $e$.  Now it should be clear to your students why the given sequence of algebraic manipulations in the answer for this question is true.
+
+%INDEX% Algebra, manipulating equations
+%INDEX% Logarithm, natural (used to "undo" a power of e)
+
+%(END_NOTES)
+
+

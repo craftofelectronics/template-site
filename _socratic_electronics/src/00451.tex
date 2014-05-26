@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Write a mathematical expression for calculating the percentage value of any {\it increasing} variables (either voltage or current) in an RC or LR time-constant circuit.
+
+Hint: the formula for calculating the percentage of any {\it decreasing} variables in an RC or LC time-constant circuit is as follows:
+
+$$e^{-{t \over \tau}}$$
+
+\noindent
+Where,
+
+$e =$ Euler's constant ($\approx 2.718281828$)
+
+$t =$ Time, in seconds
+
+$\tau =$ Time constant of circuit, in seconds
+
+\vskip 10pt
+
+Here, the value of the expression starts at 1 (100\%) at time = 0 and approaches 0 (0\%) as time approaches $\infty$.  What I'm asking you to derive is an equation that does just the opposite: start with a value of 0 when time = 0 and approach a value of 1 as time approaches $\infty$.
+
+\underbar{file 00451}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$(1 - e^{-{t \over \tau}})(100\%)$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Being able to derive an equation from numerical data is a complex, but highly useful, skill in all the sciences.  Sure, your students will be able to find this mathematical expression in virtually any basic electronics textbook, but the point of this question is to {\it derive} this expression from an examination of data (and, of course, an examination of the other time-constant expression: $e^{-{t \over \tau}}$).
+
+Be sure to challenge your students to do this, by asking how they obtained the answer to this question.  Do not "settle" for students simply telling you what the equation is -- ask them to explain their problem-solving techniques, being sure that all students have contributed their insights.
+
+%INDEX% Algebra, deriving equations from trends
+%INDEX% Time constant calculation, RC or LR circuit
+
+%(END_NOTES)
+
+

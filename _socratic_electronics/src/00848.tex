@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An {\it operational amplifier} is a particular type of {\it differential amplifier}.  Most op-amps receive two input voltage signals and output one voltage signal:
+
+$$\epsfbox{00848x01.eps}$$
+
+Here is a single op-amp, shown under two different conditions (different input voltages).  Determine the voltage gain of this op-amp, given the conditions shown:
+
+$$\epsfbox{00848x02.eps}$$
+
+$$\epsfbox{00848x03.eps}$$
+
+\vskip 10pt
+
+Also, write a mathematical formula solving for differential voltage gain ($A_V$) in terms of an op-amp's input and output voltages.
+
+\underbar{file 00848}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$A_V =$ 530,000
+
+$$A_V = {\Delta V_{out} \over \Delta (V_{in2} - V_{in1})}$$
+
+\vskip 10pt
+
+Follow-up question: convert this voltage gain figure (as a ratio) into a voltage gain figure in decibels.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The calculations for voltage gain here are not that different from the voltage gain calculations for any other amplifier, except that here we're dealing with a {\it differential} amplifier instead of a single-ended amplifier.
+
+A differential voltage gain of 530,000 is not unreasonable for a modern operational amplifier!  A gain so extreme may come as a surprise to many students, but they will discover later the utility of such a high gain.
+
+%INDEX% Voltage gain, of operational amplifier (open-loop)
+
+%(END_NOTES)
+
+

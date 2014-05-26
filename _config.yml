@@ -1,3 +1,21 @@
+# Defaults
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      layout: "default"
+  -
+    scope: 
+      path: "css"
+    values:
+      layout: "none"
+  -
+    scope: 
+      path: "js"
+    values:
+      layout: "none"
+      
 # Course details
 name: Craft of Electronics
 number: TAD 265
@@ -27,18 +45,9 @@ nav_link_color: "rgba(255,255,255,0.3)"
 # Green
 nav_hover_color: "rgb(120, 180, 50)"
 
-# The base should be defined in the breakout config
-# base: 
-
-inclass:
-  - interact
-  
-todo:
-  - learn
-#  - tutorial
-
 # These values probably have no impact whatsoever.
 markdown: kramdown
+
 #redcarpet:
 #    extensions: [with_toc_data]
 # Needed for Moustache.js

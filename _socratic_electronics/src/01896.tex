@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+It is relatively easy to design and build an electronic circuit to make square-wave voltage signals.  More difficult to engineer is a circuit that directly generates triangle-wave signals.  A common approach in electronic design when triangle waves are needed for an application is to connect a {\it passive integrator} circuit to the output of a square-wave oscillator, like this:
+
+$$\epsfbox{01896x01.eps}$$
+
+Anyone familiar with RC circuits will realize, however, that a passive integrator will not output a true triangle wave, but rather it will output a waveshape with "rounded" leading and trailing edges:
+
+$$\epsfbox{01896x02.eps}$$
+
+What can be done with the values of $R$ and $C$ to best approximate a true triangle wave?  What variable must be compromised to achieve the most linear edges on the integrator output waveform?  Explain why this is so.
+
+\underbar{file 01896}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Maximum values of $R$ and $C$ will best approximate a true triangle wave.  The consequences of choosing extremely large values for $R$ and/or $C$ are not difficult to determine -- I leave that for you to explain!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question asks students to recognize conflicting design needs, and to balance one need against another.  Very practical skills here, as real-life applications almost always demand some form of practical compromise in the design stage.
+
+If students cannot figure out what must be sacrificed to achieve waveshape linearity, tell them to build such a circuit and see for themselves!
+
+%INDEX% Passive integrator circuit, choosing R and C values for
+
+%(END_NOTES)
+
+

@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student makes a mistake somewhere in the process of simplifying the Boolean expression $\overline{\overline{X}Y + Z}$.  Determine what the mistake is:
+
+$$\overline{\overline{X}Y + Z}$$
+
+$$\overline{\overline{X}Y} \> \overline{Z}$$
+
+$$\overline{\overline{X}} + \overline{Y} \> \overline{Z}$$
+
+$$X + \overline{Y} \> \overline{Z}$$
+
+\underbar{file 01319}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The correct answer is: 
+
+$$(X + \overline{Y})\overline{Z}$$
+
+$$\hbox{\it or}$$
+
+$$X\overline{Z} + \overline{Y} \> \overline{Z}$$
+
+If it is not apparent to you why the student's steps are in error, try this exercise: draw the equivalent gate circuit for each of the expressions written in the student's work.  At the mistaken step, a dramatic change in the circuit configuration will be evident -- a change that clearly cannot be correct.  If all steps are proper, though, changes exhibited in the equivalent gate circuits should all make sense, culminating in a final (simplified) circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+An important aspect of long "bars" for students to recognize is that they function as {\it grouping symbols}.  When applying DeMorgan's Theorem to breaking these bars, students often make the mistake of ignoring the grouping implicit in the original bars.
+
+I highly recommend you take your class through the exercise suggested in the answer, for those who do not understand the nature of the mistake.  Let students draw each expression's equivalent circuit on the board in front of the class so everyone can see, and then let them observe the dramatic change spoken of at the place where the mistake is made.  If students understand what DeMorgan's Theorem means for an individual gate (Neg-AND to NOR, Neg-OR to NAND, etc.), the gate diagrams will clearly reveal to them that something has gone wrong at that step.
+
+For comparison, perform the same step-by-step translation of the {\it proper} Boolean simplification into gate diagrams.  The transitions between diagrams will make far more sense, and students should be able to get a "circuit's view" of why complementation bars function as grouping symbols.
+
+%INDEX% Boolean algebra, DeMorgan's Theorem
+%INDEX% Boolean algebra, simplification of expression
+%INDEX% DeMorgan's Theorem, Boolean algebra
+
+%(END_NOTES)
+
+

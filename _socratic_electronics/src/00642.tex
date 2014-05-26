@@ -1,0 +1,98 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The voltage measurement range of a DC instrument may easily be "extended" by connecting an appropriately sized resistor in series with one of its test leads:
+
+$$\epsfbox{00642x01.eps}$$
+
+In the example shown here, the multiplication ratio with the 9 M$\Omega$ resistor in place is 10:1, meaning that an indication of 3.5 volts at the instrument corresponds to an actual measured voltage of 35 volts between the probes.
+
+While this technique works very well when measuring DC voltage, it does not do so well when measuring AC voltage, due to the parasitic capacitance of the cable connecting the test probes to the instrument (parasitic cable {\it inductance} has been omitted from this diagram for simplicity):
+
+$$\epsfbox{00642x02.eps}$$
+
+To see the effects of this capacitance for yourself, calculate the voltage at the instrument input terminals assuming a parasitic capacitance of 180 pF and an AC voltage source of 10 volts, for the following frequencies:
+
+\medskip
+\item{$\bullet$} $f =$ 10 Hz ; $V_{instrument} =$
+\item{$\bullet$} $f =$ 1 kHz ; $V_{instrument} =$
+\item{$\bullet$} $f =$ 10 kHz ; $V_{instrument} =$
+\item{$\bullet$} $f =$ 100 kHz ; $V_{instrument} =$
+\item{$\bullet$} $f =$ 1 MHz ; $V_{instrument} =$
+\medskip
+
+The debilitating effect of cable capacitance may be compensated for with the addition of another capacitor, connected in parallel with the 9 M$\Omega$ range resistor.  If we are trying to maintain a voltage division ratio of 10:1, this "compensating" capacitor must be ${1 \over 9}$ the value of the capacitance parallel to the instrument input:
+
+$$\epsfbox{00642x03.eps}$$
+
+Re-calculate the voltage at the instrument input terminals with this compensating capacitor in place.  You should notice quite a difference in instrument voltages across this frequency range!
+
+\medskip
+\item{$\bullet$} $f =$ 10 Hz ; $V_{instrument} =$
+\item{$\bullet$} $f =$ 1 kHz ; $V_{instrument} =$
+\item{$\bullet$} $f =$ 10 kHz ; $V_{instrument} =$
+\item{$\bullet$} $f =$ 100 kHz ; $V_{instrument} =$
+\item{$\bullet$} $f =$ 1 MHz ; $V_{instrument} =$
+\medskip
+
+Complete your answer by explaining why the compensation capacitor is able to "flatten" the response of the instrument over a wide frequency range.
+
+\underbar{file 00642}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+With no compensating capacitor:
+
+\medskip
+\item{$\bullet$} $f =$ 10 Hz ; $V_{instrument} =$ 1.00 V
+\item{$\bullet$} $f =$ 1 kHz ; $V_{instrument} =$ 0.701 V
+\item{$\bullet$} $f =$ 10 kHz ; $V_{instrument} =$ 97.8 mV
+\item{$\bullet$} $f =$ 100 kHz ; $V_{instrument} =$ 9.82 mV
+\item{$\bullet$} $f =$ 1 MHz ; $V_{instrument} =$ 0.982 mV
+\medskip
+
+\vskip 10pt
+
+With the 20 pF compensating capacitor in place:
+
+\medskip
+\item{$\bullet$} $f =$ 10 Hz ; $V_{instrument} =$ 1.00 V
+\item{$\bullet$} $f =$ 1 kHz ; $V_{instrument} =$ 1.00 V
+\item{$\bullet$} $f =$ 10 kHz ; $V_{instrument} =$ 1.00 V
+\item{$\bullet$} $f =$ 100 kHz ; $V_{instrument} =$ 1.00 V
+\item{$\bullet$} $f =$ 1 MHz ; $V_{instrument} =$ 1.00 V
+\medskip
+
+\vskip 10pt
+
+Hint: without the compensating capacitor, the circuit is a resistive voltage divider with a capacitive load.  With the compensating capacitor, the circuit is a parallel set of equivalent voltage dividers, effectively eliminating the loading effect.
+
+\vskip 10pt
+
+Follow-up question: as you can see, the presence of a compensation capacitor is not an option for a high-frequency, 10:1 oscilloscope probe.  What safety hazard(s) might arise if a probe's compensation capacitor failed in such a way that the probe behaved as if the capacitor were not there at all?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Explain to your students that "$\times 10$" oscilloscope probes are made like this, and that the "compensation" capacitor in these probes is usually made adjustable to create a precise 9:1 match with the combined parasitic capacitance of the cable and oscilloscope.
+
+Ask your students what the usable "bandwidth" of a home-made $\times 10$ oscilloscope probe would be if it had no compensating capacitor in it.
+
+%INDEX% Compensation capacitor, x10 voltage probe
+%INDEX% Probe (x10), function of compensation capacitor
+
+%(END_NOTES)
+
+

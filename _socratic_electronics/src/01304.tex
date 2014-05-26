@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose you were faced with the task of writing a Boolean expression for a logic circuit, the internals of which are unknown to you.  The circuit has four inputs -- each one set by the position of its own micro-switch -- and one output.  By experimenting with all the possible input switch combinations, and using a logic probe to "read" the output state (at test point TP1), you were able to write the following truth table describing the circuit's behavior:
+
+$$\epsfbox{01304x01.eps}$$
+
+Based on this truth table "description" of the circuit, write an appropriate Boolean expression for this circuit.
+
+\underbar{file 01304}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+To make things easier, I'll associate each of the switches with a unique alphabetical letter:
+
+\medskip
+\item{$\bullet$} SW1 = $A$
+\item{$\bullet$} SW2 = $B$
+\item{$\bullet$} SW3 = $C$
+\item{$\bullet$} SW4 = $D$
+\medskip
+
+Now, the Boolean expression:
+
+$$AB\overline{C}D$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This problem gives students a preview of {\it sum-of-products} notation.  By examining the truth table, they should be able to determine that only one combination of switch settings (Boolean values) provides a "1" output, and with a little thought they should be able to piece together this Boolean product statement. 
+
+Though this question may be advanced for some students (especially those weak in mathematical reasoning skills), it is educational for all in the context of classroom discussion, where the thoughts of students and instructor alike are exposed.
+
+%INDEX% Sum-of-Products expression, Boolean algebra (generated from a truth table)
+%INDEX% SOP expression, Boolean algebra (generated from a truth table)
+
+%(END_NOTES)
+
+

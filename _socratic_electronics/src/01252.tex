@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student builds the following digital circuit on a solderless breadboard (a "proto-board"):
+
+$$\epsfbox{01252x01.eps}$$
+
+The DIP circuit is a TTL hex inverter (it contains {\it six} "inverter" or "NOT" logic gates), but only one of these gates is being used in this circuit.  The student's intent was to build a logic circuit that energized the LED when the pushbutton switch was unactuated, and de-energized the LED when the switch was pressed: so that the LED indicated the reverse state of the switch itself.  However, in reality the LED fails to energize no matter what state the switch is in.
+
+\vskip 10pt
+
+First question: how would you use a multimeter as a logic probe to check the logic states of points in this circuit, in order to troubleshoot it?
+
+\vskip 10pt
+
+Second question: suppose you checked the logic states of pin \#1 on the IC, for both states of the switch (pressed and unpressed), and found that pin \#1 was always "high".  How does this measurement indicate the student's design flaw in this circuit?  How would you recommend this design flaw be corrected?
+
+\underbar{file 01252}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+To use a multimeter as a logic probe, connect the common (black) test lead to the power supply ground, set the meter to measure DC voltage (a 0-5 volt scale would be perfect in this application), and then use the other test lead (red) to probe the various points of the circuit.
+
+The problem with this student's circuit is the input switch: it does not provide a solid "low" state when open.  Rather, the inverter's input is left "floating" when the switch is unactuated.  There is more than one way to fix this design flaw, but I'll leave the details up to you!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss the problem of "floating" or "high-Z" states with your students.  It is always a good idea to eliminate ambiguous logic states such as this in the circuits you build.
+
+%INDEX% Floating input, TTL
+%INDEX% Logic probe, use of multimeter as 
+%INDEX% Multimeter used as a logic probe
+
+%(END_NOTES)
+
+

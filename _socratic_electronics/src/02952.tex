@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Here is an eight-bit counter comprised of two four-bit 74HCT163 synchronous binary counters cascaded together:
+
+$$\epsfbox{02952x01.eps}$$
+
+Explain how this counter circuit works, and also determine which output bit is the LSB and which is the MSB.
+
+\vskip 10pt
+
+Now, examine this eight-bit counter comprised of the same two ICs:
+
+$$\epsfbox{02952x02.eps}$$
+
+Explain how this counter circuit works, and how its operation differs from the previous eight-bit counter circuit.
+
+\underbar{file 02952}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The first circuit shows two four-bit counters cascaded together in a {\it ripple} fashion.  The second circuit shows the same two four-bit counters cascaded in a {\it synchronous} fashion.  In both cases, $Q_0$ of the left counter is the LSB and $Q_3$ of the right counter is the MSB.
+
+\vskip 10pt
+
+Follow-up question: comment on which method of cascading is preferred for this type of counter IC.  Is the functional difference between the two circuits significant enough to warrant concern?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It is important for students to consult the datasheet for the 74HCT163 counter circuit in order to fully understand what is going on in these two cascaded counter circuits.  
+
+%INDEX% Counter cascading
+
+%(END_NOTES)
+
+

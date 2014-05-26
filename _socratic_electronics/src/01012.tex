@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Practical integrator circuits must have a {\it compensating resistor} connected in parallel with the capacitor, in the feedback loop.  Typically, this resistor value is very large: about 100 times as large as $R_{in}$.  
+
+$$\epsfbox{01012x01.eps}$$
+
+Describe why this is a necessity for accurate integration.  Hint: an ideal opamp would not need this resistor!
+
+\underbar{file 01012}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This compensation resistor helps offset errors otherwise incurred by the opamp's {\it bias current} on the inverting input.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss where bias currents originate from in the opamp's internal circuitry, and ask your students if they have any recommendations on specific opamp types that minimize bias current.
+
+%INDEX% Integrator circuit, opamp (with compensation resistor)
+
+%(END_NOTES)
+
+

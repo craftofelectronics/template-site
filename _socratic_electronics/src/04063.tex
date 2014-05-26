@@ -1,0 +1,60 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+{\it Impedance} is defined as the complex ratio of voltage and current:
+
+$${\bf Z} = {{\bf V}\over {\bf I}}$$
+
+We may determine the complex definition of impedance provided by an inductor if we consider the equation relating inductor voltage and inductor current:
+
+$$v = L {d \over dt} [ i(t) ]$$
+
+First, substitute a phasor expression of current into the above equation, then differentiate with respect to time to obtain an expression for voltage:
+
+$$i(t) = e^{j \omega t}$$
+
+$$v = L {d \over dt} \left[ e^{j \omega t} \right]$$
+
+Then, divide the two phasor expressions to obtain an expression for inductive impedance.
+
+\underbar{file 04063}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$${\bf Z_L} = j \omega L$$
+
+\vskip 10pt
+
+Follow-up question: explain why the following expression for inductive impedance is equivalent to the one shown above:
+
+$${\bf Z_L} = \omega L \> e^{j \pi / 2}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In order to solve this problem, your students must remember the basic rule for differentiating exponential functions:
+
+$${d \over dx} \left[ e^{ax} \right] = a e^{ax}$$
+
+This is one of the beauties of representing sinusoidal voltages and currents in complex exponential (phasor) form: it makes differentiation and integration relatively easy!  In this sense, the Euler relation of $e^{jx} = \cos x + j \sin x$ is a {\it transform function}, transforming one type of mathematical problem into a different (easier) type.
+
+%INDEX% Impedance, inductive (defined by complex exponential phasor notation)
+
+%(END_NOTES)
+
+

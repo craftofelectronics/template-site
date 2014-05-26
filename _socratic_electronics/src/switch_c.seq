@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+# "Concatenating" all selected questions/answers/notes into a single TeX file.
+# This is where you specify the questions you want included in your worksheet, in the
+# order you want them to appear.
+cat \
+01454.tex \
+01453.tex \
+01456.tex \
+01455.tex \
+01458.tex \
+01459.tex \
+01460.tex \
+01463.tex \
+03789.tex \
+03788.tex \
+03790.tex \
+03791.tex \
+01462.tex \
+01457.tex \
+01461.tex \
+> all.tex
+
+

@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This shift register circuit produces a sequential light pattern reminiscent of the old Mercury Cougar tail-lights: first one LED energizes, then two LEDs energize, and then all three LEDs energize before all de-energizing and repeating the sequence.  The 74HC194 shift register circuit is set to always operate in the "shift right" mode with the shift-right serial input ($DSR$) tied high, the master reset ($\overline{MR}$) input used to set all output lines to a low state at the end of each cycle:
+
+$$\epsfbox{03906x01.eps}$$
+
+The sequential light pattern is supposed to begin whenever the "Trigger" input momentarily goes high.  Unfortunately, something has failed in this circuit which is preventing any of the LEDs to come on.  No blinking light sequence ensues, no matter what the state of the "Trigger" input.
+
+Identify some likely failures in this circuit that could cause this to happen, other than a lack of power supply voltage.  Explain why each of your proposed faults would cause the problem, and also identify how you would isolate each fault using test equipment.
+
+\underbar{file 03906}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Lack of a clock signal could cause this to happen (check the output of the 555 oscillator with a logic probe or voltmeter).  If the upper NOR gate output was failed low, it would also create the problem (check $\overline{MR}$ input of the shift register for a "low" state, and compare with the NOR gate input states).
+
+These are not the only possible failures.  Identify a few more on your own!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Students will find a datasheet for the 74HC194 helpful in figuring out how this circuit is supposed to work.
+
+%INDEX% Troubleshooting, shift register circuit
+
+%(END_NOTES)
+
+

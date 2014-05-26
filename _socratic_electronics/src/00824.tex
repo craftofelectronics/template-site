@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the potentiometer wiper voltage ($V_{bias}$) required to maintain the transistor right at the threshold between cutoff and active mode.  Then, calculate the input voltage required to drive the transistor right to the threshold between active mode and saturation.  Assume ideal silicon transistor behavior, with a constant $\beta$ of 100:
+
+$$\epsfbox{00824x01.eps}$$
+
+\underbar{file 00824}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+At the threshold between cutoff and active mode, $V_{bias} =$ -0.7 volts
+
+\vskip 10pt
+
+At the threshold between active mode and saturation, $V_{bias} =$ -1.72 volts (assuming 0 volts $V_{CE}$ at saturation)
+
+\vskip 10pt
+
+Follow-up question: if we were using the potentiometer to establish a bias voltage for an AC signal, what amount of DC bias voltage would place the transistor directly between these two extremes of operation (cutoff versus saturation), so as to allow the AC input signal to "swing" equal amounts positive and negative at the distortion limit?  In other words, what voltage setting is exactly between -0.7 volts and -1.72 volts?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+If your students are experiencing difficulty analyzing this circuit, ask them to begin by calculating the transistor {\it currents} at the thresholds of cutoff and saturation.
+
+A mathematical trick I've found helpful through the years for finding the midpoint between two values is to add the two values together and then divide by two.  Challenge your students to use other means of calculating this midpoint value, though.
+
+%INDEX% Common-emitter amplifier, response to varying DC input
+
+%(END_NOTES)
+
+

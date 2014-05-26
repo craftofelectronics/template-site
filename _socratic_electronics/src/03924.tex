@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+If we connect the two transistor bases together in a differential pair circuit, it can only see common-mode input voltage (no differential input voltage):
+
+$$\epsfbox{03924x01.eps}$$
+
+An important performance parameter of any differential amplifier is its common-mode voltage gain.  Ideally, a differential-input amplifier should ignore any and all common-mode voltage, but in reality there is always some amplification of common-mode voltage.  We need to figure out how much of that there will be in any differential-pair circuit.
+
+To help us analyze this circuit (with both inputs tied together so it {\it only} sees common-mode input voltage), I will re-draw it in such a way that reflects the symmetrical nature of the circuit:
+
+$$\epsfbox{03924x02.eps}$$
+
+First, explain why this re-drawing is justified, and then write the equation describing the common-mode voltage gain of this circuit, in terms of the component values.
+
+\underbar{file 03924}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If the transistors are identical, and receive the same input signal at their base terminals, they will pass the same amount of current from collector to emitter.  This means the "tail" resistor's current ($I_{R_E}$) is evenly split between the two transistors.  With an even split of current, the one resistor will act the same as two resistors of twice that value, each one carrying only the current of one transistor.
+
+Re-drawn like this, it should be plain to see that the differential pair acts as a swamped common-emitter amplifier, with the common-mode voltage gain described by the following equation:
+
+$$A_{V(CM)} = {R_C \over {r'_e + 2R_E}}$$
+
+\vskip 10pt
+
+Follow-up question: what component value(s) should be altered to minimize common-mode voltage gain in a differential pair circuit, and why?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to have students recognize what factors in a differential pair circuit influence common-mode voltage gain, and then to realize that the value of the tail resistor has great influence over common-mode gain, while at the same time having negligible influence over differential gain.
+
+%INDEX% Differential pair circuit, common-mode voltage gain
+
+%(END_NOTES)
+
+

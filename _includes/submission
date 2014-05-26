@@ -1,0 +1,23 @@
+<div class="pull-right">
+<script type="text/javascript">
+jotformSubmit = null;
+ipaddr = "0.0.0.0";
+
+var handleIPAddr = function (response) {
+  if (response && response.ip) {
+    ipaddr = response.ip;
+    console.log("ipaddr: " + ipaddr)
+    jotformSubmit = function () {
+      window.open("{{include.form}}?ipaddr=" + ipaddr, "_blank");
+    };
+  } // end if
+};
+
+$.get("http://ipinfo.io", handleIPAddr, "jsonp");    
+</script>
+
+<button type="button" class="btn btn-success btn-large" onclick="jotformSubmit();">
+    Submit
+</button>
+</div>
+

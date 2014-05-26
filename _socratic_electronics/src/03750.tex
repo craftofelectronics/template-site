@@ -1,0 +1,71 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how the operation of this strobe light circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03750x01.eps}$$
+
+\medskip
+\item{$\bullet$} Capacitor $C_1$ fails open:
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_1$ fails shorted:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_2$ fails open:
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) past resistor $R_2$:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_4$ fails open:
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_4$ fails open (collector-to-emitter):
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_2$ fails open:
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_2$ fails shorted:
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03750}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Capacitor $C_1$ fails open: {\it No light from flash tube, possible failure of transformer primary winding and/or transistor $Q_4$ due to overheating.}
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_1$ fails shorted: {\it No light from flash tube.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_2$ fails open: {\it No light from flash tube.}
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) past resistor $R_2$: {\it Faster strobe rate for any given position of potentiometer $R_1$, possibility of adjusting the strobe rate too high where the flash tube just refuses to flash.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_4$ fails open: {\it No light from flash tube.}
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_4$ fails open (collector-to-emitter): {\it No light from flash tube.}
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_2$ fails open: {\it Possible damage to transistor $Q_4$ from excessive transient voltages.}
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_2$ fails shorted: {\it No light from flash tube, $Q_4$ will almost certainly fail due to overheating.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in strobe light circuit
+
+%(END_NOTES)
+
+

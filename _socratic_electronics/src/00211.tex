@@ -1,0 +1,72 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The amount of inductance inherent in a wire coil may be calculated by the following equation:
+
+$$L = {{N^2 A \mu} \over l}$$
+
+\noindent
+Where,
+
+$L =$ Inductance in Henrys
+
+$N =$ Number of wire "turns" wrapped around the core
+
+$\mu =$ Permeability of core material (absolute, not relative)
+
+$A =$ Core area, in square meters
+
+$l =$ Length of core, in meters
+
+\vskip 10pt
+
+Calculate how many turns of wire must be wrapped around a hollow, non-magnetic (air) core 2 cm in diameter and 10 cm in length in order to create an inductance of 22 mH.  You may use the permeability of free space ($\mu_0$) for the $\mu$ value of the air core.
+
+Next, calculate the required number of turns to produce the same inductance with a solid iron core of the same dimensions, assuming that the iron has a relative permeability ($\mu_r$) of 4000.
+
+\vskip 10pt
+
+Finally, knowing that the formula for the area of a circle is $\pi r^2$, re-write the inductance equation so as to accept a value for inductor radius rather than inductor area.  In other words, {\it substitute} radius ($r$) for area ($A$) in this equation in such a way that it still provides an accurate figure for inductance.
+
+\underbar{file 00211}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Approximately 2360 turns of wire for the air core, and approximately 37 turns of wire for the iron core.
+
+\vskip 10pt
+
+New inductance equation:
+
+$$L = {{\pi N^2 r^2 \mu} \over l}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This problem is first and foremost an algebraic manipulation exercise: solving for $N$ given the values of the other variables.  Students should be able to research the value of $\mu_0$ quite easily, being a well-defined physical constant.
+
+Note that in this equation, the Greek letter "mu" ($\mu$) is not a metric prefix, but rather an actual variable!  This confuses many students, who are used to interpreting $\mu$ as the metric prefix "micro" (${1 \over 1,000,000}$).
+
+Note also how the re-written equation puts pi ($\pi$) ahead of all the variables in the numerator of the fraction.  This is not absolutely necessary, but it is conventional to write constants before variables.  Do not be surprised if some students ask about this, as their answers probably looked like this:
+
+$$L = {{N^2 \pi r^2 \mu} \over l}$$
+
+%INDEX% Inductance, calculating
+%INDEX% Permeability of free space
+%INDEX% Permeability, relative
+
+%(END_NOTES)
+
+

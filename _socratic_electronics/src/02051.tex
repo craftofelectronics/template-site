@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The circuit shown here is part of a digital {\it logic gate} circuit:
+
+$$\epsfbox{02051x01.eps}$$
+
+Logic circuits operate with their transistors either fully "on" or fully "off," never in-between.  Determine what state the LED will be in (either on or off) for both switch positions.  You may find it helpful to trace currents and label all voltage drops in this circuit for the two switch states:
+
+$$\epsfbox{02051x02.eps}$$
+
+For your voltage drop calculations, assume the following parameters:
+
+\medskip
+\item{$\bullet$} $V_{CC}$ = 5 volts
+\item{$\bullet$} $V_{BE}$ (conducting) = 0.7 volts
+\item{$\bullet$} $V_{CE}$ (conducting) = 0.3 volts
+\item{$\bullet$} $V_{f}$ (regular diode conducting) = 0.7 volts
+\item{$\bullet$} $V_{f}$ (LED conducting) = 1.6 volts
+\medskip
+
+\underbar{file 02051}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Switch down, LED {\it on}; switch up, LED {\it off}.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The circuit shown in this question is a partial TTL inverter gate.  I opted to simplify the circuit (omitting the "steering" diodes usually found at the input) for the sake of simplicity, so students could concentrate their attention on the two transistor stages following.  Although this circuit may appear intimidating, it is not that difficult to trace currents and calculate voltage drops if one approaches it methodically.
+
+%INDEX% Logic gate, partial schematic (TTL)
+%INDEX% Transistor switch circuit (BJT)
+
+%(END_NOTES)
+
+

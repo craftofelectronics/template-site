@@ -1,0 +1,54 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+When a reverse-bias voltage is applied between the gate and channel of a JFET, the depletion region within expands.  The greater the reverse-bias voltage, the wider the depletion region becomes.  With enough applied $V_{GS}$, this expansion will cut off the JFET's channel, preventing drain-source current:
+
+$$\epsfbox{03843x01.eps}$$
+
+Something not immediately apparent about this effect is that the formation of a wide depletion region necessary for cut-off of a field-effect transistor is {\it also} affected by the drain-to-source voltage drop ($V_{DS}$).
+
+$$\epsfbox{03843x02.eps}$$
+
+If we connect a gate-to-source voltage ($V_{GS}$) large enough to force the transistor into cutoff mode, the JFET channel will act as a huge resistance.  If we look carefully at the voltages measured with reference to ground, we will see that the width of the depletion region must vary within the JFET's channel.  Sketch this varying width, given the voltages shown in the illustration:
+
+$$\epsfbox{03843x03.eps}$$
+
+Something {\it really} interesting happens if we reverse the polarity of the 20 volt source: the relationship between drain and source changes, and so does the depletion region profile.  Sketch the new varying width of the depletion region with the 20 volt source reversed, and comment on what you see:
+
+$$\epsfbox{03843x05.eps}$$
+
+\underbar{file 03843}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{03843x04.eps}$$
+
+$$\epsfbox{03843x06.eps}$$
+
+\vskip 10pt
+
+Follow-up question: you can see that the transistor doesn't even cut off as expected with the 20 volt source reversed.  What would we have to do to get this JFET to cut off with a only 4 volt control signal, since having reversed the 20 volt source?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+There is more than one correct answer for the follow-up question.  Discuss this with your students, emphasizing the importance of properly identifying drain and source according to $V_{DS}$ polarity.
+
+%INDEX% FET, depletion region with drain-source voltage drop
+%INDEX% FET, distinction between drain and source terminals
+
+%(END_NOTES)
+
+

@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This regulated power supply circuit has a problem.  Instead of outputting 15 volts DC (exactly) as it should, it is outputting 0 volts DC to the load:
+
+$$\epsfbox{03772x01.eps}$$
+
+You measure 0.25 volts DC between TP4 and ground, and 20 volts between TP1 and ground, using your voltmeter.  From this information, determine at least two independent faults that could cause this particular problem.
+
+\underbar{file 03772}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\noindent
+{\bf Possible faults:} (note that this list is not exhaustive)
+
+\medskip
+\item{$\bullet$} Opamp ($U_1$) failed with output saturated negative.
+\item{$\bullet$} Zener diode ($D_1$) failed shorted.
+\item{$\bullet$} Resistor $R_1$ failed open.
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to explain their reasoning, as to why they chose the component faults that they did.  Also, ask them to identify any components they think are working properly (beyond a doubt).
+
+%INDEX% Troubleshooting, regulated DC power supply (with opamp)
+
+%(END_NOTES)
+
+

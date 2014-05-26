@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This circuit uses a {\it unijunction transistor} (UJT) to latch an LED in the "on" state with a positive pulse at the input terminal.  A negative voltage pulse at the input terminal turns the LED off:
+
+$$\epsfbox{01128x01.eps}$$
+
+Explain how the unijunction transistor functions in this circuit. 
+
+\underbar{file 01128}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Unijunction transistors are hysteretic, like all thyristors.  A positive pulse to the emitter terminal latches the UJT, and a negative pulse makes it "drop out".
+
+\vskip 10pt
+
+Challenge question: what is the purpose of resistor $R_3$ in this circuit?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to identify the terminals on the UJT.  The designations for each terminal may be surprising to your students, given the names of bipolar transistor terminals!
+
+The challenge question may only be answered if one carefully considers the characteristics of an LED.  Resistor $R_3$ helps overcome problems that might potentially arise due to the nonlinearities of the diode in its off state.
+
+I got this circuit from the October 2003 issue of \underbar{Electronics World} magazine, in their regular "Circuit Ideas" section.  The design is attributed to Andr\'e de Gu\'erin. 
+
+%INDEX% UJT
+%INDEX% Unijunction transistor
+
+%(END_NOTES)
+
+

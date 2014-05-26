@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose that a CMOS inverting buffer gate were to drive a predominantly inductive load, such as a small relay coil:
+
+$$\epsfbox{01271x01.eps}$$
+
+Normally, it would be considered good design practice to connect a commutating diode in parallel with the relay coil, to prevent high-voltage transients when the coil is de-energized.  However, this is not necessary when a CMOS gate drives a coil.  Explain why.
+
+\underbar{file 01271}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If you thought the answer to this question was, "because MOSFET transistors are immune to damage from high-voltage transients," you were wrong.  If anything, MOSFETs are even more susceptible to damage from high-voltage transients than BJTs, given their thinly insulated gates.  
+
+The correct answer has to do with the {\it bilateral} (non polarity-sensitive) nature of MOSFETs when conducting.  Trace the direction of current through the relay coil while energized, and at the point in time when the gate output switches to a "low" state, and you will understand why no commutating diode is necessary in this circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+By examining one of the ancillary benefits of using CMOS instead of TTL, students get a good review of inductor and transistor theory.  Ask your students to explain why a TTL gate {\it would} require the relay coil to have a commutating diode, lest the gate be destroyed by inductive "kickback."
+
+%INDEX% CMOS gate circuit, internal schematic
+
+%(END_NOTES)
+
+

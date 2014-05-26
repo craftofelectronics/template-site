@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Explain how you would use an oscilloscope to measure the propagation delay of a semiconductor logic gate.  Draw a schematic diagram, if necessary.  Are the propagation delay times typically equal for a digital gate transitioning from "low" to "high", versus from "high" to "low"?  Consult datasheets to substantiate your answer.
+
+Also, comment on whether or not electromechanical relays have an equivalent parameter to propagation delay.  If so, how do you suppose the magnitude of a relay's delay compares to that of a semiconductor gate, and why?
+
+\underbar{file 01371}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I'll leave the experimental design details up to you.  However, I will tell you that you do not necessarily have to use a digital storage oscilloscope to "capture" a transient waveform to measure propagation delay, if you apply a little creativity.  Hint: use a signal generator to send a high-frequency square wave to the gate of your choice, and use a non-storage oscilloscope to monitor the results.
+
+And yes, electromechanical relays also have intrinsic delay times, which tend to be {\it far} greater than those encountered with semiconductor logic gates.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question makes an excellent in-class demonstration.  It shows this practical parameter in terms the students should be able to kinesthetically relate to.
+
+Hold your students accountable for researching datasheets, rather than just looking up the information in a textbook.  Ultimately, reading datasheets and applications notes written by the manufacturers will keep them abreast of the latest technology much more effectively than textbooks, since most textbooks I've seen tend to lag behind state-of-the-art by a few years at the least.  There is wealth of information to be gained from manufacturers' literature, so prepare your students to use it!
+
+Explain to your students that relays not only have actuation delay, but most of them also exhibit significant contact {\it bounce} as well.  Contact bounce is a problem especially where relays send signals to solid-state logic circuitry, to a much greater extent than where relays send signals to other relays.  Special-purpose relays can be obtained whose designs minimize actuation time and bounce, but both characteristics are far worse than any equivalent effects in semiconductor logic gates.
+
+%INDEX% Propagation delay, gate circuits
+%INDEX% Propagation delay, relay circuits
+
+%(END_NOTES)
+
+

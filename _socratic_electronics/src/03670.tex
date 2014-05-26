@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This phase-shifting bridge circuit is supposed to provide an output voltage with a variable phase shift from -45$^{o}$ (lagging) to +45$^{o}$ (leading), depending on the position of the potentiometer wiper:
+
+$$\epsfbox{03670x01.eps}$$
+
+Suppose, though, that there is a solder "bridge" between the terminals of resistor $R_1$ on the circuit board.  What effect will this fault have on the output of the circuit?  Be as complete as you can in your answer.
+
+\underbar{file 03670}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+With such a "shorted" failure on $R_1$, there will be full source voltage at the output with the potentiometer wiper at the full-left position (no attenuation, no phase shift).  The output voltage at the full-right wiper position will be mostly unaffected.
+
+\vskip 10pt
+
+Follow-up question: identify another possible component failure that would exhibit the same symptoms.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It is essential, of course, that students understand the operational principle of this circuit before they may speculate at the effects of various component faults.  You may find it necessary to discuss this circuit in detail with your students before they are ready to troubleshoot it.
+
+In case anyone asks, the symbolism $R_{pot} >> R$ means "potentiometer resistance is {\it much} greater than the fixed resistance value."
+
+%INDEX% Phase shifter circuit, adjustable
+%INDEX% Troubleshooting, phase-shifter bridge circuit
+
+%(END_NOTES)
+
+

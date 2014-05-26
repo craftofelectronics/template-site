@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+One of the essential characteristics of Karnaugh maps is that the input variable sequences are always arranged in Gray code sequence.  That is, you never see a Karnaugh map with the input combinations arranged in binary order:
+
+$$\epsfbox{01312x01.eps}$$
+
+The reason for this is apparent when we consider the use of Karnaugh maps to detect common variables in output sets.  For instance, here we have a Karnaugh map with a cluster of four 1's at the center:
+
+$$\epsfbox{01312x02.eps}$$
+
+Arranged in this order, it is apparent that two of the input variables have the same values for each of the four "high" output conditions.  Re-draw this Karnaugh map with the input variables sequenced in binary order, and comment on what happens.  Can you still tell which input variables remain the same for all four output conditions?
+
+$$\epsfbox{01312x03.eps}$$
+
+\underbar{file 01312}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01312x04.eps}$$
+
+Looking at this, we can still tell that B = 1 and D = 1 for all four "high" output conditions, but this is {\it not} apparent by proximity as it was before.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+You could simply tell your students that the input variables must be sequenced according to Gray code in order for Karnaugh mapping to work as a simplification tool, but this wouldn't explain to students {\it why} it needs to be such.  This question shows students the purpose of Gray code sequencing in Karnaugh maps, by showing them the alternative (binary sequencing), and allowing them to see how the task of seeking noncontradictory variables is complicated by it.
+
+%INDEX% Karnaugh map, Gray code sequence instead of binary
+
+%(END_NOTES)
+
+

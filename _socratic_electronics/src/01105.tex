@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This circuit uses an 8038 waveform generator IC (integrated circuit) to produce a "sawtooth" waveform, which is then compared against a variable DC voltage from a potentiometer:
+
+$$\epsfbox{01105x01.eps}$$
+
+The result is a pulse waveform to the base of the power transistor, of the same frequency as the sawtooth waveform.  Normally in circuits such as this, the frequency is at least several hundred Hertz.
+
+\vskip 10pt
+
+Explain what happens to the brightness of the lamp when the potentiometer wiper is moved closer to +V, and when it is moved closer to ground.
+
+\underbar{file 01105}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The lamp glows brighter as the duty cycle of the pulse waveform increases, and visa-versa.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question is a good review of comparator operation, and it introduces the concept of {\it duty cycle}, if your students have not encountered it before.  Ask your students to explain how and why the duty cycle changes as the potentiometer wiper is moved.  Ask them to explain why the lamp's brightness changes with duty cycle, and whether or not this is an efficient method of power control.
+
+%INDEX% Pulse-width modulation (PWM)
+%INDEX% PWM power control, conceptual
+
+%(END_NOTES)
+
+

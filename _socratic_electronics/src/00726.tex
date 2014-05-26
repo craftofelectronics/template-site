@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+{\it Shunt} resistors used for precision current measurement always have four terminals for the electrical connections, even though normal resistors only have two:
+
+$$\epsfbox{00726x01.eps}$$
+
+Explain what would be wrong with connecting the voltmeter movement directly to the same two terminals conducting high current through the shunt resistor, like this:
+
+$$\epsfbox{00726x02.eps}$$
+
+\underbar{file 00726}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A two-wire shunt resistor connection will not be as accurate as a four-wire shunt resistor, due to stray resistance within the bolted connection between the wires and the body of the shunt resistor.
+
+\vskip 10pt
+
+Challenge question: draw a schematic diagram showing all stray resistances within the two-wire shunt connection circuit, in order to clarify the concept.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Though a few fractions of an ohm of "stray" resistance may not seem like much, they are significant when contrasted against the already (very) low resistance of the shunt resistor's body.
+
+One of the conceptual difficulties I've encountered with students on numerous occasions is confusion over {\it how much} resistance, voltage, current, etc., constitutes a "significant" amount.  For example, I've had students tell me that the difference between 296,342.5 ohms and 296,370.9 ohms is "really big," when in fact it is less than ten thousandths of a percent of the base resistance values.  Students simply subtract the two resistances and obtain 28.4 ohms, then think that "28.4" is a significant quantity because it is comparable to some of the other values they're used to dealing with (100 ohms, 500 ohms, 1000 ohms, etc.).
+
+Conversely, students may fail to see the significance of a few hundredths of an ohm of stray resistance in a shunt resistor circuit, when the entire resistance of the shunt resistor itself is only a few hundredths of an ohm.  What matters most in problems of accuracy is the {\it percentage} or error, not the absolute value of the error itself.  This is another practical application of {\it estimating skills}, which you should reinforce at every opportunity.
+
+%(END_NOTES)
+
+

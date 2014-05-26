@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Examine the schematic diagram for this photographic strobe light control system:
+
+$$\epsfbox{02127x01.eps}$$
+
+Explain its operation, and explain why an IGBT is a good transistor type for this application.
+
+\underbar{file 02127}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+When the IGBT is turned on, the "trigger" transformer develops a high voltage pulse on the flash tube's trigger wire, ionizing the xenon gas within and allowing a surge of current to pass between the tube's main electrodes.  Since the IGBT handles the tube's main current as well, it is able to turn off the strobe as easily as it turned it on.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Even if students have never seen a strobe light circuit, they should at least be able to determine what happens when the transistor is immediately turned "on."  The fact that professional flash tubes require currents in excess of a hundred amps is not obvious from this schematic, so you should mention this fact in the discussion.
+
+This schematic was adapted (simplified) from one found in a Fairchild IGBT application note (AN9006 -- "IGBT Application Note For Camera Strobe").
+
+%INDEX% Transistor switch circuit (IGBT)
+
+%(END_NOTES)
+
+

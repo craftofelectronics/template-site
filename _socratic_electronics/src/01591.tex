@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A {\it very} common method of providing bias voltage for transistor amplifier circuits is with a voltage divider:
+
+$$\epsfbox{01591x01.eps}$$
+
+However, if we were to directly connect a source of AC signal voltage to the junction between the two voltage divider resistors, the circuit would most likely function as if there were no voltage divider network in place at all:
+
+$$\epsfbox{01591x02.eps}$$
+
+Instead, circuit designers usually place a {\it coupling capacitor} between the signal source and the voltage divider junction, like this:
+
+$$\epsfbox{01591x03.eps}$$
+
+Explain why a coupling capacitor is necessary to allow the voltage divider to work in harmony with the AC signal source.  Also, identify what factors would be relevant in deciding the size of this coupling capacitor.
+
+\underbar{file 01591}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A very good way to understand the AC source's effect on the voltage divider with and without the capacitor is to use {\it Superposition Theorem} to determine what each source (AC signal, and DC power supply) will do separately.
+
+If this concept is still not clear, consider this circuit:
+
+$$\epsfbox{01591x04.eps}$$
+
+As far as capacitor size is concerned, it should be large enough that its reactance is negligible.  I'll let you determine what factors define negligibility in this context!
+
+\vskip 10pt
+
+Follow-up question: which voltage source (AC or DC?) "wins" at the point specified in the above circuit?  Explain why this is so, and then show how a suitably located capacitor would allow both voltage signals to co-exist at that point.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Many beginning students experience difficulty understanding the purpose of the coupling capacitor, and transistor amplifier biasing in general.  Be sure to spend plenty of time discussing the principle of this circuit, because it is very commonplace in transistor circuitry.
+
+%INDEX% Capacitor, AC signal coupling
+%INDEX% Bias network, amplifier
+%INDEX% Superposition theorem, applied to transistor amplifier bias network
+
+%(END_NOTES)
+
+

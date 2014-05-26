@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose you have a 110 mH inductor, and wish to combine it with a capacitor to form a band-stop filter with a "notch" frequency of 1 kHz.  Draw a schematic diagram showing what the circuit would look like (complete with input and output terminals) and calculate the necessary capacitor size to do this, showing the equation you used to solve for this value.  Also, calculate the bandwidth of this notch filter, assuming the inductor has an internal resistance of 20 ohms, and that there is negligible resistance in the rest of the circuit.
+
+\underbar{file 01872}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01872x01.eps}$$
+
+The bandwidth of this 1 kHz notch filter is approximately 29 Hz.
+
+\vskip 10pt
+
+Follow-up question: suppose you looked around but could not find a capacitor with a value of 0.23 $\mu$F.  What could you do to obtain this exact capacitance value?  Be as specific and as practical as you can in your answer!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In my answer I used the series-resonant formula $f_r = {1 \over {2 \pi \sqrt{LC}}}$, since the series formula gives good approximations for parallel resonant circuits with $Q$ factors in excess of 10.
+
+The follow-up question is very practical, since it is often common to need a component value that is non-standard.  Lest any of your students suggest obtaining a {\it variable} capacitor for this task, remind them that variable capacitors are typically rated in the pico-Farad range, and would be much too small for this application.
+
+%INDEX% Algebra, manipulating equations
+%INDEX% Band-stop filter, calculating capacitance for
+%INDEX% Quality factor (Q), calculating in resonant circuit
+
+%(END_NOTES)
+
+

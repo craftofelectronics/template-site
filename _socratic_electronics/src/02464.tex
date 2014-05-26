@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+We know that an opamp connected to a voltage divider with a voltage division ratio of $1 \over 2$ will have an overall voltage gain of 2, and that the same circuit with a voltage division ratio of $2 \over 3$ will have an overall voltage gain of 1.5, or $3 \over 2$: 
+
+$$\epsfbox{02464x01.eps}$$
+
+There is definitely a mathematical pattern at work in these noninverting opamp circuits: the overall voltage gain of the circuit is the {\it mathematical inverse} of the feedback network's voltage gain.
+
+Building on this concept, what do you think would be the overall function of the following opamp circuits?
+
+$$\epsfbox{02464x02.eps}$$
+
+\underbar{file 02464}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\hbox{For the left-hand circuit: \hskip 20pt} V_{out} = V_{in} - 4$$
+
+$$\hbox{For the right-hand circuit: \hskip 20pt} V_{out} = \sqrt{V_{in}}$$
+
+\vskip 5pt
+
+The result of placing a mathematical function in the feedback loop of a noninverting opamp circuit is that the output becomes the inverse function of the input: it literally becomes the value of $x$ needed to solve for the input value of $y$:
+
+$$\epsfbox{02464x03.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+What is shown in this question and answer is a stark example of the power of negative feedback in a mathematical system.  Here, we see the opamp's ability to solve for the input variable in an equation which we know the output value of.  To state this in simpler terms, the opamp "does algebra" for us by "manipulating" the feedback network's equation to solve for $x$ given an input signal of $y$.
+
+%INDEX% Opamp, noninverting amplifier circuit as inverse function generator
+%INDEX% Inverse mathematical functions, implemented in opamp circuit
+
+%(END_NOTES)
+
+

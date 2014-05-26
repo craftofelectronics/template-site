@@ -1,0 +1,69 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{02507x01.eps}$$
+
+\underbar{file 02507}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Use a variable-voltage, regulated power supply to supply any amount of DC voltage below 30 volts.  Specify standard resistor values, all between 1 k$\Omega$ and 100 k$\Omega$ (1k5, 2k2, 2k7, 3k3, 4k7, 5k1, 6k8, 10k, 22k, 33k, 39k 47k, 68k, etc.). 
+
+This circuit demonstrates the use of passive integrators to convert a square wave into a pseudo-sine wave output.  The multivibrator portion produces nice, sharp-edged square wave signals at the transistor collector terminals when resistors $R_1$ and $R_4$ are substantially smaller than resistors $R_2$ and $R_3$.  Component values I've used with success are 1 k$\Omega$ for $R_1$ and $R_4$, 100 k$\Omega$ for $R_2$ and $R_3$, and 0.001 $\mu$F for $C_1$ and $C_2$.
+
+Resistors $R_5$ and $R_6$, along with capacitors $C_3$ and $C_4$, form a dual passive integrator network to re-shape the square-wave output of the multivibrator into a pseudo-sine wave.  These components' values must be chosen according to the multivibrator frequency, so that the integration is realistic without the attenuation being excessive.  Integrator component values that have worked well for the multivibrator components previously specified are 10 k$\Omega$ for $R_5$ and $R_6$, and 0.1 $\mu$F for $C_3$ and $C_4$.
+
+Transistor $Q_3$ is just an emitter follower, placed there to give the amplifier section a high input impedance.  $Q_3$'s emitter resistor value is not critical.  I have used a 1 k$\Omega$ resistor for $R_7$ with good success.
+
+The last transistor ($Q_4$) is for voltage amplification.  A "trimmer" style potentiometer (10 k$\Omega$ recommended for $R_{pot}$) provides easy adjustment of biasing for different supply voltages.  Using the potentiometer, I have operated this circuit on supply voltages ranging from -6 volts to -27 volts.  Use a bypass capacitor ($C_7$) large enough that its reactance at the operating frequency is negligible (less than 1 ohm is good), such as 33 $\mu$F.  Resistor values I've used with success are 10 k$\Omega$ for $R_8$ and 4.7 k$\Omega$ for $R_9$.  Coupling capacitor values are not terribly important, so long as they present minimal reactance at the operating frequency.  I have used 0.47 $\mu$F for both $C_5$ and $C_6$ with good success.
+
+\vskip 10pt
+
+You may find that the relatively high operating frequency of this circuit complicates matters with regard to parasitic capacitances.  The fast rise and fall times of the strong square wave tend to couple easily to the sine-wave portions of the circuit, especially when the sine wave signal is so severely attenuated by the double integrators.  One solution to this dilemma is to lower the operating frequency of the circuit, allowing a lower cutoff frequency for the double integrator (two-pole lowpass filter) section which in turn will improve the signal-to-noise ratio throughout.  If you wish to try this, you may use these suggested component values:
+
+\medskip
+\goodbreak
+\item{$\bullet$} $R_1$ = 1 k$\Omega$
+\item{$\bullet$} $R_2$ = 100 k$\Omega$
+\item{$\bullet$} $R_3$ = 100 k$\Omega$ 
+\item{$\bullet$} $R_4$ = 1 k$\Omega$ 
+\item{$\bullet$} $R_5$ = 100 k$\Omega$ 
+\item{$\bullet$} $R_6$ = 100 k$\Omega$ 
+\item{$\bullet$} $R_7$ = 1 k$\Omega$ 
+\item{$\bullet$} $R_8$ = 10 k$\Omega$ 
+\item{$\bullet$} $R_9$ = 4.7 k$\Omega$
+\item{$\bullet$} $R_{pot}$ = 10 k$\Omega$
+\item{$\bullet$} $C_1$ = 0.047 $\mu$F
+\item{$\bullet$} $C_2$ = 0.047 $\mu$F
+\item{$\bullet$} $C_3$ = 0.1 $\mu$F
+\item{$\bullet$} $C_4$ = 0.047 $\mu$F
+\item{$\bullet$} $C_5$ = 1 $\mu$F
+\item{$\bullet$} $C_6$ = 1 $\mu$F
+\item{$\bullet$} $C_7$ = 33 $\mu$F
+\medskip
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (BJT oscillator/waveshaper/amplifier circuit)
+
+%(END_NOTES)
+
+

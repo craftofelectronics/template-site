@@ -1,0 +1,63 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+{\it Switch contact bounce} is often a problem when connecting mechanical contact switches or relays to the inputs of digital semiconductor circuits.  When a switch transitions from open to closed, or from closed to open, there is usually a burst of on/off pulses rather than a single, crisp, change of logic state:
+
+$$\epsfbox{02990x01.eps}$$
+
+Digital electronic circuits, of course, react to these pulses as though they were very rapid actuations/de-actuations of the switch.  This may cause problems, especially in applications where a mechanical switch input causes a counter to increment or decrement!
+
+To fix this problem we must properly condition the switch signal to eliminate the spurious on/off pulses.  The process of doing this is called {\it debouncing}.  There is more than one way to de-bounce a switch, but one of the more sophisticated ways uses a serial-in, serial-out shift register with an asynchronous reset (clear) input:
+
+$$\epsfbox{02990x02.eps}$$
+
+Explain how this circuit works to de-bounce the switch's "dirty" signal, producing a "clean" (de-bounced) signal for a subsequent digital circuit's input.
+
+\underbar{file 02990}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The "de-bounced" output line will go high only when the switch signal has been continuously high for at least four clock pulses.
+
+\vskip 10pt
+
+Follow-up question \#1: which switch (input) transition is seen {\it immediately} at the output, a low-to-high transition or a high-to-low transition?
+
+\vskip 10pt
+
+Follow-up question \#2: does this circuit de-bounce a noisy low-to-high switch (input) transition, a noisy high-to-low switch transition, or both?
+
+\vskip 10pt
+
+Follow-up question \#3: does the pushbutton switch {\it source} or {\it sink} current in this circuit?
+
+\vskip 10pt
+
+Challenge question: how would you go about selecting an appropriate clock frequency for this circuit?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Some students may need to see a pulse diagram for this circuit before they fully grasp how it functions.  If so, have students come up to the board in the front of the room and work through an analysis of it rather than doing it yourself.
+
+Not only does this question review shift register operation, but it also reviews the problem of switch contact bounce and showcases a practical solution for it.  Incidentally, this question provides a good excuse for a hands-on demonstration of switch bounce using the switch/pulldown circuit first shown and a digital storage oscilloscope to capture the switching action.  Students are likely to be surprised by just how "dirty" the switch signal is!
+
+%INDEX% Bounce, switch contact
+%INDEX% Shift register, used as switch debouncer
+%INDEX% Switch bounce
+
+%(END_NOTES)
+
+

@@ -1,0 +1,59 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Describe what will happen to a closed-circuit wire coil if it is placed in close proximity to an electromagnet energized by alternating current:
+
+$$\epsfbox{00736x01.eps}$$
+
+Also, describe what will happen if the wire coil fails open.
+
+\underbar{file 00736}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The wire coil will vibrate as it is alternately attracted to, and repelled by, the electromagnet.  If the coil fails open, the vibration will cease.
+
+\vskip 10pt
+
+Challenge question: how could we {\it vary} the coil's vibrational force without varying the amplitude of the AC power source?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Be sure to note in your discussion with students that the coil does not have to be made of a magnetic material, such as iron.  Copper or aluminum will work quite nicely because Lenz's Law is an {\it electro}magnetic effect, not a magnetic effect.
+
+\vskip 10pt
+
+The {\it real} answer to this question is substantially more complex than the one given.  In the example given, I assume that the resistance placed in the coil circuit swamps the coil's self-inductance.  In a case such as this, the coil current will be (approximately) in-phase with the induced voltage.  Since the induced voltage will lag 90 degrees behind the incident (electromagnet) field, this means the coil current will also lag 90 degrees behind the incident field, and the force generated between that coil and the AC electromagnet will alternate between attraction and repulsion:
+
+$$\epsfbox{00736x02.eps}$$
+
+Note the equal-amplitude attraction and repulsion peaks shown on the graph.
+
+\vskip 10pt
+
+However, in situations where the coil's self-inductance is significant, the coil current will lag behind the induced voltage, causing the coil current waveform to fall further out of phase with the electromagnet current waveform:
+
+$$\epsfbox{00736x03.eps}$$
+
+Given a phase shift between the two currents greater than 90 degrees (approaching 180 degrees), there is greater repulsion force for greater duration than there is attractive force.  If the coil were a superconducting ring (no resistance whatsoever), the force would {\it only} be repulsive!
+
+So, the answer to this "simple" Lenz's Law question really depends on the coil circuit: whether it is considered primarily resistive or primarily inductive.  Only if the coil's self-inductance is negligible will the reactive force equally alternate between attraction and repulsion.  The more inductive (the less resistive) the coil circuit becomes, the more net repulsion there will be.
+
+%INDEX% Lenz's Law, reaction to AC magnetic field
+
+%(END_NOTES)
+
+

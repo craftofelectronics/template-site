@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{02640x01.eps}$$
+
+\underbar{file 02640}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Choose values for $V_{in}$ that show the circuit's ability to "hold" the last highest (most positive) input voltage.
+
+I have found these values to work well:
+
+\medskip
+\goodbreak
+\item{$\bullet$} +V = +12 volts
+\item{$\bullet$} -V = -12 volts
+\item{$\bullet$} $R_1$ = $R_2$ = 10 k$\Omega$
+\item{$\bullet$} $R_3$ = 10 k$\Omega$
+\item{$\bullet$} $R_{pot}$ = 10 k$\Omega$
+\item{$\bullet$} $C_1$ = 1 $\mu$F (non-electrolytic, low leakage polyester or ceramic)
+\item{$\bullet$} $D_1$ = $D_2$ = 1N4148 switching diode
+\item{$\bullet$} $U_1$ = $U_2$ = TL082 dual BiFET opamp
+\medskip
+
+The TL082 opamp works well in this circuit for three reasons: first, it is a dual opamp, providing both necessary opamps in a single 8-pin package.  Second, its JFET input stage provides the low input bias currents necessary to avoid draining the capacitor too rapidly.  Third, it is free from latch-up, which makes it possible to reset the capacitor voltage to the full (negative) rail voltage and still have a valid output.
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (Positive peak follower-and-hold circuit)
+
+%(END_NOTES)
+
+

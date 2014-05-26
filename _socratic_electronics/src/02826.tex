@@ -1,0 +1,103 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Write a Boolean expression for this truth table, then simplify that expression as much as possible, and draw a logic gate circuit equivalent to that simplified expression:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+A & B & C & Output \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 1 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+1 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+1 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+1 & 1 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+1 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 02826}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Original POS expression:
+
+$$(\overline{A} + \overline{B} + C)(\overline{A} + \overline{B} + \overline{C})$$
+
+Simplified gate circuit:
+
+$$\epsfbox{02826x01.eps}$$
+
+\vskip 10pt
+
+Challenge question: what other single gate type will satisfy the truth table (besides a Negative-OR gate)?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Challenge your students to implement the original POS expression directly with logic gates (three-input gates are acceptable to use).  Is the "simplified" POS expression shown in the answer simpler in the context of real gate circuits?  Ask your students what lesson this comparison holds for Boolean simplification techniques and their application to real-world circuits.
+
+%INDEX% Boolean algebra, gate circuit simplification
+%INDEX% Product-of-Sums expression, Boolean algebra (from analysis of a truth table)
+%INDEX% POS expression, Boolean algebra (from analysis of a truth table)
+
+%(END_NOTES)
+
+

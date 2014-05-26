@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Is it possible to reduce this zener diode voltage regulator circuit to a Th\'evenin equivalent circuit?  Explain why or why not.
+
+$$\epsfbox{02026x01.eps}$$
+
+\underbar{file 02026}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Technically, this circuit cannot be reduced to either a Th\'evenin or Norton equivalent, because the zener diode is a {\it nonlinear} component.  However, it {\it is} possible to create two different Th\'evenin equivalent circuits: one representing the circuit when regulating voltage at $V_{zener}$, and the other representing the circuit when the load resistance is below the critical value and the voltage is no longer being regulated:
+
+$$\epsfbox{02026x03.eps}$$
+
+$$\epsfbox{02026x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Some students may protest at the first Th\'evenin equivalent circuit (with a 0 ohm series resistance), because this would be a {\it perfect} voltage source.  In reality, there would be a very small series resistance accounting for the slight voltage "sag" experienced under changing loads within the regulation range, but this is difficult to calculate.
+
+%INDEX% Thevenin equivalent, of zener voltage regulator circuit
+
+%(END_NOTES)
+
+

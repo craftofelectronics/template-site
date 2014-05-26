@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how the operation of this precision rectifier circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03783x01.eps}$$
+
+\medskip
+\item{$\bullet$} Resistor $R_1$ fails open:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_2$ fails open:
+\vskip 5pt
+\item{$\bullet$} Diode $D_1$ fails open:
+\vskip 5pt
+\item{$\bullet$} Diode $D_2$ fails open:
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03783}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Resistor $R_1$ fails open: {\it $V_{out}$ becomes equal to 0 volts all the time.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_2$ fails open: {\it $V_{out}$ saturates negative when $V_{in}$ is positive, and $V_{out}$ floats up to +1.4 volts when $V_{in}$ is negative (depending on how the output is loaded by another circuit).}
+\vskip 5pt
+\item{$\bullet$} Diode $D_1$ fails open: {\it Normal operation when $V_{in}$ is positive ($V_{out} = - V_{in}$), $V_{out} = V_{in}$ when $V_{in}$ is negative (full-wave, inverted rectification!).}
+\vskip 5pt
+\item{$\bullet$} Diode $D_2$ fails open: {\it Normal operation when $V_{in}$ is negative ($V_{out}$ = 0 volts), $V_{out} = V_{in}$ when $V_{in}$ is positive (half-wave, non-inverted rectification!).}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in precision rectifier circuit
+
+%(END_NOTES)
+
+

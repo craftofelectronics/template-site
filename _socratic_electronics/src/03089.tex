@@ -1,0 +1,100 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Substitution is a technique whereby we let a variable represent (stand in the place of) another variable or an expression made of other variables.  One application where we might use substitution is when we must manipulate an algebraic expression containing a lot of similar-looking variables, as is often the case with science problems.
+
+Take this series-parallel resistor circuit for example:
+
+$$\epsfbox{03089x01.eps}$$
+
+The equation expressing total resistance as a function of the four resistor values looks like this:
+
+$$R_{total} = R_1 + {{R_2 (R_3 + R_4)} \over {R_2 + R_3 + R_4}}$$
+
+Now imagine being asked to manipulate this equation to solve for $R_3$.  When the only visual feature distinguishing each of the variables is the subscript ({\it total}, {\it 1}, {\it 2}, {\it 3}, or {\it 4}), it becomes very easy to lose track of where one is in the algebraic manipulation.  A very common mistake is to exchange or needlessly repeat subscripts during the process, effectively mis-placing one or more variables.  To help avoid such mistakes, you may {\it substitute} different letter variables for $R_{total}$, $R_1$, $R_2$, $R_3$, and $R_4$ like this:
+
+\vskip 10pt
+
+\centerline{\bf Substitution table}
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Original variable & New variable \cr
+%
+\noalign{\hrule}
+%
+% Second row
+$R_{total}$ & $y$ \cr
+%
+\noalign{\hrule}
+%
+% Third row
+$R_1$ & $a$ \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+$R_2$ & $b$ \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+$R_3$ & $c$ \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+$R_4$ & $d$ \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+$$y = a + {{b (c + d)} \over {b + c + d}}$$
+
+After doing the algebraic manipulation to solve for $c$ ($R_3$), the equation looks like this:
+
+$$c = {{(y-a)(b+d) - bd}\over {a + b - y}}$$
+
+Back-substitute the original $R$ variables in place of $a$, $b$, $c$, $d$, and $y$ as you see them in the above equation to arrive at a form that directly relates to the schematic diagram.
+
+\underbar{file 03089}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$R_3 = {{(R_{total}-R_1)(R_2 + R_4) - R_2 R_4}\over {R_1 + R_2 - R_{total}}}$$
+
+\vskip 10pt
+
+Challenge question: show all the steps you would take to solve for $R_3$ in the original equation.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Here I show an application of substitution that is useful only because the human brain has difficulty distinguishing similar-looking symbols.  More powerful uses of algebraic substitution exist, of course, but this is a start for students who have never seen the concept before.
+
+%INDEX% Algebra, substitution
+
+%(END_NOTES)
+
+

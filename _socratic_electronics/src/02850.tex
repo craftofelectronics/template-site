@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An arithmetic trick often used when working with the metric system is multiplication-by-ten and division-by-ten via shifting of the decimal point.  A similar "trick" may be applied to binary numbers, with similar results.
+
+Determine what sort of multiplication or division is accomplished when the "binary point" is shifted in a binary number.  Research the datasheet of an arithmetic logic unit (ALU) circuit to see if and how this function is implemented.
+
+\underbar{file 02850}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Shifting the "binary point" results in either multiplication or division by two.  A multiplicative shift is performed by the 74AS181 ALU by arithmetic function selection $1100_2$ (C$_{16}$).
+
+\vskip 10pt
+
+Challenge question: explain how multiplication or division by {\it any} binary quantity may be accomplished using successive bit-shifts and additions.  For example, show what steps you could take to multiply any binary number by five ($101_2$), using only "binary point" shifting and addition(s).
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+A lot of arithmetic tricks existing in the decimal numeration system are applicable, with slight revision, in the binary numeration system as well.  This is a popular one, and often used by shrewd computer programmers to execute fast multiply-by-two or divide-by-two operations when "conventional" multiplication commands take more time.
+
+%INDEX% Arithmetic Logic Unit (ALU), model 74AS181
+%INDEX% Binary multiplication via bitwise shift
+%INDEX% Multiplication (binary) via bitwise shift
+
+%(END_NOTES)
+
+

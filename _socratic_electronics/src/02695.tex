@@ -1,0 +1,63 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+{\it Integrator} circuits may be understood in terms of their response to DC input signals: if an integrator receives a steady, unchanging DC input voltage signal, it will output a voltage that changes with a steady {\it rate} over time.  The rate of the changing output voltage is directly proportional to the magnitude of the input voltage:
+
+$$\epsfbox{02695x01.eps}$$
+
+A symbolic way of expressing this input/output relationship is by using the concept of the {\it derivative} in calculus (a rate of change of one variable compared to another).  For an integrator circuit, the rate of output voltage change over time is proportional to the input voltage:
+
+$${dV_{out} \over dt} \propto V_{in}$$
+
+A more sophisticated way of saying this is, "The time-derivative of output voltage is proportional to the input voltage in an integrator circuit."  However, in calculus there is a special symbol used to express this same relationship in reverse terms: expressing the output voltage as a function of the input.  For an integrator circuit, this special symbol is called the {\it integration} symbol, and it looks like an elongated letter "S":
+
+$$V_{out} \propto \int_0^T V_{in} \> dt$$
+
+Here, we would say that output voltage is proportional to the time-integral of the input voltage, accumulated over a period of time from time=0 to some point in time we call $T$.
+
+\vskip 10pt
+
+"This is all very interesting," you say, "but what does this have to do with anything in real life?"  Well, there are actually a great deal of applications where physical quantities are related to each other by time-derivatives and time-integrals.  Take this water tank, for example:
+
+$$\epsfbox{02695x02.eps}$$
+
+One of these variables (either height $H$ or flow $F$, I'm not saying yet!) is the time-integral of the other, just as $V_{out}$ is the time-integral of $V_{in}$ in an integrator circuit.  What this means is that we could electrically measure one of these two variables in the water tank system (either height or flow) so that it becomes represented as a voltage, then send that voltage signal to an integrator and have the output of the integrator {\it derive} the other variable in the system without having to measure it!
+
+Your task is to determine which variable in the water tank scenario would have to be measured so we could electronically predict the other variable using an integrator circuit.
+
+\underbar{file 02695}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+{\it Flow} ($F$) is the variable we would have to measure, and that the integrator circuit would time-integrate into a height prediction.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Your more alert students will note that the output voltage for a simple integrator circuit is of {\it inverse} polarity with respect to the input voltage, so the graphs should really look like this:
+
+$$\epsfbox{02695x03.eps}$$
+
+I have chosen to express all variables as positive quantities in order to avoid any unnecessary confusion as students attempt to grasp the concept of time integration.
+
+%INDEX% Calculus, integral (applied to flow rate and accumulated volume)
+%INDEX% Integrator, used to predict volume of liquid in tank given flow rate into tank
+
+%(END_NOTES)
+
+

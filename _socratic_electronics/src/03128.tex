@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+When plotted on a curve tracer, the characteristic curve for a normal PN junction rectifying diode looks something like this:
+
+$$\epsfbox{03128x01.eps}$$
+
+Label each axis (horizontal and vertical) of the curve tracer graph, then determine whether the diode behaves more like a voltage source or more like a current source (i.e. does it try to maintain constant voltage or does it try to maintain constant current?) when it is conducting current.  
+
+Models are very useful because they simplify circuit approximations.  For example, we can analyze this diode circuit quite easily if we substitute an electrical source in place of the diode:
+
+$$\epsfbox{03128x03.eps}$$
+
+The only question here is, which substitution makes the most sense?  Based on the diode's characteristic curve behavior, should we substitute a voltage source or a current source in place of it?  Assuming this is a 1N4001 rectifying diode, what is the value we should use for the substituting source?
+
+\underbar{file 03128}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{03128x02.eps}$$
+
+This behavior is similar to that of a voltage source once it is forward-biased and conducting current.
+
+\vskip 10pt
+
+Follow-up question: quite obviously, diodes do not behave exactly as voltage sources.  You cannot power anything off of a diode, for instance!  Identify some of the limitations inherent to modeling diodes as voltage sources.  Are there any instances you can think of where such a model could be misleading?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Modeling nonlinear semiconductor components in terms of linear, idealized passive components is a time-honored "trick" used to simplify circuit analysis.  Like all "tricks" and analogies, this one has definite limitations.  The follow-up question's hint practically gives away examples of where such a model could be misleading!
+
+%INDEX% Characteristic curve, PN junction diode
+%INDEX% Modeling diode as voltage source
+
+%(END_NOTES)
+
+

@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Observe the following circuit:
+
+$$\epsfbox{02025x01.eps}$$
+
+Note that it is not reducible to a single resistance and power source.  In other words, it is {\it not} a series-parallel combination circuit.  And, while it is a bridge circuit, you are not able to simply analyze the resistor ratios because it is obviously not in a state of balance!
+
+If you were asked to calculate voltage or current for any component in this circuit, it would be a difficult task . . . unless you know either Th\'evenin's or Norton's theorems, that is!  
+
+\vskip 10pt
+
+Apply either one of these theorems to the determination of voltage across the 2.2 k$\Omega$ resistor (the resistor in the upper-right corner of the bridge).  Hint: consider the 2.2 k$\Omega$ resistor as the {\it load} in a Th\'evenin or Norton equivalent circuit.
+
+\underbar{file 02025}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$V_{2.2k\Omega}$ = 5.6624 volts
+
+\vskip 10pt
+
+Hint: the Th\'evenin equivalent circuit looks like this (with the 2.2 k$\Omega$ resistor connected as the load):
+
+$$\epsfbox{02025x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Both Th\'evenin's and Norton's theorems are powerful circuit analysis tools, if you know how to apply them!  Students often have difficulty seeing how to analyze the bridge circuit (with the "load" resistor removed), using series-parallel and redrawing techniques.  Be prepared to help them through this step during discussion time.
+
+%INDEX% Th\'evenin's theorem, used to analyze an unbalanced bridge circuit
+%INDEX% Wheatstone bridge circuit, unbalanced
+
+%(END_NOTES)
+
+

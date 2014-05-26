@@ -1,0 +1,71 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how the operation of this astable multivibrator circuit will be affected as a result of the following faults.  Specifically, identify the signals found at test points TP1, TP2, TP3, and $V_{out}$ resulting from each fault.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03753x01.eps}$$
+
+\medskip
+\item{$\bullet$} Resistor $R_4$ fails open:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_5$ fails open:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_7$ fails open:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_9$ fails open:
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_7$ fails shorted:
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_4$ fails shorted:
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_5$ fails open:
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_3$ fails open (collector-to-emitter):
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03753}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Resistor $R_4$ fails open: {\it Zero volts DC and AC at all four test points except for TP3 where there will be normal DC bias voltage.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_5$ fails open: {\it Normal signal at TP1, zero volts AC and DC at all other test points except for TP3 where there will be normal DC bias voltage.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_7$ fails open: {\it Normal signals at TP1 and at TP2, zero volts AC and DC at all other test points except for TP3 where there will be normal DC bias voltage.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_9$ fails open: {\it Normal signals at TP1, at TP2, and at TP3, but zero volts AC and DC at $V_{out}$.}
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_7$ fails shorted: {\it Normal AC signals at TP1, at TP2, and at TP3, badly distorted waveform at $V_{out}$, only about 0.7 volts DC bias at TP3.}
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_4$ fails shorted: {\it Normal signal at TP1, zero volts AC and DC at all other test points except for TP3 where there will be normal DC bias voltage.}
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_5$ fails open: {\it Normal signals at TP1 and at TP2, zero volts AC and DC at all other test points except for TP3 where there will be normal DC bias voltage.}
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_3$ fails open (collector-to-emitter): {\it Normal signals at TP1 and at TP2, zero volts AC and DC at all other test points except for TP3 where there will be normal DC bias voltage.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in oscillator/waveshaper/amplifier circuit
+
+%(END_NOTES)
+
+

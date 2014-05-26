@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student builds this simple S-R latch for their lab experiment:
+
+$$\epsfbox{01378x01.eps}$$
+
+When the student powers up this circuit, she notices something strange.  Sometimes the latch powers up in the {\it set} state ($Q$ high and $\overline{Q}$ low), and other times it powers up in the {\it reset} state ($Q$ low and $\overline{Q}$ high).  The power-up state of their circuit seems to be unpredictable.
+
+What state {\it should} their circuit power up in?  Did the student make an error building the latch circuit?
+
+\underbar{file 01378}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The circuit is fine, and working properly.  The normal power-up state of a latch circuit is unpredictable, so long as both the inputs are inactive.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Although the circuit itself is simple, the phenomenon is not.  Tell your students that what they're dealing with here is something called a {\it race condition}, where two or more gates try to "race" each other to reach a certain logic state.  Analyze the power-up state of this circuit with your students, and they will see that an unstable condition exists when both inputs are inactive!
+
+%INDEX% Race condition, S-R latch
+
+%(END_NOTES)
+
+

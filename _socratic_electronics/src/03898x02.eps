@@ -1,0 +1,522 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: Inverter control board, layergroup #2
+%%Creator: pcb-bin 20050315
+%%CreationDate: Mon Feb 20 13:05:13 2006
+%%For: tony (Tony R. Kuphaldt,,,)
+%%LanguageLevel: 1
+%%Orientation: Portrait
+%%BoundingBox: -1 -1 279 416
+%%Pages: 0
+%%EndComments
+%%BeginProlog
+
+/PcbDict 200 dict def
+PcbDict begin
+PcbDict /DictMatrix matrix put
+
+% some constants
+/Black {0.0 mysetgray} def
+/White {1.0 mysetgray} def
+/TAN {0.207106781} def
+/MTAN {-0.207106781} def
+
+% draw a filled polygon
+% get (x,y)... and number of points from stack
+/PO {
+	/number exch def
+	newpath
+	moveto
+	number 1 sub { lineto } repeat
+	closepath fill stroke
+} def
+
+/P {
+% draw a pin-polygon,
+% get x, y and thickness from stack
+	/thickness exch def /y exch def /x exch def
+	gsave x y translate thickness thickness scale
+	0.5  MTAN
+	TAN  -0.5
+	MTAN -0.5
+	-0.5 MTAN
+	-0.5 TAN
+	MTAN 0.5
+	TAN  0.5
+	0.5  TAN
+	8 PO grestore
+} def
+
+/PV {
+% pin or via, x, y and thickness are on the stack
+	/drillinghole exch def /thickness exch def /y exch def /x exch def
+	x y thickness P
+% draw drilling hole
+	gsave White 0 setlinewidth
+   newpath x y drillinghole 2 div 0 360 arc closepath fill stroke
+   grestore
+} def
+
+/PVR {
+% pin or via, x, y and thickness are on the stack
+	/drillinghole exch def /thickness exch def /y exch def /x exch def
+	gsave 0 setlinewidth
+	newpath x y thickness 2 div 0 360 arc closepath fill stroke
+% draw drilling whole
+	White
+	newpath x y drillinghole 2 div 0 360 arc closepath fill stroke
+	grestore
+} def
+
+/PVSQ {
+% square pin or via, x, y and thickness are on the stack
+	/drillinghole exch def /thickness exch def /y exch def /x exch def
+	newpath x thickness 2 div sub y thickness 2 div sub moveto
+	thickness 0 rlineto 0 thickness rlineto
+	thickness neg 0 rlineto closepath fill stroke
+% draw drilling hole
+	gsave White 0 setlinewidth
+   newpath x y drillinghole 2 div 0 360 arc closepath fill stroke
+   grestore
+} def
+
+/DH {
+% drill helpher; x, y, hole, copper-thickness are on stack
+	/copper exch def /hole exch def /y exch def /x exch def
+   gsave copper setlinewidth
+   newpath x y hole copper add 2 div 0 360 arc closepath stroke
+   grestore
+} def
+
+/L {
+% line, get x1, y1, x2, y2 and thickness from stack
+	/thick exch def /y2 exch def /x2 exch def /y1 exch def /x1 exch def
+	gsave thick setlinewidth
+	x1 y1 moveto x2 y2 lineto stroke
+	grestore
+} def
+
+/CL {
+% line, get x1, y1, x2, y2 and thickness from stack
+	/thick exch def /y2 exch def /x2 exch def /y1 exch def /x1 exch def
+	gsave White thick setlinewidth
+	x1 y1 moveto x2 y2 lineto stroke
+	grestore
+} def
+
+/B {
+% filled box, get x1, y1, x2 and y2 from stack
+	/y2 exch def /x2 exch def /y1 exch def /x1 exch def
+	newpath
+	x1 y1 moveto x2 y1 lineto x2 y2 lineto x1 y2 lineto
+	closepath fill stroke
+} def
+
+/PA {
+% pad, same as line
+	L
+} def
+
+/A {
+% arc for elements, get x, y, width, height, thickness
+% startangle and delta-angle from stack
+  /delta exch def /start exch def /thickness exch def
+  /height exch def /width exch def /y exch def /x exch def
+% draw it
+	gsave thickness setlinewidth /save DictMatrix currentmatrix def
+% scaling is less then zero because the coord system has to be swapped
+	x y translate width neg height scale
+	0 0 1 start start delta add arc save setmatrix stroke
+	grestore
+} def
+
+/CA {
+% arc for elements, get x, y, width, height, thickness
+% startangle and delta-angle from stack
+  /delta exch def /start exch def /thickness exch def
+  /height exch def /width exch def /y exch def /x exch def
+% draw it
+	gsave White thickness setlinewidth /save DictMatrix currentmatrix def
+% scaling is less then zero because the coord system has to be swapped
+	x y translate width neg height scale
+	0 0 1 start start delta add arc save setmatrix stroke
+	grestore
+} def
+
+/CLRPV {
+% clears a pin/via for groundplane; x,y and thickness are on stack
+   /thickness exch def /y exch def /x exch def
+	gsave White x y thickness P grestore
+} def
+
+/CLRPVSQ {
+% clears a square pin, x,y and thickness are on stack
+	/thickness exch def /y exch def /x exch def
+   gsave White
+	newpath x thickness 2 div sub y thickness 2 div sub moveto
+	thickness 0 rlineto 0 thickness rlineto
+	thickness neg 0 rlineto closepath fill stroke
+	grestore
+} def
+
+/CLRPVR {
+% clears a round pin/via for groundplane; x,y and thickness are on the stack
+	/thickness exch def /y exch def /x exch def
+	gsave White 0 setlinewidth
+	newpath x y thickness 2 div 0 360 arc closepath fill stroke
+	grestore
+} def
+
+/CLRPA {
+% clear line, get x1, y1, x2, y2 and thickness from stack
+	/thick exch def /y2 exch def /x2 exch def /y1 exch def /x1 exch def
+	gsave White thick setlinewidth
+	x1 y1 moveto x2 y2 lineto stroke
+	grestore
+} def
+
+/CLRB {
+% cleared box, get x1, y1, x2 and y2 from stack
+	/y2 exch def /x2 exch def /y1 exch def /x1 exch def
+	gsave White newpath
+	x1 y1 moveto x2 y1 lineto x2 y2 lineto x1 y2 lineto
+	closepath fill stroke
+	grestore
+} def
+
+/FILL {
+% draw a filled rectangle for the ground plane
+% get x1, y1, x2 and y2 from stack
+	/y2 exch def /x2 exch def /y1 exch def /x1 exch def
+   gsave 0 setlinewidth
+	newpath
+	x1 y1 moveto x2 y1 lineto x2 y2 lineto x1 y2 lineto
+	closepath fill stroke
+   grestore
+} def
+
+/Outline {
+% outline, get x1, y1, x2 and y2 from stack
+	/y2 exch def /x2 exch def /y1 exch def /x1 exch def
+   gsave 0.175 setlinewidth
+	newpath
+	x1 y1 moveto x2 y1 lineto x2 y2 lineto x1 y2 lineto
+	closepath stroke
+   grestore
+} def
+
+/Alignment {
+% alignment targets, get x1, y1, x2, y2 and distance from stack
+	/dis exch def /y2 exch def /x2 exch def /y1 exch def /x1 exch def
+   gsave 0.175 setlinewidth
+   newpath x1 y1 dis add moveto
+      0 dis 2 mul neg rlineto
+      dis neg dis rmoveto
+      dis 2 mul 0 rlineto
+   stroke
+   newpath x1 y1 dis 0 90 arcn stroke
+   newpath x1 y2 dis sub moveto 0 dis rlineto dis 0 rlineto stroke
+   newpath x2 y2 dis sub moveto
+      0 2 dis mul rlineto
+      dis dup neg rmoveto
+      2 dis mul neg 0 rlineto   stroke
+   newpath x2 y1 dis add moveto 0 dis neg rlineto dis neg 0 rlineto stroke
+   grestore
+} def
+
+/mysetgray { setgray } def
+/mysetrgbcolor { setrgbcolor } def
+
+%%EndProlog
+%%BeginDefaults
+%%EndDefaults
+%%BeginSetup
+0.0 setlinewidth
+1 setlinecap
+Black
+%%EndSetup
+gsave White newpath
+-1 -1 moveto 279 -1 lineto 279 416 lineto -1 416 lineto
+closepath fill stroke grestore
+% PCBMIN(5073,8969), PCBMAX(198176,297319)
+% PCBOFFSET(0,0), PCBSCALE(2.00000)
+% PCBSTARTDATA --- do not remove ---
+gsave
+0.00072 0.00072 scale
+0 0 translate
+2.000 2.000 scale
+0 288350 translate
+1 -1 scale
+-5073 -8969 translate
+15573 84769 15573 109769 2500 L
+18073 82269 15573 84769 2500 L
+18073 69769 18073 82269 2500 L
+35573 69769 40573 69769 2500 L
+25573 59769 35573 69769 2500 L
+18073 59769 25573 59769 2500 L
+108073 169769 160573 169769 2500 L
+170573 149769 170573 124769 2500 L
+168073 232269 168073 234769 2500 L
+168073 229769 168073 232269 2500 L
+8073 254769 13073 259769 2500 L
+8073 49769 8073 254769 2500 L
+18073 39769 8073 49769 2500 L
+168073 229769 168073 232269 2500 L
+80573 244769 80573 219769 2500 L
+55573 269769 80573 244769 2500 L
+25573 269769 55573 269769 2500 L
+20573 264769 25573 269769 2500 L
+20573 259769 20573 264769 2500 L
+108073 199769 108073 169769 2500 L
+80573 199769 108073 199769 2500 L
+18073 39769 40573 39769 2500 L
+80573 219769 103073 242269 2500 L
+103073 242269 160573 242269 2500 L
+168073 234769 160573 242269 2500 L
+20573 259769 13073 259769 2500 L
+65573 174769 65573 169769 2500 L
+50573 189769 65573 174769 2500 L
+55573 139769 55573 124769 2500 L
+50573 144769 55573 139769 2500 L
+50573 189769 50573 144769 2500 L
+45573 124769 55573 124769 2500 L
+40573 119769 45573 124769 2500 L
+25573 119769 40573 119769 2500 L
+180573 124769 180573 149769 2500 L
+25573 119769 15573 109769 2500 L
+45573 94769 55573 94769 2500 L
+40573 99769 45573 94769 2500 L
+25573 99769 40573 99769 2500 L
+55573 54769 55573 94769 2500 L
+40573 39769 55573 54769 2500 L
+170573 159769 170573 149769 2500 L
+160573 169769 170573 159769 2500 L
+65573 169769 108073 169769 2500 L
+190573 94769 190573 124769 2500 L
+180573 94769 190573 94769 2500 L
+180573 79769 180573 94769 2500 L
+170573 59769 170573 94769 2500 L
+180573 49769 170573 59769 2500 L
+108073 49769 180573 49769 2500 L
+108073 39769 108073 49769 2500 L
+80573 12269 108073 39769 2500 L
+53073 12269 80573 12269 2500 L
+40573 24769 53073 12269 2500 L
+40573 39769 40573 24769 2500 L
+180573 94769 180573 124769 2500 L
+125573 154769 93073 154769 2000 L
+65573 149769 88073 149769 2000 L
+88073 149769 93073 154769 2000 L
+140573 139769 125573 154769 2000 L
+140573 124769 140573 139769 2000 L
+153073 132269 160573 124769 2000 L
+173073 257269 173073 242269 2000 L
+165573 264769 173073 257269 2000 L
+135573 264769 165573 264769 2000 L
+128073 257269 135573 264769 2000 L
+150573 249769 158073 249769 2000 L
+148073 252269 150573 249769 2000 L
+148073 257269 148073 252269 2000 L
+120573 207269 128073 199769 2000 L
+50573 249769 50573 247269 1000 L
+100573 282269 113073 282269 2000 L
+25573 259769 20573 259769 2000 L
+50573 199769 50573 189769 2000 L
+68073 274769 55573 287269 2000 L
+50573 249769 50573 247269 1000 L
+78073 274769 68073 274769 2000 L
+148073 199769 155573 207269 2000 L
+155573 207269 183073 207269 2000 L
+50573 249769 68073 232269 2000 L
+138073 287269 123073 272269 2000 L
+158073 229769 148073 229769 2000 L
+145573 192269 160573 192269 2000 L
+160573 192269 168073 199769 2000 L
+118073 119769 118073 114769 2000 L
+118073 114769 113073 109769 2000 L
+113073 282269 118073 287269 2000 L
+118073 277269 128073 287269 2000 L
+95573 287269 100573 282269 2000 L
+58073 207269 58073 222269 2000 L
+50573 199769 58073 207269 2000 L
+43073 219769 50573 219769 2000 L
+30573 232269 43073 219769 2000 L
+30573 254769 30573 232269 2000 L
+25573 259769 30573 254769 2000 L
+150573 237269 158073 229769 2000 L
+138073 199769 145573 192269 2000 L
+50573 189769 20573 189769 2000 L
+130573 124769 123073 124769 2000 L
+20573 189769 20573 209769 2000 L
+50573 209769 50573 219769 2000 L
+85573 287269 95573 277269 2000 L
+98073 212269 108073 222269 2000 L
+83073 279769 73073 279769 2000 L
+135573 237269 150573 237269 2000 L
+180573 159769 163073 177269 2000 L
+95573 277269 118073 277269 2000 L
+180573 159769 180573 149769 2000 L
+20573 219769 20573 229769 2000 L
+138073 229769 145573 222269 2000 L
+73073 207269 120573 207269 2000 L
+108073 222269 108073 229769 2000 L
+123073 124769 118073 119769 2000 L
+65573 94769 65573 69769 2000 L
+68073 232269 68073 212269 2000 L
+85573 267269 78073 274769 2000 L
+90573 272269 83073 279769 2000 L
+65573 69769 70573 64769 2000 L
+73073 279769 65573 287269 2000 L
+50573 259769 73073 237269 2000 L
+58073 222269 50573 229769 2000 L
+65573 44769 70573 39769 2000 L
+178073 237269 183073 237269 2000 L
+78073 212269 98073 212269 2000 L
+70573 24769 70573 39769 2000 L
+68073 212269 73073 207269 2000 L
+128073 267269 85573 267269 2000 L
+118073 184769 118073 199769 2000 L
+65573 44769 65573 54769 2000 L
+130573 79769 130573 94769 2000 L
+128073 229769 135573 237269 2000 L
+168073 232269 168073 229769 1000 L
+70573 64769 115573 64769 2000 L
+20573 209769 20573 219769 2000 L
+125573 177269 118073 184769 2000 L
+75573 134769 90573 134769 2000 L
+65573 124769 75573 134769 2000 L
+190573 229769 190573 247269 2000 L
+183073 222269 190573 229769 2000 L
+145573 222269 183073 222269 2000 L
+163073 177269 125573 177269 2000 L
+55573 94769 85573 124769 2000 L
+65573 94769 75573 94769 2000 L
+115573 64769 130573 79769 2000 L
+73073 237269 73073 217269 2000 L
+73073 217269 78073 212269 2000 L
+123073 272269 90573 272269 2000 L
+158073 199769 168073 199769 2000 L
+108073 119769 108073 139769 2000 L
+108073 79769 108073 99769 2000 L
+130573 104769 130573 124769 2000 L
+140573 94769 130573 104769 2000 L
+148073 102269 140573 94769 2000 L
+153073 102269 148073 102269 2000 L
+160573 94769 153073 102269 2000 L
+138073 117269 130573 124769 2000 L
+143073 117269 138073 117269 2000 L
+150573 124769 143073 117269 2000 L
+173073 242269 178073 237269 2000 L
+90573 134769 93073 132269 2000 L
+75573 94769 93073 112269 2000 L
+93073 112269 93073 132269 2000 L
+190573 247269 188073 249769 2000 L
+148073 132269 153073 132269 2000 L
+140573 124769 148073 132269 2000 L
+143073 87269 150573 94769 2000 L
+138073 87269 143073 87269 2000 L
+130573 94769 138073 87269 2000 L
+148073 287269 128073 267269 2000 L
+65573 124769 65573 149769 2000 L
+18073 69769 7000 3800 PVR
+18073 59769 7000 3800 PVR
+80573 219769 8000 3500 PVR
+80573 199769 8000 3500 PVR
+183073 237269 6000 2800 PVR
+183073 207269 6000 2800 PVR
+65573 287269 7000 3800 PVR
+55573 287269 7000 3800 PVR
+168073 199769 6000 2800 PVSQ
+158073 199769 6000 2800 PVR
+148073 199769 6000 2800 PVR
+138073 199769 6000 2800 PVR
+128073 199769 6000 2800 PVR
+118073 199769 6000 2800 PVR
+108073 199769 6000 2800 PVR
+108073 229769 6000 2800 PVR
+118073 229769 6000 2800 PVR
+128073 229769 6000 2800 PVR
+138073 229769 6000 2800 PVR
+148073 229769 6000 2800 PVR
+158073 229769 6000 2800 PVR
+168073 229769 6000 2800 PVR
+148073 257269 6000 2800 PVSQ
+138073 257269 6000 2800 PVR
+128073 257269 6000 2800 PVR
+118073 257269 6000 2800 PVR
+118073 287269 6000 2800 PVR
+128073 287269 6000 2800 PVR
+138073 287269 6000 2800 PVR
+148073 287269 6000 2800 PVR
+95573 287269 7000 3800 PVR
+85573 287269 7000 3800 PVR
+50573 259769 6000 2800 PVSQ
+50573 249769 6000 2800 PVR
+50573 239769 6000 2800 PVR
+50573 229769 6000 2800 PVR
+50573 219769 6000 2800 PVR
+50573 209769 6000 2800 PVR
+50573 199769 6000 2800 PVR
+50573 189769 6000 2800 PVR
+20573 189769 6000 2800 PVR
+20573 199769 6000 2800 PVR
+20573 209769 6000 2800 PVR
+20573 219769 6000 2800 PVR
+20573 229769 6000 2800 PVR
+20573 239769 6000 2800 PVR
+20573 249769 6000 2800 PVR
+20573 259769 6000 2800 PVR
+180573 149769 7000 3800 PVR
+170573 149769 7000 3800 PVR
+158073 249769 6000 2800 PVR
+188073 249769 6000 2800 PVR
+70573 24769 6000 2800 PVR
+40573 24769 6000 2800 PVR
+65573 169769 8000 3500 PVR
+65573 149769 8000 3500 PVR
+25573 119769 8000 3500 PVR
+25573 99769 8000 3500 PVR
+65573 54769 8000 3000 PVSQ
+65573 74769 8000 3000 PVR
+70573 64769 8000 3000 PVR
+190573 94769 6000 2800 PVSQ
+180573 94769 6000 2800 PVR
+170573 94769 6000 2800 PVR
+160573 94769 6000 2800 PVR
+150573 94769 6000 2800 PVR
+140573 94769 6000 2800 PVR
+130573 94769 6000 2800 PVR
+130573 124769 6000 2800 PVR
+140573 124769 6000 2800 PVR
+150573 124769 6000 2800 PVR
+160573 124769 6000 2800 PVR
+170573 124769 6000 2800 PVR
+180573 124769 6000 2800 PVR
+190573 124769 6000 2800 PVR
+40573 69769 6000 2800 PVR
+40573 39769 6000 2800 PVR
+108073 99769 8000 3000 PVSQ
+108073 119769 8000 3000 PVR
+113073 109769 8000 3000 PVR
+55573 124769 6000 2800 PVSQ
+65573 124769 6000 2800 PVR
+75573 124769 6000 2800 PVR
+85573 124769 6000 2800 PVR
+85573 94769 6000 2800 PVR
+75573 94769 6000 2800 PVR
+65573 94769 6000 2800 PVR
+55573 94769 6000 2800 PVR
+108073 169769 6000 2800 PVR
+108073 139769 6000 2800 PVR
+108073 79769 6000 2800 PVR
+108073 49769 6000 2800 PVR
+180573 79769 6000 2800 PVR
+180573 49769 6000 2800 PVR
+20573 287269 20100 13000 PVR
+183073 182269 20100 13000 PVR
+20573 22269 20100 13000 PVR
+28073 157269 20100 13000 PVR
+183073 22269 20100 13000 PVR
+183073 287269 20100 13000 PVR
+grestore
+% PCBENDDATA --- do not remove ---
+%%EOF

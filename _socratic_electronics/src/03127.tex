@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The voltage divider network employed to create a DC bias voltage for many transistor amplifier circuits has its own effect on amplifier input impedance.  Without considering the presence of the transistor or the emitter resistance, calculate the impedance as "seen" from the input terminal resulting from the two resistors $R_1$ and $R_2$ in the following common-collector amplifier circuit:
+
+$$\epsfbox{03127x01.eps}$$
+
+Remember, what you are doing here is actually determining the Th\'evenin/Norton equivalent resistance as seen from the input terminal by an {\it AC} signal.  The input coupling capacitor reactance is generally small enough to be safely ignored.
+
+\vskip 10pt
+
+Next, calculate the input impedance of the same circuit, this time considering the presence of the transistor and emitter resistor, assuming a current gain ($\beta$ or $h_{fe}$) of 60, and the following formula for impedance at the base resulting from $\beta$ and $R_E$:
+
+$$Z_B \approx (\beta + 1)R_E$$
+
+$$\epsfbox{03127x02.eps}$$
+
+Develop an equation from the steps you take in calculating this impedance value.
+
+\underbar{file 03127}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$Z_{in}$ (without considering transistor) = 7.959 k$\Omega$
+
+\vskip 10pt
+
+$Z_{in}$ (complete circuit) $\approx$ 7.514 k$\Omega$
+
+$$Z_{in} \approx {1 \over {{1 \over R_1} + {1 \over R_2} + {1 \over (\beta + 1) R_E}}}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question is primarily an exercise in applying Th\'evenin's theorem to the amplifier circuit.  The most confusing point of this for most students seems to be how to regard the DC power supply.  A review of Th\'evenin equivalent circuit procedures and calculations might be in order here.
+
+To be proper, the transistor's dynamic emitter resistance ($r'_e$) could also be included in this calculation, but this just makes things more complex.  For this question, I wanted to keep things as simple as possible by just having students concentrate on the issue of integrating the voltage divider impedance with the transistor's base impedance.  With an emitter resistor value of 1500 ohms, the dynamic emitter resistance is negligibly small anyway.
+
+%INDEX% Impedance, amplifier input
+%INDEX% Input impedance, amplifier
+%INDEX% Thevenin equivalent input impedance of amplifier
+
+%(END_NOTES)
+
+

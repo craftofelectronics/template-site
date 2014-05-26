@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+The {\it chain rule} of calculus states that:
+
+$${dx \over dy}{dy \over dz} = {dx \over dz}$$
+
+Similarly, the following mathematical principle is also true:
+
+$${dx \over dy} = {{dx \over dz} \over {dy \over dz}}$$
+
+It is very easy to build an opamp circuit that differentiates a voltage signal with respect to {\it time}, such that an input of $x$ produces an output of $dx \over dt$, but there is no simple circuit that will output the differential of one input signal with respect to a second input signal.
+
+However, this does not mean that the task is impossible.  Draw a block diagram for a circuit that calculates $dy \over dx$, given the input voltages $x$ and $y$.  Hint: this circuit will make use of differentiators.
+
+\vskip 10pt
+
+Challenge question: draw a full opamp circuit to perform this function!
+
+\underbar{file 01073}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01073x01.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Differentiator circuits are very useful devices for making "live" calculations of time-derivatives for variables represented in voltage form.  Explain to your students, for example, that the physical measurement of velocity, when differentiated with respect to time, is {\it acceleration}.  Thus, a differentiator circuit connected to a tachogenerator measuring the speed of something provides a voltage output representing {\it acceleration}.
+
+Being able to differentiate one signal in terms of another, although equally useful in physics, is not so easy to accomplish with opamps.  A question such as this one highlights a practical use of calculus (the "chain rule"), where the differentiator circuit's natural function is exploited to achieve a more advanced function.
+
+%INDEX% Chain rule, calculus
+%INDEX% Differentiator circuit, opamp
+
+%(END_NOTES)
+
+

@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+Faraday's Law of electromagnetic induction states that the induced voltage across a coil of wire is equal to the number of "turns" in the coil multiplied by the rate of change of magnetic flux over time:
+
+$$v = N{d\phi \over dt}$$
+
+Often you will see a negative sign preceding the right-hand side of the equation, to properly denote polarity of the induced voltage.  This is the mathematical expression of {\it Lenz's Law}.  In this equation, though, the negative sign is omitted and we pay attention only to the absolute value of induced voltage.
+
+Use calculus techniques to express $\phi$ as a function of $v$, so that we may have an equation useful for predicting the amount of magnetic flux accumulated in an inductor or transformer given the voltage across it ($v$) and the time of the accumulation ($T$).  Hint: you may treat this as a differential equation with separable variables.
+
+For those who are unfamiliar with calculus, you may still answer this question, albeit in a simpler form: write an equation describing the change in magnetic flux within a coil ($\Delta \Phi$) given a constant DC voltage across the coil ($V$) and a certain amount of time ($t$).
+
+\underbar{file 01487}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\phi = {1 \over N} \int_0^T v \> dt$$
+
+If the voltage is constant ($V$), the change in flux may be calculated by this simple equation:
+
+$$\Delta \Phi = {{V t} \over N}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Even if students are not familiar with differential equations at all, they should be able to arrive at the second (algebraic) equation if they properly understand how flux rate-of-change relates to induced voltage.
+
+%INDEX% Faraday's Law
+%INDEX% Lenz's Law
+
+%(END_NOTES)
+
+

@@ -1,0 +1,196 @@
+#!/usr/bin/wish
+
+##
+## buildws - Build Socratic worksheet sequence files from lists of
+##           TeX source files.
+##
+## Created: 2003.09.20 by Warren Young
+## $Revision$
+##
+## Copyright (c) 2003 by Warren Young. This program is licensed under
+## the terms of the GNU General Public License version 2.  See the
+## file COPYING accompanying this program, or this page:
+##
+##     http://www.gnu.org/licenses/gpl.html
+##
+## Portions come from the book _Practical Programming in Tcl and Tk_
+## second edition, by Brent B. Welch. Referred to below as "the Welch
+## book".
+## 
+
+# Utility wrapper around "scrollbar set".  From the Welch book, p.347
+proc ScrollSet { scrollbar geoCmd offset size } {
+	if { $offset != 0.0 || $size != 1.0 } {
+		eval $geoCmd         ; # Make sure it is visible
+	}
+	$scrollbar set $offset $size
+}
+
+
+# Create a listbox with scroll bars.  From the Welch book, p.348
+proc ScrolledListbox { f args } {
+	frame $f
+	listbox $f.list \
+			-xscrollcommand [ list ScrollSet $f.xscroll \
+			[ list grid $f.xscroll -row 1 -column 0 -sticky we ] ] \
+			-yscrollcommand [ list ScrollSet $f.yscroll \
+			[ list grid $f.yscroll -row 0 -column 1 -sticky ns ] ]
+	eval { $f.list configure } $args
+	scrollbar $f.xscroll -orient horizontal \
+			-command [ list $f.list xview ]
+	scrollbar $f.yscroll -orient vertical \
+			-command [ list $f.list yview ]
+	grid $f.list -sticky news
+	grid rowconfigure $f 0 -weight 1
+	grid columnconfigure $f 0 -weight 1
+	return $f.list
+}
+
+
+# Display the given filename within the preview area
+proc Preview { filename } {
+	.previewArea configure -state normal
+	.previewArea delete 1.0 end
+	
+	set channel [ open "src/$filename.tex" r ]
+	while { [ gets $channel line ] >= 0 } {
+		.previewArea insert end "$line\n"
+	}
+	close $channel
+
+	.previewArea configure -state disabled
+}
+
+
+## Event handlers
+proc OnSourceListClick { lf } {
+	set sel [ $lf.srcList.list curselection ]
+	if { $sel != "" } {
+		$lf.addButton configure -state normal 
+		Preview [ $lf.srcList.list get $sel ]
+	}
+}
+
+proc OnSequenceListClick { lf } {
+	set sel [ $lf.seqList.list curselection ]
+	if { $sel != "" } {
+		$lf.removeButton configure -state normal 
+	}
+}
+
+proc OnAddButtonClick { lf } {
+	set sel [ $lf.srcList.list curselection ]
+	$lf.seqList.list insert end [ $lf.srcList.list get $sel ]
+	$lf.srcList.list delete $sel
+	$lf.addButton configure -state disabled
+}
+
+proc OnRemoveButtonClick { lf } {
+	set sel [ $lf.seqList.list curselection ]
+	set item [ $lf.seqList.list get $sel ]
+	$lf.seqList.list delete $sel
+
+	set sources [ $lf.srcList.list get 0 end ]
+	$lf.srcList.list delete 0 end
+	lappend sources $item
+	foreach source [ lsort $sources ] {
+		$lf.srcList.list insert end $source
+	}
+	
+	$lf.removeButton configure -state disabled
+}
+
+proc OnWorksheetNameChange { bf } {
+	if { [ $bf.wsEdit get ] != "" } {
+		$bf.generateButton configure -state normal
+	} else {
+		$bf.generateButton configure -state disabled
+	}
+}
+
+proc OnGenerateButtonClick { lf bf } {
+	set wsname [ $bf.wsEdit get ]
+	set channel [ open "src/$wsname.seq" w 0750 ]
+
+	puts $channel "#!/bin/sh";
+	puts $channel "# AUTOMATICALLY GENERATED - DO NOT EDIT"
+	puts $channel "cat \\"
+
+	foreach file [ $lf.seqList.list get 0 end ] {
+		puts $channel "$file.tex \\"
+	}
+
+
+	puts $channel "> all.tex"
+
+	close $channel
+}
+
+
+## Set up overall window
+wm title . "Socratic Worksheet Builder"
+wm resizable . no no
+
+
+## Populate bottom frame
+# Worksheet name entry
+set bf [ frame .bottomFrame ]
+pack $bf -fill x -pady 4 -side bottom
+label $bf.wsLabel -text "Worksheet name: "
+pack $bf.wsLabel -side left -padx 4
+entry $bf.wsEdit -width 40
+pack $bf.wsEdit -side left -padx 4 -fill x
+button $bf.generateButton -text " Generate Worksheet " -state disabled
+pack $bf.generateButton -side left -padx 4 -fill x
+
+
+## Populate left side frame
+# Create frame
+set lf [ frame .leftFrame -relief raised -borderwidth 1 ]
+pack $lf -pady 4 -padx 4 -ipady 4 -expand true -fill y -anchor w \
+		-side left
+# Add source files list
+label $lf.sfLabel -text "Source files:"
+grid $lf.sfLabel -row 0 -column 0 -columnspan 2 -padx 4 -pady 2 \
+		-sticky w
+ScrolledListbox $lf.srcList -width 20 -height 20 
+grid $lf.srcList -row 1 -column 0 -columnspan 2 \
+		-sticky news -padx 4 -pady 4
+button $lf.addButton -text " Add " -state disabled
+grid $lf.addButton -row 2 -column 0 -sticky e -padx 4 -pady 4
+button $lf.removeButton -text " Remove " -state disabled
+grid $lf.removeButton -row 2 -column 1 -sticky w -padx 4 -pady 4
+
+# Sequence list
+label $lf.slLabel -text "Question sequence:"
+grid $lf.slLabel -row 3 -column 0 -columnspan 2 -padx 4 -pady 2 \
+		-sticky w
+ScrolledListbox $lf.seqList -width 20 -height 10
+grid $lf.seqList -row 4 -column 0 -columnspan 2 \
+		-sticky news -padx 4 -pady 4
+button $lf.upButton -text " Up " -state disabled
+grid $lf.upButton -row 5 -column 0 -sticky e -padx 4 -pady 4
+button $lf.downButton -text " Down " -state disabled
+grid $lf.downButton -row 5 -column 1 -sticky w -padx 4 -pady 4
+
+
+## Create text area at right
+text .previewArea -width 80 -state disabled 
+pack .previewArea -pady 4 -padx 4 -expand true -fill both \
+		-side right -anchor nw
+
+
+## Insert *.tex file basenames into source list
+foreach file [ exec sh scripts/texlist.bash ] {
+	global $lf
+	$lf.srcList.list insert end $file
+}
+
+
+## Set up event handlers
+bind $lf.srcList.list <ButtonRelease-1> { OnSourceListClick $lf }
+bind $lf.seqList.list <ButtonRelease-1> { OnSequenceListClick $lf }
+bind $lf.addButton <ButtonRelease-1> { OnAddButtonClick $lf }
+bind $lf.removeButton <ButtonRelease-1> { OnRemoveButtonClick $lf }
+bind $bf.wsEdit <KeyRelease> { OnWorksheetNameChange $bf }
+bind $bf.generateButton <ButtonRelease-1> { OnGenerateButtonClick $lf $bf }

@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Explain what happens in each of these circuits when the pushbutton switch is actuated and then released:
+
+$$\epsfbox{01094x01.eps}$$
+
+\underbar{file 01094}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The SCR circuit's lamp will energize when the switch is actuated, and remain on after the switch is released.  The TRIAC circuit's lamp will energize when the switch is actuated, and immediately de-energize when the switch is released.
+
+\vskip 10pt
+
+Follow-up question: explain why these circuits do not behave identically.  Aren't SCRs and TRIACs both thyristor (hysteretic) devices?  Why doesn't the TRIAC remain in the "on" state after its triggering voltage is removed?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question addresses a very common misunderstanding that students have about TRIACs in AC circuits.  Students often mistakenly think that TRIACs will latch AC power just like an SCR latches DC power, simply because the TRIAC is also a hysteretic device.  However, this is not true!
+
+One might be inclined to wonder, of what benefit is the TRIAC's hysteresis in an AC circuit, then?  If latching is impossible in an AC circuit, then why have TRIACs at all?  This is a very good question, and its answer lies in the operation of a TRIAC {\it within the timespan of an AC power cycle}, which is much faster than human eyes can see.
+
+%INDEX% SCR switch circuit
+%INDEX% TRIAC switch circuit
+
+%(END_NOTES)
+
+

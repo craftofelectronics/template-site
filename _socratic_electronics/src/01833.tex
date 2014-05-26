@@ -1,0 +1,98 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the total impedance offered by these two inductors to a sinusoidal signal with a frequency of 120 Hz:
+
+$$\epsfbox{01833x01.eps}$$
+
+Show your work using three different problem-solving strategies:
+
+\medskip
+\item{$\bullet$} Calculating total inductance ($L_{total}$) first, then total impedance ($Z_{total}$).
+\item{$\bullet$} Calculating individual admittances first ($Y_{L1}$ and $Y_{L2}$), then total admittance ($Y_{total}$), then total impedance ($Z_{total}$).
+\item{$\bullet$} Using complex numbers: calculating individual impedances first (${\bf Z_{L1}}$ and ${\bf Z_{L2}}$), then total impedance (${\bf Z_{total}}$).
+\medskip
+
+Do these two strategies yield the same total impedance value?  Why or why not?
+
+\underbar{file 01833}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\noindent
+{\bf First strategy:}
+
+$L_{total} = 391.3 \hbox{ mH}$
+
+$X_{total} = 295.0 \> \Omega$
+
+${\bf Z_{total}} = 295.0 \> \Omega \> \angle \> 90^o$ or ${\bf Z_{total}} = 0 + j295.0 \> \Omega$
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent
+{\bf Second strategy:}
+
+$Z_{L1} = X_{L1} = 377.0 \> \Omega$
+
+\vskip 5pt
+
+$Y_{L1} = {1 \over Z_{L1}} = 2.653 \> \hbox{mS}$
+
+\vskip 5pt
+
+$Z_{L1} = X_{L2} = 1.357 \hbox{ k}\Omega$
+
+\vskip 5pt
+
+$Y_{L2} = {1 \over Z_{L2}} = 736.8 \> \mu \hbox{S}$
+
+\vskip 5pt
+
+$Y_{total} = 3.389 \> \hbox{mS}$
+
+\vskip 5pt
+
+$Z_{total} = {1 \over Y_{total}} = 295 \> \Omega$
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent
+{\bf Third strategy:} (using complex numbers)
+
+$X_{L1} = 377.0 \> \Omega$ \hskip 10pt ${\bf Z_{L1}} = 377.0 \> \Omega \> \angle \> 90^o$
+
+$X_{L2} = 1.357 \hbox{ k}\Omega$ \hskip 10pt ${\bf Z_{L2}} = 1.357 \hbox{ k}\Omega \> \angle \> 90^o$
+
+${\bf Z_{total}} = 295.0 \> \Omega \> \angle \> 90^o$ or ${\bf Z_{total}} = 0 + j295.0 \> \Omega$
+
+\vskip 10pt
+
+Follow-up question: draw a phasor diagram showing how the two inductors' admittance phasors geometrically add to equal the total admittance.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to get students to realize that {\it any} way they can calculate total impedance is correct, whether calculating total inductance and then calculating impedance from that, or by calculating the impedance of each inductor and then combining impedances to find a total impedance.  This should be reassuring, because it means students have a way to check their work when analyzing circuits such as this!
+
+%INDEX% Impedance calculation, parallel L circuit
+
+%(END_NOTES)
+
+

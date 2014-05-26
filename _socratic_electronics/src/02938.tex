@@ -1,0 +1,38 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student has an idea to make a J-K flip-flop toggle: why not just connect the $J$, $K$, and Clock inputs together and drive them all with the same square-wave pulse?  If the inputs are active-high and the clock is positive edge-triggered, the $J$ and $K$ inputs should both go "high" at the same moment the clock signal transitions from low to high, thus establishing the necessary conditions for a toggle ($J$=1, $K$=1, clock transition):
+
+$$\epsfbox{02938x01.eps}$$
+
+Unfortunately, the J-K flip-flop refuses to toggle when this circuit is built.  No matter how many clock pulses it receives, the $Q$ and $\overline{Q}$ outputs remain in their original states -- the flip-flop remains "latched."  Explain the practical reason why the student's flip-flop circuit idea will not work.
+
+\underbar{file 02938}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+With all inputs tied together, there is zero setup time on the $J$ and $K$ inputs before the clock pulse rises.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to get students to think about setup time, and to see its importance by providing a scenario where the circuit will not work because this parameter has been ignored.
+
+%INDEX% Hold time, flip-flop
+%INDEX% Setup time, flip-flop
+
+%(END_NOTES)
+
+

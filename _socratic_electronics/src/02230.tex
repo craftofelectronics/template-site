@@ -1,0 +1,171 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Complete the table of voltages and currents for several given values of input voltage in this common-emitter amplifier circuit.  Assume that the transistor is a standard silicon NPN unit, with a nominal base-emitter junction forward voltage of 0.7 volts.  For the last row of the table, give qualitative answers ({\it increase}, {\it decrease}, or {\it same}) representing what each of the quantities will do given an increasing base voltage ($V_B$):
+
+$$\epsfbox{02230x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_B$ & $V_E$ & $I_C$  & $V_{R_C}$ & $V_{CE}$ & $V_C$ ($V_{out}$) \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0.0 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0.5 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+1.0 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+1.5 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+2.0 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+2.5 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+3.0 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+{\it increase} &  &  &  &  & \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Calculate the voltage gain of this circuit from the numerical values in the table:
+
+$$A_V = {\Delta V_{out} \over \Delta V_{in}} = $$
+
+\underbar{file 02230}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_B$ & $V_E$ & $I_C$  & $V_{R_C}$ & $V_{CE}$ & $V_C$ ($V_{out}$) \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0.0 V & 0.0 V & 0.0 mA & 0.0 V & 15 V & 15 V \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0.5 V & 0.0 V & 0.0 mA & 0.0 V & 15 V & 15 V \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+1.0 V & 0.3 V & 0.298 mA & 1.40 V & 13.3 V & 13.6 V \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+1.5 V & 0.8 V & 0.793 mA & 3.73 V & 10.47 V & 11.27 V \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+2.0 V & 1.3 V & 1.29 mA & 6.06 V & 7.64 V & 8.94 V \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+2.5 V & 1.8 V & 1.79 mA & 8.39 V & 4.81 V & 6.61 V \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+3.0 V & 2.3 V & 2.28 mA & 10.7 V & 1.98 V & 4.28 V \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+{\it increase} & {\it increase} & {\it increase} & {\it increase} & {\it decrease} & {\it decrease} \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+$$A_V = {\Delta V_{out} \over \Delta V_{in}} = 4.66$$
+
+Sometimes the voltage gain of a common-emitter amplifier circuit is expressed as a negative quantity (-4.66 in this case), to indicate the inverse output/input relationship (180$^{o}$ phase shift).
+
+\vskip 10pt
+
+Follow-up question: what similarity do you notice between the voltage gain value of 4.66 and the two resistor values?
+
+\vskip 10pt
+
+Challenge question: a common assumption used in this type of BJT amplifier circuit is $I_C \approx I_E$.  Develop a voltage gain formula based on this assumption, in terms of resistor values $R_C$ and $R_E$.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question, besides providing practice for common-emitter circuit DC analysis, is to show the signal-inverting and voltage-amplification properties of the common-emitter amplifier.  Some students experience difficulty understanding why $V_C$ (the output voltage) decreases with increasing base voltage ($V_B$).  Working through the numbers in this table gives concrete proof why it is so.
+
+This approach to determining transistor amplifier circuit voltage gain is one that does not require prior knowledge of amplifier configurations.  In order to obtain the necessary data to calculate voltage gain, all one needs to know are the "first principles" of Ohm's Law, Kirchhoff's Laws, and basic operating principles of a bipolar junction transistor.  This question is really just a {\it thought experiment}: exploring an unknown form of circuit by applying known rules of circuit components.  If students doubt the efficacy of "thought experiments," one need only to reflect on the success of Albert Einstein, whose thought experiments as a patent clerk (without the aid of experimental equipment) allowed him to formulate the basis of his Theories of Relativity.
+
+%INDEX% Common-emitter amplifier, DC voltage calculations
+
+%(END_NOTES)
+
+

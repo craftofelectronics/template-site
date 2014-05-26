@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The {\it Orbiting Astronomical Observatory} was a NASA project during the late 1960's and 1970's to place precision observational instruments in earth orbit for scientific purposes.  Satellites designed for this program had to have "hardened" circuitry to withstand the radiation, extreme temperatures, and other harsh conditions of space.
+
+An example of some of this "fail-safe" circuitry is shown here: a passive, quad-redundant, two-input AND gate:
+
+$$\epsfbox{01329x01.eps}$$
+
+First, draw a schematic for a non-redundant, passive AND gate.  Which components shown in the above schematic are "redundant," and which are essential?
+
+Then, explain why the circuit is referred to as {\it quad}-redundant.  How many individual component failures, minimum, must occur before the gate's functionality is compromised?  Prove your answer through an analysis of the circuit's operation.
+
+\underbar{file 01329}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This is the schematic for a non-redundant, passive AND gate:
+
+$$\epsfbox{01329x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: why do you suppose transistors were eliminated from this gate circuit's design?
+
+\vskip 10pt
+
+Challenge question: note that there are series-parallel clusters of four diodes in the quad-redundant gate circuit, where there only needs to be one for minimum functionality.  Note also that the four resistors are all in parallel, not in a series-parallel arrangement.  Why is this?  Why not cluster all four diodes in parallel instead of series-parallel?  Why not cluster the four resistors in series-parallel, instead of simple parallel?
+
+$$\epsfbox{01329x03.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It is worth discussing with your students how a passive gate such as this functions at all.  Ask your students whether this gate requires the input signals to be current-{\it sourcing} or current-{\it sinking}, and whether or not the passive nature of the circuit constitutes a problem interfacing it with other logic circuits.
+
+The challenge question is a very good one to discuss in class with all your students.  The answer to why the diodes are in a series-parallel arrangement should be fairly easy to understand.  Why the resistors can be simply paralleled is a bit more complex to answer.  The key to understanding both these design features lies in the typical failure modes of each component type.
+
+%(END_NOTES)
+
+

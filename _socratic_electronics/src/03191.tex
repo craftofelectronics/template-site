@@ -1,0 +1,123 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student builds a microcontroller circuit to turn on an LED once for every five actuations of the input switch.  The circuit is simple, with the microcontroller using a conditional loop to increment a variable each time the switch is pressed:
+
+$$\epsfbox{03191x01.eps}$$
+
+\noindent
+\underbar{\bf Pseudocode listing}
+
+{\tt Declare Pin0 as an output}
+
+{\tt Declare Pin1 as an input}
+
+{\tt Declare X as an integer variable}
+
+{\tt LOOP}
+
+\hskip 10pt {\tt WHILE Pin1 is HIGH}
+
+\hskip 20pt {\tt Add 1 to X (X=X+1)}
+
+\hskip 10pt {\tt ENDWHILE}
+
+\hskip 10pt {\tt IF X is equal to 5, set Pin0 HIGH and set X to 0}
+
+\hskip 10pt {\tt ELSE set Pin0 LOW}
+
+\hskip 10pt {\tt ENDIF}
+
+{\tt ENDLOOP}
+
+\vskip 10pt
+
+Unfortunately, the program does not execute as planned.  Instead of the LED coming on once every five switch actuations, it seems to come on randomly when the switch is released.  Sometimes the LED turns on after the first switch actuation, while other times it takes more than five pushes of the switch to get it to turn on.
+
+After some careful analysis, it occurs to the student that the problem lies in the {\tt WHILE} loop.  As the microcontroller is much faster than the human hand, that loop executes many times while the switch is being pressed rather than only once, meaning that the variable {\tt X} counts from 0 to 5 many times around for each switch actuation.  It is only by chance, then, that {\tt X} will be equal to five after the {\tt WHILE} loop exits.
+
+What the student needs is for the switch to increment by 1 only for an off-to-on switch transition: at the {\it positive edge} of the input pulse.  The problem is how to do this using programming.
+
+\vskip 10pt
+
+\goodbreak
+Another student, when faced with the same problem, chose to solve it this way and it worked just fine:
+
+\vskip 10pt
+
+\noindent
+\underbar{\bf Pseudocode listing}
+
+{\tt Declare Pin0 as an output}
+
+{\tt Declare Pin1 as an input}
+
+{\tt Declare Switch as a Boolean (0 or 1) variable}
+
+{\tt Declare Last\_Switch as a Boolean (0 or 1) variable}
+
+{\tt Declare X as an integer variable}
+
+{\tt LOOP}
+
+\hskip 10pt {\tt Set Last\_Switch equal to Switch}
+
+\hskip 10pt {\tt Set Switch equal to Pin1}
+
+\hskip 10pt {\tt IF Switch = 1 and Last\_Switch = 0 THEN add 1 to X (X=X+1)}
+
+\hskip 10pt {\tt ELSE do nothing to X}
+
+\hskip 10pt {\tt ENDIF}
+
+\hskip 10pt {\tt IF X is equal to 5, set Pin0 HIGH and set X to 0}
+
+\hskip 10pt {\tt ELSE set Pin0 LOW}
+
+\hskip 10pt {\tt ENDIF}
+
+{\tt ENDLOOP}
+
+\vskip 10pt
+
+Explain how this program successfully increments {\tt X} only on each off-to-on transition of the pushbutton switch while the other program increments {\tt X} rapidly during the entire duration the pushbutton switch is pressed.
+
+\underbar{file 03191}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The key to understanding how this algorithm works is to realize the variable {\tt Last\_Switch} will always be one scan (loop execution) behind the variable {\tt Switch}.
+
+\vskip 10pt
+
+Challenge question: does it matter where in the program the following two lines go?  Must they be placed immediately prior to the IF/THEN conditional statement?
+
+\vskip 10pt
+
+\hskip 10pt {\tt Set Last\_Switch equal to Switch}
+
+\hskip 10pt {\tt Set Switch equal to Pin1}
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This pulse-detection algorithm is very commonly used in programs dealing with real-world switch inputs.  It performs in software what the pulse detection network does inside edge-triggered flip-flops, for the same effect: to initiate some kind of action only at the edge of a pulse signal.
+
+%INDEX% Microcontroller, implementing an input pulse detection algorithm
+%INDEX% Pulse detection, using software (algorithm)
+
+%(END_NOTES)
+
+

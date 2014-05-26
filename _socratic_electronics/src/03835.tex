@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how the operation of this logic gate circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03835x01.eps}$$
+
+\medskip
+\item{$\bullet$} Output of NAND gate $U_2$ fails low:
+\vskip 5pt
+\item{$\bullet$} Output of buffer gate $U_3$ fails low:
+\vskip 5pt
+\item{$\bullet$} Output of NOR gate $U_1$ fails high:
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03835}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Output of NAND gate $U_2$ fails low: {\it Gate $U_4$ output stuck in the low state.}
+\vskip 5pt
+\item{$\bullet$} Output of buffer gate $U_3$ fails low: {\it Gate $U_4$ output stuck in the low state.}
+\vskip 5pt
+\item{$\bullet$} Output of NOR gate $U_1$ fails high: {\it Gate $U_4$ output simply equal to $\overline{C}D$, no other inputs have any effect on $U_4$'s output.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in logic gate circuit
+
+%(END_NOTES)
+
+

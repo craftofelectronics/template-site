@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Given the following test circuit, with an oscilloscope used to record {\it current} from the battery to the cable (measuring voltage dropped across a shunt resistor), what sort of waveform or pulse would the oscilloscope register after switch closure?
+
+$$\epsfbox{00130x01.eps}$$
+
+\underbar{file 00130}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The oscilloscope would register a square-edged pulse of voltage approximately equal to 480 $\mu$V, which of course corresponds to a current of approximately 480 mA:
+
+$$\epsfbox{00130x02.eps}$$
+
+The pulse duration should range somewhere between 162.67 microseconds and 170.42 microseconds (based on two different figures I obtained for RG-58/U cable velocity factors).
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Answering this question requires several steps, and the combining of multiple concepts.  It should be apparent from the answer that Ohm's Law ($I = {E \over R}$) is sufficient for calculating pulse current, but the time delay figure given in the answer may confuse some students.  For those students who calculate a time figure that is half as much as the one given in the answer, encourage them to think of why their (incorrect) answer might have been off by 50\%.  The existence of a 2:1 ratio such as this implies a simple conceptual misunderstanding.
+
+For the RG-58/U cable velocity factor, I obtained two different figures: 0.63 and 0.66, which accounts for the two time delay answers given.
+
+%INDEX% Transmission line, current analysis (unterminated cable)
+
+%(END_NOTES)
+
+

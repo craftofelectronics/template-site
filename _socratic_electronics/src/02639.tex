@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This circuit is referred to as a {\it peak follower-and-hold}, taking the last greatest positive input voltage and "holding" that value at the output until a greater positive input voltage comes along:
+
+$$\epsfbox{02639x01.eps}$$
+
+Give a brief explanation of how this circuit works, as well as the purpose and function of the "reset" switch.  Also, explain why a FET input opamp is required for the last stage of amplification.
+
+\underbar{file 02639}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I'll let you figure out how the circuit works!  With regard to the necessity of FET inputs, let me say this: if the bias current of the last opamp were too great, the circuit would "lose its memory" of the last positive peak value over time.
+
+\vskip 10pt
+
+Follow-up question: how would you suggest choosing the values of resistor $R$ and capacitor $C$?
+
+\vskip 10pt
+
+Challenge question: redraw the circuit, replacing the mechanical reset switch with a JFET for electronic reset capability.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students if they can think of any practical applications for this type of circuit.  There are many!
+
+I find it interesting that in two very respectable texts on opamp circuitry, I have found the following peak follower-and-hold circuit given as a practical example:
+
+$$\epsfbox{02639x02.eps}$$
+
+This circuit contains two mistakes: the first is by having the reset switch go to ground, rather than -V.  This makes the reset function set the default output to 0 volts, which makes it impossible for the circuit to subsequently follow and hold any input signal below ground potential.  The second mistake is not having a resistor before the reset switch.  Without a resistor in place, closing the reset switch places a momentary short-circuit on the output of the first opamp.  Granted, the presence of a resistor creates a passive integrator stage (RC time constant) which must be kept considerably fast in order that rapid changes in input will be followed and held, but this is not a difficult factor to engineer.  
+
+%INDEX% Peak follower-and-hold circuit, with reset switch
+%INDEX% Precision rectifier circuit, opamp
+
+%(END_NOTES)
+
+

@@ -1,0 +1,56 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Often, we find extended complementation "bars" in Boolean expressions.  A simple example is shown here, where a long bar extends over the Boolean expression $A + B$:
+
+$$\overline{A + B}$$
+
+In this particular case, the expression represents the functionality of a NOR gate.  Many times in the manipulation of Boolean expressions, it is good to be able to know how to eliminate such long bars.  We can't just get rid of the bar, though.  There are specific rules to follow for "breaking" long bars into smaller bars in Boolean expressions.
+
+What other type of logic gate has the same functionality (the same truth table) as a NOR gate, and what is its equivalent Boolean expression?  The answer to this question will demonstrate what rule(s) we need to follow when we "break" a long complementation bar in a Boolean expression.
+
+\vskip 10pt
+
+Another example we could use for learning how to "break bars" in Boolean algebra is that of the NAND gate:
+
+$$\overline{AB}$$
+
+What other type of logic gate has the same functionality (the same truth table) as a NAND gate, and what is its equivalent Boolean expression?  The answer to this question will likewise demonstrate what rule(s) we need to follow when we "break" a long complementation bar in a Boolean expression.
+
+\underbar{file 01315}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Negative-AND gates have the same functionality as NOR gates, and their equivalent Boolean expression is as such:
+
+$$\overline{A} \> \overline{B}$$
+
+\vskip 10pt
+
+Negative-OR gates have the same functionality as NAND gates, and their equivalent Boolean expression is as such:
+
+$$\overline{A} + \overline{B}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question introduces DeMorgan's Theorem via a process of discovery.  Students, seeing that these equivalent gates pairs have the same functionality, should be able to discern a general pattern (i.e. a rule) for breaking long bars in Boolean expressions.
+
+%INDEX% Boolean algebra, DeMorgan's Theorem
+%INDEX% DeMorgan's Theorem, Boolean algebra
+
+%(END_NOTES)
+
+

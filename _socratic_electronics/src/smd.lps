@@ -1,0 +1,33 @@
+%! PostScript set of library objects for XCircuit
+%  Version: 3.0
+%  Library name is: smd.lps
+%  Author: Tony R. Kuphaldt,,, <tony@Linuxrules.tony.org>
+%
+
+% XCircuitLib library objects
+/smd_horiz {
+begingate
+0.800 0.800 0.800 scb
+240 1.00 -16 16 -16 -16 -8 -16 -8 16 4 polygon
+240 1.00 24 16 24 -16 32 -16 32 16 4 polygon
+0.600 0.600 0.600 scb
+240 1.00 -8 16 -8 -16 24 -16 24 16 4 polygon
+sce
+0 1.00 -16 16 -16 -16 32 -16 32 16 4 polygon
+endgate
+} def
+
+/smd_vert {
+begingate
+0.800 0.800 0.800 scb
+240 1.00 -16 16 -16 8 16 8 16 16 4 polygon
+240 1.00 -16 -24 -16 -32 16 -32 16 -24 4 polygon
+0.600 0.600 0.600 scb
+240 1.00 -16 8 -16 -24 16 -24 16 8 4 polygon
+sce
+0 1.00 -16 16 -16 -32 16 -32 16 16 4 polygon
+endgate
+} def
+
+
+% EndLib

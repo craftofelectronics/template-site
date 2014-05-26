@@ -1,0 +1,72 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the voltage dropped across the inductor, the capacitor, and the 8-ohm speaker in this sound system at the following frequencies, given a constant source voltage of 15 volts:
+
+$$\epsfbox{00640x01.eps}$$
+
+\medskip
+\item{$\bullet$} $f =$ 200 Hz 
+\item{$\bullet$} $f =$ 550 Hz 
+\item{$\bullet$} $f =$ 900 Hz 
+\medskip
+
+Regard the speaker as nothing more than an 8-ohm resistor.
+
+\underbar{file 00640}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} $f =$ 200 Hz ; $V_L =$ 1.750 V ; $V_C =$ 11.79 V ; $V_{speaker} =$ 5.572 V  
+\item{$\bullet$} $f =$ 550 Hz ; $V_L =$ 6.472 V ; $V_C =$ 5.766 V ; $V_{speaker} =$ 7.492 V 
+\item{$\bullet$} $f =$ 900 Hz ; $V_L =$ 9.590 V ; $V_C =$ 3.763 V ; $V_{speaker} =$ 6.783 V
+\medskip
+
+This circuit is known as a {\it midrange crossover} in stereo system design.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is an interesting circuit to analyze.  Note how, out of the three frequency points we performed calculations at, the speaker's voltage is greatest at the {\it middle} frequency.  Note also how the inductor and capacitor drop very disparate amounts of voltage at the high and low frequencies.  Discuss this circuit's behavior with your students, and ask them what practical function this circuit performs.
+
+\vskip 10pt
+
+Students often have difficulty formulating a method of solution: determining what steps to take to get from the given conditions to a final answer.  While it is helpful at first for you (the instructor) to show them, it is bad for you to show them too often, lest they stop thinking for themselves and merely follow your lead.  A teaching technique I have found very helpful is to have students come up to the board (alone or in teams) in front of class to write their problem-solving strategies for all the others to see.  They don't have to actually do the math, but rather outline the steps they would take, in the order they would take them.  The following is a sample of a written problem-solving strategy for analyzing a series resistive-reactive AC circuit:
+
+\vskip 10pt
+
+\goodbreak
+
+{\bf Step 1:} Calculate all reactances ($X$).
+
+{\bf Step 2:} Draw an impedance triangle ($Z$ ; $R$ ; $X$), solving for $Z$
+
+{\bf Step 3:} Calculate circuit current using Ohm's Law: $I = {V \over Z}$
+
+{\bf Step 4:} Calculate series voltage drops using Ohm's Law: $V = {I Z}$
+
+{\bf Step 5:} Check work by drawing a voltage triangle ($V_{total}$ ; $V_1$ ; $V_2$), solving for $V_{total}$
+
+\vskip 10pt
+
+By having students outline their problem-solving strategies, everyone gets an opportunity to see multiple methods of solution, and you (the instructor) get to see how (and if!) your students are thinking.  An especially good point to emphasize in these "open thinking" activities is how to check your work to see if any mistakes were made.
+
+%INDEX% Series impedance calculation
+%INDEX% Impedance calculation, series
+
+%(END_NOTES)
+
+

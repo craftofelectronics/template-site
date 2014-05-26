@@ -1,0 +1,129 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Complete the table of output voltages for several given values of input voltage in this common-collector amplifier circuit.  Assume that the transistor is a standard silicon NPN unit, with a nominal base-emitter junction forward voltage of 0.7 volts:
+
+$$\epsfbox{02224x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_{in}$ & $V_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0.0 V &  \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0.5 V &  \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+1.0 V &  \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+1.5 V &  \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+5.0 V &  \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+7.8 V &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Based on the values you calculate, explain why the common-collector circuit configuration is often referred to as an {\it emitter follower}.
+
+\underbar{file 02224}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_{in}$ & $V_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0.0 V & 0.0 V \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0.5 V & 0.0 V \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+1.0 V & 0.3 V \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+1.5 V & 0.8 V \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+5.0 V & 4.3 V \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+7.8 V & 7.1 V \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+The voltage at the transistor's emitter terminal approximately "follows" the voltage applied to the base terminal, hence the name.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+At first, the "emitter follower" transistor circuit may seem pointless, since the output voltage practically equals the input voltage (especially for input voltages greatly exceeding 0.7 volts DC).  "What possible good is a circuit like this?" some of your students may ask.  The answer to this question, of course, has to do with {\it currents} in the circuit, and not necessarily voltages.
+
+%INDEX% Common-collector amplifier, output voltage calculations
+
+%(END_NOTES)
+
+

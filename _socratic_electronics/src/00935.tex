@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A simple "follower" circuit that boosts the current-output ability of this noninverting amplifier circuit is a set of bipolar junction transistors, connected together in a "push-pull" fashion like this:
+
+$$\epsfbox{00935x01.eps}$$
+
+However, if connected exactly as shown, there will be a significant voltage error introduced to the opamp's output.  No longer will the final output voltage (measured across the load) be an exact 3:1 multiple of the input voltage, due to the 0.7 volts dropped by the transistor in active mode:
+
+$$\epsfbox{00935x02.eps}$$
+
+There is a very simple way to completely eliminate this error, without adding any additional components.  Modify the circuit accordingly.
+
+\underbar{file 00935}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{00935x03.eps}$$
+
+If you understand why this circuit works, pat yourself on the back: you truly understand the self-correcting nature of negative feedback.  If not, you have a bit more studying to do!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The answer is not meant to be discouraging for those students of yours who do not understand how the solution works.  It is simply a "litmus test" of whether or not your students really comprehend the concept of negative feedback.  Although the change made in the circuit is simple, the principle is a bit of a conceptual leap for some people.  
+
+It might help your students understand if you label the new wire with the word {\it sense}, to indicate its purpose of providing feedback from the very output of the circuit, back to the opamp so it can sense how much voltage the load is receiving.
+
+%INDEX% Negative feedback, in power opamp circuit
+
+%(END_NOTES)
+
+

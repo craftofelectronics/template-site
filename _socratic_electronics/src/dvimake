@@ -1,0 +1,35 @@
+#!/bin/bash
+### YOU SHOULD NOT HAVE TO ALTER THIS SCRIPT ###
+
+## dvimake: Generate DVI file, whether sequence file has been altered or not
+
+function die () {
+	echo
+	echo ---------------------------------------------
+	echo "Failed to run '$1'. Either the input file is invalid"
+	echo "or $1 is not installed on your system."
+	echo
+	exit 1
+}
+
+
+function die2 () {
+	echo
+	echo ---------------------------------------------
+	echo "Failed to find '$1.seq' sequence file."
+	echo
+	exit 1
+}
+
+# Run sequence file to get all.tex, reorganize that into output.tex,
+# and then convert it to DVI format.
+if ! ls $1.seq ; then die2 $1; fi
+$1.seq
+../scripts/texwrap.bash $1
+if ! tex output.tex ; then die TeX ; fi
+mv -vf output.dvi $1.dvi
+
+# Remove temporary files
+rm -vf all.*
+rm -vf output.*
+

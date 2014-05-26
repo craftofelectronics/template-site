@@ -1,0 +1,60 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{02022x01.eps}$$
+
+Note: when testing the frequency response of the tone control circuit, you may need to replace the headphones with a non-inductive resistor of equivalent impedance, and measure $V_{out}$ across it. 
+
+\underbar{file 02022}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+A good source of audio signal is the headphone output jack of almost any radio, media player, or other portable audio device.  Students like being able to do a lab exercise that directly relates to technology they're already familiar with.
+
+The higher-impedance the headphones are, the better this circuit works, since the combination of potentiometers and mixing resistors tends to result in a relatively high output impedance.  I have used cheap headphones (32 ohm) with some success, given the following component values:
+
+\medskip
+\item{$\bullet$} $C_1$ = 0.1 $\mu$F 
+\item{$\bullet$} $L_1$ = 200 mH (actually two 100 mH inductors in series)
+\item{$\bullet$} $R_1$ = $R_2$ = 1 k$\Omega$
+\item{$\bullet$} $R_{pot1}$ = $R_{pot2}$ = 10 k$\Omega$
+\medskip
+
+Some students with limited hearing range have difficulty detecting the changes in tone using 10 k$\Omega$ potentiometers.  You may wish to use 100 k$\Omega$ potentiometers instead for added attenuation.  Operating such a circuit is akin to operating a water faucet with "hot" and "cold" water valves: the two settings together determine temperature {\it and} flow (tone and volume, respectively, for the metaphorically challenged).
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+\vskip 10pt
+
+If you plan to use this exercise as a troubleshooting assessment, I recommend {\it against} inducing the following component failures, as they are difficult to detect when the signal source is music rather than a constant tone of known frequency and amplitude:
+
+\medskip
+\goodbreak
+\item{$\bullet$} Shorted capacitor ($C_1$)
+\item{$\bullet$} Shorted inductor ($L_1$)
+\item{$\bullet$} Shorted fixed-value resistors ($R_1$ or $R_2$)
+\medskip
+
+%INDEX% Assessment, performance-based (Tone balance control circuit)
+
+%(END_NOTES)
+
+

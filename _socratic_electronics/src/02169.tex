@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2009, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{02169x01.eps}$$
+
+\underbar{file 02169}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Here, students must calculate values for $C_1$ and $R_1$ that will produce the $V_{out}$ waveshape specified in the "Given conditions" oscilloscope plot.  The input signal, of course, is a square wave.  
+
+If the chosen circuit is a differentiator, students must calculate the time constant of the circuit ($\tau$) such that the pulse fully decays within the pulse width (half-period) of the square wave.  With $5 \tau$ being the accepted standard for full charge/discharge of a time-constant circuit, this is an easy calculation.
+
+If the chosen circuit is an integrator, students should be able to show mathematically why the time constant of the integrator ($\tau$) must be 1.443 times the waveform's half-period ($e^{-t \over \tau} = {1 \over 2}$).  Instructors, note: the calculations for this circuit, with $V_{out} = {1 \over 3}V_{in}$, are exactly the same as for a 555 timer circuit, because 555 timers also cycle their capacitors' voltages at peak-to-peak values equal to one-third of the supply voltage.
+
+There are many different combinations of values for $C_1$ and $R_1$ possible for any given square-wave signal frequencies.  The purpose of this exercise is for students to be able to predict and select practical component values from their parts kits.
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (Passive integrator/differentiator circuit)
+
+%(END_NOTES)
+
+

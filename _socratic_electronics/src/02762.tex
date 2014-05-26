@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Crude logic gates circuits may be constructed out of nothing but diodes and resistors.  Take for example this logic gate circuit:
+
+$$\epsfbox{02762x01.eps}$$
+
+Identify what type of logic function is represented by this gate circuit (AND, OR, inverter, etc.).  Also, trace the directions of all currents in this circuit.
+
+\underbar{file 02762}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This is an AND gate circuit.
+
+$$\epsfbox{02762x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: show how the two SPDT switches could be replaced by SPST switches (without the need for pullup or pulldown resistors).
+
+\vskip 10pt
+
+Challenge question: explain why it may be impractical to design this diode-resistor gate circuit to directly drive an LED so that it lights up when the output state is "high."
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Diode-resistor gate circuits such as this are rarely used in real digital circuitry because they have no capacity to {\it amplify} weak input signals.  They also have no capacity for signal inversion, rendering them incapable of representing a great many logic function types.  Gates made from transistors are much preferred over diode-resistor technology.
+
+%INDEX% Logic gate (AND), made from diodes and resistors
+
+%(END_NOTES)
+
+

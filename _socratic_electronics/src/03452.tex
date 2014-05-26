@@ -1,0 +1,62 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A common topology for DC-AC power converter circuits uses a pair of transistors to switch DC current through the center-tapped winding of a step-up transformer, like this:
+
+$$\epsfbox{03452x01.eps}$$
+
+In order for this form of circuit to function properly, the transistor "firing" signals must be precisely synchronized to ensure the two are never turned on simultaneously.  The following schematic diagram shows a circuit to generate the necessary signals:
+
+$$\epsfbox{03452x02.eps}$$
+
+Explain how this circuit works, and identify the locations of the frequency control and pulse duty-cycle control potentiometers.
+
+\underbar{file 03452}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A timing diagram is worth a thousand words:
+
+$$\epsfbox{03452x04.eps}$$
+
+\medskip
+\item{$\bullet$} $V_{ref}$ = DC reference voltage set by duty cycle potentiometer
+\item{$\bullet$} $V_{cap}$ = Voltage measured at top terminal of the 555's capacitor
+\item{$\bullet$} $V_{comp}$ = Comparator output voltage
+\item{$\bullet$} $V_{555(out)}$ = 555 timer output voltage
+\item{$\bullet$} $Q$ = Noninverted output of J-K flip-flop
+\item{$\bullet$} $\overline{Q}$ = Inverted output of J-K flip-flop
+\medskip
+
+$$\epsfbox{03452x03.eps}$$
+
+\vskip 10pt
+
+Follow-up question: which direction would you have to move the frequency potentiometer to increase the output frequency of this circuit?  Which direction would you have to move the duty cycle potentiometer to increase that as well?
+
+\vskip 10pt
+
+Challenge question: suppose you were prototyping this circuit without the benefit of an oscilloscope.  How could you test the circuit to ensure the final output pulses to the transistors are never simultaneously in the "high" logic state?  Assume you had a parts assortment complete with light-emitting diodes and other passive components.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question is an exercise in schematic diagram and timing diagram interpretation.  By the way, I have built and tested this circuit and I can say it works very well.
+
+%INDEX% Pulse generator circuit for DC-AC power inverter
+
+%(END_NOTES)
+
+

@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Gated latch circuits often come packaged in multiple quantities, with common gate inputs, so that more than one of the latches within the integrated circuit will be enabled and disabled simultaneously.  Examine this logic symbol, representative of the 74AC16373, a 16-bit D-type latch with tri-state outputs:
+
+$$\epsfbox{01359x01.eps}$$
+
+Note how the sixteen D latches are divided into two groups of eight.  Explain the functions of the four inputs at the very top of the symbol (1EN, C1, 2EN, and C2).  Which of these input lines correspond to the "Enable" inputs seen on single D-type latch circuits?  Also, describe what the "wedge" shapes represent on the 1EN and 2EN input lines.
+
+Suppose you wished to have all sixteen latch circuits enabled as one, rather than as two groups of eight.  Show what you would have to do to this circuit in order to achieve this goal.
+
+\underbar{file 01359}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Inputs C1 and C2 perform the standard "Enabling" function for the D-type latches within this integrated circuit.  The 1EN and 2EN inputs control the tri-state outputs.  Their "wedge" symbols mean "complemented," and are equivalent to the "bubbles" seen on traditional gate symbols.
+
+\vskip 10pt
+
+To make all sixteen latches enable and disable as one, bridge the enable inputs as such:
+
+$$\epsfbox{01359x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question not only introduces students to the concept of multiple latches in a single integrated circuit, but it also shows an example of IEEE/ANSI "block" symbolism.  Your students, having become well adjusted to the idea of independent research by now, should have obtained the datasheet for this circuit (74AC16373) as part of their study.  The information contained in the datasheet should prove to be quite informative in answering their questions about enable input functions, tri-state outputs, and the like.  If they haven't obtained datasheets, and cannot understand the answers to the question(s), don't just tell them -- have them look it up for themselves!
+
+%INDEX% Enable input, digital logic
+%INDEX% IEEE/ANSI digital circuit notation
+
+%(END_NOTES)
+
+

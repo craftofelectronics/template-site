@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The {\it input impedance} of an electrical test instrument is a very important parameter in some applications, because of how the instrument may {\it load} the circuit being tested.  Oscilloscopes are no different from voltmeters in this regard:
+
+$$\epsfbox{02111x01.eps}$$
+
+Typical input impedance for an oscilloscope is 1 M$\Omega$ of resistance, in parallel with a small amount of capacitance.  At low frequencies, the reactance of this capacitance is so high that it may be safely ignored.  At high frequencies, though, it may become a substantial load to the circuit under test:
+
+$$\epsfbox{02111x02.eps}$$
+
+Calculate how many ohms of impedance this oscilloscope input (equivalent circuit shown in the above schematic) will impose on a circuit with a signal frequency of 150 kHz.
+
+\underbar{file 02111}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$Z_{input}$ = 52.98 k$\Omega$ at 150 kHz
+
+\vskip 10pt
+
+Follow-up question: what are the respective input impedances for ideal voltmeters and ideal ammeters?  Explain why each ideal instrument needs to exhibit these impedances in order to accurately measure voltage and current (respectively) with the least "impact" to the circuit under test.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Mention to your students that this capacitive loading effect only gets worse when a cable is attached to the oscilloscope input.  The calculation performed for this question is only for the {\it input} of the oscilloscope itself, not including whatever capacitance may be included in the test probe cable!
+
+This is one of the reasons why $\times$10 probes are used with oscilloscopes: to minimize the loading effect on the tested circuit.
+
+%INDEX% Input impedance, oscilloscope
+%INDEX% Parallel impedance calculation
+
+%(END_NOTES)
+
+

@@ -1,0 +1,139 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Use a Karnaugh map to generate a simple Boolean expression for this truth table, and draw a relay circuit equivalent to that expression:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+A & B & C & D & Output \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 0 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 0 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+0 & 1 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+0 & 1 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+0 & 1 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+0 & 1 & 1 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Tenth row
+1 & 0 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Eleventh row
+1 & 0 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Twelfth row
+1 & 0 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Thirteenth row
+1 & 0 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fourteenth row
+1 & 1 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fifteenth row
+1 & 1 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Sixteenth row
+1 & 1 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Seventeenth row
+1 & 1 & 1 & 1 & 1 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 02844}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Simple expression and relay circuit:
+
+$$B + \overline{D}$$
+
+$$\epsfbox{02844x01.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Given the preponderance of 1's in this truth table, it is rational to try developing a POS expression rather than an SOP expression.  However, your students may find that the elegance of Karnaugh mapping makes it easy enough to do it both ways!  This is one question where you definitely want to have your students explain their methods of solution in front of the class, and you definitely want them to see how Karnaugh maps could be used both ways (SOP and POS).
+
+I have found that an overhead (acetate) or computer-projected image of a blank Karnaugh map on a whiteboard serves well to present Karnaugh maps on.  This way, cell entries may be easily erased and re-drawn without having to re-draw the map (grid lines) itself.
+
+%INDEX% Boolean algebra, conversion of expression into relay logic
+%INDEX% Karnaugh map, used to derive SOP/POS expression from a truth table
+
+%(END_NOTES)
+
+

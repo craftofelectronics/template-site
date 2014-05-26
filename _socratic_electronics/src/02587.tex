@@ -1,0 +1,70 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Examine the following schematic diagram and program listing (written in "pseudocode" rather than a formal programming language) to determine what type of basic logic function is being implemented in this microcontroller unit:
+
+$$\epsfbox{02587x01.eps}$$
+
+\noindent
+\underbar{\bf Pseudocode listing}
+
+{\tt Declare Pin0 as an output}
+
+{\tt Declare Pin1 and Pin2 as inputs}
+
+{\tt LOOP}
+
+\hskip 10pt {\tt IF Pin1 is same as Pin2, set Pin0 HIGH}
+
+\hskip 10pt {\tt ELSE set Pin0 LOW}
+
+\hskip 10pt {\tt ENDIF}
+
+{\tt ENDLOOP}
+
+\vskip 10pt
+
+\underbar{file 02587}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This microcontroller implements the logical Exclusive-NOR function.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Although this logic function could have been implemented easier and cheaper in hard-wired (gate) logic, the purpose is to get students to think of performing logical operations by a sequenced set of instructions inside a programmable device (the MCU).  This is a conceptual leap, basic but very important.
+
+\vskip 10pt
+
+In case you're wondering why I write in pseudocode, here are a few reasons:
+
+\medskip
+\goodbreak
+\item{$\bullet$} No prior experience with programming required to understand pseudocode
+\item{$\bullet$} It never goes out of style
+\item{$\bullet$} Hardware independent
+\item{$\bullet$} No syntax errors
+\medskip
+
+If I had decided to showcase code that would actually run in a microcontroller, I would be dooming the question to obsolescence.  This way, I can communicate the spirit of the program without being chained to an actual programming standard.  The only drawback is that students will have to translate my pseudocode to real code that will actually run on their particular MCU hardware, but that is a problem guaranteed for some regardless of which real programming language I would choose.
+
+Of course, I could have taken the Donald Knuth approach and invented my own (imaginary) hardware and instruction set . . . 
+
+%INDEX% Microcontroller, implementing a simple logic function
+
+%(END_NOTES)
+
+

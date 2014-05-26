@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A {\it transistor} is a semiconductor device that acts as a constant-current regulator.  For the sake of analysis, transistors are often considered as constant-current {\it sources}:
+
+$$\epsfbox{01042x01.eps}$$
+
+Suppose we needed to calculate the amount of current drawn from the 6-volt source in this dual-source transistor circuit:
+
+$$\epsfbox{01042x02.eps}$$
+
+We know the combined currents from the two voltage sources must add up to 5 mA, because Kirchhoff's Current Law tells us that currents add algebraically at any node.  Based on this knowledge, we may label the current through the 6-volt battery as "$I$", and the current through the 7.2 volt battery as "5 mA $- I$":
+
+$$\epsfbox{01042x03.eps}$$
+
+Kirchhoff's Voltage Law tells us that the algebraic sum of voltage drops around any "loop" in a circuit must equal zero.  Based on all this data, calculate the value of $I$:
+
+$$\epsfbox{01042x04.eps}$$
+
+Hint: simultaneous equations are not needed to solve this problem!
+
+\underbar{file 01042}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$I =$ 1.9 mA
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I wrote this question in such a way that it mimics branch/mesh current analysis, but with enough added information (namely, the current source's value) that there is only one variable to solve for.  The idea here is to prepare students for realizing why simultaneous equations are necessary in more complex circuits (when the unknowns cannot all be expressed in terms of a single variable).
+
+%INDEX% Modeling bipolar transistor as current source
+
+%(END_NOTES)
+
+

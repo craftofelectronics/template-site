@@ -1,0 +1,60 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose you are asked to determine whether or not each battery in this circuit is charging or discharging:
+
+$$\epsfbox{03403x01.eps}$$
+
+To do so, of course, you need to determine the direction of current through each battery.  Unfortunately, your multimeter does not have the current rating necessary to directly measure such large currents, and you do not have access to a clamp-on (magnetic) ammeter capable of measuring DC current.
+
+\goodbreak
+
+You are about to give up when a master technician comes along and uses her multimeter (set to measure {\it millivolts}) to take these three voltage measurements:
+
+$$\epsfbox{03403x02.eps}$$
+
+"There," she says, "it's easy!" With that, she walks away, leaving you to figure out what those measurements mean.  Determine the following:
+
+\medskip
+\item{$\bullet$} How these DC millivoltage measurements indicate direction of current.
+\item{$\bullet$} Whether or not each battery is charging or discharging.
+\item{$\bullet$} Whether or not these millivoltage measurements can tell you {\it how much} current is going through each battery.
+\item{$\bullet$} How this general principle of measurement may be extended to other practical applications.
+\medskip
+
+\underbar{file 03403}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The master technician exploited the inherent resistance of each fuse as a current-indicating {\it shunt resistor}.  The measurements indicate both batteries are {\it charging}.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a very practical (and handy!) method of qualitative current measurement I've used many times on the job.  Fuses, as well as other current-handling components, always have some non-zero amount of electrical resistance between their terminals, which means they are usable as crude shunt resistors.  Their actual resistance will most likely be unknown to you, which is why they are useful in this capacity as {\it qualitative} measurement devices only, not quantitative.
+
+Some students may point out that the measurement taken across the generator's fuse is not necessary to determine battery charging status.  Technically, this is true, but doing so helps to confirm the validity of this technique.  The polarity of that measurement does indeed show (conventional flow) current to be going upward through the generator fuse, versus downward through the battery fuses.
+
+Students may also point out that the battery fuse millivoltage measurements do not add up to equal the generator fuse millivoltage measurement, as Kirchhoff's Current Law (KCL) would suggest.  This is one example showing how the technique is strictly qualitative, not quantitative.  We have no idea how much resistance lies within each fuse, and so we cannot rely on the millivoltage measurements as being proportional to current.  This is especially true if the fuses are not identical!
+
+Other circuit elements lending themselves to this same sort of application include overload "heater" elements for motor control circuits, long lengths of wire (provided you can stretch your millivolt-meter leads to reach both ends), circuit breakers, (closed) switches, and wire connections (particularly if the connection is old and possibly corroded).
+
+%INDEX% Battery charging vs. discharging
+%INDEX% Fuse, used as current-indicating shunt resistance
+%INDEX% Kirchhoff's Current Law
+
+%(END_NOTES)
+
+

@@ -1,0 +1,40 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A problem unique to certain types of CMOS logic gates is something called {\it SCR latchup}.  This is an abnormal condition capable of ruining a circuit, or at the very least causing operational problems in a circuit.  Explain what this phenomenon is, and what causes it.
+
+\underbar{file 01248}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If an input or output of a CMOS gate circuit is driven above $V_{DD}$, even momentarily, the circuit may "latch" like an SCR, causing $V_{DD}$ to become shorted to $V_{SS}$ internally.  This is made possible by the way CMOS transistors are manufactured on the integrated circuit's substrate.
+
+\vskip 10pt
+
+Challenge question: referencing a cross-sectional illustration of a CMOS gate integrated circuit, show the "SCR" formed by the transistors, and explain how it may be "fired" by excessive input voltage to the gate.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Based on their knowledge of thyristors, your students should be able to tell you how to best "unlatch" a CMOS gate stuck in this condition.  Challenge them with this problem, and also with the question of how one might detect such a condition as it's happening.
+
+Mention to your students that not all CMOS families exhibit this problem, and that manufacturers have been keen to address serious design faults such as these.  If nothing else, though, this should reinforce the lesson that one should {\it never} exceed the supply rail voltage for any type of active circuit, be it an op-amp, gate, or something else, unless expressly permitted by the manufacturer.
+
+%INDEX% CMOS logic gate latchup
+%INDEX% Latchup, CMOS logic gate
+
+%(END_NOTES)
+
+

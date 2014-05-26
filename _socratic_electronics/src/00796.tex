@@ -1,0 +1,63 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A technician is troubleshooting a power supply circuit with no DC output voltage.  The output voltage is supposed to be 15 volts DC:
+
+$$\epsfbox{00796x01.eps}$$
+
+The technician begins making voltage measurements between some of the test points (TP) on the circuit board.  What follows is a sequential record of her measurements:
+
+\medskip
+\goodbreak
+\item{1.} $V_{TP1-TP2} =$ 118 volts AC
+\item{2.} $V_{TP3-TP2} =$ 0 volts AC
+\item{3.} $V_{TP1-TP3} =$ 118 volts AC
+\item{4.} $V_{TP4-TP5} =$ 0.5 volts AC
+\item{5.} $V_{TP7-TP8} =$ 1.1 volts DC
+\item{6.} $V_{TP9-TP10} =$ 1.1 volts DC
+\medskip
+
+Based on these measurements, what do you suspect has failed in this supply circuit?  Explain your answer.  Also, critique this technician's troubleshooting technique and make your own suggestions for a more efficient pattern of steps.
+
+\underbar{file 00796}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The transformer has an open winding.  
+
+\vskip 10pt
+
+Follow-up question \#1: with regard to the troubleshooting technique, this technician seems to have started from one end of the circuit and moved incrementally toward the other, checking voltage at almost every point in between.  Can you think of a more efficient strategy than to start at one end and work slowly toward the other?
+
+\vskip 10pt
+
+Challenge question: based on the voltage measurements taken, which do you think is the more likely failure, an open primary winding or an open secondary winding?
+
+\vskip 10pt
+
+Follow-up question \#2: how could you test the two windings of the transformer for a possible open fault?  In other words, is there another type of measurement that could verify our hypothesis of a failed winding?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Troubleshooting scenarios are always good for stimulating class discussion.  Be sure to spend plenty of time in class with your students developing efficient and logical diagnostic procedures, as this will assist them greatly in their careers.
+
+Students may be puzzled by the presence of DC voltage between TP7 and TP8, and also between TP9 and TP10 (1.1 volts), given that there is less than that amount of AC voltage at the rectifier's input.  However, this is a common phenomenon with electrolytic capacitors, to "recover" a small voltage after having been discharged.
+
+%INDEX% Troubleshooting, power supply (AC-DC)
+
+%(END_NOTES)
+
+

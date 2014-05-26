@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The "Mesh Current" method of network analysis works well to calculate currents in unbalanced bridge circuits.  Take this circuit, for example:
+
+$$\epsfbox{01047x01.eps}$$
+
+Write three mesh equations for this circuit, following these three mesh currents:
+
+$$\epsfbox{01047x02.eps}$$
+
+\underbar{file 01047}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Three mesh equations:
+
+\vskip 10pt
+
+$170I_1 + 50I_2 - 120I_3 = 10$
+
+\vskip 10pt
+
+$50I_1 + 300I_2 + 100I_3 = 0$
+
+\vskip 10pt
+
+$-120I_1 + 100I_2 + 420I_3 = 0$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Students' equations may not look exactly like these, depending on how they "stepped" around the loops tallying voltage drops.  So long as they are all able to reach the same answers for $I_1$, $I_2$, and $I_3$, it does not matter.  In fact, it is a good thing to have different students propose different forms of the equations to demonstrate that the same answers are obtained every time.
+
+Of special importance in this problem is how students represent two meshing currents at a single resistor in their equations.  A common mistake for beginning mesh current analysts is to disregard the relative directions of meshing currents.  It makes a huge difference whether two mesh currents go the same direction through a resistor, or whether they go in opposite directions!
+
+%(END_NOTES)
+
+

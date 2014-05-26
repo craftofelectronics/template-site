@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+So-called {\it linear} regulator circuits work by adjusting either a series resistance or a shunt resistance to maintain output voltage at some fractional value of input voltage:
+
+$$\epsfbox{02162x01.eps}$$
+
+Typically, these variable resistances are provided by transistors rather than actual rheostats, which would have to be manually controlled.
+
+Explain why a {\it switching} regulator circuit would perform the same task as a linear regulator circuit at a much greater efficiency.  Also, identify which type(s) of switching regulator circuit would be best suited for the task of reducing an input voltage to a lesser output voltage.
+
+\underbar{file 02162}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A {\it buck} regulator circuit functions in nearly the same manner as a transformer: stepping voltage down while stepping current up.  Ideally, switching regulator circuits waste zero energy, unlike (resistive) linear regulator circuits.
+
+\vskip 10pt
+
+Follow-up question: which type of linear regulator circuit does the traditional {\it zener diode voltage regulator} belong to, series or shunt?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In the process of analyzing switching regulator functionality, it is easy for students to overlook the purpose for why they exist at all.  Discuss the importance of power conversion efficiency, especially for electronic applications that are battery powered.
+
+An important point to emphasize in this question is that most of the switching "regulator" circuits first shown to students are not actually regulators at all, but merely {\it converters}.  A switching converter circuit does not become a regulator circuit until a feedback control is added.  Such controls are usually too complex to introduce at the very beginning, so they are typically omitted for simplicity's sake.  However, students should realize the difference between a switching {\it regulator} circuit and a mere switching {\it converter} circuit, lest they believe the converter to be capable of more than it is.
+
+%INDEX% Switching regulator circuit versus linear regulator circuit
+%INDEX% Linear regulator circuit versus switching regulator circuit
+
+%(END_NOTES)
+
+

@@ -1,0 +1,59 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The type "555" integrated circuit is a highly versatile {\it timer}, used in a wide variety of electronic circuits for time-delay and oscillator functions.  The heart of the 555 timer is a pair of comparators and an S-R latch:
+
+$$\epsfbox{01418x01.eps}$$
+
+The various inputs and outputs of this circuit are labeled in the above schematic as they often appear in datasheets ("Thresh" for {\it threshold}, "Ctrl" or "Cont" for {\it control}, etc.).
+
+To use the 555 timer as an astable multivibrator, simply connect it to a capacitor, a pair of resistors, and a DC power source as such:
+
+$$\epsfbox{01418x02.eps}$$
+
+If were were to measure the voltage waveforms at test points {\bf A} and {\bf B} with a dual-trace oscilloscope, we would see the following:
+
+$$\epsfbox{01418x03.eps}$$
+
+Explain what is happening in this astable circuit when the output is "high," and also when it is "low."
+
+\underbar{file 01418}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+When the output is high, the capacitor is charging through the two resistors, its voltage increasing.  When the output is low, the capacitor is discharging through one resistor, current sinking through the 555's "Disch" terminal.
+
+\vskip 10pt
+
+Follow-up question: algebraically manipulate the equation for this astable circuit's operating frequency, so as to solve for $R_2$.
+
+$$f = {1 \over {(\ln 2)(R_1 + 2R_2)C}}$$
+
+\vskip 10pt
+
+Challenge question: explain why the duty cycle of this circuit's output is always greater than 50\%.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This popular configuration of the 555 integrated circuit is well worth spending time analyzing and discussing with your students.
+
+%INDEX% Astable multivibrator, using 555 
+%INDEX% 555 timer, astable operation
+%INDEX% 555 timer, internal diagram
+
+%(END_NOTES)
+
+

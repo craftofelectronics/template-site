@@ -1,0 +1,119 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Determine the amount of time needed after switch closure for the capacitor voltage ($V_C$) to reach the specified levels:
+
+$$\epsfbox{02942x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_C$ & Time  \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Third row
+10 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+20 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+30 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+40 volts &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Trace the direction of electron flow in the circuit, and also mark all voltage polarities.
+
+\underbar{file 02942}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{02942x02.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_C$ & Time  \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 volts & 0 ms \cr
+%
+\noalign{\hrule}
+%
+% Third row
+10 volts & 297.5 ms \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+20 volts & 716.7 ms \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+30 volts & 1.433 s \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+40 volts & $>$ 5 s \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Some students may write 5.17 seconds as the time required to charge to 40 volts (5 time constants' worth of time).  If so, remind them that the "standard" of 5$\tau$ is arbitrary, and that theoretically the capacitor {\it never} actually reaches full charge.
+
+%INDEX% Time constant calculation, RC circuit (calculating time required to charge to specified amount)
+
+%(END_NOTES)
+
+

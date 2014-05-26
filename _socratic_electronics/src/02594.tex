@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In a common-emitter transistor amplifier circuit, the presence of capacitance between the collector and base terminals -- whether intrinsic to the transistor or externally connected -- has the effect of turning the amplifier circuit into a low-pass filter, with voltage gain being inversely proportional to frequency:
+
+$$\epsfbox{02594x01.eps}$$
+
+Explain why this is.  Why, exactly, does a capacitance placed in this location affect voltage gain?  Hint: it has something to do with {\it negative feedback}!
+
+\underbar{file 02594}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The capacitance provides a path for an AC feedback signal to go from the collector to the base.  Given the inverting phase relationship between collector voltage and base voltage, this feedback is degenerative.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Students should realize that this is no hypothetical question.  Intrinsic capacitance does indeed exist between the collector and base of a bipolar junction transistor (called the {\it Miller capacitance}), and this has a degenerating effect on voltage gain with increasing frequency.  If time permits, you may wish to discuss how the common-collector and common-base amplifier configurations naturally avoid this problem.
+
+%INDEX% Voltage gain, reduction due to collector-base capacitance
+
+%(END_NOTES)
+
+

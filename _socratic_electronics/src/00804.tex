@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+DC generators will act as DC motors if connected to a DC power source and not spun at a sufficient speed.  This is a problem in DC power systems, as the generator will act as a load, drawing energy from the battery, when the engine or other "prime mover" device stops moving.  This simple generator/battery circuit, for example, would not be practical for this reason:
+
+$$\epsfbox{00804x01.eps}$$
+
+Back in the days when automobiles used DC generators to charge their batteries, a special relay called the {\it reverse current cutout} relay was necessary to prevent battery discharge through the generator whenever the engine was shut off:
+
+$$\epsfbox{00804x02.eps}$$
+
+When the generator is spun fast enough, it generates enough voltage to energize the shunt coil with enough current to close the relay contact.  This connects the generator with the battery, and charging current flows through the series coil, creating even more magnetic attraction to hold the relay contact closed.  If the battery reaches a full charge and does not draw any more charging current from the generator, the relay will still remain closed because the shunt coil is still energized.
+
+However, the relay contact will open if the generator ever begins to act as a load to the battery, drawing any current from it.  Explain why this happens.
+
+\underbar{file 00804}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If a reverse current goes through the series coil, the magnetic field produced will "buck" the magnetic field produced by the shunt coil, thus weakening the total magnetic field strength pulling at the armature of the relay.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+A "reverse current cutout" relay ingeniously exploits reversible magnetic polarities to close or open a contact under the proper conditions.  Although DC generators are no longer used in the majority of automobile electrical systems (AC alternators using bridge rectifiers to convert AC to DC are used instead, with the rectifier circuit naturally preventing reverse current), this application provides an excellent opportunity to explore an application of relay technology in the context of generator control.
+
+%INDEX% Generator (DC) acting as motor
+%INDEX% Reverse current cutout relay, DC generator
+
+%(END_NOTES)
+
+

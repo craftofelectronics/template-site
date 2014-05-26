@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+What could you do if you had an application for a rectifying diode that required a forward current rating of 2.5 amps, but you only had model 1N4001 diodes available to use?  How could you use multiple 1N4001 rectifying diodes to handle this much current?
+
+\underbar{file 00948}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use three 1N4001 diodes connected in parallel, like this:
+
+$$\epsfbox{00948x01.eps}$$
+
+\vskip 10pt
+
+Follow-up question: while this solution should work (in theory), in practice one or more of the diodes will fail prematurely due to overheating.  The fix for this problem is to connect "swamping" resistors in series with the diodes like this:
+
+$$\epsfbox{00948x02.eps}$$
+
+Explain why these resistors are necessary to ensure long diode life in this application.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The answer to this question should not be much of a challenge to your students, although the follow-up question is a bit challenging.  Ask your students what purpose the swamping resistors serve.  What do we know about current through the diodes if one or more of them will fail due to overheating without the swamping resistors?
+
+What value of resistor would your students recommend for this application?  What factors influence their decision regarding the resistance value?
+
+%INDEX% Diodes, paralleling for extra current
+
+%(END_NOTES)
+
+

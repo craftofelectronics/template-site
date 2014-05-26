@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Having learned how to build simple encoder circuits using diode networks, you set out to form your own encoder manufacturing company: {\it Encoders, Inc.}  After agreeing on a policy of truth in advertising, your board of directors drafts this slogan:
+
+$$\hbox{\it ``Our encoder circuits are more reliable because there's less to break.''}$$
+
+After months of hard work, you unveil your latest masterpiece, the 16-line to 4-line encoder:
+
+$$\epsfbox{01409x01.eps}$$
+
+However, your first customer has a complaint with your encoder circuit.  He claims it often outputs false codes.  After sending it back to your workshop for warranty repair, you determine there is nothing wrong with the encoder circuit itself: it always outputs the correct codes when you energize the appropriate inputs.  Perhaps the problem is in how the customer is using it.
+
+You then telephone the customer and ask him how he is using the encoder.  He tells you it is used as part of a fault diagnostic circuit for an important piece of machinery.  Each input of the encoder is connected to a different sensor on the machine (low oil pressure switch, high temperature switch, out-of-limit travel switches, etc.), and then the encoder outputs drive a four-LED display for maintenance technicians to view.  They would have rather used a separate LED for each "trouble" sensor, but the display panel was too small to accommodate fifteen LEDs, so they decided to use four LEDs and an encoder, having their technicians interpret a binary code to determine which of the fifteen sensors is activating.
+
+To the best of your ability, determine why your company's flagship encoder circuit sometimes produces false codes in this application.  Then, recommend a solution for your customer.
+
+\underbar{file 01409}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I'll answer this question with another question: what if {\it two} failures occur on this machine at the same time?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Despite the overly simplistic nature of the company's product, this scenario accurately reflects the realistic nature of product development and customer application.  Often, a company designs, builds, and markets a product, and the customers experience trouble because their applications are improper for that product, or the application reveals a deficiency in the product that wasn't detected during development.
+
+As elegant as the "diode network" design of encoder is, it certainly has its limitations.  Ask your students whether the output of this encoder circuit will {\it always} be incorrect if two inputs are simultaneously activated, or if only particular combinations of active inputs cause problems.  Which condition would be easier to troubleshoot?
+
+Discuss alternative solutions with your students, being sure to first define what the problem is so that all understand.
+
+%INDEX% Encoder, simple
+%INDEX% Troubleshooting, logic gate circuit
+
+%(END_NOTES)
+
+

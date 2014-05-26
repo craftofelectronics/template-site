@@ -1,0 +1,95 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A helpful technique for analyzing RC time-constant circuits is to consider what the {\it initial} and {\it final} values for circuit variables (voltage and current) are.  Consider these four RC circuits:
+
+$$\epsfbox{01809x01.eps}$$
+
+In each of these circuits, determine what the initial values will be for voltage across and current through both the capacitor and (labeled) resistor.  These will be the voltage and current values at the very first instant the switch changes state from where it is shown in the schematic.  Also, determine what the final values will be for the same variables (after a large enough time has passed that the variables are all "settled" into their ultimate values).  The capacitor's initial voltage is shown in all cases where it is arbitrary.
+
+\underbar{file 01809}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\noindent
+{\bf Figure 1:}
+
+\settabs \+ \hskip 2in &  \cr
+\+ $V_{C(initial)} = $ 0 V (given) & $V_{C(final)} = $ 15 V \cr
+\+ $I_{C(initial)} = $ 1.5 mA & $I_{C(final)} = $ 0 mA \cr
+\+ $V_{R(initial)} = $ 15 V & $V_{R(final)} = $ 0 V \cr
+\+ $I_{R(initial)} = $ 1.5 mA & $I_{R(final)} = $ 0 mA \cr
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent
+{\bf Figure 2:}
+
+\settabs \+ \hskip 2in &  \cr
+\+ $V_{C(initial)} = $ 25 V (given) & $V_{C(final)} = $ 0 V \cr
+\+ $I_{C(initial)} = $ 25 mA & $I_{C(final)} = $ 0 mA \cr
+\+ $V_{R(initial)} = $ 25 V & $V_{R(final)} = $ 0 V \cr
+\+ $I_{R(initial)} = $ 25 mA & $I_{R(final)} = $ 0 mA \cr
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent
+{\bf Figure 3:}
+
+\settabs \+ \hskip 2in &  \cr
+\+ $V_{C(initial)} = $ 4 V & $V_{C(final)} = $ 7 V \cr
+\+ $I_{C(initial)} = $ 81 $\mu$A & $I_{C(final)} = $ 0 $\mu$A \cr
+\+ $V_{R(initial)} = $ 3 V & $V_{R(final)} = $ 0 V \cr
+\+ $I_{R(initial)} = $ 81 $\mu$A & $I_{R(final)} = $ 0 $\mu$A \cr
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent
+{\bf Figure 4:}
+
+\settabs \+ \hskip 2in &  \cr
+\+ $V_{C(initial)} = $ 10 V & $V_{C(final)} = $ 12 V \cr
+\+ $I_{C(initial)} = $ 606 $\mu$A & $I_{C(final)} = $ 0 $\mu$A \cr
+\+ $V_{R(initial)} = $ 2 V & $V_{R(final)} = $ 0 V \cr
+\+ $I_{R(initial)} = $ 606 $\mu$A & $I_{R(final)} = $ 0 $\mu$A \cr
+
+\vskip 10pt
+
+Follow-up question: explain why the inductor value (in Henrys) is irrelevant in determining "initial" and "final" values of voltage and current.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Once students grasp the concept of {\it initial} and {\it final} values in time-constant circuits, they may calculate any variable at any point in time for any RC or LR circuit (not for RLC circuits, though, as these require the solution of a second-order differential equation!).  All they need is the universal time-constant equation:
+
+$$x = x_{initial} + \left( x_{final} - x_{initial} \right) \left( 1 - e^{-t \over \tau} \right)$$
+
+($x$, of course, represents either voltage or current, depending on what is being calculated.)
+
+\vskip 10pt
+
+One common mistake new students often commit is to consider "initial" values as those values of voltage and current existing in the circuit {\it before} the switch is thrown.  However, "initial" refers to those values {\it at the very first instant the switch moves to its new position}, not before.
+
+%INDEX% Time constant calculation, RC circuit, "initial" and "final" values
+
+%(END_NOTES)
+
+

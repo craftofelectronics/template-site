@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose you needed a two-input AND gate, but happened to have an unused 3-input AND gate in one of the integrated circuits ("chips") already in the system you were building.  Of course, you could just add another IC containing 2-input AND gates, but it seems a shame to waste the 3-input gate already there.
+
+Explain what you would need to do with the third input terminal on this gate in order to use it as a 2-input AND gate:
+
+$$\epsfbox{02948x01.eps}$$
+
+Now, explain what to do with each of the following gates' third inputs, in order to use each of them as 2-input gates:
+
+$$\epsfbox{02948x02.eps}$$
+
+In each case, describe why your solution works.
+
+\underbar{file 02948}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{02948x03.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+A helpful way for students to think about this question is to consider gates in terms of what input state {\it forces} the output to go to a particular state.  For example, AND gate outputs are forced low by any low input, therefore the unused input had better not be tied to ground -- the only remaining option is to tie it high.
+
+%INDEX% Unused inputs on multiple-input logic gates
+
+%(END_NOTES)
+
+

@@ -1,0 +1,54 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+One design of push-pull audio amplifier uses two identical transistors and a center-tapped transformer to couple power to the load (usually a speaker, in an audio-frequency system):
+
+$$\epsfbox{01123x01.eps}$$
+
+Unlike complementary-pair push-pull amplifier circuits, this circuit absolutely requires a preamplifier stage called a {\it phase splitter}, comprised here by transistor $Q_1$ and resistors $R_3$ and $R_4$.
+
+Explain what the purpose of the "phase splitter" circuit is, and why it is necessary to properly drive the power transistors $Q_2$ and $Q_3$.  
+
+\vskip 10pt
+
+Hint: determine the phase relationships of the voltage signals at the base, collector, and emitter terminals of transistor $Q_1$, with respect to ground.
+
+\underbar{file 01123}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A "phase splitter" circuit produces two complementary output voltages (180$^{o}$ phase-shifted from each other), as necessary to drive the power transistors at opposite times in the audio waveform cycle.
+
+\vskip 10pt
+
+Follow-up question: typically, the collector and emitter resistors of the phase splitter circuit ($R_3$ and $R_4$ in this example) are equally sized.  Explain why.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to qualitatively analyze the voltage signal waveforms at all parts of this circuit.  When does $Q_1$ conduct current?  When does $Q_2$ conduct current?
+
+Also, discuss the operational class of this amplifier circuit.  Is it Class B, or Class AB?  What would need to be changed in order to shift the circuit's operational mode?
+
+Explain to your students that this circuit topology was very common in the days of electron tube electronics, when there was no such thing as complementary active components (i.e., NPN versus PNP).  Triode, tetrode, and pentode tubes are all positive-driven devices, conducting more current as the grid voltage becomes more positive.  Thus, the only way to make a push-pull amplifier with electron tubes was to use a pair to drive the center-tapped winding of an audio power transformer, and use a phase splitter circuit to drive the two tubes.
+
+Most modern (semiconductor) audio amplifier designs avoid the use of an audio output transformer.  Ask your students why they think this may be the case.
+
+%INDEX% Amplifier, push-pull
+%INDEX% Phase splitter
+
+%(END_NOTES)
+
+

@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A very high-power AC electric motor needs to have its power factor measured.  You and an electrician are asked to perform this measurement using an oscilloscope.  The electrician understands what must be done to measure voltage and current in this dangerous circuit, and you understand how to interpret the oscilloscope's image to calculate power factor.
+
+It would be impractical to directly measure voltage and current, seeing as how the voltage is 4160 volts AC and the current is in excess of 200 amps.  Fortunately, PT ("potential transformer") and CT ("current transformer") units are already installed in the motor circuit to facilitate measurements:
+
+$$\epsfbox{02185x01.eps}$$
+
+After the electrician helps you safely connect to the PT and CT units, you obtain a Lissajous figure that looks like this:
+
+$$\epsfbox{02185x02.eps}$$
+
+Calculate the power factor of the AC motor from this oscilloscope display.
+
+\underbar{file 02185}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+P.F. $\approx$ 0.84, lagging (most likely)
+
+\vskip 10pt
+
+Follow-up question: is it possible to determine which waveform is leading or lagging the other from a Lissajous figure?  Explain your answer.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question provides a good opportunity to review the functions of PTs and CTs.  Remember that PTs are transformers with precise step-down ratios used to measure a {\it proportion} of the line or phase voltage, which in many cases is safer than measuring the line or phase voltage directly.  CTs are specially-formed transformers which fit around the current-carrying conductor for the purpose of stepping down current (stepping up voltage) so that a low-range ammeter may measure a fraction of the line current.
+
+Students familiar with large electric motors will realize that a 4160 volt motor is going to be three-phase and not single-phase, and that measuring power factor by means of phase shift between voltage and current may be a bit more complicated than what is shown here.  This scenario would work for a Y-connected four-wire, three-phase system, but not all three-phase systems are the same!
+
+%INDEX% Lissajous figures, phase measurement with
+%INDEX% Power factor calculation
+
+%(END_NOTES)
+
+

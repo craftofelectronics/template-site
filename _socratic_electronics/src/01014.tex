@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In the early 1970's, the Fluke company invented a revolutionary new "RMS sensor" integrated circuit, used to convert an arbitrary waveform into its DC-equivalent (RMS) voltage.  The device uses two precision resistors to heat a pair of matched transistors connected as a differential pair:
+
+$$\epsfbox{01014x01.eps}$$
+
+Describe how this circuit functions.  What physical principle(s) does it use to derive an RMS value for $V_{in}$?  Why is it important that all identical components (transistors, resistors) be precisely matched?
+
+\underbar{file 01014}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This circuit exploits the temperature sensitivity of transistors to sense thermal balance between the two resistors R1 and R2.  By definition, whatever DC voltage produces the same heat dissipation in a given resistance as an AC voltage is the RMS value of that AC voltage.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question provides a good opportunity to review the function of differential pair circuits, and also the concept of RMS AC measurement.  Ask your students how temperature influences the conductivity of bipolar junction transistors, and how the opamp's connection to resistor R2 forms a negative feedback loop.
+
+%INDEX% True-RMS sensor, bolometric
+
+%(END_NOTES)
+
+

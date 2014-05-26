@@ -1,0 +1,70 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This digital combination lock circuit controls access through a door with a solenoid-actuated latch.  The pushbutton switches ($a$, $b$, $c$, and $d$) must be pressed to match the combination set by four toggle switches in a concealed location ($A$, $B$, $C$, and $D$).  If the correct four-bit "code" is entered through the pushbuttons, the door latch will electrically open:
+
+$$\epsfbox{02964x01.eps}$$
+
+One day the door refuses to open.  Not only that, but there isn't even the familiar "click" of the solenoid latch energizing -- just silence.  You are asked to troubleshoot the lock circuit through a control panel outside the door where you have access to all circuit test points.
+
+With an authorized person holding the pushbutton switches in the correct positions, you take your logic probe and measure a "low" state at TP13 and a "high" state at TP12.  From this information, identify two possible causes that could account for the problem and all measured values in this circuit.
+
+Also, identify the next logical test point(s) from those shown on the schematic that you would check with your logic probe, and the reason why you would check there.
+
+\medskip
+\item{$\bullet$} Possible causes of the problem
+\item{1.}
+\item{2.} 
+\medskip
+
+\medskip
+\item{$\bullet$} Next logical test point(s) to check, with reason why you would check there
+\item{Next point(s):}
+\item{Reason:}
+\medskip
+
+\underbar{file 02964}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Note: the following answers are not exhaustive.  There may be more circuit elements possibly at fault than what is listed here!
+
+\medskip
+\goodbreak
+\item{$\bullet$} Possible causes of the problem
+\item{1.} Switch "D," and/or wiring between that switch and the XOR gate
+\item{2.} Position of switch "D" has been changed, thus altering the proper entry code
+\item{3.} Switch "d," and/or wiring between that switch and the XOR gate
+\item{4.} XOR gate (TP12 output) stuck in the "high" state
+\medskip
+
+\medskip
+\goodbreak
+\item{$\bullet$} Next logical test point(s) to check, with reason why you would check there
+\item{-} TP4 and TP8, to see if the states match
+\medskip
+
+Really, there is only one logical place to check after seeing that TP12 is high, and that is the input of the XOR gate (TP4 and TP8), because we need to know whether the XOR gate is being {\it told} to go high (i.e. TP4 and TP8 in different states) or whether the XOR gate output is {\it stuck} high.  Nothing to the right of the NOR gate matters because we know the NOR gate isn't even telling the SSR to energize (TP13 is low).
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+{\bf This question is intended for exams only and not worksheets!}.
+
+%INDEX% Troubleshooting, combination lock circuit (digital)
+
+%(END_NOTES)
+
+

@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Practical op-amp integrator and differentiator circuits often cannot be built as simply as their "textbook" forms usually appear:
+
+$$\epsfbox{01538x01.eps}$$
+
+The voltage gains of these circuits become extremely high at certain signal frequencies, and this may cause problems in real circuitry.  A simple way to "tame" these high gains to moderate levels is to install an additional resistor in each of the circuits, as such:
+
+$$\epsfbox{01538x02.eps}$$
+
+The purpose of each resistor is to "dominate" the impedance of the RC network as the input signal frequency approaches the point at which problems would occur in the ideal versions of the circuits.  In each of these "compensated" circuits, determine whether the value of the compensation resistor needs to be large or small compared to the other resistor, and explain why.
+
+Of course, this solution is not without problems of its own.  By adding this new resistor to each circuit, a half-power (-3 dB) cutoff frequency point is created by the interaction of the compensation resistor and the capacitor, as predicted by the equation $f_c = {1 \over {2 \pi R_{comp}C}}$.  The value predicted by this equation establishes a practical limit for the differentiation and integration functions, respectively.  Operating on the wrong side of the frequency limit will result in an output waveform that is not the true time-derivative or time-integral of the input waveform.  Determine whether the $f_c$ value constitutes a {\it low} frequency limit or a {\it high} frequency limit for each circuit, and explain why.
+
+\underbar{file 01538}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+For the differentiator circuit, $R_{comp} << R_{feedback}$, and ${1 \over {2 \pi R_{comp}C}}$ is a {\it high} frequency limit.
+
+\vskip 10pt
+
+For the integrator circuit, $R_{comp} >> R_{input}$, and ${1 \over {2 \pi R_{comp}C}}$ is a {\it low} frequency limit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In order to successfully answer the questions, students will need a firm grasp on the nature of the gain problem with differentiator and integrator circuits.  This is based on an understanding of capacitive reactance, and the relationship between op-amp gain and input/feedback impedances.  These are not difficult questions to answer, if one takes an orderly and methodical approach to the problem.  Help your students reason through to the correct answers by asking questions that challenge them to link concepts of op-amp feedback gain, capacitive reactance, impedances of series and parallel RC networks, etc.
+
+%INDEX% Compensation resistor, op-amp differentiator
+%INDEX% Compensation resistor, op-amp integrator
+%INDEX% Integrator circuit, op-amp (with compensation resistor)
+%INDEX% Differentiator circuit, op-amp (with compensation resistor)
+
+%(END_NOTES)
+
+

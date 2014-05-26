@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following circuit generates an analog output voltage proportional to the value of the binary input, using pulse-width modulation (PWM) as an interim format.  An eight-bit binary counter ({\bf CTR}) continually counts in the "up" direction, while an 8-bit magnitude comparator ({\bf CMP}) checks when the 8-bit binary input value matches the counter's output value.  The AND gate and inverter simply prevent the S-R latch from being "set" and "reset" simultaneously (when both A and B are maximum, both at a hex value of \$FF), which would cause the output to be "invalid" when S and R were both active, and unpredictable when both S and R inputs returned to their inactive states:
+
+$$\epsfbox{03998x01.eps}$$
+
+Explain how this circuit works, using timing diagrams if necessary to help show the PWM signal at $\overline{Q}$ for different input values.
+
+\vskip 150pt
+
+\underbar{file 03998}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Here is a timing diagram to help get you started on a complete answer:
+
+$$\epsfbox{03998x02.eps}$$
+
+I'll leave it to you to explain the relationship between the input value (A), the PWM duty cycle, and the analog output voltage.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This circuit provides students with an interesting exercise in timing analysis, as well as being a simple means of converting large binary values into analog output voltages without resorting to using {\it large} resistor networks.
+
+%INDEX% Digital-to-analog conversion
+%INDEX% Magnitude comparator, used in DAC
+%INDEX% PWM (pulse-width modulation), as a means of converting digital to analog analog
+
+%(END_NOTES)
+
+

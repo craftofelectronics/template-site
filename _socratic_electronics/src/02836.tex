@@ -1,0 +1,127 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student is asked to use Karnaugh mapping to generate a minimal SOP expression for the following truth table:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+A & B & C & Output \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 1 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 1 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+1 & 0 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+1 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+1 & 1 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+1 & 1 & 1 & 1 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Following the truth table shown, the student plots this Karnaugh map:
+
+$$\epsfbox{02836x01.eps}$$
+
+"This is easy," says the student to himself. "All the '1' conditions fall within the same group!"  The student then highlights a triplet of 1's as a single group:
+
+$$\epsfbox{02836x02.eps}$$
+
+Looking at this cluster of 1's, the student identifies $C$ as remaining constant (1) for all three conditions in the group.  Therefore, the student concludes, the minimal expression for this truth table must simply be $C$.
+
+However, a second student decides to use Boolean algebra on this problem instead of Karnaugh mapping.  Beginning with the original truth table and generating a Sum-of-Products (SOP) expression for it, the simplification goes as follows:
+
+$$\overline{A}BC + A \overline{B}C + ABC$$
+
+$$BC(\overline{A} + A) + A \overline{B}C$$
+
+$$BC + A \overline{B}C$$
+
+$$C(B + A \overline{B})$$
+
+$$C(B + A)$$
+
+$$AC + BC$$
+
+Obviously, the answer given by the second student's Boolean reduction ($AC + BC$) does not match the answer given by the first student's Karnaugh map analysis ($C$).
+
+\vskip 10pt
+
+Perplexed by the disagreement between these two methods, and failing to see a mistake in the Boolean algebra used by the second student, the first student decides to check his Karnaugh mapping again.  Upon reflection, it becomes apparent that if the answer really were $C$, the Karnaugh map would look different.  Instead of having three cells with 1's in them, there would be four cells with 1's in them (the output of the function being "1" {\it any} time $C = 1$:
+
+$$\epsfbox{02836x03.eps}$$
+
+Somewhere, there must have been a mistake made in the first student's grouping of 1's in the Karnaugh map, because the map shown above is the only one proper for an answer of $C$, and it is not the same as the real map for the given truth table.  Explain where the mistake was made, and what the proper grouping of 1's should be.
+
+\underbar{file 02836}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Proper grouping of 1's in the Karnaugh map:
+
+$$\epsfbox{02836x04.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to illustrate how it is incorrect to identify clusters of arbitrary size in a Karnaugh map.  A cluster of three, as seen in this scenario, leads to an incorrect conclusion.  Of course, one could easily quote a textbook as to the proper numbers and patterns of 1's to identify in a Karnaugh map, but it is so much more informative (in my opinion) to illustrate by example.  Posing a dilemma such as this makes students {\it think} about why the answer is wrong, rather than asking them to remember seemingly arbitrary rules.
+
+%INDEX% Karnaugh map, rules for properly identifying clusters of 1's
+
+%(END_NOTES)
+
+

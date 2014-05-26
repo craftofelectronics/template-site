@@ -1,0 +1,40 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This is a schematic of an RF amplifier using a JFET as the active element:
+
+$$\epsfbox{01178x01.eps}$$
+
+What configuration of JFET amplifier is this (common drain, common gate, or common source)?  Also, explain the purpose of the two iron-core inductors in this circuit.  Hint: inductors $L_1$ and $L_2$ are often referred to as {\it RF chokes}.
+
+\underbar{file 01178}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This is a common-gate amplifier.  The iron-core inductors block ("choke") the high-frequency AC signals from getting to the DC power supply.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Be sure to ask your students {\it why} it would not be good for the RF signals to find their way to the DC power supply.  There is more than one possible answer to this question!
+
+This schematic was derived from an evaluation amplifier schematic shown in an \underbar{ON Semiconductor} J308/J309/J310 transistor datasheet.
+
+%INDEX% Common-gate JFET amplifier, for high-frequency use
+%INDEX% High-frequency JFET amplifier
+
+%(END_NOTES)
+
+

@@ -1,0 +1,50 @@
+## NOTE: there can be no blank lines in this file!!!
+alpha
+beta
+bridge circuit
+calculus
+capacitance
+capacitor
+CMOS
+color code
+conduction band
+contact bounce
+counter-emf
+counter-EMF
+derivative
+differential
+electromagnetic
+electromagnetism
+electron tube
+Faraday
+fuse
+galvanometer
+ground bounce
+hysteresis
+inductance
+induction
+inductor
+integral
+latch-up
+meter movement
+microphone
+negative feedback
+negative resistance
+NMOS
+overload
+PMOS
+positive feedback
+potentiometer
+precision
+race condition
+relay
+sensitivity
+switch bounce
+thermocouple
+transistor
+tolerance
+transformer
+troubleshoot
+TTL
+vacuum tube
+valence

@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose a student builds this circuit and notices that it spontaneously breaks into oscillations, whether or not the "microphone" speaker is picking up any sound.  Identify some possible causes of oscillation in a circuit like this, as well as possible fixes.
+
+\underbar{file 02784}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+At root, the cause of oscillation in an amplifier circuit is some form of positive (regenerative) feedback.  Possible causes include:
+
+\medskip
+\goodbreak
+\item{$\bullet$} Insufficient power supply decoupling ({\it add a large capacitor across the power supply terminals of the opamp.})
+\item{$\bullet$} Stray capacitive coupling between input and output wiring ({\it re-route wires, keeping input and output wiring well separated.})
+\item{$\bullet$} Amplifier gain too high ({\it add limiting resistor(s) to the opamp's feedback to prevent the gain adjustment from being set too high.})
+\item{$\bullet$} Transformer phasing ({\it reverse one winding of the transformer with respect to the other winding.})
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Unwanted oscillations in amplifier circuitry is a very real problem many electronics technicians and engineers alike must face.  There is often no single correct solution to the problem, given the multiple avenues through which regenerative feedback may take place in a circuit.
+
+%(END_NOTES)
+
+

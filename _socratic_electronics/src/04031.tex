@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+At first it may seem pointless to have the four buffer gates following the shift register output lines, since the power transistors should be able to drive adequate current to the stepper motor windings without any help.  However, the buffers are not in place for the benefit of the transistors, but rather for the benefit of the shift register.
+
+If the buffers were not there, and the shift register had to drive 100\% of the transistors' base current, there may be a problem with the output lines' logic levels if any other digital device needed to read their "high" states.  At minimum, this will be a problem at output line $Q_3$, which is sensed by the serial data input line of the shift register to recycle the "1" bit (transitioning from binary {\tt 1000} to {\tt 0001}.
+
+Explain how the buffers help avoid this problem, and formulate a general rule for avoiding this sort of problem in any digital circuit.
+
+\underbar{file 04031}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The buffers boost the shift register's output line currents, so that a "high" state at any one of the $Q$ output lines will be nice and strong, rather than weakened by the burden of driving its respective transistor base.
+
+As a general rule, digital circuit outputs used to drive loads need to be buffered if those same output lines also must send digital logic signals to other digital device inputs!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a very important design tip, easily overlooked.  I have fallen prey to this problem more than once in designing and building digital circuits of my own!
+
+%(END_NOTES)
+
+

@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An {\it analog-to-digital converter} is a circuit that inputs a variable (analog) voltage or current, and outputs multiple bits of binary data corresponding to the magnitude of that measured voltage or current.  In the circuit shown here, an ADC inputs a voltage signal from a potentiometer, and outputs an 8-bit binary "word," which may then be read by a computer, transmitted digitally over a communications network, or stored on digital media:
+
+$$\epsfbox{01358x01.eps}$$
+
+As the input voltage changes, the binary number output by the ADC will change as well.  Suppose, though, that we want to have {\it sample-and-hold} capability added to this data acquisition circuit, to allow us to "freeze" the output of the ADC at will.  Explain how using eight D latch circuits will give us this capability:
+
+$$\epsfbox{01358x02.eps}$$
+
+\underbar{file 01358}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+When the Sample/Hold switch is in the "low" position, the D latches all fall into the "latch" state, holding that last valid input states on their Q outputs.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Sample-and-hold circuitry is quite common in modern data acquisition and other types of electronic systems.  In this case, sample-and-hold showcases a practical use of D latch circuits.  If your students have not yet heard of analog-to-digital converters, it might be a good idea to discuss some of their general principles.  No knowledge of their internal workings is necessary in order to comprehend the circuit shown in the question, however.
+
+%INDEX% ADC
+%INDEX% Analog-to-digital conversion
+%INDEX% Sample-and-hold circuit, digital
+
+%(END_NOTES)
+
+

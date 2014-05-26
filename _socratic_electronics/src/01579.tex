@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This circuit is called a {\it voltage divider}, because it presents a fractional portion of the total voltage to the load:
+
+$$\epsfbox{01579x01.eps}$$
+
+(Of course, with no load connected, the voltage across the lower resistor would be precisely 6 volts.  With the load connected, the parallel combination of load and 1 k$\Omega$ resistor results in an effective resistance of less than 1 k$\Omega$ on the lower half of the divider, resulting in a voltage of less than half the total supply voltage.)
+
+\vskip 10pt
+
+Suppose that something goes wrong in this voltage divider circuit, and the load voltage suddenly falls to zero.  A technician following the "divide-and-conquer" troubleshooting strategy begins by measuring voltage across the lower resistor (finding 0 volts), then measuring voltage across both resistors (finding 12 volts):
+
+$$\epsfbox{01579x02.eps}$$
+
+Based on these measurements, the technician concludes that the upper resistor must be failed open.  Upon disassembling the divider circuit and checking resistance with an ohmmeter, though, both resistors are revealed to be in perfect operating condition.
+
+What error did the technician make in concluding the upper resistor must have been failed open?  Where do you think the problem is in this circuit?
+
+\underbar{file 01579}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The technician wrongly assumed that an open (upper) resistor was the only possible fault that could have caused the observed voltage readings.  
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a common mistake students make when applying the "divide-and-conquer" method of troubleshooting: that whatever component(s) located between the point of good measurement and the point of bad measurement must be the source of the problem.  While this simple reasoning may apply in finding "open" faults in long lengths of wire, it does not necessarily hold true for more complex circuits, as other faults may result in similar effects.
+
+%INDEX% Troubleshooting, simple voltage divider circuit
+%INDEX% Troubleshooting strategy, "divide and conquer"
+
+%(END_NOTES)
+
+

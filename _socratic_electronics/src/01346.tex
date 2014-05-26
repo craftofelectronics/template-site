@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Write two Boolean expressions for the Exclusive-OR function, one written in SOP form and the other written in POS form.  Show through Boolean algebra reduction that the two expressions are indeed equivalent to one another.  Then, draw the simplest ladder logic circuit possible to implement this function.
+
+\underbar{file 01346}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+SOP form: \hskip 10pt $\overline{A}B + A\overline{B}$
+
+\vskip 10pt
+
+POS form: \hskip 10pt $(\overline{A} + \overline{B})(A + B)$
+
+\vskip 10pt
+
+I'll let you do the algebra showing these two expressions to be equivalent!
+
+$$\epsfbox{01346x01.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students how many of them used a truth table to solve this problem.  This is a helpful hint, as a truth table for an Ex-OR gate is easy to remember (or look up), and it provides a basis for easily constructing an SOP or POS expression.
+
+The Exclusive-OR function is very, very useful in logic circuits.  It is well worth students' time to understand how to represent it in Boolean form (and no, not using that funny $\oplus$ symbol, either, but representing it in a form where all the standard laws of Boolean algebra apply!).
+
+%INDEX% Product-of-Sums expression, Boolean algebra (for an Ex-OR gate)
+%INDEX% POS expression, Boolean algebra (for an Ex-OR gate)
+%INDEX% Sum-of-Products expression, Boolean algebra (for an Ex-OR gate) 
+%INDEX% SOP expression, Boolean algebra (for an Ex-OR gate) 
+
+%(END_NOTES)
+
+

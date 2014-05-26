@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student learns that a rectifier circuit is often followed by a {\it low-pass filter} circuit in an AC-DC power supply to reduce "ripple" voltage on the output.  Looking over his notes from AC theory, the student proceeds to build this power supply circuit complete with a low-pass filter at the output:
+
+$$\epsfbox{00790x01.eps}$$
+
+While this design will work, there are better filter configurations for this application.  Describe the limitations of the circuit shown, and explain how some of the other filters would do a better job.
+
+\underbar{file 00790}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The resistor $R$ tends to limit the output current, resulting in less-than-optimal voltage regulation (the output voltage "sagging" under load).  Better filter configurations include all forms of LC ripple filters, including the popular "pi" ($\pi$) filter.
+
+\vskip 10pt
+
+Follow-up question: in some applications -- especially where very large filter capacitors are used -- it is a {\it good} idea to place a series resistor before the capacitor.  Such a resistor is typically rated at a low value so as to not cause excessive output voltage "sag" under load, but its resistance does serve a practical purpose.  Explain what this purpose might be.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Challenge your students with this question: is this the right kind of filter circuit (low pass, high pass, band pass, band stop) to be using, anyway?  This question presents a good opportunity to review basic filter theory.
+
+The follow-up question asks students to think carefully about the possible positive benefits of having a series resistor before the capacitor as shown in the student's original design.  If your students are experiencing difficulty understanding why a resistor would ever be necessary, jog their memories with this formula:
+
+$$i = C {dv \over dt}$$
+
+%INDEX% Filter, power supply
+
+%(END_NOTES)
+
+

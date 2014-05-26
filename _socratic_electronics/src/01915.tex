@@ -1,0 +1,40 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{01915x01.eps}$$
+
+\underbar{file 01915}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The oscilloscope display will conclusively show when $R_{pot} = Z_0$.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a very simple yet effective exercise in demonstrating the effects of reflections in cables where the termination resistance ($R_{pot}$) is unequal to the cable's characteristic impedance ($Z_0$).  It is also an easy way to measure $Z_0$, by adjusting $R_{pot}$ until a match is shown by an undistorted square-wave between points {\bf A} and {\bf B}.
+
+I've used ordinary "zip cord" type speaker wire for this experiment.  You can also use household extension cords or lengths of coaxial cable if you prefer.  Coax has the benefit of already being rated for a specified impedance, unlike the other cable types listed.  A length of 100 feet works well to produce time delays easily measurable with inexpensive oscilloscopes.
+
+The purpose of resistor $R_1$ is to "swamp" the square-wave signal generator's own Th\'evenin impedance, so it does not become a significant factor in the system.  The maximum resistance of rheostat $R_{pot}$ is really not that critical.  I've easily achieved a match on speaker cable with $Z_0 \approx 136 \> \Omega$ using a 10 k$\Omega$ potentiometer for $R_{pot}$.  A 1 k$\Omega$ potentiometer would probably be best.
+
+If you wish your students to be able to accurately predict the length of their cable from the waveshapes displayed by the oscilloscope, you need to determine the cable's velocity factor beforehand, and write that value in the "Given conditions" section.  Otherwise, you could have students infer velocity factor from cable length and oscilloscope measurements.
+
+%INDEX% Assessment, performance-based (Characteristic cable impedance)
+
+%(END_NOTES)
+
+

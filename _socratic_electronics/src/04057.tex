@@ -1,0 +1,150 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The trigonometric function of {\it sine} may be found as the result of an infinite series.  Note that this series assumes the angle $x$ to be expressed in units of {\it radians}, not degrees:
+
+$$\sin x = \sum_{n=0}^{\infty} (-1)^n {x^{2n+1} \over {(2n+1)!}}$$
+
+Approximate the sine of 1 radian ($\sin 1$) in steps, using the following table, then write the partial sum expansion up to $n = 5$:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$n$ & $(-1)^n$ & $x^{2n+1}$ & $(2n+1)!$ & $\approx \sin x$ \cr
+%
+\noalign{\hrule}
+%
+% Another row
+0 &  &  &  &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+1 &  &  &  &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+2 &  &  &  &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+3 &  &  &  &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+4 &  &  &  &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+5 &  &  &  &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\vskip 30pt
+
+\underbar{file 04057}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$n$ & $(-1)^n$ & $x^{2n+1}$ & $(2n+1)!$ & $\approx \sin x$ \cr
+%
+\noalign{\hrule}
+%
+% Another row
+0 & 1 & 1 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Another row
+1 & -1 & 1 & 6 & 0.8333333 \cr
+%
+\noalign{\hrule}
+%
+% Another row
+2 & 1 & 1 & 120 & 0.8416667 \cr
+%
+\noalign{\hrule}
+%
+% Another row
+3 & -1 & 1 & 5040 & 0.8414683 \cr
+%
+\noalign{\hrule}
+%
+% Another row
+4 & 1 & 1 & 362880 & 0.8414710 \cr
+%
+\noalign{\hrule}
+%
+% Another row
+5 & -1 & 1 & 39916800 & 0.8414710 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\vskip 10pt
+
+Shown here is the partial sum expansion up to $n = 5$:
+
+$$\sin x \approx x - {x^{3} \over 3!} + {x^{5} \over 5!} - {x^{7} \over 7!} + {x^{9} \over 9!} - {x^{11} \over 11!}$$
+
+\vskip 10pt
+
+Challenge question: which series (sine or cosine) would a computer be able to calculate quickest, given a certain number of digits (precision) past the decimal point?  In other words, which of these two infinite series {\it converges fastest}?
+
+\vskip 10pt
+
+Shown here is a partial sum expansion of the cosine function, for comparison:
+
+$$\cos x \approx 1 - {x^{2} \over 2!} + {x^{4} \over 4!} - {x^{6} \over 6!} + {x^{8} \over 8!} - {x^{10} \over 10!}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It should go without saying that students should consult their electronic calculators to see what the actual value of $\sin 1$ is, and compare that to their partial sum approximation.  Students should also feel free to explore the validity of this series by approximating the sine of angles other than 1 radian.
+
+This questions provides students with the opportunity to see how $\sin x$ may be arithmetically calculated.  This, in fact, is how many digital electronic computers determine trigonometric functions: from partial sum approximations.
+
+%INDEX% Series (mathematical), for sine function
+
+%(END_NOTES)
+
+

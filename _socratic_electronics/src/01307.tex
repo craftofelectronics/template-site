@@ -1,0 +1,83 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A critical electronic system receives DC power from three power supplies, each one feeding through a diode, so that if one power supply develops an internal short-circuit, it will not cause the others to overload:
+
+$$\epsfbox{01307x01.eps}$$
+
+The only problem with this system is that we have no indication of trouble if just one or two power supplies do fail.  Since the diode system routes power from any available supply(ies) to the critical system, the system sees no interruption in power if one or even two of the power supplies stop outputting voltage.  It would be nice if we had some sort of alarm system installed to alert the technicians of a problem with any of the power supplies, long before the critical system was in jeopardy of losing power completely.
+
+An engineer decides that a relay could be installed at the output of each power supply, prior to the diodes.  Contacts from these relays could then be connected to some sort of alarm device (flashing light, bell, etc.) to alert maintenance personnel of any problem:
+
+$$\epsfbox{01307x02.eps}$$
+
+{\bf Part 1:} Draw a ladder diagram of the relay contacts powering a warning lamp, in such a way that the lamp energizes if {\it any one} or more of the power supplies loses output voltage.  Write the corresponding Boolean expression for this circuit, using the letters $A$, $B$, and $C$ to represent the status of relay coils CR1, CR2, and CR3, respectively.
+
+\vskip 10pt
+
+{\bf Part 2:} The solution to Part 1 worked, but unfortunately it generated "nuisance alarms" whenever a technician powered any one of the supplies down for routine maintenance.  The engineer decides that a two-out-of-three-failed alarm system will be sufficient to warn of trouble, while allowing for routine maintenance without creating unnecessary alarms.  Draw a ladder diagram of the relay contacts powering a warning lamp, such that the lamp energizes if {\it any two} or more power supplies lose output voltage.  The Boolean expression for this is $\overline{A} \> \overline{B} + \overline{B} \> \overline{C} + \overline{A} \> \overline{C}$.
+
+\vskip 10pt
+
+{\bf Part 3:} Management at this facility changed their minds regarding the safety of a two-out-of-three-failed alarm system.  They want the alarm to energize if {\it any one} of the power supplies fails.  However, they also realize that nuisance alarms generated during routine maintenance are unacceptable as well.  Asking the maintenance crew to come up with a solution, one of the technicians suggests inserting a "maintenance" switch that will disable the alarm during periods of maintenance, allowing for any of the power supplies to be powered down without creating a nuisance alarm.  Modify the alarm circuit of part 1's solution to include such a switch, and correspondingly modify the Boolean expression for the new circuit (call the maintenance switch $M$).
+
+\vskip 10pt
+
+{\bf Part 4:} During one maintenance cycle, a technician accidently left the alarm bypass switch ($M$) actuated after he was done.  The system operated with the power failure alarm disabled for weeks.  When management discovered this, they were furious.  Their next suggestion was to have the bypass switch change the conditions for alarm, such that actuating this "$M$" switch would turn the system from a one-out-of-three-failed alarm into a two-out-of-three-failed alarm.  This way, any one power supply may be taken out of service for routine maintenance, yet the alarm will not be completely de-activated.  The system will still alarm if two power supplies were to fail.  The simplified Boolean expression for this rather complex function is $\overline{A} \> \overline{B} + \overline{C} \> \overline{M} + (\overline{A} + \overline{B})(\overline{C} + \overline{M})$.  Draw a ladder diagram for the alarm circuit based on this expression.
+
+\underbar{file 01307}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+{\bf Part 1 solution:}
+
+$$\epsfbox{01307x03.eps}$$
+
+\vskip 10pt
+
+{\bf Part 2 solution:}
+
+$$\epsfbox{01307x04.eps}$$
+
+\vskip 10pt
+
+{\bf Part 3 solution:}
+
+$$\epsfbox{01307x06.eps}$$
+
+\vskip 10pt
+
+{\bf Part 4 solution:}
+
+$$\epsfbox{01307x05.eps}$$
+
+\vskip 10pt
+
+Follow-up question: how many contacts on each relay (and on the maintenance switch "$M$") are necessary to implement any of these alarm functions?
+
+\vskip 10pt
+
+Challenge question: can you see any way we could reduce the number of relay contacts necessary in the circuit of solutions 2, yet still achieve the same logic functionality (albeit with a different Boolean expression)?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+To be honest, I had fun writing the scenarios for different parts of this problem.  The evolution of this alarm system is typical for an organization.  Someone comes up with an idea, but it doesn't meet all the needs of someone else, so they input their own suggestions, and so on, and so on.  Presenting scenarios such as this not only prepare students for the politics of real work, but also underscore the need to "what if?" thinking: to test the proposed solution before implementing it, so that unnecessary problems are avoided.
+
+%INDEX% Boolean algebra, conversion of expression into relay logic
+
+%(END_NOTES)
+
+

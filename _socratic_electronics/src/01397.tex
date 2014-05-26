@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student just learned how a two-bit synchronous binary counter works, and he is excited about building his own.  He does so, and the circuit works perfectly.
+
+$$\epsfbox{01397x01.eps}$$
+
+After that success, student tries to expand on their success by adding more flip-flops, following the same pattern as the two original flip-flops:
+
+$$\epsfbox{01397x02.eps}$$
+
+Unfortunately, this circuit didn't work.  The sequence it generates is not a binary count.  Determine what the counting sequence of this circuit is, and then try to figure out what modifications would be required to make it count in a proper binary sequence.
+
+\underbar{file 01397}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The errant count sequence is as such, with only eight unique states (there should be sixteen!): 0000, 0001, 0010, 0111, 1000, 1001, 1010, and 1111.  A corrected up-counter circuit would look like this:
+
+$$\epsfbox{01397x03.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I like to introduce students to synchronous counter circuitry by first having them examine a circuit that doesn't work.  After seeing a two-bit synchronous counter circuit, it makes intuitive sense to most people that the same cascaded flip-flop strategy should work for synchronous counters with more bits, but it doesn't.  When students understand why the simple scheme doesn't work, they are prepared to understand why the correct scheme does.
+
+%INDEX% Counter, synchronous
+
+%(END_NOTES)
+
+

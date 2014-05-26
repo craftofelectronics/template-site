@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+If a weak voltage signal is conveyed from a source to an amplifier, the amplifier may detect more than just the desired signal.  Along with the desired signal, external electronic "noise" may be coupled to the transmission wire from AC sources such as power line conductors, radio waves, and other electromagnetic interference sources.  Note the two waveshapes, representing voltages along the transmission wire measured with reference to earth ground:
+
+$$\epsfbox{02519x01.eps}$$
+
+Shielding of the transmission wire is always a good idea in electrically noisy environments, but there is a more elegant solution than simply trying to shield interference from getting to the wire.  Instead of using a single-ended amplifier to receive the signal, we can transmit the signal along {\it two} wires and use a {\it difference} amplifier at the receiving end.  Note the four waveforms shown, representing voltages at those points measured with reference to earth ground:
+
+$$\epsfbox{02519x02.eps}$$
+
+If the two wires are run parallel to each other the whole distance, so as to be exposed to the exact same noise sources along that distance, the noise voltage at the end of the bottom wire will be the same noise voltage as that superimposed on the signal at the end of the top wire.
+
+Explain how the difference amplifier is able to restore the original (clean) signal voltage from the two noise-ridden voltages seen at its inputs with respect to ground, and also how the phrase {\it common-mode voltage} applies to this scenario.
+
+\underbar{file 02519}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+"Common-mode" voltage refers to that voltage which is common to two or more wires as measured with reference to a third point (in this case, ground).  The amplifier in the second circuit only outputs the {\it difference} between the two signals, and as such does not reproduce the (common-mode) noise voltage at its output.
+
+\vskip 10pt
+
+Challenge question: re-draw the original (one wire plus ground) schematic to model the sources of interference and the wire's impedance, to show exactly how the signal could become mixed with noise from source to amplifier.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Differential signal transmission is a very practical application of difference amplifiers, and forms the foundation of certain data transmission standard physical layers such as RS-422 and RS-485.
+
+%INDEX% Common-mode voltage
+%INDEX% Differential-voltage signal
+
+%(END_NOTES)
+
+

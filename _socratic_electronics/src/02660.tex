@@ -1,0 +1,68 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Something is wrong with this regulated DC power supply circuit.  The output is supposed to be +10.0 volts, but instead it measures only about 1 volt:
+
+$$\epsfbox{02660x01.eps}$$
+
+Using your digital multimeter, you measure 15.3 volts between test points TP7 (red test lead) and TP4 (black test lead).  Note that $V_Z$ shown in the schematic is a {\it specification} for the zener diode, and not an actual voltmeter measurement.  From this information, identify two possible faults that could account for the problem and all measured values in this circuit, and also identify two circuit elements that could not possibly be to blame (i.e. two things that you know {\it must} be functioning properly, no matter what else may be faulted) other than the 120 volt AC power source, on/off switch, and fuse.  The circuit elements you identify as either possibly faulted or properly functioning can be wires, traces, and connections as well as components.  Be as specific as you can in your answers, identifying both the circuit element and the type of fault.
+
+\medskip
+\goodbreak
+\item{$\bullet$} Circuit elements that are possibly faulted
+\item{1.}
+\item{2.} 
+\medskip
+
+\medskip
+\goodbreak
+\item{$\bullet$} Circuit elements that must be functioning properly (besides 120 volt AC source, switch, and fuse)
+\item{1.} 
+\item{2.} 
+\medskip
+
+\underbar{file 02660}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Note: the following answers are not exhaustive.  There may be more circuit elements possibly at fault and more circuit elements known to be functioning properly!
+
+\medskip
+\goodbreak
+\item{$\bullet$} Circuit elements that are possibly faulted
+\item{1.} Transistor $Q_1$ failed open (base-to-emitter, collector-to-emitter, or both)
+\item{2.} Broken wire/trace between +V opamp terminal and $Q_1$ collector terminal.
+\item{3.} Broken wire/trace between -V opamp terminal and "-" output terminal.
+\medskip
+
+\medskip
+\goodbreak
+\item{$\bullet$} Circuit elements that must be functioning properly (besides 120 volt AC source, switch, and fuse)
+\item{1.} Transformer
+\item{2.} Rectifying diodes
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to identify means by which they could confirm suspected circuit elements, by measuring something other than what has already been measured.
+
+Troubleshooting scenarios are always good for stimulating class discussion.  Be sure to spend plenty of time in class with your students developing efficient and logical diagnostic procedures, as this will assist them greatly in their careers.
+
+%INDEX% Troubleshooting, regulated DC power supply (with opamp)
+
+%(END_NOTES)
+
+

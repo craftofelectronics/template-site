@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the total impedance of this RC circuit, once using nothing but scalar numbers, and again using complex numbers:
+
+$$\epsfbox{01838x01.eps}$$
+
+\underbar{file 01838}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\noindent
+{\bf Scalar calculations}
+
+$R_1 = 7.9 \hbox{ k}\Omega$ \hskip 10pt $G_{R1} = 126.6 \> \mu \hbox{S}$
+
+$X_{C1} = 8.466 \hbox{ k}\Omega$ \hskip 10pt $B_{C1} = 118.1 \> \mu \hbox{S}$
+
+$Y_{total} = \sqrt{G^2 + B^2} = 173.1 \> \mu \hbox{S}$
+
+$Z_{total} = {1 \over Y_{total}} = 5.776 \hbox{ k}\Omega$
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent
+{\bf Complex number calculations}
+
+$R_1 = 7.9 \hbox{ k}\Omega$ \hskip 10pt ${\bf Z_{R1}} = 7.9 \hbox{ k}\Omega \> \angle \> 0^o$
+
+$X_{C1} = 8.466 \hbox{ k}\Omega$ \hskip 10pt ${\bf Z_{C1}} = 8.466 \hbox{ k}\Omega \> \angle -90^o$
+
+${\bf Z_{total}} = { 1 \over {{1 \over {\bf Z_{R1}}} + {1 \over {\bf Z_{C1}}}}} = 5.776 \hbox{ k}\Omega \> \angle -43.02^o$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Some electronics textbooks (and courses) tend to emphasize scalar impedance calculations, while others emphasize complex number calculations.  While complex number calculations provide more informative results (a phase shift given in {\it every} variable!) and exhibit conceptual continuity with DC circuit analysis (same rules, similar formulae), the scalar approach lends itself better to conditions where students do not have access to calculators capable of performing complex number arithmetic.  Yes, of course, you can do complex number arithmetic without a powerful calculator, but it's a {\it lot} more tedious and prone to errors than calculating with admittances, susceptances, and conductances (primarily because the phase shift angle is omitted for each of the variables).
+
+%INDEX% Impedance in parallel RC circuit
+
+%(END_NOTES)
+
+

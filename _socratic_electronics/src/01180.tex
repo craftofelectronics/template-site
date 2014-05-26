@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student builds this transistor amplifier circuit on a solderless "breadboard":
+
+$$\epsfbox{01180x01.eps}$$
+
+The purpose of the potentiometer is to provide an adjustable DC bias voltage for the transistor, so it may be operated in Class-A mode.  After some adjustment of this potentiometer, the student is able to obtain good amplification from the transistor (signal generators and oscilloscopes have been omitted from the illustration for simplicity).
+
+Later, the student accidently adjusts the power supply voltage to a level beyond the JFET's rating, destroying the transistor.  Re-setting the power supply voltage back where the student began the experiment and replacing the transistor, the student discovers that the biasing potentiometer must be re-adjusted to achieve good Class-A operation.
+
+Intrigued by this discovery, the student decides to replace this transistor with a third (of the same part number, of course), just to see if the biasing potentiometer needs to be adjusted again for good Class-A operation.  It does.  
+
+Explain why this is so.  Why must the gate biasing potentiometer be re-adjusted every time the transistor is replaced, even if the replacement transistor(s) are of the exact same type?
+
+\underbar{file 01180}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This amplifier circuit uses {\it gate bias}, which is a notoriously unstable method of biasing a JFET amplifier circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to explain exactly what it is that causes the Q point of this amplifier circuit to change with each new transistor.  Is it something in the transistor itself, or in some other part of the circuit?  
+
+Given the instability of gate biasing, should this method be used in mass-produced amplifier circuits?  Ask your students to elaborate on why or why not.
+
+%INDEX% Gate biasing, JFET amplifier circuit
+
+%(END_NOTES)
+
+

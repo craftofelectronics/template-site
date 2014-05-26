@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+
+<html>
+<body>
+
+<a href="../index.html">Back to Main page</a>
+
+<br>
+
+<h1>How do I use the resources on this site?</h1>
+
+<hr>
+
+<h2>Short answer:</h2>
+
+<p>
+You may use as many of the pre-compiled <a href="topical.html">topical worksheets</a> as you need to teach any section of your course, or you may create your own custom worksheets from question files contained on this website.
+</p>
+
+<hr>
+
+<h2>Long answer:</h2>
+
+<p>
+Select as many or as few of the <a href="topical.html">topical worksheets</a> as you need to teach any section of your course, and give those worksheets directly to your students.  If any of the topical worksheets contain questions that are beyond the scope of your intended instruction, just tell your students to skip those questions.  The advanced students will probably go ahead and answer them anyway.
+</p>
+
+<p>
+The alternative to this approach is to build your own custom worksheets from the question files contained on this website.  This, however, requires some computer skills, especially in the area of writing "scripts" to direct the worksheet compilation process.
+</p>
+
+<p>
+At root, this website is nothing more than a large "bank" of questions, plus computer "scripts" necessary to arrange them into complete worksheets.  Each question consists of a single plain-text computer file, along with any necessary graphics files for illustrations and pictures.  Using the UNIX programs <tt>cat</tt> and <tt>sed</tt>, these individual question files are separated into <u>Question</u>, <u>Answer</u>, and <u>Notes</u> sections, then assembled into a single worksheet file and compiled.  Then, the a very powerful text processing program named <tt>TeX</tt> is used, along with two other UNIX utilities (<tt>dvips</tt> and <tt>ps2pdf</tt>), to generate a final PDF-format output file.  The details of worksheet compilation are given in <a href="BUILD.txt">this text file.</a>
+</p>
+
+<p>
+All of these utility programs are available for use on Microsoft Windows systems, though some of the syntax used in the scripts will have to be altered in order for Microsoft operating systems to understand them.  I use Linux exclusively for my work (running the "Bash" command shell), where all these programs run natively.  Another option for Microsoft users is to download the free UNIX environment <tt>Cygwin</tt>, in which the UNIX scripts available at this website will execute as they would on a UNIX system (running the "Bash" shell).
+</p>
+
+<p>
+The pre-compiled worksheets I have on this website are primarily given to showcase the individual questions.  You do not have to use the worksheets as shown here.  To make your own worksheet, simply write which questions you want to have in your worksheet, in the order that you want them shown.  Each question is identified by a unique file number ("file 00017", for instance), for your identification purposes.  Then, write a "sequence" script commanding the <tt>cat</tt> utility to arrange the files together into a large file named "all", and save it with the name you wish the final worksheet file to have, plus the extension ".seq" (for example, if I wanted the worksheet to have the name <tt>TEST</tt>, I would name the sequence file <tt>TEST.seq</tt>).  Be sure to set the executable permission bit on this file, as the <tt>.seq</tt> file is an <i>executable</i> script!
+</p>
+
+<p>
+Shown here is a listing of a sample sequence script file's contents:
+</p>
+
+<pre>
+# "Concatenating" all selected questions/answers/notes into a single TeX file.
+# This is where you specify the questions you want included in your worksheet, in the
+# order you want them to appear.
+cat \
+00009.tex \
+00017.tex \
+00011.tex \
+00021.tex \
+00028.tex \
+> all.tex
+</pre>
+
+<p>
+If you are new to writing scripts, it is highly recommended for you to take an existing script file (such as the <tt>atomic.seq</tt> script which controls the assemblage of questions in the stock "Atomic structure" worksheet found at this site) and modify it to your liking rather than write a new file.  I have also provided a "blank" sequence file named <tt>core.seq</tt> precisely for this purpose.  Copying an existing sequence file through the OS (by issuing a "copy" command) and then modifying it also means the executable permission will already be properly set, without you having to manually set it as you would if you wrote a sequence script from scratch.
+</p>
+
+<p>
+You will also have to create a <tt>TeX</tt> file for the cover page of your worksheet, naming it the same as your sequence file, except with a different filename extension: <tt>.tex</tt>.  For example, if you name your sequence file <tt>TEST.seq</tt>, you should name the cover page file <tt>TEST.tex</tt>.  Here is a listing of a sample cover page file's contents:
+</p>
+
+<pre>
+\centerline{\bf My simple worksheet} \bigskip 
+ 
+All problems comprising this worksheet are licensed under the 
+Creative Commons Attribution License, version 1.0, and are
+copyrighted by their respective authors.  To view a copy of 
+this license, visit http://creativecommons.org/licenses/by/1.0/,
+or send a letter to Creative Commons, 559 Nathan Abbott Way, 
+Stanford, California 94305, USA.  The terms and conditions of
+this license allow for free copying, distribution, and/or 
+modification of all licensed works by the general public.
+
+The worksheet itself, as a derivative entity, is copyright 
+Metropolis Community College, Jane Doe (instructor), 2003.
+
+\bigskip 
+
+Blah Blah Blah
+</pre>
+
+<p>
+Again, it is recommended for beginners to just modify an existing cover page file (such as <tt>atomic.tex</tt>) rather than create a brand-new file from scratch.
+</p>
+
+<p>
+Once you have the necessary scripts, utilities, and selected question files downloaded to your computer's hard drive, simply type the command "<tt>make</tt>" at the top directory for the project to compile any and all uncompiled worksheets (including the new worksheet you made named TEST).  The eventual result will be a finished worksheet in PDF format (<tt>TEST.pdf</tt>), located in the <tt>output</tt> subdirectory.
+</p>
+
+<p>
+Note that the limited rights secured by the Creative Commons Attribution License for the constituent problems allow anyone to bundle these "free" problems into custom worksheets and make those worksheets fully copyrighted, derivative works.  Thus, in compiling your own worksheet you are legally permitted to protect it under full copyright, adding whatever you wish to it (including full answers which students shouldn't have access to) and only publishing those parts of it you desire.  The only condition you are bound to is that of acknowledging the original authorship of the individual questions.  In other words, while the <i>worksheet</i> is your intellectual property, the <i>individual questions</i> are not.
+</p>
+
+<p>
+To download all the worksheet "source" files in one step, just click <a href="../selec.tar.gz">here</a>.  The file you will receive is in the "tar" format, which popular archiving programs such as <tt>WinZip</tt> will be able to unpack.  Of course, you will still need to download and install all the necessary utilities for compiling these source files (including <tt>Cygwin</tt> if you are using a Microsoft Windows computer system).
+</p>
+
+<br>
+
+<a href="../index.html">Back to Main page</a>
+
+</body>
+</html>
+
+

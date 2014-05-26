@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{02360x01.eps}$$
+
+\underbar{file 02360}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this exercise is to empirically determine the gain-bandwidth product (GBW) of a closed-loop opamp amplifier circuit by setting it up for three different closed-loop gains ($A_{CL}$), measuring the cutoff frequency ($f_{-3dB}$) at those gains, and calculating the product of the two ($A_{CL} f_{-3dB}$) at each gain.  Since this amplifier is DC-coupled, there is no need to measure a lower cutoff frequency in order to calculate band{\it width}, just the high cutoff frequency.
+
+What GBW tells us is that any opamp has the tendency to act as a low-pass filter, its cutoff frequency being dependent on how much gain we are trying to get out of the opamp.  We can have large gain at modest frequencies, or a high bandwidth at modest gain, but not both!  This lab exercise is designed to let students see this limitation.  As they set up their opamp circuits with greater and greater gains (${R_2 \over R_1} + 1$), they will notice the opamp "cut off" like a low-pass filter at lower and lower frequencies. 
+
+For the "given" value of unity-gain frequency, you must consult the datasheet for the opamp you choose.  I like to use the popular TL082 BiFET opamp for a lot of AC circuits, because it delivers good performance at a modest price and excellent availability.  However, the GBW for the TL082 is so high (3 MHz typical) that breadboard and wiring layout become issues when testing at low gains, due to the resulting high frequencies necessary to show cutoff.  The venerable 741 is a better option because its gain-bandwidth product is significantly lower (1 to 1.5 MHz typical).
+
+It is very important in this exercise to maintain an undistorted opamp output, even when the closed-loop gain is very high.  Failure to do so will result in the $f_{-3dB}$ points being skewed by slew-rate limiting.  What we're looking for here are the cutoff frequencies resulting from loss of small-signal open-loop gain ($A_{OL}$) inside the opamp.  To maintain small-signal status, we must ensure the signal is not being distorted!
+
+Some typical values I was able to calculate for GBW product are $3.8 \times 10^6$ for the BiFET TL082, $1.5 \times 10^6$ for the LM1458, and around $800 \times 10^3$ for the LM741C.
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (Opamp gain-bandwidth product)
+
+%(END_NOTES)
+
+

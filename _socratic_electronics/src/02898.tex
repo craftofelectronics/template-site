@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Some digital circuits are considered to have {\it active-low} inputs, while others have {\it active-high} inputs.  Explain what each of these terms means, and how we might identify which type of input(s) a digital circuit has.
+
+\underbar{file 02898}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+An "active-low" input is one where that particular gate function is activated or invoked on a {\it low} logic state.  Active-low inputs are identified by inversion bubbles (or inversion wedges) drawn at the IC input terminals.  For example, the Enable input (EN) for the following integrated circuit is active-low, meaning the chip is enabled when that input line is held at ground potential:
+
+$$\epsfbox{02898x01.eps}$$
+
+This S-R latch circuit has active-low preset ($\overline{\hbox{PRE}}$) and clear ($\overline{\hbox{CLR}}$) inputs, meaning the latch circuit will be preset and cleared when each of these inputs are grounded, respectively:
+
+\goodbreak
+
+$$\epsfbox{02898x02.eps}$$
+
+Active-high inputs, conversely, engage their respective functions when brought to power supply rail ($V_{DD}$ or $V_{CC}$) potential.  As one might expect, an active-high input will {\it not} have an inversion bubble or wedge next to the input terminal.
+
+\vskip 10pt
+
+Challenge question: to the surprise of many students, there are a great number of digital logic circuit types built with active-low inputs.  Explain why.  Hint: most of these circuit types and functions were pioneered with TTL logic rather than CMOS logic.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Active-low inputs tend to confuse many students, hence my unusually long and descriptive answer.
+
+%INDEX% Active-high input, defined
+%INDEX% Active-low input, defined
+
+%(END_NOTES)
+
+

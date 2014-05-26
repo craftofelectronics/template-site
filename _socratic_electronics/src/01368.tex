@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An extremely popular variation on the theme of an S-R flip-flop is the so-called {\it J-K flip-flop} circuit shown here:
+
+$$\epsfbox{01368x01.eps}$$
+
+Note that an S-R flip-flop becomes a J-K flip-flop by adding another layer of feedback from the outputs back to the enabling NAND gates (which are now three-input, instead of two-input).  What does this added feedback accomplish?  Express your answer in the form of a truth table.
+
+\vskip 10pt
+
+One way to consider the feedback lines going back to the first NAND gates is to regard them as extra {\it enable} lines, with the $Q$ and $\overline{Q}$ outputs selectively enabling just one of those NAND gates at a time.
+
+\underbar{file 01368}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01368x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: comment on the difference between this truth table, and the truth table for an S-R flip-flop.  Are there any operational advantages you see to J-K flip-flops over S-R flip-flops that makes them so much more popular?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I have found that J-K flip-flop circuits are best analyzed by setting up input conditions (1's and 0's) on a schematic diagram, and then following all the gate output changes at the next clock pulse transition.  A technique that really works well in the classroom for doing this is to project a schematic diagram on a clean whiteboard using an overhead projector or computer projector, then writing the 1 and 0 states with pen on the board.  This allows you to quickly erase the 1's and 0's after each analysis without having to re-draw the schematic diagram.  As always, I recommend you have students actually do the writing, with you taking the role of a coach, helping them rather than simply doing the thinking for them.
+
+%INDEX% J-K flip-flop circuit, defined
+
+%(END_NOTES)
+
+

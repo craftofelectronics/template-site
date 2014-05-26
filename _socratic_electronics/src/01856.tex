@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A remote speaker for an audio system is connected to the amplifier by means of a long, 2-conductor cable:
+
+$$\epsfbox{01856x01.eps}$$
+
+This system may be schematically modeled as an AC voltage source connected to a load resistor:
+
+$$\epsfbox{01856x02.eps}$$
+
+Suppose we decided to use the 2-conductor cable for more than just conveying an audio (AC) signal -- we want to use it to carry DC power as well to energize a small lamp.  However, if we were to simply connect the DC power source in parallel with the amplifier output at one end, and the lamp in parallel with the speaker at the other, bad things would happen:
+
+$$\epsfbox{01856x03.eps}$$
+
+If we were to connect the components together as shown above, the DC power source will likely damage the amplifier by being directly connected to it, the speaker will {\it definitely} be damaged by the application of significant DC voltage to its coil, and the light bulb will waste audio power by acting as a second (non-audible) load.  Suffice to say, this is a bad idea.
+
+Using inductors and capacitors as "filtering" components, though, we can make this system work:
+
+$$\epsfbox{01856x04.eps}$$
+
+Apply the Superposition Theorem to this circuit to demonstrate that the audio and DC signals will not interfere with each other as they would if directly connected.  Assume that the capacitors are of such large value that they present negligible impedance to the audio signal ($Z_C \approx 0 \> \Omega$) and that the inductors are sufficiently large that they present infinite impedance to the audio signal ($Z_L \approx \infty$).
+
+\underbar{file 01856}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+As each source is considered separately, the reactive components ensure each load receives the correct source voltage, with no interference.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Such "power-plus-data" strategies are made possible by the Superposition Theorem and the linearity of resistors, capacitors, and inductors.  If time permits, this would be a good opportunity to discuss "power-line carrier" systems, where high-frequency data is transmitted over power line conductors.  The venerable X10 network system is an example for residential power wiring, while power distribution utilities have been using this "PLC" technology (the acronym not to be confused with {\it Programmable Logic Controllers}) for decades over high-voltage transmission lines.
+
+%INDEX% Superposition theorem, conceptual with AC + DC
+
+%(END_NOTES)
+
+

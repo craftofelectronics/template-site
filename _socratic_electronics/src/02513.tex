@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Explain how the operational amplifier maintains a constant current through the load:
+
+$$\epsfbox{02513x01.eps}$$
+
+Write an equation solving for the regulated load current, given any relevant variables shown in the schematic diagram ($R_1$, $V_Z$, $V_{supply}$, $A_{V(OL)}$, etc.).  Also, describe what would have to be changed in this circuit in order to set the regulated current at a different value.
+
+\underbar{file 02513}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$I_{load} = {V_Z \over R_1}$$
+
+\vskip 10pt
+
+Follow-up question: is the transistor {\it sourcing} current to the load, or {\it sinking} current from it?
+
+\vskip 10pt
+
+Challenge question \#1: modify the given equation to more precisely predict load current, taking the $\beta$ of the transistor into account.
+
+\vskip 10pt
+
+Challenge question \#2: modify the location of the load in this circuit so that the given equation does precisely predict load current, rather than closely approximate load current.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a good example of how operational amplifiers may greatly improve the functions of discrete-component circuits.  In this case, the opamp performs the function of a {\it current mirror} circuit, and does so with greater precision and reliability than a simple current mirror ever could.
+
+It should be noted that the equation provided in the answer does not directly predict the current through the load, rather it predicts current through resistor $R_2$.  This is equal to load current only if the transistor's base current is zero, which of course it cannot be.  The {\it real} equation for predicting load current will be a bit more complex than what is given in the answer, and I leave it for your students to derive.
+
+%INDEX% Constant-current circuit, opamp
+
+%(END_NOTES)
+
+

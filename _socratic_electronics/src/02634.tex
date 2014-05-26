@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Identify the type of oscillator circuit shown in this schematic diagram:
+
+$$\epsfbox{02634x01.eps}$$
+
+Also, write the equation describing the operating frequency of this type of oscillator circuit.
+
+\underbar{file 02634}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This is a {\it Clapp} oscillator circuit, and the tank circuit establishes its frequency of operation.
+
+$$f = {1 \over {2 \pi \sqrt{L_1 \left({1 \over {{1 \over C_1} + {1 \over C_2} + {1 \over C_3}}}\right)}}}$$
+
+\vskip 10pt
+
+Follow-up question: you may notice that the Clapp oscillator is just a variation of the Colpitts oscillator design.  If $C_3$ is much smaller than either $C_1$ or $C_2$, the frequency stability of the oscillator circuit will be relatively unchanged by variations in parasitic capacitance throughout the circuit (especially transistor junction "Miller effect" capacitances).  Explain why, and how the following equation provides an approximation of operating frequency under these conditions:
+
+$$f \approx {1 \over {2 \pi \sqrt{L_1 C_3}}}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to describe the amount of phase shift the tank circuit provides to the feedback signal.  Also, ask them to explain how the oscillator circuit's natural frequency may be altered.
+
+The only "trick" to figuring out the answer here is successfully identifying which capacitors are part of the tank circuit and which are not.  Remind your students if necessary that tank circuits require direct (galvanic) connections between inductance and capacitance to oscillate -- components isolated by an amplifier stage or a significant resistance cannot be part of a proper tank circuit.  The identity of the constituent components may be determined by tracing the path of oscillating current between inductance(s) and capacitance(s).
+
+%INDEX% Clapp oscillator circuit
+%INDEX% Oscillator circuit, Clapp
+
+%(END_NOTES)
+
+

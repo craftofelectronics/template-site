@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+All electric motors exhibit a large "inrush" current when initially started, due to the complete lack of counter-EMF when the rotor has not yet begun to turn.  In some applications it is very important to know how large this transient current is.  Shown here is a measurement setup for an oscilloscope to graph the inrush current to a DC motor:
+
+$$\epsfbox{01913x01.eps}$$
+
+Explain how this circuit configuration enables the oscilloscope to measure motor current, when it plainly is a voltage-measuring instrument.  
+
+Also, explain how the oscilloscope may be set up to display only one "sweep" across the screen when the motor is started, and where the vertical and horizontal sensitivity knobs ought to be set to properly read the inrush current.
+
+\underbar{file 01913}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The shunt resistor performs the current-to-voltage conversion necessary for the oscilloscope to measure current.
+
+\vskip 10pt
+
+In order to display only one "sweep," the oscilloscope triggering needs to be set to {\it single} mode.  By the way, this works exceptionally well on digital-storage oscilloscopes, but not as well on analog oscilloscopes.
+
+There are no "easy" answers for how to set the vertical and horizontal controls.  Issues to consider (and discuss in class!) include:
+
+\medskip
+\item{$\bullet$} Expected inrush current (several times full-load current)
+\item{$\bullet$} Scaling factor provided by resistive shunt
+\item{$\bullet$} Typical ramp-up time for motor, in seconds
+\medskip
+
+\vskip 10pt
+
+Challenge question: the larger the shunt resistor value, the stronger the signal received by the oscilloscope.  The smaller the shunt resistor value, the weaker the signal received by the oscilloscope, making it difficult to accurately trigger on and measure the current's peak value.  Based on this information, one might be inclined to choose the largest shunt resistor size available -- but doing so will cause other problems.  Explain what those other problems are.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question came from direct, personal experience.  I was once working on the construction of a servo motor control system for positioning rotary valves, and we were having problems with the motors tripping the overcurrent limits upon start-up.  I needed to measure the typical inrush current magnitude and duration.  Fortunately, I had a digital storage oscilloscope at my disposal, and I set up this very circuit to do the measurements.  About a half-hour of work setting up all the components, and I had the information I needed.  The digital oscilloscope also provided me with digital "screenshot" images that I could email to engineers working on the project with me, so they could see the same data I was seeing.  
+
+%INDEX% Oscilloscope, single-sweep triggering
+
+%(END_NOTES)
+
+

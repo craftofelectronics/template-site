@@ -1,0 +1,63 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how all transistor currents ($I_B$, $I_C$, and $I_E$) and the output voltage signal will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03737x01.eps}$$
+
+\medskip
+\item{$\bullet$} Capacitor $C_{in}$ fails open:
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) past resistor $R_1$:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_1$ fails open:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_C$ fails open:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_E$ fails open:
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_{bypass}$ fails shorted:
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03737}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Capacitor $C_{in}$ fails open: {\it All transistor currents assume quiescent (DC) values, no output signal.}
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) past resistor $R_1$: {\it Transistor saturates (large increase in all currents), no output signal.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_1$ fails open: {\it All transistor currents fall to zero (transistor in complete cutoff mode), no output signal.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_C$ fails open: {\it Transistor base current will decrease, zero collector current, greatly decreased emitter current, no output signal.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_E$ fails open: {\it All transistor currents fall to zero (transistor in complete cutoff mode), no output signal.}
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_{bypass}$ fails shorted: {\it Transistor saturates (large increase in all currents), no output signal.} 
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in (bypassed) common-emitter amplifier circuit
+
+%(END_NOTES)
+
+

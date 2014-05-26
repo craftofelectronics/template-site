@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The circuit shown here is a simple {\it current mirror}.  Explain what happens as the load resistance changes:
+
+$$\epsfbox{00896x01.eps}$$
+
+Most current mirrors are not built exactly like this.  Instead of a diode, they use a transistor (identical to the other transistor) with the base and collector terminals shorted together:
+
+$$\epsfbox{00896x02.eps}$$
+
+Ideally, the two transistors are built on the same substrate material, so as to always be at equal temperature.  Explain why this design is preferable to the first circuit (using the diode) shown in this question.
+
+\underbar{file 00896}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+As the load resistance changes, the current through it remains approximately the same.  In the first current mirror circuit where a transistor receives its controlling signal from a diode (rather than another transistor), there is a tendency for the transistor to thermally "run away," allowing more and more current through the load over time.
+
+\vskip 10pt
+
+Follow-up question: explain how to adjust the regulated current's target value in either of these circuits.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Current mirrors confuse beginning students primarily because they cannot be understood following the simplistic model of a silicon PN junction always dropping 0.7 volts.  Rather, their operation is inextricably connected with Shockley's diode equation.  This question is therefore not only a good review of that equation, but it also illustrates how the "models" we use to explain things are sometimes shown to be inadequate.
+
+%INDEX% Current mirror circuit, BJT
+
+%(END_NOTES)
+
+

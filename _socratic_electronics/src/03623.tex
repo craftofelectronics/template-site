@@ -1,0 +1,81 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Examine this three-phase motor control circuit, where fuses protect against overcurrent and a three-pole relay (called a {\it contactor}) turns power on and off to the motor:
+
+$$\epsfbox{03623x01.eps}$$
+
+After years of faithful service, one day this motor refuses to start.  It makes a "humming" sound when the contactor is energized (relay contacts close), but it does not turn.  A mechanic checks it out and determines that the shaft is not seized, but is free to turn.  The problem must be electrical in nature!
+
+You are called to investigate.  Using a clamp-on ammeter, you measure the current through each of the lines (immediately after each fuse) as another start is once again attempted.  You then record the three current measurements:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Line & Current \cr
+%
+\noalign{\hrule}
+%
+% Another row
+1 & 52.7 amps \cr
+%
+\noalign{\hrule}
+%
+% Another row
+2 & 51.9 amps \cr
+%
+\noalign{\hrule}
+%
+% Another row
+3 & 0 amps \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Determine at least two possible faults which could account for the motor's refusal to start and the three current measurements taken.  Then, decide what your next measurement(s) will be to isolate the exact location and nature of the fault.
+
+\underbar{file 03623}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Here are some possibilities:
+
+\medskip
+\item{$\bullet$} Fuse \#3 blown open
+\item{$\bullet$} Third relay contact damaged (failed open) inside the contactor
+\item{$\bullet$} One winding failed open inside the motor (assuming a "Y" winding configuration)
+\medskip
+
+There are several valid "next steps" you could take from this point.  Discuss alternatives with your classmates.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a practical scenario which you and your students should have some fun exploring.  If they have never heard of a "contactor" before, this question is a good opportunity to introduce the component.  Bring one with you to discussion if you have the opportunity!
+
+%INDEX% Electric motor (ORIGINAL GRAPHIC IMAGE FOR LIBRARY OBJECT)
+%INDEX% Troubleshooting, polyphase AC motor circuit
+
+%(END_NOTES)
+
+

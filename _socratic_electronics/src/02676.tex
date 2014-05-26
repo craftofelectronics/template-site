@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Dual, or split, power supplies are very useful in opamp circuits because they allow the output voltage to rise above as well as sink below ground potential, for true AC operation.  In some applications, though, it may not be practical or affordable to have a dual power supply to power your opamp circuit.  In this event, you need to be able to figure out how to adapt your dual-supply circuit to single-supply operation.
+
+A good example of such a challenge is the familiar opamp relaxation oscillator, shown here:
+
+$$\epsfbox{02676x01.eps}$$
+
+First, determine what would happen if we were to simply eliminate the negative portion of the dual power supply and try to run the circuit on a single supply (+V and Ground only):
+
+$$\epsfbox{02676x02.eps}$$
+
+Then, modify the schematic so that the circuit will run as well as it did before with the dual supply.
+
+\underbar{file 02676}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Here is one solution:
+
+$$\epsfbox{02676x03.eps}$$
+
+Here is another solution:
+
+$$\epsfbox{02676x04.eps}$$
+
+\vskip 10pt
+
+Follow-up question: now you just {\it know} what I'm going to ask next, don't you?  How do these modified circuits function?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Dual power supplies are a luxury in many real-life circumstances, and so your students will need to be able to figure out how to make opamps work in single-supply applications!  Work with your students to analyze the function of the suggested solution circuit, to see how it is at once similar and different from its simpler, dual-supply forbear.
+
+%INDEX% Relaxation oscillator, opamp (single-supply operation)
+
+%(END_NOTES)
+
+

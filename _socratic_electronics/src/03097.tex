@@ -1,0 +1,69 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An electronic counter is installed at the entrance doorway of a large convention room to count the number of people entering.  As each person passes through the doorway, their body interrupts a light beam from an infra-red LED to a matching phototransistor, sending a pulse to the counter IC (LED light striking the phototransistor $Q_1$ turns it on, and the absence of LED light turns it off).  Every tenth person that enters is supposed to win a prize, so the job of this circuit is to ring a bell for every tenth person who enters (at the "terminal count" state).  The problem is, the bell was working just fine a few hours ago, but hasn't rung ever since.  Some of the convention attendees are starting to get angry, demanding door prizes.
+
+$$\epsfbox{03097x01.eps}$$
+
+You begin troubleshooting by taking voltage measurements while people randomly enter the room (breaking the light beam as they do).  Using your voltmeter, you measure a constant +5 volts at TP3 with respect to ground.  This voltage measurement does not change, no matter how many people pass through the light beam.  You then connect your voltmeter between TP12 and ground, measuring approximately 0 volts all the time whether or not someone is passing through the doorway.
+
+From this information, identify two possible causes that could account for the problem and all measured values in this circuit.  Also, identify the next logical test point(s) from those shown on the schematic that you would check with a voltmeter, and why you would check there.  Note that there may be more than one correct answer to this part of the question!
+
+\medskip
+\goodbreak
+\item{$\bullet$} Possible causes of the problem
+\item{1.}
+\item{2.} 
+\medskip
+
+\medskip
+\item{$\bullet$} Next logical test point(s) to check, with reason why you would check there
+\item{Next point(s):}
+\item{Reason:}
+\medskip
+
+\underbar{file 03097}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Note: the following answers are not exhaustive.  There may be more circuit elements possibly at fault than what is listed here!
+
+\medskip
+\goodbreak
+\item{$\bullet$} Possible causes of the problem
+\item{1.} Phototransistor $Q_1$ failed open
+\item{2.} LED failed open
+\item{3.} Resistor $R_1$ failed open
+\item{4.} Wire or connection broken between TP1 and LED, or TP1 and $Q_1$
+\item{5.} Resistor $R_2$ failed shorted
+\medskip
+
+\medskip
+\goodbreak
+\item{$\bullet$} Next logical test point(s) to check, with reason why you would check there
+\item{-} TP14 to ground, to see if $Q_1$ is being supplied power
+\item{-} TP13 to ground, to see if the LED is being supplied power
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+{\bf This question is intended for exams only and not worksheets!}.
+
+%INDEX% Troubleshooting, person-counting circuit
+
+%(END_NOTES)
+
+

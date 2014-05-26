@@ -1,0 +1,118 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Examine the following American Wire Gauge table.  Please note that most of the odd-numbered gauges have been omitted, because the even-numbered gauges tend to be more common:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+Gauge \# & Diameter (inches) & Area (circular mils) \cr
+%
+\noalign{\hrule}
+%
+4/0 & 0.4600 & 211,600 \cr
+%
+\noalign{\hrule}
+%
+3/0 & 0.4100 & 168,100 \cr
+%
+\noalign{\hrule}
+%
+2/0 & 0.3650 & 133,225 \cr
+%
+\noalign{\hrule}
+%
+1/0 & 0.3250 & 105,625 \cr
+%
+\noalign{\hrule}
+%
+1 & 0.2890 & 83,521 \cr
+%
+\noalign{\hrule}
+%
+2 & 0.2580 & 66,564 \cr
+%
+\noalign{\hrule}
+%
+4 & 0.2040 & 41,616 \cr
+%
+\noalign{\hrule}
+%
+6 & 0.1620 & 26,244 \cr
+%
+\noalign{\hrule}
+%
+8 & 0.1280 & 16,384 \cr
+%
+\noalign{\hrule}
+%
+10 & 0.1020 & 10,404 \cr
+%
+\noalign{\hrule}
+%
+12 & 0.0810 & 6,561 \cr
+%
+\noalign{\hrule}
+%
+14 & 0.0640 & 4,096 \cr
+%
+\noalign{\hrule}
+%
+16 & 0.0510 & 2,601 \cr
+%
+\noalign{\hrule}
+%
+18 & 0.0400 & 1,600 \cr
+%
+\noalign{\hrule}
+%
+20 & 0.0320 & 1,024 \cr
+%
+\noalign{\hrule}
+%
+22 & 0.0253 & 640.1 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+How many gauge numbers must you increase to (approximately) double the diameter of any given wire gauge?  What effect does the doubling of diameter have on the cross-sectional {\it area} of the wire?
+
+\underbar{file 03380}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Wire diameter approximately doubles once for every six wire gauge sizes.  Cross-sectional area {\it quadruples} for the same wire gauge interval.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Wire gauge numbers and diameters for this table were taken from table 2-85 of the {\it American Electrician's Handbook} (eleventh edition) by Terrell Croft and Wilford Summers.  Area in circular mils for each AWG size was calculated from the given diameter.
+
+%INDEX% Circular mils, equivalence to wire gauge
+%INDEX% Table, wire gauge
+%INDEX% Wire gauge, equivalence to circular mils
+%INDEX% Wire gauge table
+
+%(END_NOTES)
+
+

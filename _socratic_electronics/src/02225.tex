@@ -1,0 +1,142 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Complete the table of output voltages, output currents, and input currents for several given values of input voltage in this common-collector amplifier circuit.  Assume that the transistor is a standard silicon NPN unit, with a nominal base-emitter junction forward voltage of 0.7 volts:
+
+$$\epsfbox{02225x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_{in}$ & $V_{out}$ & $I_{in}$ & $I_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0.0 V &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0.4 V &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+1.2 V &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+3.4 V &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+7.1 V &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+10.8 V &  &  & \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Calculate the voltage and current gains of this circuit from the numerical values in the table:
+
+$$A_V = {\Delta V_{out} \over \Delta V_{in}} = $$
+
+$$A_I = {\Delta I_{out} \over \Delta I_{in}} = $$
+
+\underbar{file 02225}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_{in}$ & $V_{out}$ & $I_{in}$ & $I_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0.0 V & 0.0 V & 0.0 $\mu$A & 0.0 mA \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0.4 V & 0.0 V & 0.0 $\mu$A & 0.0 mA \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+1.2 V & 0.5 V & 2.498 $\mu$A & 0.227 mA\cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+3.4 V & 2.7 V & 13.49 $\mu$A & 1.227 mA \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+7.1 V & 6.4 V & 31.97 $\mu$A & 2.909 mA \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+10.8 V & 10.1 V & 50.45 $\mu$A & 4.591 mA \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+
+$$A_V = {\Delta V_{out} \over \Delta V_{in}} = 1$$
+
+$$A_I = {\Delta I_{out} \over \Delta I_{in}} = 91$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question, besides providing practice for common-collector circuit DC analysis, is to show the current-amplification properties of the common-collector amplifier.  This is an important feature, as there is no voltage amplification in this type of amplifier circuit.
+
+This approach to determining transistor amplifier circuit voltage gain is one that does not require prior knowledge of amplifier configurations.  In order to obtain the necessary data to calculate voltage gain, all one needs to know are the "first principles" of Ohm's Law, Kirchhoff's Laws, and basic operating principles of a bipolar junction transistor.  This question is really just a {\it thought experiment}: exploring an unknown form of circuit by applying known rules of circuit components.  If students doubt the efficacy of "thought experiments," one need only to reflect on the success of Albert Einstein, whose thought experiments as a patent clerk (without the aid of experimental equipment) allowed him to formulate the basis of his Theories of Relativity.
+
+%INDEX% Common-collector amplifier, output voltage calculations
+
+%(END_NOTES)
+
+

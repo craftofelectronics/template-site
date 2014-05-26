@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Generally speaking, how many "time constants" worth of time does it take for the voltage and current to "settle" into their final values in an RC or LR circuit, from the time the switch is closed?
+
+$$\epsfbox{00437x01.eps}$$
+
+\underbar{file 00437}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If you said, "five time constants' worth" ($5 \tau$), you might not be thinking deeply enough!  In actuality, the voltage and current in such a circuit {\it never} finally reach stable values, because their approach is asymptotic.
+
+However, after 5 time constants' worth of time, the variables in an RC or LR circuit will have settled to within 0.6\% of their final values, which is good enough for most people to call "final."
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The stock answer of "5 time constants" as the amount of time elapsed between the transient event and the "final" settling of voltage and current values is widespread, but largely misunderstood.  I've encountered more than a few graduates of electronics programs who actually believe there is something special about the number {\it 5}, as though everything grinds to a halt at exactly 5 time constants worth of time after the switch closes.
+
+In reality, the rule of thumb of "5 time constants" as a settling time in RC and LR circuits is an approximation only.  Somewhere I recall reading an old textbook that specified {\it ten} time constants as the time required for all the variables to reach their final values.  Another old book declared {\it seven} time constants.  I think we're getting impatient as the years roll on!
+
+%INDEX% Time constant calculation, RC or LR circuit
+
+%(END_NOTES)
+
+

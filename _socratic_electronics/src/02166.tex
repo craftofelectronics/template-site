@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Describe what happens to the collector current of the transistor as the variable resistor's value is changed:
+
+$$\epsfbox{02166x01.eps}$$
+
+Hint: it is helpful to remember that the voltage drop across a PN junction is not exactly constant as the current through it varies.  There is a nonlinear relationship between diode voltage drop ($V_D$) and diode current ($I_D$) as described by the {\it diode equation}:
+
+$$I_D = I_S (e^{\left({qV_D \over NkT}\right)} - 1)$$
+
+\underbar{file 02166}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The transistor's collector current rises and falls with the diode's current, as dictated by the variable resistor.  Ideally, the transistor collector current {\it precisely matches} the diode's current.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This circuit is really the beginning of a {\it current mirror}.  I have found this to be an excellent starting point for student learning on linear transistor operation, as well as a good practical introduction of current regulation circuits.  Once students recognize that bipolar transistors are essentially voltage-controlled current regulators (albeit very nonlinear!), they are ready to comprehend their application as signal amplifiers.
+
+%INDEX% BJT, as current regulator
+%INDEX% Current mirror circuit, BJT
+%INDEX% Diode equation
+
+%(END_NOTES)
+
+

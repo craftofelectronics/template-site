@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Usually, propagation delay is considered an undesirable characteristic of logic gates, which we simply have to live with.  Other times, it is a useful, even necessary, trait.  Take for example this circuit:
+
+$$\epsfbox{01362x01.eps}$$
+
+If the gates constituting this circuit had zero propagation delay, it would perform no useful function at all.  To verify this sad fact, analyze its steady-state response to a "low" input signal, then to a "high" input signal.  What state is the AND gate's output always in?
+
+Now, consider propagation delay in your analysis by completing a timing diagram for each gate's output, as the input signal transitions from low to high, then from high to low:
+
+$$\epsfbox{01362x02.eps}$$
+
+What do you notice about the state of the AND gate's output now?
+
+\underbar{file 01362}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01362x03.eps}$$
+
+\vskip 10pt
+
+Follow-up question: describe exactly what conditions are necessary to obtain a "high" signal from the output of this circuit, and what determines the duration of this "high" pulse.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Tell your students that this circuit is a special type of {\it one-shot}, outputting a single pulse of limited duration for each leading-edge transition of the input signal.
+
+Ask your students what we might do if we wanted to make the output pulse of this one-shot circuit longer (or shorter).
+
+%INDEX% One-shot circuit, exploiting gate propagation delays
+%INDEX% Propagation delay, gate circuits
+%INDEX% Timing diagram showing propagation delays
+
+%(END_NOTES)
+
+

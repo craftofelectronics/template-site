@@ -1,0 +1,40 @@
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A binary number is parallel-loaded into a shift register.  The shift register is then commanded to "shift right" for one clock pulse.  How does the value of the shifted binary number compare to the number originally loaded in, assuming that the MSB is on the very left flip-flop of the shift register?
+
+\underbar{file 01474}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The new binary number value will be one-half (or approximately one-half) the value that it was before.
+
+\vskip 10pt
+
+Follow-up question: how could we use the shift register to {\it double} the value of a binary number?
+
+\vskip 10pt
+
+Challenge question: when we divide a binary number in two by shifting its bit positions, the resulting answer may or may not be exactly one-half the original value.  Explain why this is so.  Also, analyze what happens when when we {\it multiply} a binary number by two through a process of bit-shifting.  Is the resulting answer exactly twice the original value, or may it also be {\it approximate} as it sometimes is with division?  Explain why or why not.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a really neat trick for dividing or multiplying binary numbers by powers of two.  It is often used in machine-language microprocessor programming, due to its simplicity of execution.
+
+%INDEX% Shift register, binary number manipulation
+
+%(END_NOTES)
+
+

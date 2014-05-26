@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The digital circuit shown here is a unanimous-yea vote detector.  Votes are cast by eight different voters by the setting of switches in either the closed (yea) or open (nay) positions.  According to the logic function provided by the TTL gates, the LED will energize if and only if all switches are closed:
+
+$$\epsfbox{01260x01.eps}$$
+
+As is common in digital circuit schematics, the power supply ($V_{CC}$) is omitted for the sake of simplicity.  This is analogous to the omission of power supply connections in many operational amplifier circuit schematics.
+
+If we were to draw a truth table for this circuit, how large (number of rows and columns) would the table have to be?
+
+Suppose we wished to modify this circuit, such that an electromechanical bell would ring whenever a unanimous-yea vote was cast, rather than merely lighting a small LED.  The bell we have in mind to use is rather large, its solenoid coil drawing 3 amps of current at a voltage of 12 volts DC: well beyond the final gate's ability to source.  How could we modify this circuit so that the final gate is able to energize this bell instead of just an LED?
+
+\underbar{file 01260}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01260x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: explain why pullup resistors are not required in this circuit.
+
+\vskip 10pt
+
+Challenge question: sometimes engineers and technicians alike overlook the most elegant (beautifully simple) solutions in their quest to solve a problem.  The solution shown here, while practical, solves the problem by adding components to the circuit.  Can you think of a way we might build a unanimous-yea vote detector using {\it fewer} components than the original LED circuit?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students why we might want to use a Darlington pair instead of a single transistor for the final output "driver" circuit.  Also, ask them why we need to have a resistor connected between the gate output and the transistor base.  Why not just directly connect the gate's output to the base of the transistor?
+
+You might want to challenge your students with this question: "Suppose the person who built this circuit used open-collector gates throughout.  As a whole, it would not function, neither for lighting the LED nor for ringing the bell.  However, only one of the gates would need to have the standard `totem-pole' output in order for the circuit to function properly.  Which gate is it?"
+
+%INDEX% Unanimous vote detector circuit
+
+%(END_NOTES)
+
+

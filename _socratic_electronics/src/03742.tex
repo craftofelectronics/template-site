@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose this regulated power supply circuit used to function fine, but now has stopped outputting any DC voltage at all:
+
+$$\epsfbox{03742x01.eps}$$
+
+Initial diagnostic measurements show there to be full DC (unregulated) voltage across capacitor $C_1$, and no DC voltage between the transistor base and ground.  From this data, where would you suspect the problem is?
+
+\underbar{file 03742}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Most likely $R_1$ failed open or the zener diode $D_5$ failed shorted, such that the transistor is not being "told" to output any voltage at its emitter terminal.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students why the diagnostic measurements described in the question are good points to check (in the order that they were taken).
+
+%INDEX% Troubleshooting, linear-regulated power supply circuit
+
+%(END_NOTES)
+
+

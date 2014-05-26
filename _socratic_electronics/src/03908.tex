@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A technician is trying to build a timer project using a set of cascaded counters, each one connected to its own 7-segment decoder and display:
+
+$$\epsfbox{03908x01.eps}$$
+
+The technician was trying to troubleshoot this circuit, but left without finishing the job.  You were sent to finish the work, having only been told that the timer circuit "has some sort of problem."  Your first step is to start the 1 Hz clock and watch the timing sequence, and after a few minutes of time you fail to notice anything out of the ordinary.
+
+Now, you could sit there for a whole hour and watch the count sequence, but that might take a long time before anything unusual appears for you to see.  Devise a test procedure that will allow you to pinpoint problems at a much faster rate.
+
+\underbar{file 03908}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Disconnect the 1 Hz clock pulse generator and re-connect the counter input to a square-wave signal generator of variable frequency.  This will speed up the counting sequence and allow you to see what the problem is much faster!
+
+\vskip 10pt
+
+Follow-up question: suppose you did this and found no problem at all.  What would you suspect next as a possible source of trouble that could cause the timer circuit to time incorrectly?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Connecting a faulty circuit to a different input signal than what it normally runs at is an excellent way to explore faults.  However, it should be noted that some faults may go undetected using this technique, because you have altered the circuit in the process.
+
+%INDEX% Troubleshooting, digital clock frequency divider circuit
+
+%(END_NOTES)
+
+

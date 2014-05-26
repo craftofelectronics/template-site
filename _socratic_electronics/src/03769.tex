@@ -1,0 +1,59 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how the operation of this thermostat circuit (where the cooling fan motor is supposed to turn on when the temperature gets too high) will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03769x01.eps}$$
+
+\medskip
+\item{$\bullet$} Cable fails open:
+\vskip 5pt
+\item{$\bullet$} Comparator $U_1$ fails with output saturated positive:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_1$ fails open:
+\vskip 5pt
+\item{$\bullet$} Cable fails shorted:
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_1$ fails shorted (drain-to-source):
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03769}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Cable fails open: {\it Fan turns on and never turns off.}
+\vskip 5pt
+\item{$\bullet$} Comparator $U_1$ fails with output saturated positive: {\it Fan refuses to turn on.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_1$ fails open: {\it Fan refuses to turn on.}
+\vskip 5pt
+\item{$\bullet$} Cable fails shorted: {\it Fan refuses to turn on.}
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_1$ fails shorted (drain-to-source): {\it Fan turns on and never turns off.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in thermostat circuit
+
+%(END_NOTES)
+
+

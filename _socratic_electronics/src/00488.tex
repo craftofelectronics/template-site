@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Power transformers may "surge" when initially connected to a source of AC voltage, drawing up to several times their rated primary current for a brief period of time.  This inrush of current is usually audible, especially if the transformer is a large power distribution unit, and you happen to be standing next to it!
+
+At first, this phenomenon may seem contradictory, based on your knowledge of how inductances respond to transient DC voltage (zero current at first, then the current builds asymptotically to its maximum value).  Indeed, even with AC, it is the nature of inductance to {\it oppose} current by dropping voltage (producing a {\it counter-EMF}).  So why would an unloaded transformer draw a large inrush current when initially connected to a source of AC voltage?
+
+\vskip 5pt
+
+Hint: a transformer will not always surge when first connected to its voltage source.  In fact, if you were to open and close the disconnect switch feeding a power transformer's primary winding, you would find the surge phenomenon to be almost random: some times there would be no surge when you closed the switch, and other times there would be surge (to varying degrees) when the switch closed.
+
+\underbar{file 00488}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A transformer will surge the most if the switch closes at the exact moment the AC voltage waveform crosses zero volts.  It will not surge at all if the switch closes exactly at one of the AC voltage peaks (either positive or negative).
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a complex question to answer.  A full explanation of the "surge" effect requires the use of calculus (integrating the voltage waveform over time) to explain the magnitude of magnetic flux in the transformer core, and how this approaches saturation during a surge.
+
+Despite the highly mathematical nature of the question, it is a very practical one.  If and when your students build AC-DC power supplies, they may find that the fuse in series with the primary winding of the transformer occasionally blows when powered up, even though the power supply is unloaded at the time, and despite the fact that the fuse does not blow when the power supply is fully loaded.  What causes this random blowing of fuses?  Transformer surge!
+
+%INDEX% Transformer "surge" on power-up
+
+%(END_NOTES)
+
+

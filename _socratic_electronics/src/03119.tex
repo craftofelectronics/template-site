@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A submarine sonar system uses a "bank" of parallel-connected capacitors to store the electrical energy needed to send brief, powerful pulses of current to a transducer (a "speaker" of sorts).  This generates powerful sound waves in the water, which are then used for echo-location.  The capacitor bank relieves the electrical generators and power distribution wiring aboard the submarine from having to be rated for huge surge currents.  The generator trickle-charges the capacitor bank, and then the capacitor bank quickly dumps its store of energy to the transducer when needed:
+
+$$\epsfbox{03119x01.eps}$$
+
+As you might well imagine, such a capacitor bank can be lethal, as the voltages involved are quite high and the surge current capacity is enormous.  Even when the DC generator is disconnected (using the "toggle" disconnect switch shown in the schematic), the capacitors may hold their lethal charge for many days.
+
+To help decreases the safety risk for technical personnel working on this system, a "discharge" switch is connected in parallel with the capacitor bank to automatically provide a path for discharge current whenever the generator disconnect switch is opened:
+
+$$\epsfbox{03119x02.eps}$$
+
+Suppose the capacitor bank consists of forty 1500 $\mu$F capacitors connected in parallel (I know the schematic only shows three, but . . .), and the discharge resistor is 10 k$\Omega$ in size.  Calculate the amount of time it takes for the capacitor bank to discharge to 10 percent of its original voltage and the amount of time it takes to discharge to 1 percent of its original voltage once the disconnect switch opens and the discharge switch closes.
+
+\underbar{file 03119}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Time to reach 10\% $\approx$ 23 minutes 
+
+\vskip 10pt
+
+Time to reach 1\% $\approx$ 46 minutes
+
+\vskip 10pt
+
+Follow-up question: without using the time constant formula again, calculate how long it will take to discharge to 0.1\% of its original voltage.  How about 0.01\%?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The follow-up question illustrates an important mathematical principle regarding logarithmic decay functions: for every passing of a fixed time interval, the system decays by the same {\it factor}.  This is most clearly (and popularly) seen in the concept of {\it half-life} for radioactive substances, but it is also seen here for RC (or LR) circuits.
+
+%INDEX% Time constant calculation, RC circuit (calculating time required to charge to specified amount)
+
+%(END_NOTES)
+
+

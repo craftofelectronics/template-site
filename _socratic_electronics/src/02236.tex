@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Sometimes you will see amplifier circuits expressed as collections of {\it impedances} and {\it dependent sources}:
+
+$$\epsfbox{02236x01.eps}$$
+
+With this model, the amplifier appears as a load ($Z_{in}$) to whatever signal source its input is connected to, boosts that input voltage by the gain factor ($A_V$), then outputs the boosted signal through a series output impedance ($Z_{out}$) to whatever load is connected to the output terminals:
+
+$$\epsfbox{02236x02.eps}$$
+
+Explain why all these impedances (shown as resistors) are significant to us as we seek to apply amplifier circuits to practical applications.  Which of these impedances do you suppose are typically easier for us to change, if they require changing at all?
+
+\underbar{file 02236}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$Z_{in}$ should equal $Z_{source}$ and $Z_{load}$ should equal $Z_{out}$ for maximum power transfer from source to load.  Typically, the values of $Z_{source}$ and $Z_{load}$ are fixed by the nature of the source and load devices, respectively, and the only impedances we have the freedom to alter are those within the amplifier.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question has multiple purposes: to introduce students to the modeling concept of a {\it dependent source}, to show how an amplifier circuit may be modeled using such a dependent source, and to probe into the importance of impedances in a complete amplification {\it system}: source, amplifier, and load.  Many interesting things to discuss here!
+
+%INDEX% Dependent source
+%INDEX% Impedance, amplifier input
+%INDEX% Impedance, amplifier output
+%INDEX% Input impedance, amplifier
+%INDEX% Modeling voltage amplifier as a dependent voltage source
+%INDEX% Output impedance, amplifier
+
+%(END_NOTES)
+
+

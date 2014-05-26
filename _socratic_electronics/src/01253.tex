@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student builds the following digital circuit on a solderless breadboard (a "proto-board"):
+
+$$\epsfbox{01253x01.eps}$$
+
+The DIP circuit is a hex inverter (it contains {\it six} "inverter" or "NOT" logic gates), but only one of these gates is being used in this circuit.  The student's intent was to build a logic circuit that energized the LED when the pushbutton switch was unactuated, and de-energized the LED when the switch was pressed: so that the LED indicates the reverse state of the switch itself.  The student builds this circuit, and it is found to function perfectly well.
+
+Explain the purpose of the resistor on the input of the inverter.  What is it there for?  What might happen if it were to be removed from the circuit?
+
+Also, explain why the inputs of all the unused inverter gates in this IC have been either connected to ground or to $V_{DD}$.  Is this necessary for the circuit to work properly, or is it just a precautionary measure?
+
+\underbar{file 01253}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The resistor on the input side of the gate functions as a {\it pulldown}, to provide a solid "low" state to the gate's input when the switch contacts open.
+
+Shorting all unused gate inputs to either ground or $V_{DD}$ is merely a precautionary measure.  It prevents unnecessary power draw from the supply, and possible IC overheating.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss the problem of "floating" or "high-Z" states with your students, especially in the context of CMOS.  What is it about the nature of a CMOS circuit that makes floating inputs especially troublesome?  Ask your students to contrast this against floating TTL inputs.
+
+%INDEX% Floating input, CMOS
+%INDEX% Logic probe, use of multimeter as 
+%INDEX% Multimeter used as a logic probe
+
+%(END_NOTES)
+
+

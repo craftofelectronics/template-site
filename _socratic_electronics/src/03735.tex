@@ -1,0 +1,63 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how all component voltages and currents in this circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03735x01.eps}$$
+
+\medskip
+\item{$\bullet$} Resistor $R_1$ fails open:
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_1$ fails open, collector to emitter:
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_1$ fails shorted, collector to emitter:
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_2$ fails open, collector to emitter:
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_2$ fails shorted, collector to emitter:
+\vskip 5pt
+\item{$\bullet$} Load fails shorted:
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03735}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Resistor $R_1$ fails open: {\it No current through $Q_1$, no current through $Q_2$, no current through load, no voltage dropped across $Q_1$, full voltage dropped across collector-emitter of $Q_2$.}
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_1$ fails open, collector to emitter: {\it Approximately the same current through $R_1$, increased current through $Q_2$ base, increased current through $Q_2$ collector (load current),and less voltage dropped between collector-emitter of $Q_2$.}
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_1$ fails shorted, collector to emitter: {\it Increased current through $R_1$, almost zero current through all terminals of $Q_2$ and the load, full voltage dropped across collector-emitter of $Q_2$.}
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_2$ fails open, collector to emitter: {\it No change in current for $R_1$ or $Q_1$, zero load current, full voltage dropped across collector-emitter of $Q_2$.}
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_2$ fails shorted, collector to emitter: {\it Current through $R_1$ will most likely increase, zero voltage dropped across collector-emitter of $Q_2$, increased current through $Q_2$ and load.}
+\vskip 5pt
+\item{$\bullet$} Load fails shorted: {\it No change in any current (in reality, load current will slightly increase), increased voltage drop across collector-emitter of $Q_2$, possible overheating of $Q_2$.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in current mirror circuit
+
+%(END_NOTES)
+
+

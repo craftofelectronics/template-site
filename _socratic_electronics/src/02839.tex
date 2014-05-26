@@ -1,0 +1,95 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+When designing a circuit to emulate a truth table such as this where nearly all the input conditions result in "1" output states, it is easier to use Product-of-Sums (POS) expressions rather than Sum-of-Products (SOP) expressions:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+A & B & C & Output \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 1 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+1 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+1 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+1 & 1 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+1 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Is it possible to use a Karnaugh map to generate the appropriate POS expression for this truth table, or are Karnaugh maps limited to SOP expressions only?  Explain your answer, and how you were able to obtain it.
+
+\underbar{file 02839}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Yes, you can use Karnaugh maps to generate POS expressions, not just SOP expressions!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I am more interested in seeing students' approach to this problem than acknowledgment of the answer (that Karnaugh maps may be used to generate SOP and POS expressions alike).  Setting up a Karnaugh map to see if a POS expression may be obtained for this truth table is not difficult to do, but many students are so unfamiliar/uncomfortable with "experimenting" in this manner than they tend to freeze when presented with a problem like this.  Without specific instructions on what to do, the obvious steps of "try it and see" elude them.
+
+It is your charge as their instructor to encourage an experimental mindset among your students.  Do not simply tell them how to go about "discovering" the answer on their own, for if you do you will rob them of an authentic discovery experience.
+
+%INDEX% Karnaugh map, used to derive POS expression from a truth table
+
+%(END_NOTES)
+
+

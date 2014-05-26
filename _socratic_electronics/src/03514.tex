@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+{\it Load lines} are special types of graphs used in electronics to characterize the output voltage and current behavior of different power sources:
+
+$$\epsfbox{03514x01.eps}$$
+
+If we know that all the internal components of a power source are inherently {\it linear}, we know that the load line plot will indeed by a straight line.  And, if we know the plot will be a straight line, all we need in order to plot a complete load line are {\it two} data points.
+
+Usually, the easiest data points to gather for a circuit -- whether it be a real circuit or an hypothetical circuit existing on paper only -- is the {\it open-circuit} condition and the {\it short-circuit} condition.  In other words, we see how much voltage the source will output with no load connected ($I_{load}$ = 0 milliamps) and then we see how much current the source will output into a direct short ($V_{load}$ = 0 volts):
+
+$$\epsfbox{03514x02.eps}$$
+
+Suppose we have two differently-constructed power sources, yet both of these sources share the same open-circuit voltage ($V_{OC}$) and the same short-circuit current ($I_{SC}$).  Assuming the internal components of both power sources are linear in nature, explain how we would know without doubt that the two power sources were electrically equivalent to one another.  In other words, explain how we would know just from the limited data of $V_{OC}$ and $I_{SC}$ that these two power sources will behave exactly the same when connected to the same load resistance, whatever that load resistance may be.
+
+$$\epsfbox{03514x03.eps}$$
+
+\underbar{file 03514}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+With equal $V_{OC}$ and $I_{SC}$ figures and with linear componentry, the load lines must be identical.  This means that {\it any} load resistance, when connected to each of the power sources, will experience the exact same voltage and current.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a "poor man's proof" of Th\'evenin's and Norton's theorems: that we may completely characterize a power source in a simple, equivalent circuit by finding the original circuit's open-circuit voltage and short-circuit current.  The assumption of linearity allows us to define the load line for each power source from just these two data points.
+
+%INDEX% Load lines, used to show equivalence between power sources
+
+%(END_NOTES)
+
+

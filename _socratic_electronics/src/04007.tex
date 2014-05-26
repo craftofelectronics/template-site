@@ -1,0 +1,124 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Determine the voltage output by the following R-2R ladder network given the switch states shown in the table:
+
+$$\epsfbox{04007x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+SW$_{0}$ & SW$_{1}$ & SW$_{2}$ & SW$_{3}$ & $V_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Another row
+Ground & Ground & Ground & $V_{ref}$ &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+Ground & Ground & $V_{ref}$ & Ground & \cr
+%
+\noalign{\hrule}
+%
+% Another row
+Ground & $V_{ref}$ & Ground & Ground &  \cr
+% 
+\noalign{\hrule}
+%
+% Another row
+$V_{ref}$ & Ground & Ground & Ground &  \cr
+% 
+\noalign{\hrule}
+%
+% Another row
+Ground & Ground & Ground & Ground &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 04007}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+SW$_{0}$ & SW$_{1}$ & SW$_{2}$ & SW$_{3}$ & $V_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Another row
+Ground & Ground & Ground & $V_{ref}$ & 8 volts \cr
+%
+\noalign{\hrule}
+%
+% Another row
+Ground & Ground & $V_{ref}$ & Ground & 4 volts \cr
+%
+\noalign{\hrule}
+%
+% Another row
+Ground & $V_{ref}$ & Ground & Ground & 2 volts \cr
+% 
+\noalign{\hrule}
+%
+% Another row
+$V_{ref}$ & Ground & Ground & Ground & 1 volt \cr
+% 
+\noalign{\hrule}
+%
+% Another row
+Ground & Ground & Ground & Ground & 0 volts \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\vskip 10pt
+
+Follow-up question: the fact that an R-2R resistor network is inherently linear, we may readily apply the {\it Superposition Theorem} to figure out what happens when more than one switch is moved to the $V_{ref}$ position.  Explain how you would apply Superposition to determine all output voltages for all possible combinations of switch positions.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+As you can see, the reference voltage value of 16 volts was not chosen at random!  I wanted students to see the pattern between single switch closures and binary place-weights for a four-bit number.  The actual electrical analyses for each condition are best expedited by applying Th\'evenin's theorem repeated to the circuit, condensing sections to single resistances and voltage sources until a simple voltage divider circuit is obtained at the output terminal.
+
+The follow-up question is quite important.  Be sure to ask your students about it, for it holds the key to figuring out all output voltage values for all binary input possibilities.
+
+%INDEX% R-2R ladder network
+
+%(END_NOTES)
+
+

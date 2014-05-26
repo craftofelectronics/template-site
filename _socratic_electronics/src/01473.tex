@@ -1,0 +1,40 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A mechanically inclined friend of yours wishes to build an automated water fountain, where ten water jets are turned on in sequence, one at a time.  Each water jet is controlled by a solenoid valve, energized by 120 volt AC line power.
+
+Your friend understands how to wire up the solenoid valves and build all the plumbing to make the fountain work.  He also understands how to interpose power to the solenoid valve coils using small relays, so a digital control circuit operating at a low DC supply voltage will be able to energize the valves.  The only problem is, this friend of yours does not know how to build a circuit to do the sequencing.  How do you turn on one out of ten outputs at a time, in sequence?
+
+Another friend who is studying digital circuits has a solution to the design problem.  She says you could generate a one-out-ten sequence by using a BCD counter (4 bit) driving a 4-line to 16-line decoder.  A simple 555 astable multivibrator circuit could supply the necessary clock pulses, and the decoder outputs could drive the relays, and then the solenoid valves, as fast as you wanted.
+
+However, your instructor just recently told you about a different way to generate a one-out-of-$n$ counting sequence by using shift registers: the circuit is called a {\it ring counter}.  A ring counter would use fewer parts than the counter/decoder idea.  Explain what a ring counter is, and how it would work in this application.
+
+\underbar{file 01473}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Ring counter circuits are simple enough to not require my elaboration.  The only tough part of this design problem might be in achieving the initial "high" state in the first bit of the shift register upon power-up.  The rest is child's play!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Actually, this question would make a great class project for your students to build.  Not just the ring counter itself, but all the power supply and power control circuitry as well.  I've actually had a student team build a programmable ornamental fountain before, using a microcontroller.  We entered it as a piece of kinetic artwork in a campus art show, and it was a hit (especially for young children playing in the water jets on a hot day).  It was a lot of fun and the students learned a lot!
+
+%INDEX% Ring counter circuit
+%INDEX% Counter circuit, Ring
+
+%(END_NOTES)
+
+

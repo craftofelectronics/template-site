@@ -1,0 +1,36 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Counter circuits built by cascading the output of one flip-flop to the clock input of the next flip-flop are generally referred to as {\it ripple} counters.  Explain why this is so.  What happens in such a circuit that earns it the label of "ripple"?  Is this effect potentially troublesome in circuit operation, or is it something of little or no consequence?
+
+\underbar{file 01388}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+When these counters increment or decrement, they do so in such a way that the respective output bits change state in rapid sequence ("rippling") rather than all at the same time.  This creates false count outputs for very brief moments of time.
+
+Whether or not this constitutes a problem in a digital circuit depends on the circuit's tolerance of false counts.  In many circuits, there are ways to avoid this problem without resorting to a re-design of the counter.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+If your students have studied binary adder circuits, they should recognize the term "ripple" in a slightly different context.  Different circuit, same problem.
+
+%INDEX% Counter circuit, ripple
+%INDEX% Ripple counter circuit
+
+%(END_NOTES)
+
+

@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose we were designing a pair of BJT amplifier circuits to connect to either end of a long two-conductor cable, each end coupled to its respective amplifier through a transformer:
+
+$$\epsfbox{04006x01.eps}$$
+
+How would we choose the component values in each transistor amplifier circuit to naturally terminate both ends of the 75 $\Omega$ cable?
+
+\underbar{file 04006}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$R_C$ of the transmitting amplifier should be 1.875 k$\Omega$, as should the parallel equivalent resistance $R_{B1} || R_{B2}$ of the receiving amplifier.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question is really a review of Th\'evenin's theorem as it applies to common-emitter, divider-biased BJT amplifier circuits, and also impedance transformation as it applies to step-up and step-down transformers. 
+
+In case anyone asks, the "zig-zags" in the four lines for the cable represent an unspecified distance between those points.  In other words, the cable is {\it longer} than what may be proportionately represented on the schematic diagram.
+
+%INDEX% Transmission line driver amplifier, designing proper impedance for
+
+%(END_NOTES)
+
+

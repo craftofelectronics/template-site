@@ -1,0 +1,103 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Write the SOP (Sum-of-Products) Boolean expression for this truth table, then simplify that expression as much as possible and draw a logic gate circuit to fulfill it.
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+A & B & C & Output \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+1 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+1 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+1 & 1 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+1 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Unsimplified SOP expression:
+
+\vskip 10pt
+
+Simplest gate circuit:
+
+\underbar{file 02930}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Unsimplified SOP expression: $\overline{A} \> \overline{B} \> \overline{C} + \overline{A}B\overline{C} + A \overline{B} \> \overline{C}$
+
+\vskip 10pt
+
+Simplest gate circuit:
+
+$$\epsfbox{02930x01.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+{\bf This question is intended for exams only and not worksheets!}.
+
+%INDEX% Logic gate circuit, derived from truth table
+
+%(END_NOTES)
+
+

@@ -1,0 +1,72 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The relationship between voltage and current for a PN junction is described by this equation, sometimes referred to as the "diode equation," or "Shockley's diode equation" after its discoverer:
+
+$$I_D = I_S (e^{qV_D \over NkT} - 1)$$
+
+\noindent
+Where,
+
+$I_D =$ Current through the PN junction, in amps
+
+$I_S =$ PN junction saturation current, in amps (typically 1 picoamp)
+
+$e =$ Euler's number $\approx$ 2.718281828
+
+$q =$ Electron unit charge, $1.6 \times 10^{-19}$ coulombs
+
+$V_D =$ Voltage across the PN junction, in volts
+
+$N =$ Nonideality coefficient, or emission coefficient (typically between 1 and 2)
+
+$k =$ Boltzmann's constant, $1.38 \times 10^{-23}$
+
+$T =$ Junction temperature, degrees Kelvin
+
+\vskip 10pt
+
+At first this equation may seem very daunting, until you realize that there are really only three variables in it: $I_D$, $V_D$, and $T$.  All the other terms are constants.  Since in most cases we assume temperature is fairly constant as well, we are really only dealing with two variables: diode current and diode voltage.  Based on this realization, re-write the equation as a proportionality rather than an equality, showing how the two variables of diode current and voltage relate:
+
+$$I_D \propto \hbox{ . . .}$$
+
+\vskip 10pt
+
+Based on this simplified equation, what would an I/V graph for a PN junction look like?  How does this graph compare against the I/V graph for a resistor?
+
+$$\epsfbox{00712x01.eps}$$
+
+\underbar{file 00712}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Simplified proportionality:
+
+$$I_D \propto e^{V_D}$$
+
+The graph described by the "diode formula" is a standard exponential curve, rising sharply as the independent variable ($V_D$, in this case) increases.  The corresponding graph for a resistor, of course, is linear.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to sketch their own renditions of an exponential curve on the whiteboard for all to see.  Don't just let them get away with parroting the answer: "It's an exponential curve."
+
+%INDEX% Diode equation
+%INDEX% Shockley's diode equation
+%INDEX% Graphing
+
+%(END_NOTES)
+
+

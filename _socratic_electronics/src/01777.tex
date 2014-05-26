@@ -1,0 +1,54 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose you were designing a circuit that required two LEDs for "power on" indication.  The power supply voltage is 15 volts, and each LED is rated at 1.6 volts and 20 mA.  Calculate the dropping resistor sizes and power ratings:
+
+$$\epsfbox{01777x01.eps}$$
+
+After doing this, a co-worker looks at your circuit and suggests a modification.  Why not use a single dropping resistor for both LEDs, economizing the number of components necessary?
+
+$$\epsfbox{01777x02.eps}$$
+
+Re-calculate the dropping resistor ratings (resistance {\it and} power) for the new design.
+
+\underbar{file 01777}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+With two resistors: $R_1 = R_2 = 670 \> \Omega$, rated for at least 0.268 watts (1/2 watt would be a practical rating). 
+
+\vskip 10pt
+
+With one resistor: $R_1 = 335 \> \Omega$, rated for at least 0.536 watts (1 watt would be a practical rating). 
+
+\vskip 10pt
+
+Follow-up question: if there were no perfectly sized resistors sized to choose from (which there most likely will not be!), would it be safer to choose a higher-value resistor or a lower-value resistor for these applications?  For example, if you needed 670 $\Omega$ but the closest options on hand were 680 $\Omega$ and 500 $\Omega$, which resistance value would you select?  Explain your answer.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+If students are not yet familiar with the "+V" symbol used to denote the positive power supply connection in this schematic, let them know that this is a very common practice in electronic notation, just as it is common to use the ground symbol as a power supply connection symbol.
+
+The follow-up question is a very practical one, for it is seldom that you have the exact components on-hand to match the requirements of a circuit you are building.  It is important to understand which way is safer to err (too large or too small) when doing "as-built" design work.
+
+%INDEX% Dropping resistor, for LED
+%INDEX% LED
+%INDEX% Light-emitting diode
+%INDEX% Series dropping resistor, for LED
+
+%(END_NOTES)
+
+

@@ -1,0 +1,70 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose a crane has fifteen hydraulic solenoid valves controlling its motion:
+
+\medskip
+\item{$\bullet$} Tilt up (fast)
+\item{$\bullet$} Tilt down (fast)
+\item{$\bullet$} Tilt up (slow)
+\item{$\bullet$} Tilt down (slow)
+\item{$\bullet$} Turn left (fast)
+\item{$\bullet$} Turn right (fast)
+\item{$\bullet$} Turn left (slow)
+\item{$\bullet$} Turn right (slow)
+\item{$\bullet$} Cable up (fast)
+\item{$\bullet$} Cable down (fast)
+\item{$\bullet$} Cable up (slow)
+\item{$\bullet$} Cable down (slow)
+\item{$\bullet$} Bucket open (fast)
+\item{$\bullet$} Bucket open (slow)
+\item{$\bullet$} Bucket close (slow)
+\medskip
+
+You are part of a team building a remote "pendant" control for this crane with fifteen buttons on it for controlling each of the fifteen solenoid valves.  This control pendant connects to the main system by a multiconductor cable, but you really want to limit the number of conductors in this cable to keep it as light-weight as possible:
+
+$$\epsfbox{01415x01.eps}$$
+
+Draw a simple schematic diagram showing how a digital encoder and decoder circuit pair could be used to relay the same fifteen commands across fewer cable conductors, compared to if we used one conductor per pushbutton switch.
+
+\underbar{file 01415}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+(Solenoid drive circuitry not shown):
+
+$$\epsfbox{01415x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: can you think of any disadvantages to this crane control strategy, compared to using a thicker cable where each pushbutton has its own dedicated conductor?
+
+\vskip 10pt
+
+Challenge question: my choice of active-low inputs and outputs was not arbitrary.  Explain why.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+If time permits, you might want to ask students to sketch a "typical" solenoid drive sub-circuit, interposing the decoder outputs to DC (or AC!) solenoid valve coils.  Several options are possible here, each with their own merits and drawbacks.
+
+The challenge question is a good one to discuss, even if most students were not able to answer it on their own.  It is not good enough to merely have a system that works -- we must also have a system that is {\it safe}.
+
+%INDEX% Decoder, digital
+%INDEX% Encoder, digital
+
+%(END_NOTES)
+
+

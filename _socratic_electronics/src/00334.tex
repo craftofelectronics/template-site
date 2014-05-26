@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In an effort to obtain greater overcurrent ratings than a single fuse can provide, an engineer decides to wire two 100 amp fuses in parallel, for a combined rating of 200 amps:
+
+$$\epsfbox{00334x01.eps}$$
+
+However, after a few years of operation, the system begins blowing fuses even when the ammeter registers less than 200 amps of load current.  Upon investigation, it is found that one of the fuse holders had developed corrosion on a terminal lug where one of the wire connects:
+
+$$\epsfbox{00334x02.eps}$$
+
+Explain how a small accumulation of corrosion led to this condition of fuses blowing when there was no overcurrent condition (load current less than 200 amps), and also why connecting fuses in parallel like this is generally not a good idea.
+
+\underbar{file 00334}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Here is an electrical calculation to help explain the fuse-blowing problem.  Calculate the current through each resistor in this circuit:
+
+$$\epsfbox{00334x03.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to explain what happens to current in a circuit when it branches from one path into two or more parallel paths.  Discuss how the proportionality of the current "split" between those paths depends on the relative resistances of those two paths.
+
+Even if your students have not yet studied current divider circuits, this question provides an excellent opportunity to explore the concept.
+
+Incidentally, it is now common for some manufacturers of residential power distribution equipment to "gang" circuit breakers together in parallel for added overcurrent capacity.  This engineering practice is questionable for the exact same reason it is questionable with the fuses in this scenario: any amount of corrosion or other infiltration of electrical resistance into one of the parallel "legs" offsets the split of current between the paralleled overcurrent protection devices, forcing one of them to handle a disproportionately large share of the total current (and therefore trip sooner).
+
+%INDEX% Fuses, parallel
+
+%(END_NOTES)
+
+

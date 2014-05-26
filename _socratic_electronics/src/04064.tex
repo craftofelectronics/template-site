@@ -1,0 +1,60 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+{\it Impedance} is defined as the complex ratio of voltage and current:
+
+$${\bf Z} = {{\bf V}\over {\bf I}}$$
+
+We may determine the complex definition of impedance provided by an capacitor if we consider the equation relating capacitor voltage and capacitor current:
+
+$$i = C {d \over dt} [ v(t) ]$$
+
+First, substitute a phasor expression of voltage into the above equation, then differentiate with respect to time to obtain an expression for current:
+
+$$v(t) = e^{j \omega t}$$
+
+$$i = C {d \over dt} \left[ e^{j \omega t} \right]$$
+
+Then, divide the two phasor expressions to obtain an expression for capacitive impedance.
+
+\underbar{file 04064}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$${\bf Z_C} = {1 \over {j \omega C}} \hbox{\hskip 30pt or \hskip 30pt} {\bf Z_C} = -j {1 \over {\omega C}}$$
+
+\vskip 10pt
+
+Follow-up question: explain why the following expression for capacitive impedance is equivalent to the one shown above:
+
+$${\bf Z_C} = {1 \over {\omega C}} \>  e^{j (-\pi / 2)}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In order to solve this problem, your students must remember the basic rule for differentiating exponential functions:
+
+$${d \over dx} \left[ e^{ax} \right] = a e^{ax}$$
+
+This is one of the beauties of representing sinusoidal voltages and currents in complex exponential (phasor) form: it makes differentiation and integration relatively easy!  In this sense, the Euler relation of $e^{jx} = \cos x + j \sin x$ is a {\it transform function}, transforming one type of mathematical problem into a different (easier) type.
+
+%INDEX% Impedance, capacitive (defined by complex exponential phasor notation)
+
+%(END_NOTES)
+
+

@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A technician needs to know the value of a capacitor, but does not have a capacitance meter nearby.  In lieu of this, the technician sets up the following circuit to measure capacitance:
+
+$$\epsfbox{02114x01.eps}$$
+
+You happen to walk by this technician's workbench and ask, "How does this measurement setup work?"  The technician responds, "You connect a resistor of known value ($R$) in series with the capacitor of unknown value ($C_x$), then adjust the generator frequency until the oscilloscope shows the two voltage drops to be equal, and then you calculate $C_x$."
+
+Explain how this system works, in your own words.  Also, write the formula you would use to calculate the value of $C_x$ given $f$ and $R$.
+
+\underbar{file 02114}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I'll let you figure out how to explain the operation of this test setup.  The formula you would use looks like this:
+
+$$C_x = {1 \over {2 \pi f R}}$$
+
+\vskip 10pt
+
+Follow-up question: could you use a similar setup to measure the inductance of an unknown inductor $L_x$?  Why or why not?  
+
+\vskip 10pt
+
+Challenge question: astute observers will note that this setup might not work in real life because the ground connection of the oscilloscope is {\it not} common with one of the function generator's leads.  Explain why this might be a problem, and suggest a practical solution for it.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This method of measuring capacitance (or inductance for that matter) is fairly old, and works well if the unknown component has a high $Q$ value.
+
+%INDEX% Algebra, substitution
+%INDEX% Capacitance, inferred by measurements of AC voltage in a series RC circuit
+%INDEX% Measuring capacitance by AC voltage drops in a series RC circuit
+
+%(END_NOTES)
+
+

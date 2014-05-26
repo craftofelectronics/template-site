@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The simplest electronic device capable of converting a current signal into a voltage signal is a resistor:
+
+$$\epsfbox{02514x01.eps}$$
+
+Precision resistors typically work very well for this purpose, especially when the amount of voltage dropped across it is of little consequence.  This is why {\it shunt resistors} are frequently used in power circuitry to measure current, a low-resistance "shunt" resistance element dropping voltage in precise proportion to the current going through it.
+
+However, if we cannot afford to drop any voltage across a resistance in the circuit, this technique of current-to-voltage conversion will not be very practical.  Consider the following scientific apparatus, used to measure the photoelectric effect (electrons emitted from a solid surface due to light striking it):
+
+$$\epsfbox{02514x02.eps}$$
+
+The current output by such a phototube is {\it very} small, and the voltage output by it is smaller yet.  If we are to measure current through this device, we will have to find some way other than a shunt resistor to do it.
+
+Enter the operational amplifier, to the rescue!  Explain how the following opamp circuit is able to convert the phototube's weak current signal into a strong voltage signal, without imposing any significant resistance into the phototube circuit:
+
+$$\epsfbox{02514x03.eps}$$
+
+\underbar{file 02514}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The design of this circuit is complicated by the existence of bias currents at the opamp inputs.  You may find it helpful to analyze a simplified version of the same circuit.  Please bear in mind that this simplified circuit would only work if the opamp had absolutely no input bias currents at all:
+
+$$\epsfbox{02514x04.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Note to your students that this is one of those applications where even "tiny" input bias currents can affect the results.  In this particular case, the phototube outputs miniscule current at best, and so we {\it must} compensate for the existence of opamp bias currents.
+
+%INDEX% Current-to-voltage converter, opamp
+
+%(END_NOTES)
+
+

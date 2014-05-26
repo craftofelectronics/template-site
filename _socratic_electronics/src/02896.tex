@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+What do you think this logic buffer gate will do, with the output signal "feeding back" to the input?
+
+$$\epsfbox{02896x01.eps}$$
+
+What do you think this buffer will do when each input switch is separately pressed?
+
+$$\epsfbox{02896x02.eps}$$
+
+Why does the second buffer circuit need a resistor in the feedback loop?
+
+\underbar{file 02896}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The first circuit will "latch" in whatever logic state it powers up in.  The second circuit will be "set" or "reset" according to which pushbutton switch is actuated, then latch in that state when neither switch is being pressed.  The resistor prevents the gate from "seeing" a short circuit at its output when a pushbutton switch is actuated to change states.
+
+\vskip 10pt
+
+Challenge question: how would you determine an appropriate size for the resistor?  Don't just guess -- base your answer on specific performance parameters of the gate!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a very crude sort of latch circuit, but it is easier to understand than the typical cross-connected NOR or NAND gate latches commonly introduced to circuits.  One of the major ideas in this question is the concept of {\it positive feedback}, and how this form of feedback leads to hysteretic behavior.  If appropriate, refer your students to SCRs and other thyristors as previous examples of hysteretic devices based on positive feedback.
+
+%INDEX% Latch circuit, using logic buffer gate
+%INDEX% Positive feedback, in digital logic gate circuit
+
+%(END_NOTES)
+
+

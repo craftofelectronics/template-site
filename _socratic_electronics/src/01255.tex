@@ -1,0 +1,38 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Practical CMOS logic gates contain more than just MOSFETs.  Here is a schematic diagram for a typical inverter gate circuit, with protection diodes:
+
+$$\epsfbox{01255x01.eps}$$
+
+Explain what specific conditions each protection diode protects against.
+
+\underbar{file 01255}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Two of the diodes protect against input voltages exceeding the supply rails, while the third diode protects against a reverse-connected power supply.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It is important that students realize these "protection" diodes do not allow circuit designers and builders to disregard good design practices with impunity.  Ask your students, in each case, how each protection diode accomplishes its task of protecting the MOSFETs from damage.  Does this mean the gate circuit will be able to withstand abnormal conditions indefinitely?  Why or why not?
+
+%INDEX% CMOS gate circuit, internal schematic
+%INDEX% Input protection diodes, CMOS logic
+
+%(END_NOTES)
+
+

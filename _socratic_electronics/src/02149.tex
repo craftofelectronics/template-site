@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student builds this simple TRIAC power control circuit to dim a light bulb:
+
+$$\epsfbox{02149x01.eps}$$
+
+The only problem with it is the lack of full control over the light bulb's brightness.  At one extreme of the potentiometer's range, the light bulb is at full brightness.  As the potentiometer is moved toward the direction of dimming, though, the light bulb approaches a medium level of intensity, then suddenly de-energizes completely.  In other words, this circuit is incapable of providing fine control of power from "off" to "full" light.  The range of control seems to be from full brightness to half-brightness, and nothing below that.
+
+Connecting an oscilloscope across the light bulb terminals (using both channels of the oscilloscope to measure voltage drop in the "differential" mode), the waveform looks like this at full power:
+
+$$\epsfbox{02149x02.eps}$$
+
+When the potentiometer is adjusted to the position giving minimum light bulb brightness (just before the light bulb completely turns off), the waveform looks like this:
+
+$$\epsfbox{02149x03.eps}$$
+
+Explain why this circuit cannot provide continuous adjustment of light bulb brightness below this level.
+
+\underbar{file 02149}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The TRIAC's triggering is based on amplitude of the power source sine wave only.  At minimum (adjustable) power, the TRIAC triggers exactly at the sine wave's peak, then latches on until the load current crosses zero.  A shorter waveform duty cycle is simply not possible with this scheme because there is no way to trigger the TRIAC at a point past the sine wave peak.
+
+\vskip 10pt
+
+Follow-up question \#1: which direction must the student rotate the potentiometer shaft (CW or CCW) in order to {\it dim} the lamp, based on the pictorial diagram shown in the question?
+
+\vskip 10pt
+
+Follow-up question \#2: explain how the oscilloscope is being used by the student, with two probes, channel B inverted, and the "Add" function engaged.  Why is this mode of usage important for this kind of voltage measurement?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Some students find this concept difficult to grasp, so it may be necessary to discuss what the load power waveforms appear like at different power settings.
+
+%INDEX% Power control circuit, TRIAC
+
+%(END_NOTES)
+
+

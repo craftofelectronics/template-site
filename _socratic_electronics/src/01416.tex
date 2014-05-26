@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The type 74HC154 integrated circuit is a standard TTL decoder, 4-line to 16-line.  Its block symbol looks like this:
+
+$$\epsfbox{01416x01.eps}$$
+
+What do the "wedge" symbols next to the output lines represent?  Also, what purpose do the $\overline{G1}$ and $\overline{G2}$ inputs serve, and why is there an ampersand character (\&) next to them?
+
+\underbar{file 01416}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The "wedge" symbols represent complementation in the IEEE/ANSI digital schematic convention, similar to "bubbles" placed near outputs or inputs of traditional logic gate symbols.  Similarly, the ampersand character represents the AND function.
+
+Perhaps the best way to determine what the $\overline{G1}$ and $\overline{G2}$ inputs do is to examine the truth table given in the datasheet for this integrated circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Much may be learned from a good datasheet.  This question, and others like it, prompts students to research manufacturer datasheets as a learning experience.
+
+Note the truth table (likely) given in the datasheets your students collect.  How are "irrelevant" states denoted in the truth tables?  Ask your students what this means (especially with reference to the question regarding the strobe inputs).
+
+%INDEX% 74HC154 decoder/demultiplexer
+%INDEX% Decoder, digital
+%INDEX% IEEE/ANSI digital circuit notation
+%INDEX% Strobe input, digital logic
+
+%(END_NOTES)
+
+

@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following modification may be made to the circuit to provide it with additional output current capability:
+
+$$\epsfbox{03198x01.eps}$$
+
+Here, six CMOS inverters (IC part number 4049) are ganged together in parallel to supply significantly more sourcing and sinking current capability than the LM339-with-pullup-resistor could on its own.  Since CMOS logic gates are inherently on-or-off devices, they have no trouble handling the square wave output of the LM339.
+
+Two questions here: first, why all the resistors at the outputs of the inverter gates?  Why not just connect all the inverter outputs directly in parallel?  Secondly, what value of resistor would you suggest at the output of each gate ($R_5$ through $R_{10}$)?
+
+\underbar{file 03198}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The resistors prevent the (unlikely) occurrence of a short-circuit between two or more inverter gates, if one gate happens to fail high or low, or if some gates are significantly slower than others (and thus will "fight" with the faster gates during each transition).
+
+\vskip 10pt
+
+Challenge question: adding inverter gates to the output of this circuit has an interesting effect on the duty cycle control.  The potentiometer will now act backward from the way it was before (decreasing duty cycle when it formerly increased duty cycle, and visa-versa).  Explain why.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question may or may not be suitable for your students, depending on whether or not they have studied logic gates yet.  If they have not yet studied digital circuits, it may be wise to skip this question!
+
+Note that I did not answer the question of resistor sizes.  Discuss this with your students, and let them determine how these resistors should be sized.  Let them have access to datasheets for the 4049 inverter IC, and ask them what parameter(s) would be the most important in this decision.
+
+If no one notices, point out how the power supply wires are drawn for the six-gate (hex) inverter.  This is a common way to show power wiring for multiple gates (or opamps, or any other sort of IC where complex elements are duplicated).
+
+%(END_NOTES)
+
+

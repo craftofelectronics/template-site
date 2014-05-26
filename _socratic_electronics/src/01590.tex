@@ -1,0 +1,84 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This class-B audio power amplifier circuit has a problem: its output is very distorted, resembling half of a sine wave when tested with an input signal from a function generator:
+
+$$\epsfbox{01590x01.eps}$$
+
+$$\epsfbox{01590x02.eps}$$
+
+List some of the possible faults in this system, based on the output signal shown by the oscilloscope.  Also, determine which components, if any, are known to be good based on the same data:
+
+\goodbreak
+
+\medskip
+\item{} {\bf Possible faults in the system:}
+\item{$\bullet$} Fault \#1:
+\item{$\bullet$} Fault \#2:
+\item{$\bullet$} Fault \#3:
+\medskip
+
+\vskip 10pt
+
+\medskip
+\item{} {\bf Components known to be okay in the system:}
+\item{$\bullet$} Component \#1:
+\item{$\bullet$} Component \#2:
+\item{$\bullet$} Component \#3:
+\medskip
+
+
+\underbar{file 01590}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+First, realize that we cannot know which half of the push-pull circuit is failed, due to the isolation of the transformer and the resulting uncertainty of polarity.  {\it Please note that the lists shown here are not exhaustive.}
+
+\medskip
+\item{} {\bf Possible faults in the system:}
+\item{$\bullet$} Fault \#1: Transistor $Q_2$ or $Q_3$ failed open
+\item{$\bullet$} Fault \#2: Resistor $R_5$ or $R_8$ failed open
+\item{$\bullet$} Fault \#3: Half of transformer primary winding failed open
+\medskip
+
+\vskip 10pt
+
+\medskip
+\item{} {\bf Components known to be okay in the system:}
+\item{$\bullet$} Component \#1: Secondary winding of transformer
+\item{$\bullet$} Component \#2: Resistor $R_4$
+\item{$\bullet$} Component \#3: Input coupling capacitor $C_3$
+\medskip
+
+\vskip 10pt
+
+Follow-up question \#1: suppose that after testing this amplifier on your workbench with a "dummy" load (8 $\Omega$ resistor connected to the speaker terminals), you happened to notice that transistor $Q_2$ was slightly warm to the touch, while transistor $Q_3$ was still at room temperature.  What would this extra information indicate about the amplifier's problem?
+
+\vskip 10pt
+
+Follow-up question \#2: describe the potential safety hazards involved with touching a power transistor in an operating circuit.  If you wished to compare the operating temperature of these two transistors, how could you safely do it?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The symmetry inherent in push-pull amplifiers makes troubleshooting easier in some respects.  As always, though, component-level troubleshooting requires a detailed understanding of component function within the context of the specific circuit being diagnosed.  No matter how "simple" the circuit may be, a student will be helpless to troubleshoot it down to the component level unless they understand how and why each component functions.
+
+Giving the clue regarding transistor temperature is important for two reasons.  First, it provides more data for students to use in confirming fault possibilities.  Second, it underscores the importance of non-electrical data.  Efficient troubleshooters make (safe) use of all available data when investigating a problem, and that often requires creative thinking.
+
+%INDEX% Troubleshooting, class-B (push-pull) audio amplifier
+
+%(END_NOTES)
+
+

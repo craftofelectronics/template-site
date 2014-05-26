@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The resistance of a piece of copper wire at temperature $T$ (in degrees Celsius) is given by the following formula:
+
+$$R_T = R_o \left[1 + 0.004041(T - 20)\right]$$
+
+Suppose you wished to alter this formula so it could accept values for $T$ in units of degrees Fahrenheit instead of degrees Celsius.  Suppose also that the only formula you are able to find for converting between Fahrenheit ($T_F$) and Celsius ($T_C$) is this one:
+
+$$T_F = T_C \left({9 \over 5}\right) + 32$$
+
+Combined these two formulae into one solving for the resistance of a copper wire sample ($R_T$) at a specific temperature in degrees Celsius ($T_C$), given the specimen's "reference" resistance ($R_o$) at 20$^{o}$ Celsius (room temperature).
+
+\underbar{file 03068}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$R_T = R_o \left[1 + 0.004041\left({5 \over 9}T_F - 37.\overline{77}\right)\right]$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Solving this algebraic problem requires both manipulation of the temperature equation {\it and} substitution of variables.  One important detail I incorporated into this question is the lack of a subscript for $T$ in the original resistance formula.  In the first sentence I identify that temperature as being in degrees Celsius, but since there is no other $T$ variables in the equation, I did not have to include a "C" subscript.  When students look to the Celsius-Fahrenheit conversion formula to substitute into the resistance formula, they must decide which $T$ in the conversion formula to use, $T_F$ or $T_C$.  Here, I purposely wrote the conversion formula in terms of $T_F$ to see how many students would blindly substitute $T_F$ for $T$ in the resistance formula instead of properly identifying $T_C$ as the variable to substitute and doing the work of manipulation.
+
+Far from being a "trick" question, this scenario is very realistic.  Formulae found in reference manuals do not necessarily use standardized variables, but rather cast their variables according to context.  Multiple formulae will most likely not be written with {\it identical} subscripted variables just waiting to be substituted.  It is the domain of the intelligent technician, engineer, or scientist to figure out what variables are appropriate to substitute based on context!
+
+%INDEX% Algebra, manipulating equations
+%INDEX% Algebra, substitution
+
+%(END_NOTES)
+
+

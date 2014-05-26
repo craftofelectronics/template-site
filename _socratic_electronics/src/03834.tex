@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A different way to view the functions of two-input logic gates is to think of them in terms of {\it signal controllers}, where the status of one input affects how the other input's signal passes through to the output.  The generic schematic diagram for this format is as such:
+
+$$\epsfbox{03834x01.eps}$$
+
+Identify the types of logic gates which do the following (there is more than one type of gate for each of the following rules!):
+
+\medskip
+\item{$\bullet$} $B = A$ when Control is high
+\item{$\bullet$} $B = A$ when Control is low
+\item{$\bullet$} $B = \overline{A}$ when Control is high
+\item{$\bullet$} $B = \overline{A}$ when Control is low
+\medskip
+
+Also, explain how an understanding of this can be helpful in troubleshooting faulted logic gates.
+
+\underbar{file 03834}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} $B = A$ when Control is high: {\bf AND} gate and {\bf XNOR} gate.
+\item{$\bullet$} $B = A$ when Control is low: {\bf OR} gate and {\bf XOR} gate.
+\item{$\bullet$} $B = \overline{A}$ when Control is high: {\bf NAND} gate and {\bf XOR} gate.
+\item{$\bullet$} $B = \overline{A}$ when Control is low: {\bf NOR} gate and {\bf XNOR} gate.
+\medskip
+
+\vskip 10pt
+
+Follow-up question: explain why XOR and XNOR gates are so useful as signal controllers.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a very useful way to think of the different logic gate types, as it is often required to use a gate as a controlled buffer or controlled inverter.
+
+%INDEX% Truth tables for different gate types
+
+%(END_NOTES)
+
+

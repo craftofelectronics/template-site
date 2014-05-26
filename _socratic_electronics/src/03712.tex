@@ -1,0 +1,67 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how all component voltages and currents in this circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03712x01.eps}$$
+
+\medskip
+\item{$\bullet$} Transistor $Q_1$ fails open (collector-to-emitter):
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_1$ fails shorted (collector-to-emitter):
+\vskip 5pt
+\item{$\bullet$} Reluctor magnet weakens:
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_1$ fails shorted:
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_1$ fails open:
+\vskip 5pt
+\item{$\bullet$} Transformer ("coil") $T_1$ primary winding fails open:
+\vskip 5pt
+\item{$\bullet$} Transformer ("coil") $T_1$ secondary winding fails open:
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03712}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Transistor $Q_1$ fails open (collector-to-emitter): {\it No current through $T_1$ primary or secondary, no high-voltage pulses across $T_1$ secondary, full 12 volts (constant) across $C_1$, voltage pulses still seen across $L_1$, no spark at spark plug.}
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_1$ fails shorted (collector-to-emitter): {\it Constant current through $T_1$ primary, no high-voltage pulses across $T_1$ secondary, nearly 0 volts across $C_1$, very weak voltage pulses across $L_1$, no spark at spark plug.}
+\vskip 5pt
+\item{$\bullet$} Reluctor magnet weakens: {\it Smaller voltage pulses across $L_1$, smaller current pulses through $T_1$ primary, smaller voltage pulses across $T_2$ secondary, weak or no spark at spark plug.}
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_1$ fails shorted: {\it Constant current through $T_1$ primary, no high-voltage pulses across $T_1$ secondary, nearly 0 volts across $C_1$, normal voltage pulses across $L_1$, no spark at spark plug.}
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_1$ fails open: {\it Excessive voltage pulses seen at $Q_1$ collector (with respect to ground), very rapid failure of $Q_1$.}
+\vskip 5pt
+\item{$\bullet$} Transformer ("coil") $T_1$ primary winding fails open: {\it No current through $T_1$ primary or secondary, no high-voltage pulses across $T_1$ secondary, zero volts (constant) across $C_1$, voltage pulses still seen across $L_1$, no spark at spark plug.}
+\vskip 5pt
+\item{$\bullet$} Transformer ("coil") $T_1$ secondary winding fails open: {\it All voltages and currents fairly normal except for no voltage across $T_1$ secondary and no spark at spark plug, perhaps slightly greater voltage pulses seen at $Q_1$ collector with respect to ground.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in simple electronic ignition circuit
+
+%(END_NOTES)
+
+

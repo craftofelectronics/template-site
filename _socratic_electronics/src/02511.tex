@@ -1,0 +1,131 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the current through resistor $R_2$ in this opamp circuit for several different values of $R_2$:
+
+$$\epsfbox{02511x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$R_2$ & $I_{R_2}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+1 k$\Omega$ &    \cr
+%
+\noalign{\hrule}
+%
+% Third row
+2 k$\Omega$ &    \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+3 k$\Omega$ &    \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+4 k$\Omega$ &    \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+5 k$\Omega$ &    \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+6 k$\Omega$ &    \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+For each value of $R_2$, what is it that establishes the amount of current through it?  Do you see any practical value for a circuit such as this?
+
+\underbar{file 02511}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$R_2$ & $I_{R_2}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+1 k$\Omega$ & 3 mA \cr
+%
+\noalign{\hrule}
+%
+% Third row
+2 k$\Omega$ & 3 mA \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+3 k$\Omega$ & 3 mA \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+4 k$\Omega$ & 3 mA \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+5 k$\Omega$ & 3 mA \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+6 k$\Omega$ & 3 mA \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+This circuit acts like a {\it current mirror}, except much more precise.
+
+\vskip 10pt
+
+Follow-up question: what factor(s) limit the greatest resistance value of $R_2$ that the operational amplifier may sustain 3 milliamps of current through?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Besides reviewing the purpose of a current mirror circuit, this question draws students' attention to the current-regulating capabilities of an operational amplifier by having them analyze it as though it were simply a noninverting voltage amplifier circuit.
+
+%INDEX% Constant-current circuit, opamp
+%INDEX% Voltage-to-current converter, opamp
+
+%(END_NOTES)
+
+

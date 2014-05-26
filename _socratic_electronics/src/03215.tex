@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+When AC induction motors are powered by variable-frequency drives (VFDs), frequency to the motor is not the only parameter varied.  VFDs are also equipped with the ability to vary voltage along with frequency, and with good reason.  If a VFD were used to decrease the frequency to an AC induction motor to make it spin slower, and it were to hold the RMS voltage constant to that motor, the motor would likely overheat.
+
+Explain {\it in electrical terms} why an AC motor tends to overheat given a decreased line frequency and a constant line voltage.  Be sure to show some sort of equation in your answer giving a mathematical basis for the overheating.
+
+\underbar{file 03215}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Since the motor's inductive reactance varies directly with frequency ($X_L = 2 \pi f L$), voltage must also vary directly with frequency to maintain a constant AC current to the motor windings ($I = {V \over X}$).  If the $V \over f$ ratio is not stable, current will increase as frequency decreases, possibly overheating the motor at low speeds.
+
+Assuming that reactance ($X$) is the dominant form of impedance in the motor circuit:
+
+$$X_L = 2 \pi f L \hbox{\hskip 10pt therefore, \hskip 10pt} X_L \propto f$$
+
+$$I = {V \over X} \hbox{\hskip 10pt therefore, \hskip 10pt} I \propto {V \over f}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+{\bf This question is intended for exams only and not worksheets!}.
+
+%INDEX% Variable frequency drive (VFD), for AC motor
+
+%(END_NOTES)
+
+

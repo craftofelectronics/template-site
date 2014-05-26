@@ -1,0 +1,142 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose we have two equivalent LR networks, one series and one parallel, such that they have the exact same total impedance (${\bf Z_{total}}$):
+
+$$\epsfbox{03291x01.eps}$$
+
+We may write an equation for the impedance of each network in rectangular form, like this:
+
+$${\bf Z_s} = R_s + jX_s  \hbox{\hskip 30pt (series network)}$$
+
+$${\bf Z_p} = {1 \over {{1 \over R_p} - j{1 \over X_p}}}  \hbox{\hskip 30pt (parallel network)}$$
+
+Since we are told these two networks are equivalent to one another, with equal impedances, these two expressions in rectangular form must also be equal to each other:
+
+$$R_s + jX_s = {1 \over {{1 \over R_p} - j{1 \over X_p}}}$$
+
+Algebraically reduce this equation to its simplest form, showing how $R_s$, $R_p$, $X_s$, and $X_p$ relate.
+
+\vskip 10pt
+
+Challenge question: combine the result of that simplification with the equations solving for {\it scalar} impedance of series and parallel networks ($Z_s^2 = R_s^2 + X_s^2$ for series and $Z_p^2 = {1 \over {{1 \over R_p^2} + {1 \over X_p^2}}}$ for parallel) to prove the following transformative equations, highly useful for "translating" a series network into a parallel network and visa-versa:
+
+$$Z^2 = R_p R_s$$
+
+$$Z^2 = X_p X_s$$
+
+\underbar{file 03291}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Due to the complexity of the algebra, I will show the complete solution here:
+
+$$R_s + jX_s = {1 \over {{1 \over R_p} - j{1 \over X_p}}}$$
+
+$$\left(R_s + jX_s\right) \left({{1 \over R_p} - j{1 \over X_p}}\right) = 1$$
+
+$${R_s \over R_p} - j{R_s \over X_p} + j{X_s \over R_p} -j^2{X_s \over X_p} = 1$$
+
+$${R_s \over R_p} - j{R_s \over X_p} + j{X_s \over R_p} + {X_s \over X_p} = 1$$
+
+$${R_s \over R_p} + {X_s \over X_p} + j\left({X_s \over R_p} - {R_s \over X_p} \right) = 1$$
+
+$$\hbox{\it Separating real and imaginary terms . . .}$$
+
+$${R_s \over R_p} + {X_s \over X_p} = 1 \hbox{\hskip 30pt (Real)}$$
+
+$$j \left({X_s \over R_p} - {R_s \over X_p}\right) = j0 \hbox{\hskip 30pt (Imaginary)}$$
+
+$$\hbox{\it Just working with the imaginary equation now . . .}$$
+
+$$j \left({X_s \over R_p} - {R_s \over X_p}\right) = j0$$
+
+$${X_s \over R_p} - {R_s \over X_p} = 0$$
+
+$${X_s \over R_p} = {R_s \over X_p}$$
+
+$$X_p X_s = R_p R_s \hbox{\hskip 20pt ({\bf Solution})}$$
+
+\vskip 10pt
+
+In answer to the challenge question, where we now introduce scalar relationships for series and parallel networks:
+
+$$Z_s^2 = R_s^2 + X_s^2 \hbox{\hskip 30pt Series impedance}$$
+
+$$Z_p^2 = {1 \over {{1 \over R_p^2} + {1 \over X_p^2}}} \hbox{\hskip 30pt Parallel impedance}$$
+
+$$\hbox{\it Solving each scalar impedance equation for reactance }X \hbox{\it . . .}$$
+
+$$X_s^2 = Z_s^2 - R_s^2 \hbox{\hskip 30pt} X_p^2 = {1 \over {{1 \over Z_p^2} - {1 \over R_p^2}}}$$
+
+\goodbreak
+
+$$\hbox{\it Preparing the original solution for subsitution . . .}$$
+
+$$X_p X_s = R_p R_s$$
+
+$$(X_p X_s)^2 = (R_p R_s)^2$$
+
+$$X_p^2 X_s^2 = R_p^2 R_s^2$$
+
+$$\hbox{\it Subsituting these definitions for reactance into this prepared equation . . .}$$
+
+$$\left({1 \over {{1 \over Z_p^2} - {1 \over R_p^2}}}\right) \left(Z_s^2 - R_s^2\right) = R_p^2 R_s^2$$
+
+%$${Z_s^2 - R_s^2 \over {{1 \over Z_p^2} - {1 \over R_p^2}}} = R_p^2 R_s^2$$
+
+$$Z_s^2 - R_s^2 = (R_p^2 R_s^2) \left({1 \over Z_p^2} - {1 \over R_p^2}\right)$$
+
+$$Z_s^2 - R_s^2 = {R_p^2 R_s^2 \over Z_p^2} - {R_p^2 R_s^2 \over R_p^2}$$
+
+$$Z_s^2 - R_s^2 = {R_p^2 R_s^2 \over Z_p^2} - R_s^2$$
+
+$$Z_s^2 = {R_p^2 R_s^2 \over Z_p^2}$$
+
+$$Z_p^2 Z_s^2 = R_p^2 R_s^2$$
+
+$$(Z_p Z_s)^2 = (R_p R_s)^2$$
+
+$$\sqrt{(Z_p Z_s)^2} = \sqrt{(R_p R_s)^2}$$
+
+$$Z_p Z_s = R_p R_s$$
+
+$$\hbox{\it Since the two networks are known to be equivalent, } Z_p = Z_s \hbox{\it , which I will now simply label as }Z \hbox{\it . . .}$$
+
+$$Z Z = R_p R_s$$
+
+$$Z^2 = R_p R_s \hbox{\hskip 20pt ({\bf Solution}})$$
+
+$$\hbox{\it And since we know that } R_p R_s = X_p X_s \hbox{ \it as well . . .} $$
+
+$$Z^2 = X_p X_s \hbox{\hskip 20pt ({\bf Solution})}$$
+
+\vskip 10pt
+
+Follow-up question: the original equivalent networks were comprised of a resistor ($R$) and an inductor ($L$).  Show that these solutions ($Z^2 = R_p R_s$ and $Z^2 = X_p X_s$) hold true for resistor-{\it capacitor} series and parallel equivalent networks as well.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Yes, it is out of character for me to show two pages of solution in the "answer" section of one of my questions!  I usually do not provide this much information in my answers.  However, in this case I believe there is still much to be learned from examining a proof like this shown step-by-step.  
+
+You may wish to ask your students to explain the rationale behind each step, especially in the first part where we deal with real and imaginary terms.  One point that may be especially confusing is where I separate the real and imaginary terms, setting the imaginary quantity equal to $j0$.  Some students may not see where the $j0$ comes from, since the preceding (complex) expression was simply equal to 1.  Remind them that "1" is a real quantity, possessing an (implied) imaginary component of 0, and that it could very well have been written as $1 + j0$.
+
+%INDEX% Converting series impedances to parallel impedances, and visa-versa
+%INDEX% Equivalent networks, series and parallel impedances
+
+%(END_NOTES)
+
+

@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student connects a model CA3130 operational amplifier as a voltage follower (or voltage buffer), which is the simplest type of negative feedback op-amp circuit possible:
+
+$$\epsfbox{00942x01.eps}$$
+
+With the noninverting input connected to ground (the midpoint in the split +6/-6 volt power supply), the student expects to measure 0 volts DC at the output of the op-amp.  This is what the DC voltmeter registers, but when set to AC, it registers substantial AC voltage!
+
+Now this is strange.  How can a simple voltage buffer output {\it alternating current} when its input is grounded and the power supply is pure DC?  Perplexed, the student asks the instructor for help.  "Oh," the instructor says, "you need a compensation capacitor between pins 1 and 8."  What does the instructor mean by this cryptic suggestion?
+
+\underbar{file 00942}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Some op-amps are inherently unstable when operated in negative-feedback mode, and will oscillate on their own unless "phase-compensated" by an external capacitor.
+
+\vskip 10pt
+
+Follow-up question: Are there any applications of an op-amp such as the CA3130 where a compensation capacitor is not needed, or worse yet would be an impediment to successful circuit operation?  Hint: some models of op-amp (such as the model 741) have built-in compensation capacitors!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Your students should have researched datasheets for the CA3130 op-amp in search of an answer to this question.  Ask them what they found!  Which terminals on the CA3130 op-amp do you connect the capacitor between?  What size of capacitor is appropriate for this purpose?
+
+Given the fact that some op-amp models come equipped with their own built-in compensation capacitor, what does this tell us about the CA3130's need for an external capacitor?  Why didn't the manufacturer simply integrate a compensation capacitor into the CA3130's circuitry as they did with the 741?  Or, to phrase the question more directly, ask your students to explain what {\it disadvantage} there is in connecting a compensation capacitor to an op-amp.
+
+%INDEX% Compensation, opamp
+%INDEX% Opamp compensation
+
+%(END_NOTES)
+
+

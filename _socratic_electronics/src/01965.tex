@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{01965x01.eps}$$
+
+\underbar{file 01965}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I have had success with the following values:
+
+\medskip
+\item{$\bullet$} $V_{CC}$ = 12 to 24 volts
+\item{$\bullet$} $C_1$ = 0.47 $\mu$F
+\item{$\bullet$} $C_2$ = 0.47 $\mu$F
+\item{$\bullet$} $T_1$ = 1000:8 $\Omega$ audio matching transformer (used as center-tap inductor)
+\item{$\bullet$} $R_1$ = 1.5 M$\Omega$
+\item{$\bullet$} $Q_1$ = part number 2N3403
+\medskip
+
+Capacitors $C_1$ and $C_2$ need not be equal value, since they serve entirely different purposes: $C_1$ is the tank circuit capacitance, while $C_2$ is merely a coupling capacitor.  I just happened to be blessed with an abundance of 0.47 $\mu$F capacitors when I prototyped this circuit, so I chose that value for both capacitors!
+
+With these component values, the output waveform I measured was not very sinusoidal, but at least it was oscillating.  The harmonic output of a Hartley oscillator is substantially greater than a Colpitts, primary because the two capacitors in the Colpitts design act as decoupling capacitances, shunting high-order harmonic signals to ground.  
+
+Of course, in order to predict the frequency of oscillation in this Hartley oscillator circuit, you must know the inductance of the audio transformer's primary winding!
+
+You might want to quiz your students on the purpose of resistor $R_1$, since it usually only has to be present at power-up to initiate oscillation!
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (Hartley oscillator, series-fed BJT)
+
+%(END_NOTES)
+
+

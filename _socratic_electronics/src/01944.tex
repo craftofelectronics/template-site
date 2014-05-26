@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{01944x01.eps}$$
+
+\underbar{file 01944}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I recommend using 1N400X series rectifying diodes for all rectifier circuit designs.  Make sure that the resistance value you specify for your load is not so low that the resistor's power dissipation is exceeded.  
+
+Watch out for harmonics in the power line voltage creating problems with RMS/peak voltage relationships.  If this is a problem, try using a ferroresonant transformer to filter out some of the harmonic content.  {\it Do not} try to use a sine-wave signal generator as an alternate source of AC power, because most signal generators have internal impedances that are much too high for such a task.
+
+It is difficult to precisely calculate the DC load voltage from a rectifier circuit such as this when the transformer secondary voltage is relatively low.  The diodes' forward voltage drop essentially distorts the rectified waveform so that it is not quite the same as what you would expect a full-wave rectified waveform to be:
+
+$$\epsfbox{01944x02.eps}$$
+
+Accurate calculation of the actual rectified wave-shape's average voltage value requires integration of the half-sine peak over a period less than $\pi$ radians, which may very well be beyond the capabilities of your students.  This is why I request approximations only on this parameter.
+
+One approximation that works fairly well is to take the AC RMS voltage (in this case, half of the secondary winding's output, since this is a center-tap design), convert it to {\it average} voltage (multiply by 0.9), and then subtract the forward junction voltage lost by the diode (0.7 volts typical for silicon).
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (Full-wave center-tap bridge rectifier)
+
+%(END_NOTES)
+
+

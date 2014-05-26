@@ -1,0 +1,63 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+Electronic power conversion circuits known as {\it inverters} convert DC into AC by using transistor switching elements to periodically reverse the polarity of the DC voltage.  Usually, inverters also increase the voltage level of the input power by applying the switched-DC voltage to the primary winding of a step-up transformer.  You may think of an inverter's switching electronics as akin to double-pole, double-throw switch being flipped back and forth many times per second:
+
+$$\epsfbox{01489x01.eps}$$
+
+The first commercially available inverters produced simple square-wave output:
+
+$$\epsfbox{01489x02.eps}$$
+
+However, this caused problems for most power transformers designed to operate on sine-wave AC power.  When powered by the square-wave output of such an inverter, most transformers would {\it saturate} due to excessive magnetic flux accumulating in the core at certain points of the waveform's cycle.  To describe this in the simplest terms, a square wave possesses a greater {\it volt-second product} than a sine wave with the same peak amplitude and fundamental frequency.
+
+This problem could be avoided by decreasing the peak voltage of the square wave, but then some types of powered equipment would experience difficulty due to insufficient (maximum) voltage:
+
+$$\epsfbox{01489x03.eps}$$
+
+A workable solution to this dilemma turned out to be a modified duty cycle for the square wave: 
+
+$$\epsfbox{01489x04.eps}$$
+
+Calculate the fraction of the half-cycle for which this modified square wave is "on," in order to have the same volt-second product as a sine wave for one-half cycle (from 0 to $\pi$ radians):
+
+$$\epsfbox{01489x05.eps}$$
+
+Hint: it is a matter of calculating the respective {\it areas} underneath each waveform in the half-cycle domain.
+
+\underbar{file 01489}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Fraction = ${2 \over \pi} \approx 0.637$
+
+\vskip 10pt
+
+Challenge question: prove that the duty cycle fraction necessary for the square wave to have the same {\it RMS value} as the sine wave is exactly ${1 \over 2}$.  Hint: the volts-squared-second product of the two waveforms must be equal for their RMS values to be equal!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This problem is a great example of how integration is used in a very practical sense.  Even if your students are unfamiliar with calculus, they should at least be able to grasp the concept of equal volt-second products for the two waveforms, and be able to relate that to the amount of magnetic flux accumulating in the transformer core throughout a cycle.
+
+%INDEX% Volt-second product
+%INDEX% Saturation, transformer
+
+%(END_NOTES)
+
+

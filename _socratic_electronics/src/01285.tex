@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose a technician needs 167 mH of inductance in a circuit, but only has 500 mH and 250 mH inductors on hand.  He decides he should be able to achieve approximately 167 mH of inductance easily enough by connecting these two inductors in parallel with one another on a printed circuit board:
+
+$$\epsfbox{01285x01.eps}$$
+
+However, upon testing this parallel inductor arrangement, the technician finds the total inductance to be significantly {\it less} than the 167 mH predicted.  Puzzled, he asks a fellow technician for help.  The other technician inspects the board, and immediately suggests that the two inductors be re-located with their axes perpendicular to one another.  The first technician doesn't understand why the physical location of the inductors should matter.  After all, it never mattered how he located resistors and capacitors with respect to one another, so long as their connecting wires (or board traces) went to the right places.  Can you explain to him why inductors might be sensitive to physical orientation?
+
+\underbar{file 01285}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Presently, the respective magnetic fields from the two inductors are linking with each other in an opposing manner!
+
+\vskip 10pt
+
+Follow-up question: coils placed in linear proximity to one another will magnetically "link" in such a way as to either "boost" (Figure {\bf A}) or "buck" (Figure {\bf B}) one another.  If placed perpendicular (90$^{o}$) to one another, the magnetic linking is nonexistent and the two inductors act as independent entities:
+
+$$\epsfbox{01285x02.eps}$$
+
+What trigonometric function (sine, cosine, tangent, cotangent, secant, cosecant) follows this same pattern: full positive at 0$^{o}$, full negative at 180$^{o}$, and zero at 90$^{o}$?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+A potential point of confusion here is that some students may think the orientation being spoken of is absolute: with reference to the earth's magnetic field.  What I'm trying to get them to see, however, is the relationship between the two coils' magnetic fields, which is an entirely different matter.  To expose this misunderstanding, ask your students whether or not the position of the printed circuit board with respect to compass directions (north, south, east, or west) would have any effect on these two inductors' combined inductance.  For those who mistakenly answer "yes" to this question, review Faraday's Law of electromagnetic induction: that induced voltage only occurs when there is a {\it change} of magnetic flux over time, and that the earth's magnetic field is constant (for all practical purposes).
+
+The follow-up question gets students thinking in terms of the mutual inductance as a function of the physical angle between the two inductors, and relating a pattern (analyzed at three points) to common trig functions.  This form of reasoning is very useful in problem-solving, because the ability to see patterns as a function of a certain variable (such as an angle) is the first step in mathematically modeling a system.
+
+%INDEX% Interference between inductors
+%INDEX% Mutual inductance
+%INDEX% Trigonometry, deriving functions from data
+
+%(END_NOTES)
+
+

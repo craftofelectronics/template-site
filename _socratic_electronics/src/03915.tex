@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following schematic diagram shows an eight-step arbitrary waveform generator.  The analog multiplexer selects one of the eight potentiometer signals at a time, stepping from one to the next at the pace of the clock pulse:
+
+$$\epsfbox{03915x01.eps}$$
+
+Explain what effect a {\it shorted} bilateral switch would have on the output waveform.  Be as specific as possible.
+
+\underbar{file 03915}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If one of the bilateral switches were to fail shorted, it would skew all the arbitrary waveform voltages "toward" the one with the failed switch, distorting the waveform from its original shape. 
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+A failed-shorted bilateral switch would create a sort of {\it passive averager} circuit between the shorted-switch pot and the selected-switch pot.  If your students have difficulty figuring out the effects of this fault, remind them of what a passive averager is, and how it works.
+
+%INDEX% Troubleshooting, arbitrary waveform generator circuit
+
+%(END_NOTES)
+
+

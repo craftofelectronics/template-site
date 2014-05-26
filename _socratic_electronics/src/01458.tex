@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose an engineer decided to use a {\it flying capacitor} circuit to sample voltage across a shunt resistor, to measure AC current from an electrical generator:
+
+$$\epsfbox{01458x01.eps}$$
+
+The frequency of the alternator's output is 50 Hz.  How does this affect the design of the flying capacitor circuit, so we ensure a fairly accurate reproduction of the AC signal at the output of the flying capacitor circuit?  Generalize your answer to cover all conditions where the input signal varies over time.
+
+\underbar{file 01458}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The switching frequency of the flying capacitor circuit {\it must} exceed the output frequency of the alternator by a substantial margin, or else the signal shape will not be faithfully reproduced at the circuit's output.
+
+\vskip 10pt
+
+Challenge question: if you were the technician or engineer on this project, what switching frequency would you suggest for the flying capacitor circuit?  How would this criterion affect the design of the flying capacitor circuit itself (capacitor values, relay versus transistor switches)?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to sketch an approximation of the flying capacitor circuit's output waveform for different sampling frequencies.  This question is a great lead-in to a discussion on Nyquist frequency, if your students are ready for it!
+
+An important aspect of this question is for students to generalize from this specific circuit example to all systems where signals are sampled along discrete time intervals.  In modern electronic circuitry, especially data acquisition circuitry, sample time can be a significant issue.  In my experience, it is one of the primary reasons for digital systems giving poor results.
+
+%INDEX% Flying capacitor circuit
+%INDEX% Sample frequency
+%INDEX% Nyquist frequency
+
+%(END_NOTES)
+
+

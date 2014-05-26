@@ -1,0 +1,349 @@
+#!/bin/bash
+
+
+# "Concatenating" all selected questions/answers/notes into a single TeX file.
+# This is where you specify the questions you want included in your worksheet, in the
+# order you want them to appear.
+rm -vf all.tex
+touch all.tex
+
+## Very simple circuit sketch (complete the diagram)
+cat 00001.tex  >> all.tex	
+
+## Writing Ohm's Law (3 forms)
+cat 03336.tex  >> all.tex	
+
+## Simple Ohm's Law calculation
+cat 03344.tex  >> all.tex	
+#cat 03345.tex  >> all.tex	
+#cat 03362.tex  >> all.tex	
+
+## Locating voltage in a simple battery/lamp circuit
+cat 03353.tex  >> all.tex	
+#cat 03354.tex  >> all.tex	
+#cat 03355.tex  >> all.tex	
+
+## Resistor color code and Ohm's Law 
+cat 03346.tex  >> all.tex	
+#cat 03348.tex  >> all.tex	
+#cat 03347.tex  >> all.tex	
+
+## Electric motor power calculation
+cat 03349.tex  >> all.tex	
+#cat 03350.tex  >> all.tex	
+#cat 03363.tex  >> all.tex	
+
+## Series circuit (Ohm's Law) calculation
+cat 03370.tex  >> all.tex	
+#cat 03371.tex  >> all.tex	
+
+## Simple circuit troubleshooting question
+cat 03391.tex  >> all.tex	
+#cat 03392.tex  >> all.tex	
+#cat 03393.tex  >> all.tex	
+#cat 03394.tex  >> all.tex	
+
+## Kirchoff's Voltage Law analysis
+cat 03374.tex  >> all.tex	
+#cat 03375.tex  >> all.tex	
+
+## Battery circuit Ohm's Law and amp-hour calculation
+cat 03404.tex  >> all.tex	
+#cat 03405.tex  >> all.tex	
+#cat 03406.tex  >> all.tex	
+
+## Kirchoff's Current Law analysis
+cat 03419.tex  >> all.tex	
+#cat 03420.tex  >> all.tex	
+
+## Calculating parallel resistor value necessary to give certain total resistance
+cat 03411.tex  >> all.tex	
+#cat 03412.tex  >> all.tex	
+
+## Parallel heating element troubleshooting
+cat 03414.tex  >> all.tex	
+#cat 03415.tex  >> all.tex	
+#cat 03416.tex  >> all.tex	
+
+## Balanced Wheatstone bridge analysis
+cat 03429.tex  >> all.tex	
+#cat 03430.tex  >> all.tex	
+
+## Loaded voltage divider qualitative analysis
+cat 03431.tex  >> all.tex	
+#cat 03432.tex  >> all.tex	
+
+## Series/parallel total resistance calculation
+cat 03439.tex  >> all.tex	
+#cat 03440.tex  >> all.tex	
+
+## North/South pole identification on electromagnet
+cat 03479.tex  >> all.tex	
+#cat 03480.tex  >> all.tex	
+
+## Voltage divider troubleshooting
+cat 03487.tex  >> all.tex	
+#cat 03488.tex  >> all.tex	
+
+## RC or L/R time constant qualitative analysis
+cat 03519.tex  >> all.tex	
+#cat 03518.tex  >> all.tex	
+#cat 03520.tex  >> all.tex	
+#cat 03521.tex  >> all.tex	
+
+## Series or parallel inductance or capacitance calculation
+cat 03528.tex  >> all.tex	
+#cat 03527.tex  >> all.tex	
+#cat 03529.tex  >> all.tex	
+#cat 03530.tex  >> all.tex	
+
+## Simple RC circuit calculation
+cat 03540.tex  >> all.tex	
+
+## Time-delay relay circuit troubleshooting
+cat 03534.tex  >> all.tex	
+#cat 03535.tex  >> all.tex	
+#cat 03536.tex  >> all.tex	
+
+## Oscilloscope display interpretation
+cat 03562.tex  >> all.tex	
+#cat 03563.tex  >> all.tex	
+
+## Parallel circuit AC impedance calculation
+cat 03579.tex  >> all.tex	
+#cat 03580.tex  >> all.tex	
+
+## Series LR circuit qualitative AC analysis
+cat 03581.tex  >> all.tex	
+#cat 03582.tex  >> all.tex	
+
+## Oscilloscope display interpretation
+cat 03598.tex  >> all.tex	
+#cat 03599.tex  >> all.tex	
+
+## Series RC circuit AC calculation
+cat 03609.tex  >> all.tex	
+#cat 03610.tex  >> all.tex	
+
+## Series/parallel RC circuit qualitative AC analysis
+cat 03606.tex  >> all.tex	
+#cat 03605.tex  >> all.tex	
+
+## Filter circuit troubleshooting (DC+comm network)
+cat 03603.tex  >> all.tex	
+#cat 03604.tex  >> all.tex	
+
+## Explanation of "resonance"
+cat 03616.tex  >> all.tex	
+
+## Series RLC circuit impedance calculation
+cat 03626.tex  >> all.tex	
+#cat 03627.tex  >> all.tex	
+
+## Filter circuit identification
+cat 03631.tex  >> all.tex	
+#cat 03630.tex  >> all.tex	
+#cat 03612.tex  >> all.tex	
+
+## Filter bode plot sketching (qualitative)
+cat 03949.tex  >> all.tex	
+
+## Varactor resonant circuit qualitative analysis
+cat 03632.tex  >> all.tex	
+
+## Basic power transformer application
+cat 02213.tex  >> all.tex	
+#cat 02214.tex  >> all.tex	
+
+## Transformer ratio calculation
+cat 02206.tex  >> all.tex	
+#cat 02207.tex  >> all.tex	
+#cat 02208.tex  >> all.tex	
+
+## Transformer power circuit voltage/current calculations
+cat 03656.tex  >> all.tex	
+#cat 03657.tex  >> all.tex	
+#cat 02210.tex  >> all.tex	
+
+## Current transformer calculation
+cat 03659.tex  >> all.tex	
+#cat 03660.tex  >> all.tex	
+
+## Transformer winding (turns) calculation
+cat 03661.tex  >> all.tex	
+#cat 02215.tex  >> all.tex	
+
+## Transformer troubleshooting 
+cat 03667.tex  >> all.tex	
+#cat 02218.tex  >> all.tex	
+
+## Motor power factor calculation
+cat 03680.tex  >> all.tex	
+#cat 03679.tex  >> all.tex	
+#cat 03678.tex  >> all.tex	
+#cat 03677.tex  >> all.tex	
+
+## 3-phase generator winding calculation
+cat 03683.tex  >> all.tex	
+#cat 03684.tex  >> all.tex	
+
+## Delta-Y circuit calculations
+cat 03689.tex  >> all.tex	
+#cat 03690.tex  >> all.tex	
+
+## Motor control circuit troubleshooting
+cat 03688.tex  >> all.tex	
+#cat 03686.tex  >> all.tex	
+
+## Motor control circuit troubleshooting
+cat 03212.tex  >> all.tex	
+#cat 03213.tex  >> all.tex	
+
+## Bridge rectifier circuit current tracing
+cat 02313.tex  >> all.tex	
+#cat 02314.tex  >> all.tex	
+#cat 02385.tex  >> all.tex	
+#cat 02386.tex  >> all.tex	
+
+## Zener diode circuit qualitative analysis
+cat 02315.tex  >> all.tex	
+#cat 02316.tex  >> all.tex	
+
+## Brute force power supply circuit unloaded voltage calculation
+cat 02301.tex  >> all.tex	
+#cat 02302.tex  >> all.tex	
+
+## Brute force power supply troubleshooting
+cat 02306.tex  >> all.tex	
+#cat 02318.tex  >> all.tex	
+
+## BJT identification
+cat 02328.tex  >> all.tex	
+#cat 02329.tex  >> all.tex	
+
+## MOSFET on/off circuit status determination and transistor identification
+cat 02338.tex  >> all.tex	
+#cat 02339.tex  >> all.tex	
+#cat 02340.tex  >> all.tex	
+#cat 02341.tex  >> all.tex	
+#cat 02342.tex  >> all.tex	
+
+## Electronic ignition circuit troubleshooting
+cat 02343.tex  >> all.tex	
+#cat 02344.tex  >> all.tex	
+
+## Clipper circuit qualitative analysis
+cat 02352.tex  >> all.tex	
+#cat 02353.tex  >> all.tex	
+#cat 02354.tex  >> all.tex	
+#cat 02355.tex  >> all.tex	
+
+## SCR triggering circuit (complete the schematic)
+cat 02388.tex  >> all.tex	
+#cat 02389.tex  >> all.tex	
+#cat 03868.tex  >> all.tex	
+#cat 03869.tex  >> all.tex	
+
+## Pulse-width modulation calculation (from scope display)
+cat 02348.tex  >> all.tex	
+#cat 02349.tex  >> all.tex	
+#cat 03863.tex  >> all.tex	
+
+## Solid-state relay circuit troubleshooting
+cat 02402.tex  >> all.tex	
+#cat 02429.tex  >> all.tex	
+#cat 02430.tex  >> all.tex	
+
+## Voltage regulator circuit calculations
+cat 02496.tex  >> all.tex	
+#cat 02497.tex  >> all.tex	
+#cat 03873.tex  >> all.tex	
+
+## Strobe light circuit troubleshooting
+cat 02630.tex  >> all.tex	
+#cat 02631.tex  >> all.tex	
+
+## Comparator circuit qualitative analysis
+cat 02664.tex  >> all.tex	
+#cat 02665.tex  >> all.tex	
+#cat 02666.tex  >> all.tex	
+#cat 03929.tex  >> all.tex	
+
+## Regulated DC power supply troubleshooting
+cat 02660.tex  >> all.tex	
+#cat 02661.tex  >> all.tex	
+
+## Identification (inverting/non) of opamp circuit
+cat 02710.tex  >> all.tex	
+#cat 02711.tex  >> all.tex	
+#cat 02712.tex  >> all.tex	
+
+## Inverting opamp circuit voltage gain calculation
+cat 02715.tex  >> all.tex	
+#cat 02716.tex  >> all.tex	
+#cat 02717.tex  >> all.tex	
+
+## Noninverting opamp circuit voltage gain calculation
+cat 02718.tex  >> all.tex	
+#cat 02719.tex  >> all.tex	
+#cat 02720.tex  >> all.tex	
+
+## Opamp circuit voltage gain calculation (w/ potentiometer)
+cat 02734.tex  >> all.tex	
+#cat 02735.tex  >> all.tex	
+#cat 02736.tex  >> all.tex	
+#cat 02737.tex  >> all.tex	
+
+## Logic gate symbol identification
+cat 02874.tex  >> all.tex	
+#cat 03974.tex  >> all.tex	
+
+## Logic gate circuit analysis
+cat 03976.tex  >> all.tex	
+#cat 02876.tex  >> all.tex	
+#cat 02877.tex  >> all.tex	
+
+## Relay logic circuit analysis
+cat 02878.tex  >> all.tex	
+#cat 02879.tex  >> all.tex	
+
+## Logic gate alarm circuit troubleshooting
+cat 02882.tex  >> all.tex	
+#cat 02883.tex  >> all.tex	
+#cat 02884.tex  >> all.tex	
+
+## Relay alarm circuit troubleshooting
+cat 02924.tex  >> all.tex	
+#cat 02925.tex  >> all.tex	
+
+## Motor control circuit wiring (draw the wires)
+cat 03209.tex  >> all.tex	
+#cat 03210.tex  >> all.tex	
+
+## Motor control circuit wiring (complete the schematic)
+cat 03211.tex  >> all.tex	
+
+## Conversion from octal or hexadecimal to decimal
+cat 02965.tex  >> all.tex	
+#cat 02966.tex  >> all.tex	
+#cat 02967.tex  >> all.tex	
+
+## Conversion from decimal to octal or hexadecimal
+cat 02968.tex  >> all.tex	
+#cat 02970.tex  >> all.tex	
+#cat 02969.tex  >> all.tex	
+
+## S-R latch circuit analysis
+cat 03019.tex  >> all.tex	
+#cat 03020.tex  >> all.tex	
+
+## Digital counter circuit troubleshooting
+cat 03097.tex  >> all.tex	
+#cat 03098.tex  >> all.tex	
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Temperature changes are well known to affect transistor operation.  For instance, if we were to apply a constant voltage between the base and emitter of a transistor and increase its temperature over time, the collector current would increase:
+
+$$\epsfbox{00962x01.eps}$$
+
+First, describe {\it why} the collector current changes, if the input voltage is held constant.  Then, determine the relative degree of output voltage change ($\Delta V_{out}$) resulting from this thermal effect in the following two amplifier circuits:
+
+$$\epsfbox{00962x02.eps}$$
+
+What is different in the responses of these two circuits to temperature changes?  Why does one circuit respond so much differently than the other?
+
+If both these amplifier circuits had AC signal inputs, and were biased for Class A operation, what effect would an increase in temperature have on each of them?  State your answer in terms of AC voltage gain and Q-point.
+
+$$\epsfbox{00962x03.eps}$$
+
+\underbar{file 00962}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The collector current of a warming transistor increases even with constant input voltage because its intrinsic emitter resistance decreases with increased charge carrier activity.
+
+In the common-emitter amplifier circuit, the output voltage will change substantially with changes in transistor temperature.  In the common-collector circuit, the output voltage will hardly change at all as transistor temperature changes.  
+
+When amplifying AC input signals, the common-emitter amplifier's voltage gain will increase, while the common-collector amplifier's voltage gain will remain at unity.  Likewise, the common-emitter amplifier's Q point will shift substantially, while the common-collector amplifier's Q point will not.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss the impact of emitter resistance change on base current, and then transfer this concept to the two amplifier circuits and note the effects.  Students should immediately realize the effects of this change in the common-emitter circuit, but the effects in the common-collector circuit will be a bit more difficult to follow.  Work with your students in the analysis of the common-collector circuit, noting the effect changes in load voltage (voltage across the resistor) have on base current.
+
+This question also previews the concept of negative feedback, which will be essential to your students' understanding of electronic circuits later in their studies.
+
+%INDEX% Negative feedback inherent in common-collector amplifiers
+%INDEX% Q point, effects of temperature change on
+%INDEX% Temperature, effects on BJT amplifiers
+%INDEX% Voltage gain, effects of temperature change on
+
+%(END_NOTES)
+
+

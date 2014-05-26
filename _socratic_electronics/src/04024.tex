@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Explain what sort of electrical fault this differential current relay protects against:
+
+$$\epsfbox{04024x01.eps}$$
+
+Also, explain what this relay will do to protect the circuit if it detects this kind of fault.
+
+\underbar{file 04024}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The differential relay shown protects against {\it ground faults} inside the motor.  Although not shown in the diagram, the protective relay will actuate a contact that will tell the motor's control circuitry to cut power to the motor in the event of a ground fault.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+At first, students may be dismayed at the appearance of the current transformers being short-circuited to each other.  If so, remind them that it is perfectly {\it normal} to short the output of a current transformer.  In fact, opening the secondary of a CT can be dangerous!
+
+It should be noted that the protective relay itself is but a part of a complete protection system.  On its own, it can only monitor for current differences.  In order to actually protect anything, it must be tied into the control circuitry supplying power to the motor.  That is, just like an overload contact (O.L.) tells a motor contactor to de-energize, the protective relay must command a contactor or a circuit breaker to open in order to actually interrupt power to the faulted section of a circuit.
+
+I must say that I am indebted to C. Russell Mason's wonderful text, \underbar{The Art and Science of Protective Relaying}.  Not only is it comprehensive, but also very lucid in its presentation.
+
+%INDEX% Protective relay, differential (used for motor protection)
+
+%(END_NOTES)
+
+

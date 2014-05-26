@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+It is often necessary to have a power transistor {\it source} current to a load (provide a path from the positive supply voltage rail to the load) rather than {\it sink} current from the load (provide a path from the load to the negative voltage rail or ground), because one side of the load is already connected to ground:
+
+$$\epsfbox{02125x01.eps}$$
+
+When the transistor sources current, it is often referred to as a {\it high-side} switch.  Determine the driving voltage requirements for each of these high-side MOSFET switches; that is, determine what must be connected to the gate of each transistor to fully turn it on so that the load receives full power:
+
+$$\epsfbox{02125x02.eps}$$
+
+\underbar{file 02125}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+For the P-channel MOSFET, the gate simply needs to be grounded.  For the N-channel MOSFET, the gate needs to be brought up to a positive voltage greater than $+V$ by at least $V_{GS}(on)$.
+
+\vskip 10pt
+
+Follow-up question: discuss why the terms "sourcing" and "sinking" make the most sense when viewed from the perspective of {\it conventional flow} current notation.  For contrast, here is the same circuit with the arrows drawn in the direction of electron flow:
+
+$$\epsfbox{02125x03.eps}$$
+
+Challenge question: despite the more demanding gate drive requirements of the high-side N-channel MOSFET, these are often preferred over P-channel devices in practical circuit designs.  Explain why.  Hint: it has something to do with {\it carrier mobility}.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a good exercise in determining proper gate voltage polarity (and magnitude), as well as introducing the concepts of current sourcing and sinking, and high-side switching.  Be sure to spend time discussing the matter of sourcing versus sinking, as this will be of greater importance later in your students' studies (especially in logic gate circuit design).
+
+%INDEX% High-side transistor switch
+%INDEX% Sinking current, defined
+%INDEX% Sourcing current, defined
+%INDEX% Transistor switch circuit (MOSFET)
+
+%(END_NOTES)
+
+

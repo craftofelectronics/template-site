@@ -1,0 +1,78 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This microcontroller is programmed to vary the perceived brightness of an LED by means of pulse-width modulation (PWM) control of pin 0's output:
+
+$$\epsfbox{03990x01.eps}$$
+
+\noindent
+\underbar{\bf Pseudocode listing}
+
+{\tt Declare Pin0 as an output}
+
+{\tt Declare X as an integer variable}
+
+{\tt LOOP}
+
+\hskip 10pt {\tt Set Pin0 LOW}
+
+\hskip 10pt {\tt Pause for 100 - X microseconds}
+
+\hskip 10pt {\tt Set Pin0 HIGH}
+
+\hskip 10pt {\tt Pause for X microseconds}
+
+{\tt ENDLOOP}
+
+\vskip 10pt
+
+Determine what the value of {\tt X} must be to set the LED's brightness at 80\%, and also what the frequency of the PWM signal is.
+
+\underbar{file 03990}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This question is probably best answered by drawing a timing diagram of Pin 0's output, noting the times of {\tt 100 - X} $\mu$s and {\tt X} $\mu$s.
+
+\vskip 10pt
+
+Follow-up question: what is the resolution of this PWM control, given that {\tt X} is an integer variable?  How might we improve the resolution of this PWM control scheme?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Pulse-width modulation (PWM) is a very common and useful way of generating an analog output from a microcontroller (or other digital electronic circuit) capable only of "high" and "low" voltage level output.  With PWM, time (or more specifically, {\it duty cycle}) is the analog domain, while amplitude is the digital domain.  This allows us to "sneak" an analog signal through a digital (on-off) data channel.
+
+\vskip 10pt
+
+In case you're wondering why I write in pseudocode, here are a few reasons:
+
+\medskip
+\goodbreak
+\item{$\bullet$} No prior experience with programming required to understand pseudocode
+\item{$\bullet$} It never goes out of style
+\item{$\bullet$} Hardware independent
+\item{$\bullet$} No syntax errors
+\medskip
+
+If I had decided to showcase code that would actually run in a microcontroller, I would be dooming the question to obsolescence.  This way, I can communicate the spirit of the program without being chained to an actual programming standard.  The only drawback is that students will have to translate my pseudocode to real code that will actually run on their particular MCU hardware, but that is a problem guaranteed for some regardless of which real programming language I would choose.
+
+Of course, I could have taken the Donald Knuth approach and invented my own (imaginary) hardware and instruction set . . . 
+
+%INDEX% Microcontroller, pulse-width modulation (PWM) output
+
+%(END_NOTES)
+
+

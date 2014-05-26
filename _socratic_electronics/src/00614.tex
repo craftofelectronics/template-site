@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose a friend wanted to install filter networks in the "woofer" section of their stereo system, to prevent high-frequency power from being wasted in speakers incapable of reproducing those frequencies.  To this end, your friend installs the following resistor-capacitor networks:
+
+$$\epsfbox{00614x01.eps}$$
+
+After examining this schematic, you see that your friend has the right idea in mind, but implemented it incorrectly.  These filter circuits would indeed block high-frequency signals from getting to the woofers, but they would not actually accomplish the stated goal of minimizing wasted power.
+
+What would you recommend to your friend in lieu of this circuit design?
+
+\underbar{file 00614}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Rather than use a "shunting" form of low-pass filter (resistor and capacitor), a "blocking" form of low-pass filter (inductor) should be used instead.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The reason for this choice in filter designs is very practical.  Ask your students to describe how a "shunting" form of filter works, where the reactive component is connected in parallel with the load, receiving power through a series resistor.  Contrast this against a "blocking" form of filter circuit, in which a reactive component is connected in series with the load.  In one form of filter, a resistor is necessary.  In the other form of filter, a resistor is not necessary.  What difference does this make in terms of power dissipation within the filter circuit?
+
+%INDEX% Filter, lowpass (audio speaker application)
+
+%(END_NOTES)
+
+

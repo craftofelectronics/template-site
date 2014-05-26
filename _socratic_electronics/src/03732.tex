@@ -1,0 +1,59 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how the operation of this buck converter circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03732x01.eps}$$
+
+\medskip
+\item{$\bullet$} Drive circuit fails with a constant "low" (0 volts) output signal:
+\vskip 5pt
+\item{$\bullet$} Drive circuit fails with a constant "high" (+V) output signal:
+\vskip 5pt
+\item{$\bullet$} Diode fails shorted:
+\vskip 5pt
+\item{$\bullet$} Inductor fails open:
+\vskip 5pt
+\item{$\bullet$} Capacitor fails shorted:
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03732}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Drive circuit fails with a constant "low" (0 volts) output signal: {\it Output voltage falls to zero after capacitor discharges.}
+\vskip 5pt
+\item{$\bullet$} Drive circuit fails with a constant "high" (+V) output signal: {\it Output voltage rises to become approximately equal to $V_{in}$.}
+\vskip 5pt
+\item{$\bullet$} Diode fails shorted: {\it Output voltage falls to zero, then transistor fails due to overheating.}
+\vskip 5pt
+\item{$\bullet$} Inductor fails open: {\it Output voltage falls to zero after capacitor discharges.}
+\vskip 5pt
+\item{$\bullet$} Capacitor fails shorted: {\it Output voltage falls to zero immediately.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in buck converter circuit
+
+%(END_NOTES)
+
+

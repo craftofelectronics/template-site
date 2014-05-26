@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Singers who wish to practice singing to popular music find that the following {\it vocal eliminator} circuit is useful:
+
+$$\epsfbox{02524x01.eps}$$
+
+The circuit works on the principle that vocal tracks are usually recorded through a single microphone at the recording studio, and thus are represented equally on each channel of a stereo sound system.  This circuit effectively eliminates the vocal track from the song, leaving only the music to be heard through the headphone or speaker.
+
+Explain how the operational amplifiers accomplish this task of vocal track elimination.  What role does each opamp play in this circuit?
+
+\underbar{file 02524}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The first two opamps merely "buffer" the audio signal inputs so they do not become unnecessarily loaded by the resistors.  The third opamp {\it subtracts} the left channel signal from the right channel signal, eliminating any sounds common to both channels.
+
+\vskip 10pt
+
+Challenge question: unfortunately, the circuit as shown tends to eliminate bass tones as well as vocals, since the acoustic properties of bass tones make them represented nearly equally on both channels.  Determine how the circuit may be expanded to include opamps that re-introduce bass tones to the "vocal-eliminated" output.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Circuits like this are great for illustration, because they show practical application of a principle while engaging student interest.
+
+One of my students, when faced with the challenge question, suggested placing a high-pass filter before {\it one} of the subtractor's inputs, eliminating bass tones at one of the inputs and therefore reproducing bass tones at the subtractor output.  This is a great idea, and shows what can happen when students are given a forum to think creatively and freely express ideas, but there are some practical reasons it would be difficult to implement.  The concept works great if we assume the use of a perfect HP filter, with absolutely zero phase shift and zero attenuation through the entire pass-band.  Unfortunately, real filter circuits always exhibit some degree of both, and so the process of subtraction would not be as effective as necessary to eliminate the vocals from a song.
+
+%INDEX% Difference amplifier, used in vocal eliminator circuit
+%INDEX% Vocal eliminator circuit
+
+%(END_NOTES)
+
+

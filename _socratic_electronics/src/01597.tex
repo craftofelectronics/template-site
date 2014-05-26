@@ -1,0 +1,60 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An interesting thing happens if we take the odd-numbered harmonics of a given frequency and add them together at certain diminishing ratios of the fundamental's amplitude.  For instance, consider the following harmonic series:
+
+\vskip 10pt
+
+(1 volt at 100 Hz) + (1/3 volt at 300 Hz) + (1/5 volt at 500 Hz) + (1/7 volt at 700 Hz) + . . .
+
+$$\epsfbox{01597x01.eps} \hskip 20pt \epsfbox{01597x02.eps}$$
+
+$$\epsfbox{01597x03.eps} \hskip 20pt \epsfbox{01597x04.eps}$$
+
+Here is what the composite wave would look like if we added all odd-numbered harmonics up to the 13th together, following the same pattern of diminishing amplitudes:
+
+$$\epsfbox{01597x05.eps}$$
+
+If we take this progression even further, you can see that the sum of these harmonics begins to appear more like a square wave:
+
+$$\epsfbox{01597x06.eps}$$
+
+This mathematical equivalence between a square wave and the weighted sum of all odd-numbered harmonics is very useful in analyzing AC circuits where square-wave signals are present.  From the perspective of AC circuit analysis based on sinusoidal waveforms, how would you describe the way an AC circuit "views" a square wave?
+
+\underbar{file 01597}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Though it may seem strange to speak of it in such terms, an AC circuit "views" a square wave as an infinite series of sinusoidal harmonics.
+
+\vskip 10pt
+
+Follow-up question: explain how this equivalence between a square wave and a particular series of sine waves is a practical example of the {\it Superposition Theorem} at work.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+If you have access to a graphing calculator or a computer with graphing software installed, and a projector capable of showing the resulting graph(s), you may demonstrate this square-wave synthesis in front of the whole class.  It makes an excellent illustration of the concept.
+
+Discuss this with your students: that the relatively simple rules of AC circuit analysis (calculating reactance by $\omega L$ and $1 \over {\omega C}$, calculating impedance by the trigonometric sum of reactance and resistance, etc.) can be applied to the analysis of a square wave's effects if we repeat that analysis for every harmonic component of the wave.  
+
+This is truly a remarkable principle, that the effects of a complex waveform on a circuit may be determined by considering each of that waveform's harmonics separately, then those effects added together (superimposed) just as the harmonics themselves are superimposed to form the complex wave.  Explain to your students how this superposition principle is not limited to the analysis of square waves, either.  {\it Any} complex waveform whose harmonic constituents are known may be analyzed in this fashion.
+
+%INDEX% Square wave, built up from odd-numbered sinusoidal harmonics
+%INDEX% Superposition Theorem, in relation to the Fourier series
+
+%(END_NOTES)
+
+

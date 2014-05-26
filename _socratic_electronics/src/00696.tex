@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+It is a known fact that the nonlinearity of a ferromagnetic material's B-H curve will cause an inductor's current to be non-sinusoidal, even when the voltage impressed across the inductor is perfectly sinusoidal:
+
+$$\epsfbox{00696x01.eps}$$
+
+Unless coil resistance is substantial, the core flux waveform ($\phi$) over time will be just as sinusoidal as the voltage waveform, because without resistance to drop voltage, the relationship between voltage and flux is $e = N{d\phi \over dt}$, the rate-of-change of a perfect sine wave being a perfect cosine wave.  
+
+Knowing that the core flux waveform will be sinusoidal allows us to derive the inductor current waveform from the B-H curve using a graphical "trick": using the B-H curve to correlate instantaneous values of flux over time with instantaneous values of coil current over time.  When used in this manner, the B-H curve is called a {\it transfer characteristic}, because it is used as a map to "transfer" points on one waveform to points on another waveform.  We know that $\phi$ is directly proportional to $B$ because $B = {\Phi \over A}$, and the core area is constant.  We also know that $i$ is directly proportional to $H$, because ${\cal F} = NI$ and $H = {{\cal F} \over l}$, and both the core length and the number of turns of wire are constant:
+
+$$\epsfbox{00696x02.eps}$$
+
+Notice that the flux waveform is nice and sinusoidal, while the current waveform is not.
+
+\vskip 10pt
+
+Based on what you see here, describe how an inductor designer can minimize the current distortion in an inductor.  What conditions make this distortion better, and what conditions make it worse?
+
+\underbar{file 00696}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The key to minimizing current distortion is to keep the core flux amplitudes within the straightest portions of the core's B-H curve.  Anything that causes the flux to reach greater amplitudes, and get closer to the "saturated" portion of the B-H curve, will create more distortion of the current waveform.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I wrote this question for the purpose of introducing students to a technique commonly found in older textbooks, but not found in newer textbooks quite as often: graphically generating a plot by the comparison of one waveform against a static function, in this case the comparison of the flux waveform against the B-H curve.  Not only is this technique helpful in analyzing magnetic nonlinearities, but it also works well to analyze semiconductor circuit nonlinearities.
+
+%INDEX% Transfer characteristic, used to plot current waveform in saturated inductor
+
+%(END_NOTES)
+
+

@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A common set of equations for calculating input and output impedances of bypassed common-emitter amplifier circuits is as follows:
+
+$$Z_{in} \approx R_1 \> || \> R_2 \> || \> (\beta + 1)r'_e$$
+
+$$Z_{out} \approx R_C$$
+
+If precision is not required, we may greatly simplify the first equation by assuming the transistor to be ideal; i.e. having an infinite current gain ($\beta = \infty$).  Re-write the first equation accordingly, and explain how you simplified it.
+
+\underbar{file 02454}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$Z_{in} \approx R_1 \> || \> R_2 \>$$
+
+\vskip 10pt
+
+Follow-up question: how does the similar simplification of the "swamped" common-emitter amplifier's input impedance equation compare?
+
+$$Z_{in} \approx R_1 \> || \> R_2 \> || \> (\beta + 1)(r'_e + R_E) \hbox{\hskip 20pt Assuming a finite-beta transistor}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is for students to see how (more) approximate predictions for circuits may be obtained through simplification.  A good exercise is to calculate impedances for a given amplifier circuit using both the original and the simplified equations, to see just how "approximate" the simplified answers are.  Knowing how to eliminate complicated terms in equations (and what terms may be safely eliminated!) is key to estimating in the absence of a calculator.
+
+%INDEX% Approximations for common-emitter amplifier circuit
+%INDEX% Common-emitter circuit, approximations for multiple parameters
+%INDEX% Impedance, amplifier input
+%INDEX% Impedance, amplifier output
+%INDEX% Input impedance, amplifier
+%INDEX% Output impedance, amplifier
+
+%(END_NOTES)
+
+
+
+
+

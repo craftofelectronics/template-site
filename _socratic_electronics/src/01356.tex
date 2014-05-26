@@ -1,0 +1,73 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Here, a gated S-R latch is being used to control the electric power to a powerful ultraviolet lamp, used for sterilization of instruments in a laboratory environment:
+
+$$\epsfbox{01356x01.eps}$$
+
+Based on your knowledge of how gated S-R latches function, what is the purpose of the "Lockout" switch?  Also, explain how the CMOS latch is able to exert control over the high-power lamp (i.e. explain the operation of the interposing devices between the latch and the lamp).
+
+\vskip 10pt
+
+Now, suppose the lab personnel want to add a feature to the ultraviolet sterilization chamber: an electric solenoid door lock, so that personnel can open the door to the chamber only if the following conditions are met:
+
+\medskip
+\item{$\bullet$} Lamp is {\it off}
+\item{$\bullet$} "Lockout" switch is sending a "low" signal to the latch's Enable input
+\medskip
+
+Modify this circuit so that it energizes the door lock solenoid, allowing access to the chamber, only if the above conditions are both true.
+
+\underbar{file 01356}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The "Lockout" switch effectively disables the "On" and "Off" controls when it sends a "low" signal to the latch's Enable input.
+
+This circuit uses both a solid-state relay (SSR) and an electromechanical relay for interposing between the latch and the lamp.  These devices allow the low-power latch circuit to exert control over the high-power lamp.
+
+\vskip 10pt
+
+Here is one possibility for the door lock control:
+
+$$\epsfbox{01356x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: there are better (safer) ways to accomplish this same function.  For instance, suppose the TRIAC inside the SSR were to fail shorted, maintaining power to the lamp even when the latch goes into the "reset" mode.  Would the door-lock logic shown here prevent someone from opening the door and getting exposed to the strong ultraviolet light?  Explain your answer!
+
+\vskip 10pt
+
+Challenge question: why not just use one interposing device: either an SSR, or an electromagnetic relay?  Why {\it both} types of devices in the same circuit?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of the "Lockout" switch is fairly simple, and should be easy for the students to explain.  On the other hand, the design and implementation of a door lock safety circuit is a more complex question, deserving of discussion because it involves several important and realistic considerations:
+
+\medskip
+\item{$\bullet$} How do we go from a simple verbal description of logical conditions (lamp off, enable low) to an actual gate circuit?
+\item{$\bullet$} What is the safest strategy to use in determining when it is safe to open the door?
+\item{$\bullet$} How should the door lock logic interpose to the solenoid itself (this is not shown in the answer!)?
+\item{$\bullet$} How would the principles of lock-out/tag-out apply to this system, if we were approaching the problem from the perspective of maintenance personnel rather than lab (operations) personnel?
+\medskip
+
+The challenge question gets students thinking in terms of real-life currents and voltages, and the limitations of each device.
+
+%INDEX% S-R latch, gated
+
+%(END_NOTES)
+
+

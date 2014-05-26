@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+One problem with PMMC (permanent magnet moving coil) meter movements is trying to get them to register AC instead of DC.  Since these meter movements are polarity-sensitive, their needles merely vibrate back and forth in a useless fashion when powered by alternating current:
+
+$$\epsfbox{02559x01.eps}$$
+
+The same problem haunts other measurement devices and circuits designed to work with DC, including most modern analog-to-digital conversion circuits used in digital meters.  Somehow, we must be able to {\it rectify} the measured AC quantity into DC for these measurement circuits to properly function.
+
+A seemingly obvious solution is to use a bridge rectifier made of four diodes to perform the rectification:
+
+$$\epsfbox{02559x02.eps}$$
+
+The problem here is the forward voltage drop of the rectifying diodes.  If we are measuring large voltages, this voltage loss may be negligible.  However, if we are measuring small AC voltages, the drop may be unacceptable.
+
+Explain how a precision full-wave rectifier circuit built with an opamp may adequately address this situation.
+
+\underbar{file 02559}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A precision opamp circuit is able to rectify the AC voltage with no voltage loss whatsoever, allowing the DC meter movement (or analog-to-digital conversion circuit) to function as designed.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to provide a practical context for precision rectifier circuits, where students can envision a real application.
+
+%INDEX% Precision rectifier circuit, opamp
+
+%(END_NOTES)
+
+

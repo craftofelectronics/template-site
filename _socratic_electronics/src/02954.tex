@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student wishes to cascade multiple four-bit synchronous counters together.  His first effort looks like this, and it works well as an eight-bit counter:
+
+$$\epsfbox{02954x01.eps}$$
+
+Encouraged by this success, the student decides to add another four-bit counter to the end to make a twelve-bit counter circuit:
+
+$$\epsfbox{02954x02.eps}$$
+
+Unfortunately, this arrangement does not work so well.  It seems to work good for the first 241 counts (from 000000000000 to 000011110000), but then the last four bits begin to cycle as quickly as the first four bits, while the middle four bits remain in the 1111 state for 15 additional clock pulses.  Something is definitely very wrong here!
+
+Determine what the problem is, and suggest a remedy for it.  Hint: this situation is very similar to connecting more than two J-K flip-flops together to form a synchronous counter circuit.
+
+\underbar{file 02954}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The "fix" for this problem is to enable the last (most significant) four-bit counter only when the terminal count (TC) outputs of {\it both} preceding counter circuits are active.  I will let you figure out the details of this solution for yourself.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The "hint" in this question may give away too much, as the problem is {\it precisely} identical to the problem encountered with overly simplistic synchronous J-K flip-flop cascades.  What new students tend to overlook is the necessity to enable successive stages only when {\it all} preceding stages are at their terminal counts.  When you only have two stages (two J-K flip-flops or two IC counters) to deal with, there is only one TC output to be concerned with, and the problem never reveals itself.
+
+Be sure to give your students time and opportunity to present their solutions to this dilemma.  Ask them how they arrived at their solutions, whether by textbook, prior example (with J-K flip-flops), or perhaps sheer brain power.
+
+%INDEX% Counter cascading, more than two counter ICs
+
+%(END_NOTES)
+
+

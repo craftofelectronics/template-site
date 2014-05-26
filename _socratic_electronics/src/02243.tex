@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Determining the output impedance of a common-emitter amplifier is impossible unless we know how to {\it model} the transistor in terms of components whose behavior is simple to express.  
+
+$$\epsfbox{02243x01.eps}$$
+
+When in its active mode, a transistor operates like a {\it current regulator}.  This is similar enough to the behavior of a {\it current source} that we may use a source to model the transistor's behavior for the sake of this impedance determination:
+
+$$\epsfbox{02243x02.eps}$$
+
+Now, apply the same steps you would use in determining the Th\'evenin or Norton equivalent impedance to the output of this amplifier circuit, and this will yield the amplifier's output impedance.  Draw an equivalent circuit for the amplifier during this {\it Th\'evenizing}/{\it Nortonizing} process to show how the output impedance is determined.
+
+\underbar{file 02243}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{02243x03.eps}$$
+
+I'm leaving it up to you to explain {\it why} the amplifier circuit reduces to something as simple as this!
+
+\vskip 10pt
+
+Follow-up question: what is the significance of showing the transistor as a current source using a diamond-shaped symbol rather than a circle?  You should be familiar by now with circular current source symbols, but what does a diamond-shaped current source symbol specifically represent in a schematic diagram?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The main problem students usually have when Th\'evenizing or Nortonizing this circuit is what to do with the current source.  They may remember that voltage sources become shorted during the impedance-determination process, but usually make the mistake of doing the exact same thing with current sources.  Remind your students if necessary that {\it each source is to be replaced by its respective internal impedance}.  For voltage sources (with zero internal impedance, ideally) it means replacing them with short circuits.  For current sources (with infinite internal impedance, ideally) it means replacing them with open circuits.
+
+%INDEX% Impedance, amplifier output
+%INDEX% Modeling bipolar transistor as current source
+%INDEX% Output impedance, amplifier
+
+%(END_NOTES)
+
+

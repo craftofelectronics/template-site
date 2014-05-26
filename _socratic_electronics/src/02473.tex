@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The junction between the two resistors and the inverting input of the operational amplifier is often referred to as a {\it virtual ground}, the voltage between it and ground being (almost) zero over a wide range of circuit conditions:
+
+$$\epsfbox{02473x01.eps}$$
+
+If the operational amplifier is driven into saturation, though, the "virtual ground" will no longer be at ground potential.  Explain why this is, and what condition(s) may cause this to happen.
+
+Hint: analyze all currents and voltage drops in the following circuit, assuming an opamp with the ability to swing its output voltage rail-to-rail.
+
+$$\epsfbox{02473x02.eps}$$
+
+\underbar{file 02473}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Any input signal causing the operational amplifier to try to output a voltage beyond either of its supply rails will cause the "virtual ground" node to deviate substantially from ground potential.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Before students can answer this question, they must understand what saturation means with regard to an operational amplifier.  This is where the "hint" scenario comes into play.  Students failing to grasp this concept will calculate the voltage drops and currents in the "hint" circuit according to standard procedures and assumptions, and arrive at an output voltage well in excess of +15 volts.  Resolving this paradox will lead to insight, and hopefully to a more realistic set of calculations.
+
+%INDEX% Virtual ground, opamp circuit
+
+%(END_NOTES)
+
+

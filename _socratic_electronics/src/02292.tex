@@ -1,0 +1,68 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The parasitic capacitance naturally existing in two-wire cables can cause problems when connected to high-impedance electronic devices.  Take for instance certain biomedical probes used to detect electrochemical events in living tissue.  Such probes may be modeled as voltage sources in series with resistances, those resistances usually being rather large due to the probes' very small surface (contact) areas:
+
+$$\epsfbox{02292x01.eps}$$
+
+When connected to a cable with parasitic capacitance, a low-pass RC filter circuit is formed:
+
+$$\epsfbox{02292x02.eps}$$
+
+This low-pass filter (or passive integrator, if you wish) is purely unintentional.  No one asked for it to be there, but it is there anyway just due to the natural resistance of the probe and the natural capacitance of the cable.  Ideally, of course, we would like to be able to send the signal voltage ($V_{signal}$) straight to the amplifier with no interference or filtering of any kind so we can see exactly what it is we're trying to measure.
+
+One clever way of practically eliminating the effects of cable capacitance is to encase the signal wire in its own shield, and then drive that shield with the exact same amount of voltage from a voltage follower at the other end of the cable.  This is called {\it guarding}:
+
+$$\epsfbox{02292x03.eps}$$
+
+\goodbreak
+
+An equivalent schematic may make this technique more understandable:
+
+$$\epsfbox{02292x04.eps}$$
+
+Explain why guarding the signal wire effectively eliminates the effects of the cable's capacitance.  Certainly the capacitance is still present, so how can it not have any effect on the weak signal any more?
+
+\underbar{file 02292}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The guarding opamp holds the guard shield at the same potential as the center conductor, maintaining 0 volts across the parasitic capacitance between those two conductors.  With no voltage across that capacitance, it might as well not even be there!
+
+\vskip 10pt
+
+Follow-up question: although the center-to-guard capacitance may have zero volts across it at all times thanks to the opamp, the guard-to-(outer) shield capacitance still has the full signal voltage across it.  Explain why this is of no concern to us, and why its presence does not form a low-pass filter as the original (unguarded) cable capacitance once did.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Guarding is a technique used in many test and measurement scenarios, and it serves as a great example of opamps used as voltage followers.
+
+If students are not convinced of the seriousness of cable capacitance in an application such as the one described, suggest these values to them and ask them to calculate the cutoff frequency of the low-pass filter formed by $R_{signal}$ and $C_{cable}$:
+
+\medskip
+\goodbreak
+\item{$\bullet$} $R_{signal}$ = 20 M$\Omega$
+\item{$\bullet$} $C_{cable}$ = 175 pF
+\medskip
+
+%INDEX% Coaxial cable, intrinsic capacitance and inductance
+%INDEX% Driven shield, use of opamp voltage follower
+%INDEX% Guard, driven by opamp voltage follower
+%INDEX% Guarding
+
+%(END_NOTES)
+
+

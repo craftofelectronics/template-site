@@ -1,0 +1,142 @@
+#!/bin/bash
+
+
+# "Concatenating" all selected questions/answers/notes into a single TeX file.
+# This is where you specify the possible questions you want included in your exam,
+# in the order you want them to appear.
+
+# Note that an exam sequence file (*.exam) is written a bit differently than 
+# a worksheet sequence file (*.seq).  Here, you include a few TeX commands to
+# delineate sections of the exam (point value, question types, etc.) as well 
+# as comments suggesting how many questions to pick for each section, so the 
+# end-user may randomize exams by arbitrarily excluding certain questions.
+
+
+#(BEGIN_PREAMBLE)
+## Start with a fresh (empty) "all.tex" file
+echo " " > all.tex
+#(END_PREAMBLE)
+
+
+#(BEGIN_Q001)
+## Relatively simple explanation question recommended
+echo "\noindent {\bf Question 1 (3 points)}" >> all.tex
+echo "\vskip 5pt" >> all.tex
+#(ECHO-CAT_BREAK_Q001)
+cat 03335.tex  >> all.tex	
+#cat 03340.tex  >> all.tex	
+#cat 03360.tex  >> all.tex	
+#(END_Q001)
+
+
+#(BEGIN_Q002)
+## Simple definition question recommended
+echo "\noindent {\bf Question 2 (3 points)}" >> all.tex
+echo "\vskip 5pt" >> all.tex
+#(ECHO-CAT_BREAK_Q002)
+cat 03336.tex  >> all.tex	
+#cat 03339.tex  >> all.tex	
+#cat 03365.tex  >> all.tex	
+#(END_Q002)
+
+
+#(BEGIN_Q003)
+## Basic conceptual/quantitative question recommended
+echo "\noindent {\bf Question 3 (8 points)}" >> all.tex
+echo "\vskip 5pt" >> all.tex
+#(ECHO-CAT_BREAK_Q003)
+cat 03342.tex  >> all.tex	
+#cat 03343.tex  >> all.tex	
+#cat 03361.tex  >> all.tex	
+#(END_Q003)
+
+
+#(BEGIN_Q004)
+## Basic conceptual/quantitative question recommended
+echo "\noindent {\bf Question 4 (8 points)}" >> all.tex
+echo "\vskip 5pt" >> all.tex
+#(ECHO-CAT_BREAK_Q004)
+cat 03344.tex  >> all.tex	
+#cat 03345.tex  >> all.tex	
+#cat 03362.tex  >> all.tex	
+#(END_Q004)
+
+
+#(BEGIN_Q005)
+## Basic conceptual/quantitative question recommended
+echo "\noindent {\bf Question 5 (8 points)}" >> all.tex
+echo "\vskip 5pt" >> all.tex
+#(ECHO-CAT_BREAK_Q005)
+cat 03353.tex  >> all.tex	
+#cat 03354.tex  >> all.tex	
+#cat 03355.tex  >> all.tex	
+#(END_Q005)
+
+
+#(BEGIN_Q006)
+## Intermediate conceptual/quantitative question recommended
+echo "\noindent {\bf Question 6 (8 points)}" >> all.tex
+echo "\vskip 5pt" >> all.tex
+#(ECHO-CAT_BREAK_Q006)
+cat 03356.tex  >> all.tex	
+#cat 03357.tex  >> all.tex	
+#cat 03358.tex  >> all.tex	
+#cat 03359.tex  >> all.tex	
+#(END_Q006)
+
+
+#(BEGIN_Q007)
+## Intermediate conceptual/quantitative question recommended
+echo "\noindent {\bf Question 7 (8 points)}" >> all.tex
+echo "\vskip 5pt" >> all.tex
+#(ECHO-CAT_BREAK_Q007)
+cat 03346.tex  >> all.tex	
+#cat 03348.tex  >> all.tex	
+#cat 03347.tex  >> all.tex	
+#(END_Q007)
+
+
+#(BEGIN_Q008)
+## Intermediate conceptual/quantitative question recommended
+echo "\noindent {\bf Question 8 (8 points)}" >> all.tex
+echo "\vskip 5pt" >> all.tex
+#(ECHO-CAT_BREAK_Q008)
+cat 03349.tex  >> all.tex	
+#cat 03350.tex  >> all.tex	
+#cat 03363.tex  >> all.tex	
+#(END_Q008)
+
+
+#(BEGIN_Q009)
+## Challenging question involving integration of two or more
+## previously learned concepts and/or calculations recommended
+echo "\noindent {\bf Question 9 (8 points)}" >> all.tex
+echo "\vskip 5pt" >> all.tex
+#(ECHO-CAT_BREAK_Q009)
+cat 03351.tex  >> all.tex	
+#cat 03352.tex  >> all.tex	
+#cat 03364.tex  >> all.tex	
+#(END_Q009)
+
+
+#(BEGIN_Q010)
+## Troubleshooting question recommended
+echo "\noindent {\bf Question 10 (8 points)}" >> all.tex
+echo "\vskip 5pt" >> all.tex
+#(ECHO-CAT_BREAK_Q010)
+cat 03337.tex  >> all.tex	
+#cat 03338.tex  >> all.tex	
+#cat 03341.tex  >> all.tex	
+#(END_Q010)
+
+
+#(BEGIN_Q011)
+## Performance assessment question
+echo "\vfil \eject" >> all.tex
+echo "\noindent {\bf Question 11: Performance assessment (30 points; -5 points per retry)}" >> all.tex
+echo "\vskip 5pt" >> all.tex
+#(ECHO-CAT_BREAK_Q011)
+cat 03334.tex  >> all.tex	
+#(END_Q011)
+
+

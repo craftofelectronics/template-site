@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The purpose of this circuit is to provide a pushbutton-adjustable voltage.  Pressing one button causes the output voltage to increase, while pressing the other button causes the output voltage to decrease.  When neither button is pressed, the voltage remains stable:
+
+$$\epsfbox{03773x01.eps}$$
+
+After working just fine for quite a long while, the circuit suddenly fails: now it only outputs zero volts DC all the time.
+
+An experienced technician first checks the power supply voltage to see if it is within normal limits, and it is.  Then, the technician checks the voltage across the capacitor.  Explain why this is a good test point to check, and what the results of that check would tell the technician about the nature of the fault.
+
+\underbar{file 03773}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Checking for voltage across the capacitor will tell the technician what voltage the op-amp follower is being "told" to reproduce at the output.
+
+\vskip 10pt
+
+Challenge question: why do you suppose I specify a CA3130 operational amplifier for this particular circuit?  What is special about this opamp that qualifies it for the task?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Knowing where to check for critical signals in a circuit is an important skill, because it usually means the difference between efficiently locating a fault and wasting time.  Ask your students to explain in detail the rationale behind checking for voltage across the capacitor, and (again, in detail) what certain voltage measurements at that point would prove about the nature of the fault.
+
+%INDEX% Troubleshooting, pushbutton voltage adjustment circuit
+
+%(END_NOTES)
+
+

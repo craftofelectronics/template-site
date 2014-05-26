@@ -1,0 +1,114 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Examine this truth table and then write both SOP and POS Boolean expressions describing the Output:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+A & B & C & Output \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+1 & 0 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+1 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+1 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+1 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Which of those Boolean expressions is simpler for this particular truth table?  Which will be easier to reduce to simplest form (for the purpose of creating a gate circuit to implement it)?
+
+\underbar{file 02823}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+SOP expression:
+
+$$\overline{A} \> \overline{B} \> \overline{C} + \overline{A} B \overline{C} + A \overline{B} C + A B \overline{C}$$
+
+POS expression:
+
+$$(A + B + \overline{C})(A + \overline{B} + \overline{C})(\overline{A} + B + C)(\overline{A} + \overline{B} + \overline{C})$$
+
+\vskip 10pt
+
+Note: before deciding which expression is simpler, remember that the POS expression must be distributed before we may apply any of the standard Boolean simplification rules.
+
+\vskip 10pt
+
+Follow-up question: compare and contrast the procedures for generating SOP versus POS expressions from a truth table.  What states (1 or 0) are you looking for when writing each type of expression?  Explain why.
+
+\vskip 10pt
+
+Challenge question: what truth table scenarios do you suppose would "favor" an SOP expression over a POS expression, and visa-versa?  In other words, under what conditions does a truth table yield a simpler SOP expression, versus a simpler POS expression?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question is really asking students to compare and contrast SOP against POS expressions, rather than being a question specific to the given truth table.  The actual expressions given in the answer are there only for "drill," so students may check their work.  The {\it real} answers relate to the follow-up and challenge questions!
+
+%INDEX% POS expression, Boolean algebra (from analysis of a truth table)
+%INDEX% Product-of-Sums expression, Boolean algebra (from analysis of a truth table)
+%INDEX% SOP expression, Boolean algebra (from analysis of a truth table)
+%INDEX% Sum-of-Products expression, Boolean algebra (from analysis of a truth table)
+
+%(END_NOTES)
+
+

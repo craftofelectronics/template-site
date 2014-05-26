@@ -1,0 +1,133 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student sets up a circuit that looks like this, to gather data for characterizing a diode:
+
+$$\epsfbox{01923x01.eps}$$
+
+Measuring diode voltage and diode current in this circuit, the student generates the following table of data:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_{diode}$ & $I_{diode}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0.600 V & 1.68 mA \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0.625 V & 2.88 mA \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0.650 V & 5.00 mA \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0.675 V & 8.68 mA \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+0.700 V & 14.75 mA \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+0.725 V & 27.25 mA \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+0.750 V & 48.2 mA \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+This student knows that the behavior of a PN junction follows Shockley's diode equation, and that the equation may be simplified to the following form:
+
+$$I_{diode} = I_S (e^{V_{diode} \over K} - 1)$$
+
+\noindent
+Where,
+
+$K = $ a constant incorporating both the thermal voltage and the nonideality coefficient
+
+\vskip 10pt
+
+The goal of this experiment is to calculate $K$ and $I_S$, so that the diode's current may be predicted for any arbitrary value of voltage drop.  However, the equation must be simplified a bit before the student can proceed.
+
+At substantial levels of current, the exponential term is very much larger than unity ($e^{V_{diode} \over K} >> 1$), so the equation may be simplified as such:
+
+$$I_{diode} \approx I_S (e^{V_{diode} \over K})$$
+
+From this equation, determine how the student would calculate $K$ and $I_S$ from the data shown in the table.  Also, explain how this student may verify the accuracy of these calculated values.
+
+\underbar{file 01923}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$K \approx 0.04516$
+
+$I_S \approx 2.869$ nA
+
+\vskip 10pt
+
+Hint: this may be a difficult problem to solve if you are unfamiliar with the algebraic technique of dividing one equation by another.  Here is the technique shown in general terms:
+
+$$\hbox{Given: \hskip 10pt} y_1 = ax_1 \hbox{\hskip 20pt} y_2 = ax_2$$
+
+$${y_1 \over y_2} = {ax_1 \over ax_2}$$
+
+From here, it may be possible to perform simplifications impossible before.  I suggest using this technique to solve for $K$ first.
+
+\vskip 10pt
+
+Follow-up question: explain how this student knew it was "safe" to simplify the Shockley diode equation by eliminating the "- 1" term.  Is this sort of elimination always permissible?  Why or why not?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The algebraic technique used to solve for $K$ is very useful for certain types of problems.
+
+Discuss the follow-up question with your students.  It is important in the realm of technical mathematics to have a good sense of the relative values of equation terms, so that one may "safely" eliminate terms as a simplifying technique without incurring significant errors.  In the Shockley diode equation it is easy to show that the exponential term is {\it enormous} compared to 1 for the values of $V_{diode}$ shown in the table (assuming a typical value for thermal voltage), and so the "- 1" part is very safe to eliminate. 
+
+Also discuss the idea of verifying the calculated values of $K$ and $I_S$ with your students, to help them cultivate a scientifically critical point of view in their study of electronics.
+
+\vskip 10pt
+
+Incidentally, the data in this table came from a real experiment, set up exactly as shown by the schematic diagram in the question.  Care was taken to avoid diode heating by turning the potentiometer to maximum resistance between readings.
+
+%INDEX% Algebra, manipulating equations
+%INDEX% Diode equation
+%INDEX% Shockley's diode equation
+
+%(END_NOTES)
+
+

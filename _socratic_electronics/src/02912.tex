@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An extra feature you could add to the logic probe circuit is a {\it pulse indication} LED.  This LED momentarily turns on whenever there is a transition from high-to-low or from low-to-high:
+
+$$\epsfbox{02912x01.eps}$$
+
+Actually, what the pulse indicator circuit detects is a transition to the "indeterminate" state, which always lies between "high" and "low."  A pulse indication feature is nice to have in some circumstances, since it shows the presence of pulses which may be too brief to light up either the "high" or "low" LED.  The two additional NAND gates "stretch" the pulse time so that the "pulse" LED's blink is long enough to see.  The duration of the LED's blink is set by resistor $R_7$ and capacitor $C_2$.
+
+Explain how the pulse indication circuitry works.
+
+\underbar{file 02912}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+NAND gates $U_4$ and $U_5$ form a monostable multivibrator circuit.  A low input sensed by $U_4$ at the output of $U_3$ (indicating an indeterminate state) forces $U_4$ to output a high signal, which is inverted by $U_5$ to energize the "Pulse" LED and also hold $U_4$ in that state even when the output of $U_3$ goes high again.  This state cannot last indefinitely, though, because the RC network of $R_7$ and $C_2$ brings the input of $U_5$ to a low state over time, thus "resetting" the pulse indication circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I recommend a 0.47 $\mu$F capacitor for $C_2$ and a 100 k$\Omega$ resistor for $R_7$.  The added feature of a pulse indicator LED is particularly nice because it makes use of what would otherwise be unused gates in a 4011 CMOS NAND gate IC.  The only added componentry is the fourth LED, current limiting resistor $R_6$, capacitor $C_2$, and resistor $R_7$.
+
+%(END_NOTES)
+
+

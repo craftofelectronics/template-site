@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A helpful model for understanding opamp function is one where the output of an opamp is thought of as being the wiper of a potentiometer, the wiper position automatically adjusted according to the difference in voltage measured between the two inputs:
+
+$$\epsfbox{02290x01.eps}$$
+
+To elaborate further, imagine an extremely sensitive, analog, zero-center voltmeter inside the opamp, where the moving-coil mechanism of the voltmeter mechanically drives the potentiometer wiper.  The wiper's position would then be proportional to both the magnitude and polarity of the difference in voltage between the two input terminals.  
+
+Realistically, building such a voltmeter/potentiometer mechanism with the same sensitivity and dynamic performance as a solid-state opamp circuit would be impossible, but the point here is to {\it model} the opamp in terms of components that we are already very familiar with, not to suggest an alternative construction for real opamps.
+
+\vskip 10pt
+
+Describe how this model helps to explain the output voltage limits of an opamp, and also where the opamp sources or sinks load current from.
+
+\underbar{file 02290}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The output voltage of an opamp {\it cannot} exceed either power supply "rail" voltage, and it is these "rail" connections that either source or sink load current.
+
+\vskip 10pt
+
+Follow-up question: does this model realistically depict the input characteristics (especially input {\it impedance}) of an opamp?  Why or why not?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Students have told me that this opamp model "opened their eyes" to the behavior of opamp outputs, especially in situations where they would have otherwise expected an opamp to deliver an output voltage exceeding one of the rail voltages, or where the path of load current was critical.  One of the common fallacies new students have about opamps is that output current somehow originates from current at one or both of the input terminals.  This model also helps to shatter that illusion.
+
+As a new instructor, I used to be shocked to see such misunderstandings in my students' thinking.  Surely from their previous experience with single-transistor amplifier circuits they {\it knew} the DC output voltage could never exceed the power supply rail voltages, right?  Surely they {\it understood} that the current gain provided by multiple transistor stages effectively isolated output loading from the input(s), so that increased load at the output had negligible effect on input current, right?  Well, not necessarily so!
+
+The major reasons I am so adamant about having students expose their conceptions and thinking processes in a classroom discussion (rather than quietly listen to me lecture) is to be able to detect and correct these kinds of misunderstandings, and to be able to instill a sense of internal dialogue so that students learn to detect and correct the same kinds of misunderstandings on their own.  Deep and critical thought does not seem to be a natural tendency in most human beings.  To the contrary, a great many people seem perfectly content with meager and shallow comprehensions of the world around them, and must be prodded into assessing what they think they know.  Pose questions to your students that challenge shallow thinking, that expose misunderstandings, and that force students to think more deeply than they are used to.  In my opinion, building these metacognitive skills and habits is the very essence of higher education.
+
+%INDEX% Opamp, potentiometric model for
+
+%(END_NOTES)
+
+

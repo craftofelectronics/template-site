@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The MM58342 high-voltage display driver IC from National Semiconductor serves as an interface between either a microprocessor or microcontroller and a high-voltage vacuum fluorescent (VF) display panel.  The IC reads and conditions 20 bits of data to drive 20 "grids" in such a display.  When combined with a similar driver driving the anodes of the same VF display, individual pixels (or combinations of pixels) may be controlled (lit).
+
+An interesting feature of this IC is that it receives the 20 bits of data serially (one at a time), through a single input pin:
+
+$$\epsfbox{03040x01.eps}$$
+
+Read the datasheet for this device, then comment on why you think a serial (rather than parallel) data input format was chosen.  Also describe the sequence of operation for loading data into this IC and outputting that data to the 20 output lines.
+
+\underbar{file 03040}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If it were not for the serial input, this IC would have quite a few more pins!  The timing diagram and description in the datasheet should provide plenty of information for determining how to send data to the display using this IC.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+While this question introduces the concept of a vacuum-fluorescent (VF) display, it also serves as a review of shift register and latch technology.  The block diagram should be informative enough for most students to be able to figure out at least an approximate procedure for loading and outputting data.
+
+It is interesting to note (and discuss with your students) that this IC does not decode characters.  It merely conditions and outputs bits of information to the grids of a VF display.  Ask your students, then, where they think the patterns of "on" and "off" pixels must be generated to form specific characters on the display.
+
+%INDEX% MM58342 high-voltage display driver IC
+
+%(END_NOTES)
+
+

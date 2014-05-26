@@ -1,0 +1,11 @@
+all:
+	( cd src ; $(MAKE) )
+
+clean:
+	( cd src ; $(MAKE) clean )
+	rm -f *.tar.gz
+
+realclean: clean
+	( cd output ; $(MAKE) clean )
+
+

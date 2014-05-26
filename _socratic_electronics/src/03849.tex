@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This {\it digital-to-analog} converter (DAC) circuit takes a four-bit binary input (input terminals A through D) and converts it to an analog voltage ($V_{out}$).  Predict how the operation of this circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03849x01.eps}$$
+
+\medskip
+\item{$\bullet$} Bilateral switch $U_1$ fails open:
+\item{$\bullet$} Zener diode fails shorted:
+\item{$\bullet$} Solder bridge (short) past resistor $R_1$:
+\item{$\bullet$} Resistor $R_6$ fails open:
+\medskip
+
+\underbar{file 03849}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Bilateral switch $U_1$ fails open: {\it $V_{out}$ same for all odd numbered input conditions as it is for next lowest even-numbered input condition (e.g. input value of 5 gives same output as input value of 4).}
+\item{$\bullet$} Zener diode fails shorted: {\it $V_{out}$ is nearly zero volts for any input condition.}
+\item{$\bullet$} Solder bridge (short) past resistor $R_1$: {\it $V_{out}$ saturates positive for any given odd-valued input condition.}
+\item{$\bullet$} Resistor $R_6$ fails open: {\it $V_{out}$ always saturated.}
+\medskip
+
+\vskip 10pt
+
+Follow-up question \#1: is the arrow showing zener diode current drawn in the direction of electron flow or conventional flow?
+
+\vskip 10pt
+
+Follow-up question \#2: which input bit is the most significant (MSB) and which is the least significant (LSB)?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Questions like this help students hone their troubleshooting skills by forcing them to think through the consequences of each possibility.  This is an essential step in troubleshooting, and it requires a firm understanding of circuit function.
+
+%INDEX% Troubleshooting, predicting effects of fault in DAC circuit
+
+%(END_NOTES)
+
+

@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This crowbar circuit has a problem.  It used to work just fine, and then one day it blew the fuse.  Upon replacing the fuse, the new fuse immediately blew:
+
+$$\epsfbox{03734x01.eps}$$
+
+Measuring the supply voltage with a voltmeter, everything checks out well.  There does not appear to be an overvoltage condition causing a legitimate "crowbar" event in the circuit.  Disconnecting the load from the crowbar circuit and powering it up with a standard bench-top laboratory power supply reveals the load to be in perfect condition.  Thus, both the source and the load have been eliminated as possibilities that may have blown the fuse(s).
+
+Moving on to the crowbar circuit itself, identify some component faults that could (each, independently) account for the problem, and explain your reasoning.
+
+\underbar{file 03734}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\noindent
+{\bf Possible faults} (not an exhaustive list)
+
+\medskip
+\item{$\bullet$} SCR failed shorted
+\item{$\bullet$} Zener diode failed shorted 
+\item{$\bullet$} $R_1$ failed shorted
+\item{$\bullet$} $R_2$ failed open
+\item{$\bullet$} $R_4$ failed open (especially if SCR is a sensitive-gate type)
+\item{$\bullet$} UJT $Q_1$ failed shorted between base terminals
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss with your students the initial troubleshooting steps described in the question.  What strategy or strategies is the technician taking to isolate the problem?
+
+%INDEX% Troubleshooting, crowbar circuit
+
+%(END_NOTES)
+
+

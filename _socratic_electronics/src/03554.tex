@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A simple {\it time-delay relay circuit} may be built using a large capacitor connected in parallel with the relay coil, to temporarily supply the relay coil with power after the main power source is disconnected.  In the following circuit, pressing the pushbutton switch sounds the horn, which remains on for a brief time after releasing the switch:
+
+$$\epsfbox{03554x01.eps}$$
+
+To calculate the amount of time the horn will remain on after the pushbutton switch is released, we must know a few things about the relay itself.  Since the relay coil acts as a resistive load to the capacitor, we must know the coil's resistance in ohms.  We must also know the voltage at which the relay "drops out" (i.e. the point at which there is too little voltage across the coil to maintain a strong enough magnetic field to hold the relay contacts closed).
+
+Suppose the power supply voltage is 24 volts, the capacitor is 2200 $\mu$F, the relay coil resistance is 500 $\Omega$, and the coil drop-out voltage is 6.5 volts.  Calculate how long the time delay will last.
+
+\underbar{file 03554}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$t_{delay}$ = 1.437 seconds
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In order for students to solve this problem, they must algebraically manipulate the "normal" time-constant formula to solve for time instead of solving for voltage.
+
+%INDEX% Time constant calculation, RC circuit (calculating time required to charge to specified amount)
+
+%(END_NOTES)
+
+

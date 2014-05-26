@@ -1,0 +1,62 @@
+
+\centerline{\bf Wire-by-Number project kit introduction} \bigskip 
+ 
+This worksheet and all related files are licensed under the Creative Commons Attribution License, version 1.0.  To view a copy of this license, visit http://creativecommons.org/licenses/by/1.0/, or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.  The terms and conditions of this license allow for free copying, distribution, and/or modification of all licensed works by the general public.
+
+\bigskip 
+
+\hrule
+
+\vskip 10pt
+
+\noindent By Tony R. Kuphaldt
+
+\vskip 10pt
+
+When I was young, my parents purchased a "Science Fair 150-in-one" project kit from Radio Shack.  This kit was a wooden box with a stiff cardboard "backplane" inserted in it, into which dozens of electronic components were mounted.  A small coil spring was attached to each component terminal, these springs serving as solderless connection points for the components.  By pulling upward on a spring and opening spaces between the coils, one could insert a piece of stranded wire.  When the spring was released, its tension clamped the wire in place, providing a mechanical and electrical connection.  It was a primitive form of solderless breadboarding, except that the components were stationary and only the wires could be moved.
+
+The kit came with a detailed instruction book, describing (in this case) 150 different electronic projects that could be built by connecting components together.  Each project was complete with a schematic diagram, a pictorial diagram of the wires connecting the components together, and a description of the circuit and what it should do.  Most of the projects were noise-making oscillators: morse code practice sounders, sirens, bird calls, whistles, etc.  The kit came complete with a ferrite coil and variable capacitor, so simple radio circuits could also be built.  A small solar cell and cadmium sulphide cell were provided for light-sensitive projects, and it even had a meter movement, relay, and a primitive integrated circuit.
+
+However, the best part of this kit was the "wiring sequence" given for each project.  Each spring coil had a number written next to it, and all you had to do to build any circuit in the book was connect the spring clips together in the order stated by the wiring sequence.  No knowledge of electronics was necessary at all!
+
+\vskip 10pt
+
+As primitive as this kit may sound (and it was!), it possessed tremendous educational value.  First, being able to build functioning circuits by simply following wiring sequences allowed a novice like myself to immediately experience the thrill of hobby electronics.  Once a circuit was built, I could experiment with disconnecting different wires, bridging components with my fingers (to create a high-value shunt resistance), and making other slight modifications, and immediately experience the results.  The very short time required to go from a wiring sequence to a working circuit helped my young, relatively inattentive mind engage in the subject with a greater level of enthusiasm than if I would have had to follow complex instructions, and this naturally led to greater learning.  The wiring sequence also made the construction process "fool-proof," eliminating so many of the connection problems normally faced in breadboarding.
+
+Also, a very important skill I learned from this kit was how to spatially abstract from schematic diagrams to real circuitry where the components aren't laid out the same.  This is a learning competency often neglected in modern breadboarding, where students have the freedom of locating components almost anywhere on the board they wish.  Having all the components in fixed locations forced me to think differently than I would have otherwise.  This spatial-relations skill has benefited me tremendously in my professional electronics career, and it is something I see numerous students struggle to master.
+
+\vskip 10pt
+
+Now that I teach electronics, I wonder how beneficial my old "Science Fair" kit would be to my students, and how it might compare to modern, solderless breadboards as a teaching tool.  Certainly, the spring-clip method of wire connections does not reflect industry wiring practice, and as such might be frowned upon because it lacks authenticity, but the same may be said about solderless breadboards.  {\it Nobody} builds anything remotely permanent on a solderless breadboard (or at least they shouldn't!).  In industry, circuits are either soldered, wire-wrapped or built with terminal blocks if re-configurability is crucial.
+
+So, I thought, why not create a modernized version of the old "Science Fair" project kits using screw-type terminals to serve as semi-permanent connection points between components?  Like the spring-coil kits, each terminal could be marked by a label, the labels being used as reference points in wiring sequence lists.  Students could build circuits in a "fool-proof" way in a very short time, learn to spatially abstract between schematic diagrams and the real thing, and have a relatively durable form of construction to work with (suitable for transport between home and school in less-than-ideal conditions).  Best of all, students could {\it build} their own kit from a collection of components, a set of terminal strips, and a piece of plywood or some other suitable base material upon which to mount it all.  This last benefit can be a great boost for "tactile" learners, who learn best when using their hands.
+
+Having circuits specified by wiring sequence would allow "painless" construction for beginning students, but not all projects would have to be this easy.  For added challenge, later circuits could be specified by schematic diagram only, with students having to figure out the wiring sequences on their own.  This would actually be more challenging to students than building circuits on a solderless breadboard, because they would have to spatially abstract to a greater degree (not having the freedom to place components in such a way as to mimic the schematic's layout).  The "Science Fair kit" format of wiring thus enables a wider range of learning for students than breadboards.
+
+The main disadvantage I see to the "Science Fair kit" method of circuit construction is limited component count compared to breadboards.  Many complex circuits simply could not be built in this fashion, because the necessary terminal count would be so high.  Also, the long wiring lengths necessary to span distances between terminals creates relatively large parasitic inductances and capacitances, limiting circuit speeds and potentially decreasing signal-to-noise ratios.  However, despite these disadvantages, a great many educational circuits could be built in this format, with what I believe to be superior educational benefits over breadboarding.
+
+\vskip 10pt
+
+The purpose of this document is to outline the plans for such a kit -- which I will refer to as the "Wire-by-Number" kit -- and to suggest how one may be used in a teaching environment.
+
+\bigskip 
+
+\hrule
+
+\vskip 10pt
+
+\centerline{\bf Proposed board layout} \bigskip 
+
+\vskip 10pt
+
+The basic layout of the Wire-by-Number board is two parallel rows of 36 terminals, comprised of three 12-position terminal blocks laid end-to-end.  The terminal strips are anchored to a wooden board (I suggest a half-inch by 6 inch by 18 inch "hobby" or "craft" board) by means of \#4 screws.
+
+$$\epsfbox{wbn0x00.eps}$$
+
+Small components connect to the top points of the "A" strip, while large components connect to the bottom points of the "B" strip.  This is why the two strips are offset from center on the wooden board: to give room to support larger components along the lower row.  Connecting wires between terminals go in the space between the two rows of terminal strips.  I strongly recommend that students follow the general rule of no more than two conductors inserted into each terminal hole, and to keep one side of each terminal strip exclusively devoted to components.  This latter rule allows replacement of components without disturbing the interconnecting wires.
+
+Other layouts are, of course, possible.  If necessary, additional lengths of terminal blocks may be added, but this would likely be unwieldy.  As it is, this layout provides 72 terminals in a space less than 4 inches by 1 foot.
+
+I recommend using 12-position "Euro" style direct-mount terminal strips with wire protectors.  These are far less costly than modular terminal blocks of the type commonly used in industrial wiring.  If purchased in quantity, their price should be less than \$1.00 apiece (2004 prices, United States dollars).
+
+

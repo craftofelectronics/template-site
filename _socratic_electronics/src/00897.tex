@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Two terms used commonly in electronics are {\it sourcing} and {\it sinking}, in reference to the direction of electric current between an active circuit and a load:
+
+$$\epsfbox{00897x01.eps}$$
+
+A practical example of where this distinction is important is in certain integrated circuits (IC "chips") where output pins may be able to only sink current, only source current, or both sink and source current.. Take a look at these two examples, each where an integrated circuit "chip" controls power to an LED.  In one instance the IC is wired to source current to the LED, and in the other instance it is wired to sink current from the LED:
+
+$$\epsfbox{00897x04.eps}$$
+
+If an IC is only able to do one or the other (source {\it or} sink current, but not both), it makes a big difference how you connect load devices to it!  What makes the difference between a circuit that is able to source current versus a circuit that is able to sink current is the internal configuration of its transistors.
+
+Similarly, a current mirror circuit may be built to either source current or sink current, but not do both.  Draw current mirror circuits within the dotted-line boxes suitable for sourcing and sinking current to a load resistor:
+
+$$\epsfbox{00897x02.eps}$$
+
+\underbar{file 00897}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{00897x03.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question challenges students' ability to "manipulate" the basic current mirror circuit into two different configurations.  Depending on how well your students grasp the basic concept, you might want to spend extra discussion time comparing the two circuits, tracing current through each and discussing their operation in general.
+
+Although it may seem trivial to an experienced instructor or electronics professional, variations of circuit designs consisting solely of inverting components are often quite confusing to students, especially those weak in spatial-relations skills.  I encourage you to work with those students regularly to build this important visualization skill.
+
+%INDEX% Current mirror circuit, BJT
+
+%(END_NOTES)
+
+

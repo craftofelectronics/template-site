@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A very interesting style of voltage divider appeared in an issue of {\it Electronics}, May 10, 1973.  It used three series-connected strings of resistors and connection clips to provide 1000 steps of voltage division with only 31 resistors, of only 3 different resistance values:
+
+$$\epsfbox{01188x01.eps}$$
+
+By moving the connection points between these strings of resistors, different fractions of the input voltage may be obtained at the output:
+
+$$\epsfbox{01188x02.eps}$$
+
+For the purposes of analysis, we may simplify any given configuration of this voltage divider circuit into a network of fewer resistors, in this form:
+
+$$\epsfbox{01188x03.eps}$$
+
+Draw the simplified networks for each of the two given configurations ($V_{out} = 6.37 \hbox{ volts}$ and $V_{out} = 2.84 \hbox{ volts}$), showing all resistance values, and then apply mesh current analysis to verify the given output voltages in each case.
+
+Note: you will have to solve a set of simultaneous equations: 4 equations with 4 unknowns, in order to obtain each answer.  I strongly recommend you use a scientific calculator to perform the necessary arithmetic!
+
+\underbar{file 01188}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If you need verification of your work, you should use a computer simulation program such as SPICE to "do the math" for you.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+There is a lot of setup work and arithmetic to do in the analysis of these two circuit configurations.  This exercise is not only a thorough application of the mesh current method, but it also serves as an excellent application for computer simulation software.  Give your students the opportunity to analyze both these circuits with simulation software, so they may appreciate the power of this technology.
+
+Ask your students this question: "Suppose a student enters their circuit into a computer simulation program, and the program gives them an answer that is known to be incorrect.  What does this indicate to the student?"  Simulation tools are useful, both only so far as the user understands what he or she is doing.  Far too often I encounter students who blindly accept the results of computer simulation, because they mistakenly think that whatever output the computer generates {\it must} be correct, not understanding how errors in the input or the use of different simulation algorithms affects accuracy of the simulated results.
+
+%(END_NOTES)
+
+

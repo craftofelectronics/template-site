@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Determine the final output states over time for the following circuit, built from D-type gated latches:
+
+$$\epsfbox{01363x01.eps}$$
+
+At what specific times in the pulse diagram does the final output assume the input's state?  How does this behavior differ from the normal response of a D-type latch?
+
+\underbar{file 01363}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01363x02.eps}$$
+
+The final output assumes the same logic state as the input only when the enable input signal (B) {\it transitions} from "high" to "low".
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Note that by adding another latch, the overall behavior only slightly resembles the behavior of a D-type latch.  With the addition of the second latch, we've changed this circuit into a {\it flip-flop}, specifically of the {\it master-slave} variety.
+
+%INDEX% D-type flip-flop, master-slave
+
+%(END_NOTES)
+
+

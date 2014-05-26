@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An improvement to the resistor-based differential amplifier design is the addition of a constant-current source where the two transistors' emitter currents mesh together:
+
+$$\epsfbox{00936x01.eps}$$
+
+What does the constant-current source "look like" to the rest of the amplifier, in terms of equivalent resistance?  What advantage does this give to the amplifier's performance, over the (simpler) resistor design?  Finally, how is this constant-current source actually constructed in a typical differential amplifier circuit?
+
+\underbar{file 00936}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A constant-current source will "look like" a very large resistance to the rest of the circuit.  This gives the amplifier a larger common-mode rejection ratio (CMRR).  Usually, the current source is constructed using a {\it current mirror} circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to define CMRR and explain its importance in a differential amplifier circuit.  Analyze the effects of common-mode input voltage on a simple resistor-based differential amplifier circuit, and then compare it to the circuit having a constant current source.  How does the current source work to improve CMRR (reduce common-mode gain)?
+
+Also, have your students draw a current mirror for this differential amplifier circuit and explain how it works.
+
+I am expecting that your students have seen (or can research) the CMRR approximation for a differential pair circuit (CMRR $\approx {R_E \over r'_e}$), and from this can deduce the importance of using a current source in the tail of the circuit instead of a passive resistor.
+
+%INDEX% Differential pair circuit, with active load
+
+%(END_NOTES)
+
+

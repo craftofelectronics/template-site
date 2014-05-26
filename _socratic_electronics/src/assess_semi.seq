@@ -1,0 +1,72 @@
+#!/bin/bash
+
+
+# "Concatenating" all selected questions/answers/notes into a single TeX file.
+# This is where you specify the questions you want included in your worksheet, in the
+# order you want them to appear.
+cat \
+04075.tex \
+01940.tex \
+01941.tex \
+01942.tex \
+01943.tex \
+01944.tex \
+02296.tex \
+01622.tex \
+01623.tex \
+01974.tex \
+02012.tex \
+01979.tex \
+01986.tex \
+01980.tex \
+01921.tex \
+01931.tex \
+01932.tex \
+02319.tex \
+01945.tex \
+02010.tex \
+01938.tex \
+01946.tex \
+01977.tex \
+01967.tex \
+01978.tex \
+01966.tex \
+01981.tex \
+03919.tex \
+01624.tex \
+01994.tex \
+01937.tex \
+01995.tex \
+01935.tex \
+01996.tex \
+01997.tex \
+01930.tex \
+01972.tex \
+01973.tex \
+02425.tex \
+02424.tex \
+01948.tex \
+01992.tex \
+01993.tex \
+03879.tex \
+01936.tex \
+03884.tex \
+01939.tex \
+01947.tex \
+01990.tex \
+02607.tex \
+01991.tex \
+02507.tex \
+01950.tex \
+01975.tex \
+01952.tex \
+01965.tex \
+01949.tex \
+01953.tex \
+01922.tex \
+01987.tex \
+02345.tex \
+01602.tex \
+> all.tex
+
+

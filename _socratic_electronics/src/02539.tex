@@ -1,0 +1,156 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following circuit is a type of difference amplifier, similar in behavior to the instrumentation amplifier, but only using two operational amplifiers instead of three:
+
+$$\epsfbox{02539x01.eps}$$
+
+Complete the table of values for this opamp circuit, calculating the output voltage for each combination of input voltages shown.  From the calculated values of output voltage, determine which input of this circuit is inverting, and which is noninverting, and also how much differential voltage gain this circuit has.  Express these conclusions in the form of an equation.
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_1$ & $V_2$ & $V_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 V & 0 V &  \cr
+%
+\noalign{\hrule}
+%
+% Third row
++1 V & 0 V &  \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 V & +1 V &  \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
++2 V & +1.5 V &  \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
++3.4 V & +1.2 V &  \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+-2 V & +4 V &  \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
++5 V & +5 V &  \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+-3 V & -3 V &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 02539}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_1$ & $V_2$ & $V_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 V & 0 V & 0 V \cr
+%
+\noalign{\hrule}
+%
+% Third row
++1 V & 0 V & -2 V \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 V & +1 V & +2 V \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
++2 V & +1.5 V & -1 V \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
++3.4 V & +1.2 V & -4.4 V \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+-2 V & +4 V & +12 V \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
++5 V & +5 V & 0 V \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+-3 V & -3 V & 0 V \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+$$V_{out} = 2(V_2 - V_1)$$
+
+\vskip 10pt
+
+Follow-up question: explain how this circuit is at once similar and different from the popular "instrumentation amplifier" circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Although it would be easy enough just to tell students which input is inverting and which input is noninverting, they will learn more (and practice their analysis skills more) if asked to work through the table of values to figure it out.
+
+%INDEX% Algebra, deriving equations from data
+%INDEX% Difference amplifier (using only two opamps)
+
+%(END_NOTES)
+
+

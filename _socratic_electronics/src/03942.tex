@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+At first glance, the feedback appears to be wrong in this current-regulating circuit.  Note how the feedback signal goes to the operational amplifier's {\it noninverting} (+) input, rather than the inverting input as one would normally expect for negative feedback:
+
+$$\epsfbox{03942x01.eps}$$
+
+Explain how this op-amp really does provide {\it negative} feedback, which of course is necessary for stable current regulation, as positive feedback would be completely unstable.
+
+\underbar{file 03942}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If current increases, the feedback voltage (as measured with reference to ground) will decrease, driving the op-amp's output in the negative direction.  This tends to turn the transistor off, properly correcting for the excessive current condition.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to get students to realize negative feedback does not necessarily have to go into the inverting input.  What makes the feedback "negative" is its self-correcting nature: the op-amp output drives in the direction opposite a perturbation in the measured signal in order to achieve stability at a control point.
+
+%INDEX% Constant-current circuit, opamp
+
+%(END_NOTES)
+
+

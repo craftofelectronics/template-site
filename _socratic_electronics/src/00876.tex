@@ -1,0 +1,72 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student is operating a simple comparator circuit and documenting the results in a table:
+
+$$\epsfbox{00876x01.eps}$$
+
+\vskip 10pt
+
+\settabs \+ \quad MMMM \quad & \quad MMMM \quad & \quad MMMM \quad & \quad MMMM \quad & \cr
+\+ \hfill  &  $V_{in(+)}$  &  $V_{in(-)}$ & $V_{out}$  \cr 
+\+ \hfill  &  3.00 V  &  1.45 V  & 10.5 V   \cr 
+\+ \hfill  &  3.00 V  &  2.85 V  & 10.4 V   \cr 
+\+ \hfill  &  3.00 V  &  3.10 V  & 1.19 V   \cr 
+\+ \hfill  &  3.00 V  &  6.75 V  & 1.20 V   \cr 
+
+\vskip 5pt
+
+\+ \hfill  &  $V_{in(+)}$  &  $V_{in(-)}$ & $V_{out}$  \cr 
+\+ \hfill  &  2.36 V  &  6.50 V  & 1.20 V   \cr 
+\+ \hfill  &  4.97 V  &  6.50 V  & 1.21 V   \cr 
+\+ \hfill  &  7.05 V  &  6.50 V  & 10.5 V   \cr 
+\+ \hfill  &  9.28 V  &  6.50 V  & 10.4 V   \cr 
+
+\vskip 5pt
+
+\+ \hfill  &  $V_{in(+)}$  &  $V_{in(-)}$ & $V_{out}$  \cr 
+\+ \hfill  &  10.4 V  &  9.87 V  & 10.6 V   \cr 
+\+ \hfill  &  1.75 V  &  1.03 V  & 10.5 V   \cr 
+\+ \hfill  &  0.31 V  &  1.03 V  & 10.5 V   \cr 
+\+ \hfill  &  5.50  &  5.65 V  & 1.19 V   \cr 
+
+\vskip 10pt
+
+One of these output voltage readings is anomalous.  In other words, it does not appear to be "correct".  This is very strange, because these figures are real measurements and not predictions!  Perplexed, the student approaches the instructor and asks for help.  The instructor sees the anomalous voltage reading and says two words: {\it latch-up}.  With that, the student goes back to research what this phrase means, and what it has to do with the weird output voltage reading.
+
+Identify which of these output voltage measurements is anomalous, and explain what "latch-up" has to do with it.
+
+\underbar{file 00876}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Latch-up occurs when one of the input voltage signals approaches too close to one of the power supply rail voltages.  The result is the op-amp output saturating "high" even if it isn't supposed to.
+
+\vskip 10pt
+
+Challenge question: suppose we expected both input voltages to range between 0 and 10 volts during normal operation of this comparator circuit.  What could we change in the circuit to allow this range of operation and avoid latch-up?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students what they found in their research on "latch-up," and if this is an idiosyncrasy of all op-amp models, or just some.
+
+Incidentally, the curved op-amp symbol has no special meaning.  This symbol was quite popular for representing op-amps during their early years, but has since fallen out of favor.  I show it here just to inform your students, in case they ever happen to encounter one of these symbols in an old electronic schematic.
+
+%INDEX% Latch-up, opamp or comparator
+
+%(END_NOTES)
+
+

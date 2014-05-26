@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This interesting opamp circuit produces true three-phase sinusoidal voltage waveforms, three of them to be exact:
+
+$$\epsfbox{02674x01.eps}$$
+
+With all the resistors and capacitors, you might have guessed this to be a phase-shift type of oscillator circuit, and you would be correct.  Here, each parallel RC network provides 60 degrees of lagging phase shift to combine with the 180 degrees of phase shift inherent to the inverting amplifier configurations, yielding 120 degrees of shift per opamp stage.
+
+Derive a formula solving for the operating frequency of this oscillator circuit, knowing that the impedance of each parallel RC network will have a phase angle of -60$^{o}$.  Also, determine where on this circuit you would obtain the three promised sine waves.
+
+\underbar{file 02674}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$f = {{\sqrt{3}} \over {2 \pi R C}}$$
+
+I'll give you a hint on how to solve this problem: the {\it admittance triangle} for the parallel RC network will have angles of 60$^{o}$, 30$^{o}$, and of course 90$^{o}$:
+
+$$\epsfbox{02674x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Unlike the multi-stage RC phase shift networks we are accustomed to seeing in discrete transistor phase-shift oscillator circuits, the phase shift networks in this oscillator circuit are much "purer," being effectively isolated from each other by the current gain of each opamp.  Here, each RC network provides the exact same amount of phase shift, and is not loaded by the RC network after it.  This makes the math nice and easy (comparatively), and a good review of trigonometry!
+
+This circuit came from the pages of one of my favorite opamp books, {\it Applications Manual for Computing Amplifiers for Modeling, Measuring, Manipulation, and Much Else}.  Published by Philbrick Researches Inc. in 1966, it is a wonderfully written tour of "modern" operational amplifier applications and techniques.  I only wish (truly) modern texts were written as well as this amazing booklet!
+
+%INDEX% Phase shift oscillator, opamp (three-phase)
+%INDEX% Polyphase opamp oscillator
+%INDEX% Three-phase opamp oscillator
+
+%(END_NOTES)
+
+

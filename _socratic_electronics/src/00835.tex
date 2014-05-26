@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Interpret this AC motor control circuit diagram, explaining the meaning of each symbol:
+
+$$\epsfbox{00835x01.eps}$$
+
+Also, explain the operation of this motor control circuit.  What happens when someone actuates the "Run" switch?  What happens when they let go of the "Run" switch?
+
+\underbar{file 00835}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+In this circuit, the motor will start once the "Run" switch is actuated.  When the "Run" switch is released, the motor continues to run.
+
+\vskip 10pt
+
+Follow-up question: this circuit has no "stop" switch!  What would have to be modified in the ladder logic circuit to provide "stop" control?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This circuit is known as a {\it latching} circuit, because it "latches" in the "on" state after a momentary action.  The contact in parallel with the "Run" switch is often referred to as a {\it seal-in contact}, because it "seals" the momentary condition of the Run switch closure after that switch is de-actuated.
+
+The follow-up question of how we may make the motor stop running is a very important one.  Spend time with your students discussing this practical design problem, and implement a solution.
+
+%INDEX% Control circuit, AC motor
+%INDEX% Ladder logic diagram
+%INDEX% Seal-in contact, motor control circuit
+
+%(END_NOTES)
+
+

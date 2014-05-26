@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A {\it stepper motor} is a special type of electric motor typically used for digital positioning systems.  The motor shaft rotates by alternately energizing its coils in a specific sequence.  These electromagnet coils draw a fair amount of DC current (several amperes is not uncommon for heavy-duty stepper motors), and as such are usually triggered by power transistors:
+
+$$\epsfbox{02046x01.eps}$$
+
+The control circuit that usually sends pulse signals to the base of the power transistors is not shown in this diagram, for simplicity.  Your task is to draw a pushbutton switch in this schematic diagram showing how the first motor coil could be manually energized and de-energized.  Be sure to note the directions of currents through the transistor, so that your switch is installed correctly!
+
+Also, explain the purpose of the diode connected in parallel with the motor coil.  Actually, there will be one of these diodes for each of the motor coils, but the other three are not shown for the sake of simplicity.
+
+\underbar{file 02046}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{02046x02.eps}$$
+
+The diode prevents damage to the transistor resulting from inductive "kickback" each time the motor coil is de-energized.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It is very important for your students to learn how the base current controls the collector current in a BJT, and how to use this knowledge to properly set up switching circuits.  This is not difficult to learn, but it takes time and practice for many students to master.  Be sure to spend adequate time discussing this concept (and circuit design techniques) so they all understand.
+
+%INDEX% Commutating diode, in stepper motor drive circuit
+%INDEX% Free-wheeling diode, in stepper motor drive circuit
+%INDEX% Transistor switch circuit (BJT)
+
+%(END_NOTES)
+
+

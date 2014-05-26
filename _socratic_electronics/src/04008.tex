@@ -1,0 +1,38 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+What is meant by the word {\it resolution} in reference to an ADC or a DAC?  Why is resolution important to us, and how may it be calculated for any particular circuit knowing the number of binary bits?
+
+\underbar{file 04008}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The {\it resolution} of either a digital-to-analog converter (DAC) or an analog-to-digital converter (ADC) is the measure of how {\it finely} its output may change between discrete, binary steps.  For instance, an 8-bit DAC with an output voltage range of 0 to 10 volts will have a resolution of 39.22 mV.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Note that I did not hint how to calculate the resolution of a DAC or an ADC, I just gave the answer for a particular example.  The goal here is for students to inductively "work backwards" from my example to a general mathematical statement about resolution.
+
+There are actually two different ways to calculate the resolution, depending on the actual range of the converter circuit.  For the answer given, I assumed that a digital value of 0x00 = 0.00 volts DC and that a digital value of 0xFF = 10.00 volts DC.  If a student were to calculate the resolution for a circuit where 0xFF generated an output voltage just shy of 10.00 volts DC (e.g. an R-2R ladder network where $V_{ref}$ = 10 volts DC, and a full-scale binary input generates an output voltage just one step less than $V_{ref}$), the correct answer for resolution would be 39.06 mV.
+
+You may want to bring up such practical examples of resolution as the difference between a handheld digital multimeter and a lab-bench digital multimeter.  The number of digits on the display is a sure clue to a substantial difference in ADC resolution.
+
+%INDEX% Resolution, ADC
+%INDEX% Resolution, DAC
+
+%(END_NOTES)
+
+

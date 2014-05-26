@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Determine the output voltage of this circuit for two different input voltage values: +4 volts, and -4 volts.  Determine the voltage at each and every node with respect to ground as part of your analysis:
+
+$$\epsfbox{01026x01.eps}$$
+
+Based on this data (and any other input conditions you wish to test this circuit under), describe what the function of this circuit is.
+
+\underbar{file 01026}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01026x02.eps}$$
+
+$$\epsfbox{01026x03.eps}$$
+
+\vskip 10pt
+
+This circuit is a precision full-wave rectifier.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It is much easier to analyze the behavior of this circuit with a positive input voltage than it is to analyze it with a negative input voltage!  There is a tendency for students to reach this conclusion when analyzing the circuit's behavior with a negative input voltage:
+
+$$\epsfbox{01026x04.eps}$$
+
+The error seems reasonable until an analysis of {\it current} is made.  If these voltages were true, Kirchhoff's Current Law would be violated at the first opamp's virtual ground:
+
+$$\epsfbox{01026x05.eps}$$
+
+%INDEX% Precision rectifier circuit, opamp
+
+%(END_NOTES)
+
+

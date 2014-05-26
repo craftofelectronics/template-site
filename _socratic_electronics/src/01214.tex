@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the operating frequency of this oscillator circuit:
+
+$$\epsfbox{01214x01.eps}$$
+
+Explain why the operating frequency will not be the same if the transistor receives its feedback signal from the other side of the bridge, like this:
+
+$$\epsfbox{01214x02.eps}$$
+
+\underbar{file 01214}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$f = 159.155 \hbox{ Hz}$
+
+\vskip 10pt
+
+If the feedback signal comes from the other side of the bridge, the feedback signal's phase shift will be determined by a different set of components (primarily, the coupling capacitors and bias network resistances) rather than the reactive arms of the bridge.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Given the phase shift requirements of a two-stage oscillator circuit such as this, some students may wonder why the circuit won't act the same in the second configuration.  If such confusion exists, clarify the concept with a question: "What is the phase relationship between input and output voltages for the bridge in these two configurations, over a wide range of frequencies?"  From this observation, your students should be able to tell that only one of these configurations will be stable at 159.155 Hz.
+
+%INDEX% Wien bridge oscillator circuit
+%INDEX% Oscillator circuit, Wien bridge
+
+%(END_NOTES)
+
+

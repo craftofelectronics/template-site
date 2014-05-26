@@ -11,8 +11,8 @@ sleep:
       date: 20140514
       inclass: true
 
-    - title: Components - Pull-Up, Pull-Down, and Switches
-      file: monitor-design
+    - title: Jigsaw Components - Pull-Up, Pull-Down, and Switches
+      file: jigsaw
       date: 20140519
       
     - title: Designing a Sleep Monitor

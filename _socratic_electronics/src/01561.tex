@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student builds the following circuit to demonstrate the behavior of a NAND gate:
+
+$$\epsfbox{01561x01.eps}$$
+
+When the student tests the circuit, though, something is wrong:
+
+\medskip
+\item{$\bullet$} Both switches LOW, no light.
+\item{$\bullet$} One switch HIGH, the other switch LOW; LED lights up.
+\item{$\bullet$} One switch LOW, the other switch HIGH; LED lights up.
+\item{$\bullet$} Both switches HIGH, no light.
+\medskip
+
+Instead of acting as a NAND gate should, it seems to behave as if it were an Exclusive-OR gate!  Examining the circuit for mistakes, the student discovers missing power connections to the chip -- in other words, neither $V_{DD}$ nor $V_{SS}$ are connected to the power source.
+
+While this certainly is a problem, the student is left to wonder, "How did the circuit ever function {\it at all}?"  With no power connected to the chip, how is it possible that the LED ever lit in {\it any} condition?
+
+\underbar{file 01561}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The chip's internal input protection diodes allowed the switch inputs to supply operating power to the MOSFET transistors.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+As an instructor of electronics, I've seen students make this mistake countless times.  What is particularly troublesome about this error is the seemingly intermittent behavior of the chip.  Without power supplied to the chip, most students assume there would be no function at all.  So when they see the chip functioning adequately in some of its circuit's states, they are inclined to assume power is not an issue!
+
+%INDEX% Input protection diodes, CMOS logic
+%INDEX% Missing power connections, CMOS logic
+
+%(END_NOTES)
+
+

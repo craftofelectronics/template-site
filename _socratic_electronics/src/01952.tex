@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{01952x01.eps}$$
+
+\underbar{file 01952}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I have had great success with the following values:
+
+\medskip
+\item{$\bullet$} $V_{CC}$ = 7 to 24 volts
+\item{$\bullet$} $C_1$ and $C_2$ = 0.22 $\mu$F
+\item{$\bullet$} $C_3$ = 0.47 $\mu$F
+\item{$\bullet$} $L_1$ = 100 $\mu$H (ferrite core RF choke)
+\item{$\bullet$} $R_1$ = 22 k$\Omega$
+\item{$\bullet$} $R_2$ = 1.5 M$\Omega$
+\item{$\bullet$} $Q_1$ = part number 2N3403
+\medskip
+
+With these component values, the output waveform was quite clean and the frequency was very close to predicted:
+
+$$f_{out} = {1 \over {2 \pi \sqrt{L C_1 C_2 \over C_1 + C_2}}}$$
+
+You might want to quiz your students on the purpose of resistor $R_2$, since it usually only has to be present at power-up to initiate oscillation!
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (Colpitts oscillator, BJT)
+
+%(END_NOTES)
+
+

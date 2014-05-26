@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The output voltage of a buck converter is a direct function of the switching transistor's duty cycle.  Specifically, $V_{out} = V_{in}\bigl({t_{on} \over t_{total}}\bigr)$.  Explain how the following PWM control circuit regulates the output voltage of the buck converter:
+
+$$\epsfbox{01106x01.eps}$$
+
+\underbar{file 01106}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If the load (output) voltage sags, the PWM circuit generates an output signal with a greater duty cycle, which then drives the power transistor to provide more voltage to the load.
+
+\vskip 10pt
+
+Follow-up question: what is the purpose of the potentiometer in this circuit?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Here, students see a PWM control circuit coupled with a buck converter to provide {\it voltage-regulated} power conversion.  Ask them what form of feedback (positive or negative?) is used in this circuit to regulate the output voltage at a steady value.
+
+Let your students know that the PWM and feedback functions for switching regulator circuits are often provided in a single, application-specific integrated circuit rather than by a collection of discrete components and IC's as shown in the question.
+
+%INDEX% Buck converter circuit
+%INDEX% PWM, used to control buck converter output voltage
+
+%(END_NOTES)
+
+

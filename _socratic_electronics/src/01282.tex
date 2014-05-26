@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Explain why it is generally a {\it very bad} design practice to connect the outputs of different logic gates together, like this:
+
+$$\epsfbox{01282x01.eps}$$
+
+However, there are certain specific circumstances in which "paralleling" gate outputs is acceptable.  For instance, it is okay to parallel two or more inverters, like this:
+
+$$\epsfbox{01282x02.eps}$$
+
+No damage will be done if open-collector gate outputs are paralleled, either (although the resulting logic function may be strange):
+
+$$\epsfbox{01282x03.eps}$$
+
+And finally, gates that have {\it tri-state} outputs may also have their outputs paralleled if certain precautions are taken:
+
+$$\epsfbox{01282x04.eps}$$
+
+What, specifically, causes gates to be damaged by "paralleling" their outputs?  Generally speaking, what principle must be followed in order to "parallel" logic gate outputs without risk of damage?  Explain how each of the three acceptable "paralleled" scenarios shown here meet this criterion.
+
+Suggestion: the issue of multiple gates having to output logic voltage signals onto common conductors ("busses") is called {\it bus contention}.  Try looking for this term in your research to see what useful information you find on paralleled gates!
+
+\underbar{file 01282}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Logic gates will be damaged if one tries to sink the output current sourced by another.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The given answer cuts to the heart of the matter, but I want students to elaborate on the details.  Specifically, why each of the three acceptable paralleled circuits avoids risk of damage.  Make sure you spend adequate time discussing "tri-state" outputs as well.  Ask your students to explain what the three output states of a "tri-state" gate are.
+
+%INDEX% Bus contention, use of tri-state logic gates
+%INDEX% Logic gates, paralleled output lines
+%INDEX% Tri-state logic gates, paralleling outputs of
+
+%(END_NOTES)
+
+

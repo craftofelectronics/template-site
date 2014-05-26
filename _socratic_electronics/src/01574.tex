@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+One use for "rectifying" diodes is to parallel multiple power supplies for extra reliability in powering a critical system:
+
+$$\epsfbox{01574x01.eps}$$
+
+However, as an experienced electronics technician, you should know that diodes are not immune to failure.  Modify this schematic diagram to include three extra (redundant) diodes that will allow normal operation if any one of the three original diodes were to fail, assuming the most common failure mode of rectifier-type diodes.
+
+\underbar{file 01574}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The best way to wire pairs of rectifying diodes together for redundancy is in series:
+
+$$\epsfbox{01574x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+While this may seem like "overkill," to use redundant diodes on redundant power supplies, it is a design feature that does not cost very much.  Given the measurable improvement in reliability with minimal increase in cost, this design feature is not unreasonable.
+
+%INDEX% Diode, probable failure mode
+
+%(END_NOTES)
+
+

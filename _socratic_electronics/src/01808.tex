@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the final value of current through the inductor with the switch in the left-hand position (assuming that many time constants' worth of time have passed):
+
+$$\epsfbox{01808x01.eps}$$
+
+Now, assume that the switch is {\it instantly} moved to the right-hand position.  How much voltage will the inductor initially drop?
+
+$$\epsfbox{01808x02.eps}$$
+
+Explain why this voltage is so very different from the supply voltage.  What practical uses might a circuit such as this have?
+
+\underbar{file 01808}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$I_{switch-left} = 2 \hbox{ mA}$
+
+$V_{switch-right} = 182 \hbox{ V}$
+
+\vskip 10pt
+
+Follow-up question: suppose this circuit were built and tested, and it was found that the voltage developed across the inductor at the moment the switch moved to the right-hand position far exceeded 182 volts.  Identify some possible problems in the circuit which could account for this excessive voltage.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The main purpose of this question is to get students thinking in terms of "initial" and "final" values for LR circuits, and how one might calculate them.  It is largely a conceptual question, with just a bit of calculation necessary.
+
+One practical application of this circuit is for "stepping up" DC voltage.  The circuit topology shown in the question is that of an {\it inverting} converter circuit.  This form of DC-DC converter circuit has the ability to step voltage up {\it or} down, depending on the duty cycle of the switch's oscillation.
+
+%INDEX% Inductor, used to produce high-voltage transients
+
+%(END_NOTES)
+
+

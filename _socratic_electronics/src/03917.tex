@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An obsolete display technology that still finds enthusiastic followers in the hobbyist world, called {\it Nixie tubes}, relies on a BCD-to-10 decoder to drive one of ten different metal cathodes inside a neon-filled glass bulb.  For each BCD code, exactly one of the cathode figures inside the "Nixie tube" will glow, causing that numeral to shine with a pink-orange light.  The tube receives power through a common anode (usually over 150 volts DC).
+
+A friend of yours is trying to build his own Nixie tube display circuit, but is experiencing problems.  He wants to use a 7442 BCD-to-10 decoder to drive ten discrete transistors, each one handling the current for a digit in the tube.  Being cautious, your friend decides to connect just one of the Nixie tube digits to a transistor, and then to the 7442, to see if the idea works (before connecting all ten).
+
+$$\epsfbox{03917x01.eps}$$
+
+Unfortunately, that one digit begins to glow the moment the high-voltage DC supply is turned on, even before the 7442 chip receives power!  And after that, the 7442 gets warm to the touch, which is not good.
+
+Thinking he has damaged the 7442 IC, your friend turns to you for advice.  Did he do anything wrong here?  Explain what advice you would give to him.
+
+\underbar{file 03917}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The transistor is not correct.  Your friend will have to have a different transistor output stage for his display circuit!
+
+\vskip 10pt
+
+Follow-up question: comment on your friends' strategy to connect only one transistor to one Nixie tube cathode for a test.  Was this a good idea?  Why or why not?  Did doing this save the 7442 from further damage?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I have left the answer purposefully vague so that students will have to figure out how to properly use BJTs to drive the Nixie tube cathodes.  This is a good opportunity for them to review BJT theory and switch application use, so don't spoil it by giving away the answer!
+
+%INDEX% Nixie tube circuit
+
+%(END_NOTES)
+
+

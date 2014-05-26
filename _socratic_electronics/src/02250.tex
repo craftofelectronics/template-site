@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The voltage gain for a "bypassed" common-emitter BJT amplifier circuit is as follows:
+
+$$\epsfbox{02250x01.eps}$$
+
+Common-source JFET amplifier circuits are very similar:
+
+$$\epsfbox{02250x02.eps}$$
+
+One of the problems with "bypassed" amplifier configurations such as the common-emitter and common-source is voltage gain variability.  It is difficult to keep the voltage gain stable in either type of amplifier, due to changing factors within the transistors themselves which cannot be tightly controlled ($r'_e$ and $g_m$, respectively).  One solution to this dilemma is to "swamp" those uncontrollable factors by not bypassing the emitter (or source) resistor.  The result is greater $A_V$ stability at the expense of $A_V$ magnitude:
+
+$$\epsfbox{02250x03.eps}$$
+
+Write the voltage gain equations for both "swamped" BJT and JFET amplifier configurations, and explain why they are similar to each other.
+
+\underbar{file 02250}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$A_V \approx {R_C \over R_E} \hbox{\hskip 20pt Common-emitter BJT amplifier}$$
+
+$$A_V \approx {R_D \over R_S} \hbox{\hskip 20pt Common-source JFET amplifier}$$
+
+I'll let you explain why these two voltage gain approximations share the same form.  Hint: it has something to do with the magnitudes of the currents through each transistor terminal!
+
+\vskip 10pt
+
+Follow-up question: explain mathematically why the emitter/source resistances succeed in "swamping" $r'_e$ and $g_m$, respectively, in these more precise formulae.  You should provide typical values for $r'_e$ and $g_m$ as part of your argument:
+
+$$A_V = {R_C \over {R_E + r'_e}} \hbox{\hskip 20pt Common-emitter BJT amplifier}$$
+
+$$A_V = {R_D \over {R_S + {1 \over g_m}}} \hbox{\hskip 20pt Common-source JFET amplifier}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Swamping is a common engineering practice, and one that students would do well to understand.  It is unfortunate that parameters such as dynamic emitter resistance ($r'_e$) and transconductance ($g_m$) are so variable, but this does not have to be the end of the story.  To be able to work around practical limitations such as these is the essence of engineering practice, in my opinion.
+
+%INDEX% Swamped amplifiers, common-emitter and common-source
+
+%(END_NOTES)
+
+

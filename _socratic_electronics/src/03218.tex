@@ -1,0 +1,73 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Some AC induction motors are equipped with multiple windings so they may operate at two distinct speeds (low speed usually being one-half of high speed).  Shown here is the connection diagram for one type of two-speed motor:
+
+$$\epsfbox{03218x01.eps}$$
+
+There are six terminals on the motor itself where the connections are made:
+
+$$\epsfbox{03218x02.eps}$$
+
+The motor's datasheet will specify how the connections are to be made.  This is typical:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Speed & $\phi$-A & $\phi$-B & $\phi$-C & Left open & Shorted together \cr
+%
+\noalign{\hrule}
+%
+% Second row
+Low & 1 & 2 & 3 & 4,5,6 &  \cr
+%
+\noalign{\hrule}
+%
+% Third row
+High & 4 & 5 & 6 &  & 1,2,3 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Explain why the motor runs at half-speed in one connection scheme and full speed in the other.  What is going on that makes this possible?
+
+\underbar{file 03218}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The difference between the two connection schemes is the polarity of three of the coils in relation to the other three.  This is called the {\it consequent pole} design of two-speed motor, where you essentially double the number of poles in the motor by reconnection.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Consequent pole motors are not the only design with multiple speeds.  Sometimes motors are wound with completely separate, multiple windings, which give them any combinations of speeds desired.
+
+%INDEX% AC motor, two-speed (induction)
+
+%(END_NOTES)
+
+

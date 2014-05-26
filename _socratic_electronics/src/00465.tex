@@ -1,0 +1,60 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+There are two wire windings wrapped around a common iron bar in this illustration, such that whatever magnetic flux may be produced by one winding is fully shared by the other winding:
+
+$$\epsfbox{00465x01.eps}$$
+
+Write two equations describing the induced voltage at each winding ($e_p = \dots$ and $e_s = \dots$), in each case expressing the induced voltage in terms of the instantaneous current through that winding ($i_p$ and $i_s$, respectively) and the inductance of each winding ($L_p$ and $L_s$, respectively).
+
+We know that the induced voltages in the two windings are related to each other by this equation, if there is perfect "coupling" of magnetic flux between the two windings:
+
+$${e_p \over N_p} = {e_s \over N_s}$$
+
+Knowing this, write two more equations describing induced voltage, this time expressing the induced voltage in each winding in terms of the instantaneous current in the {\it other} winding.  In other words,
+
+$$e_p = \dots i_s$$
+
+$$e_s = \dots i_p$$
+
+\underbar{file 00465}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Equations describing self-inductance:
+
+$$e_p = L_p{di_p \over dt}$$
+
+$$e_s = L_s{di_s \over dt}$$
+
+\vskip 15pt
+
+Equations describing inductance from one winding to the other:
+
+$$e_p = L_s {N_p \over N_s} {di_s \over dt}$$
+
+$$e_s = L_p {N_s \over N_p} {di_p \over dt}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The first two equations are mere review.  The second two equations require algebraic manipulation and substitution between equations.
+
+%INDEX% Algebra, manipulating equations
+%INDEX% Mutual inductance
+
+%(END_NOTES)
+
+

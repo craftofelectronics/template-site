@@ -1,0 +1,61 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An important step in building any analog voltmeter or ammeter is to accurately determine the coil resistance of the meter movement.  In electrical metrology, it is often easier to obtain extremely precise ("standard") resistance values than it is to obtain equally precise voltage or current measurements.  One technique that may be used to determine the coil resistance of a meter movement without need to accurately measure voltage or current is as follows.
+
+First, connect a {\it decade box} type of variable resistance in series with a regulated DC power supply, then to the meter movement to be tested.  Adjust the decade box's resistance so that the meter movement moves to some precise point on its scale, preferably the full-scale (100\%) mark.  Record the decade box's resistance setting as $R_1$:
+
+$$\epsfbox{01522x01.eps}$$
+
+Then, connect a known resistance in parallel with the meter movement's terminals.  This resistance will be known as $R_s$, the {\it shunt} resistance.  The meter movement deflection will decrease when you do this.  Re-adjust the decade box's resistance until the meter movement deflection returns to its former place.  Record the decade box's resistance setting as $R_2$:
+
+$$\epsfbox{01522x02.eps}$$
+
+The meter movement's coil resistance ($R_{coil}$) may be calculated following this formula:
+
+$$R_{coil} = {R_s \over R_2}(R_1 - R_2)$$
+
+Your task is to show where this formula comes from, deriving it from Ohm's Law and whatever other equations you may be familiar with for circuit analysis.
+
+Hint: in both cases (decade box set to $R_1$ and set to $R_2$), the voltage across the meter movement's coil resistance is the same, the current through the meter movement is the same, and the power supply voltage is the same.
+
+\underbar{file 01522}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+One place to start from is the voltage divider equation, $V_R = V_T \left({R \over R_T} \right)$ applied to each circuit scenario:
+
+$$V_{meter} = {R_{coil} \over {R_1 + R_{coil}}}$$
+
+$$V_{meter} = {R_{coil} || R_s \over {R_2 + (R_{coil} || R_s)}}$$
+
+Since we know that the meter's voltage is the same in the two scenarios, we may set these equations equal to each other:
+
+$${R_{coil} \over {R_1 + R_{coil}}} = {R_{coil} || R_s \over {R_2 + (R_{coil} || R_s)}}$$
+
+Note: the double-bars in the above equation represent the {\it parallel} equivalent of $R_{coil}$ and $R_s$, for which you will have the substitute the appropriate mathematical expression.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This problem is really nothing more than an exercise in algebra, although it also serves to show how precision electrical measurements may be obtained by using standard resistors rather than precise voltmeters or ammeters.
+
+%INDEX% Algebra, manipulating equations
+%INDEX% Decade box resistance
+%INDEX% Meter movement, coil resistance determination
+
+%(END_NOTES)
+
+

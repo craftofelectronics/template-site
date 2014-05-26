@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student is trying to use the "current divider formula" to calculate current through the second light bulb in a three-lamp lighting circuit (typical for an American household):
+
+$$\epsfbox{01739x01.eps}$$
+
+The student uses Joule's Law to calculate the resistance of each lamp (240 $\Omega$), and uses the parallel resistance formula to calculate the circuit's total resistance (80 $\Omega$).  With the latter figure, the student also calculates the circuit's total (source) current: 1.5 A.
+
+Plugging this into the current divider formula, the current through any one lamp turns out to be:
+
+$$I = I_{total} \left( {R_{total} \over R} \right) = 1.5 \hbox{ A} \left( {80 \> \Omega \over 240 \> \Omega} \right) = 0.5 \hbox{ A}$$
+
+This value of 0.5 amps per light bulb correlates with the value obtained from Joule's Law directly for each lamp: 0.5 amps from the given values of 120 volts and 60 watts.
+
+The trouble is, something doesn't add up when the student re-calculates for a scenario where one of the switches is open:
+
+$$\epsfbox{01739x02.eps}$$
+
+With only two light bulbs in operation, the student knows the total resistance must be different than before: 120 $\Omega$ instead of 80 $\Omega$.  However, when the student plugs these figures into the current divider formula, the result seems to conflict with what Joule's Law predicts for each lamp's current draw:
+
+$$I = I_{total} \left( {R_{total} \over R} \right) = 1.5 \hbox{ A} \left( {120 \> \Omega \over 240 \> \Omega} \right) = 0.75 \hbox{ A}$$
+
+At 0.75 amps per light bulb, the wattage is no longer 60 W.  According to Joule's Law, it will now be 90 watts (120 volts at 0.75 amps).  What is wrong here?  Where did the student make a mistake?
+
+\underbar{file 01739}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The student incorrectly assumed that total current in the circuit would remain unchanged after the switch opened.  By the way, this is a {\it very} common conceptual misunderstanding among new students as they learn about parallel circuits!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I am surprised how often this principle is misunderstood by students as they first learn about parallel circuits.  It seems natural for many of them to assume that total circuit current is a constant when the source is actually a constant-{\it voltage} source!
+
+%INDEX% Troubleshooting, simple circuit
+
+%(END_NOTES)
+
+

@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how all component voltages and currents in this circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03937x01.eps}$$
+
+\medskip
+\item{$\bullet$} Current source $I_1$ fails with increased output:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_1$ fails open: 
+\vskip 5pt
+\item{$\bullet$} Resistor $R_3$ fails open: 
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across resistor $R_2$: 
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03937}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Current source $I_1$ fails with increased output: {\it All resistor currents increase, all resistor voltages increase, voltage across $I_1$ increases.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_1$ fails open: {\it All resistor voltages increase, current through $R_1$ decreases to zero, currents through $R_2$ and $R_3$ increase, current through $I_1$ remains unchanged, voltage across $I_1$ increases.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_3$ fails open: {\it All resistor voltages increase, current through $R_3$ decreases to zero, currents through $R_1$ and $R_2$ increase, current through $I_1$ remains unchanged, voltage across $I_1$ increases.}
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across resistor $R_2$: {\it All resistor voltages decrease to zero, currents through $R_1$ and $R_3$ decrease to zero, current through shorted $R_2$ increases to equal $I_1$, current through $I_1$ remains unchanged, voltage across $I_1$ decreases to zero.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in voltage source parallel circuit
+
+%(END_NOTES)
+
+

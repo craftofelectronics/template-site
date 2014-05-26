@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Many precision resistors utilize a {\it wire-wound} construction, where the resistance is determined by the type and length of wire wrapped around a spool.  This form of construction allows for high precision of resistance, with low temperature sensitivity if certain metal alloys are used for the wire.
+
+Unfortunately, though, wrapping wire around a spool forms a coil, which will naturally possess a significant amount of inductance.  This is generally undesirable, as we would like to have resistors possessing {\it only resistance}, with no "parasitic" properties.
+
+There is, however, a special way in which a wire coil may be wound so as to have almost no inductance.  This method is called {\it bifilar} winding, and it is common in wire-wound resistor construction.  Describe how bifilar winding works, and why it eliminates parasitic inductance.
+
+\underbar{file 00375}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I won't directly describe how a bifilar winding is made, but I'll give you a hint.  Compare the inductance of a straight piece of wire, versus one that is folded in half:
+
+$$\epsfbox{00375x01.eps}$$
+
+Now, how could a non-inductive {\it coil} of wire be made using the same principle?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This technique is very useful in reducing or eliminating parasitic inductance.  Typically, parasitic inductance is not a problem unless very high rates of current change are involved, such as in high-frequency AC circuits (radio, high-speed digital logic, etc.).  In such applications, knowing how to control stray inductance is very important to proper circuit operation.
+
+%INDEX% Inductance, parasitic
+%INDEX% Bifilar winding
+
+%(END_NOTES)
+
+

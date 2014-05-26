@@ -1,0 +1,40 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A technician decides to measure the output voltage of a bridge rectifier circuit using an oscilloscope.  This particular bridge rectifier is the front-end of a {\it switching power supply circuit}, and directly rectifies the incoming 120 volt AC power, with no transformer:
+
+$$\epsfbox{00787x01.eps}$$
+
+However, the technician is surprised to find that the fuse blows every time she turns the power on to the circuit.  When the oscilloscope is disconnected from the circuit, the fuse does not blow, and everything works fine.  What is wrong?  Why does the oscilloscope cause a fault in the circuit?
+
+Here is another interesting piece of information: if just the probe tip is touched to one of the rectifier circuit's output terminals, the oscilloscope shows a half-wave rectified waveform, without the ground clip being connected to anything!
+
+\underbar{file 00787}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The oscilloscope's "ground" clip (the alligator-style clip that serves as the second electrical connection point on the probe) is electrically common to the metal chassis of the oscilloscope, which in turn is electrically common with the safety ground conductor of the 120 volt AC power system.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The answer given here does not reveal everything.  The student still must determine {\it why} grounding one of the rectifier circuit's output terminals results in a ground fault that blows the fuse.  The observation of a half-wave signal with just the probe tip touching the circuit is the big hint in this question.
+
+%INDEX% Rectifier, transformerless
+%INDEX% Rectifier circuit, full-wave bridge (common-mode output voltage)
+
+%(END_NOTES)
+
+

@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{02567x01.eps}$$
+
+\underbar{file 02567}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Use a dual-voltage, regulated power supply to supply power to the opamp. I recommend using a "slow" op-amp to make the slewing more easily noticeable.  If a student chooses a relatively fast-slew op-amp such as the TL082, their signal frequency may have to go up into the megahertz range before the slewing becomes evident.  At these speeds, parasitic inductance and capacitance in their breadboards and test leads will cause bad "ringing" and other artifacts muddling the interpretation of the circuit's performance.
+
+I have had good success using the following values:
+
+\medskip
+\item{$\bullet$} +V = +12 volts
+\item{$\bullet$} -V = -12 volts
+\item{$\bullet$} $V_{in}$ = 4 V peak-to-peak, at 300 kHz
+\item{$\bullet$} $U_1$ = one-half of LM1458 dual operational amplifier
+\medskip
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (Opamp slew rate)
+
+%(END_NOTES)
+
+

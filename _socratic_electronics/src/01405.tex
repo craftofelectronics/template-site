@@ -1,0 +1,54 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose you had an astable multivibrator circuit that output a very precise 1 Hz square-wave signal, but you had an application which requires a pulse once every {\it minute} rather than once every second.  Knowing that there are 60 seconds in a minute, can you think of a way to use digital counters to act as a "frequency divider" so that every 60 multivibrator pulses equates to 1 output pulse?
+
+You don't have a divide-by-60 counter available, but you do have several divide-by-10 ("decade") counters at your disposal.  Engineer a solution using these counter units:
+
+$$\epsfbox{01405x01.eps}$$
+
+Note: assume these counter ICs have {\it asynchronous} resets.
+
+\underbar{file 01405}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Cascade two decade counters together, with a NAND gate to decode when the output is equal to 60:
+
+$$\epsfbox{01405x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: why can't we take the divide-by-60 pulse from the RCO output of the second counter, as we could with the divide-by-10 pulse from the first counter?
+
+\vskip 10pt
+
+Challenge question: re-design this circuit so that the output is a square wave with a duty cycle of 50\% ("high" for 30 seconds, then "low" for 30 seconds), rather than a narrow pulse every 60 seconds.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Tell your students that counter circuits are quite often used as frequency dividers.  Discuss the challenge question with them, letting them propose and discuss multiple solutions to the problem.
+
+The "note" in the question about the asynchronous nature of the counter reset inputs is very important, as synchronous-reset counter ICs would not behave the same.  Discuss this with your students, showing them how counters with synchronous reset inputs would yield a divide-by-61 ratio.
+
+Incidentally, a divide-by-60 counter circuit is precisely what we would need to arrive at a 1 Hz pulse waveform from a 60 Hz powerline frequency signal, which is a neat "trick" for obtaining a low-speed clock of relatively good accuracy without requiring a crystal-controlled local oscillator.  (Where the "mains" power is 50 Hz instead of 60 Hz, you would need a divide-by-50 counter -- I know, I know . . .)  If time permits, ask your students to think of how they could condition the 60Hz sine-wave (120 volt!) standard powerline voltage into a 60 Hz square-wave pulse suitable for input into such a frequency divider/counter circuit.
+
+%INDEX% Frequency division, digital
+%INDEX% Modulus, digital counter
+
+%(END_NOTES)
+
+

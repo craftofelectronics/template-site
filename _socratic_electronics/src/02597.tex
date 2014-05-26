@@ -1,0 +1,114 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student decides to build a light-flasher circuit using a microcontroller instead of a 555 timer or some other hard-wired astable circuit.  Unfortunately, there is a problem somewhere.  When first powered up, the LED lights on for 1 second, then turns off and never turns back on.  The only way the LED ever comes back on is if the MCU is reset or its power is cycled off and on:
+
+$$\epsfbox{02597x01.eps}$$
+
+\noindent
+\underbar{\bf Pseudocode listing}
+
+{\tt Declare Pin0 as an output}
+
+{\tt BEGIN}
+
+\hskip 10pt {\tt Set Pin0 HIGH}
+
+\hskip 10pt {\tt Pause for 1 second}
+
+\hskip 10pt {\tt Set Pin0 LOW}
+
+{\tt END}
+
+\vskip 10pt
+
+A fellow student, when asked for help, modifies the program listing and re-sends it from the personal computer where it is being edited to the microcontroller, through a programming cable.  The program listing now reads as such:
+
+\vskip 10pt
+
+\noindent
+\underbar{\bf Pseudocode listing}
+
+{\tt Declare Pin0 as an output}
+
+{\tt LOOP}
+
+\hskip 10pt {\tt Set Pin0 HIGH}
+
+\hskip 10pt {\tt Pause for 1 second}
+
+\hskip 10pt {\tt Set Pin0 LOW}
+
+{\tt ENDLOOP}
+
+\vskip 10pt
+
+When the MCU is reset with the new program, the LED starts blinking on and off . . . sort of.  The LED is "on" most of the time, but once every second it turns off and then immediately comes back on.  In fact, the "off" period is so brief it is barely noticeable.  
+
+What the student wanted was a 50\% duty cycle: "on" for 1 second, then "off" for 1 second, repeating that cycle indefinitely.  First, explain the significance of the classmate's program modification, and then modify the program listing again so that the LED does what the student wants it to.
+
+\underbar{file 02597}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A "loop" is necessary for the MCU to repeat the on/pause/off sequence.  What is needed now is another time delay within the loop:
+
+\vskip 10pt
+
+\noindent
+\underbar{\bf Pseudocode listing}
+
+{\tt Declare Pin0 as an output}
+
+{\tt LOOP}
+
+\hskip 10pt {\tt Set Pin0 HIGH}
+
+\hskip 10pt {\tt Pause for 1 second}
+
+\hskip 10pt {\tt Set Pin0 LOW}
+
+\hskip 10pt {\tt Pause for 1 second} ({\it new line of code})
+
+{\tt ENDLOOP}
+
+\vskip 10pt
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is for students to realize that the microcontroller must be told to "loop" through the light blinking instructions.  Really, this is just an illustration of loops in a practical context.
+
+\vskip 10pt
+
+In case you're wondering why I write in pseudocode, here are a few reasons:
+
+\medskip
+\goodbreak
+\item{$\bullet$} No prior experience with programming required to understand pseudocode
+\item{$\bullet$} It never goes out of style
+\item{$\bullet$} Hardware independent
+\item{$\bullet$} No syntax errors
+\medskip
+
+If I had decided to showcase code that would actually run in a microcontroller, I would be dooming the question to obsolescence.  This way, I can communicate the spirit of the program without being chained to an actual programming standard.  The only drawback is that students will have to translate my pseudocode to real code that will actually run on their particular MCU hardware, but that is a problem guaranteed for some regardless of which real programming language I would choose.
+
+Of course, I could have taken the Donald Knuth approach and invented my own (imaginary) hardware and instruction set . . . 
+
+%INDEX% Microcontroller, implementing a flashing light loop
+
+%(END_NOTES)
+
+

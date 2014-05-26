@@ -1,0 +1,62 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The "transconductance" ratio ($g_m$) of a field-effect transistor is a very important device parameter.  In essence, it describes the amplifying power of the transistor.  Give a mathematical definition for this parameter, and provide some typical values from transistor datasheets.
+
+\underbar{file 02059}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+{\it Transconductance} is defined as the ratio between drain current and gate voltage.  I'll let you research some typical values.  Here are some transistor part numbers you could research datasheets for:
+
+\medskip
+\goodbreak
+\item{$\bullet$} J110
+\item{$\bullet$} J308
+\item{$\bullet$} J309
+\item{$\bullet$} J310
+\item{$\bullet$} MPF 102 
+\medskip
+
+\vskip 10pt
+
+Challenge question: the "beta" ratio for a BJT ($\beta$) may be defined as the direct ratio of collector current to base current, or as the ratio between {\it change} in collector current and {\it change} in base current, as the following equations show.
+
+$$\beta_{DC} = {I_C \over I_B} \hbox{\hskip 20pt (DC current gain for a BJT)}$$
+
+$$\beta_{AC} = {\Delta I_C \over \Delta I_B} \hbox{\hskip 20pt (AC current gain for a BJT)}$$
+
+By contrast, the transconductance of a FET is always defined in terms of change, and never in terms of a direct ratio:
+
+\goodbreak
+
+$$g_m = {\Delta I_D \over \Delta V_G}$$
+
+$$g_m \neq {I_D \over V_G}$$
+
+Explain why this is.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to show you at least one datasheets for one of the listed transistors.  With internet access, datasheets are extremely easy to locate.  Your students will need to be able to locate component datasheets and application notes as part of their work responsibilities, so be sure they know how and where to access these valuable documents!
+
+Discuss with your students why transconductance is measured in units of {\it Siemens}.  Where else have they seen this unit of measurement?  Why would it be an appropriate unit of measurement in this context?
+
+%INDEX% Transconductance, defined for a FET
+
+%(END_NOTES)
+
+

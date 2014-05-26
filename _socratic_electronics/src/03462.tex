@@ -1,0 +1,66 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A Scottish physicist named James Clerk Maxwell made an astonishing theoretical prediction in the nineteenth century, which he expressed with these two equations:
+
+$$\oint {\bf E} \cdot d{\bf l} = - {d \Phi_B \over dt}$$
+
+$$\oint {\bf B} \cdot d{\bf l} = \mu_0 I + \mu_0 \epsilon_0 {d \Phi_E \over dt}$$
+
+The first equation states that an electric field $({\bf E})$ will be produced in open space by a changing magnetic flux $\left({d \Phi_B \over dt}\right)$.  The second equation states than a magnetic field $({\bf B})$ will be produced in open space either by an electric current ($I$) or by a changing electric flux $\left({d \Phi_E \over dt}\right)$.  Given this complementary relationship, Maxwell reasoned, it was possible for a changing electric field to create a changing magnetic field which would then create another changing electric field, and so on.  This cause-and-effect cycle could continue, ad infinitum, with fast-changing electric and magnetic fields radiating off into open space without needing wires to carry or guide them.  In other words, the complementary fields would be self-sustaining as they traveled.
+
+\vskip 10pt
+
+Explain the significance of Maxwell's prediction, especially as it relates to electronics.
+
+\underbar{file 03462}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+What James Clerk Maxwell predicted was the existence of {\it electromagnetic waves}, the lowest-frequency type we commonly refer to as {\it radio waves}.
+
+\vskip 10pt
+
+Follow-up question: name the scientist who first experimentally confirmed Maxwell's prediction of electromagnetic waves.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Not only does this question relate the concept of radio waves to concepts your students should already be familiar with (electric and magnetic fields), but it also introduces a piece of amazing scientific history.  That radio waves were first predicted mathematically rather than discovered accidently by experiment is both astonishing and enlightening.
+
+You may find that one or more of your brighter students notice Maxwell's prediction relates a change in one type of field to a static magnitude of the other (i.e. $E \propto {d\Phi_B \over dt}$ and $B \propto {d\Phi_E \over dt}$), and that this makes it difficult to see how one changing field could create another {\it changing} field.  If anyone asks this question, point out to them that there is a set of similar mathematical functions related to one another by derivatives, and they are:
+
+$$\sin t = - {d \over dt} \cos t  \hbox{\hskip 100pt}  \cos t = {d \over dt} \sin t$$
+
+\vskip 10pt
+
+Does anything look familiar (omitting the $\mu_0 I$ term from the second equation)?
+
+\vskip 10pt
+
+$$\oint {\bf E} \cdot d{\bf l} = - {d \Phi_B \over dt}  \hbox{\hskip 100pt}  \oint {\bf B} \cdot d{\bf l} =  \mu_0 \epsilon_0 {d \Phi_E \over dt}$$
+
+Since we know electric flux is related to electric field by geometry ($\Phi_E = \int {\bf E} \cdot d{\bf A}$) and magnetic flux is related to magnetic field by geometry as well ($\Phi_B = \int {\bf B} \cdot d{\bf A}$), we may write the following proportionalities:
+
+$$\Phi_E \propto - {d \Phi_B \over dt}  \hbox{\hskip 100pt}  \Phi_B \propto {d \Phi_E \over dt}$$
+
+{\it Now} do things look similar to the sine/cosine derivative relationship?  Thus, if the electric flux $\Phi_E$ oscillates as a sine wave, the magnetic flux $\Phi_B$ will oscillate as a cosine wave, and so on.
+
+%INDEX% Electromagnetic waves, predicted by James Clerk Maxwell
+%INDEX% Maxwell's equations, relationship between electric and magnetic fields
+
+%(END_NOTES)
+
+

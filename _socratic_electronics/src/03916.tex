@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Two electronics students attempt to build 7-segment display circuits, one using a 7447 decoder/driver IC and the other using a 7448.  Both students connect their ICs to common-cathode 7-segment displays as such:
+
+$$\epsfbox{03916x01.eps}$$
+
+The student using the 7448 notices the LED segments glowing faintly, but the patterns are not correct for the digits that are supposed to be displayed.  The student using the 7447 has an even worse problem: no light at all!  Both have checked and re-checked their wiring, to no avail.  It seems as though all the connections are in the right place.
+
+What do you think the problem is?  Hint: consult datasheets for both chips to find clues!
+
+\underbar{file 03916}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Neither the 7447 nor the 7448 are designed to {\it source} current to the LED segments, only {\it sink} current.  I'll let you figure out why the 7448 chip has the ability to make any of the LED segments light up at all.
+
+\vskip 10pt
+
+Follow-up question: trace the direction of electron flow through the wires between the decoder chip and the display.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question provides an excellent opportunity to discuss the difference between {\it sourcing} and {\it sinking} current, as well as the importance of knowing what the output stage of an IC looks like internally.
+
+%INDEX% 7447 BCD-to-7-segment decoder/driver IC
+%INDEX% 7448 BCD-to-7-segment decoder/driver IC
+%INDEX% Troubleshooting, 7-segment decoder/driver circuit
+
+%(END_NOTES)
+
+

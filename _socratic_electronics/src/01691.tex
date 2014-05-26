@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{01691x01.eps}$$
+
+\underbar{file 01691}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is perhaps the most reliable means of measuring inductance without an impedance bridge or an LCR meter.  You may wish to ask your students to explain {\it why} this method of measurement is so good (hint: they must explain why the inductor's intrinsic resistance has no effect on the measurement).
+
+I prefer this particular circuit design for $L$ measurement because series resistance does not skew the resonant point, and because the series capacitor prevents any possible DC current from "biasing" the inductor's core.
+
+If your students own high-quality multimeters capable of measuring audio-frequency AC current and frequency, then the best way to do this is to replace the resistor $R_1$ with their ammeters.  Otherwise, use an oscilloscope to measure (maximum) voltage dropped across $R_1$.
+
+In order to obtain good measurements using this technique, I recommend following these guidelines:
+
+\medskip
+\item{$\bullet$} Choose a value of $R_1$ low enough to give a sharp bandwidth, but not so low that the voltage signal dropped across it is "fuzzy" with noise and difficult to accurately discern the period of.
+\item{$\bullet$} Choose a value for $C_1$ as low as possible to give sharp bandwidth (thereby maximizing the ${L \over C}$ ratio), without pushing the circuit's resonant frequency too close to the inductor's self-resonant frequency.
+\item{$\bullet$} Avoid frequencies above the audio range, lest your students measure the inductor's self-resonant point!
+\item{$\bullet$} Use minimal output from the signal generator, to avoid voltage and current levels that will approach core saturation in the inductor.
+\medskip
+
+I've had fair results using one of the windings of a small audio output transformer (center-tapped 1000 $\Omega$ primary winding, with 8 $\Omega$ secondary winding) as the inductor, connected in series with either a 0.1 $\mu$F or a 0.47 $\mu$F metal-film capacitor, all in series with a 100 ohm resistor.  For best results, of course, pre-measure the value of the capacitor rather than go by its advertised value.
+
+I have also used a 100 mH inductor (nominal), in series with a 0.033 $\mu$F capacitor and 100 $\Omega$ resistor, with good results.
+
+%INDEX% Assessment, performance-based (Measuring inductance via series LC resonance)
+
+%(END_NOTES)
+
+

@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A chandelier has five light bulbs in it, and one of them is not working.  The problem could be in the chandelier's wiring (open wire connection, open connection in socket), or in the bulb itself (burned-out filament).  Describe a procedure for determining the location of the problem (chandelier vs. bulb), without using any electrical test instruments.
+
+\underbar{file 01190}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Swap the non-working bulb for one of the other four working bulbs, and see if the problem moves with the bulb.
+
+\vskip 10pt
+
+Challenge question: can you think of a scenario where this troubleshooting procedure could {\it cause} additional failures in a system?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This simple troubleshooting technique is applicable to a wide variety of electrical, electronic, and other types of systems: swap the suspect component with an identical component known to be functional, and see observe whether or not the problem changes location.
+
+There is, however, a potential hazard to doing this.  If the swapped component is indeed faulty, but in such a way that it {\it causes} a different part of the system to fail with connected to it, this technique will cause a failure in the system where the faulty component is moved to.
+
+A similar hazard occurs if the swapped component was damaged because of other components in the system that it's connected to.  In this case, the good component it it swapped with will be damaged in the swap, and the bad component will not work where it is moved to.
+
+%INDEX% Troubleshooting, simple circuit
+
+%(END_NOTES)
+
+

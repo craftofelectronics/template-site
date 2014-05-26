@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Here is a schematic diagram for a simple electronic combination lock, controlling power to a door lock solenoid:
+
+$$\epsfbox{01277x01.eps}$$
+
+The four pushbutton switches (a, b, c, and d) are accessible to the person wishing to enter the door.  The four toggle switches (A, B, C, and D) are located behind the door, and are used to set the code necessary for entering.
+
+Explain how this system is supposed to work.  What are the logic states of the respective gate outputs when a matching code is entered through the pushbutton switches?  How about when a non-matching code is entered?
+
+Do you see any security problems with this door lock circuit?  How easy would it be for someone to enter, who does not know the four-bit code?  Do you have any suggestions for improving this lock design?
+
+\underbar{file 01277}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The most obvious problem with this door lock system is the small number of possible codes.  It would be rather easy (especially for someone adept at counting in binary!) to simply try all the possible combinations until they gained access.
+
+Here is what I recommend as a strategy for improving the level of security offered by this system: install a fifth pushbutton switch as an "Enter" key.  If someone enters the correct four-bit code and then pushes the "Enter" button, the door will open.  However, if someone enters the wrong four-bit code and pushes the "Enter" button, the door will not open and a loud alarm will sound!  This makes it "risky" to enter a wrong code, thus improving the security of the system.
+
+\vskip 10pt
+
+Follow-up question: modify the circuit shown to implement an improved measure of security -- either the strategy suggested or one of your own design.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I strongly suggest you take the time to implement an improved-security design with your students.  A practical project such as this sparks a lot of interest, and thus provides an excellent learning opportunity.
+
+Not only does this question afford the opportunity to analyze logic gates, but it also provides a context in which to review optocouplers and TRIACs.  Ask your students what the labels "L1" and "L2" mean, with reference to AC power circuitry, as well.
+
+%INDEX% Combination lock circuit (digital)
+%INDEX% Lock, digital electronic circuit
+
+%(END_NOTES)
+
+

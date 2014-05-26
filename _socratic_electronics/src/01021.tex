@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Generators used in battery-charging systems must be {\it regulated} so as to not overcharge the battery(ies) they are connected to.  Here is a crude, relay-based voltage regulator for a DC generator:
+
+$$\epsfbox{01021x01.eps}$$
+
+Simple electromechanical relay circuits such as this one were very common in automotive electrical systems during the 1950's, 1960's, and 1970's.  The fundamental principle upon which their operation is based is called {\it negative feedback}: where a system takes action to {\it oppose} any change in a certain variable.  In this case, the variable is generator output voltage.  Explain how the relay works to prevent the generator from overcharging the battery with excessive voltage.
+
+\underbar{file 01021}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If the battery voltage becomes excessive, the relay opens and de-energizes the field winding.  When the voltages sags back down to an acceptable level, the relay re-closes and re-energizes the field winding so that the generator can begin generating voltage again.
+
+\vskip 10pt
+
+Challenge question: what would we have to change in this circuit to alter the generator's voltage regulation set-point (the "target" voltage at which the generator's output is supposed to be regulated)?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The circuit drawn here is very similar to real generator regulator circuits used in American automobiles before the advent of inexpensive, reliable semiconductor circuits.  I show it here not just for historical background, but also to demonstrate how relatively crude circuits are still able to perform certain tasks reasonably well.
+
+"Negative feedback" is one of the fundamental principles of electronics and electrical engineering.  A simple system like this provides a good way to gently introduce students to this vital concept.
+
+%INDEX% Negative feedback, in DC generator voltage regulation system
+%INDEX% Voltage regulator, DC generator
+
+%(END_NOTES)
+
+

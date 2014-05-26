@@ -1,0 +1,220 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A {\it seven segment decoder} is a digital circuit designed to drive a very common type of digital display device: a set of LED (or LCD) segments that render numerals 0 through 9 at the command of a four-bit code:
+
+$$\epsfbox{02838x01.eps}$$
+
+The behavior of the display driver IC may be represented by a truth table with seven outputs: one for each segment of the seven-segment display ($a$ through $g$).  In the following table, a "1" output represents an active display segment, while a "0" output represents an inactive segment:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+D & C & B & A & a & b & c & d & e & f & g & Display\cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & "0" \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & "1" \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & "2" \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 1 & "3" \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+0 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & "4" \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & "5" \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+0 & 1 & 1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & "6" \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & "7" \cr
+%
+\noalign{\hrule}
+%
+% Tenth row
+1 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & "8" \cr
+%
+\noalign{\hrule}
+%
+% Eleventh row
+1 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & "9" \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+A real-life example such as this provides an excellent showcase for techniques such as Karnaugh mapping.  Let's take output $a$ for example, showing it without all the other outputs included in the truth table:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+D & C & B & A & a \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 0 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 0 & 1 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+0 & 1 & 0 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+0 & 1 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+0 & 1 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+0 & 1 & 1 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Tenth row
+1 & 0 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Eleventh row
+1 & 0 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Plotting a Karnaugh map for output $a$, we get this result:
+
+$$\epsfbox{02838x02.eps}$$
+
+Identify adjacent groups of 1's in this Karnaugh map, and generate a minimal SOP expression from those groupings.
+
+\vskip 10pt
+
+Note that six of the cells are blank because the truth table does not list all the possible input combinations with four variables (A, B, C, and D).  With these large gaps in the Karnaugh map, it is difficult to form large groupings of 1's, and thus the resulting "minimal" SOP expression has several terms.  
+
+However, if we do not care about output $a$'s state in the six non-specified truth table rows, we can fill in the remaining cells of the Karnaugh map with "don't care" symbols (usually the letter $X$) and use those cells as "wildcards" in determining groupings:
+
+$$\epsfbox{02838x03.eps}$$
+
+With this new Karnaugh map, identify adjacent groups of 1's, and generate a minimal SOP expression from those groupings.
+
+\underbar{file 02838}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Karnaugh map groupings with strict "1" groups:
+
+$$\overline{D}B + \overline{D}CA + D\overline{C} \> \overline{B} + \overline{C} \> \overline{B} \> \overline{A}$$
+
+$$\epsfbox{02838x04.eps}$$
+
+\vskip 10pt
+
+Karnaugh map groupings with "don't care" wildcards:
+
+$$D + B + CA + \overline{C} \> \overline{A}$$
+
+$$\epsfbox{02838x05.eps}$$
+
+\vskip 10pt
+
+Follow-up question: this question and answer merely focused on the $a$ output for the BCD-to-7-segment decoder circuit.  Imagine if we were to approach all seven outputs of the decoder circuit in these two fashions, first developing SOP expressions using strict groupings of "1" outputs, and then using "don't care" wildcards.  Which of these two approaches do you suppose would yield the simplest gate circuitry overall?  What impact would the two different solutions have on the decoder circuit's behavior for the six unspecified input combinations 1010, 1011, 1100, 1101, 1110, and 1111?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+One of the points of this question is for students to realize that bigger groups are better, in that they yield simpler SOP terms.  Also, students should realize that the ability to use "don't care" states as "wildcard" placeholders in the Karnaugh map cells increases the chances of creating bigger groups.
+
+Truth be known, I chose a pretty bad example to try to make an SOP expression from, since there are only two non-zero output conditions out of ten!  Formulating a POS expression would have been easier, but that's a subject for another question!
+
+%INDEX% 7-segment decoder circuit
+%INDEX% Karnaugh map, used to derive SOP expression from a truth table
+%INDEX% Seven-segment decoder circuit
+
+%(END_NOTES)
+
+

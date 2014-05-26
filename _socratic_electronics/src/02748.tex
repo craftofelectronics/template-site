@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Design a passive circuit that will create a "split" (+V/-V) power supply from a single voltage source:
+
+$$\epsfbox{02748x01.eps}$$
+
+\underbar{file 02748}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+For low-current applications, the following resistor/capacitor network works remarkably well:
+
+$$\epsfbox{02748x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: what design constraints will dictate the sizes of the resistors and capacitors?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This simple filtered voltage divider circuit works well when the current draws are low, or at least very close to being equal, on the +V and -V load rails.  It does not work so well for highly asymmetrical loads, or where low quiescent current draw is important (low-power battery circuits, for example).  In applications requiring better +V/-V voltage stability, an opamp "follower" circuit is recommended after the voltage divider.
+
+%INDEX% Dual power supply circuit, passive "splitter" network
+%INDEX% Split power supply circuit, passive "splitter" network
+
+%(END_NOTES)
+
+

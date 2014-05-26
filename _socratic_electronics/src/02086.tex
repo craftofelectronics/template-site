@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Trigonometric functions such as {\it sine}, {\it cosine}, and {\it tangent} are useful for determining the ratio of right-triangle side lengths given the value of an angle.  However, they are not very useful for doing the reverse: calculating an angle given the lengths of two sides.
+
+$$\epsfbox{02086x01.eps}$$
+
+Suppose we wished to know the value of angle $\Theta$, and we happened to know the values of $Z$ and $R$ in this impedance triangle.  We could write the following equation, but in its present form we could not solve for $\Theta$:
+
+$$\cos \Theta = {R \over Z}$$
+
+The only way we can algebraically isolate the angle $\Theta$ in this equation is if we have some way to "undo" the cosine function.  Once we know what function will "undo" cosine, we can apply it to both sides of the equation and have $\Theta$ by itself on the left-hand side.
+
+There is a class of trigonometric functions known as {\it inverse} or {\it "arc"} functions which will do just that: "undo" a regular trigonometric function so as to leave the angle by itself.  Explain how we could apply an "arc-function" to the equation shown above to isolate $\Theta$.
+
+\underbar{file 02086}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\cos \Theta = {R \over Z} \hbox{\hskip 20pt Original equation}$$
+
+$$\hbox{\it . . . applying the "arc-cosine" function to both sides . . .}$$
+
+$$\arccos \left( \cos \Theta \right) = \arccos \left( {R \over Z} \right)$$
+
+$$\Theta = \arccos \left( {R \over Z} \right)$$
+
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I like to show the purpose of trigonometric arcfunctions in this manner, using the cardinal rule of algebraic manipulation (do the same thing to both sides of an equation) that students are familiar with by now.  This helps eliminate the mystery of arcfunctions for students new to trigonometry.
+
+%INDEX% Trigonometry, algebraic relationship between functions and arcfunctions
+
+%(END_NOTES)
+
+

@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A {\it class-B} transistor amplifier (sometimes called a {\it push-pull amplifier}) uses a pair of transistors to generate an output signal to a load.  The circuit shown here has been simplified for the sake of illustrating the basic concept:
+
+$$\epsfbox{00868x01.eps}$$
+
+An analogue for this electronic circuit is this water-pressure control, consisting of two variable valves.  One valve connects the output pipe to a supply of pressurized water, and the other connects the output pipe to a source of vacuum (suction):
+
+$$\epsfbox{00868x02.eps}$$
+
+The "input" to this amplifier is the positioning of the valve control handle.  The "output" of this amplifier is water pressure measured at the end of the horizontal "output" pipe.  Valve action is synchronized such that only one valve is open at any given time, just as no more than one transistor will be "on" at any given time in the class-B electronic circuit.
+
+\vskip 10pt
+
+Explain how either of these "circuits" meets the criteria of being an amplifier.  In other words, explain how {\it power} is boosted from input to output in both these systems.  Also, describe how efficient each of these amplifiers is, "efficiency" being a measure of how much current (or water) goes to the load device, as compared to how much just goes straight from one supply "rail" to the other (from pressure to vacuum).
+
+\underbar{file 00868}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+In both systems, a small amount of energy (current through the "base" terminal of the transistor, mechanical motion of the valve handle) exerts control over a larger amount of energy (current to the load, water to the load).  Both systems are very energy efficient, with little flow wasted by flowing from supply to vacuum (from +V to -V) and bypassing the load.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Push-pull amplifiers are a bit more difficult to understand than simple class-A (single-ended), so be sure to take whatever time is necessary to discuss this concept with your students.  Ask them to trace current through the load resistor for different input voltage conditions.  Your students need not know any details of transistor operation, except that a positive input voltage turns on the upper transistor, and a negative input voltage turns on the lower transistor.
+
+%INDEX% Push-pull amplifier, water valve analogy for
+
+%(END_NOTES)
+
+

@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+{\it Very} large capacitors (typically in excess of 1 Farad!) are often used in the DC power wiring of high-power audio amplifier systems installed in automobiles.  The capacitors are connected in parallel with the amplifier's DC power terminals, as close to the amplifier as possible, like this:
+
+$$\epsfbox{00206x01.eps}$$
+
+What is the purpose of having a capacitor connected in parallel with the amplifier's power terminals?  What benefit does this give to the audio system, overall?
+
+\underbar{file 00206}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The capacitor minimizes voltage transients seen at the amplifier's power terminals due to voltage drops along the power cables (from the battery) during transient current pulses, such as those encountered when amplifying heavy bass "beats" at high volume.
+
+Incidentally, this same technique is used in computer circuitry to stabilize the power supply voltage powering digital logic circuits, which draw current from the supply in rapid "surges" as they switch between their "on" and "off" states.  In this application, the capacitors are known as {\it decoupling} capacitors.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Audio system engineering usually inspires interest among music-loving students, especially young students who crave maximum audio power in their automobiles' sound systems!  This question is designed to provoke interest as much as it is intended to explore capacitor function.
+
+With regard to "decoupling" capacitors, your students will likely have to use capacitors in this manner when they progress to building semiconductor circuits.  If you have a printed circuit board from a computer (a "motherboard") available to show your students, it would be a good example of decoupling capacitors in use.
+
+%INDEX% Capacitor, audio amplifier bass "boost"
+%INDEX% Capacitor, decoupling
+
+%(END_NOTES)
+
+

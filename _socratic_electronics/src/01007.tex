@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Ideally, an inverting amplifier circuit may be comprised of just one op-amp and two resistors, as such:
+
+$$\epsfbox{01007x01.eps}$$
+
+However, if high accuracy is desired, a third resistor must be added to the circuit, in series with the other op-amp input:
+
+$$\epsfbox{01007x02.eps}$$
+
+Explain what this "compensation" resistor is compensating for, and also what its value should be.
+
+\underbar{file 01007}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The compensation resistor compensates for errors introduced into the voltage divider network due to input bias current.  Its value should be equal to the parallel equivalent of $R_{input}$ and $R_{feedback}$.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+First, your students will have to know what "bias currents" are in op-amp circuits, so begin your discussion of this question with a call for this definition.  Why the compensation resistor value must be equal to the {\it parallel} equivalent of the two resistors in the voltage divider is something that confuses most students.  The key to understanding it is network analysis, in particular Th\'evenin's and Norton's theorems.
+
+%INDEX% Bias current compensation, opamp input
+
+%(END_NOTES)
+
+

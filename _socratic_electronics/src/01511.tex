@@ -1,0 +1,86 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+Differential equations may be used to model the charging behavior of an L/R circuit.  Take, for instance, this simple L/R circuit:
+
+$$\epsfbox{01511x01.eps}$$
+
+We may develop a loop equation based on Kirchhoff's Voltage Law, knowing that the voltage of the power source is constant (40 volts), and that the voltage drops across the inductor and resistor are $V_L = L{dI \over dt}$ and $V_R = IR$, respectively:
+
+$$40 - IR - L{dI \over dt} = 0$$
+
+Show that the specific solution to this differential equation, assuming an initial condition of $I = 0$ at $t = 0$, is as follows:
+
+$$I = 0.8(1 - e^{-25t})$$
+
+\underbar{file 01511}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$40 - IR - L{dI \over dt} = 0$$
+
+$$40 - IR = L{dI \over dt}$$
+
+$${{40 - IR} \over L} = {dI \over dt}$$
+
+$${dt \over L} = {dI \over {40 - IR}}$$
+
+$$\int {1 \over L} \> dt = \int {1 \over {40 - IR}} \> dI$$
+
+$$\hbox{Substitution: } u = 40 - IR \hbox{\hskip 10pt ; \hskip 10pt} {du \over dI} = -R \hbox{\hskip 10pt ; \hskip 10pt} dI = -{1 \over R}du$$
+
+$${1 \over L} \int dt = -{1 \over R} \int {1 \over u} \> du$$
+
+$${t \over L} + K_1 = -{1 \over R} | \ln u |$$
+
+$$-{tR \over L} + K_2 = | \ln u |$$
+
+$$e^{-{tR \over L} + K_2} = | u |$$
+
+$$K_3e^{-{tR \over L}} = u$$
+
+$$K_3e^{-{tR \over L}} = 40 - IR$$
+
+$$IR = 40 - K_3e^{-{tR \over L}}$$
+
+$$I = {40 \over R} - K_4e^{-{tR \over L}}$$
+
+Given the initial condition of zero current ($I = 0$) at time zero ($t = 0$), the constant of integration must be equal to ${40 \over R}$ in our specific solution:
+
+$$I = {40 \over R} - {40 \over R}e^{-{tR \over L}}$$
+
+$$I = {40 \over R} (1 - e^{-{tR \over L}})$$
+
+Substituting the given component values into this specific solution gives us the final equation:
+
+$$I = 0.8(1 - e^{-25t})$$
+
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+L/R time constant circuits are an excellent example of how to apply simple differential equations.  In this case, we see that the differential equation is first-order, with separable variables, making it comparatively easy to solve.
+
+It should also be evident to students that {\it any} initial condition for current may be set into the general solution (by changing the value of the constant).
+
+%INDEX% Kirchhoff's Voltage Law
+%INDEX% Differential equation, LR time constant circuit
+
+%(END_NOTES)
+
+

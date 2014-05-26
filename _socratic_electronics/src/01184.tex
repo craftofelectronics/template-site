@@ -1,0 +1,64 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The circuit shown here is a precision DC voltmeter:
+
+$$\epsfbox{01184x01.eps}$$
+
+Explain why this circuit design requires the use of a field-effect transistor, and not a bipolar junction transistor (BJT).
+
+\vskip 10pt
+
+Also, answer the following questions about the circuit:
+
+\medskip
+\item{$\bullet$} Explain, step by step, how an increasing input voltage between the test probes causes the meter movement to deflect further.
+\item{$\bullet$} If the most sensitive range of this voltmeter is 0.1 volts (full-scale), calculate the other range values, and label them on the schematic next to their respective switch positions.
+\item{$\bullet$} What type of JFET configuration is this (common-gate, common-source, or common-drain)?
+\item{$\bullet$} What purpose does the capacitor serve in this circuit?
+\item{$\bullet$} What detrimental effect would result from installing a capacitor that was too large? 
+\item{$\bullet$} Estimate a reasonable value for the capacitor's capacitance.
+\item{$\bullet$} Explain the functions of the "Zero" and "Span" calibration potentiometers.
+\medskip
+
+\underbar{file 01184}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The voltage ranges for this meter are as follows:
+
+\medskip
+\item{$\bullet$} 0.1 volts
+\item{$\bullet$} 0.2 volts
+\item{$\bullet$} 1.0 volts
+\item{$\bullet$} 2.0 volts
+\item{$\bullet$} 10 volts
+\item{$\bullet$} 20 volts
+\medskip
+
+The JFET is being used in the {\it common drain} configuration.  A reasonable value for the capacitor would be 0.01 $\mu$F.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This relatively simple DC voltage amplifier circuit provides a wealth of educational value, both for understanding the function of the JFET, and also for review on past electrical/electronics concepts.
+
+Note: John Markus' \underbar{Guidebook of Electronic Circuits}, first edition, page 469, provided the inspiration for this circuit.
+
+%INDEX% High-impedance DC voltmeter, discrete JFET circuit
+
+%(END_NOTES)
+
+

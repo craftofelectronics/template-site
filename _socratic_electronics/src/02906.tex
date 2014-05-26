@@ -1,0 +1,90 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Two very important rules of simplification in Boolean algebra are as follows:
+\medskip
+\item{$\bullet$} Rule 1: $A + AB = A$
+\item{$\bullet$} Rule 2: $A + \overline{A}B = A + B$
+\medskip
+
+Not only are these two rules confusingly similar, but many students find them difficult to successfully apply to situations where a Boolean expression uses different variables (letters), such as here:
+
+$$\overline{R}ST + \overline{R}$$
+
+Here, it is the first rule that applies ($A + AB = A$) and not the second rule ($A + \overline{A}B = A + B$), giving a simplification of:
+
+$$\overline{R}$$
+
+\goodbreak
+Try to apply these two rules to the following Boolean expressions, identifying which rule directly applies, or if neither rule directly applies:
+
+\medskip
+\item{$\bullet$} $FGH + G$
+\vskip 5pt
+\item{$\bullet$} $\overline{C} + CF$
+\vskip 5pt
+\item{$\bullet$} $\overline{AB}C + A$
+\vskip 5pt
+\item{$\bullet$} $RS + \overline{R}$
+\vskip 5pt
+\item{$\bullet$} $\overline{AB} + ABC$
+\vskip 5pt
+\item{$\bullet$} $\overline{AB}C + C$
+\vskip 5pt
+\item{$\bullet$} $\overline{R}V\overline{W} + \overline{R}$
+\vskip 5pt
+\item{$\bullet$} $\overline{X} \> \overline{Y} Z + \overline{XY}$
+\vskip 5pt
+\item{$\bullet$} $\overline{J} \> \overline{K} L M + \overline{J}K$
+\vskip 5pt
+\item{$\bullet$} $\overline{E}HF + F\overline{E}$
+\medskip
+
+\underbar{file 02906}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} $FGH + G = G$ (Rule 1)
+\vskip 5pt
+\item{$\bullet$} $\overline{C} + CF = \overline{C} + F$ (Rule 2)
+\vskip 5pt
+\item{$\bullet$} $\overline{AB}C + A$ \hskip 10pt (Neither rule applies)
+\vskip 5pt
+\item{$\bullet$} $RS + \overline{R} = \overline{R} + S$ (Rule 2)
+\vskip 5pt
+\item{$\bullet$} $\overline{AB} + ABC = \overline{AB} + C$ (Rule 2)
+\vskip 5pt
+\item{$\bullet$} $\overline{AB}C + C = C$ (Rule 1)
+\vskip 5pt
+\item{$\bullet$} $\overline{R}V\overline{W} + \overline{R} = \overline{R}$ (Rule 1)
+\vskip 5pt
+\item{$\bullet$} $\overline{X} \> \overline{Y} Z + \overline{XY}$ \hskip 10pt (Neither rule applies)
+\vskip 5pt
+\item{$\bullet$} $\overline{J} \> \overline{K} L M + \overline{J}K$ \hskip 10pt (Neither rule applies)
+\vskip 5pt
+\item{$\bullet$} $\overline{E}HF + F\overline{E} = \overline{E}F$ (Rule 1)
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Many students find the substitution of Boolean variables (going from the A's and B's of canonical rules to the different variables of real expressions where the rules are to be applied) very mysterious and difficult.  Problems such as this give them practice learning to identify the rules' {\it patterns} despite similarities or differences in the actual variables (letters) used.
+
+%INDEX% Boolean algebra, identifying proper forms of rules
+
+%(END_NOTES)
+
+

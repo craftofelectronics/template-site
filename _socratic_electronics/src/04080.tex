@@ -1,0 +1,66 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+When you see an electronic device symbol such as any one of these, which direction do the symbols' intrinsic arrows represent, electron or conventional flow? 
+
+$$\epsfbox{04080x01.eps}$$
+
+\underbar{file 04080}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The arrowhead represents the presence of a PN junction, the direction of that arrow always pointing in the direction that conventional flow would go if the junction were forward-biased.
+
+\vskip 10pt
+
+The situation is a bit more complex than simply saying that the arrow points in the direction of conventional flow (the standard answer).  For a semiconductor device (diode, transistor, thyristor, etc.), an arrowhead represents a PN junction, with the fat end of the arrowhead representing the "P" side and the pointed end representing the "N" side.  This much is unambiguous:
+
+$$\epsfbox{04080x02.eps}$$
+
+However, there is at least one device whose {\it normal} direction of current (in conventional flow) goes {\it against} this arrow: the zener diode.
+
+$$\epsfbox{04080x03.eps}$$
+
+This example can be quite confusing, because the diode is designed to break down in reverse-bias mode.  Zener diodes can and will conduct when forward-biased, just like any other diode, but what makes them useful is their reverse-bias behavior.  So although it is definitely easier for current to go the "correct" way through a zener diode (arrowhead in the direction of conventional flow), the normal operating direction of current is opposite.
+
+\goodbreak
+
+Some semiconductor devices use arrowheads to denote the presence of a non-conducting PN junction.  Examples of this include JFETs and MOSFETs:
+
+$$\epsfbox{04080x04.eps}$$
+
+Like the zener diode, the PN junctions shown by the arrowheads in these symbols are designed to operate in reverse-bias mode.  Unlike the zener diode, however, the PN junctions within these devices are not supposed to break down, and therefore normally carry negligible current.  Here, the arrows represent the direction that conventional flow would go, {\it provided the necessary applied voltages to forward-bias those junctions}, even though these devices do not normally operate in that mode.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Your students can see how confusing this can be, with arrowheads sometimes representing direction of current and sometimes not.  In a semiconductor device, an arrowhead simply represents a PN junction, with the direction of that arrowhead representing how conventional flow {\it would} go {\it if} that PN junction were forward-biased.
+
+Then, of course, we have the symbol for a current source, whose arrow {\it always} points in the direction of conventional flow.
+
+\vskip 10pt
+
+It should become apparent that conventional flow is the easiest approach when working with semiconductor devices.  There are many people (technicians, especially) who successfully apply electron flow to the analysis of semiconductor devices, but they have to train themselves to think "against the arrow."  This adds one more level of confusion to an already (potentially) confusing topic, which is why I personally choose to teach conventional flow when first exposing students to semiconductor devices.
+
+\vskip 10pt
+
+Any way you approach this subject, it is a sad state of affairs!
+
+%INDEX% Conventional flow versus electron flow
+%INDEX% Electron flow versus conventional flow
+
+%(END_NOTES)
+
+

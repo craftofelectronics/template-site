@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In this circuit, a microcontroller controls the rotation of a special type of motor known as a {\it stepper motor} by sequentially activating one transistor at a time (thus, energizing one motor coil at a time).  With each step in the sequence, the motor rotates a fixed number of degrees, typically 1.8 degrees per step:
+
+$$\epsfbox{02423x01.eps}$$
+
+Each motor coil draws a relatively heavy current when energized, necessitating transistors to "interpose" between the microcontroller outputs and the motor coils.
+
+Identify what type of logical signal ("high" or "low") from the output ports of the microcontroller is needed to energize each transistor.  Also, show how the power losses and parts count may be reduced by replacing each bipolar junction transistor with a suitable MOSFET in the following diagram:
+
+$$\epsfbox{02423x02.eps}$$
+
+\underbar{file 02423}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Each stepper motor coil becomes energized when the respective microcontroller output goes to a "low" (Ground potential) state.
+
+$$\epsfbox{02423x03.eps}$$
+
+\vskip 10pt
+
+Follow-up question: if the resistors had to be left in place, would the modified (MOSFET instead of BJT) circuit still function properly?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this long-winded question is not just to have students figure out how to replace a BJT with a MOSFET, but also to introduce them to the concept of the microcontroller, which is a device of increasing importance in modern electronic systems.
+
+No commutating diodes have been shown in this circuit, for simplicity's sake.  If any students ask about this, commend them for noticing!
+
+%INDEX% BJT versus MOSFET
+%INDEX% Microcontroller, used to drive a stepper motor
+%INDEX% MOSFET versus BJT
+
+%(END_NOTES)
+
+

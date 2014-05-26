@@ -1,0 +1,157 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Complete the table of voltages and currents for several given values of input voltage in this common-base amplifier circuit.  Assume that the transistor is a standard silicon NPN unit, with a nominal base-base junction forward voltage of 0.7 volts:
+
+$$\epsfbox{02233x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_E$ & $V_B$ & $I_B$  & $I_C$ & $V_{R_C}$ & $V_C$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0.0 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Third row
+-0.5 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+-0.8 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+-1.0 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+-1.1 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+-1.2 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+-1.3 V &  &  &  &  & \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Calculate the voltage gain of this circuit from the numerical values in the table:
+
+$$A_V = {\Delta V_{out} \over \Delta V_{in}} = $$
+
+\underbar{file 02233}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_E$ & $V_B$ & $I_B$  & $I_C$ & $V_{R_C}$ & $V_C$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0.0 V & 0.0 V & 0.0 $\mu$A & 0.0 mA & 0.0 V & 15 V \cr
+%
+\noalign{\hrule}
+%
+% Third row
+-0.5 V & 0.0 V & 0.0 $\mu$A & 0.0 mA & 0.0 V & 15 V \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+-0.8 V & -0.1 V & 45.5 $\mu$A & 2.27 mA & 2.27 V & 12.7 V \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+-1.0 V & -0.3 V & 136.4 $\mu$A & 6.82 mA & 6.82 V & 8.18 V \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+-1.1 V & -0.4 V & 181.8 $\mu$A & 9.09 mA & 9.09 V & 5.91 V \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+-1.2 V & -0.5 V & 227.3 $\mu$A & 11.36 mA & 11.36 V & 3.64 V \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+-1.3 V & -0.6 V & 272.7 $\mu$A & 13.64 mA & 13.64 V & 1.36 V \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+$$A_V = {\Delta V_{out} \over \Delta V_{in}} = 22.7$$
+
+\vskip 10pt
+
+Follow-up question: based on the values for output and input voltage shown in the table, would you say that common-base amplifier circuits are {\it inverting} or {\it noninverting}?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question, besides providing practice for common-base circuit DC analysis, is to show the noninverting and voltage-amplification properties of the common-base amplifier, as well as to showcase its low current gain.
+
+The negative values shown for emitter voltage ($V_{in}$) are correct and intentional.  It is necessary to view the input voltage as a negative quantity to confidently determine the phase relationship between input and output.
+
+This approach to determining transistor amplifier circuit voltage gain is one that does not require prior knowledge of amplifier configurations.  In order to obtain the necessary data to calculate voltage gain, all one needs to know are the "first principles" of Ohm's Law, Kirchhoff's Laws, and basic operating principles of a bipolar junction transistor.  This question is really just a {\it thought experiment}: exploring an unknown form of circuit by applying known rules of circuit components.  If students doubt the efficacy of "thought experiments," one need only to reflect on the success of Albert Einstein, whose thought experiments as a patent clerk (without the aid of experimental equipment) allowed him to formulate the basis of his Theories of Relativity.
+
+%INDEX% Common-base amplifier, DC voltage calculations
+
+%(END_NOTES)
+
+

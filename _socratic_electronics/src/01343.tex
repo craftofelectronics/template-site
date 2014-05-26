@@ -1,0 +1,63 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Imagine a telephone system with only one pair of wires stretching between phone units.  For the sake of simplicity, let's consider each telephone to be a sound-powered (unamplified) unit, where the voltage produced directly by the microphone drives the speaker on the other end:
+
+$$\epsfbox{01343x01.eps}$$
+
+If we were to install a second telephone line to accommodate another pair of people talking to each other, it certainly would work, but it might be expensive to do so because of the cost of wire over the long distance:
+
+$$\epsfbox{01343x02.eps}$$
+
+Suppose, though, we installed a set of DPDT switches that switched the two telephone conversations along the same pair of wires (only 1 telephone "line").  This general technique is known as {\it multiplexing}.  The switches would be synchronized according to clocks at either end of the line, and cycled back and forth repeatedly:
+
+$$\epsfbox{01343x03.eps}$$
+
+What would the conversation sound like to either of the listeners if the switch frequency was 1 Hz?  What if it was 10 Hz?  What if it was 40 kHz?
+
+\underbar{file 01343}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+At 1 Hz, a half-second of each conversation would be missing, every second.  The result would be a very "choppy" stream of audio reaching each listener.
+
+\vskip 10pt
+
+At 10 Hz, the "choppiness" would be reduced, with only 1/20 of a second's worth of conversation missing every 1/10 of a second from each conversation.  It would still be very difficult to listen to, though.
+
+\vskip 10pt
+
+At 40 kHz switching speed, both conversations would sound seamless.
+
+\vskip 10pt
+
+Follow-up question: how can we multiplex more than two conversations along the same pair of telephone wires?
+
+\vskip 10pt
+
+Challenge question: is there a limit as to how many conversations we can multiplex on the same wire pair?  If so, what parameters would define this limit?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students why this technique of switching conversations works.  How is it possible for audio conversations to sound "seamless" when half the information is missing from each one (regardless of switching speed)?
+
+Ask your students for answers to the challenge question.  If no one has any, give them a hint: how does the {\it bandwidth} of the telephone lines impact multiplexing a large number of signals?
+
+%INDEX% Multiplexing, telephony
+
+%(END_NOTES)
+
+

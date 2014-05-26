@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This is a digitally-set motor speed controller circuit, using PWM to modulate power to the motor.  Predict how the operation of this circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03850x01.eps}$$
+
+\medskip
+\item{$\bullet$} DAC output fails low (output = 0 volts DC):
+\item{$\bullet$} DAC output fails high (output = +V):
+\item{$\bullet$} IGBT $Q_1$ fails open (collector to emitter):
+\item{$\bullet$} Solder bridge (short) between MSB input on $U_1$ and ground:
+\medskip
+
+\underbar{file 03850}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} DAC output fails low (output = 0 volts DC): {\it Motor will not run.}
+\item{$\bullet$} DAC output fails high (output = +V): {\it Motor runs full speed all the time.}
+\item{$\bullet$} IGBT $Q_1$ fails open (collector to emitter): {\it Motor will not run.}
+\item{$\bullet$} Solder bridge (short) between MSB input on $U_1$ and ground: {\it Speeds 0 through 127 work normally, but speeds 128 through 255 just duplicate speeds 0 through 127, respectively.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Questions like this help students hone their troubleshooting skills by forcing them to think through the consequences of each possibility.  This is an essential step in troubleshooting, and it requires a firm understanding of circuit function.
+
+%INDEX% Troubleshooting, predicting effects of fault in DAC circuit
+
+%(END_NOTES)
+
+

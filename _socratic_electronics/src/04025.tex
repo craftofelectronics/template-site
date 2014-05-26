@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A microcontroller is used to provide automatic power factor correction for an AC load:
+
+$$\epsfbox{04025x01.eps}$$
+
+Examine this schematic diagram, then answer the following questions:
+
+\medskip
+\goodbreak
+\item{$\bullet$} How can the microcontroller sense the power factor of the AC load?
+\item{$\bullet$} How many discrete steps of power factor correction can the microcontroller engage through its four output pins?
+\item{$\bullet$} What would the MCU's output be to correct for a load drawing 15 amps with a lagging power factor of 0.77?  Assume a line frequency of 60 Hz, and a correction algorithm that adjusts for the best {\it lagging} power factor (i.e. it will never over-correct and produce a leading power factor).
+\item{$\bullet$} What is the corrected (total) power factor with those capacitors engaged?
+\medskip
+
+\underbar{file 04025}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I'll let you and your classmates discuss how the MCU might detect power factor.  There is more than one valid solution for doing so!
+
+The 20 $\mu$F and 80 $\mu$F capacitors would both be engaged: MCU output DCBA would be {\tt 0101} (note that the outputs must go {\it low} to energize their respective relays!).  With this output, the corrected power factor would be 0.99939 rather than the original 0.77.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question poses some interesting concepts for review, as well as synthesizing old and new concepts in electronics for your students to consider.  Be sure to allow plenty of time for discussion on this question, as well as any necessary review time for power factor calculations!
+
+%INDEX% Microcontroller, used for power factor correction
+%INDEX% Power factor correction, binary circuit
+
+%(END_NOTES)
+
+

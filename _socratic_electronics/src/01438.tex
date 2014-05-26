@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The 74HC150 is a high-speed CMOS (TTL-compatible) integrated circuit multiplexer, also known as a {\it data selector}.  It is commonly available as a 24 pin DIP "chip."  Identify the terminals of a 74HC150, and label them here:
+
+\vskip 10pt
+
+$$\epsfbox{01438x01.eps}$$
+
+\vskip 10pt
+
+In particular, note the locations of the four "select" terminals, as well as the single output terminal.
+
+\vskip 10pt
+
+What types of electrical "data" may be "selected" by this particular integrated circuit?  For example, can it select an analog waveform, such as human speech from a microphone?  Is it limited to discrete TTL signals (low and high, 0 volts and 5 volts DC)?  How can you tell?
+
+\underbar{file 01438}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Did you really think I would just show you the pinout here, instead of having you consult a datasheet?  This is a discrete-signal device, only.  It cannot "select" analog signals such as those involved in telephony.
+
+\vskip 10pt
+
+Challenge question: how could you build an analog signal multiplexer, using components you are familiar with?  I recommend you start with something simple, such as a four-channel multiplexer, before attempting something with as many channels as the digital device shown here (74HC150).
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Datasheets not only provide basic pinout information, but they also reveal important operational characteristics of integrated circuits.  In many cases they also show typical applications, which have great educational value.  Stress the importance of datasheets to your students with "look-up" exercises such as this, build their ability to interpret the information contained.
+
+In regard to the challenge question, it is a common mistake for students to think they can build an analog signal multiplexer around a digital signal multiplexer.  In actuality, they would need a completely different type of device!
+
+%INDEX% 74HC150 multiplexer/data selector IC
+%INDEX% Multiplexer (74HC150)
+%INDEX% Data selector (74HC150)
+
+%(END_NOTES)
+
+

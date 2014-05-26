@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Consider the following four-bit binary counter integrated circuit (IC).  When clocked by the square wave signal generator, it counts from 0000 to 1111 in sixteen steps and then "recycles" back to 0000 again in a single step:
+
+$$\epsfbox{02953x01.eps}$$
+
+There are many applications, though, where we do not wish the counter circuit to count all the way up to full count (1111), but rather recycle at some lesser terminal count value.  Take for instance the application of BCD counting: from 0000 to 1001 and back again.  Here is one way to truncate the counting sequence of a binary counter so that it becomes a BCD counter:
+
+$$\epsfbox{02953x02.eps}$$
+
+Explain how the NAND gate forces this counter to recycle after an output of 1001 instead of counting all the way up to 1111.  (Hint: the reset function of this IC is assumed to be {\it asynchronous}, meaning the counter output resets to 0000 immediately when the $\overline{RST}$ terminal goes low.)
+
+\vskip 10pt
+
+Also, show how you would modify this circuit to do the same count sequence (BCD) assuming the IC has a {\it synchronous} reset function, meaning the counter resets to 0000 if $\overline{RST}$ is low {\it and} the clock input sees a pulse.
+
+\underbar{file 02953}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A timing diagram is probably the best way to answer this question!  As for the synchronous-reset BCD counter circuit, the only change necessary is a simple wire move (from output $Q_1$ to $Q_0$):
+
+$$\epsfbox{02953x03.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Although both circuits achieve a BCD count sequence, the synchronous-reset circuit is preferred because it completely avoids spurious ("ripple-like") false outputs when recycling.  Be sure to emphasize that the difference between an asynchronous and a synchronous reset function is internal to the IC, and not something the user (you) can change.  For an example of two otherwise identical counters with different reset functions, compare the 74HCT161 (asynchronous) and 74HCT163 (synchronous) four-bit binary counters.
+
+%INDEX% Modulus, digital counter
+
+%(END_NOTES)
+
+

@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The same problem of input bias current affecting the precision of opamp voltage buffer circuits also affects noninverting opamp voltage amplifier circuits:
+
+$$\epsfbox{02463x01.eps}$$
+
+$$\epsfbox{02463x02.eps}$$
+
+To fix this problem in the voltage buffer circuit, we added a "compensating" resistor:
+
+$$\epsfbox{02463x03.eps}$$
+
+To fix the same problem in the noninverting voltage amplifier circuit, we must carefully choose resistors $R_1$ and $R_2$ so that their parallel equivalent equals the source resistance:
+
+$$R_1 || R_2 = R_{source}$$
+
+Of course, we must also be sure the values of $R_1$ and $R_2$ are such that the voltage gain of the circuit is what we want it to be.
+
+Determine values for $R_1$ and $R_2$ to give a voltage gain of 7 while compensating for a source resistance of 1.45 k$\Omega$.
+
+\underbar{file 02463}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$R_1$ = 1.692 k$\Omega$ \hskip 50pt $R_2$ = 10.15 k$\Omega$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Students must apply algebra to solve for the values of these two resistances.  The solution is an application of algebraic {\it substitution}, and it is worthwhile to examine and discuss together in class.
+
+Discuss how this solution to the bias current problem is a practical application of Th\'evenin's theorem: looking at the two voltage divider resistors as a network that may be Th\'evenized to serve as a compensating resistance as well as a voltage divider for the necessary circuit gain.
+
+%INDEX% Bias current compensation, opamp input (in noninverting amplifier circuit)
+
+%(END_NOTES)
+
+

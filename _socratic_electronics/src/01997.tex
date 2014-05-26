@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{01997x01.eps}$$
+
+\underbar{file 01997}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Use a variable-voltage, regulated power supply to supply any amount of DC voltage below 30 volts.  Specify standard resistor values, all between 1 k$\Omega$ and 100 k$\Omega$ (1k5, 2k2, 2k7, 3k3, 4k7, 5k1, 6k8, 10k, 22k, 33k, 39k 47k, 68k, etc.).
+
+I suggest using ordinary (general-purpose) signal transistors in this circuit, such as the 2N2222 and 2N3403 (NPN), and the 2N2907 and 2N3906 (PNP) models, operating with a $V_{CC}$ of 12 volts.  When constructed as shown, this circuit has sufficient gain to be used as a crude operational amplifier (connect the inverting input to the output through various feedback networks).
+
+These values have worked well for me:
+
+\medskip
+\goodbreak
+\item{$\bullet$} $V_{CC}$ = 12 volts
+\item{$\bullet$} $R_1$ = 10 k$\Omega$
+\item{$\bullet$} $R_2$ = 10 k$\Omega$
+\item{$\bullet$} $R_{prg}$ = 10 k$\Omega$
+\item{$\bullet$} $R_{pot1}$ = 10 k$\Omega$
+\item{$\bullet$} $R_{pot2}$ = 10 k$\Omega$
+\medskip
+
+I recommend instructing students to set each potentiometer near its mid-position of travel, then slightly adjusting each one to see the sharp change in output voltage as one input voltage crosses the other.  If students wish to monitor each of the input voltages to check for a condition of crossing, they should measure right at the transistor base terminals, not at the potentiometer wiper terminals, so as to not incur error resulting from current through protection resistors $R_1$ or $R_2$.
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (BJT differential amplifier)
+
+%(END_NOTES)
+
+

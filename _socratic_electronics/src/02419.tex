@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In this system, the voltage output of a digital timing circuit controls the charging and discharging of a resistor-capacitor network.  The inner workings of the digital timing circuit are hidden for simplicity's sake, but we may model it as a two-position switch, outputting either a "high" voltage signal (full supply voltage) or a "low" voltage signal (ground potential) at regular intervals:
+
+$$\epsfbox{02419x01.eps}$$
+
+First, identify what signal level from the digital circuit ("high" or "low") causes the capacitor to charge, and what level causes it to discharge.  Then, replace the BJT with a suitable MOSFET to accomplish the exact same timing function:
+
+$$\epsfbox{02419x02.eps}$$
+
+\underbar{file 02419}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+In the BJT version of the circuit, a "low" signal output by the digital circuit causes the capacitor to charge.  The same thing happens in this MOSFET version of the circuit:
+
+$$\epsfbox{02419x03.eps}$$
+
+\vskip 10pt
+
+Follow-up question: explain why no resistor is required in series with the MOSFET gate as there was with the BJT base in the original circuit version.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This circuit could be used as an introduction to the 555 timer, since that IC uses the same scheme for capacitor discharge.
+
+%INDEX% BJT versus MOSFET
+%INDEX% MOSFET versus BJT
+
+%(END_NOTES)
+
+

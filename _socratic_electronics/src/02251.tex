@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following circuit is useful as a {\it current regulator}, the regulated current setpoint being established by the value of the resistor and the JFET's $V_{GS(off)}$ parameter:
+
+$$\epsfbox{02251x01.eps}$$
+
+Despite wide variations in $V_{DD}$, the current in this circuit will remain relatively constant.  The reason this circuit works as it does is {\it negative feedback}.  Explain what causes negative feedback to occur in this circuit, and why it has a stabilizing effect on the current.
+
+\underbar{file 02251}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The resistor creates a voltage drop that tries to pinch off the JFET as current increases.  To put it in colloquial terms, "when the current {\it zigs}, the JFET {\it zags}."
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a simple example of negative feedback in action: one that does not require any AC analysis and all its associated considerations.  Here it is just DC at work, and the students must determine what it is the JFET/resistor combination does in response to attempted changes in current that makes the current so stable.
+
+%INDEX% Current regulator, JFET
+%INDEX% Current source, JFET
+%INDEX% Negative feedback, in JFET current regulator circuit
+
+%(END_NOTES)
+
+

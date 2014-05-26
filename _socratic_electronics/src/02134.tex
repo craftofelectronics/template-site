@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{02134x01.eps}$$
+
+\underbar{file 02134}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and actual truth tables.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It should be noted that the input states in this circuit are defined by the voltage levels, not by the contact status.  In other words, a closed contact equals a "low" (0) logic state.
+
+\goodbreak
+Suggested truth tables include the following (encoded as Boolean SOP statements):
+
+\medskip
+\item{$\bullet$} $AB\overline{C} + ABC$
+\item{$\bullet$} $\overline{A}B\overline{C} + \overline{A}BC$
+\item{$\bullet$} $\overline{A}B\overline{C} + \overline{A}BC + \overline{A} \> \overline{B} \> \overline{C}$
+\item{$\bullet$} $A\overline{B} \> \overline{C} + A \> \overline{B} \> C$
+\item{$\bullet$} $AB\overline{C} + A \overline{B} \> \overline{C} + \overline{A} \> \overline{B} \> \overline{C}$
+\item{$\bullet$} $\overline{A}BC + \overline{A} \> \overline{B} C + \overline{A} \> \overline{B} \> \overline{C}$
+\item{$\bullet$} $ABC + \overline{A}BC + AB \overline{C}$
+\item{$\bullet$} $A\overline{B}C + \overline{A} \> \overline{B}C + \overline{A} \> \overline{B} \> \overline{C}$
+\item{$\bullet$} $ABC + A \overline{B}C + \overline{A} \> \overline{B} C$
+\medskip
+
+I strongly recommend having students build their logic circuits with CMOS chips rather than TTL, because of the less stringent power supply requirements of CMOS.  I also recommend drawing a combinational circuit using four gates, because this is the common number of two-input gates found on 14-pin DIP logic chips.
+
+%INDEX% Assessment, performance-based (Gate circuit from truth table)
+
+%(END_NOTES)
+
+

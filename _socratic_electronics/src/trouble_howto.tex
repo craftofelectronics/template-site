@@ -1,0 +1,105 @@
+
+
+\input epsf.tex
+
+% This line effectively turns off "Underfull \vbox" error messages.
+\vbadness=10000
+
+
+
+\centerline{\bf How to turn any breadboarded circuit into a valid troubleshooting assessment} \bigskip 
+ 
+This tutorial is licensed under the Creative Commons Attribution License, version 1.0.  To view a copy of this license, visit http://creativecommons.org/licenses/by/1.0/, or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.  The terms and conditions of this license allow for free copying, distribution, and/or modification of all licensed works by the general public.
+
+\bigskip 
+
+\hrule
+
+\vskip 10pt
+
+Most electronics students gain hands-on experience with circuits by building them in temporary form, usually on solderless breadboards (also called {\it protoboards}).  These boards are very convenient for lab use, as they allow students to quickly assemble and re-configure circuits using a wide variety of components. 
+
+$$\epsfbox{trouble_howto_01.eps}$$
+
+There is much more to learning electronics than merely building circuits, though.  A vital element of electronics education is learning how to diagnose faulty circuits through the use of test equipment.  The best way I have found to do this is to give each student a real circuit that is failed in a particular way, and have them use real test equipment to isolate the fault(s).  Unfortunately, the same solderless breadboards that work so well for rapid circuit construction are rather poor for simulating circuit faults.  I've tried to use breadboards for troubleshooting assessments in years past -- taking students' circuits built on breadboards and "faulting" the circuits by lifting component legs to simulate opens and installing jumpers to simulate shorts -- but such faults are too easy for students to visually detect.  Instead of learning how to use test equipment to diagnose circuit problems, students just look for whatever seems out of place.  In order for the troubleshooting exercise to be valid, students should not be able to inspect the circuits in any way but by using test equipment.
+
+While it is possible to build or purchase special "fault simulator" circuit boards, these tend to be expensive, large, and time-consuming to make.  What I propose here is a way to introduce realistic faults in solderless breadboards without letting the student see the fault.  In this way, the instructor is able to assess student troubleshooting performance without undue investment in time or money.
+
+The concept works on the principle of taking measurements between {\it test points} on a circuit board.  Production circuit boards are commonly equipped with metal "test points" used for the connection of test equipment.  These test points are especially valuable when the boards are coated with a protective barrier, since the coating prevents direct connection to the component terminals.  In cases like this, test points are the {\it only} contact points through which circuit signals may be measured.  I propose limiting student access to their faulted breadboard circuits in the same way, with the breadboard hidden and the test points located some distance away from it.  This may be done using several long wires and a terminal block.
+
+\goodbreak
+The first step in setting up your troubleshooting assessment is to determine which points in the circuit will be available as test points.  Take for instance this simple amplifier circuit:
+
+$$\epsfbox{trouble_howto_02.eps}$$
+
+Next, label these points accordingly on the schematic diagram:
+
+$$\epsfbox{trouble_howto_03.eps}$$
+
+The student builds the circuit on a solderless breadboard, locating all the labeled test points:
+
+$$\epsfbox{trouble_howto_04.eps}$$
+
+Now, what you must provide to the student is a "troubleshooting jig," consisting of a terminal block (or some other form of metallic test points for students to connect instruments to) on one end of a long multi-conductor cable, with the other end of the cable prepared for insertion into the breadboard holes.  The student connects each test wire to its respective breadboard hole (test point), tests their circuit from the terminal block end of the jig to check that all expected voltages are present, and then leaves the room:
+
+$$\epsfbox{trouble_howto_05.eps}$$
+
+With the student out of sight, you now introduce one or more faults on their breadboard by lifting component leads, placing jumpers, or substituting bad components for good.  After faulting the circuit, cover the breadboard with a towel or some other opaque covering and invite the student to come back into the room.  Their task is to troubleshoot the faulted circuit just by measuring voltages (and resistances, with the power turned off) from the terminal block end of the troubleshooting jig.  Of course, they may use their schematic diagram as a "map" of the circuit and as a reference for the different test points, but they are not allowed to lift the opaque covering and inspect the circuit.  Meanwhile, you observe the student's diagnostic technique as they diagnose the faulted circuit.
+
+\vskip 10pt
+
+This may be done to {\it any} circuit constructed on a breadboard, and even to some that aren't.  The only circuits this technique is incompatible with are circuits spanning large distances and/or circuits that are soldered together and therefore not easily faulted.  Being forced to take all circuit measurements from the end of the troubleshooting jig means that students must abstract from schematic diagram to test points (just like real life, where circuit component layout rarely matches the schematic diagram's layout), while still knowing their circuit's breadboard layout well enough to know where to land the test point conductors.  Hopefully you will find this assessment technique as fruitful as I have!
+
+\vfil \eject 
+
+\hrule
+
+\vskip 10pt
+
+\centerline{\bf Grading} \bigskip 
+
+Assigning a grade to student troubleshooting efforts can be complex, because there is often more than one way to efficiently diagnose a circuit malfunction.  Of course, you may simply check to see that the student has successfully found the problem(s), but optimum assessment requires grading the student's troubleshooting {\it technique} as well as the final result.  The following recommendation constitutes a grading strategy that I have found practical in real student assessments without undue complexity or subjectivity.
+
+First, have each student maintain a "troubleshooting log" on paper as they take measurements with their test equipment.  This log is very simple, consisting of a page divided lengthwise (vertically) by a line into two columns, the left-hand column for recording measurements and other actions taken, and the right-hand column for recording conclusions:
+
+$$\epsfbox{trouble_howto_06.eps}$$
+
+An illustration of how this log would be used is shown in the following example.  Consider this simple light-bulb circuit, with test points labeled for easy reference:
+
+$$\epsfbox{trouble_howto_07.eps}$$
+
+Now, examine the student's troubleshooting log as they diagnosed the location of the wiring break between test points:
+
+$$\epsfbox{trouble_howto_08.eps}$$
+
+One simple way to assign a grade to the student's work is to grant a minimal passing percentage score for safely and successfully locating the fault, then adding additional percentage points for quality of documentation.  Here is one such rubric:
+
+\vskip 10pt
+
+\hskip 10pt Lab Assessment grade: {\it Troubleshooting circuit}
+
+\hskip 10pt Troubleshooting grade (60\%): {\it Accurate and safe identification of fault (component and type of fault)}
+
+\hskip 10pt Troubleshooting grade (10\%): {\it All conclusions documented in troubleshooting log}
+  
+\hskip 10pt Troubleshooting grade (10\%): {\it All documented conclusions are valid}
+ 
+\hskip 10pt Troubleshooting grade (10\%): {\it All measurements documented in troubleshooting log}
+ 
+\hskip 10pt Troubleshooting grade (5\%): {\it No unnecessary measurements taken}
+ 
+\hskip 10pt Troubleshooting grade (5\%): {\it No measurements repeated}
+
+\vskip 10pt
+
+Other methods of grading are possible as well.  What follows is a description of another strategy I have applied in the past.  First, I count the total number of measurements, actions, and conclusions.  In this case there are ten: four measurements, one action, and five conclusions.  Then, I subtract points based on mistakes and divide by the original total to reach a percentage score:
+
+\medskip
+\item{$\bullet$} Each incorrect conclusion: -1 point
+\item{$\bullet$} Each extra (unnecessary) measurement or action: -${1 \over 2}$ point
+\medskip
+
+Note that the student here makes two mistakes: one is to conclude that the light bulb is not failed (an incorrect conclusion -- all the measurements indicate at this point is that there is {\it a} problem other than the light bulb, but this does not mean the bulb cannot be failed as well!) and the other is to measure $V_{TP5-TP8}$ when it is apparent from all prior measurements that the break must be between TP6 and TP8.  In either grading scheme, the student would receive a score of 85\%.  In the first grading scheme, there would be ten points taken away for the incorrect conclusion and five points taken away for the unnecessary measurement.  In the second scheme I would subtract $1 {1 \over 2}$ points from the total number of entries (ten) and divide that number by the total, yielding the same score of 85\%.
+
+\bye
+

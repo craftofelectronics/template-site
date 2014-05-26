@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Some integrated circuit counters come equipped with multiple enable inputs.  A good example of this is the 74HCT163:
+
+$$\epsfbox{02955x01.eps}$$
+
+In this case, as in others, the two enable inputs are not identical.  Although both must be active for the counter to count, one of the enable inputs does something extra that the other one does not.  This additional function is often referred to as a {\it look-ahead carry}, provided to simplify cascading of counters.
+
+Explain what "look-ahead carry" means in the context of digital counter circuits, and why it is a useful feature.
+
+\underbar{file 02955}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The "TE" input not only enables the count sequence, but it also enables the "terminal count" (TC) output which is used to cascade additional counter stages.  This way, multiple synchronous counter stages may be connected together as simply as this:
+
+$$\epsfbox{02955x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The important lesson in this question is that synchronous counter circuits with more than two stages need to be configured in such a way that {\it all} higher-order stages are disabled with the terminal count of the lowest-order stage is inactive.  This ensures a proper binary count sequence throughout the overall counter circuit's range.  Your students should have been introduced to this concept when studying synchronous counter circuits made of individual J-K flip-flops, and it is the same concept here.
+
+Also important here is the realization that some IC counters come equipped with the "look-ahead" feature built in, and students need to know how and why to use this feature.
+
+%INDEX% Counter cascading, more than two counter ICs
+%INDEX% Look-ahead carry, counter circuit
+
+%(END_NOTES)
+
+

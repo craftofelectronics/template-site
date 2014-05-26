@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{01981x01.eps}$$
+
+\underbar{file 01981}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Use a variable-voltage, regulated power supply to supply any amount of DC voltage below 30 volts.  Specify standard resistor values, all between 1 k$\Omega$ and 100 k$\Omega$ (1k5, 2k2, 2k7, 3k3, 4k7, 5k1, 6k8, 10k, 22k, 33k, 39k 47k, 68k, etc.).  Use a sine-wave function generator to supply an audio-frequency input signal, and make sure its amplitude isn't set so high that the amplifier clips.
+
+The voltage gain of this amplifier configuration tends to be very high, approximately equal to $R_C \over r'_e$.  Your students will have to use fairly low input voltages to achieve class A operation with this amplifier circuit.  I have had good success using the following values:
+
+\medskip
+\item{$\bullet$} $V_{CC}$ = 12 volts
+\item{$\bullet$} $V_{in}$ = 20 mV peak-to-peak, at 5 kHz
+\item{$\bullet$} $R_1$ = 1 k$\Omega$
+\item{$\bullet$} $R_2$ = 4.7 k$\Omega$
+\item{$\bullet$} $R_C$ = 100 $\Omega$
+\item{$\bullet$} $R_E$ = 1 k$\Omega$
+\item{$\bullet$} $C_1$ = 33 $\mu$F
+\medskip
+
+Your students will find the actual voltage gain deviates somewhat from predicted values with this circuit, largely because it is so dependent on the value of $r'_e$, and that parameter tends to be unpredictable.
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (Common-base class-A amplifier circuit)
+
+%(END_NOTES)
+
+

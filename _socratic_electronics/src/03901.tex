@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student builds a four-bit asynchronous {\it up} counter out of individual J-K flip-flops, but is dissatisfied with its performance:
+
+$$\epsfbox{03901x01.eps}$$
+
+Although the counting sequence is proper, the circuit usually does not begin counting from {\tt 0000} at power-up.  The fact that the circuit counts correctly suggests that there is nothing failed or mis-wired, so what could possibly be wrong?
+
+\underbar{file 03901}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The flip-flops' initial states at power-up are essentially random because they are subject to internal {\it race conditions} between the constituent gates.  What is needed is some form of {\it automatic reset} to force all flip-flops to the reset state at power-up.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a very practical issue for state-machine circuits: making sure the circuit begins in the desired state rather than in some random condition.
+
+%INDEX% Automatic reset, for counter circuit
+
+%(END_NOTES)
+
+

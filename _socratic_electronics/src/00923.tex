@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A useful piece of test equipment for semiconductor components is a {\it curve tracer}, used to produce current/voltage graphs for a component being tested.  The graphs are typically displayed on an oscilloscope screen.  Here is a very simple curve tracer circuit, designed to be used with an oscilloscope in X-Y mode:
+
+$$\epsfbox{00923x01.eps}$$
+
+Describe what type of trace would be drawn by this circuit on an oscilloscope screen if a {\it resistor} was being tested.  Then, show the trace for a normal rectifying diode.
+
+\underbar{file 00923}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{00923x02.eps}$$
+
+\vskip 10pt
+
+$$\epsfbox{00923x03.eps}$$
+
+\vskip 10pt
+
+Challenge question: does it matter whether or not the AC source voltage for this circuit is perfectly sinusoidal?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+There is a lot to discuss in this question.  Not only does the concept of "curve tracing" merit attention, but the specific operation of this circuit is worthy of investigation as well.  The reason I asked students to determine the "curve" for a resistor was to introduce them to the idea of graphing component current/voltage functions, and also to allow them to analyze the circuit with a more linear component under test than a semiconductor.
+
+An important question to ask here is why channel Y of the oscilloscope must be inverted to obtain the graphs shown.  What would the graphs look like if the channel were not inverted?
+
+The challenge question may be rephrased as, "is the excitation voltage waveshape critical to obtaining a precise curve?"  One way to demonstrate this is to use a function generator as the excitation voltage source (a transformer may be necessary to isolate the function generator ground from the oscilloscope ground!), and to try different waveshapes, watching the responses on the oscilloscope screen.
+
+%INDEX% Curve tracer circuit, simple
+
+%(END_NOTES)
+
+

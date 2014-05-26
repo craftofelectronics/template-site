@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Describe what happens to $V_{out}$ (the voltage across capacitor $C_4$) as time goes on, assuming the relay is continuously toggled by the oscillator circuit at a high frequency.  Assume that the input voltage ($V_{in}$) is constant over time:
+
+$$\epsfbox{01455x01.eps}$$
+
+This type of circuit is often referred to as a {\it flying capacitor} circuit, with $C_3$ being the "flying" capacitor.  Explain why this is, and what possible benefit might be realized by using a flying capacitor circuit to sample a voltage.
+
+\underbar{file 01455}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+{\it Flying capacitor} circuits are used to provide galvanic isolation between a sampled voltage source and voltage measurement circuitry.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I once worked for a company where thousands of these "flying capacitor" circuits were used to sample voltage across numerous series-connected electrochemical reduction cells, whose common-mode voltage could easily exceed 500 volts DC!  This primitive technology provided isolation so that the data acquisition circuitry did not have to deal with that high common-mode voltage.
+
+Incidentally, the relays we used were hermetically sealed, mercury-wetted contact, reed relays.  These relays had a surprisingly long life, often several years!  They were cycled at around 20 Hz, for several cycles, about once every minute (24 hours per day, 365 days per year).
+
+%INDEX% Flying capacitor circuit
+
+%(END_NOTES)
+
+

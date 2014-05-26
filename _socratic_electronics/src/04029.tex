@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Determine what sort of time-delay relay this circuit is:
+
+$$\epsfbox{04029x01.eps}$$
+
+Also, calculate the amount of delay, in seconds.  Hint: the 555's timing capacitor will charge from 0 volts to $2 \over 3$ supply voltage during the charging cycle.
+
+\vskip 10pt
+
+\underbar{file 04029}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This is a {\it normally-open, timed-closed} (also known as a {\it normally-open, on-delay}) relay, with a time delay of 4.065 seconds.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Some students may mistakenly base their time calculations on the 10 k$\Omega$ resistor and/or the 0.1 $\mu$F capacitor.  Discuss the role of these two components in triggering the 555 timer, and how the time delay of the relay is actually set by the {\it other} $R$ and $C$.
+
+%INDEX% Time delay relay circuit, based on 555 timer IC
+
+%(END_NOTES)
+
+

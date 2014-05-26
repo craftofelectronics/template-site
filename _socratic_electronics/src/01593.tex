@@ -1,0 +1,134 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Study this audio amplifier circuit closely:
+
+$$\epsfbox{01593x01.eps}$$
+
+Then, determine whether the DC voltage at each test point ($V_{TP1}$ through $V_{TP6}$) with respect to ground will increase, decrease, or remain the same for each of the given fault conditions:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil \vrule \cr 
+\noalign{\hrule}
+%
+{\bf Fault} & V_{TP1} & V_{TP2} & V_{TP3} & V_{TP4} & V_{TP5} & V_{TP6} \cr
+\noalign{\hrule}
+%
+R1 failed open & \hbox{Same} &  &  &  &  & \hbox{Same} \cr
+\noalign{\hrule}
+%
+R2 failed open & \hbox{Same} &  &  &  &  & \hbox{Same} \cr
+\noalign{\hrule}
+%
+R3 failed open & \hbox{Same} &  &  &  &  & \hbox{Same} \cr
+\noalign{\hrule}
+%
+R4 failed open & \hbox{Same} &  &  &  &  & \hbox{Same} \cr
+\noalign{\hrule}
+%
+R5 failed open & \hbox{Same} &  &  &  &  & \hbox{Same} \cr
+\noalign{\hrule}
+%
+Short between TP2 and ground & \hbox{Same} &  &  &  &  & \hbox{Same} \cr
+\noalign{\hrule}
+%
+C2 failed shorted & \hbox{Same} &  &  &  &  & \hbox{Same} \cr
+\noalign{\hrule}
+%
+Q1 collector failed open & \hbox{Same} &  &  &  &  & \hbox{Same} \cr
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+When analyzing component faults, consider only one fault at a time.  That is, for each row in the table, you should analyze the circuit as though the only fault in it is the one listed in the far left column of that row.
+
+
+
+\underbar{file 01593}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If the voltage changes to zero, I show $0$ in the table.  If the increase or decrease is relatively small, I use thin arrows ($\uparrow$ or $\downarrow$).  If the change is great, I use thick arrows ($\Uparrow$ or $\Downarrow$).
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil \vrule \cr 
+\noalign{\hrule}
+%
+{\bf Fault} & V_{TP1} & V_{TP2} & V_{TP3} & V_{TP4} & V_{TP5} & V_{TP6} \cr
+\noalign{\hrule}
+%
+R1 failed open & \hbox{Same} & 0 & 0 & \Uparrow & \Uparrow & \hbox{Same} \cr
+\noalign{\hrule}
+%
+R2 failed open & \hbox{Same} & \uparrow & \uparrow & \Downarrow & \Downarrow & \hbox{Same} \cr
+\noalign{\hrule}
+%
+R3 failed open & \hbox{Same} & \downarrow & \Downarrow & \Downarrow & \Downarrow & \hbox{Same} \cr
+\noalign{\hrule}
+%
+R4 failed open & \hbox{Same} & \hbox{Same} & \uparrow & \Uparrow & \Uparrow & \hbox{Same} \cr
+\noalign{\hrule}
+%
+R5 failed open & \hbox{Same} & \approx \hbox{Same} & \approx \hbox{Same} & \uparrow & \uparrow & \hbox{Same} \cr
+\noalign{\hrule}
+%
+Short between TP2 and ground & \hbox{Same} & 0 & 0 & \Uparrow & \Uparrow & \hbox{Same} \cr
+\noalign{\hrule}
+%
+C2 failed shorted & \hbox{Same} & \downarrow & 0 & \Downarrow & \Downarrow & \hbox{Same} \cr
+\noalign{\hrule}
+%
+Q1 collector failed open & \hbox{Same} & \downarrow & \Downarrow & \Uparrow & \Uparrow & \hbox{Same} \cr
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\vskip 10pt
+
+Follow-up question: why don't test point voltages $V_{TP1}$ or $V_{TP6}$ ever change?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I was able to verify specific voltages by building this circuit and faulting each component as described.  Although I was not always able to predict the magnitude of the change, I could always predict the direction.  This is really all that should be expected of beginning students.
+
+The really important aspect of this question is for students to understand {\it why} the test point voltages change as they do.  Discuss each fault with your students, and how one can predict the effects just by looking at the circuit.
+
+%INDEX% Troubleshooting, multi-stage transistor amplifier circuit
+%INDEX% Troubleshooting, consequences of component faults in amplifier circuit
+
+%(END_NOTES)
+
+

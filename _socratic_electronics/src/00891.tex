@@ -1,0 +1,56 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the power dissipated by the 5-volt zener diode for the following values of motor current (assume the battery voltage remains constant at 12 volts):
+
+$$\epsfbox{00891x01.eps}$$
+
+\medskip
+\item{$\bullet$} $I_{motor} =$ 20 mA ; $P_{zener} =$ 
+\item{$\bullet$} $I_{motor} =$ 50 mA ; $P_{zener} =$ 
+\item{$\bullet$} $I_{motor} =$ 90 mA ; $P_{zener} =$ 
+\item{$\bullet$} $I_{motor} =$ 120 mA ; $P_{zener} =$ 
+\item{$\bullet$} $I_{motor} =$ 150 mA ; $P_{zener} =$ 
+\medskip
+
+\underbar{file 00891}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} $I_{motor} =$ 20 mA ; $P_{zener} =$ 600 mW
+\item{$\bullet$} $I_{motor} =$ 50 mA ; $P_{zener} =$ 450 mW
+\item{$\bullet$} $I_{motor} =$ 90 mA ; $P_{zener} =$ 250 mW
+\item{$\bullet$} $I_{motor} =$ 120 mA ; $P_{zener} =$ 100 mW
+\item{$\bullet$} $I_{motor} =$ 150 mA ; $P_{zener} =$ 0 mW
+\medskip
+
+\vskip 10pt
+
+Follow-up question: is load voltage maintained at 5 volts constant throughout this range of load currents (from 20 mA to 150 mA)?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The follow-up question is fairly important here, as students need to realize the limitations of zener-based voltage regulators.  Most importantly, are they able to calculate the exact current limit of a zener-based voltage regulator -- the point at which it stops regulating?
+
+It should be noted that the calculated answers shown here will {\it not} precisely match a real zener diode circuit, due to the fact that zener diodes tend to gradually taper off in current as the applied voltage nears the zener voltage rating rather than current sharply dropping to zero as a simpler model would predict.
+
+%INDEX% Zener diode, power dissipated by
+%INDEX% Zener diode as a voltage regulator
+
+%(END_NOTES)
+
+

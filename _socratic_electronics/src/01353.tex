@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+One practical application of S-R latch circuits is {\it switch debouncing}.  Explain what "bounce" refers to in mechanical switches, and also explain how this circuit eliminates it:
+
+$$\epsfbox{01353x01.eps}$$
+
+Also, show where an oscilloscope could be connected to display any switch "bounce," and explain how the oscilloscope would have to be configured to capture this transient event.
+
+\underbar{file 01353}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The "latching" ability of the S-R latch circuit holds the output state steady during the mechanical switch's bouncing action, allowing a "clean" output transition to take place.  
+
+Connecting the input probe of an oscilloscope to either the S or R input of the latch will show bounce, if it occurs.  To capture this event, the 'scope would have to be configured for single-sweep mode, and have the triggering controls properly set.  A digital storage oscilloscope is essential for this type of work!
+
+\vskip 10pt
+
+Follow-up question: how do you suggest choosing appropriate pull-down resistor sizes for this circuit, or any CMOS circuit for that matter?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Many textbooks use switch debouncing as a practical example of S-R latch function, so I won't bother giving hints as to how this circuit works.  Let the students do their own research, and let them explain it to you during discussion.
+
+If students need practical examples of how switch "bouncing" can be bad, suggest digital counter circuits, where a mechanical switch causes a counter to increment (or decrement) once per actuation.  If the switch bounces, the counter will increment (or decrement) more than once per switch actuation, which is undesirable.
+
+Oscilloscope triggering is one of those features that separates novice 'scope users from competent 'scope users.  Anyone can learn to display a repetitive waveform on an oscilloscope with a minimum of adjustment.  Many modern digital oscilloscopes even have "auto-configure" features to lock in such waveforms for display.  However, to set up triggering on one-time events requires that the user understand not only the oscilloscope's functions, but also the nature of the event to be captured.
+
+Note to your students how the $\overline{Q}$ output of the latch doesn't go anywhere.  Often, we have applications where the second output of a latch is unused.  Ask your students whether or not this constitutes a problem.  (If you get blank stares from asking this question, remind students that unused CMOS inputs have to be grounded or tied to $V_{DD}$, or else damage may occur.  Ask them whether or not the same rule applies to gate outputs.)  This will be a good review of internal gate circuit construction.
+
+%INDEX% Bounce, switch contact
+%INDEX% Switch bounce
+
+%(END_NOTES)
+
+

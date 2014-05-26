@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose you wanted to measure the amount of current going through resistor R2 on this printed circuit board, but did not have the luxury of breaking the circuit to do so (unsoldering one end of the resistor, detaching it from the PCB, and connecting an ammeter in series).  All you can do while the circuit is powered is measure voltage with a voltmeter:
+
+$$\epsfbox{01729x01.eps}$$
+
+So, you decide to touch the black probe of the voltmeter to the circuit's "Gnd" (ground) test point, and measure the voltage with reference to ground on both sides of R2.  The results are shown here:
+
+$$\epsfbox{01729x02.eps}$$
+
+R2's color code is Orange, Orange, Red, Gold.  Based on this information, determine both the direction and the magnitude of DC current through resistor R2, and explain how you did so.
+
+\underbar{file 01729}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$I_{R2} \approx 160 \> \mu \hbox{A}$, conventional flow from left to right (electron flow from right to left).
+
+\vskip 10pt
+
+Follow-up question: this technique for estimating resistor current depends on one important assumption.  Describe what this assumption is, and how the accuracy of your current calculation may be affected if the assumption is invalid.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a good example of how Kirchhoff's Voltage Law is more than just an abstract tool for mathematical analysis -- it is also a powerful technique for practical circuit diagnosis.  Students must apply KVL to determine the voltage drop across R2, and then use Ohm's Law to calculate its current.
+
+If students experience difficulty visualizing how KVL plays a part in the solution of this problem, show them this illustration:
+
+$$\epsfbox{01729x03.eps}$$
+
+%INDEX% Color code, resistor (4-band)
+%INDEX% Voltmeter usage, to estimate current through a resistor
+
+%(END_NOTES)
+
+

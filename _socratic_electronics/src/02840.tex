@@ -1,0 +1,98 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Use a Karnaugh map to generate a simple Boolean expression for this truth table, and draw a relay logic circuit equivalent to that expression:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+A & B & C & Output \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+1 & 0 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+1 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+1 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+1 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 02840}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Simple expression and relay circuit:
+
+$$B \overline{C}$$
+
+$$\epsfbox{02840x01.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+One of the things you may want to have your students share in front of the class is their Karnaugh maps, and how they grouped common output states to arrive at Boolean expression terms.  I have found that an overhead (acetate) or computer-projected image of a blank Karnaugh map on a whiteboard serves well to present Karnaugh maps on.  This way, cell entries may be easily erased and re-drawn without having to re-draw the map (grid lines) itself.
+
+Ask your students to compare using a Karnaugh map versus using standard SOP/Boolean simplifications to arrive at the simplest expression for this truth table.  Which technique would they prefer to use, and why?
+
+%INDEX% Boolean algebra, conversion of expression into relay logic
+%INDEX% Karnaugh map, used to derive SOP expression from a truth table
+
+%(END_NOTES)
+
+

@@ -1,0 +1,33 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An important feature of microprocessors is the use of {\it flag} registers.  What, exactly, is a "flag", and what are they used for in microprocessor programming?  Identify some common machine-language commands that set flags, and some common commands that read flags.
+
+\underbar{file 01431}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+{\it Flags} are single-bit registers in a microprocessor set according to the results of an operation.  Arithmetic and logical operations are common examples of commands that set flags.  Conditional operations such as "Jump if Zero" are based on flag status: that is, the status of certain flags dictate what a conditional operation will do.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+When I began learning microprocessor programming, I wondered how conditional operations such as JZ "knew" whether to jump or not.  It was apparent from inspection of various programs that these conditional operations based their "decision" on the command immediately preceding, but I had no idea how this communicative link was made.  Once I researched flags, though, it all made sense.
+
+%INDEX% Flag, microprocessor
+
+%(END_NOTES)
+
+

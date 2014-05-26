@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Shockley's diode equation in standard form is quite lengthy, but it may be considerably simplified for conditions of room temperature.  Note that if the temperature ($T$) is assumed to be room temperature (25$^{o}$ C), there are three constants in the equation that are the same for all PN junctions: $T$, $k$, and $q$.
+
+$$I_D = I_S (e^{qV_D \over NkT} - 1)$$
+
+The quantity $kT \over q$ is known as the {\it thermal voltage} of the junction.  Calculate the value of this thermal voltage, given a room temperature of 25$^{o}$ C.  Then, substitute this quantity into the original "diode formula" so as to simplify its appearance.
+
+\underbar{file 00713}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If you obtained an answer of 2.16 mV for the "thermal voltage," you have the temperature figure in the wrong units!
+
+$$I_D = I_S (e^{V_D \over {0.0257 N}} - 1)$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Of course, students will have to research the difference between degrees Kelvin and degrees Celsius to successfully calculate the thermal voltage for the junction.  They will also have to figure out how to substitute this figure in place of $q$, $k$, and $T$ in the original equation.  The latter step will be difficult for students not strong in algebra skills.
+
+For those students, I would suggest posing the following question to get them thinking properly about algebraic substitution.  Suppose we had the formula $y = x^{ab \over cd}$, and we knew that $b \over c$ could be written as $m$.  How would we substitute $m$ into the original equation?  Answer: $y = x^{am \over d}$.
+
+%INDEX% Diode equation
+%INDEX% Shockley's diode equation
+%INDEX% Thermal voltage, PN junction
+
+%(END_NOTES)
+
+

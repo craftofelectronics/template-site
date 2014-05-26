@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose the following three-stage transistor amplifier were constructed:
+
+$$\epsfbox{02252x01.eps}$$
+
+With no emitter swamping resistors anywhere in this circuit, the voltage gain of each stage is guaranteed to be large, but unstable as well.  With three stages arranged like this, one feeding into the next, the final voltage gain will be very large, and very unstable.  
+
+However, if we add another resistor to the circuit ($R_{feedback}$), something very interesting takes place.  Suddenly, the amplifier circuit's overall voltage gain is decreased, but the stability of this gain becomes much improved:
+
+$$\epsfbox{02252x02.eps}$$
+
+Interestingly, the voltage gain of such a circuit will be nearly equal to the quotient of the two highlighted resistors, $R_{feedback}$ and $R_{in}$:
+
+$$A_V \approx {R_{feedback} \over R_{in}}$$
+
+This approximation holds true for large variations in individual transistor gain ($\beta$) as well as temperature and other factors which would normally wreak havoc in the circuit with no feedback resistor in place.  
+
+Describe what role the feedback resistor plays in this circuit, and explain how the addition of negative feedback is an overall benefit to this circuit's performance.  Also, explain how you can tell this feedback is {\it negative} in nature ("degenerative").
+
+\underbar{file 02252}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The feedback resistor provides a signal path for negative feedback, which "tames" the unruly gain and instability otherwise inherent to such a crude three-stage transistor amplifier circuit.
+
+We can tell that the feedback is negative in nature because it comes from an odd number of inverting amplifier stages (there is still an inverse relationship between output and input).
+
+\vskip 10pt
+
+Follow-up question: how much effect do you suppose the replacement of a transistor with a slightly different $\beta$ or $r'_e$ parameter would affect each circuit?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Although the circuit shown is a little too crude to be practical, it does illustrate the power of negative feedback as a stabilizing influence.
+
+The question regarding the {\it de-}generative nature of the feedback is an important one.  Discuss with your students how one could not simply pick up the feedback signal from anywhere in the circuit!
+
+%INDEX% Negative feedback (global) in multi-stage amplifier circuit
+
+%(END_NOTES)
+
+

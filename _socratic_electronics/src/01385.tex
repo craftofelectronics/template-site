@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The flip-flop circuit shown here is classified as {\it synchronous} because both flip-flops receive clock pulses at the exact same time:
+
+$$\epsfbox{01385x01.eps}$$
+
+Define the following parameters:
+
+\medskip
+\item{$\bullet$} Set-up time
+\item{$\bullet$} Hold time
+\item{$\bullet$} Propagation delay time
+\item{$\bullet$} Minimum clock pulse duration
+\medskip
+
+Then, explain how each of these parameters is relevant in the circuit shown.
+
+\underbar{file 01385}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The clock frequency must be slow enough that there is adequate {\it set-up time} before the next clock pulse.  The {\it propagation delay time} of FF1 must also be larger than the {\it hold time} of FF2.  And, of course, the pulse width of the clock signal must be long enough for both flip-flops to reliably "clock."
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I could have simply asked students to define the terms, but where's the fun in that?  Seriously, though, these concepts will make far more sense to students when they are viewed in a practical context.  After all, the whole purpose of teaching these concepts is so students will be able to {\it apply} them, right?
+
+%INDEX% Hold time, defined for flip-flop circuit
+%INDEX% Set-up time, defined for flip-flop circuit
+
+%(END_NOTES)
+
+

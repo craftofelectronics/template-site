@@ -1,0 +1,59 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Here, a differential pair circuit is driven by an input voltage at the base of $Q_1$, while the output is taken at the collector of $Q_2$.  Meanwhile, the other input ($Q_2$ base) is connected to ground:
+
+$$\epsfbox{03922x01.eps}$$
+
+Identify what types of amplifier circuits the two transistors are functioning as (common-collector, common-emitter, common-base) when the differential pair is used like this, and write an equation describing the circuit's voltage gain.  Here is another schematic, showing the transistors modeled as controlled current sources, to help you with the equation:
+
+$$\epsfbox{03922x02.eps}$$
+
+\underbar{file 03922}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$Q_1$ operates as a common-collector amplifier, while $Q_2$ acts as a common-base amplifier.  The gain equation is as such:
+
+$$A_{V(noninvert)} = \left[{R_C \over {r'_e + (r'_e || R_E)}}\right] \left[{{r'_e || R_E} \over r'_e} \right]$$
+
+\vskip 10pt
+
+Follow-up question: explain why it is appropriate to simplify the gain equation to this:
+
+$$A_{V(noninvert)} \approx {R_C \over 2r'_e}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to have students analyze the resistances in the differential pair circuit to develop their own gain equation, based on their understanding of how simpler transistor amplifier circuit gains are derived.  Ultimately, this question should lead into another one asking students to express the {\it differential} voltage gain of the circuit (a superposition of the gain equations for each input considered separately).
+
+Admittedly, the unsimplified equation shown in the answer is daunting, and students may wonder where I got it.  You may help them understand that the basic gain equation for a BJT amplifier is founded on the assumption that $I_C \approx I_E$, that any current through the emitter terminal will be "repeated" at the collector terminal to flow through the collector resistance.  Thus, voltage gain is nothing more than a ratio of resistances, given that emitter current and collector current are assumed to be the same:
+
+$$V_{out(AC)} = I_C R_C \hbox{\hskip 50pt and \hskip 50pt} V_{in(AC)} = I_E R_{E(total)}$$
+
+$$\hbox{ . . . so . . .}$$
+
+$$A_V = {V_{out(AC)} \over V_{in(AC)}} = {I_C R_C \over I_E R_{E(total)}} = {I_C R_C \over I_C R_{E(total)}} = {R_C \over R_{E(total)}}$$
+
+Thus, deriving a gain equation for a BJT amplifier is usually as simple as figuring out what resistance the collector current goes through and dividing that by the amount of resistance the base-to-emitter current has to go through.  In a grounded-base amplifier, this ratio is simply $R_C \over r'_e$.
+
+With this circuit, however, the input signal must fight its way through the $r'_e$ of $Q_1$ before ever getting to $Q_2$ to be amplified, which is why the voltage gain equation is so much more complex.  After going through the dynamic emitter resistance of $Q_1$, it splits between the dynamic emitter resistance of $Q_2$ and the "tail" resistance $R_E$.  The term $r'_e + (r'_e || R_E)$ is the amount of resistance the AC input signal travels through, and the fraction ${r'_e || R_E} \over r'_e$ defines the splitting of current (most to the emitter of $Q_2$, a small amount through $R_E$).
+
+%INDEX% Differential pair circuit, noninverting voltage gain
+
+%(END_NOTES)
+
+

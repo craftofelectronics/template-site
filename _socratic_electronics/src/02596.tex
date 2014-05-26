@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A {\it microcontroller unit}, or {\it MCU}, is a specialized type of digital computer used to provide automatic sequencing or control of a system.  Microcontrollers differ from ordinary digital computers in being very small (typically a single integrated circuit chip), with several dedicated pins for input and/or output of digital signals, and limited memory.  Instructions programmed into the microcontroller's memory tell it how to react to input conditions, and what types of signals to send to the outputs.
+
+The simplest type of signal "understood" by a microcontroller is a discrete voltage level: either "high" (approximately +V) or "low" (approximately ground potential) measured at a specified pin on the chip.  Transistors internal to the microcontroller produce these "high" and "low" signals at the output pins, their actions being modeled by SPDT switches for simplicity's sake:
+
+$$\epsfbox{02596x01.eps}$$
+
+Microcontrollers may be programmed to emulate the functions of digital logic gates (AND, OR, NAND, NOR, etc.) in addition to a wide variety of combinational and multivibrator functions.  The only real limits to what a microcontroller can do are memory (how large of a program may be stored) and input/output pins on the MCU chip.
+
+However, microcontrollers are themselves made up of many thousands (or millions!) of logic gate circuits.  Why would it make sense to use a microcontroller to perform a logic function that a small fraction of its constituent gates could accomplish directly?  In other words, why would anyone bother to program a microcontroller to perform a digital function when they could build the logic network they needed out of fewer gate circuits?
+
+\underbar{file 02596}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Ease of configuration and flexibility!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Note that I did not bother to explain my extremely terse answer.  This is a subject I desire students to think long and hard about, for the real answer(s) to this question are the reasons driving all development of programmable digital devices.
+
+%INDEX% MCU, acronym for microcontroller defined
+%INDEX% Microcontroller, introduced as a digital device
+
+%(END_NOTES)
+
+

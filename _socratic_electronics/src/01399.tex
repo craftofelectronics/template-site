@@ -1,0 +1,38 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following circuit is a two-bit synchronous binary up/down counter:
+
+$$\epsfbox{01399x01.eps}$$
+
+Explain what would happen if the upper AND gate's output were to become "stuck" in the high state regardless of its input conditions.  What effect would this kind of failure have on the counter's operation?
+
+\underbar{file 01399}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The counter would not be able to count in the "up" direction.  When commanded to count that direction, the LSB would toggle between 0 and 1, but the MSB would not change state.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to get students to understand how a synchronous up/down counter works, in the context of analyzing the effects of a component failure.
+
+%INDEX% Counter, synchronous up/down
+%INDEX% Troubleshooting, logic gate circuit
+
+%(END_NOTES)
+
+

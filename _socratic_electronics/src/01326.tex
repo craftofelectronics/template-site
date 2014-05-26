@@ -1,0 +1,60 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Although it is seldom done, it is possible to express a truth table in verbal form, by describing what conditions must be met in order to generate a "high" output.
+
+Take for example this simple truth table, for an inverter circuit:
+
+$$\epsfbox{01326x01.eps}$$
+
+For this truth table, we could say that the output goes high when $A$ is low.  A different way of saying this would be to state that "the output is {\it true} when $\overline{A}$ is {\it true}."
+
+\vskip 10pt
+
+Let's look at another example, this time of an AND gate:
+
+$$\epsfbox{01326x02.eps}$$
+
+For this truth table, we could say that the output goes high when $A$ and $B$ are both high.  A different way of saying this would be to state that "the output is true when $A$ is true and $B$ is true."  To use a half-Boolean, half-verbal description:
+
+$$A \hbox{ AND } B$$
+
+\vskip 10pt
+
+Examine this logic gate circuit and corresponding truth table:
+
+$$\epsfbox{01326x03.eps}$$
+
+Express the functionality of this truth table in words.  What Boolean conditions must be satisfied ("true") in order for the output to assume a high state?
+
+\underbar{file 01326}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The output of this circuit is high when $\overline{A}$ is true and $\overline{B}$ is true, or when $A$ is true and $B$ is true:
+
+$$(\overline{A} \hbox{ AND } \overline{B}) \hbox{ OR } (A \hbox{ AND } B)$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Expressing truth table conditions "verbally" is a way to introduce students to the concept of deriving Boolean expression from them.
+
+%INDEX% Sum-of-Products expression, Boolean algebra (from a verbal description of gate behavior)
+%INDEX% SOP expression, Boolean algebra (from a verbal description of gate behavior)
+
+%(END_NOTES)
+
+

@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Here is a truth table for a four-input logic circuit:
+
+$$\epsfbox{02835x01.eps}$$
+
+If we translate this truth table into a Karnaugh map, we obtain the following result:
+
+$$\epsfbox{02835x02.eps}$$
+
+Note how the only 1's in the map all exist on the same row:
+
+$$\epsfbox{02835x03.eps}$$
+
+If you look at the input variables (A, B, C, and D), you should notice that only two of them are constant for each of the "1" conditions on the Karnaugh map.  Identify these variables, and remember them.
+
+\vskip 10pt
+
+Now, write an SOP (Sum-of-Products) expression for the truth table, and use Boolean algebra to reduce that raw expression to its simplest form.  What do you notice about the simplified SOP expression, in relation to the common variables noted on the Karnaugh map?
+
+\underbar{file 02835}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+For this cluster of four 1's, variables A and B are the only two inputs that remain constant for the four "1" conditions shown in the Karnaugh map.  The simplified Boolean expression for the truth table is $AB$.  See a pattern here?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question strongly suggests to students that the Karnaugh map is a graphical method of achieving a reduced-form SOP expression for a truth table.  Once students realize Karnaugh mapping holds the key to escaping arduous Boolean algebra simplifications, their interest will be piqued!
+
+%INDEX% Karnaugh map, identifying clusters of 1's
+
+%(END_NOTES)
+
+

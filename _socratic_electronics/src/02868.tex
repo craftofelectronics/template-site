@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A technician is using a logic pulser to force the logic state of the wire connecting two of the gates together:
+
+$$\epsfbox{02868x01.eps}$$
+
+Which gate, or gates, are we testing by placing the pulser in this position?  What other instrument(s) would we have to connect to the circuit (and where?) to complete the test?  Why does the logic pulser require a ground connection to do its job in this circuit?
+
+\underbar{file 02868}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+In this location, the pulser is set up to test gate $U_1$.  We would have to use a logic probe with "pulse" indication capability on the output of $U_1$ to complete the test.
+
+The pulser requires a ground connection so it may drive current into or out of the circuit under test.  Without a ground connection, there would be no complete path for current, and the pulser would not be able to "override" the output state of the NOR gate.
+
+\vskip 10pt
+
+Follow-up question: what logic state should the {\it other} input of the NAND gate be in for this test?  Explain why.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The point I am trying to convey with this question is that forcing a gate's output high or low with a logic pulser tells us nothing about that gate.  We use a pulser to override gate outputs in order to test the function of gates {\it receiving} that signal.  In other words, we use a pulser to test gates "downstream" of where the pulser contacts the circuit.
+
+%INDEX% Logic pulser, used to troubleshoot a circuit
+
+%(END_NOTES)
+
+

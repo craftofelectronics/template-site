@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This opamp circuit is called a {\it precision rectifier}.  Analyze its output voltage as the input voltage smoothly increases from -5 volts to +5 volts, and explain why the circuit is worthy of its name:
+
+$$\epsfbox{01173x01.eps}$$
+
+Assume that both diodes in this circuit are silicon switching diodes, with a nominal forward voltage drop of 0.7 volts.
+
+\underbar{file 01173}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Any positive input voltage, no matter how small, is "reflected" on the output as a negative voltage of equal (absolute) magnitude.  The output of this circuit remains exactly at 0 volts for any negative input voltage.
+
+\vskip 10pt
+
+Follow-up question: would it affect the output voltage if the forward voltage drop of either diode increased?  Explain why or why not.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Precision rectifier circuits tend to be more difficult for students to comprehend than non-rectifying inverting or noninverting amplifier circuits.  Spend time analyzing this circuit together in class with your students, asking them to determine the magnitudes of all voltages in the circuit (and directions of current) for given input voltage conditions.
+
+Understanding whether or not changes in diode forward voltage drop affect a precision rectifier circuit's function is fundamental.  If students comprehend nothing else about this circuit, it is the relationship between diode voltage drop and input/output transfer characteristics.
+
+%INDEX% Precision rectifier circuit, opamp
+
+%(END_NOTES)
+
+

@@ -1,0 +1,76 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+In a simple resistor circuit, the current may be calculated by dividing applied voltage by resistance:
+
+$$\epsfbox{01560x03.eps}$$
+
+Although an analysis of this circuit probably seems trivial to you, I would like to encourage you to look at what is happening here from a fresh perspective.  An important principle observed many times in the study of physics is that of {\it equilibrium}, where quantities naturally "seek" a state of balance.  The balance sought by this simple circuit is equality of voltage: the voltage across the resistor must settle at the same value as the voltage output by the source:
+
+$$\epsfbox{01560x04.eps}$$
+
+If the resistor is viewed as a source of voltage seeking equilibrium with the voltage source, then current {\it must} converge at whatever value necessary to generate the necessary balancing voltage across the resistor, according to Ohm's Law ($V = IR$).  In other words, {\it the resistor's current achieves whatever magnitude it has to in order to generate a voltage drop equal to the voltage of the source}.
+
+This may seem like a strange way of analyzing such a simple circuit, with the resistor "seeking" to generate a voltage drop equal to the source, and current "magically" assuming whatever value it must to achieve that voltage equilibrium, but it is helpful in understanding other types of circuit elements.
+
+\vskip 10pt
+
+For example, here we have a source of DC voltage connected to a large coil of wire through a switch.  Assume that the wire coil has negligible resistance ($0 \> \Omega$):
+
+$$\epsfbox{01560x01.eps}$$
+
+Like the resistor circuit, the coil will "seek" to achieve voltage equilibrium with the voltage source once the switch is closed.  However, we know that the voltage induced in a coil is not directly proportional to current as it is with a resistor -- instead, a coil's voltage drop is proportional to the {\it rate of change of magnetic flux over time} as described by Faraday's Law of electromagnetic induction:
+
+$$v_{coil} = N {d \phi \over dt}$$
+
+\noindent
+Where,
+
+$v_{coil} =$ Instantaneous induced voltage, in volts
+
+$N =$ Number of turns in wire coil
+
+${d \phi \over dt} =$ Instantaneous rate of change of magnetic flux, in webers per second
+
+\vskip 10pt
+
+Assuming a linear relationship between coil current and magnetic flux (i.e. $\phi$ doubles when $i$ doubles), describe this simple circuit's current over time after the switch closes.
+
+\underbar{file 01560}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+When the switch closes, current will steadily increase at a linear rate over time:
+
+$$\epsfbox{01560x02.eps}$$
+
+\vskip 10pt
+
+Challenge question: real wire coils contain electrical resistance (unless they're made of superconducting wire, of course), and we know how voltage equilibrium occurs in resistive circuits: the current converges at a value necessary for the resistance to drop an equal amount of voltage as the source.  Describe, then, what the current does in a circuit with a {\it real} wire coil, not a superconducting wire coil.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Students who do not yet understand the concept of inductance may be inclined to suggest that the current in this circuit will be infinite, following Ohm's Law ($I = E/R$).  One of the purposes of this question is to reveal such misunderstandings, so that they may be corrected.
+
+This circuit provides an excellent example of the calculus principle {\it integration}, where the application of a steady voltage across the inductor results in a steadily {\it increasing} current.  Whether or not you should touch on this subject depends on the mathematical aptitude of your students.
+
+%INDEX% Self-induction
+
+%(END_NOTES)
+
+

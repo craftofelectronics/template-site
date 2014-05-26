@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+Digital logic circuits, which comprise the inner workings of computers, are essentially nothing more than arrays of switches made from semiconductor components called {\it transistors}.  As switches, these circuits have but two states: on and off, which represent the binary states of 1 and 0, respectively.
+
+The faster these switch circuits are able to change state, the faster the computer can perform arithmetic and do all the other tasks computers do.  To this end, computer engineers keep pushing the limits of transistor circuit design to achieve faster and faster switching rates.
+
+This race for speed causes problems for the power supply circuitry of computers, though, because of the current "surges" (technically called {\it transients}) created in the conductors carrying power from the supply to the logic circuits.  The faster these logic circuits change state, the greater the $di \over dt$ rates-of-change exist in the conductors carrying current to power them.  Significant voltage drops can occur along the length of these conductors due to their parasitic inductance:
+
+$$\epsfbox{00469x01.eps}$$
+
+Suppose a logic gate circuit creates transient currents of 175 amps per nanosecond (175 A/ns) when switching from the "off" state to the "on" state.  If the total inductance of the power supply conductors is 10 picohenrys (9.5 pH), and the power supply voltage is 5 volts DC, how much voltage remains at the power terminals of the logic gate during one of these "surges"?
+
+\underbar{file 00469}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Voltage remaining at logic gate terminals during current transient = 3.338 V
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Students will likely marvel at the $di \over dt$ rate of 175 amps per nanosecond, which equates to 175 {\it billion} amps per second.  Not only is this figure realistic, though, it is also low by some estimates (see \underbar{IEEE Spectrum} magazine, July 2003, Volume 40, Number 7, in the article "{\it Putting Passives In Their Place}").  Some of your students may be very skeptical of this figure, not willing to believe that "a computer power supply is capable of outputting 175 billion amps?!"
+
+This last statement represents a very common error students commit, and it is based on a fundamental misunderstanding of $di \over dt$.  "175 billion amps per second" is not the same thing as "175 billion amps".  The latter is an absolute measure, while the former is a {\it rate of change over time}.  It is the difference between saying "1500 miles per hour" and "1500 miles".  Just because a bullet travels at 1500 miles per hour does not mean it will travel 1500 miles!  And just because a power supply is incapable of outputting 175 billion amps does not mean it cannot output a current that {\it changes} at a rate of 175 billion amps per second!
+
+%INDEX% Inductance, parasitic
+%INDEX% Calculus, derivative
+
+%(END_NOTES)
+
+

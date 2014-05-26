@@ -1,0 +1,132 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A {\it seven segment decoder} is a digital circuit designed to drive a very common type of digital display device: a set of LED (or LCD) segments that render numerals 0 through 9 at the command of a four-bit code:
+
+$$\epsfbox{02824x01.eps}$$
+
+The behavior of the display driver IC may be represented by a truth table with seven outputs: one for each segment of the seven-segment display ($a$ through $g$).  In the following table, a "1" output represents an active display segment, while a "0" output represents an inactive segment:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+D & C & B & A & a & b & c & d & e & f & g & Display\cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & "0" \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & "1" \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & "2" \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 1 & "3" \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+0 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & "4" \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & "5" \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+0 & 1 & 1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & "6" \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & "7" \cr
+%
+\noalign{\hrule}
+%
+% Tenth row
+1 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & "8" \cr
+%
+\noalign{\hrule}
+%
+% Eleventh row
+1 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & "9" \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Write the unsimplified SOP or POS expressions (choose the most appropriate form) for outputs $a$, $b$, $c$, and $e$.
+
+\underbar{file 02824}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Raw (unsimplified) expressions:
+
+$$a = (D + C + B + \overline{A})(D + \overline{C} + B + A)$$
+
+$$b = (D + \overline{C} + B + \overline{A})(D + \overline{C} + \overline{B} + A)$$
+
+$$c = D + C + \overline{B} + A$$
+
+$$e = \overline{D} \> \overline{C} \> \overline{B} \> \overline{A} + \overline{D} \> \overline{C} B \overline{A} + \overline{D} C B \overline{A} + D \overline{C} \> \overline{B} \> \overline{A}$$
+
+\vskip 10pt
+
+Challenge question: use the laws of Boolean algebra to simplify each of the above expressions into their simplest forms.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This shows a very practical example of SOP and POS Boolean forms, and why simplification is necessary to reduce the number of required gates to a practical minimum.
+
+%INDEX% 7-segment decoder circuit
+%INDEX% POS expression, Boolean algebra (from analysis of a truth table)
+%INDEX% Product-of-Sums expression, Boolean algebra (from analysis of a truth table)
+%INDEX% SOP expression, Boolean algebra (from analysis of a truth table)
+%INDEX% Seven-segment decoder circuit
+%INDEX% Sum-of-Products expression, Boolean algebra (from analysis of a truth table)
+
+%(END_NOTES)
+
+

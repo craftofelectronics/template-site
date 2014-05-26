@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Many modern CMOS gate circuits are {\it buffered} with additional transistor stages on their outputs.  For example, an unbuffered AND gate is shown here, with no more transistors than is necessary to fulfill the "AND" logic function:
+
+$$\epsfbox{01280x01.eps}$$
+
+One type of "buffered" CMOS AND gate looks like this:
+
+$$\epsfbox{01280x02.eps}$$
+
+As far as the basic logic function is concerned, the additional transistors are unnecessary.  However, the "buffering" they provide does serve a useful function.  What is that function?  Are there any disadvantages to buffered logic gates, versus unbuffered?
+
+\underbar{file 01280}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Buffered gates exhibit better noise immunity than unbuffered gates.  One disadvantage to buffering, though, is increased propagation delay time.
+
+\vskip 10pt
+
+Follow-up question: identify the on/off states of all transistors in the buffered circuit for both (high and low) input conditions.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Texas Instruments publishes an excellent application report (SCHA004 -- October 2002) comparing buffered versus unbuffered CMOS logic gates.  I highly recommend it for your reference.
+
+%INDEX% Buffered output CMOS gate circuit
+%INDEX% CMOS gate circuit, buffered output
+%INDEX% CMOS gate circuit, internal schematic
+
+%(END_NOTES)
+
+

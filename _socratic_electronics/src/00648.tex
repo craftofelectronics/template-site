@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following circuit is a simple {\it mixer} circuit, combining three AC voltage signals into one, to be measured by an oscilloscope:
+
+$$\epsfbox{00648x01.eps}$$
+
+Draw a schematic diagram of this circuit, to make it easier to analyze.
+
+Is it possible to filter the three constituent input signals from each other in the resulting output signal, or are they irrevocably affected by one another when they "mix" together in this resistor network?  How does the {\it superposition principle} relate to the operation of a mixer circuit like this?
+
+What if the mixing circuit contains capacitors and inductors rather than resistors?  Does the same principle apply?  Why or why not?
+
+\underbar{file 00648}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{00648x02.eps}$$
+
+The "superposition principle" states that when two or more waveforms mix together in a linear network, the result is the sum of the waveforms.  That is, the waveforms simply add up to make a total, and are not "irrevocably affected" by one another.  The question, then, is really: what constitutes a {\it linear} network?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It is no coincidence that the "superposition principle" sounds a lot like the "superposition theorem" learned as a network analysis technique: consider the effects of all power sources one at a time, and add those effects together to determine the final result.
+
+The matter of "irrevocable influence" is important to us because it dictates how difficult it would be to separate the mixed signals from each other.  When external noise couples to a circuit through capacitive or inductive coupling, can we filter out the noise and obtain the true signal again, or has the signal been corrupted in such a way that restoration is impossible by mere filtering?  The key to answering this question is whether or not the "network" formed from parasitic capacitive/inductive coupling is linear.  Discuss with your students what determines linearity in a math equation, and apply these criteria to the equations describing resistor, capacitor, and inductor behavior.
+
+%INDEX% Mixer circuit, passive
+%INDEX% Passive mixer (averager) circuit
+
+%(END_NOTES)
+
+

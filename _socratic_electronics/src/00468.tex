@@ -1,0 +1,56 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+{\it Mutual inductance} is the term given to the phenomenon where a change in current through one inductor causes a voltage to be induced in another.  When two inductors ($L_1$ and $L_2$) are magnetically "coupled," the mutual inductance ($M$) relates their voltages and currents as such:
+
+$$e_1 = M{di_2 \over dt} \hskip 10pt \hbox{Voltage induced in coil 1 by change of current in coil 2}$$
+
+$$e_2 = M{di_1 \over dt} \hskip 10pt \hbox{Voltage induced in coil 2 by change of current in coil 1}$$
+
+$$\epsfbox{00468x01.eps}$$
+
+When the magnetic coupling between the two inductors is perfect ($k = 1$), how does $M$ relate to $L_1$ and $L_2$?  In other words, write an equation defining $M$ in terms of $L_1$ and $L_2$, given perfect coupling.
+
+\vskip 10pt
+
+Hint:
+
+$$e_1 = L_2 {N_1 \over N_2} {di_2 \over dt}$$
+
+$$e_2 = L_1 {N_2 \over N_1} {di_1 \over dt}$$
+
+$${L_1 \over L_2} = \left( {N_1 \over N_2} \right)^2$$
+
+\underbar{file 00468}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$M = \sqrt{L_1 L_2}$
+
+\vskip 10pt
+
+Challenge question: is mutual inductance expressed in the same unit of measurement that self-inductance is?  Why or why not?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The solution to this question involves quite a bit of algebraic manipulation and substitution.  Of course, it may also be found in many basic electronics textbooks, but the point of this question is for students to see how it may be derived from the equations they already know.
+
+%INDEX% Algebra, manipulating equations
+%INDEX% Mutual inductance, in terms of primary and secondary inductances
+
+%(END_NOTES)
+
+

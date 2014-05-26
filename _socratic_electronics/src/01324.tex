@@ -1,0 +1,62 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Inspect each of these Boolean expressions, and determine whether each one is a {\it sum of products}, or a {\it product of sums}:
+
+$$(B + \overline{C} + D)(\overline{A} + B)$$
+
+$$A\overline{B} \> \overline{C} + \overline{A}BC $$
+
+$$(X + \overline{Y} + \overline{Z})(\overline{Y} + Z)(\overline{X} + Y)$$
+
+$$\overline{M} \> \overline{N} \> \overline{O} + MN\overline{O} + M\overline{N}O$$
+
+$$(X + \overline{Y + Z})(\overline{Y + \overline{Z}})$$
+
+$$\overline{ABC} + A\overline{B}C$$
+
+\underbar{file 01324}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$(B + \overline{C} + D)(\overline{A} + B) \hskip 20pt \hbox{\bf POS}$$
+
+$$A\overline{B} \> \overline{C} + \overline{A}BC \hskip 20pt \hbox{\bf SOP}$$
+
+$$(X + \overline{Y} + \overline{Z})(\overline{Y} + Z)(\overline{X} + Y) \hskip 20pt \hbox{\bf POS}$$
+
+$$\overline{M} \> \overline{N} \> \overline{O} + MN\overline{O} + M\overline{N}O \hskip 20pt \hbox{\bf SOP}$$
+
+The last two expressions are "trick" questions: while technically being the product of summed variables, and the sum of multiplied (product) variables, respectively, do not follow "standard" POS and SOP forms, because they both have long complementation bars:
+
+$$(X + \overline{Y + Z})(\overline{Y + \overline{Z}})$$
+
+$$\overline{ABC} + A\overline{B}C$$
+
+For an expression to properly follow the SOP or POS canonical form, no complementation bar should cover more than one variable!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Even if your students have never heard of Boolean algebra before, they should still be able to determine which of the first four expressions are SOP and which are POS.  If there is any confusion on this point, ask your students to define what "sum" and "product" mean, respectively, and then discuss what it means for an expression to be a product (singular) of sums (multiple), or a sum (singular) of products (multiple).
+
+%INDEX% Product-of-Sums versus Sum-of-Products expressions, Boolean algebra
+%INDEX% POS versus SOP expressions, Boolean algebra
+%INDEX% Sum-of-Products versus Product-of-Sums expressions, Boolean algebra
+%INDEX% SOP versus POS expressions, Boolean algebra
+
+%(END_NOTES)
+
+

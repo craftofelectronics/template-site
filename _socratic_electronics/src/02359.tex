@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The energy efficiency ($\eta$) of switching converter circuits typically remains fairly constant over a wide range of voltage conversion ratios.  Describe how a switching {\it regulator} circuit (controlling load voltage to a pre-set value) "appears" to a power source of changing voltage if the regulator's load is constant.  In other words, as the input voltage changes, what does the input current do?
+
+\underbar{file 02359}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The input current of a switching regulator is {\it inversely} proportional to the input voltage when powering a constant load, appearing as a {\it negative impedance} to the power source.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+"Negative impedance" and "negative resistance" are phrases that may not be addressed very often in a basic electronics curriculum, but they have important consequences.  If students experience difficulty understanding what the meaning of "negative" impedance is, remind them of this mathematical definition for impedance:
+
+$$Z = {dV \over dI}$$
+
+One of the unintended (and counter-intuitive) consequences of a circuit element with negative impedance can be {\it oscillation}, especially when the input power circuit happens to contain substantial inductance.
+
+%INDEX% Switching regulator circuit, input impedance characteristics
+
+%(END_NOTES)
+
+

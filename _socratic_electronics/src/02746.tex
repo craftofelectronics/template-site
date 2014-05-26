@@ -1,0 +1,63 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The {\it instrumentation amplifier} is a popular circuit configuration for analog signal conditioning in a wide variety of electronic measurement applications.  One of the reasons it is so popular is that its differential gain may be set by changing the value of a single resistor, the value of which is represented in this schematic by a multiplier constant named $m$:
+
+$$\epsfbox{02746x01.eps}$$
+
+There is an equation describing the differential gain of an instrumentation amplifier, but it is easy enough to research so I'll leave that detail up to you.  What I'd like you to do here is algebraically derive that equation based on what you know of inverting and noninverting operational amplifier circuits.
+
+Suppose we apply +1 volt to the noninverting input and ground the inverting input, giving a differential input voltage of 1 volt.  Whatever voltage appears at the output of the instrumentation amplifier circuit, then, directly represents the voltage gain:
+
+$$\epsfbox{02746x02.eps}$$
+
+A hint for constructing an algebraic explanation for the circuit's output voltage is to view the two "buffer" opamps separately, as inverting and noninverting amplifiers:
+
+$$\epsfbox{02746x03.eps}$$
+
+Note which configuration (inverting or noninverting) each of these circuits resemble, develop transfer functions for each (Output = $\cdots$ Input), then combine the two equations in a manner representing what the subtractor circuit will do.  Your final result should be the gain equation for an instrumentation amplifier in terms of $m$.
+
+\underbar{file 02746}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I won't show you the complete answer, but here's a start:
+
+\vskip 10pt
+
+\noindent
+Equation for inverting side:
+
+$$Output = - \left( {R \over mR} \right) Input$$
+
+\vskip 10pt
+
+\noindent
+Equation for noninverting side:
+
+$$Output = \left( {R \over mR} + 1 \right) Input$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question actually originated from one of my students as he tried to figure out an algebraic explanation for the instrumentation amplifier's gain!  I thought the idea was so good that I decided to include it as a question in the Socratic Electronics project.
+
+Astute students will note that the negative sign in the inverting amplifier equation becomes very important in this proof.  As an instructor, I often avoid signs, choosing to figure out the polarity of the signal as a final step after all the other arithmetic has been completed for a circuit analysis.  As such, I usually present the inverting amplifier equation as ${R_f \over R_{in}}$ with the caveat of inverted polarity from input to output.  Here, though, the negative sign becomes a vital part of the solution!
+
+%INDEX% Instrumentation amplifier, derivation of gain formula
+
+%(END_NOTES)
+
+

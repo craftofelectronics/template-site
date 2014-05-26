@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following relay logic circuit is for starting and stopping an electric motor:
+
+$$\epsfbox{01348x03.eps}$$
+
+Draw the CMOS logic gate equivalent of this motor start-stop circuit, using these two pushbutton switches as inputs:
+
+$$\epsfbox{01348x01.eps}$$
+
+Make sure that your schematic is complete, showing how the logic gate will drive the electric motor (through the power transistor shown).
+
+\underbar{file 01348}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01348x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: why is the "Stop" switch always normally-closed in motor control circuits, whether it be relay logic or semiconductor logic?  It is easy enough to invert a signal if we wish to, either by using a relay or by using a NOT gate, so shouldn't the choice of switch "normal" status be arbitrary?
+
+\vskip 10pt
+
+Challenge question: why not operate the electric motor off the same $V_{DD}$ power source that the gates are powered by?  If we had to do such a thing, what circuit additions would you propose to minimize any potential trouble?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss the follow-up question with your students.  Why is the "Stop" switch always normally-closed, if we have the freedom to choose normally-open contacts?  Why not standardize the pushbutton switches, making them both the same type?  The answer has to do with circuit faults, and what is considered the safest mode of failure.
+
+I suspect many students will neglect to include the base resistor in their designs.  This resistor is important, though, for the sake of the driving gate.  You might even want to spend some class time with your students calculating an appropriate value of resistance, given such parameters as:
+
+\medskip
+\item{$\bullet$} Motor "run" current = 300 mA
+\item{$\bullet$} Transistor $\beta$ = 50
+\item{$\bullet$} $V_{DD}$ = 6 volts DC
+\medskip
+
+The challenge question may be too advanced for students who have not yet experienced the pains of trying to operate power devices and logic devices off the same DC bus.  Suffice it to say, it is a good design rule to keep separate DC power supplies for logic and load circuitry, even if they are the exact same voltage!
+
+%(END_NOTES)
+
+

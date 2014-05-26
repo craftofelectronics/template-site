@@ -1,0 +1,49 @@
+#!/bin/bash
+### YOU SHOULD NOT HAVE TO ALTER THIS SCRIPT ###
+
+## randomexammake: Generate randomized test in PDF format, from an ".exam" file
+
+function die () {
+	echo
+	echo ---------------------------------------------
+	echo "Failed to run '$1'. Either the input file is invalid"
+	echo "or $1 is not installed on your system."
+	echo
+	exit 1
+}
+
+
+function die2 () {
+	echo
+	echo ---------------------------------------------
+	echo "Failed to find '$1.exam' sequence file."
+	echo
+	exit 1
+}
+
+# Run sequence file to get all.tex, reorganize that into output.tex,
+# and then convert it to DVI format.
+if ! ls $1.exam ; then die2 $1; fi
+cp -v $1.exam temporary_file.exam
+cp -v $1.tex randomized_exam.tex
+awk -f ../scripts/randomexammake.awk 
+./randomized_exam.exam
+../scripts/texwrap_exam.bash randomized_exam
+if ! tex output.tex ; then die TeX ; fi
+if ! dvips -Ppdf -o output.ps output.dvi ; then die dvips ; fi
+if ! ps2pdf output.ps ; then die ps2pdf ; fi
+
+
+FILENAME=$1_`date +%s`
+mv -vf output.pdf $FILENAME.pdf
+mv -vf output.dvi $1.dvi
+
+
+# Remove temporary files
+rm -vf all.*
+rm -vf output.*
+rm -vf temporary_file.*
+rm -vf randomized_exam.*
+
+
+

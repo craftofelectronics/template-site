@@ -1,0 +1,54 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose a power supply is energized by an AC source of 119 V RMS.  The transformer step-down ratio is 8:1, it uses a full-wave bridge rectifier circuit with silicon diodes, and the filter is nothing but a single electrolytic capacitor.  Calculate the unloaded DC output voltage for this supply (assume 0.7 volts drop across each diode).  Also, write an equation solving for DC output voltage ($V_{out}$), given all these parameters.
+
+\underbar{file 00798}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$V_{out} =$ 19.6 volts
+
+\vskip 10pt
+
+$$V_{out} = {{V_{in} \over r} \over 0.707} - 2 V_f$$
+
+\noindent
+Where,
+
+$V_{out} =$ DC output voltage, in volts
+
+$V_{in} =$ AC input voltage, in volts RMS
+
+$r =$ Transformer step-down ratio
+
+$V_f =$ Forward voltage drop of each diode, in volts
+
+\vskip 10pt
+
+Follow-up question: algebraically manipulate this equation to solve for $V_{in}$.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It is important for students to understand where this equation comes from.  Ask your students to explain, step by step, the process of calculating output voltage for a simple power supply circuit.  It is helpful in this process to calculate the voltage at each "stage" of the power supply (transformer primary, transformer secondary, etc.), as though we were building the circuit one component at a time.
+
+Incidentally, the method of building a project (such as a power supply) in a step-by-step fashion rather than all at once, saves a lot of time and effort when things go wrong.  The same "step-by-step" strategy works well for mathematical analysis, and other problem-solving tasks as well: try to analyze the circuit one "block" at a time instead of the whole thing at once.
+
+%INDEX% Power supply circuit, output voltage calculation
+
+%(END_NOTES)
+
+

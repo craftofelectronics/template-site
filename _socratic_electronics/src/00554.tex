@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This motor-start circuit reduces the amount of "inrush" current when starting by inserting a resistance in series with the motor for a few seconds, then removing that resistance after the time delay to allow full speed operation.  A time-delay relay provides the reduced-speed control.
+
+$$\epsfbox{00554x01.eps}$$
+
+The relay labeled "M1" is a large "contactor" designed to shunt the motor's current around the start-up resistor.  It requires at least a few amps of current through its coil to energize.
+
+The relay labeled "CR1" is a much smaller "control relay," and its turn-on time is controlled by the charging of an electrolytic capacitor.
+
+What could be adjusted in this circuit to make it switch to full-speed operation sooner after start-up?
+
+\underbar{file 00554}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The potentiometer could be adjusted to provide less resistance, in order to hasten the switch to "full-speed" mode after startup.
+
+\vskip 10pt
+
+Challenge question: what else could be changed in this circuit to provide a shorter "reduced speed" time period?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This general principle is useful for the start-up of many different electric motors (including most AC motors).  Circuits like this are sometimes referred to as {\it soft start} controls.
+
+Ask your students to describe which way the potentiometer wiper needs to be moved in order to accommodate the resistance change.
+
+%INDEX% Motor control circuit, "soft start"
+
+%(END_NOTES)
+
+

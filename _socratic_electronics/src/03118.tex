@@ -1,0 +1,123 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Determine the amount of time needed after switch closure for the capacitor voltage ($V_C$) to reach the specified levels:
+
+$$\epsfbox{03118x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_C$ & Time  \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Third row
+-5 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+-10 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+-15 volts &  \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+-19 volts &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Trace the direction of current in the circuit while the capacitor is charging, and be sure to denote whether you are using electron or conventional flow notation.
+
+\vskip 10pt
+
+Note: the voltages are specified as negative quantities because they are negative with respect to (positive) ground in this particular circuit.
+
+\underbar{file 03118}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_C$ & Time  \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 volts & 0 ms \cr
+%
+\noalign{\hrule}
+%
+% Third row
+-5 volts & 29.75 ms \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+-10 volts & 71.67 ms \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+-15 volts & 143.3 ms \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+-19 volts & 309.8 ms \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+While the capacitor is charging, electron flow moves clockwise and conventional flow moves counter-clockwise.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to show how they algebraically solved the standard time constant equation for $t$ using logarithms.
+
+%INDEX% Time constant calculation, RC circuit (calculating time required to charge to specified amount)
+
+%(END_NOTES)
+
+

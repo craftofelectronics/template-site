@@ -1,0 +1,56 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In this circuit, a capacitor is alternately connected in series between a voltage source and a load, then shorted, by means of two MOSFET transistors that are never conducting at the same time:
+
+$$\epsfbox{01460x01.eps}$$
+
+Note: the $\phi_1$ and $\phi_2$ pulse signals are collectively referred to as a {\it non-overlapping, two-phase clock}.
+
+Consider the {\it average} amount of current through the load resistor, as a function of clock frequency.  Assume that the "on" resistance of each MOSFET is negligible, so that the time required for the capacitor to charge is also negligible.  As the clock frequency is increased, does the load resistor receive more or less average current over a span of several clock cycles?  Here is another way to think about it: as the clock frequency increases, does the load resistor dissipate more or less power? 
+
+\vskip 10pt
+
+Now suppose we have a simple two-resistor circuit, where a potentiometer (connected as a variable resistor) throttles electrical current to a load:
+
+$$\epsfbox{01460x02.eps}$$
+
+It should be obvious in this circuit that the load current decreases as variable resistance $R$ increases.  What might not be so obvious is that the aforementioned switched capacitor circuit {\it emulates} the variable resistor $R$ in the second circuit, so that there is a mathematical equivalence between $f$ and $C$ in the first circuit, and $R$ in the second circuit, so far as average current is concerned.  To put this in simpler terms, the switched capacitor network behaves sort of like a variable resistor.
+
+Calculus is required to prove this mathematical equivalence, but only a qualitative understanding of the two circuits is necessary to choose the correct equivalency from the following equations.  Which one properly describes the equivalence of the switched capacitor network in the first circuit to the variable resistor in the second circuit?
+
+$$R = {f \over C} \hskip 30pt R = {C \over f} \hskip 30pt R = {1 \over fC} \hskip 30pt R = fC$$
+
+Be sure to explain the reasoning behind your choice of equations.
+
+\underbar{file 01460}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Average load current increases as clock frequency increases: $R = {1 \over fC}$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Perhaps the most important aspect of this question is students' analytical reasoning: {\it how} did they analyze the two circuits to arrive at their answers?  Be sure to devote adequate class time to a discussion of this, helping the weaker students grasp the concept of switched-capacitor/resistor equivalency by allowing stronger students to present their arguments.
+
+%INDEX% Non-overlapping clock circuit
+%INDEX% Clock circuit, non-overlapping
+%INDEX% Two-phase clock circuit, non-overlapping
+%INDEX% Switched capacitor network, resistor equivalent
+
+%(END_NOTES)
+
+

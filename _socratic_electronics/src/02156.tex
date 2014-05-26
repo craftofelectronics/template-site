@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+If a pulse-width modulated (PWM) signal is sent to a passive integrator circuit from a circuit capable of both sourcing and sinking current (as is the case with the dual-MOSFET output stage), the output will be a DC voltage (with some ripple):
+
+$$\epsfbox{02156x01.eps}$$
+
+Determine the relationship between the PWM signal's duty cycle and the DC voltage output by the integrator.  What does this suggest about PWM as a means of communicating information, such as analog data from a measuring device?
+
+\underbar{file 02156}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+There is a direct-proportional relationship between duty cycle and DC output voltage in this circuit, making it possible for a PWM signal to represent analog data.
+
+\vskip 10pt
+
+Follow-up question \#1: why is it important that the circuit generating the PWM signal for the integrator be able to both source {\it and} sink current?
+
+\vskip 10pt
+
+Follow-up question \#2: what would have to be done to reduce the ripple voltage at the integrator's output?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Although it should not be difficult for students to discern the relationship between duty cycle and DC output voltage, the application of this relationship to data communication might be difficult for some students to grasp, especially on their own.  Further elaboration on your part may be necessary.
+
+An excellent example of this principle applied is the generation of an analog voltage by a 1-bit digital circuit.  This technique is useful in microcontroller systems where output ports may be scarce, provided that ripple voltage (or slow response) is not a problem.
+
+%INDEX% PWM (pulse-width modulation), as a means of communicating analog information
+
+%(END_NOTES)
+
+

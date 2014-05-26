@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In ladder logic symbolism, an electromechanical relay coil is shown as a circle, and the contact(s) actuated by the coil as two parallel lines, almost like a capacitor symbol.  Given this knowledge, interpret the following ladder logic diagram:
+
+$$\epsfbox{02774x01.eps}$$
+
+How do we know which relay contact is actuated by which relay coil?  How does this convention differ from that of standard electrical/electronic schematic diagrams, where the relay coil is shown as an actual coil of wire (inductor symbol) with the contact "linked" to the coil by a dashed line?  Also, what type of logic function behavior (AND, OR, NAND, or NOR) does the above circuit exhibit?
+
+\underbar{file 02774}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+In ladder logic diagrams, relay coils are associated with their respective contacts by {\it name} rather than by proximity.  In this particular circuit, the logic function represented is the AND function.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Many students find it confusing that relay contacts and coils need not be drawn next to one another in a ladder logic diagram, because it is so different from the schematic diagrams they are accustomed to.  The non-necessity of proximity in a ladder logic diagram does have its advantages, though!  It is simply a matter of getting used to a new way of drawing things.
+
+%INDEX% Ladder logic diagram (with relays)
+%INDEX% OR logic function, implemented with electromechanical relays
+%INDEX% Relay logic, OR function
+
+%(END_NOTES)
+
+

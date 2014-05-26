@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student wants to measure the "ripple" voltage from an AC-DC power supply.  This is the small AC voltage superimposed on the DC output of the power supply, that is a natural consequence of AC-to-DC conversion.  In a well-designed power supply, this "ripple" voltage is minimal, usually in the range of millivolts peak-to-peak even if the DC voltage is 20 volts or more.  Displaying this "ripple" voltage on an oscilloscope can be quite a challenge to the new student.
+
+This particular student already knows about the AC/DC coupling controls on the oscilloscope's input.  Set to the "DC" coupling mode, the ripple is a barely-visible squiggle on an otherwise straight line:
+
+$$\epsfbox{01911x01.eps}$$
+
+After switching the input channel's coupling control to "AC", the student increases the vertical sensitivity (fewer volts per division) to magnify the ripple voltage.  The problem is, the ripple waveform is not engaging the oscilloscope's triggering.  Instead, all the student sees is a blur as the waveform quickly scrolls horizontally on the screen:
+
+$$\epsfbox{01911x02.eps}$$
+
+Explain what setting(s) the student can change on the oscilloscope to properly trigger this waveform so it will "hold still" on the screen.
+
+\underbar{file 01911}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Perhaps the easiest thing to do is set the trigger source to "Line" instead of "A", so that the oscilloscope has a larger signal to trigger from.  However, this is not the only option the student has!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a very realistic scenario, one that your students will surely encounter when they build their own AC-DC power supply circuits.  Ripple voltage, being such a small AC quantity superimposed on such a (relatively) large DC bias, is quite a challenge for the new student to "lock in" on his or her oscilloscope screen.
+
+Be sure to discuss options other than line triggering.  Also be sure to discuss {\it why} line triggering works in this situation.  It is not a panacea for triggering all low-amplitude waveforms, by any means!  It just happens to work in this scenario because the ripple voltage is a direct function of the AC line voltage, and as such is harmonically related.
+
+%INDEX% Oscilloscope, triggering on ripple voltage waveform
+
+%(END_NOTES)
+
+

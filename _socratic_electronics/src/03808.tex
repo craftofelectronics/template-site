@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This active integrator circuit processes the voltage signal from an {\it accelerometer}, a device that outputs a DC voltage proportional to its physical acceleration.  The accelerometer is being used to measure the acceleration of an athlete's foot as he kicks a ball, and the job of the integrator is to convert that acceleration signal into a {\it velocity} signal so the researchers can record the velocity of the athlete's foot:
+
+$$\epsfbox{03808x01.eps}$$
+
+During the set-up for this test, a radar gun is used to check the velocity of the athlete's foot as he does come practice kicks, and compare against the output of the integrator circuit.  What the researchers find is that the integrator's output is reading a bit low.  In other words, the integrator circuit is not integrating fast enough to provide an accurate representation of foot velocity.
+
+Determine which component(s) in the integrator circuit may have been improperly sized to cause this calibration problem.  Be as specific as you can in your answer(s).
+
+\underbar{file 03808}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Resistor $R_1$ may be too large, and/or capacitor $C_1$ may be too large.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is an interesting, practical question regarding the use of an integrator circuit for real-life signal processing.  Ask your students to explain their reasoning as they state their proposed component faults.  
+
+\vskip 10pt
+
+Incidentally, if anyone asks what the purpose of $R_2$ or $R_3$ is, tell them that both are used for {\it opamp bias current compensation}.  An ideal opamp would not require these components to be in place.
+
+%INDEX% Troubleshooting, predicting effects of fault in active integrator circuit
+
+%(END_NOTES)
+
+

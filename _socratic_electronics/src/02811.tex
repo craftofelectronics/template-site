@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The {\it Law of Distribution} in boolean algebra is identical to the law of distribution in "normal" algebra:
+
+$$A(B + C) = AB + AC \hbox{\hskip 20pt {\it Applying the Law of Distribution}}$$
+
+While the process of distribution is not difficult to understand, the reverse of distribution (called {\it factoring}) seems to be a more difficult process for many students to master:
+
+$$AB + AC = A(B + C) \hbox{\hskip 20pt {\it Factoring A out of each term}}$$
+
+Survey the following examples of factoring, and then describe what this process entails.  What pattern(s) are you looking for when trying to factor a Boolean expression?
+
+$$CD + AD + BD = D(C + A + B)$$
+
+$$X \overline{Y} \> \overline{Z} + \overline{X} \> \overline{Y} \> Z = \overline{Y}(X \overline{Z} + \overline{X} \> Z)$$
+
+$$J + JK = J(1 + K)$$
+
+$$AB + ABCD + BCD + B = B(A + ACD + CD + 1)$$
+
+\underbar{file 02811}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+When factoring, you must look for variables {\it common} to each product term.
+
+\vskip 10pt
+
+Follow-up question: if implemented with digital logic gates, which of these two expressions would require the fewest components?
+
+$$A(B + C)$$
+
+$$AB + AC$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Factoring really does seem to be a more difficult pattern-recognition skill to master than distribution, the latter being self-explanatory to many students.  The purpose of this question is to get students to recognize and articulate the pattern-matching process involved with factoring.  Once students have a working explanation of how to factor (especially if phrased in their own words), they will be better equipped to do so when needed.
+
+%INDEX% Boolean algebra, factoring
+
+%(END_NOTES)
+
+

@@ -1,0 +1,61 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A simple pair of audio headphones makes a remarkably sensitive and useful piece of test equipment for detecting signals in a wide variety of circuits.  Even very small DC voltages may be detected with a pair of headphones, if you listen for a "click" sound when contact is made or broken between a voltage source and the headphone's test probes.
+
+$$\epsfbox{00664x01.eps}$$
+
+Yet, a plain pair of headphones is unsuitable for many test applications for two reasons:
+
+\medskip
+\item{$\bullet$} Electrical safety
+\item{$\bullet$} Low impedance
+\medskip
+
+It is generally {\it not} a good idea to place your body in a position where it may come into direct contact with a live circuit, especially if that circuit harbors substantial voltages.  Being that headphones are worn on a person's head, with the potential for electrical contact between one of the speaker elements and the wearer's head, this is quite possibly unsafe.
+
+Secondly, the impedance of a high-quality headphone set is generally 8 ohms.  While being a common audio speaker impedance, this low value would place far too great of a "burden" on many types of electronic circuits if directly connected.  What is desired for a piece of test equipment is 1000 $\Omega$ or more.
+
+Explain how a transformer may be inserted into the headphone test circuit in such a way as to address both these problems.
+
+\underbar{file 00664}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{00664x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: even though a pair of headphones used in this manner cannot provide {\it quantitative} measurements of signals, there are some {\it qualitative} features which a skilled user may discern from the sounds produced.  Describe what features of an AC signal may be detected with headphones, and how this compares to the information obtained from an oscilloscope.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question reviews both the principles of impedance matching and electrical isolation, in addition to exposing students to a novel and inexpensive piece of test equipment they can build on their own.  I highly recommend making the construction and use of one of these devices a lab project in your curriculum.  I use a headphone test set regularly in my own experimentation, and I have found it very useful in understanding AC phenomenon (especially if you do not have your own oscilloscope).
+
+\vskip 10pt
+
+The circuit I recommend for students to build is this:
+
+$$\epsfbox{00664x03.eps}$$
+
+The 1 k$\Omega$ resistors and 1N4001 rectifying diodes provide protection against hearing damage, by limiting the voltage which may be applied to the primary winding of the transformer.  The potentiometer, of course, provides volume control, while the transformer steps up the headphones' impedance and provides electrical isolation.  I recommend a 120 volt power transformer for the task because it is rated for line voltage, and will surely provide the necessary isolation between circuit and headphones necessary for safety.  A regular 8:1000 ohm "audio transformer" is not necessarily rated for the same (high) levels of voltage, and therefore would not provide the same margin of safety.  For best performance, use a pair of headphones with the greatest "sensitivity" rating (measured in dB) possible.
+
+%INDEX% Impedance transformation
+%INDEX% Sensitive audio detector circuit
+
+%(END_NOTES)
+
+

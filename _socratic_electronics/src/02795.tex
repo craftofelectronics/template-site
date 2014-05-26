@@ -1,0 +1,38 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{02795x01.eps}$$
+
+\underbar{file 02795}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and actual truth tables.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Something omitted from too many basic digital electronics texts is a thorough discussion on interfacing IC logic gates with high-power devices, usually using relays.  This is a very important subject, however, because many devices we wish to control with digital logic circuits are too power-hungry to directly drive with the logic gate outputs!  Here, students get the opportunity to experiment with how to make a logic gate (CMOS, preferably) drive an electric motor.
+
+One component value you may wish to have your students size themselves is resistor $R_3$, being the base current limiting resistor for transistor $Q_1$.  It must be sized such that the transistor is saturated with the gate output in the HIGH state, yet not allowing so much base current that the transistor becomes damaged.  Figuring out an appropriate size for this resistor is a very practical exercise, forcing students to review transistor theory (calculations with $\beta$) as well as consider characteristics of the load.
+
+It may be advisable (especially if the logic gate is TTL and requires a precise 5.0 volt power supply) to have a separate source of power for the electric motor.
+
+%INDEX% Assessment, performance-based (Gate-relay interposing)
+
+%(END_NOTES)
+
+

@@ -1,0 +1,50 @@
+% This file contains all the necessary TeX statements for specifying
+% overall document format.  This is the file you would edit to set
+% any global typesetting parameters.
+
+\input epsf.tex
+
+% This line effectively turns off "Underfull \vbox" error messages.
+\vbadness=10000
+
+\tolerance = 1000
+\pretolerance = 10000
+
+%%%%%% Counting questions %%%%%%
+\newcount\questnum \questnum=0
+\def\question{
+           \advance\questnum by 1
+           \ifnum \questnum > 0
+                \hrule
+                \vskip 3pt
+                \leftline{Question \the\questnum}
+                \vskip 3pt \fi}
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%% Counting answers %%%%%%
+\newcount\answnum \answnum=0
+\def\answer{
+           \advance\answnum by 1
+           \ifnum \answnum > 0
+                \hrule
+                \vskip 3pt
+                \leftline{Answer \the\answnum}
+                \vskip 3pt \fi}
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%% Counting notes %%%%%%
+\newcount\explnum \explnum=0
+\def\notes{
+           \advance\explnum by 1
+           \ifnum \explnum > 0
+                \hrule
+                \vskip 3pt
+                \leftline{Notes \the\explnum}
+                \vskip 3pt \fi}
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+

@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A {\it sequential} timer circuit may be constructed from multiple 555 timer ICs cascaded together.  Examine this circuit and determine how it works:
+
+$$\epsfbox{02944x01.eps}$$
+
+Can you think of any practical applications for a circuit such as this?
+
+\underbar{file 02944}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Each 555 timer's cycle is triggered by the negative edge of the pulse on the {\it trigger} terminal.  A passive differentiator network between each 555 timer ensures that only a brief negative-going pulse is sent to the trigger terminal of the next timer from the output terminal of the one before it.
+
+\vskip 10pt
+
+Follow-up question: when timer circuits are cascaded like this, do their time delays {\it add} or {\it multiply} to make the total delay time?  Be sure to explain your reasoning.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Practical applications abound for such a circuit.  One whimsical application is to energize sequential tail-light bulbs for an automobile, to give an interesting turn-signal visual effect.  A sequential timer circuit was used to do just this on certain years of (classic) Ford Cougar cars.  Other, more utilitarian, applications for sequential timers include start-up sequences for a variety of electronic systems, traffic light controls, and automated household appliances.
+
+%INDEX% 555 timer, monostable operation
+%INDEX% Sequential timer, using multiple 555 IC's
+
+%(END_NOTES)
+
+

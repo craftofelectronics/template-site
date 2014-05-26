@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+There are times when you need to use an oscilloscope to measure a differential voltage that also has a significant common-mode voltage: an application where you cannot connect the oscilloscope's ground lead to either point of contact.  One application is measuring the voltage pulses on an RS-485 digital communications network, where neither conductor in the two-wire cable is at ground potential, and where connecting either wire to ground (via the oscilloscope's ground clip) may cause problems:
+
+$$\epsfbox{03987x01.eps}$$
+
+One solution to this problem is to use both probes of a dual-trace oscilloscope, and set it up for {\it differential} measurement.  In this mode, only one waveform will be shown on the screen, even though two probes are being used.  No ground clips need be connected to the circuit under test, and the waveform shown will be indicative of the voltage {\it between the two probe tips}.
+
+\goodbreak
+
+Describe how a typical oscilloscope may be set up to perform differential voltage measurement.  Be sure to include descriptions of all knob and button settings (with reference to the oscilloscope shown in this question):
+
+$$\epsfbox{03987x02.eps}$$
+
+\underbar{file 03987}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{03987x03.eps}$$
+
+\medskip
+\item{$\bullet$} Both channels must be set to same vertical sensitivity (volts/division)
+\item{$\bullet$} Both channels should be set for same vertical coupling (both DC or both AC)
+\item{$\bullet$} Channel selection must be set to "Add"
+\item{$\bullet$} One channel must be inverted (this turns the "addition" into "subtraction")
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question is best followed by a demonstration or a lab exercise where students get to see firsthand how it works.
+
+%INDEX% Differential signal measurement, oscilloscope
+
+%(END_NOTES)
+
+

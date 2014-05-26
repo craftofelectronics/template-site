@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how the operation of this "flash" analog-to-digital converter (ADC) circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03912x01.eps}$$
+
+\medskip
+\item{$\bullet$} Resistor $R_{16}$ fails open:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_1$ fails open:
+\vskip 5pt
+\item{$\bullet$} Comparator $U_{13}$ output fails low:
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across resistor $R_{14}$:
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03912}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Resistor $R_{16}$ fails open: {\it Output code will be 15 ({\tt 1111}) all the time.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_1$ fails open: {\it If $V_{in} < V_{ref}$, output will be 0 ({\tt 0000}); if $V_{in} > V_{ref}$, output will be 15 ({\tt 1111}).}
+\vskip 5pt
+\item{$\bullet$} Comparator $U_{13}$ output fails low: {\it Output will assume the "13" state ({\tt 1101}) unless $V_{in}$ exceeds that analog value, then the ADC will register properly.}
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across resistor $R_{14}$: {\it There will be no distinctive "13" state ({\tt 1101}), the analog values for all the other states adjusting slightly to fill the gap.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in flash ADC circuit
+
+%(END_NOTES)
+
+

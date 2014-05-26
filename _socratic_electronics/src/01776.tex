@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Light-emitting diodes, or {\it LED}s, are rugged and highly efficient sources of light.  They are far more rugged and efficient than incandescent lamps, and they also have the ability to switch on and off much faster because there is no filament inside needing to heat or cool:
+
+$$\epsfbox{01776x01.eps}$$
+
+LEDs are low voltage devices, typically rated in the range of 1.5 to 2 volts DC maximum.  Single diodes generally draw low currents as well, about 20 milliamps each.  The problem is, how do you operate an LED from a typical electronic power source, which may output 24 volts DC or more?
+
+$$\epsfbox{01776x02.eps}$$
+
+The answer is to use a {\it series dropping resistor}:
+
+$$\epsfbox{01776x03.eps}$$
+
+Calculate the necessary resistance value and minimum power rating of a series dropping resistor for an LED rated at 1.7 volts and 20 mA, and a power supply voltage of 24 volts.
+
+\underbar{file 01776}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$R_{dropping} = 1115 \> \Omega$, with a power rating of at least 0.446 watts (1/2 watt would be ideal).
+
+\vskip 10pt
+
+Follow-up question: if there were no 1115 $\Omega$ resistors to choose from (which there most likely will not be!), would it be safer to choose a higher-value resistor or a lower-value resistor for this application?  For example, if your only choices in 1/2 watt resistors were a 1 k$\Omega$ and a 1.2 k$\Omega$, which one would you choose?  Explain your answer.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The follow-up question is a very practical one, for it is seldom that you have the exact components on-hand to match the requirements of a circuit you are building.  It is important to understand which way is safer to err (too large or too small) when doing "as-built" design work.
+
+%INDEX% Dropping resistor, for LED
+%INDEX% LED
+%INDEX% Light-emitting diode
+%INDEX% Series dropping resistor, for LED
+
+%(END_NOTES)
+
+

@@ -1,0 +1,81 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Shown here are nine rules of Boolean algebra (these are not the only rules, of course).  
+
+\medskip
+\item{$\bullet$} $A + \overline{A} = 1$
+\item{$\bullet$} $A + A = A$
+\item{$\bullet$} $A + 1 = 1$
+\item{$\bullet$} $AA = A$
+\item{$\bullet$} $A(1) = A$
+\item{$\bullet$} $A \> \overline{A} = 0$
+\item{$\bullet$} $A(B + C) = AB + AC$
+\item{$\bullet$} $A + AB = A$
+\item{$\bullet$} $A + \overline{A}B = A + B$
+\medskip
+
+Determine which rule is being used in each step of the following Boolean simplification:
+
+$$\overline{C}F + F(A + \overline{B}) + C$$
+
+$$\overline{C}F + AF + \overline{B}F + C$$
+
+$$C + F + AF + \overline{B}F$$
+
+$$C + F(1 + A + \overline{B})$$
+
+$$C + F(1)$$
+
+$$C + F$$
+
+\underbar{file 02806}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\overline{C}F + F(A + \overline{B}) + C$$
+
+$$\hbox{\bf Rule: } A(B + C) = AB + AC$$
+
+$$\overline{C}F + AF + \overline{B}F + C$$
+
+$$\hbox{\bf Rule: } A + \overline{A}B = A + B$$
+
+$$C + F + AF + \overline{B}F$$
+
+$$\hbox{(Factoring)}$$
+
+$$C + F(1 + A + \overline{B})$$
+
+$$\hbox{\bf Rule: } A + 1 = 1$$
+
+$$C + F(1)$$
+
+$$\hbox{\bf Rule: } A(1) = A$$
+
+$$C + F$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Quite frequently (and quite distressingly), I meet students who seem to have the most difficult time relating algebraic rules in their general form to specific instances of reduction.  For example, a student who cannot tell that the rule $A + AB = A$ applies to the expression $QR + R$, or worse yet $B + AB$.  This skill requires time and hard work to master, because it is fundamentally a matter of abstraction: leaping from literal expressions to {\it similar} expressions, applying patterns from general rules to specific instances.
+
+Questions such as this help students develop this abstraction ability.  Let students explain how they "made the connection" between Boolean rules and the given reductions.  Often, it helps to have a student explain the process to another student, because they are better able than you to put it into terms the struggling students can understand.
+
+%INDEX% Boolean algebra, practice matching reductions to rules
+
+%(END_NOTES)
+
+

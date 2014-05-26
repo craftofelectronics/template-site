@@ -1,0 +1,56 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The efficiency ($\eta$) of a simple power system with losses occurring over the wires is a function of circuit current, wire resistance, and total source power:
+
+$$\epsfbox{03255x01.eps}$$
+
+A simple formula for calculating efficiency is given here:
+
+$$\eta = {{P_{source} - I^2R} \over P_{source}}$$
+
+\noindent
+Where,
+
+$P_{source}$ = the power output by the voltage source, in watts (W)
+
+$I$ = the circuit current, in amperes (A)
+
+$R$ = the {\it total} wire resistance ($R_{wire1}$ + $R_{wire2}$), in ohms ($\Omega$)
+
+\vskip 10pt
+
+Algebraically manipulate this equation to solve for wire resistance ($R$) in terms of all the other variables, and then calculate the maximum amount of allowable wire resistance for a power system where a source outputting 200 kW operates at a circuit current of 48 amps, at a minimum efficiency of 90\%.
+
+\underbar{file 03255}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$R = {{P_{source} - \eta P_{source}} \over I^2}$$
+
+The maximum allowable (total) wire resistance is 8.681 $\Omega$.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+A common mistake for students to make here is entering 90\% as "90" rather than as "0.9" in their calculators.
+
+%INDEX% Efficiency of power lines
+%INDEX% Power line resistance
+%INDEX% Resistance of power line conductors
+
+%(END_NOTES)
+
+

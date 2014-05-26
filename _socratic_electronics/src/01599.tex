@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This interesting bridge circuit is a variable phase-shifter.  It works best when the excitation frequency is such that $X_C = R$ in each arm of the bridge:
+
+$$\epsfbox{01599x01.eps}$$
+
+Supposing that $X_C$ does equal $R$ in each arm of the bridge, and that the potentiometer resistance is sufficiently high to limit current through it to a negligible level (in other words, $R_{pot} >> R$).  Calculate the phase shift of $V_{out}$ with respect to the excitation source voltage when:
+
+\medskip
+\item{$\bullet$} The potentiometer wiper is fully left:
+\item{$\bullet$} The potentiometer wiper is fully right:
+\item{$\bullet$} The potentiometer wiper is perfectly centered:
+\medskip
+
+\underbar{file 01599}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} The potentiometer wiper is fully left: $\Theta = -45^o$
+\item{$\bullet$} The potentiometer wiper is fully right: $\Theta = 45^o$
+\item{$\bullet$} The potentiometer wiper is perfectly centered: $\Theta = 0^o$
+\medskip
+
+\vskip 10pt
+
+Follow-up question: this circuit works best with the excitation frequency is such that $X_C = R$.  Write a formula that solves for the necessary frequency ($f$) to achieve this condition given a certain value of $R$.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a very interesting circuit to built and test.  You may build one using 1 $\mu$F capacitors, 2.7 k$\Omega$ resistors, and a 100 k$\Omega$ potentiometer that will successfully operate on 60 Hz power-line excitation.
+
+An interesting thing to note about using line power is that any distortions in the excitation sine-wave will become obvious when the potentiometer wiper is turned toward the differentiating position (where $\Theta$ is positive).  If listened to with an audio detector, you may even hear the change in timbre while moving the wiper from one extreme to the other.  If excited by a "clean" sine-wave, however, no change in timbre should be heard because there are no harmonics present.
+
+%INDEX% AC bridge circuit
+%INDEX% Bridge circuit, AC
+%INDEX% Phase shifter circuit, adjustable
+
+%(END_NOTES)
+
+

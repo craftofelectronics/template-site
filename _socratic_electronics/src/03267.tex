@@ -1,0 +1,59 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+As adjustable devices, potentiometers may be set at a number of different positions.  It is often helpful to express the position of a potentiometer's wiper as a {\it fraction} of full travel: a number between 0 and 1, inclusive.  Here are several pictorial examples of this, with the variable $m$ designating this travel value (the choice of which alphabetical character to use for this variable is arbitrary):
+
+$$\epsfbox{03267x01.eps}$$
+
+Using an algebraic variable to represent potentiometer position allows us to write equations describing the outputs of voltage divider circuits employing potentiometers.  Note the following examples:
+
+$$\epsfbox{03267x02.eps}$$
+
+\goodbreak
+Algebraically manipulate these four equations so as to solve for $m$ in each case.  This will yield equations telling you where to set each potentiometer to obtain a desired output voltage given the input voltage and all resistance values ($m = \cdots$).
+
+\underbar{file 03267}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\hbox{Circuit 1: \hskip 20pt} m = {V_{out} \over V_{in}}$$
+
+$$\hbox{Circuit 2: \hskip 20pt} m = {{V_{out}(R_1 + R_2)} \over {V_{in} R_2}}$$
+
+$$\hbox{Circuit 3: \hskip 20pt} m = {{{V_{out}(R_1 + R_2)} - V_{in}R_2} \over {V_{in} R_1}}$$
+
+$$\hbox{Circuit 4: \hskip 20pt} m = {{{V_{out}(R_1 + R_2 + R_3)} - V_{in}R_3} \over {V_{in} R_2}}$$
+
+\vskip 10pt
+
+Hint: in order to avoid confusion with all the subscripted $R$ variables ($R_1$, $R_2$, and $R_3$) in your work, you may wish to substitute simpler variables such as $a$ for $R_1$, $b$ for $R_2$, etc.  Similarly, you may wish to substitute $x$ for $V_{in}$ and $y$ for $V_{out}$.  Using shorter variable names makes the equations easier to manipulate.  See how this simplifies the equation for circuit 2:
+
+
+$$\hbox{Circuit 2 (original equation): \hskip 20pt} y = x \left( {mb \over a+b} \right)$$
+
+$$\hbox{Circuit 2 (manipulated equation): \hskip 20pt} m = {{y(a + b)} \over {bx}}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The main purpose of this question is to provide algebraic manipulation practice for students, as well as shown them a practical application for algebraic substitution.  The circuits are almost incidental to the math.
+
+%INDEX% Algebra, manipulating equations
+%INDEX% Potentiometer, as variable voltage divider
+%INDEX% Voltage divider
+
+%(END_NOTES)
+
+

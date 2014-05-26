@@ -1,0 +1,96 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Write a POS expression for this truth table, and then draw a ladder logic circuit corresponding to that expression:
+
+% Graphic image replaced by TeX table, April 5, 2005
+%$$\epsfbox{01340x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+A & B & C & Output \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 1 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+1 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+1 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+1 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+1 & 1 & 1 & 1 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 01340}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01340x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask students to contrast the difficulty of writing a POS expression for this function, versus an SOP expression.  The difference in complexity is great!  Also, ask them to compare the circuitry equivalent to each form of Boolean expression for this truth table.  Which form yields a circuit with fewer gates?
+
+%INDEX% Boolean algebra, conversion of expression into relay logic
+%INDEX% Product-of-Sums expression, Boolean algebra (from analysis of a truth table)
+%INDEX% POS expression, Boolean algebra (from analysis of a truth table)
+
+%(END_NOTES)
+
+

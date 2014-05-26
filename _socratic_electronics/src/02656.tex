@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The purpose of a {\it current mirror} circuit is to maintain constant current through a load despite changes in that load's resistance:
+
+$$\epsfbox{02656x01.eps}$$
+
+If we were to crudely model the transistor's behavior as an automatically-varied rheostat -- constantly adjusting resistance as necessary to keep load current constant -- how would you describe this rheostat's response to changes in load resistance?
+
+$$\epsfbox{02656x02.eps}$$
+
+In other words, as $R_{load}$ increases, what does $R_{transistor}$ do -- increase resistance, decrease resistance, or remain the same resistance it was before?  How does the changing value of $R_{transistor}$ affect total circuit resistance?
+
+\underbar{file 02656}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+As $R_{load}$ increases, $R_{transistor}$ will decrease in resistance so as to maintain a constant current through the load and a constant $R_{total}$.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This model of current mirror transistor behavior, albeit crude, serves as a good introduction to the subject of {\it active loads} in transistor amplifier circuits.  This is where a transistor is configured to operate as a constant-current regulator, then placed in series with an amplifying transistor to yield much greater voltage gains than what is possible with a passive (fixed resistor) load.
+
+%INDEX% Current mirror circuit, BJT
+
+%(END_NOTES)
+
+

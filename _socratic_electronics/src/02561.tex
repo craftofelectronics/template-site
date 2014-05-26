@@ -1,0 +1,40 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The BJT amplifier configuration most affected by the Miller effect at high frequencies is the common-emitter.  Common-collector and common-base amplifier configurations do not suffer the same great losses of voltage gain at high frequency as the common-emitter circuit does.  After examining the following amplifier circuits (with the Miller effect capacitance shown external to the transistors), explain why:
+
+$$\epsfbox{02561x01.eps}$$
+
+$$\epsfbox{02561x02.eps}$$
+
+\underbar{file 02561}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+In the common-emitter circuit, the Miller capacitance provides a path for the (inverted) output signal at the collector terminal to degeneratively feed back to the input at the base terminal, decreasing voltage gain.  In the common-collector circuit, there is no signal inversion at all, and so no degenerative feedback can happen at all.
+
+The common-base circuit is interesting: it would seem there is a possibility for negative feedback through the Miller capacitance here, from the collector to the base.  However, since the base terminal is effectively grounded (as far as AC signals are concerned) by the bypass capacitor, any feedback through the Miller capacitance becomes shunted straight to ground where is has no effect on the amplifier's operation.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Here I give more explanation than is usual for me, because the concept is not easy to understand, and is often presented in a muddled fashion by textbooks.
+
+%INDEX% Miller effect
+%INDEX% Voltage gain, reduction due to Miller effect capacitance
+
+%(END_NOTES)
+
+

@@ -1,0 +1,94 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Pulse-width modulation (PWM) is not only useful for generating an analog output with a microcontroller, but it is also useful for receiving an analog input through a pin that only handles on-off (high-low) digital voltage levels.  The following circuit takes an analog voltage signal in to a comparator, generates PWM, then sends that PWM signal to the input of a microcontroller:
+
+$$\epsfbox{03992x01.eps}$$
+
+\noindent
+\underbar{\bf Pseudocode listing}
+
+{\tt Declare Pin0 as an input}
+
+{\tt Declare Last\_Pin0 as a boolean variable}
+
+{\tt Declare Time\_High as an integer variable}
+
+{\tt Declare Time\_Low as an integer variable}
+
+{\tt Declare Duty\_Cycle as a floating-point variable}
+
+{\tt Set Time\_High and Time\_Low both to zero}
+
+{\tt LOOP}
+
+\hskip 10pt {\tt Set Last\_Pin0 equal to Pin0}
+
+\hskip 10pt {\tt If Pin0 is HIGH, increment Time\_High by one}
+
+\hskip 10pt {\tt If Pin0 is LOW, increment Time\_Low by one}
+
+\hskip 10pt {\tt If Last\_Pin0 is not equal to Pin0, go to SUBROUTINE}
+
+{\tt ENDLOOP}
+
+\vskip 10pt
+
+{\tt SUBROUTINE}
+
+\hskip 10pt {\tt Set Duty\_Cycle equal to (Time\_High / (Time\_High + Time\_Low))}
+
+\hskip 10pt {\tt Set Time\_High and Time\_Low both to zero}
+
+\hskip 10pt {\tt Return to calling loop}
+
+{\tt ENDSUBROUTINE}
+
+\vskip 10pt
+
+Explain how this program works.  Hint: the {\tt Last\_Pin0} boolean variable is used to detect when the state of {\tt Pin0} has changed from 0 to 1 or from 1 to 0.
+
+\underbar{file 03992}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The trickiest part of this program is figuring out the {\tt Last\_Pin0} variable's function, and how it determines when to execute the subroutine.  I strongly recommend you perform a "thought experiment" with a slow square-wave input signal to the microcontroller, examining how the {\tt Time\_High} and {\tt Time\_Low} variables become incremented with the square wave's state.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Pulse-width modulation (PWM) is a very common and useful way of generating an analog output from a microcontroller (or other digital electronic circuit) capable only of "high" and "low" voltage level output.  Here, we also see it used as a form of {\it input} signal modulation.  With PWM, time (or more specifically, {\it duty cycle}) is the analog domain, while amplitude is the digital domain.  This allows us to "sneak" an analog signal through a digital (on-off) data channel.
+
+\vskip 10pt
+
+In case you're wondering why I write in pseudocode, here are a few reasons:
+
+\medskip
+\goodbreak
+\item{$\bullet$} No prior experience with programming required to understand pseudocode
+\item{$\bullet$} It never goes out of style
+\item{$\bullet$} Hardware independent
+\item{$\bullet$} No syntax errors
+\medskip
+
+If I had decided to showcase code that would actually run in a microcontroller, I would be dooming the question to obsolescence.  This way, I can communicate the spirit of the program without being chained to an actual programming standard.  The only drawback is that students will have to translate my pseudocode to real code that will actually run on their particular MCU hardware, but that is a problem guaranteed for some regardless of which real programming language I would choose.
+
+Of course, I could have taken the Donald Knuth approach and invented my own (imaginary) hardware and instruction set . . . 
+
+%INDEX% Microcontroller, pulse-width modulation (PWM) input
+
+%(END_NOTES)
+
+

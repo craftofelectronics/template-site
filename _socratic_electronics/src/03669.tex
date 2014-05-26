@@ -1,0 +1,149 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This passive integrator circuit is powered by a square-wave voltage source (oscillating between 0 volts and 5 volts at a frequency of 2 kHz).  Determine the output voltage ($v_{out}$) of the integrator at each instant in time where the square wave transitions (goes from 0 to 5 volts, or from 5 to 0 volts), assuming that the capacitor begins in a fully discharged state at the first transition (from 0 volts to 5 volts):
+
+$$\epsfbox{03669x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Transition & $v_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#1 (0 $\to$ 5 volts) & 0 volts \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#2 (5 $\to$ 0 volts) &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#3 (0 $\to$ 5 volts) &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#4 (5 $\to$ 0 volts) &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#5 (0 $\to$ 5 volts) &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#6 (5 $\to$ 0 volts) &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#7 (0 $\to$ 5 volts) &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#8 (5 $\to$ 0 volts) &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 03669}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Transition & $v_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#1 (0 $\to$ 5 volts) & 0 volts \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#2 (5 $\to$ 0 volts) & 3.395 volts \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#3 (0 $\to$ 5 volts) & 1.090 volts \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#4 (5 $\to$ 0 volts) & 3.745 volts \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#5 (0 $\to$ 5 volts) & 1.202 volts \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#6 (5 $\to$ 0 volts) & 3.781 volts \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#7 (0 $\to$ 5 volts) & 1.214 volts \cr
+%
+\noalign{\hrule}
+%
+% Another row
+\#8 (5 $\to$ 0 volts) & 3.785 volts \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\vskip 10pt
+
+Challenge question: what are the final (ultimate) values for the integrator output's sawtooth-wave peak voltages?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Be sure to have your students share their problem-solving techniques (how they determined which equation to use, etc.) in class.  See how many of them notice that the exponential portion of the equation ($e^{t \over \tau}$) is the same for each calculation, and if they find an easy way to manage the calculations by storing charge/discharge percentages in their calculator memories!
+
+%INDEX% Time constant calculation, passive RC integrator circuit
+
+%(END_NOTES)
+
+

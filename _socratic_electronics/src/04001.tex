@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Th\'evenin's theorem is a powerful tool for analyzing R-2R ladder networks.  Take for instance this four-section network where the next-to-most-significant "bit" is activated, while all the other "bits" are inactive (switched to ground):
+
+$$\epsfbox{04001x01.eps}$$
+
+If we Th\'evenize all sections to the left of the activated section, replacing it with a single resistance to ground, we see the network becomes far simpler:
+
+$$\epsfbox{04001x02.eps}$$
+
+\goodbreak
+Explain how we may apply Th\'evenin's theorem once again to the shaded section of this next circuit (simplified from the previous circuit shown above) to simplify it even more, obtaining a final result for $V_{out}$:
+
+$$\epsfbox{04001x03.eps}$$
+
+\underbar{file 04001}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Once you get to this point, solving for $V_{out}$ in terms of $V_{ref}$ is trivial:
+
+$$\epsfbox{04001x04.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Students might not realize it is valid to iteratively apply Th\'evenin's theorem to the solution of a circuit problem.  You can, and this stands as a good example of how (and why!) you should do it.
+
+%INDEX% R-2R ladder network
+
+%(END_NOTES)
+
+

@@ -1,0 +1,40 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A ubiquitous example of serial data communication is the cable linking a keyboard to a personal computer: for every key switch pressed, an ASCII character is transmitted to the computer.  An interesting characteristic of this particular communication protocol is the random rate at which the ASCII characters are sent.  Because the characters are generated at the rate the computer user happens to type, the rate is completely unpredictable.  Consequently, this form of serial data communication is known as {\it asynchronous}.
+
+Compare and contrast this against {\it synchronous} serial data communication, giving an example of a synchronous data communications standard.
+
+\underbar{file 02995}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+One widespread synchronous data communications standard is SONET, used in long-distance data communication applications.  I'll let you do the research to compare and contrast synchronous against asynchronous.
+
+\vskip 10pt
+
+Challenge question: the data sent between computers along serial-format networks such as RS-232C and Ethernet is "clocked" by precise oscillators at both the transmitting and receiving ends, yet is not considered "synchronous," even if each byte of data is sent at regular (non-random) intervals.  Explain why.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+At first, it seems as though any communication between digital devices occurring at a pre-determined frequency (bps) and rate (characters per second) would be synchronous, because everything is happening on fixed intervals.  However, the precision inherent to a true synchronous communications network is more rigorous than this.  Let your students elaborate on what they have found through their research.
+
+%INDEX% Asynchronous data communication, defined
+%INDEX% Synchronous data communication, defined
+
+%(END_NOTES)
+
+

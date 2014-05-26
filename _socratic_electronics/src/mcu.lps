@@ -1,0 +1,40 @@
+%! PostScript set of library objects for XCircuit
+%  Version: 3.0
+%  Library name is: mcu
+%  Author: Tony R. Kuphaldt,,, <tony@Linuxrules.tony.org>
+%
+
+% XCircuitLib library objects
+/mcu1 {
+begingate
+0.824 0.706 0.549 scb
+240 1.00 -272 256 -272 -256 272 -256 272 256 4 polygon
+sce
+0 1.00 -272 256 -272 -256 272 -256 272 256 4 polygon
+(Microcontroller) {/Helvetica-Bold cf} 2 16 0 1.00 -192 32 label
+(+V) {/Helvetica cf} 2 16 0 1.00 -256 176 label
+(Gnd) {/Helvetica cf} 2 16 0 1.00 -256 -208 label
+(\(8 input/output pins\)) {/Helvetica cf} 2 16 0 1.00 -240 -16 label
+(Pin 0) {/Helvetica cf} 2 16 0 1.00 160 208 label
+(Pin 1) {/Helvetica cf} 2 16 0 1.00 160 144 label
+(Pin 2) {/Helvetica cf} 2 16 0 1.00 160 80 label
+(Pin 3) {/Helvetica cf} 2 16 0 1.00 160 16 label
+(Pin 4) {/Helvetica cf} 2 16 0 1.00 160 -48 label
+(Pin 5) {/Helvetica cf} 2 16 0 1.00 160 -112 label
+(Pin 6) {/Helvetica cf} 2 16 0 1.00 160 -176 label
+(Pin 7) {/Helvetica cf} 2 16 0 1.00 160 -240 label
+1 1.00 272 224 336 224 2 polygon
+1 1.00 272 160 336 160 2 polygon
+1 1.00 272 96 336 96 2 polygon
+1 1.00 272 32 336 32 2 polygon
+1 1.00 272 -32 336 -32 2 polygon
+1 1.00 272 -96 336 -96 2 polygon
+1 1.00 272 -160 336 -160 2 polygon
+1 1.00 272 -224 336 -224 2 polygon
+1 1.00 -336 192 -272 192 2 polygon
+1 1.00 -336 -192 -272 -192 2 polygon
+endgate
+} def
+
+
+% EndLib

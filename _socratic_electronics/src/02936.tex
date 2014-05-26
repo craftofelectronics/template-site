@@ -1,0 +1,84 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Determine what input conditions are necessary to set, reset, and toggle these two J-K flip-flops:
+
+$$\epsfbox{02936x01.eps}$$
+
+\vskip 10pt
+
+For the J-K flip-flop with active-high inputs:
+
+\medskip
+\item{$\bullet$} Set by . . .
+\item{$\bullet$} Reset by . . .
+\item{$\bullet$} Toggle by . . .
+\medskip
+
+\vskip 10pt
+
+For the J-K flip-flop with active-low inputs:
+
+\medskip
+\item{$\bullet$} Set by . . .
+\item{$\bullet$} Reset by . . .
+\item{$\bullet$} Toggle by . . .
+\medskip
+
+\underbar{file 02936}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+In {\it either} case, you cause the flip-flop to go into these three modes by doing the following:
+
+\medskip
+\item{$\bullet$} Set by {\it activating} $J$, {\it deactivating} $K$, and {\it clocking} $C$.
+\item{$\bullet$} Reset by {\it activating} $K$, {\it deactivating} $J$, and {\it clocking} $C$.
+\item{$\bullet$} Toggle by {\it activating} $J$ and $K$ simultaneously, and {\it clocking} $C$.
+\medskip
+
+Specifically, though, here is what you would need to do to each flip-flop, stated in terms of "high" and "low" logic states:
+
+\vskip 10pt
+
+For the J-K flip-flop with active-high inputs:
+
+\medskip
+\item{$\bullet$} Set by making $J$ high, $K$ low, and $C$ transition from low to high.
+\item{$\bullet$} Reset by making $K$ high, $J$ low, and $C$ transition from low to high.
+\item{$\bullet$} Toggle by making $J$ high, $K$ high, and $C$ transition from low to high.
+\medskip
+
+\vskip 10pt
+
+For the J-K flip-flop with active-low inputs:
+
+\medskip
+\item{$\bullet$} Set by making $K$ high, $J$ low, and $C$ transition from high to low.
+\item{$\bullet$} Reset by making $J$ high, $K$ low, and $C$ transition from high to low.
+\item{$\bullet$} Toggle by making $J$ low, $K$ low, and $C$ transition from high to low.
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question reviews the basic modes of J-K flip-flops, as well as the significance of active-low inputs.
+
+%INDEX% Active low versus active high inputs, on J-K flip-flops
+%INDEX% J-K flip-flop, modes of
+
+%(END_NOTES)
+
+

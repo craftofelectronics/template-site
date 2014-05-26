@@ -1,0 +1,67 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+It is usually necessary to have more than one display digit for a digital system.  The most obvious and direct way of driving multiple 7-segment display units is to use an equal number of BCD-to-7-segment decoders like this:
+
+$$\epsfbox{03035x01.eps}$$
+
+If we are driving the decoder ICs with a microprocessor or microcontroller, this direct technique unfortunately uses a lot of I/O pins.  In this particular case, with three 7-segment displays, we would need to use {\it twelve} output pins on the microcontroller for the three BCD numbers:
+
+$$\epsfbox{03035x02.eps}$$
+
+Due to limited pin count on most MPU and MCU chips, I/O lines are precious.  It would be a shame to waste so many on a simple function such as driving display digits when we could use them for other tasks such as interfacing with memory devices, receiving real-world data from sensors, driving discrete control devices such as lights and solenoids, or communicating with other MPU/MCU systems.  But if each digit requires four output lines for the BCD number, how can we possibly use less than twelve output lines on the processor?
+
+One clever way to do just this exploits {\it persistence of human vision}, by driving only one digit at a time.  Examine the following circuit, then explain how this "multiplexed" display system works with so few output lines.  Also identify what steps the MCU/MPU must take to successfully drive all three digits so the display looks continuous:
+
+$$\epsfbox{03035x03.eps}$$
+
+\underbar{file 03035}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\goodbreak
+
+MCU/MPU steps:
+
+\medskip
+\item{$1.$} Select digit number 1
+\item{$2.$} Output BCD code for digit number 1
+\item{$3.$} Pause for very brief (milliseconds) amount of time
+\item{$4.$} Select digit number 2
+\item{$5.$} Output BCD code for digit number 2
+\item{$6.$} Pause for very brief (milliseconds) amount of time
+\item{$7.$} Select digit number 3
+\item{$8.$} Output BCD code for digit number 3
+\item{$9.$} Pause for very brief (milliseconds) amount of time
+\item{$10.$} Repeat cycle
+\medskip
+
+\vskip 10pt
+
+Follow-up question: what would have to be changed in this circuit to use common-cathode LED 7-segment displays instead of common-anode displays?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Be sure to ask your students where they were able to research multiplexed 7-segment displays, and what they think about this particular technique of producing a "continuous" three-digit decimal display by flashing them very rapidly.  Clever techniques such as this are often necessary to make the most of limited hardware.
+
+By the way, I have omitted the customary LED current-limiting resistors from the schematic diagrams, for brevity's sake.  See if any of your students are able to catch this omission!
+
+%INDEX% Displays, multiplexed
+%INDEX% Multiplexing 7-segment displays
+
+%(END_NOTES)
+
+

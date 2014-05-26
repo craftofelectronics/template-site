@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This shift register circuit drives the four coils of a unipolar stepper motor, one at a time, in a rotating pattern that moves at the pace of the clock.  The drive transistor circuitry ($Q_1$, $Q_2$, and resistors $R_2$ through $R_6$) are shown only for one of the four coils.  The other three shift register outputs have identical drive circuits connected to the respective motor coils:
+
+$$\epsfbox{03905x01.eps}$$
+
+Suppose this stepper motor circuit worked just fine for several years, then suddenly stopped working.  Explain where you would take your first few measurements to isolate the problem, and why you would measure there.
+
+\underbar{file 03905}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+My first step would be to check for the presence of adequate DC power to both the shift register IC and the motor (transistor drive circuitry).  Then, I would use a voltmeter or logic probe to check for pulsing at any one of the shift register's $Q$ outputs.  That would tell me whether the problem was with the shift register or with the power circuitry.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a good question to discuss with your students, as it helps them understand how to "divide and conquer" a malfunctioning system.
+
+%INDEX% Troubleshooting, stepper motor drive circuit
+
+%(END_NOTES)
+
+

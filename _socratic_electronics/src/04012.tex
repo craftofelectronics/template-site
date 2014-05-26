@@ -1,0 +1,89 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The pulse-density modulation (PDM) of a 1-bit oversampled Delta-Sigma modulator circuit may be "decimated" into a multi-bit binary number simply by counting the number of "1" states in a bitstream of fixed length.
+
+\vskip 10pt
+
+\goodbreak
+Take for example the following bitstreams.  Sample the first seven bits of each stream, and convert the equivalent binary numbers based on the number of "high" bits in each seven-bit sample:
+
+\medskip
+\item{$\bullet$} {\tt 001001001001001}
+\vskip 10pt
+\item{$\bullet$} {\tt 101101101101101}
+\vskip 10pt
+\item{$\bullet$} {\tt 010010001100010}
+\vskip 10pt
+\item{$\bullet$} {\tt 010001100010001}
+\vskip 10pt
+\item{$\bullet$} {\tt 111011101110111}
+\medskip
+
+Then, take the same five PDM bitstreams and "decimate" them over a sampling interval of 15 bits.
+
+\underbar{file 04012}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+{\bf Sampling interval = 7 bits}
+
+\medskip
+\item{$\bullet$} {\tt 001001001001001} ; Binary value = 010$_{2}$
+\vskip 10pt
+\item{$\bullet$} {\tt 101101101101101} ; Binary value = 101$_{2}$ or 100$_{2}$
+\vskip 10pt
+\item{$\bullet$} {\tt 010010001100010} ; Binary value = 010$_{2}$ or 011$_{2}$
+\vskip 10pt
+\item{$\bullet$} {\tt 010001100010001} ; Binary value = 011$_{2}$ or 001$_{2}$
+\vskip 10pt
+\item{$\bullet$} {\tt 111011101110111} ; Binary value = 110$_{2}$ or 101$_{2}$
+\medskip
+
+\vskip 10pt
+
+{\bf Sampling interval = 15 bits}
+
+\medskip
+\item{$\bullet$} {\tt 001001001001001} ; Binary value = 0101$_{2}$
+\vskip 10pt
+\item{$\bullet$} {\tt 101101101101101} ; Binary value = 1010$_{2}$
+\vskip 10pt
+\item{$\bullet$} {\tt 010010001100010} ; Binary value = 0101$_{2}$
+\vskip 10pt
+\item{$\bullet$} {\tt 010001100010001} ; Binary value = 0101$_{2}$ 
+\vskip 10pt
+\item{$\bullet$} {\tt 111011101110111} ; Binary value = 1100$_{2}$
+\medskip
+
+\vskip 10pt
+
+Follow-up question: what relationship do you see between {\it sampling speed} and {\it resolution} in this "decimation" process, and how does this relate to the performance of a Delta-Sigma ADC?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+With little effort, your students should be able to see that sampling twice as many bits in the PDM bitstream adds one more bit of resolution to the final binary output.  Such is the nature of so many circuits: that optimization of one performance parameter comes at the expense of another.
+
+Students may question how two (or more!) different decimation results can occur from the same bitstream, especially as shown in the answer for the 7-bit groupings.  The answer is two-part: first, the bitstreams I show are not all perfectly repetitive.  Some change pattern (slightly) mid-way, which leads to different pulse densities in different sections.  The second part to this answer is that the nature of decimation by grouping will inevitably lead to differing results (even when the pattern is perfectly repetitive), and that this is the converter's "way" of resolving an analog quantity lying {\it between} two discrete output states.  In other words, a pair of decimated values of "4" and "5" (100$_{2}$ and 101$_{2}$, respectively) from a perfectly repetitive bitstream suggests an analog value lying somewhere between the discrete integer values of "4" and "5".  Only by sampling groups of bits equal to the period of the PDM repetition (or integer multiples of that repetition) can the digital output precisely and constantly equal the analog input.
+
+%INDEX% ADC, Delta-Sigma
+%INDEX% Delta-Sigma converter, ADC
+%INDEX% Pulse-density modulation (PDM), Delta-Sigma converter
+%INDEX% Sigma-Delta converter, ADC
+
+%(END_NOTES)
+
+

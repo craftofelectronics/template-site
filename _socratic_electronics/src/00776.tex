@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the power factor of this circuit:
+
+$$\epsfbox{00776x01.eps}$$
+
+Then, calculate the size of the capacitor necessary to "correct" the power factor to a value of 1.0, showing the best location of the capacitor in the circuit.
+
+\underbar{file 00776}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Uncorrected power factor = 0.707, lagging
+
+$$\epsfbox{00776x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: when we use capacitors as power factor correction components in an AC power system, the equivalent series resistance (ESR) inside the capacitor becomes a significant factor:
+
+$$\epsfbox{00776x03.eps}$$
+
+Current through this equivalent series resistance produces heat, and when we're dealing with MVARs worth of reactive power in high-current circuits, this heat can be substantial unless ESR is held low by special capacitor designs.  Describe some possible hazards of excessive ESR for a power factor correction capacitor in a high-current circuit.
+
+\vskip 10pt
+
+Challenge question: the ideal location for power factor correction capacitors is at the load terminals, where the reduction in current will be "felt" by all components in the system except the load itself.  However, in real life, power factor correction capacitors are often located at the power plant (the alternator).  Why would anyone choose to locate capacitors there?  What benefit would they provide at all, in that location?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Though there are other methods for correcting power factor in AC circuits, the addition of capacitors is perhaps the simplest.  Ideally, correction capacitors should be added as close to the load terminals as possible, but in real life they are sometimes located at the power plant (near the alternators).  Compare the reduction in conductor currents with the correction capacitor located in different parts of the circuit, and you will see one place in the system where current is reduced no matter where the capacitor is located!
+
+Still, this does not answer the question of why correction capacitors are not always located at the load terminals.  Discuss this with your students and see if you can figure out why (hint: what happens when the load's effective resistance changes, as would happen to an electric motor under varying mechanical loads?).
+
+%INDEX% Power factor correction
+
+%(END_NOTES)
+
+

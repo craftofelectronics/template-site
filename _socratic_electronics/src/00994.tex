@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+What does the parameter $I_{DSS}$ mean for a JFET?  How can we use this figure, along with $V_{GS(off)}$, and $V_{GS}$, to calculate the amount of drain current ($I_D$) for a JFET operating in its active region?  Write the equation for the relationship between these four variables.
+
+\underbar{file 00994}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$I_{DSS}$ is the amount of (regulated) current that will go through a JFET's drain when the gate terminal is shorted to the source terminal.
+
+$$I_D = I_{DSS}\Bigl(1 - {V_{GS} \over V_{GS(off)}}\Bigr)^2$$
+
+Follow-up question: how could you empirically determine the $I_{DSS}$ rating of a JFET?  What sort of circuit would you have to set up in order to test and measure this transistor parameter?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Be sure to ask students where they found this equation!  It should be available from most basic electronics textbooks.  Also, discuss the experimental circuit that would have to be constructed in order to test the shorted-gate drain current of a JFET.  You might want to plan on having your students build this very circuit during class time as an exercise in using JFETs.
+
+%INDEX% I(dss), defined for JFET
+
+%(END_NOTES)
+
+

@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Examine this truth table and corresponding Karnaugh map:
+
+$$\epsfbox{01342x01.eps}$$
+
+Though it may not be obvious from first appearances, the four "high" conditions in the Karnaugh map actually belong to the same group.  To make this more apparent, I will draw a new (oversized) Karnaugh map template, with the Gray code sequences repeated twice along each axis:
+
+$$\epsfbox{01342x02.eps}$$
+
+Fill in this map with the 0 and 1 values from the truth table, and then see if a grouping of four "high" conditions becomes apparent.
+
+\underbar{file 01342}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01342x03.eps}$$
+
+\vskip 10pt
+
+Follow-up question: what does this problem tell us about grouping?  In other words, how can we identify groups of "high" states without having to make oversized Karnaugh maps?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The concept of bit groups extending past the boundaries of a Karnaugh map tends to confuse students.  In fact, it is about the only thing that tends to confuse students about Karnaugh maps!  Simply telling them to group past the borders of the map doesn't really teach them {\it why} the technique is valid.  Here, they should see with little difficulty why the technique works.
+
+And, if for some reason they just can't visualize bit groups past the boundaries of a Karnaugh map, they know they can just draw an oversized map and it will become obvious!
+
+%INDEX% Karnaugh map, identifying clusters of 1's "wrapped" around at borders of map
+
+%(END_NOTES)
+
+

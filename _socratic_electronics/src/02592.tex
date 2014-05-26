@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Some operational amplifiers come equipped with compensation capacitors built inside.  The classic 741 design is one such opamp:
+
+$$\epsfbox{02592x01.eps}$$
+
+Find the compensation capacitor in this schematic diagram, and identify how it provides frequency-dependent negative feedback within the opamp to reduce gain at high frequencies.
+
+\underbar{file 02592}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Identifying the capacitor is easy: it is the only one in the whole circuit!  It couples signal from the collector of $Q_{17}$, which is an active-loaded common-emitter amplifier, to the base of $Q_{16}$, which is an emitter-follower driving $Q_{17}$.  Since $Q_{17}$ inverts the signal applied to $Q_{16}$'s base, the feedback is degenerative.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Answering this question will require a review of basic transistor amplifier theory, specifically different configurations of transistor amplifiers and their respective signal phase relationships.
+
+%INDEX% Compensation, opamp (internal)
+%INDEX% Compensation capacitor, internal to opamp
+%INDEX% Opamp compensation (internal)
+
+%(END_NOTES)
+
+

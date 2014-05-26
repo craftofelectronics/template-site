@@ -1,0 +1,70 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Often times, component failures in transistor circuits will cause significant shifting of DC (quiescent) parameters.  This is a benefit for the troubleshooter, as it means many faults may be located simply by measuring DC voltages (with no signal input) and comparing those voltages against what is expected.  The most difficult part, though, is determining what DC voltage levels to expect at various points in an amplifier circuit.
+
+Examine this two-stage audio amplifier circuit, and estimate the DC voltages at all the points marked by bold letters and arrows ({\bf A} through {\bf G}), with reference to ground.  Assume that conducting PN junctions will drop 0.7 volts, that loading effects on the voltage divider are negligible, and that the transistor's collector and emitter currents are virtually the same magnitude:
+
+$$\epsfbox{01588x01.eps}$$
+
+$V_A \approx$
+
+$V_B \approx$
+
+$V_C \approx$
+
+$V_D \approx$
+
+$V_E \approx$
+
+$V_F \approx$
+
+$V_G \approx$
+
+\vskip 10pt
+
+\underbar{file 01588}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$V_A =$ 0 volts (precisely)
+
+$V_B \approx$ 0.98 volts
+
+$V_C \approx$ 0.28 volts
+
+$V_D \approx$ 7.1 volts
+
+$V_E \approx$ 6.4 volts
+
+$V_F =$ 0 volts (precisely)
+
+$V_G =$ 9 volts (precisely)
+
+\vskip 10pt
+
+Follow-up question: explain why voltages $V_A$, $V_F$, and $V_G$ can be precisely known, while all the other DC voltages in this circuit are approximate.  Why is this helpful to know when troubleshooting a faulted amplifier circuit?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The calculations used to estimate these values are quite simple, and should prove no trouble for students to derive who have a basic knowledge of DC circuit calculations (voltage dividers, series voltage drops, etc.).
+
+%INDEX% Amplifier, multi-stage
+%INDEX% Amplifier, estimating DC (quiescent) voltages in
+
+%(END_NOTES)
+
+

@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The purpose of this circuit is to provide indication of when the rotary encoder shaft is in a particular position (matching the setting of the 8-position switch array):
+
+$$\epsfbox{03845x01.eps}$$
+
+Trace the directions of all currents in this circuit, {\it using electron flow notation}, when the encoder position matches the pre-set code entered at the switches.  Then, identify specific component failures that could result in the solenoid coil not energizing in this condition.
+
+\underbar{file 03845}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{03845x02.eps}$$
+
+Potential component faults resulting in non-energization of solenoid:
+
+\medskip
+\item{$\bullet$} MOSFET failed open (drain-to-source)
+\item{$\bullet$} Broken wire between MOSFET drain and solenoid coil
+\item{$\bullet$} Loss of power ($V_{CC}$) to comparator circuit
+\item{$\bullet$} Loss of power to encoder (only if switch code is {\it not} 0000 0000)
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss fault options with your students, asking them to explain {\it why} each proposed fault would result in the solenoid not energizing.
+
+%INDEX% Troubleshooting, digital magnitude comparator circuit
+
+%(END_NOTES)
+
+

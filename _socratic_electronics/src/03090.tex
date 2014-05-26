@@ -1,0 +1,59 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Substitution is a technique whereby we let a variable represent (stand in the place of) another variable or an expression made of other variables.  One application where we might use substitution is when we must manipulate an algebraic expression containing multiple instances of the same sub-expression.  For example, suppose we needed to manipulate this equation to solve for $c$:
+
+$$1 = {{a + b(d^2 - f^2) + c} \over {d^2 - f^2}}$$
+
+The sub-expression $d^2 - f^2$ appears twice in this equation.  Wouldn't it be nice if we had something simpler to put in its place during the time we were busy manipulating the equation, if for no other reason than to have less variables to write on our paper while showing all the steps to our work?  Well, we can do this!
+
+Substitute the variable $x$ for the sub-expression $d^2 - f^2$, and then solve for $c$.  When you are done manipulating the equation, back-substitute $d^2 - f^2$ in place of $x$.
+
+\underbar{file 03090}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Original equation:
+
+$$1 = {{a + b(d^2 - f^2) + c} \over {d^2 - f^2}}$$
+
+\vskip 20pt
+
+After substituting $x$:
+
+$$1 = {{a + bx + c} \over x}$$
+
+\vskip 20pt
+
+After manipulating the equation to solve for $c$:
+
+$$c = x(1-b) - a$$
+
+\vskip 20pt
+
+Back-substituting the original sub-expression in place of $x$:
+
+$$c = (d^2-f^2)(1-b) - a$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Here I show an application of substitution that is useful only because the human brain has an easier time dealing with a single symbol than with a collection of different symbols.  More powerful uses of algebraic substitution exist, of course, but this is a start for students who are new to the concept.
+
+%INDEX% Algebra, substitution
+
+%(END_NOTES)
+
+

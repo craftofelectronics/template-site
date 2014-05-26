@@ -1,0 +1,74 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Draw a phasor diagram showing the trigonometric relationship between resistance, reactance, and impedance in this series circuit:
+
+$$\epsfbox{01827x01.eps}$$
+
+Show mathematically how the resistance and reactance combine in series to produce a total impedance (scalar quantities, all).  Then, show how to analyze this same circuit using complex numbers: regarding component as having its own impedance, demonstrating mathematically how these impedances add up to comprise the total impedance (in both polar and rectangular forms).
+
+\underbar{file 01827}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01827x02.eps}$$
+
+\goodbreak
+
+\noindent
+{\bf Scalar calculations}
+
+$R = 2.2 \hbox{ k}\Omega$ \hskip 20pt $X_L = 1.495 \hbox{ k}\Omega$
+
+$Z_{series} = \sqrt{R^2 + {X_L}^2}$
+
+$Z_{series} = \sqrt{2200^2 + 1495^2} = 2660 \> \Omega$
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent
+{\bf Complex number calculations}
+
+${\bf Z_R} = 2.2 \hbox{ k}\Omega \> \angle \> 0^o$ \hskip 20pt ${\bf Z_L} = 1.495 \hbox{ k}\Omega \> \angle \> 90^o$ \hskip 10pt (Polar form)
+
+${\bf Z_R} = 2.2 \hbox{ k}\Omega + j0 \> \Omega$ \hskip 20pt ${\bf Z_L} = 0 \> \Omega + j1.495 \hbox{ k}\Omega$ \hskip 10pt (Rectangular form)
+
+\vskip 5pt
+
+${\bf Z_{series}} = {\bf Z_1} + {\bf Z_2} + \cdots {\bf Z_n}$ \hskip 10pt (General rule of series impedances)
+
+${\bf Z_{series}} = {\bf Z_R} + {\bf Z_L}$ \hskip 10pt (Specific application to this circuit)
+
+\vskip 5pt
+
+${\bf Z_{series}} = 2.2 \hbox{ k}\Omega \> \angle \> 0^o + 1.495 \hbox{ k}\Omega \> \angle \> 90^o = 2.66 \hbox{ k}\Omega \> \angle \> 34.2^o$ 
+
+${\bf Z_{series}} = (2.2 \hbox{ k}\Omega + j0 \> \Omega) + (0 \> \Omega + j1.495 \hbox{ k}\Omega) = 2.2 \hbox{ k}\Omega + j1.495 \hbox{ k}\Omega$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I want students to see that there are two different ways of approaching a problem such as this: with {\it scalar} math and with {\it complex number} math.  If students have access to calculators that can do complex-number arithmetic, the "complex" approach is actually simpler for series-parallel combination circuits, and it yields richer (more informative) results.
+
+Ask your students to determine which of the approaches most resembles DC circuit calculations.  Incidentally, this is why I tend to prefer complex-number AC circuit calculations over scalar calculations: because of the conceptual continuity between AC and DC.  When you use complex numbers to represent AC voltages, currents, and impedances, almost all the rules of DC circuits still apply.  The big exception, of course, is calculations involving {\it power}.
+
+%INDEX% Impedance calculation, series LR circuit (with phasor diagram)
+%INDEX% Phasor diagram
+
+%(END_NOTES)
+
+

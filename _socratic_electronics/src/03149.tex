@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Large electric motors are often equipped with some form of {\it soft-start} control, which applies power gradually instead of all at once (as in {\it "across the line"} starting).  Here is an example of a simple "soft start" control system:
+
+$$\epsfbox{03149x01.eps}$$
+
+Analyze this ladder logic diagram, and explain how it starts up the electric motor more gently than an "across-the-line" starter would.
+
+\underbar{file 03149}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+In this system, resistors limit the motor's line current during the initial start-up period, and then are bypassed after the time delay relay times out.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+After being accustomed to seeing resistors drawn as zig-zag symbols, it may take some students a few moments to realize the "square wave" components in the motor power diagram are actually resistors.  Confusing?  Yes, but this is the standard symbolism for ladder-logic diagrams!
+
+%INDEX% Time delay relay circuit, electric motor control
+
+%(END_NOTES)
+
+

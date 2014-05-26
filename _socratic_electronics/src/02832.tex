@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Shown here is the ladder logic diagram for a fire alarm system, where the activation of any alarm switch opens that (normally-closed) switch contact and sounds the alarm:
+
+$$\epsfbox{02832x01.eps}$$
+
+Write the Boolean expression for this relay circuit, then simplify that expression using DeMorgan's Theorem and draw a new relay circuit implementing the simplified expression.
+
+\underbar{file 02832}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Original circuit expression:
+
+$$\overline{ \overline{A} \> \overline{B} \> \overline{C} \> \overline{D} \> \overline{E} }$$
+
+Simplified expression and circuit:
+
+$$A + B + C + D + E$$
+
+$$\epsfbox{02832x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: which circuit (the original or the one show above) is more practical from a fail-safe standpoint?  In other words, which circuit will give the {\it safest} result in the event of a switch or wiring failure?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Here students see that even though two circuits are functionally identical (at least according to their respective Boolean expressions), they may not behave quite the same under adverse conditions (i.e. faulted switches or wiring).  This is a very important thing for them to see, because it underscores the practical need to look beyond the immediate design criteria (Boolean function) and consider other parameters (failure mode).
+
+%INDEX% DeMorgan's Theorem, Boolean algebra
+%INDEX% Ladder logic diagram, conversion of rung functions to Boolean expressions
+
+%(END_NOTES)
+
+

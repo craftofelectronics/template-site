@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A technician builds her own audio test set for use in troubleshooting audio electronic circuitry.  The test set is essentially a sensitive detector, allowing low-power audio signals to be heard:
+
+$$\epsfbox{00983x01.eps}$$
+
+What purpose do the two diodes serve in this circuit?  Hint: if you remove the diodes from the circuit, you will not be able to hear the difference in most cases!
+
+\underbar{file 00983}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The diodes serve to protect the listener from very loud volumes, in the event of accidental connection to a large voltage source.
+
+\vskip 10pt
+
+Review question: the purpose of the transformer is to increase the effective impedance of the headphones, from 8 $\Omega$ to a much larger value.  Calculate this larger value, given a transformer turns ratio of 22:1.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+My first encounter with this application of diodes came when I was quite young, soldering together a kit multimeter.  I was very confused why the meter movement had two diodes connected to it in parallel like this.  All I knew about diodes at the time was that they acted as one-way valves for electricity.  I did not understand that they had a substantial forward voltage drop, which is the key to understanding how they work in applications such as this.  While this may seem to be a rather unorthodox use of diodes, it is actually rather common.
+
+Incidentally, I {\it highly} recommend that students build such an audio test set for their own experimental purposes.  Even with no amplifier, this instrument is amazingly sensitive.  An inexpensive 120 volt/6 volt step-down power transformer works well as an impedance-matching transformer, and is insulated enough to provide a good margin of safety (electrical isolation) for most applications.  An old microwave over power transformer works even better (when used in a step-down configuration), giving several thousand volts worth of isolation between primary and secondary windings.  
+
+The circuit even works to detect DC signals and AC signals with frequencies beyond the audio range.  By making and breaking contact with the test probe(s), "scratching" sounds will be produced if a signal of sufficient magnitude is present.  With my cheap "Radio Shack" closed-cup headphones, I am able to reliably detect DC currents of less than 0.1 $\mu$A with my detector!  Your mileage may vary, depending on how good your hearing is, and how sensitive your headphones are.
+
+I have used my own audio detector many times in lieu of an oscilloscope to detect distortion in audio circuits (very rough assessments, mind you, not precision at all) and even as a detector of DC voltage (detecting the photovoltaic output voltage of a regular LED).  It may be used as a sensitive "null" instrument in both AC and DC bridge circuits (again, DC detection requires you to make and break contact with the circuit, listening for "clicking" or "scratching" sounds in the headphones).
+
+Another fun thing to do with this detector is connect it to an open coil of wire and "listen" for AC magnetic fields.  Place such a coil near a working computer hard drive, and you can hear the read/write head servos in action!
+
+If it isn't clear to you already, I am very enthusiastic about the potential of this circuit for student engagement and learning . . .
+
+%INDEX% Clipper circuit
+%INDEX% Sensitive audio detector circuit
+
+%(END_NOTES)
+
+

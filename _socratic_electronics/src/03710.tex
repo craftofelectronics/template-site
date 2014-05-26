@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The equation solving for drain current through a JFET is as follows:
+
+$$I_D = I_{DSS}\Bigl(1 - {V_{GS} \over V_{GS(off)}}\Bigr)^2$$
+
+\noindent
+Where,
+
+$I_D$ = Drain current
+
+$I_{DSS}$ = Drain current with the Gate terminal shorted to the Source terminal
+
+$V_{GS}$ = Applied Gate-to-Source voltage
+
+$V_{GS(off)}$ = Gate-to-Source voltage necessary to "cut off" the JFET
+
+\vskip 10pt
+
+Algebraically manipulate this equation to solve for $V_{GS}$, and explain why this new equation might be useful to us.
+
+\underbar{file 03710}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$V_{GS} = V_{GS(off)}\Biggl( 1 - \sqrt{I_D \over I_{DSS}} \Biggr)$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question is primarily an exercise in algebraic manipulation.  Have your students show their work in front of the class, to show others the strategy involved to manipulate such an equation.
+
+%INDEX% Characteristic equation for JFET
+
+%(END_NOTES)
+
+

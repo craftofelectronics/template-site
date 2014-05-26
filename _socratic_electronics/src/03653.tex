@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A passive differentiator is used to "shorten" the pulse width of a square wave by sending the differentiated signal to a "level detector" circuit, which outputs a "high" signal (+5 volts) whenever the input exceeds 3.5 volts and a "low" signal (0 volts) whenever the input drops below 3.5 volts:
+
+$$\epsfbox{03653x01.eps}$$
+
+Each time the differentiator's output voltage signal spikes up to +5 volts and quickly decays to 0 volts, it causes the level detector circuit to output a narrow voltage pulse, which is what we want.
+
+Calculate how wide this final output pulse will be if the input (square wave) frequency is 2.5 kHz.
+
+\underbar{file 03653}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$t_{pulse}$ = 11.77 $\mu$s 
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question requires students to calculate a length of time in an RC circuit, given specific voltage levels and component values.  It is a very practical question, as it may be necessary to build or troubleshoot such a circuit some day!
+
+%INDEX% Passive differentiator circuit, calculating output pulse time
+
+%(END_NOTES)
+
+

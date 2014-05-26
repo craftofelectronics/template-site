@@ -1,0 +1,61 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Test leads for DC voltmeters are usually just two individual lengths of wire connecting the meter to a pair of probes.  For highly sensitive instruments, a special type of two-conductor cable called {\it coaxial cable} is generally used instead of two individual wires.  Coaxial cable -- where a center conductor is "shielded" by an outer braid or foil that serves as the other conductor -- has excellent immunity to induced "noise" from electric and magnetic fields:
+
+$$\epsfbox{00641x01.eps}$$
+
+When measuring high-frequency AC voltages, however, the parasitic capacitance and inductance of the coaxial cable may present problems.  We may represent these distributed characteristics of the cable as "lumped" parameters: a single capacitor and a single inductor modeling the cable's behavior:
+
+$$\epsfbox{00641x02.eps}$$
+
+Typical parasitic values for a 10-foot cable would be 260 pF of capacitance and 650 $\mu$H of inductance.  The voltmeter itself, of course, is not without its own inherent impedances, either.  For the sake of this example, let's consider the meter's "input impedance" to be a simple resistance of 1 M$\Omega$.
+
+Calculate what voltage the meter would register when measuring the output of a 20 volt AC source, at these frequencies:
+
+\medskip
+\item{$\bullet$} $f =$ 1 Hz ; $V_{meter} =$
+\item{$\bullet$} $f =$ 1 kHz ; $V_{meter} =$
+\item{$\bullet$} $f =$ 10 kHz ; $V_{meter} =$
+\item{$\bullet$} $f =$ 100 kHz ; $V_{meter} =$
+\item{$\bullet$} $f =$ 1 MHz ; $V_{meter} =$
+\medskip
+
+\underbar{file 00641}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} $f =$ 1 Hz ; $V_{meter} =$ 20 V
+\item{$\bullet$} $f =$ 1 kHz ; $V_{meter} =$ 20 V
+\item{$\bullet$} $f =$ 10 kHz ; $V_{meter} =$ 20.01 V
+\item{$\bullet$} $f =$ 100 kHz ; $V_{meter} =$ 21.43 V
+\item{$\bullet$} $f =$ 1 MHz ; $V_{meter} =$ 3.526 V
+\medskip
+
+\vskip 10pt
+
+Follow-up question: explain why we see a "peak" at 100 kHz.  How can the meter possibly see a voltage {\it greater} than the source voltage (20 V) at this frequency?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+As your students what this indicates about the use of coaxial test cable for AC voltmeters.  Does it mean that coaxial test cable is unusable for any measurement application, or may we use it with little or no concern in some applications?  If so, which applications are these?
+
+%INDEX% Coaxial cable, intrinsic capacitance and inductance
+
+%(END_NOTES)
+
+

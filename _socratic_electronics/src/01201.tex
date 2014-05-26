@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The circuit shown in this diagram is used to transmit a numerical value from one location to another, by means of switches and lights:
+
+$$\epsfbox{01201x01.eps}$$
+
+Given the switches and lights shown, any whole number between 0 and 999 may be transmitted from the switch location to the light location.
+
+In fact, the arrangement shown here is not too different from an obsolete design of electronic base-ten indicators known as {\it Nixie tube} displays, where each digit was represented by a neon-filled glass tube in which one of ten distinct electrodes (each in the shape of a digit, 0-9) could be energized, providing glowing numerals for a person to view.
+
+However, the system shown in the above diagram is somewhat wasteful of wiring.  If we were to use the same thirty-one conductor cable, we could represent a much broader range of numbers if each conductor represented a distinct binary bit, and we used binary rather than base-ten for the numeration system:
+
+$$\epsfbox{01201x02.eps}$$
+
+How many unique numbers are representable in this simple communications system?  Also, what is the greatest individual number which may be sent from the "Sender" location to the "Receiver" location?
+
+\underbar{file 01201}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+In this system, with a "width" of 30 bits, we are able to represent one billion, seventy three million, seven hundred forty one thousand, eight hundred twenty four unique numbers.  The greatest individual number which may be communicated is one less than this total.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to allow students to consider an electric circuit that communicates digital quantities from one location to another, rather than abstractly discuss numeration systems.  It also provides a more practical context in which to understand maximum count in a numeration system.
+
+%INDEX% Nixie tube
+%INDEX% Maximum count, binary
+
+%(END_NOTES)
+
+

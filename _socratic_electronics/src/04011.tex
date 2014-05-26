@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The {\it Delta-Sigma} or {\it Sigma-Delta} analog-to-digital converter works on the principle of {\it oversampling}, whereby a low-resolution ADC repeatedly samples the input signal in a feedback loop.  In many cases, the ADC used is nothing more than a comparator (a 1-bit ADC!), the output of this ADC subtracted from the input signal and integrated over time in an attempt to achieve a balance near 0 volts at the output of the integrator.  The result is a {\it pulse-density modulated} (PDM) "bitstream" of 1-bit digital data which may be filtered and {\it decimated} (converted to a binary word of multiple bits):
+
+$$\epsfbox{04011x01.eps}$$
+
+\goodbreak
+Explain what this PDM bitstream would look like for the following input voltage conditions:
+
+\medskip
+\item{$\bullet$} $V_{in}$ = 0 volts 
+\item{$\bullet$} $V_{in}$ = $V_{DD}$ 
+\item{$\bullet$} $V_{in}$ = $V_{ref}$ 
+\medskip
+
+\underbar{file 04011}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} $V_{in}$ = 0 volts ; bitstream = {\tt 00000000 . . .}
+\item{$\bullet$} $V_{in}$ = $V_{DD}$ ; bitstream = {\tt 11111111 . . .}
+\item{$\bullet$} $V_{in}$ = $V_{ref}$ ; bitstream = {\tt 01010101 . . .}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In order to answer this question, students must have a good grasp of how the summing integrator works.  Discuss with them how the feedback loop's "goal" is to maintain the integrator output at the reference voltage ($V_{ref}$), and how the 1-bit ADC can only make adjustments to the integrator's output by driving it upward or downward by the same analog quantity every clock pulse.
+
+%INDEX% ADC, Delta-Sigma
+%INDEX% Delta-Sigma converter, ADC
+%INDEX% Pulse-density modulation (PDM), Delta-Sigma converter
+%INDEX% Sigma-Delta converter, ADC
+
+%(END_NOTES)
+
+

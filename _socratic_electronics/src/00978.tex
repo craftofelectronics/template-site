@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An interesting addition to the basic Class B push-pull amplifier circuit is {\it overcurrent protection}, in the form of two more transistors and two more resistors added to the circuit:
+
+$$\epsfbox{00978x01.eps}$$
+
+This form of overcurrent protection is common in voltage-regulated DC power supply circuitry, but it works well in amplifier circuitry, too.  Explain how the additional transistors and resistors work together to protect the main power transistors from damage in the event of an overload.
+
+\underbar{file 00978}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If there happens to be excessive current going through a power transistor, the voltage drop across that emitter resistor will be enough to turn on the auxiliary transistor, which then "shunts" the overloaded power transistor's base current to the load.
+
+\vskip 10pt
+
+Challenge question: what mathematical procedure would you use to size the emitter resistors?  How much resistance is appropriate in this application?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+If students are having difficulty understanding how this circuitry works, it might be worthwhile to show them this circuit (from a regulated DC power supply):
+
+$$\epsfbox{00978x02.eps}$$
+
+Ask them how transistor Q2 in this circuit works to protect transistor Q1 from overload.
+
+\vskip 10pt
+
+An interesting way to explain the operation of this form of overcurrent protection is to say that when the auxiliary transistor begins to conduct (shorting base current away from the main power transistor), it effectively decreases the $\beta$ of the main power transistor.  By suddenly making the main power transistor less effective at amplifying, the signal source "feels" more of the load.  This causes the signal source's voltage to sag, ultimately limiting load current in the process.
+
+%INDEX% Overcurrent protection, in push-pull amplifier circuit
+
+%(END_NOTES)
+
+

@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+One of the simplest transistor "logic" circuits used in computer circuitry is the so-called {\it inverter gate}.  Its logic diagram symbol is this:
+
+$$\epsfbox{00503x02.eps}$$
+
+Inverters are often bundled six to a "DIP" (Dual-Inline Package) module, where all gates share the same two power supply connections ("$V_{cc}$" and "Ground"), like this:
+
+$$\epsfbox{00503x03.eps}$$
+
+When constructed with bipolar junction transistors, the internal schematic diagram of a single inverter gate looks something like this:
+
+$$\epsfbox{00503x01.eps}$$
+
+Being a digital logic circuit, it only "understands" two states: on and off.  As you can see, a SPDT switch provides signal input into the logic gate, either full supply voltage ($V_{CC}$) or no voltage at all (Gnd).
+
+Determine the voltage across the load resistance for each of these switch states.  Based on your analysis, what is the logical function of an "inverter" gate?
+
+\underbar{file 00503}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+An "inverter" gate simply reverses the logic state of the input.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+There is much to analyze in this circuit, and this question is not intended to be a full introduction to digital logic.  It does, however, provide a preview of things to come, as well as an excellent opportunity to analyze diode and transistor circuitry in the simplest possible way: either fully "on" or fully "off".
+
+One tactic I have found useful as an instructor for analyzing complex circuits in front of a class is to project the image onto a whiteboard using a bright computer projector.  Then, you may use dry-erase markers on the whiteboard to "comment" the diagram with voltage and current notations as you proceed to analyze the circuit with your students.  Analyzing the circuit for a different logic state is easy: merely erase the "comments" made previously, and the schematic itself is unchanged, ready to be "marked up" again.
+
+%INDEX% Inverter gate, internal schematic (TTL)
+%INDEX% Transistor switch circuit (BJT)
+
+%(END_NOTES)
+
+

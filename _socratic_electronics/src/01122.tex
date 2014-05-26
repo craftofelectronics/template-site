@@ -1,0 +1,38 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+One of the problems with capacitively-coupled amplifier circuits is poor low-frequency response: as the input signal frequency decreases, all capacitive reactances increase, leading to a decreased voltage gain.  One solution to this problem is the addition of a capacitor in the collector current path of the initial transistor stage:
+
+$$\epsfbox{01122x01.eps}$$
+
+Explain how the presence of this "compensating" capacitor helps to overcome the loss of gain normally experienced as a result of the other capacitors in the circuit.
+
+\underbar{file 01122}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The additional capacitor's rising reactance at low frequencies boosts the gain of the first transistor stage by increasing the impedance from the first transistor's collector to the +V power supply rail.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This technique is commonly used in video amplifier circuits, although a complete video amplifier circuit would not be this crude (no peaking coils).
+
+%INDEX% Amplifier, interstage coupling
+%INDEX% Amplifier, low-frequency compensation
+
+%(END_NOTES)
+
+

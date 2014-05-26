@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In this power-line carrier system, a pair of coupling capacitors connects a high-frequency "Transmitter" unit to two power line conductors, and a similar pair of coupling capacitors connects a "Receiver" unit to the same two conductors:
+
+$$\epsfbox{01394x01.eps}$$
+
+While coupling capacitors alone are adequate to perform the necessary filtering function needed by the communications equipment (to prevent damaged from the high-voltage electrical power also carried by the lines), that signal coupling may be made more efficient by the introduction of two {\it line tuning} units:
+
+$$\epsfbox{01394x02.eps}$$
+
+Explain why the addition of more components (in series, no less!) provides a better "connection" between the high-frequency Transmitter and Receiver units than coupling capacitors alone.  Hint: the operating frequency of the communications equipment is fixed, or at least variable only over a narrow range.
+
+\underbar{file 01394}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The introduction of the line-tuning units increases the efficiency of signal coupling by exploiting the principle of {\it resonance} between series-connected capacitors and inductors.
+
+\vskip 10pt
+
+Challenge question: there are many applications in electronics where we couple high-frequency AC signals by means of capacitors alone.  If capacitive reactance is any concern, we just use capacitors of large enough value that the reactance is minimal.  Why would this not be a practical option in a power-line carrier system such as this?  Why could we not (or why {\it would} we not) just choose coupling capacitors with very high capacitances, instead of adding extra components to the system?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Although power line carrier technology is not used as much for communication in high-voltage distribution systems as it used to be -- now that microwave, fiber optic, and satellite communications technology has come of age -- it is still used in lower voltage power systems including residential (home) wiring.  Ask your students if they have heard of any consumer technology capable of broadcasting any kind of data or information along receptacle wiring.  "X10" is a mature technology for doing this, and at this time (2004) there are devices available on the market allowing one to plug telephones into power receptacles to link phones in different rooms together without having to add special telephone cabling.
+
+I think this is a really neat application of resonance: the complementary nature of inductors to capacitors works to overcome the less-than-ideal coupling provided by capacitors alone.  Discuss the challenge question with your students, asking them to consider some of the practical limitations of capacitors, and how an inductor/capacitor resonant pair solves the line-coupling problem better than an oversized capacitor.
+
+%INDEX% Power line carrier system
+
+%(END_NOTES)
+
+

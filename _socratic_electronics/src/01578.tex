@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An electrician is troubleshooting a faulty light circuit, where the power source and light bulb are far removed from one another:
+
+$$\epsfbox{01578x01.eps}$$
+
+As you can see in the diagram, there are several terminal blocks ("TB") through which electrical power is routed to the light bulb.  These terminal blocks provide convenient connection points to join wires together, enabling sections of wire to be removed and replaced if necessary, without removing and replacing {\it all} the wiring.
+
+The electrician is using a voltmeter to check for the presence of voltage between pairs of terminals in the circuit.  The terminal blocks are located too far apart to allow for voltage checks between blocks (say, between one connection in TB2 and another connection in TB3).  The voltmeter's test leads are only long enough to check for voltage between pairs of connections at each terminal block.
+
+In the next diagram, you can see the electrician's voltage checks, in the sequence that they were taken:
+
+$$\epsfbox{01578x02.eps}$$
+
+Based on the voltage indications shown, can you determine the location of the circuit fault?  What about the electrician's choice of steps -- do you think the voltage measurements taken were performed in the most efficient sequence, or would you recommend a different order to save time?
+
+\underbar{file 01578}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The fault is located somewhere between TB3 and TB4.  Whether or not the electrician's sequence was the most efficient depends on two factors not given in the problem:
+
+\medskip
+\item{$\bullet$} The distance between terminal blocks.
+\item{$\bullet$} The time required to gain access for a voltage check, upon reaching the terminal block location.
+\medskip
+
+Follow-up question: describe a scenario where the given sequence of voltage readings would be the most efficient.  Describe another scenario where a different sequence of voltage readings could have saved time in locating the problem.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+One of the most common troubleshooting techniques taught to technicians is the so-called "divide and conquer" method, whereby the system or signal path is divided into halves with each measurement, until the location of the fault is pinpointed.  However, there are some situations where it might actually save time to perform measurements in a linear progression (from one end to the other, until the power or signal is lost).  Efficient troubleshooters never limit themselves to a rigid methodology if other methods are more efficient.
+
+%INDEX% Troubleshooting, simple circuit
+%INDEX% Troubleshooting strategy, "divide and conquer"
+
+%(END_NOTES)
+
+

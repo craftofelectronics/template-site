@@ -1,0 +1,58 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+If both these circuits are energized by an AC sine-wave source providing a perfectly undistorted signal, the resulting output waveforms will differ in phase and possibly in amplitude, but not in shape:
+
+$$\epsfbox{01600x01.eps}$$
+
+If, however, the excitation voltage is slightly distorted, one of the outputs will be more sinusoidal than the other.  Explain whether it is the differentiator or the integrator that produces the signal most resembling a pure sine wave, and why.
+
+Hint: I recommend building this circuit and powering it with a triangle wave, to simulate a mildly distorted sine wave.
+
+\underbar{file 01600}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The {\it differentiator} circuit will output a much more distorted waveshape, because differentiation magnifies harmonics:
+
+$${d \over dt} \left( \sin t \right) = \cos t$$
+
+$${d \over dt} \left( \sin 2t \right) = 2 \cos 2t$$
+
+$${d \over dt} \left( \sin 3t \right) = 3 \cos 3t$$
+
+$${d \over dt} \left( \sin 4t \right) = 4 \cos 4t$$
+
+$$\cdots$$
+
+$${d \over dt} \left( \sin nt \right) = n \cos nt$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+As an interesting footnote, this is precisely why differentiation is rarely performed on real-world signals.  Since the frequency of noise often exceeds the frequency of the signal, differentiating a "noisy" signal will only lead to a decreased signal-to-noise ratio.  
+
+For a practical example of this, tell your students about vibration measurement, where it is more common to calculate velocity based on time-integration of an acceleration signal than it is to calculate acceleration based on time-differentiation of a velocity signal.
+
+%INDEX% Differentiator circuit, passive
+%INDEX% Passive differentiator circuit
+%INDEX% Integrator circuit, passive
+%INDEX% Passive integrator circuit
+
+%(END_NOTES)
+
+

@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A technician decides to use a potentiometer as a speed control for an electric motor.  The potentiometer has a resistance rating of 10 $\Omega$ and a power rating of 25 watts:
+
+$$\epsfbox{00340x01.eps}$$
+
+When operating the motor at a voltage of 16 volts and a current of 2 amps, though, smoke begins to pour out of the potentiometer, indicating that its power rating is being exceeded.
+
+The technician is perplexed!  According to his calculations, the potentiometer should be dissipating less than 25 watts of power.  Why, then, is a potentiometer rated for 25 watts burning up under this condition?
+
+\underbar{file 00340}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The power rating of a potentiometer is based on the heat dispersing ability of the {\it entire} resistive element.  The actual power dissipation rating of a potentiometer must be "de-rated" for wiper positions not utilizing the whole length of the resistive element.
+
+\vskip 10pt
+
+Challenge question: based on the voltage and current values measured in this circuit (16 volts across the motor, 24 volts from the source, and 2 amps of current through it all), determine how badly the potentiometer is being overpowered.  In other words, calculate the de-rated power rating of the potentiometer and compare that against the amount of power it is actually dissipating in this condition.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+A very practical and important lesson, learned after watching students send many potentiometers to an early demise.
+
+In order to answer the challenge question, students must determine the pot's setting as a percentage between 0\% (0 $\Omega$) and 100\% (10 $\Omega$), and use that setting to estimate power de-rating.  It is safe to assume a linear power derating proportional to wiper position.
+
+%INDEX% De-rating components for less than advertised power
+%INDEX% Potentiometer, power rating of
+
+%(END_NOTES)
+
+

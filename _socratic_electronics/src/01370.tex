@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Flip-flops often come equipped with {\it asynchronous input lines} as well as synchronous input lines.  This J-K flip-flop, for example, has both "preset" and "clear" asynchronous inputs:
+
+$$\epsfbox{01370x01.eps}$$
+
+Describe the functions of these inputs.  Why would we ever want to use them in a circuit?  Explain what the "synchronous" inputs are, and why they are designated by that term.
+
+Also, note that both of the asynchronous inputs are {\it active-low}.  As a rule, asynchronous inputs are almost always active-low rather than active-high, even if all the other inputs on the flip-flop are active-high.  Why do you suppose this is?
+
+\underbar{file 01370}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+"Asynchronous" inputs force the outputs to either the "set" or "reset" state independent of the clock.  "Synchronous" inputs have control over the flip-flop's outputs only when the clock pulse allows.
+
+As for why the asynchronous inputs are active-low, I won't directly give you the answer.  But I will give you a hint: consider a {\it TTL} implementation of this flip-flop.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Note to your students that sometimes the Preset and Clear inputs are called {\it direct set} and {\it direct reset}, respectively.  Review with your students what it means for an input to be "active-low" versus "active-high."  Ask them what consequences might arise if a circuit designer misunderstood the input states and failed to provide the right type of signal to the circuit.
+
+%INDEX% Asynchronous inputs, flip-flop
+
+%(END_NOTES)
+
+

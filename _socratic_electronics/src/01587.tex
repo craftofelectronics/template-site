@@ -1,0 +1,67 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In order to successfully troubleshoot any electronic circuit to the component level, one must have a good understanding of each component's function within the context of that circuit.  Transistor amplifiers are no exception to this rule.  The following schematic shows a simple, two-stage audio amplifier circuit:
+
+$$\epsfbox{01587x01.eps}$$
+
+Identify the role of the following components in this audio amplifier circuit:
+
+\medskip
+\item{$\bullet$} The $0.47 \> \mu \hbox{F}$ capacitor connected to the microphone
+\item{$\bullet$} The $220 \hbox{ k} \Omega$ and $27 \hbox{ k} \Omega$ resistor pair
+\item{$\bullet$} The $4.7 \> \mu \hbox{F}$ electrolytic capacitor connected across the $1.5 \hbox{ k} \Omega$ resistor
+\item{$\bullet$} The $33 \> \mu \hbox{F}$ electrolytic capacitor connected to the speaker
+\item{$\bullet$} The $47 \> \mu \hbox{F}$ electrolytic capacitor connected to the power supply rail
+\medskip
+
+Additionally, answer the following questions concerning the circuit's design:
+
+\medskip
+\item{$\bullet$} What configuration is each stage (common-base, common-collector, common-emitter)?
+\item{$\bullet$} Why not just use one transistor stage to drive the speaker?  Why is an additional stage necessary?
+\item{$\bullet$} What might happen if the $47 \> \mu \hbox{F}$ "decoupling" capacitor were not in the circuit? 
+\item{$\bullet$} Why does the second stage of the amplifier not need its own voltage divider to set bias voltage as the first stage does?
+\medskip
+
+\underbar{file 01587}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} The $0.47 \> \mu \hbox{F}$ capacitor connected to the microphone: {\it passes (AC) audio signal, blocks DC bias voltage from reaching microphone}
+\item{$\bullet$} The $220 \hbox{ k} \Omega$ and $27 \hbox{ k} \Omega$ resistor pair: {\it sets DC bias voltage for first transistor stage}
+\item{$\bullet$} The $4.7 \> \mu \hbox{F}$ electrolytic capacitor connected across the $1.5 \hbox{ k} \Omega$ resistor: {\it bypasses (AC) audio signal around emitter resistor, for maximum AC voltage gain}
+\item{$\bullet$} The $33 \> \mu \hbox{F}$ electrolytic capacitor connected to the speaker: {\it couples (AC) audio signal to speaker while blocking DC bias voltage from speaker}
+\item{$\bullet$} The $47 \> \mu \hbox{F}$ electrolytic capacitor connected to the power supply rail: {\it "decouples" any AC signal from the power supply, by providing a low-impedance (short) path to ground}
+\medskip
+
+The question regarding the necessity of the 47 $\mu$F decoupling capacitor is tricky to answer, so I'll elaborate a bit here.  Power supply decoupling is a good design practice, because it can ward off a wide range of problems.  AC "ripple" voltage should never be present on the power supply "rail" conductors, as transistor circuits function best with pure DC power.  The purpose of a decoupling capacitor is to subdue any ripple, whatever its source, by acting as a low-impedance "short" to ground for AC while not presenting any loading to the DC power.  
+
+Although it may not seem possible at first inspection, the lack of a decoupling capacitor in this audio amplifier circuit can actually lead to self-oscillation (where the amplifier becomes a tone generator) under certain power supply and load conditions!  If the power supply is poorly regulated and/or poorly filtered, the presence of a decoupling capacitor will greatly diminish line-frequency "hum" noise heard in the speaker.
+
+For the rest of the questions, I'll let you figure out answers on your own!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Incidentally, this circuit makes a good "intercom" amplifier for a student project.  Using a small dynamic speaker for the microphone, and another speaker (or audio headset) on the receiving end of a long cable connected to the amplifier output, students can easily talk between two rooms in a building, or even between buildings.
+
+%INDEX% Amplifier, multi-stage
+%INDEX% Amplifier, function of individual components in
+
+%(END_NOTES)
+
+

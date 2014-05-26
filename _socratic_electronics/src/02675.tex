@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Most operational amplifiers do not have the ability to swing their output voltages rail-to-rail.  Most of those do not swing their output voltages symmetrically.  That is, a typical non-rail-to-rail opamp may be able to approach one power supply rail voltage closer than the other; e.g. when powered by a +15/-15 volt split supply, the output saturates positive at +14 volts and saturates negative at -13.5 volts.
+
+What effect do you suppose this non-symmetrical output range will have on a typical relaxation oscillator circuit such as the following, and how might you suggest we fix the problem?
+
+$$\epsfbox{02675x01.eps}$$
+
+\underbar{file 02675}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The duty cycle will not be 50\%.  One way to fix the problem is to do something like this:
+
+$$\epsfbox{02675x02.eps}$$
+
+\vskip 10pt
+
+Follow-up question: explain how and why {\it this} solution works.  Now you just {\it knew} I was going to ask this question the moment you saw the diagram, didn't you?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Note that I added an additional resistor to the circuit, in series with the opamp output terminal.  In some cases this is not necessary because the opamp is self-limiting in output current, but it is a good design practice nonetheless.  In the event anyone ever swaps out the original opamp for a different model lacking overcurrent protection, the new opamp will not become damaged.
+
+%INDEX% Opamp, rail-to-rail output swing
+%INDEX% Relaxation oscillator, opamp (without rail-to-rail output capability)
+
+%(END_NOTES)
+
+

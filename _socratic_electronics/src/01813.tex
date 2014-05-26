@@ -1,0 +1,61 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A formula I like to use in calculating voltage and current values in either RC or LR circuits has two forms, one for voltage and one for current:
+
+$$V(t) = \left( V_f - V_0 \right) \left( 1 - {1 \over {e^{t \over \tau}}} \right) + V_0 \hbox{ \hskip 15pt (for calculating voltage)}$$
+
+$$I(t) = \left( I_f - I_0 \right) \left( 1 - {1 \over {e^{t \over \tau}}} \right) + I_0 \hbox{ \hskip 15pt (for calculating current)}$$
+
+The "0" subscript represents the condition at time = 0 ($V_0$ or $I_0$, respectively), representing the "initial" value of that variable.  The "f" subscript represents the "final" or "ultimate" value that the voltage or current would achieve if allowed to progress indefinitely.  Obviously, one must know how to determine the "initial" and "final" values in order to use either of these formulae, but once you do you will be able to calculate {\it any} voltage and {\it any} current at {\it any} time in either an RC or LR circuit.
+
+What is not so obvious to students is how each formula works.  Specifically, what does each portion of it represent, in practical terms?  This is your task: to describe what each term of the equation means in your own words.  I will list the "voltage" formula terms individually for you to define:
+
+$$V(t) = $$
+
+$$\left( V_f - V_0 \right) = $$
+
+$$\left( 1 - {1 \over {e^{t \over \tau}}} \right) = $$
+
+\underbar{file 01813}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The term $V(t)$ uses symbolism common to calculus and pre-calculus, pronounced "$V$ of $t$," meaning "voltage at time $t$".  It means that the variable $V$ changes as a {\it function} of time $t$.
+
+$\left( V_f - V_0 \right)$ represents the amount of {\it change} that the voltage would go through, from the start of the charge/discharge cycle until eternity.  Note that the sign (positive or negative) of this term is very important!
+
+$\left( 1 - {1 \over {e^{t \over \tau}}} \right)$ is the fractional value (between 0 and 1, inclusive) expressing how far the voltage has changed from its initial value to its final value.
+
+\vskip 10pt
+
+Follow-up question: why is it important to add the final $V_0$ term to the expression?  Why not leave the formula at $V(t) = \left( V_f - V_0 \right) \left( 1 - {1 \over {e^{t \over \tau}}} \right)$ ?
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This so-called "universal time-constant formula" is my own (Tony R. Kuphaldt's) invention.  A product of frustration from trying to teach students to calculate variables in RC and LR time-constant circuits using one formula for decay and another one for increasing values, this equation works for {\it all} conditions.  Vitally important to this formula's accuracy, however, is that the student correctly assesses the initial and final values.  This is the biggest problem I see students having when they go to calculate voltages or currents in time-constant circuits.
+
+In my \underbar{Lessons In Electric Circuits} textbook, I introduce this formula in a slightly different form:
+
+$$\Delta V = \left( V_f - V_0 \right) \left( 1 - {1 \over {e^{t \over \tau}}} \right)$$
+
+This explains the purpose of my follow-up question: to challenge students who might simply read the book's version of the formula and not consider the difference between it and what is presented here!
+
+%INDEX% Time-constant formula, universal
+%INDEX% Universal time-constant formula
+
+%(END_NOTES)
+
+

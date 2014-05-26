@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student wishes to build a variable-gain amplifier circuit using an operational amplifier and a potentiometer.  The purpose of this circuit is to act as an audio amplifier for a small speaker, so he can listen to the output of a digital audio player without having to use headphones:
+
+$$\epsfbox{02461x01.eps}$$
+
+Before building the project in a finalized form, the student prototypes it on a solderless breadboard to make sure it functions as intended.  And it is a good thing he decided to do this before wasting time on a final version, because it sounds terrible!
+
+When playing a song, the student can hear sound through the headphones, but it is terribly distorted.  Taking the circuit to his instructor for help, the instructor suggests the following additions:
+
+$$\epsfbox{02461x02.eps}$$
+
+After adding these components, the circuit works great.  Now, music may be heard through the speaker with no noticeable distortion.
+
+Explain what functions the extra components perform, and why the circuit did not work as originally built.
+
+\underbar{file 02461}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The output of the audio player is true AC (alternating positive and negative polarity), but the original circuit could only handle input voltages ranging from 0 volts to +V, nothing negative.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question illustrates a common problem in opamp circuit design and usage: it is easy for students to overlook the importance of considering the power supply rail voltages.  Despite the fact that the rails are labeled "+V" and "-V" at the opamp chip terminals, the input signal is actually referenced to the negative side of the power supply, which means that every negative half-cycle of the input voltage goes beyond the -V power supply rail voltage, and the opamp cannot handle that.
+
+The instructor's solution to this problem should look very similar to voltage divider biasing in a single-transistor circuit, providing a good opportunity to review that concept with your students.
+
+Some students may ask where the second speaker is, for stereo sound.  If they do, tell them that this circuit only represents one channel's worth of amplification, and that the other channel's circuit would look just the same.  If a single volume control were desired to control the gain of both amplifier circuits, a dual-ganged potentiometer could be used (another point of discussion for your students!).
+
+%INDEX% Crystal radio circuit, amplified (using opamp)
+%INDEX% Opamp, noninverting amplifier circuit
+
+%(END_NOTES)
+
+

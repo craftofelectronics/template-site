@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{01953x01.eps}$$
+
+\underbar{file 01953}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I have had great success with the following values:
+
+\medskip
+\item{$\bullet$} +V = 7 to 24 volts
+\item{$\bullet$} $C_1$ and $C_2$ = 0.001 $\mu$F
+\item{$\bullet$} $C_3$, $C_4$, and $C_5$ = 0.47 $\mu$F
+\item{$\bullet$} $L_1$ = 100 $\mu$H (ferrite core RF choke)
+\item{$\bullet$} $R_1$ = 22 k$\Omega$
+\item{$\bullet$} $R_2$ = 1.5 M$\Omega$
+\item{$\bullet$} $R_3$ = 6.8 k$\Omega$
+\item{$\bullet$} $R_4$ = 100 k$\Omega$
+\item{$\bullet$} $Q_1$ = part number 2N3403
+\item{$\bullet$} $Q_2$ = part number MPF 102
+\medskip
+
+With these component values, the carrier waveform was quite clean and the frequency was almost exactly 700 kHz:
+
+$$f_{out} = {1 \over {2 \pi \sqrt{L C_1 C_2 \over C_1 + C_2}}}$$
+
+Modulation isn't that great, due to the crude nature of the circuit, but it is certainly good enough to hear over an appropriately tuned AM radio.  Setting $V_{signal}$ and $f_{signal}$ is a matter of experimentation, to achieve the desired degree of modulation and tone pitch.
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (AM radio transmitter)
+
+%(END_NOTES)
+
+

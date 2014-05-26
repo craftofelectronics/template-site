@@ -1,0 +1,78 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Mathematical analysis of the Maxwell-Wien bridge is as follows:
+
+$$\epsfbox{01861x01.eps}$$
+
+$${\bf Z}_x = R_x + j\omega L_x \hskip 10pt \hbox{Impedance of unknown inductance/resistance arm}$$
+
+$${\bf Z}_s = {1 \over {{1 \over R_s} + {1 \over -j{1 \over \omega C_s}}}} \hskip 10pt \hbox{Impedance of standard capacitance/resistance arm}$$
+
+$${\bf Y}_s = {1 \over R_s} + j\omega C_s \hskip 10pt \hbox{Admittance of standard capacitance/resistance arm}$$
+
+$${{\bf Z_x} \over {\bf Z_R}} = {{\bf Z_R} \over {\bf Z_s}} \hskip 10pt \hbox{ or } \hskip 10pt {{\bf Z_x} \over {\bf Z_R}} = {{\bf Z_R}{\bf Y_s}} \hskip 10pt \hbox{Bridge balance equation}$$
+
+$${\bf Z_x} = R^2 {\bf Y}_s$$
+
+$$R_x + j\omega L_x = R^2 \left( {1 \over R_s} + j\omega C_s \right)$$
+
+$$R_x + j\omega L_x = {R^2 \over R_s} + j\omega R^2 C_s$$
+
+$$\hbox{Separating real and imaginary terms . . .}$$
+
+$$R_x = {R^2 \over R_s} \hskip 10pt \hbox{(Real)}$$
+
+$$j\omega L_x = j\omega R^2 C_s  \hskip 10pt \hbox{(Imaginary)}$$
+
+$$L_x = R^2 C_s$$
+
+Note that neither of the two equations solving for unknown quantities ($R_x = {R^2 \over R_s}$ and $L_x = R^2 C_s$) contain the variable $\omega$.  What does this indicate about the Maxwell-Wien bridge?
+
+\underbar{file 01861}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This means the source frequency is irrelevant to bridge balance.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+A rule that students will need to be aware of in order to follow all the algebra shown here is ${1 \over j} = -j$.  A brief proof is given here:
+
+$$j^2 = -1$$
+
+$${1 \over j^2} = {1 \over -1}$$
+
+$${j \over j^2} = {j \over -1}$$
+
+$${j \over j^2} = -j$$
+
+$${1 \over j} = -j$$
+
+Otherwise, the admittance equation (${\bf Y}_s = {1 \over R_s} + j\omega C_s$) will not make sense.
+
+\vskip 10pt
+
+One type of AC bridge is called a {\it noise bridge}, using a "noise" (broadly mixed frequencies) source as the excitation voltage.  Discuss with your students how the Maxwell-Wien bridge would be a suitable topology for use with a noise source, whereas other bridge topologies might not.
+
+%INDEX% AC bridge circuit
+%INDEX% Bridge circuit, AC
+%INDEX% Algebra, with real and imaginary terms (worked out)
+%INDEX% Maxwell-Wien AC bridge, balance equations
+
+%(END_NOTES)
+
+

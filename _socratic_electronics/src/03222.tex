@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following schematic diagram shows a timer circuit made from a UJT and an SCR:
+
+$$\epsfbox{03222x01.eps}$$
+
+Together, the combination of $R_1$, $C_1$, $R_2$, $R_3$, and $Q_1$ form a {\it relaxation oscillator}, which outputs a square wave signal.  Explain how a square wave oscillation is able to perform a simple time-delay for the load, where the load energizes a certain time {\it after} the toggle switch is closed.  Also explain the purpose of the RC network formed by $C_2$ and $R_4$.
+
+\underbar{file 03222}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Remember that $CR_1$ only needs one pulse at its gate to turn (and latch) it on!  $C_2$ and $R_4$ form a {\it passive differentiator} to condition the square wave signal from the UJT oscillator.
+
+\vskip 10pt
+
+Follow-up question: how would you suggest we modify this circuit to make the time delay adjustable?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Knowing that the UJT forms an oscillator, it is tempting to think that the load will turn on and off repeatedly.  The first sentence in the answer explains why this will not happen, though.
+
+I got the basic idea for this circuit from the second edition of \underbar{Electronics for Industrial Electricians}, by Stephen L. Herman.
+
+%INDEX% Timer circuit
+%INDEX% UJT, used as a timing device
+
+%(END_NOTES)
+
+

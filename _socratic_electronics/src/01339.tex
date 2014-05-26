@@ -1,0 +1,259 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+\centerline{{\bf Wire-by-Number project:} simple voltage divider} \bigskip 
+
+\noindent Description:
+
+Build a voltage divider using four resistors, powered by a 6 volt battery or power supply.
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent Schematic diagram: 
+
+% This is the regular schematic diagram for the circuit
+$$\epsfbox{01339x02.eps}$$
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent Components:
+
+\medskip
+\item{$\bullet$} Battery (6 V): A1=+ , A10=- (ground)
+\item{$\bullet$} Resistor R1, 1 k$\Omega$: A2, A3
+\item{$\bullet$} Resistor R2, 1.5 k$\Omega$: A4, A5
+\item{$\bullet$} Resistor R3, 10 k$\Omega$: A6, A7
+\item{$\bullet$} Resistor R4, 2.7 k$\Omega$: A8, A9
+\medskip
+
+% This graphic shows all components in schematic format, 
+% but with no wires connecting them together.  Terminal
+% points denoted by small (0.7 size), italicized labels.
+$$\epsfbox{01339x01.eps}$$
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent Pictorial diagram:
+
+% This graphic shows the terminal strip view of all
+% components, with no connecting wires.
+$$\epsfbox{01339x03.eps}$$
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent Wiring sequence:
+
+\medskip
+\item{$\bullet$} A1-A2
+\item{$\bullet$} A3-A4
+\item{$\bullet$} A5-A6
+\item{$\bullet$} A7-A8
+\item{$\bullet$} A9-A10
+\medskip
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent Tasks:
+
+Calculate the total resistance of this series circuit using the formula provided.  Then, with the voltage source {\it disconnected} (detach the "+" wire from terminal A1), measure the total series resistance of the four resistors, between terminals A2 and A9.  Note both the predicted and the measured values in the following table, and don't forget to include the proper unit symbol ($\Omega$) with your data!   Calculate the percentage error between the calculated ("predicted") and measured values using the following formula: Error = ${\hbox{Measured} - \hbox{Predicted} \over \hbox{Predicted}} \times 100 \%$.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr 
+\noalign{\hrule}
+%
+{\bf Variable} & {\bf Formula} & {\bf Predicted} & {\bf Measured} & {\bf Error} \cr
+\noalign{\hrule}
+%
+$R_{total}$  &  $R_1 + R_2 + R_3 + R_4$  &   &   &   \cr
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Connect the voltage source back to the circuit (attach "+" to A1 and "-" to A10).  Verify that 6 volts DC is present between terminals A1 and A10 using your voltmeter.  Predict the correct values for the following voltage drops, then verify these voltage drop predictions by measuring with your voltmeter.  Don't forget to include the proper unit symbol (V) with your data!
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr 
+\noalign{\hrule}
+%
+{\bf Variable} & {\bf Formula} & {\bf Predicted} & {\bf Measured} & {\bf Error} \cr
+\noalign{\hrule}
+%
+$V_{R1}$  &  $V_{source}\left( R_1 \over R_{total}\right)$  &   &   &   \cr
+\noalign{\hrule}
+%
+$V_{R2}$  &  $V_{source}\left( R_2 \over R_{total}\right)$  &   &   &   \cr
+\noalign{\hrule}
+%
+$V_{R3}$  &  $V_{source}\left( R_3 \over R_{total}\right)$  &   &   &   \cr
+\noalign{\hrule}
+%
+$V_{R4}$  &  $V_{source}\left( R_4 \over R_{total}\right)$  &   &   &   \cr
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Predict and measure current in this voltage divider circuit by breaking it open at any point and connecting a DC ammeter in series with the break.  {\it Be very careful that you do not connect your ammeter test probes directly across a source of substantial voltage, such as the battery or power supply!  Remember to check your multimeter's setting (voltage versus current) before connecting the test probes to the circuit.}
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr 
+\noalign{\hrule}
+%
+{\bf Variable} & {\bf Formula} & {\bf Predicted} & {\bf Measured} & {\bf Error} \cr
+\noalign{\hrule}
+%
+$I_{total}$  &  $V_{source} \over R_{total}$  &   &   &   \cr
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Simulate an "open" fault in the circuit by removing resistor R3 from its terminal strip.  Predict what effects this will have on the same variables ({\it increase}, {\it decrease}, or {\it no change}), then verify using your multimeter.  To measure the voltage drop across R3, which is no longer in the circuit, simply measure voltage across the terminals it used to be connected to (A6 and A7):
+
+\vskip 10pt
+
+\goodbreak
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+\centerline{\bf Fault condition: resistor R3 open}
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr 
+\noalign{\hrule}
+%
+{\bf Variable} & {\bf Predicted effect} & {\bf Measured effect} \cr
+\noalign{\hrule}
+%
+$V_{R1}$   &   &   \cr
+\noalign{\hrule}
+%
+$V_{R2}$   &   &   \cr
+\noalign{\hrule}
+%
+$V_{R3}$   &   &   \cr
+\noalign{\hrule}
+%
+$V_{R4}$   &   &   \cr
+\noalign{\hrule}
+%
+$I_{total}$   &   &   \cr
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Explain why the variables changed as they did, and whether or not this agreed with your original expectations:
+
+$$\epsfbox{wbn_box.eps}$$
+
+Now, simulate a "short" fault by connecting a piece of wire between the terminals where resistor R3 used to connect (A6 and A7), and repeat the same predictions/measurements:
+
+\vskip 10pt
+
+\goodbreak
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+\centerline{\bf Fault condition: resistor R3 shorted}
+
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr 
+\noalign{\hrule}
+%
+{\bf Variable} & {\bf Predicted effect} & {\bf Measured effect} \cr
+\noalign{\hrule}
+%
+$V_{R1}$   &   &   \cr
+\noalign{\hrule}
+%
+$V_{R2}$   &   &   \cr
+\noalign{\hrule}
+%
+$V_{R3}$   &   &   \cr
+\noalign{\hrule}
+%
+$V_{R4}$   &   &   \cr
+\noalign{\hrule}
+%
+$I_{total}$   &   &   \cr
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Explain why the voltages changed as they did, and whether or not this agreed with your original expectations:
+
+$$\epsfbox{wbn_box.eps}$$
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent Questions remaining:
+
+{\it Here is where you write any questions or comments you have about this experiment.}
+
+\vskip 50pt
+
+
+\underbar{file 01339}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+
+%(END_NOTES)
+
+

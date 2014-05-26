@@ -1,0 +1,56 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Digital computers communicate with external devices through {\it ports}: sets of terminals usually arranged in groups of 4, 8, 16, or more.  These terminals may be set to high or low logic states by writing a program for the computer that sends a numerical value to the port.  For example, here is an illustration of a microcontroller being instructed to send the hexadecimal number {\tt 2B} to port A and {\tt A9} to port B:
+
+$$\epsfbox{03042x01.eps}$$
+
+Suppose we wished to use the first seven bits of each port (pins 0 through 6) to drive two 7-segment, common-cathode displays, rather than use BCD-to-7-segment decoder ICs:
+
+$$\epsfbox{03042x02.eps}$$
+
+Write the necessary hexadecimal values to be output at ports A and B to generate the display "42" at the two 7-segment display units.
+
+\underbar{file 03042}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Port A = 5B$_{16}$ \hskip 50pt Port B = 66$_{16}$
+
+\vskip 10pt
+
+\noindent
+Note that the following answers are also valid:
+
+Port A = DB$_{16}$ \hskip 50pt Port B = E6$_{16}$
+
+\vskip 10pt
+
+Follow-up question: write these same numerical values in decimal rather than hexadecimal.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The root of this question is little more than binary-to-hexadecimal conversion, but it also introduces students to the concept of controlling bit states in microcomputer ports by writing hex values.  As such, this question is {\it very} practical!  Although it is unlikely that someone would omit BCD-to-7-segment decoders when building a two-digit decimal display (because doing it this way uses so many more precious microcontroller I/O pins), it is certainly possible!  There are many applications other than this where you need to get the microcontroller to output a certain combination of high and low states, and the fastest way to program this is to output hex values to the ports.
+
+In case students ask, let them know that a dollar sign prefix is sometimes used to denote a hexadecimal number.  Other times, the prefix 0x is used (e.g., \$F3 and 0xF3 mean the same thing).
+
+%INDEX% Conversion, numeration base
+%INDEX% Microcontroller, used to drive 7-segment displays
+%INDEX% Port, microcomputer output
+
+%(END_NOTES)
+
+

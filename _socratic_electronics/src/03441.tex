@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+When the pushbutton is pressed, the relay immediately energizes and sends power to the electric horn.  When the pushbutton is released, the horn remains on for a few moments before turning off, due to the capacitor's stored charge continuing to power the relay coil.  So, the capacitor and relay form a {\it time-delay} control circuit for the horn:
+
+$$\epsfbox{03441x01.eps}$$
+
+Suppose this circuit has functioned as designed for quite some time, then one day develops a problem.  The horn sounds immediately when the pushbutton is pressed (as it should), bit it immediately silences instead of continuing to sound for a few more moments when the pushbutton is released.  Based on this information, identify these things:
+
+\vskip 10pt
+
+\medskip
+\item{$\bullet$} \underbar{Two} components or wires in the circuit that you know must be in good working condition.
+\vskip 40pt
+\item{$\bullet$} \underbar{Two} components or wires in the circuit that could possibly be bad (and thus cause the off-delay action to fail).
+\medskip
+
+\underbar{file 03441}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Obviously the horn, relay, switch, and battery are all working normally.  The capacitor could be bad (failed open), as well as the wiring/connections between the capacitor and the coil.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this troubleshooting question is to get students to think in terms of fault elimination: deciding what things {\it cannot} be bad in order to better isolate what might be bad.
+
+%INDEX% Time delay relay circuit, using capacitor
+
+%(END_NOTES)
+
+

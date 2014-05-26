@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The "Miller capacitance" of a transistor in a common-emitter configuration is often expressed as the product of the transistor's base-to-collector junction capacitance ($C_{BC}$) and $\beta +1$:
+
+$$C_{miller} = C_{BC}\left( \beta + 1 \right)$$
+
+Why is this?  What purpose does it serve to include the transistor's gain into the calculation, rather than just expressing the junction capacitance as it is? 
+
+\underbar{file 01482}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Since $C_{BC}$ "couples" the collector to the base, changes in collector voltage result in far more collector current than would result from $C_{BC}$ coupling to ground.  In other words, the transistor's gain effectively multiplies the Miller-effect capacitance as "seen" from the collector terminal to ground:
+
+$$i_C \approx C_{BC}\left( \beta + 1 \right){dV_C \over dt} >> C_{BC}{dV_C \over dt}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This effect of base-collector capacitance "multiplication," while being a nuisance in typical amplifier applications, may be exploited for positive benefit in other circuits.  Many an op-amp circuit has been built specifically to "multiply" the value of a passive component, when some exceptionally large value is needed that will not fit on a circuit board.  This technique has its limits, of course, but is good to keep in mind.
+
+Some students may not be familiar with the double-chevron notation ($>>$ or $<<$).  It means {\it much greater than}, and {\it much less than}, respectively.
+
+%INDEX% Miller capacitance, calculation
+
+%(END_NOTES)
+
+

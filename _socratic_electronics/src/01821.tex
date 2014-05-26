@@ -1,0 +1,56 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Most oscilloscopes have at least two vertical inputs, used to display more than one waveform simultaneously:
+
+$$\epsfbox{01821x01.eps}$$
+
+While this feature is extremely useful, one must be careful in connecting two sources of AC voltage to an oscilloscope.  Since the "reference" or "ground" clips of {\it each} probe are electrically common with the oscilloscope's metal chassis, they are electrically common with each other as well.
+
+Explain what sort of problem would be caused by connecting a dual-trace oscilloscope to a circuit in the following manner:
+
+$$\epsfbox{01821x02.eps}$$
+
+\underbar{file 01821}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The oscilloscope will create an earth-grounded short circuit in this series resistor circuit:
+
+$$\epsfbox{01821x03.eps}$$
+
+If the signal generator is earth-grounded through its power cord as well, the problem could even be worse:
+
+$$\epsfbox{01821x04.eps}$$
+
+\vskip 10pt
+
+Follow-up question: explain why the second scenario is potentially more hazardous than the first.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Failing to consider that the "ground" leads on all probes are common to each other (as well as common to the safety ground conductor of the line power system) is a {\it very} common mistake among students first learning how to use oscilloscopes.  Hopefully, discussing scenarios such as this will help students avoid this problem in their labwork.
+
+\vskip 10pt
+
+{\it Note to Socratic Electronics developers: the oscilloscope shown in figure {\tt 01821x01.eps} is made up of individual lines, circles, text elements, etc., rather than a single object as is contained in the Xcircuit library file ({\tt scope.lps}).  If you wish to edit the features of this scope, start with the {\tt 01821x01.eps} image file rather than the library object!}  Then you may save your modified oscilloscope as a complete object in your own image library for future use.
+
+%INDEX% Oscilloscope, common probe reference leads
+%INDEX% Oscilloscope, (ORIGINAL GRAPHIC IMAGE FOR LIBRARY OBJECT)
+
+%(END_NOTES)
+
+

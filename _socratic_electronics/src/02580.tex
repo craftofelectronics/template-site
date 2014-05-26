@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{02580x01.eps}$$
+
+\underbar{file 02580}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Use a sine-wave function generator for the AC voltage source.  Specify components giving a notch frequency within the audio range:
+
+$$f_{notch} = {1 \over {2 \pi R C}}$$
+
+I have had good success using the following values:
+
+\medskip
+\item{$\bullet$} $R_1$ = 10 k$\Omega$
+\item{$\bullet$} $R_2$ = 10 k$\Omega$
+\item{$\bullet$} $R_3$ = 5 k$\Omega$ (actually, two 10 k$\Omega$ resistors in parallel)
+\item{$\bullet$} $C_1$ = 0.001 $\mu$F
+\item{$\bullet$} $C_2$ = 0.001 $\mu$F
+\item{$\bullet$} $C_3$ = 0.002 $\mu$F (actually, two 0.001 $\mu$F capacitors in parallel)
+\medskip
+
+These component values yield a theoretical notch frequency of 16.13 kHz (the very high end of audio range), with the actual measured notch frequency for my circuit (without considering component tolerances) being 15.92 kHz.
+
+I recommend setting the function generator output for 1 volt, to make it easier for students to measure the point of "cutoff".  You may set it at some other value, though, if you so choose (or let students set the value themselves when they test the circuit!).
+
+I also recommend having students use an oscilloscope to measure AC voltage in a circuit such as this, because some digital multimeters have difficulty accurately measuring AC voltage much beyond line frequency range.  I find it particularly helpful to set the oscilloscope to the "X-Y" mode so that it draws a thin line on the screen rather than sweeps across the screen to show an actual waveform.  This makes it easier to measure peak-to-peak voltage.
+
+%INDEX% Assessment, performance-based (Passive "twin-tee" filter circuit, notch frequency calculation)
+
+%(END_NOTES)
+
+

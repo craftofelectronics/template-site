@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This shift register circuit energizes one LED at a time (beginning with the bottom LED at power-up), in a rotating pattern that moves at the pace of the clock:
+
+$$\epsfbox{03904x01.eps}$$
+
+A technician decides to reverse the direction of pattern motion, and alters the circuit as such:
+
+$$\epsfbox{03904x02.eps}$$
+
+Unfortunately, this does not work as planned.  Now, the bottom LED blinks once upon power-up, then all LEDs remain off.  What did the technician do that was incorrect?  What needs to be done to fix the problem?
+
+\underbar{file 03904}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This will fix the problem:
+
+$$\epsfbox{03904x03.eps}$$
+
+I will leave it to you to explain {\it why} this modification works!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Students will probably need to consult a datasheet for the 74HC194 in order to figure out what is going on here.  If they have not taken the initiative to do so, encourage them to both now and later!  Datasheets are an invaluable source of information when it comes to integrated circuit behavior and the conditions necessary to make them do what you want them to do.
+
+%INDEX% Troubleshooting, shift register circuit
+
+%(END_NOTES)
+
+

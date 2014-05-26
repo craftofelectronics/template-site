@@ -1,0 +1,174 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Develop a verbal description of this truth table, specifying what conditions must be met ("{\it true}" in a Boolean sense) in order for the output to assume a high state:
+
+% Graphic image replaced by TeX table, April 5, 2005
+%$$\epsfbox{01327x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+A & B & C & Output \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 1 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+1 & 0 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+1 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+1 & 1 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+1 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\vskip 10pt
+
+Do the same for this truth table as well:
+
+% Graphic image replaced by TeX table, April 5, 2005
+%$$\epsfbox{01327x02.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+A & B & C & Output \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+1 & 0 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+1 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+1 & 1 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+1 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 01327}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+For the first truth table: the output of this circuit is high when $A$ is true and $\overline{B}$ is true and $C$ is true:
+
+$$A \hbox{ AND } \overline{B} \hbox{ AND } C$$
+
+\vskip 10pt
+
+For the second truth table: the output of this circuit is high when $\overline{A}$ is true and $\overline{B}$ is true and $C$ is true, or when $\overline{A}$ is true and $B$ is true and $\overline{C}$ is true:
+
+$$(\overline{A} \hbox{ AND } \overline{B} \hbox{ AND } C) \hbox{ OR } (\overline{A} \hbox{ AND } B \hbox{ AND } \overline{C})$$
+
+\vskip 10pt
+
+Follow-up question: do you suspect we could write a formal Boolean expression for each of these truth tables?  What would those expressions be, and what form would they be in (SOP or POS)?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I find this "verbal" approach works well to introduce students to the concept of deriving Boolean expressions from truth tables.
+
+Be sure to ask your students what Boolean expressions they derived for both these truth tables.  Given the answers in "verbal" form, this should not be difficult for them!
+
+%INDEX% Sum-of-Products expression, Boolean algebra (from a verbal description of a truth table)
+%INDEX% SOP expression, Boolean algebra (from a verbal description of a truth table)
+
+%(END_NOTES)
+
+

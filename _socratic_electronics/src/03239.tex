@@ -1,0 +1,149 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Resistive voltage dividers are very useful and popular circuits.  However, it should be realized that their output voltages "sag" under load:
+
+$$\epsfbox{03239x01.eps}$$
+
+Just how much a voltage divider's output will sag under a given load may be a very important question in some applications.  Take for instance the following application where we are using a resistive voltage divider to supply an engine sensor with reduced voltage (8 volts) from the 12 volt battery potential in the automobile:
+
+$$\epsfbox{03239x02.eps}$$
+
+If the sensor draws no current ($I_{sensor}$ = 0 mA), then the voltage across the sensor supply terminals will be 8 volts.  However, if we were asked to predict the voltage across the sensor supply terminals for a variety of different sensor current conditions, we would be faced with a much more complex problem:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Sensor current ($I_{sensor}$) & Sensor supply voltage \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 mA & 8 volts \cr
+%
+\noalign{\hrule}
+%
+% Third row
+1 mA &  \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+2 mA &  \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+3 mA &  \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+4 mA &  \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+5 mA &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+One technique we could use to simplify this problem is to reduce the voltage divider resistor network into a Th\'evenin equivalent circuit.  With the three-resistor divider reduced to a single resistor in series with an equivalent voltage source, the calculations for sensor supply voltage become much simpler.
+
+Show how this could be done, then complete the table of sensor supply voltages shown above.
+
+\underbar{file 03239}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{03239x03.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Sensor current ($I_{sensor}$) & Sensor supply voltage \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 mA & 8 volts \cr
+%
+\noalign{\hrule}
+%
+% Third row
+1 mA & 7.333 volts \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+2 mA & 6.667 volts \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+3 mA & 6 volts \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+4 mA & 5.333 volts \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+5 mA & 4.667 volts \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\vskip 10pt
+
+Follow-up question: if we cannot allow the sensor supply voltage to fall below 6.5 volts, what is the maximum amount of current it may draw from this voltage divider circuit?
+
+\vskip 10pt
+
+Challenge question: figure out how to solve for these same voltage figures without reducing the voltage divider circuit to a Th\'evenin equivalent.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Students are known to ask, "When are we ever going to use Th\'evenin's Theorem?" as this concept is introduced in their electronics coursework.  This is a valid question, and should be answered with immediate, practical examples.  This question does exactly that: demonstrate how to predict voltage "sag" for a loaded voltage divider in such a way that is much easier than using Ohm's Law and Kirchhoff's Laws directly.
+
+Note the usage of European schematic symbols in this question.  Nothing significant about this choice -- just an opportunity for students to see other ways of drawing schematics.
+
+Note also how this question makes use of ground symbols, but in a way where the concept is introduced gently: the first (example) schematics do not use ground symbols, whereas the practical (automotive) circuit does.
+
+%INDEX% Thevenin's Theorem, applied to loaded voltage divider circuit
+
+%(END_NOTES)
+
+

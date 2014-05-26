@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A {\it logic probe} is a very useful tool for working with digital logic circuits.  It indicates "high" and "low" logic states by means of LED's, giving visual indication only if the voltage levels are appropriate for each state.
+
+Here is a schematic diagram for a logic probe built using comparators.  Each comparator has a threshold adjustment potentiometer, so that it may be set to indicate its respective logic state only if the signal voltage is well within the range stated by the logic manufacturer:
+
+$$\epsfbox{01275x01.eps}$$
+
+When this logic probe circuit is connected to the $V_{DD}$ and $V_{SS}$ power supply terminals of a powered CMOS circuit, what voltage levels should test points TP1 and TP2 be adjusted to, in order for the probe to properly indicate "high" and "low" CMOS logic states?  Consult a datasheet for the quad NAND gate numbered 4011.  This is a legacy CMOS integrated circuit.
+\underbar{file 01275}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I'll let you do your own research on this question.  DO NOT obtain your answer from a textbook, but consult a manufacturer's datasheet instead!  You will find that the acceptable voltage levels vary with the power supply voltage, but that the {\it percentages} are rather constant.
+
+\vskip 10pt
+
+Follow-up question: write a formula for calculating appropriate current-limiting resistor sizes for the two LEDs in this circuit, given the value of $+V$ and the LED forward voltage and current values.
+
+\vskip 10pt
+
+Challenge question: the logic probe circuit shown is minimal in component count.  To make a more practical and reliable probe, one would probably want to have reverse-polarity protection (in case someone were to accidently connect the probe backward across the power supply) as well as decoupling for immunity against electrical noise.  Add whatever necessary components you think there should be in this circuit to provide these features.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The most obvious lesson of this question is to introduce (or review as the case may be) the purpose and operation of a logic probe.  However, this question is also a veiled introduction (or review) of CMOS logic levels.
+
+%INDEX% Logic gate voltage levels, "high" and "low" (CMOS)
+%INDEX% Logic probe circuit
+
+%(END_NOTES)
+
+

@@ -1,0 +1,63 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student is pondering the behavior of a simple series RC circuit:
+
+$$\epsfbox{02176x01.eps}$$
+
+It is clear by now that the 4 k$\Omega$ capacitive reactance does not directly add to the 3 k$\Omega$ resistance to make 7 k$\Omega$ total.  Instead, the addition of impedances is {\it vectorial}: 
+
+$$\sqrt{{X_C}^2 + R^2}= Z_{total}$$
+
+$${\bf Z_C} + {\bf Z_R} = {\bf Z_{total}}$$
+
+$$(4 \hbox{k}\Omega \> \angle -90^o) + (3 \hbox{k}\Omega \> \angle \> 0^o) = (5 \hbox{k}\Omega \> \angle -53.13^o)$$
+
+It is also clear to this student that the component voltage drops form a vectorial sum as well, so that 4 volts dropped across the capacitor in series with 3 volts dropped across the resistor really does add up to 5 volts total source voltage:
+
+$${\bf V_C} + {\bf V_R} = {\bf V_{total}}$$
+
+$$(4 \hbox{V} \> \angle -90^o) + (3 \hbox{V} \> \angle \> 0^o) = (5 \hbox{V} \> \angle -53.13^o)$$
+
+What surprises the student, though, is power.  In calculating power for each component, the student arrives at 4 mW for the capacitor (4 volts times 1 milliamp) and 3 mW for the resistor (3 volts times 1 milliamp), but only 5 mW for the total circuit power (5 volts times 1 milliamp).  In DC circuits, component power dissipations {\it always} added, no matter how strangely their voltages and currents might be related.  The student honestly expected the total power to be 7 mW, but that doesn't make sense with 5 volts total voltage and 1 mA total current.
+
+Then it occurs to the student that power might add vectorially just like impedances and voltage drops.  In fact, this seems to be the only way the numbers make any sense:
+
+$$\epsfbox{02176x02.eps}$$
+
+However, after plotting this triangle the student is once again beset with doubt.  According to the Law of Energy Conservation, total power in must equal total power out.  If the source is inputting 5 mW of power total to this circuit, there should be no possible way that the resistor is dissipating 3 mW {\it and} the capacitor is dissipating 4 mW.  That would constitute more energy leaving the circuit than what is entering!
+
+What is wrong with this student's power triangle diagram?  How may we make sense of the figures obtained by multiplying voltage by current for each component, and for the total circuit?
+
+\underbar{file 02176}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Only the resistor actually dissipates power.  The capacitor only absorbs and releases power, so its "4 mW" figure does not actually represent power in the same sense as the resistor.  To make this sensible, we must think of all the non-resistive "powers" as something other than actual work being done over time:
+
+$$\epsfbox{02176x03.eps}$$
+
+Follow-up question: when making the leap from DC circuit analysis to AC circuit analysis, we needed to expand on our understanding of "opposition" from just resistance ($R$) to include reactance ($X$) and (ultimately) impedance ($Z$).  Comment on how this expansion of terms and quantities is similar when dealing with "power" in an AC circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The point of this question is to ease the pain of learning about power factor by relating it to a parallel concept: opposition to electric current ($R$ expanding into $X$ and $Z$).  This makes the follow-up question very significant.
+
+%INDEX% AC power triangle, defined in a circuit with 3-4-5 impedance proportions
+
+%(END_NOTES)
+
+

@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose I needed to test for the presence of DC voltage between all wires connected to this terminal block.  What is the fewest number of individual measurements I would have to perform with with a voltmeter in order to test for voltage between all possible wire pair combinations (remember that voltage is {\it always} measured between two points!)?
+
+$$\epsfbox{00271x01.eps}$$
+
+\underbar{file 00271}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+105 voltage measurements are necessary (minimum) to test for voltage between every possible combination of two wires out of 15 wires.  Mathematically, the number of two-wire test combinations is specified by the equation:
+
+$$\sum_{i=1}^{n} (i - 1)$$
+
+\noindent
+Where,
+
+$n =$ The number of wires
+
+\vskip 10pt
+
+Challenge question: there is a way to mathematically reduce the expression shown above so that it only contains the variable $n$, and not $i$ or the "summation" symbol ($\sum$).
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is an interesting mathematical exercise, to determine the total number of 2-wire combinations resulting from 15 wires.  If your students have difficulty determining this number, suggest they try to figure out the total number of 2-wire combinations with a smaller quantity of wires, say four instead of fifteen.
+
+Incidentally, this is a powerful problem-solving technique: simplify the problem into one with smaller quantities, until the solution becomes intuitively obvious, then determine the precise steps needed to arrive at that obvious solution.  After that, apply those same steps to the original problem.
+
+The challenge question is actually pre-calculus or calculus level.
+
+%INDEX% Voltmeter usage
+
+%(END_NOTES)
+
+

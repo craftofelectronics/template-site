@@ -1,0 +1,82 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+\centerline{\bf Don't just sit there!  Build something!!}
+
+\vskip 10pt
+
+Learning to mathematically analyze circuits requires much study and practice.  Typically, students practice by working through lots of sample problems and checking their answers against those provided by the textbook or the instructor.  While this is good, there is a much better way.
+
+You will learn much more by actually {\it building and analyzing real circuits}, letting your test equipment provide the "answers" instead of a book or another person.  For successful circuit-building exercises, follow these steps:
+
+\medskip
+\item{1.} Carefully measure and record all component values prior to circuit construction.
+\item{2.} Draw the schematic diagram for the circuit to be analyzed.
+\item{3.} Carefully build this circuit on a breadboard or other convenient medium.
+\item{4.} Check the accuracy of the circuit's construction, following each wire to each connection point, and verifying these elements one-by-one on the diagram.
+\item{5.} Mathematically analyze the circuit, solving for all voltage and current values.
+\item{6.} Carefully measure all voltages and currents, to verify the accuracy of your analysis.
+\item{7.} If there are any substantial errors (greater than a few percent), carefully check your circuit's construction against the diagram, then carefully re-calculate the values and re-measure.
+\medskip
+
+For AC circuits where inductive and capacitive reactances (impedances) are a significant element in the calculations, I recommend high quality (high-Q) inductors and capacitors, and powering your circuit with low frequency voltage (power-line frequency works well) to minimize parasitic effects.  If you are on a restricted budget, I have found that inexpensive electronic musical keyboards serve well as "function generators" for producing a wide range of audio-frequency AC signals.  Be sure to choose a keyboard "voice" that closely mimics a sine wave (the "panflute" voice is typically good), if sinusoidal waveforms are an important assumption in your calculations.
+
+As usual, avoid very high and very low resistor values, to avoid measurement errors caused by meter "loading".  I recommend resistor values between 1 k$\Omega$ and 100 k$\Omega$.
+
+One way you can save time and reduce the possibility of error is to begin with a very simple circuit and incrementally add components to increase its complexity after each analysis, rather than building a whole new circuit for each practice problem.  Another time-saving technique is to re-use the same components in a variety of different circuit configurations.  This way, you won't have to measure any component's value more than once.
+
+\underbar{file 00605}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Let the electrons themselves give you the answers to your own "practice problems"!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It has been my experience that students require much practice with circuit analysis to become proficient.  To this end, instructors usually provide their students with lots of practice problems to work through, and provide answers for students to check their work against.  While this approach makes students proficient in circuit theory, it fails to fully educate them.
+
+Students don't just need mathematical practice.  They also need real, hands-on practice building circuits and using test equipment.  So, I suggest the following alternative approach: students should {\it build} their own "practice problems" with real components, and try to mathematically predict the various voltage and current values.  This way, the mathematical theory "comes alive," and students gain practical proficiency they wouldn't gain merely by solving equations.
+
+Another reason for following this method of practice is to teach students {\it scientific method}: the process of testing a hypothesis (in this case, mathematical predictions) by performing a real experiment.  Students will also develop real troubleshooting skills as they occasionally make circuit construction errors.
+
+Spend a few moments of time with your class to review some of the "rules" for building circuits before they begin.  Discuss these issues with your students in the same Socratic manner you would normally discuss the worksheet questions, rather than simply telling them what they should and should not do.  I never cease to be amazed at how poorly students grasp instructions when presented in a typical lecture (instructor monologue) format!
+
+An excellent way to introduce students to the mathematical analysis of real circuits is to have them first determine component values (L and C) from measurements of AC voltage and current.  The simplest circuit, of course, is a single component connected to a power source!  Not only will this teach students how to set up AC circuits properly and safely, but it will also teach them how to measure capacitance and inductance without specialized test equipment.
+
+A note on reactive components: use high-quality capacitors and inductors, and try to use low frequencies for the power supply.  Small step-down power transformers work well for inductors (at least two inductors in one package!), so long as the voltage applied to any transformer winding is less than that transformer's rated voltage for that winding (in order to avoid saturation of the core).
+
+\vskip 10pt
+
+A note to those instructors who may complain about the "wasted" time required to have students build real circuits instead of just mathematically analyzing theoretical circuits:
+
+\vskip 10pt
+
+\hskip 1in
+{\it What is the purpose of students taking your course?}
+
+\vskip 10pt
+
+If your students will be working with real circuits, then they should learn on real circuits whenever possible.  If your goal is to educate theoretical physicists, then stick with abstract analysis, by all means!  But most of us plan for our students to do something in the real world with the education we give them.  The "wasted" time spent building real circuits will pay huge dividends when it comes time for them to apply their knowledge to practical problems.
+
+Furthermore, having students build their own practice problems teaches them how to perform {\it primary research}, thus empowering them to continue their electrical/electronics education autonomously.
+
+In most sciences, realistic experiments are much more difficult and expensive to set up than electrical circuits.  Nuclear physics, biology, geology, and chemistry professors would just love to be able to have their students apply advanced mathematics to real experiments posing no safety hazard and costing less than a textbook.  They can't, but you can.  Exploit the convenience inherent to your science, and {\it get those students of yours practicing their math on lots of real circuits!}
+
+%INDEX% Don't just sit there -- Build something!! (AC circuits)
+
+%(END_NOTES)
+
+

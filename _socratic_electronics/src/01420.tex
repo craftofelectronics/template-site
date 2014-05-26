@@ -1,0 +1,40 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A popular use of the 555 timer is as a {\it monostable} multivibrator.  In this mode, the 555 will output a pulse of fixed length when commanded by an input pulse:
+
+$$\epsfbox{01420x01.eps}$$
+
+How low does the triggering voltage have to go in order to initiate the output pulse?  Also, write an equation specifying the width of this pulse, in seconds, given values of $R$ and $C$.  Hint: the magnitude of the supply voltage is irrelevant, so long as it does not vary during the capacitor's charging cycle.  Show your work in obtaining the equation, based on equations of RC time constants.  Don't just copy the equation from a book or datasheet!
+
+\underbar{file 01420}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The triggering pulse must dip below ${1 \over 3}$ of the supply voltage in order to initiate the timing sequence.
+
+$$t_{pulse} = 1.1RC$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Have your students show you how they mathematically derived their answer based on their knowledge of how capacitors charge and discharge.  Many textbooks and datasheets provide this same equation, but it is important for students to be able to derive it themselves from what they already know of capacitors and RC time constants.  Why is this important?  Because in ten years they won't remember this specialized equation, but they will probably still remember the general time constant equation from all the time they spent learning it in their basic DC electricity courses (and applying it on the job).  My motto is, "never remember what you can figure out."
+
+%INDEX% 555 timer, monostable operation
+%INDEX% Algebra, manipulating equations
+
+%(END_NOTES)
+
+

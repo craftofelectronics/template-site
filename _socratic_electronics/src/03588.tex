@@ -1,0 +1,163 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An AC motor receives reduced voltage through a step-down transformer so it may properly operate on a 277 volt source:
+
+$$\epsfbox{03588x01.eps}$$
+
+After years of trouble-free operation, something fails.  Now, the motor refuses to operate when both switches are closed.  A technician takes four voltage measurements between the following test points with both switches in the "on" position:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Step & Measurement \cr
+%
+\noalign{\hrule}
+%
+% Another row
+1 & $V_{TP2-Gnd}$ = 277 V \cr
+%
+\noalign{\hrule}
+%
+% Another row
+2 & $V_{TP3-Gnd}$ = 277 V \cr
+%
+\noalign{\hrule}
+%
+% Another row
+3 & $V_{TP5-Gnd}$ = 0 V \cr
+%
+\noalign{\hrule}
+%
+% Another row
+4 & $V_{TP4-Gnd}$ = 0 V \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Complete this expanded table, following the technician's steps in the same order as the voltage measurements were taken, labeling each component's status as either "O" (possibly open), "S" (possibly shorted), or "OK" (known to be good).  The first row of the table should contain many possible fault labels (because with little data there are many possibilities), but as more measurements are taken you should be able to limit the possibilities.  Assume that only one component is faulted.
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Step & Measurement & SW$_{1}$ & Fuse & Primary & Secondary & SW$_{2}$ & Motor \cr
+%
+\noalign{\hrule}
+%
+% Another row
+1 & $V_{TP2-Gnd}$ = 277 V &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+2 & $V_{TP3-Gnd}$ = 277 V &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+3 & $V_{TP5-Gnd}$ = 0 V &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+%
+% Another row
+4 & $V_{TP4-Gnd}$ = 0 V &  &  &  &  &  &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 03588}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Step & Measurement & SW$_{1}$ & Fuse & Primary & Secondary & SW$_{2}$ & Motor \cr
+%
+\noalign{\hrule}
+%
+% Another row
+1 & $V_{TP2-Gnd}$ = 277 V & OK & O & O & O & O & O \cr
+%
+\noalign{\hrule}
+%
+% Another row
+2 & $V_{TP3-Gnd}$ = 277 V & OK & OK & O & O & O & O \cr
+%
+\noalign{\hrule}
+%
+% Another row
+3 & $V_{TP5-Gnd}$ = 0 V & OK & OK & O & O & O & OK \cr
+%
+\noalign{\hrule}
+%
+% Another row
+4 & $V_{TP4-Gnd}$ = 0 V & OK & OK & O & O & OK & OK \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Either the primary or the secondary winding is failed open!
+
+\vskip 10pt
+
+Follow-up question: describe what you would measure next in this circuit to determine whether it is the primary or secondary winding that has failed open.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Students may ask why it is possible for us to say that the second switch and motor are okay after the technician measured 0 volts before each.  Certainly we know something has failed {\it before} the points where 0 volts is measured, but that does not tell us the health of components after those points!  The answer to this very good question is the assumption stated at the end of the question: that we are to assume {\it only one component fault in the circuit}.  If either switch 2 or the motor were failed open, it would still not account for a lack of voltage between TP4 and ground.  A shorted motor might, but then the fuse would have blown, resulting in 0 volts between TP3 and ground.  So, we assume the motor and switch 2 must be okay because only some {\it other} single fault could cause the measurements we are reading.
+
+%INDEX% Troubleshooting, transformer circuit
+
+%(END_NOTES)
+
+

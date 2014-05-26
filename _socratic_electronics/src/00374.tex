@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Components soldered into printed circuit boards often possess "stray" inductance, also known as {\it parasitic} inductance.  Observe this resistor, soldered in to a circuit board:
+
+$$\epsfbox{00374x01.eps}$$
+
+Where does the parasitic inductance come from?  What is it about a resistor, mounted to a circuit board, that creates a (very) small amount of inductance?  How is it possible to minimize this inductance, in case it is detrimental to the circuit's operation?
+
+\underbar{file 00374}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Inductance naturally exists along any conductor.  The longer the conductor, the more inductance, all other factors being equal.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In high-frequency AC circuits, such as computer circuits where pulses of voltage oscillate at millions of cycles per second, even short lengths of wire or traces on a circuit board may present substantial trouble by virtue of their stray inductance.  Some of this parasitic inductance may be reduced by proper circuit board assembly, some of it by a re-design of component layout on the circuit board.
+
+According to an article in \underbar{IEEE Spectrum} magazine ("{\it Putting Passives In Their Place}", July 2003, Volume 40, Number 7, page 29), the transient currents created by fast-switching logic circuits can be as high as 500 amps/ns, which is a $di \over dt$ rate of 500 {\it billion} amps per second!!  At these levels, even a few picohenrys of parasitic inductance along component leads and circuit board traces will result in significant voltage drops.
+
+%INDEX% Inductance, parasitic 
+
+%(END_NOTES)
+
+

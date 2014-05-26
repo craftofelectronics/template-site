@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Draw a complete schematic diagram showing how this IGBT can be used to control a DC motor, at the command of the toggle switch:
+
+\vskip 50pt
+
+$$\epsfbox{01192x01.eps}$$
+
+\vskip 50pt
+
+Note: the DC power supply voltage is 240 VDC, and the IGBT's maximum gate-to-emitter control voltage is 20 volts! 
+
+\underbar{file 01192}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01192x02.eps}$$
+
+Follow-up question: calculate the values necessary for the two resistors shown, to provide a gate-to-emitter voltage of 10 volts, using 1/2 watt resistors.
+
+\vskip 10pt
+
+Challenge question: why might it be a good idea to include a diode in the circuit, like this?
+
+$$\epsfbox{01192x03.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students what purpose the voltage divider serves.  The first purpose should be obvious, as hinted in the "Note" at the end of the question.  However, a second purpose is not so obvious.  If the lower resistor were to fail open, the IGBT would turn on when the switch closes, but it would not turn off (at least not reliably) when the switch opens!  Present this scenario to your students, and ask them to explain why this would happen.
+
+Check your students' math when they present resistor values.  Do not be surprised if some students specify the resistor values such that the actual power dissipation runs right at 1/2 watt each!  Use this as an opportunity to discuss component reliability versus power dissipation, and good engineering practices.
+
+Regarding the challenge question, the diode is {\it not} there to provide a path for inductive "free-wheeling" current.  Some of your students may suggest this as its purpose, but a close examination of polarity will show otherwise.  The true answer to this question, in the context of a DC motor control circuit, has to do with the behavior of DC motors.
+
+%INDEX% Transistor switch circuit (IGBT)
+
+%(END_NOTES)
+
+

@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Singers who wish to practice singing to popular music find that the following {\it vocal eliminator} circuit is useful:
+
+$$\epsfbox{02576x01.eps}$$
+
+The circuit works on the principle that vocal tracks are usually recorded through a single microphone at the recording studio, and thus are represented equally on each channel of a stereo sound system.  This circuit effectively eliminates the vocal track from the song, leaving only the music to be heard through the headphone or speaker.
+
+Operational amplifiers $U_1$ and $U_2$ provide input buffering so that the other opamp circuits do not excessively load the left and right channel input signals.  Opamp $U_3$ performs the subtraction function necessary to eliminate the vocal track.  
+
+You might think that these three opamps would be sufficient to make a vocal eliminator circuit, but there is one more necessary feature.  Not only is the vocal track common to both left and right channels, but so is most of the bass (low-frequency) tones.  Thus, the first three opamps ($U_1$, $U_2$, and $U_3$) eliminate both vocal {\it and} bass signals from getting to the output, which is not what we want.
+
+Explain how the other three opamps ($U_4$, $U_5$, and $U_6$) work to restore bass tones to the output so they are not lost along with the vocal track.
+
+\underbar{file 02576}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I'll let you figure out the function of opamps $U_4$, $U_5$, and $U_6$ on your own!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Not only does this circuit illustrate a neat application of opamps, but it also showcases modular operational circuit design, where each opamp (and its supporting passive components) performs exactly one task.
+
+%INDEX% Active filter, used in vocal eliminator circuit
+%INDEX% Vocal eliminator circuit
+
+%(END_NOTES)
+
+

@@ -1,0 +1,33 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+What purpose do resistors $R_1$ and $R_2$ serve, and why are they so large (1,000,000 ohms each)?
+
+\underbar{file 02905}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If they were not in the circuit, the logic probe would indicate a "high" condition with the probe floating.  In place, the resistors force an "indeterminate" state with a floating probe.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+A less obvious feature of these resistors is that they force the circuit under test to drive a bit of current to (or from) the probe.  This is good, as it may help to show a gate with a "weak" output, such as one that is mildly overloaded.  Lower values for $R_1$ and $R_2$ would accentuate this feature, but would also make it trickier to set the high/low threshold potentiometers ($R_{pot1}$ and $R_{pot2}$).
+
+Another not-so-obvious design feature is that resistors $R_1$ and $R_2$ establish a default input voltage level that is between the two threshold settings established by the potentiometers.  In my first design, I connected $R_1$ and $R_2$ to the power supply rails, respectively.  This set the default (floating) input voltage at ${1 \over 2} V$, which worked fine for CMOS logic levels but not for TTL.  By having the resistors set a default input voltage between the two threshold adjustments, a floating probe is guaranteed to indicate "indeterminate" no matter where the threshold potentiometers are set.
+
+%(END_NOTES)
+
+

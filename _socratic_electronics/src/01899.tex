@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A "cheap" way to electronically produce waveforms resembling sine waves is to use a pair of passive integrator circuits, one to convert square waves into pseudo-triangle waves, and the next to convert pseudo-triangle waves into pseudo-sine waves:
+
+$$\epsfbox{01899x01.eps}$$
+
+From Fourier's theory, we know that a square wave is nothing more than a series of sinusoidal waveforms: the fundamental frequency plus all odd harmonics at diminishing amplitudes.  Looking at the two integrators as {\it passive filter circuits}, explain how it is possible to get a pseudo-sine wave from a square wave input as shown in the above diagram.  Also, explain why the final output is not a true sine wave, but only resembles a sine wave.
+
+\underbar{file 01899}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+These two integrators act as a second-order lowpass filter, attenuating the harmonics in the square wave far more than the fundamental.
+
+\vskip 10pt
+
+Challenge question: does the output waveshape more closely resemble a sine wave when the source frequency is increased or decreased?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Once students have a conceptual grasp on Fourier theory (that non-sinusoidal waveshapes are nothing more than series of superimposed sinusoids, all harmonically related), they possess a powerful tool for understanding new circuits such as this.  Of course, it is possible to understand a circuit such as this from the perspective of the time domain, but being able to look at it from the perspective of the frequency domain provides one more layer of insight.
+
+Incidentally, one may experiment with such a circuit using 0.47 $\mu$F capacitors, 1 k$\Omega$ resistors, and a fundamental frequency of about 3 kHz.  Viewing the output waveform amplitudes with an oscilloscope is insightful, especially with regard to signal amplitude!
+
+%INDEX% Passive integrator circuits, creating pseudo-sine waves with
+
+%(END_NOTES)
+
+

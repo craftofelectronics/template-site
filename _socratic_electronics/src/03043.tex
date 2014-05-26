@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Perhaps the simplest form of programmable logic is a PROM integrated circuit, programmed with a specific truth table.  Take for instance this example of a 256 $\times$ 1 PROM:
+
+$$\epsfbox{03043x01.eps}$$
+
+Suppose we wished to program this memory IC to act as a digital comparator, outputting a logical "high" state only when two four-bit binary numbers are equal:
+
+$$\epsfbox{03043x02.eps}$$
+
+Describe what the truth table would look like for the data we must program into this memory chip.  How many rows would the truth table have?  Could you briefly describe the content pattern of the data without having to complete the entire truth table?
+
+\underbar{file 03043}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Here's a clue: the truth table would only have sixteen rows with a "1" output.  All other rows will be programmed with "0" outputs!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is an example of a {\it look-up table}, whereby arbitrary data programmed into a memory circuit fulfills a logic function.  If time permits, discuss with your students what other sorts of useful logic functions might be programmed into a PROM chip such as this.
+
+%INDEX% PROM memory, used as programmable logic generator
+
+%(END_NOTES)
+
+

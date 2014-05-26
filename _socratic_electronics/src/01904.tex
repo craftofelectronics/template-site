@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A very useful tool for observing rotating objects is a {\it strobe light}.  Basically, a strobe light is nothing more than a very bright flash bulb connected to an electronic pulse generating circuit.  The flash bulb periodically emits a bright, brief pulse of light according to the frequency set by the pulse circuit.  By setting the period of a strobe light to the period of a rotating object (so the bulb flashes once per revolution of the object), the object will appear to any human observer to be still rather than rotating:
+
+$$\epsfbox{01904x01.eps}$$
+
+One problem with using a strobe light is that the frequency of the light pulses must exactly match the frequency of the object's rotation, or else the object will not appear to stand still.  If the flash rate is mismatched, even by the slightest amount, the object will appear to {\it slowly} rotate instead of stand still.
+
+Analog (CRT-based) oscilloscopes are similar in principle.  A repetitive waveform appears to "stand still" on the screen despite the fact that the trace is made by a bright dot of light constantly moving across the screen (moving up and down with voltage, and sweeping left to right with time).  Explain how the sweep rate of an oscilloscope is analogous to the flash rate of a strobe light.
+
+If an analog oscilloscope is placed in the "free-run" mode, it will exhibit the same frequency mismatch problem as the strobe light: if the sweep rate is not {\it precisely} matched to the period of the waveform being displayed (or some integer multiple thereof), the waveform will appear to {\it slowly} scroll horizontally across the oscilloscope screen.  Explain why this happens.
+
+\underbar{file 01904}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The best "answer" I can give to this question is to get an analog oscilloscope and a signal generator and experiment to see how "free-run" mode works.  If your oscilloscope does not have a "free-run" mode, you may emulate it by setting the {\it trigger} control to "EXTERNAL" (with no probe connected to the "EXTERNAL TRIGGER" input.  You will have to adjust the sweep control very carefully to get any waveform "locked" in place on the display.  Set the signal generator to a low frequency (10 Hz is good) so that the left-to-right sweeping of the dot is plainly visible, and use the "vernier" or "fine" timebase adjustment knob to vary the sweep rate as needed to get the waveform to stand still.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Really, the best way I've found for students to learn this principle is to experiment with a real oscilloscope and signal generator.  I highly recommend setting up an oscilloscope and signal generator in the classroom during discussion time so that this may be demonstrated live.
+
+%INDEX% Strobe light, as analogy to oscilloscope sweep
+%INDEX% Oscilloscope sweep, analogous to strobe light used to "freeze" rotational motion
+
+%(END_NOTES)
+
+

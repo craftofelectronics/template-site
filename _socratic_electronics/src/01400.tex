@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Synchronous counter circuits tend to confuse students.  The circuit shown here is the design that most students think ought to work, but actually doesn't:
+
+$$\epsfbox{01400x01.eps}$$
+
+\vskip 10pt
+
+Shown here is an up/down synchronous counter design that {\it does} work:
+
+$$\epsfbox{01400x02.eps}$$
+
+Explain why this circuit is able to function properly (counting in either direction), while the first circuit is not able to count properly at all.  What do those "extra" gates do to make the counter circuit function as it should.  Hint: to more easily compare the up/down counter to the faulty up counter initially shown, connect the Up/$\overline{\hbox{Down}}$ control line high, and then disregard any lines and gates that become disabled as a result.
+
+\underbar{file 01400}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The "extra" AND gates allow higher-level bits to toggle if and only if {\it all} preceding bits are high.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Although the up/down counter circuit may look overwhelmingly complex at first, it is actually quite simple once students recognize the intent of the AND and OR gates: to "select" either the $Q$ or $\overline{Q}$ signal to control subsequent flip-flops.
+
+%INDEX% Counter, synchronous
+
+%(END_NOTES)
+
+

@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Shown here is a schematic diagram for a class-C RF (radio frequency) amplifier circuit:
+
+$$\epsfbox{02506x01.eps}$$
+
+This circuit will look very strange if you are accustomed to analyzing audio-frequency and DC amplifier circuits.  Note some of the distinct differences between this amplifier and an amplifier used to boost audio signals.  Also, explain what "class-C" operation means, and how this amplifier is able to output a continuous sine wave despite the transistor's behavior in class-C mode.
+
+\vskip 10pt
+
+Finally, write an equation that predicts this amplifier's operating frequency, based on certain component values which you identify.
+
+\underbar{file 02506}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Operating in class-C mode, the transistor only turns on for a very brief moment in time during the waveform cycle.  The "flywheel" action of the tank circuit maintains a sinusoidal output waveform during the time the transistor is off.
+
+$$f = {1 \over {2 \pi \sqrt{L_1 C_2}}}$$
+
+Follow-up question: why is this mode of amplifier operation -- where the transistor is off most of the time and a tank circuit sustains sinusoidal oscillations -- desirable for an amplifier circuit?  Could this technique be applied to audio-frequency amplifier circuits?  Why or why not?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Perhaps the most noteworthy detail of this circuit is the positive biasing voltage, despite the transistor being PNP and $V_CC$ being negative.  Ask your students to explain why this is necessary to get the transistor operating in class-C mode.
+
+%INDEX% Class-C amplifier operation, defined
+
+%(END_NOTES)
+
+

@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Logic probes are useful tools for troubleshooting digital logic gate circuits, but they certainly have limitations.  For instance, in this simple circuit, a logic probe will give correct "high" and "low" readings at test point 1 (TP1), but it will always read "low" (even when the LED is on) at test point 2 (TP2):
+
+$$\epsfbox{02866x01.eps}$$
+
+Now, obviously the output of the gate is "high" when the LED is on, otherwise it would not receive enough voltage to illuminate.  Why then does a logic probe fail to indicate a high logic state at TP2?
+
+\underbar{file 02866}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I won't give away the answer here, but it has something to do with proper CMOS logic level voltages.
+
+\vskip 10pt
+
+Follow-up question: this LED circuit is rather simple, and the scenario almost silly, because the LED's presence makes checking the logic state at TP1 and TP2 superfluous!  Can you think of any other circuit or situation where a similar false reading may be displayed by a logic probe -- where the logic state has not been made visually obvious by the presence of an LED?  
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It is easy for students to overlook the limitations of a logic probe, and to forget what actually drives it to say "high" or "low" when measuring a logic level.  This is why in low-speed circuits I prefer to use a good digital voltmeter rather than a logic probe to discern logic states.  With a voltmeter, you can see exactly what the voltage level is, and determine whether or not the logic state is marginal.
+
+%INDEX% Logic probe, limitations of
+
+%(END_NOTES)
+
+

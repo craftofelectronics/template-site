@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+{\it Lissajous figures}, drawn by an oscilloscope, are a powerful tool for visualizing the phase relationship between two waveforms.  In fact, there is a mathematical formula for calculating the amount of phase shift between two sinusoidal signals, given a couple of dimensional measurements of the figure on the oscilloscope screen.
+
+The procedure begins with adjusting the vertical and horizontal amplitude controls so that the Lissajous figure is proportional: just as tall as it is wide on the screen ($n$).  Then, we make sure the figure is centered on the screen and we take a measurement of the distance between the x-axis intercept points ($m$), as such:
+
+$$\epsfbox{01481x01.eps}$$
+
+Determine what the formula is for calculating the phase shift angle for this circuit, given these dimensions.  Hint: the formula is trigonometric!  If you don't know where to begin, recall what the respective Lissajous figures look like for a $0^o$ phase shift and for a $90^o$ phase shift, and work from there.
+
+\underbar{file 01481}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\Theta = \sin^{-1} \left({m \over n}\right)$$
+
+\vskip 10pt
+
+Challenge question: what kind of Lissajous figure would be drawn by two sinusoidal waveforms at slightly different frequencies?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a great exercise in teaching students how to derive an equation from physical measurements when the fundamental nature of that equation (trigonometric) is already known.  They should already know what the Lissajous figures for both $0^o$ and $90^o$ look like, and should have no trouble figuring out what $a$ and $b$ values these two scenarios would yield if measured similarly on the oscilloscope display.  The rest is just fitting the pieces together so that the trigonometric function yields the correct angle(s).
+
+%INDEX% Lissajous figures, phase measurement with
+%INDEX% Trigonometry, deriving functions from data
+
+%(END_NOTES)
+
+

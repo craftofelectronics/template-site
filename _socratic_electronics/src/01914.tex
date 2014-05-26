@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose you were looking at this waveform in an oscilloscope display:
+
+$$\epsfbox{01914x01.eps}$$
+
+This is a difficult waveform to trigger, because there are so many identical leading and trailing edges to trigger from.  No matter where the trigger level control is set, or whether it is set for rising- or falling-edge, the waveform will tend to "jitter" back and forth horizontally on the screen because these controls cannot discriminate the {\it first} pulse from the other pulses in each cluster of pulses.  At the start of each "sweep," {\it any} of these pulses are adequate to initiate triggering.
+
+One triggering control that is helpful in stabilizing such a waveform is the {\it trigger holdoff} control.  Explain what this control does, and how it might work to make this waveform more stable on the screen.
+
+\underbar{file 01914}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The "holdoff" control sets an adjustable period of time after each trigger even where subsequent events are ignored.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+A purposefully minimal answer (as usual!) is shown in the answer section for this question.  Understanding how holdoff works may very well require hands-on experience for some students, so I highly recommend setting up a demonstration in the classroom to use while discussing this oscilloscope feature.
+
+%INDEX% Oscilloscope, trigger holdoff control
+
+%(END_NOTES)
+
+

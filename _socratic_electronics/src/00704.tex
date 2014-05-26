@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Describe what will happen to the impedance of both the capacitor and the resistor as the input signal frequency increases:
+
+$$\epsfbox{00704x01.eps}$$
+
+Also, describe what result the change in impedances will have on the op-amp circuit's voltage gain.  If the input signal amplitude remains constant as frequency increases, what will happen to the amplitude of the output voltage?  What type of filtering function does this behavior represent?
+
+\underbar{file 00704}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+As the frequency of $V_{in}$ increases, $Z_C$ decreases and $Z_R$ remains unchanged.  This will result in an increased $A_V$ for the amplifier circuit.
+
+\vskip 10pt
+
+Follow-up question: normally we calculate the cutoff frequency of a simple RC filter circuit by determining the frequency at which $R = X_C$.  Here, things are a little different.  Determine the voltage gain ($A_V$) when $R = X_C$, and also determine the phase shift from input to output.
+
+\vskip 10pt
+
+Challenge question \#1: explain why the phase shift from input to output for this circuit is always constant, regardless of signal frequency.
+
+\vskip 10pt
+
+Challenge question \#2: explain why this type of circuit is usually equipped with a low-value resistor ($R_1$) in series with the input capacitor:
+
+$$\epsfbox{00704x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The answer I've given is technically correct, but there is a practical limit here.  As we know, the intrinsic gain of an op-amp does not remain constant as signal frequency rises.  Ask your students to describe the impact of this phenomenon on the circuit's performance at very high frequencies.
+
+On another note, this same op-amp circuit is known by a particular name when used with DC input signals.  Ask your students what this design of circuit is called.
+
+%INDEX% Active filter circuit, conceptual
+
+%(END_NOTES)
+
+

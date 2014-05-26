@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Design a circuit that adds two binary bits and a "Carry in" ($C_{in}$) bit together, producing a "Sum" ($\Sigma$) and a "Carry out" ($C_{out}$) output:
+
+$$\epsfbox{01479x01.eps}$$
+
+Begin the design process by drawing a truth table for the circuit, writing a boolean SOP expression for each output, then determining the necessary gate circuitry to fulfill each output function.
+
+\underbar{file 01479}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\Sigma = \overline{A} \> \overline{B} C + \overline{A} \> B \overline{C} + A \overline{B} \> \overline{C} + ABC$$ 
+
+$$C_{out} = \overline{A}BC + A\overline{B}C + AB\overline{C} + ABC$$
+
+$$\epsfbox{01479x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Have your students explain their design process to you, step by step.  This circuit diagram is easy enough to discover in the pages of a textbook, so don't be surprised if students simply copy what they see without trying to understand how it works!
+
+Deriving the two cascaded Ex-OR gates from the boolean expression is a bit tricky, but not impossible.  Remind your students if necessary that the boolean equivalent for the Ex-OR function is $\overline{A}B + A\overline{B}$, and that the Ex-NOR function is $AB + \overline{A} \> \overline{B}$.
+
+%INDEX% Adder circuit, digital
+%INDEX% Full adder circuit
+
+%(END_NOTES)
+
+

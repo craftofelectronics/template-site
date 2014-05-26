@@ -1,0 +1,108 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following gate circuit has a problem:
+
+$$\epsfbox{02949x01.eps}$$
+
+When tested, it is found that the circuit does not respond in the same manner as its (ideal) truth table predicts.  Here is a comparison of the ideal and actual truth tables, as predicted and tested:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+A & B & C & Output (ideal) & Output (actual) \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 1 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 1 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 1 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+1 & 0 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+1 & 0 & 1 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+1 & 1 & 0 & 1 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+1 & 1 & 1 & 1 & 1 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+The first thing a good electronics technician would do, of course, is set up either a voltmeter or a logic probe and begin testing for logic levels in the circuit to see what is wrong.  However, the settings of the input switches are very important as part of the diagnosis.  Based on the design of the circuit, and the truth table results shown, in what states (open or closed) would you first set the input switches, and then what logic level would you first test with the logic probe or voltmeter?
+
+\underbar{file 02949}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Switch settings:
+
+\medskip
+\item{$\bullet$} A open (0)
+\item{$\bullet$} B closed (1)
+\item{$\bullet$} C closed (1)
+\medskip
+
+Then, measure the logic state of the lower input on the NOR gate (coming from the "B" switch).
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to explain what logic state is {\it supposed} to be at that point in the circuit, and what logic state they {\it suspect} might be there that could account for the aberrant output.  Also discuss why this particular choice of switch settings is the best for a first test.
+
+If students do not immediately grasp why the switches should be set as the answer indicates, pose the following scenario.  Suppose they were asked to troubleshoot a simple light bulb circuit using only a voltmeter.  The problem is, the light bulb does not come on when the switch is closed.  Would it be best to proceed with their voltage measurements with the switch on or off?  It should be easy to understand that having the switch in the off position would only interfere with the diagnosis, and that turning the switch on is the best way to reveal the fault (so that one could use the voltmeter to see where voltage is not present, but should be).  Likewise, it is wise to set up this faulted logic circuit in such a way that the output ought to be doing something it isn't.  This way, one may easily compare logic states as they are versus as they should be, and from there determine what type of fault could be causing the problem.
+
+%INDEX% Troubleshooting, logic gate circuit
+
+%(END_NOTES)
+
+

@@ -1,0 +1,35 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+It may be important to {\it decouple} the power supply rails in this amplifier circuit, just as it is important to decouple the power supply rails in a variety of circuits where fast $dv \over dt$ rates can exist, and/or when electrical noise is problematic.  Explain what "decoupling" is, and what it does.
+
+\underbar{file 03967}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+To "decouple" the power supply means to place capacitors between the power supply rails to stabilize the DC voltage, shorting out AC noise and transient voltage spikes from interfering with the normal operation of the circuit.  
+
+\vskip 10pt
+
+Follow-up question: where do you think decoupling capacitors would be the most effective, located back at the power supply, or close to the power terminals of the operational amplifier and power transistors?  Explain your reasoning.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I have seen the addition of decoupling capacitors turn a useless circuit into a flawless performer.  In the case of an audio amplifier, DC power supply rails that are not properly decoupled may serve as feedback paths for unwanted signals, causing oscillations.  These oscillations, if unchecked, may even {\it damage} the circuit!
+
+%(END_NOTES)
+
+

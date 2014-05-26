@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Most methods of power factor correction involve the connection of a parallel capacitance to an inductive load:
+
+$$\epsfbox{02195x01.eps}$$
+
+It is technically possible to correct for lagging power factor by connecting a capacitor in {\it series} with an inductive load as well, but this is rarely done:
+
+$$\epsfbox{02195x02.eps}$$
+
+Explain why series capacitance is not considered a practical solution for power factor correction in most applications.
+
+\underbar{file 02195}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This is essentially a series-resonant circuit, with all the inherent dangers of series resonance (I'll let you review what those dangers are!).
+
+\vskip 10pt
+
+Follow-up question: aside from safety, there is also the matter of reliability that concerns us.  Examine the parallel-capacitor circuit and the series-capacitor circuit from the perspective of a failed capacitor.  Explain how each type of capacitor failure (open versus short) will affect these two circuits.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Not only would a series-resonant power circuit be dangerous, but it would also require capacitors rated for handling large continuous currents.  The equivalent series resistance (ESR) of the capacitor would have to be very low in order to not experience problems handling full load current for extended periods of time.
+
+It should be mentioned that series capacitors sometimes are used in power systems, most notably at the connection points of some high-voltage distribution lines, at the substation(s).
+
+%INDEX% Power factor correction, series capacitance
+
+%(END_NOTES)
+
+

@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose a particular ADC has an input voltage range of +5 volts to -5 volts, and therefore is suitable for digitizing AC input signals.  A technician wants to use this ADC to digitize AC line voltage (120 volts RMS), and builds the following conditioning circuit to safely connect the ADC to the AC line:
+
+$$\epsfbox{04041x01.eps}$$
+
+Unfortunately, this ADC is not able to fully sample the AC waveform when tested.  It "overflows" and "underflows" at the waveform's peaks, as though the input waveform is too large (outside of the +5/-5 volt ADC chip range).  The technician re-checks his calculations, but still thinks the voltage division ratio provided by the potential transformer and resistor network should be sufficient for this task.
+
+What is wrong with this circuit?  Why does it "over-range" at the waveform peaks instead of sampling the 120 volt waveform with range to spare?  Then, once having identified the problem, recommend a solution to fix the problem.
+
+\underbar{file 04041}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The technician failed to consider the {\it peak} voltage of the AC line!
+
+\vskip 10pt
+
+Challenge question: one thing the technician did right in this circuit was use a transformer as the front-end of his signal conditioning network.  Explain why this was a smart idea.  In other words, why would it possibly be worse to simply use a resistive voltage divider to do {\it all} the attenuation, instead of using a step-down transformer to do part of it and a resistive divider to do the rest?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The given answer is purposefully minimal, but should contain enough information that anyone familiar with RMS versus peak sinusoidal values should realize what the problem is.  There is more than one practical solution for fixing this problem, so be sure to allow time for discussion into the various options.
+
+%INDEX% Analog-digital converter (ADC) resolution
+%INDEX% Resolution, ADC
+
+%(END_NOTES)
+
+

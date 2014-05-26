@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Shown here are two voltage-reducing circuits: both reducing a supply voltage of 13.5 volts down to 5 volts for a load.
+
+$$\epsfbox{02479x01.eps}$$
+
+$$\epsfbox{02479x02.eps}$$
+
+Calculate the average supply current ($I_{supply}$) for both of these circuits.  Assume that the switching circuit has negligible power losses in the transistor, inductor, capacitor, and diode.  If the 13.5 volt source were an electrochemical battery, which battery would last longer powering the same load?
+
+\underbar{file 02479}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The battery supplying the linear circuit must source 240 mA, while the battery supplying the switching circuit must only source an average current of 88.9 mA.
+
+\vskip 10pt
+
+Follow-up question: calculate the power efficiency of the linear circuit, and comment on why it is so different from the switching circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Explain to your students that switching power conversion circuits are very efficient: typically 85 to 95 percent!  It should be rather obvious which battery will last longer, and why.  This is precisely why switching regulator circuits (DC-DC converters with a feedback network to stabilize output voltage) are used in place of linear regulator circuits (zener diode based) in many battery-powered electronic applications.
+
+In essence, switching converter circuits act like DC transformers, able to step voltage down (or up), with current inversely proportional.  Of course, the Law of Energy Conservation holds for switching circuits just as it does for transformers, and students may find this Law the easiest way to perform supply/load current calculations knowing the supply and load voltages:
+
+$$P_{out} \approx P_{in}$$
+
+$$V_{in}I_{in} \approx V_{out}I_{out}$$
+
+If time permits, you might want to show your students a datasheet for a power converter controller, showing them how integrated circuits exist to precisely control the switching of MOSFETs for power converter circuits just like this.
+
+%INDEX% Switching regulator circuit versus linear regulator circuit
+%INDEX% Linear regulator circuit versus switching regulator circuit
+
+%(END_NOTES)
+
+

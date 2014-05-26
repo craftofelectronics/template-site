@@ -1,0 +1,33 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The design recommendation for this circuit is to make resistors $R_2$ and $R_3$ both equal to the resistance of the potentiometer $R_{pot2}$.  This way, the full mechanical range of the potentiometer will be useful for adjusting duty cycle: fully turning it one way will just produce a 0\% duty cycle, while fully turning it the other way will just produce a 100\% duty cycle.
+
+Explain why those resistor values need to be equal to achieve this optimum usage of pot range.  Hint: it has something to do with the internal workings of the 555 timer IC.
+
+\underbar{file 03193}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The sawtooth signal seen at capacitor $C_1$ (with reference to ground) oscillates between ${1 \over 3}$ and ${2 \over 3}$ supply voltage.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question forces students to explore what the 555 is really doing, and to recognize the comparator's function in generating PWM square waves.
+
+%(END_NOTES)
+
+

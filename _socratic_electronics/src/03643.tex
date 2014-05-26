@@ -1,0 +1,71 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+According to the "Ohm's Law" formula for a capacitor, capacitor current is proportional to the {\it time-derivative} of capacitor voltage:
+
+$$i = C {dv \over dt}$$
+
+Another way of saying this is to state that the capacitors {\it differentiate} voltage with respect to time, and express this {\it time-derivative} of voltage as a current.
+
+\vskip 10pt
+
+We may build a simple circuit to produce an output voltage proportional to the current through a capacitor, like this:
+
+$$\epsfbox{03643x01.eps}$$
+
+The resistor is called a {\it shunt} because it is designed to produce a voltage proportional to current, for the purpose of a parallel ("shunt")-connected voltmeter or oscilloscope to measure that current.  Ideally, the shunt resistor is there only to help us measure current, and not to impede current through the capacitor.  In other words, its value in ohms should be very small compared to the reactance of the capacitor ($R_{shunt} << X_C$).
+
+Suppose that we connect AC voltage sources with the following wave-shapes to the input of this passive differentiator circuit.  Sketch the ideal (time-derivative) output waveform shape on each oscilloscope screen, as well as the shape of the actual circuit's output voltage (which will be non-ideal, of course):
+
+$$\epsfbox{03643x02.eps}$$
+
+$$\epsfbox{03643x03.eps}$$
+
+$$\epsfbox{03643x04.eps}$$
+
+Note: the amplitude of your plots is arbitrary.  What I'm interested in here is the {\it shape} of the ideal and actual output voltage waveforms!
+
+\vskip 10pt
+
+Hint: I strongly recommend building this circuit and testing it with triangle, sine, and square-wave input voltage signals to obtain the corresponding actual output voltage wave-shapes!
+
+\underbar{file 03643}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{03643x05.eps}$$
+
+$$\epsfbox{03643x06.eps}$$
+
+$$\epsfbox{03643x07.eps}$$
+
+\vskip 10pt
+
+Follow-up question: given that $R_{shunt} << X_C$ in order that the resistance does not impede the capacitor current to any significant extent, what does this suggest about the necessary time-constant ($\tau$) of a passive differentiator circuit?  In other words, what values of $R$ and $C$ would work best in such a circuit to produce an output waveform that is as close to ideal as possible?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question really is best answered by experimentation.  I recommend having a signal generator and oscilloscope on-hand in the classroom to demonstrate the operation of this passive differentiator circuit.  Challenge students with setting up the equipment and operating it!
+
+%INDEX% Differentiator circuit, passive
+%INDEX% Passive differentiator circuit
+%INDEX% Shunt resistor, used as part of passive RC differentiator circuit
+
+%(END_NOTES)
+
+

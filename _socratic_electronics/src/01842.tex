@@ -1,0 +1,81 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Determine the total current and all component currents in this circuit, stating your answers the way a multimeter would register them:
+
+$$\epsfbox{01842x01.eps}$$
+
+\goodbreak
+
+\item{$\bullet$} $L_1 = 1.2 \hbox{ H}$
+\item{$\bullet$} $L_2 = 650 \hbox{ mH}$
+\item{$\bullet$} $R_1 = 33 \hbox{ k}\Omega$
+\item{$\bullet$} $R_2 = 27 \hbox{ k}\Omega$
+\item{$\bullet$} $V_{supply} = 19.7 \hbox{ V RMS}$
+\item{$\bullet$} $f_{supply} = 4.5 \hbox{ kHz}$
+
+\vskip 10pt
+
+Also, calculate the phase angle ($\Theta$) between voltage and current in this circuit, and explain where and how you would connect an oscilloscope to measure that phase shift.
+
+\underbar{file 01842}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\item{$\bullet$} $I_{total} = 2.12 \hbox{ mA}$
+\item{$\bullet$} $I_{L1} = 581 \> \mu \hbox{A}$
+\item{$\bullet$} $I_{L2} = 1.07 \hbox{ mA}$
+\item{$\bullet$} $I_{R1} = 597 \> \mu \hbox{A}$
+\item{$\bullet$} $I_{R2} = 730 \> \mu \hbox{A}$
+\item{$\bullet$} $\Theta = 51.24^o$
+\medskip
+
+Measuring $\Theta$ with an oscilloscope requires the addition of a shunt resistor into this circuit, because oscilloscopes are (normally) only able to measure voltage, and there is no phase shift between any voltages in this circuit because all components are in parallel.  I leave it to you to suggest where to insert the shunt resistor, what resistance value to select for the task, and how to connect the oscilloscope to the modified circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Some students many wonder what type of numerical result best corresponds to a multimeter's readings, if they do their calculations using complex numbers ("do I use polar or rectangular form, and if rectangular do I use the real or the imaginary part?").  The answers given for this question should clarify that point.
+
+It is very important that students know how to apply this knowledge of AC circuit analysis to real-world situations.  Asking students to determine how they would connect an oscilloscope to the circuit to measure $\Theta$ is an exercise in developing their abstraction abilities between calculations and actual circuit scenarios.
+
+\vskip 10pt
+
+Students often have difficulty formulating a method of solution: determining what steps to take to get from the given conditions to a final answer.  While it is helpful at first for you (the instructor) to show them, it is bad for you to show them too often, lest they stop thinking for themselves and merely follow your lead.  A teaching technique I have found very helpful is to have students come up to the board (alone or in teams) in front of class to write their problem-solving strategies for all the others to see.  They don't have to actually do the math, but rather outline the steps they would take, in the order they would take them.  The following is a sample of a written problem-solving strategy for analyzing a series resistive-reactive AC circuit:
+
+\vskip 10pt
+
+\goodbreak
+
+{\bf Step 1:} Calculate all reactances ($X$).
+
+{\bf Step 2:} Draw an impedance triangle ($Z$ ; $R$ ; $X$), solving for $Z$
+
+{\bf Step 3:} Calculate circuit current using Ohm's Law: $I = {V \over Z}$
+
+{\bf Step 4:} Calculate series voltage drops using Ohm's Law: $V = {I Z}$
+
+{\bf Step 5:} Check work by drawing a voltage triangle ($V_{total}$ ; $V_1$ ; $V_2$), solving for $V_{total}$
+
+\vskip 10pt
+
+By having students outline their problem-solving strategies, everyone gets an opportunity to see multiple methods of solution, and you (the instructor) get to see how (and if!) your students are thinking.  An especially good point to emphasize in these "open thinking" activities is how to check your work to see if any mistakes were made.
+
+%INDEX% Impedance calculation, parallel LR circuit
+%INDEX% Phase shift, measuring with oscilloscope in parallel LR circuit
+
+%(END_NOTES)
+
+

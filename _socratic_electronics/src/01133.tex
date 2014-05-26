@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+A potential problem for power MOSFETs is {\it ${dv \over dt}$ induced turn-on}.  Explain why a MOSFET may turn on when it's not supposed to, given an excessive ${dv \over dt}$ condition.
+
+\underbar{file 01133}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If the drain voltage rate-of-change over time ($dv \over dt$) is excessive, the transistor may turn on due to the coupling effect of gate-to-drain capacitance ($C_{GD}$).
+
+\vskip 10pt
+
+Challenge question: draw an equivalent schematic diagram showing the parasitic $C_{GD}$ capacitance, and write the equation relating capacitive current to instantaneous voltage change over time.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question is a good review of capacitor theory and calculus notation.  Ask your students to explain exactly what ${dv \over dt}$ means, and how it relates to current in a circuit containing capacitance.
+
+The problem of dv/dt induced turn-on is not unique to power MOSFETs.  Various thyristors, most notably SCRs and TRIACs, also exhibit this problem.
+
+%INDEX% dv/dt turn-on, MOSFET
+
+%(END_NOTES)
+
+

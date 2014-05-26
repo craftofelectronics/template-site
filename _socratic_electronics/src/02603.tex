@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+It strikes some students as odd that opamps would have a constant slew rate.  That is, when subjected to a step-change input voltage, an opamp's output voltage would quickly ramp {\it linearly} over time, rather than ramp in some other way (such as the inverse exponential curve seen in RC and RL pulse circuits):
+
+$$\epsfbox{02603x01.eps}$$
+
+Yet, this effect has a definite cause, and it is found in the design of the opamp's internal circuitry: the voltage multiplication stages within operational amplifier circuits often use {\it active loading} for increased voltage gain.  An example of active loading may be seen in the following schematic diagram for the classic 741 opamp, where transistor $Q_9$ acts as an active load for transistor $Q_{10}$, and where transistor $Q_{13}$ provides an active load for transistor $Q_{17}$:
+
+$$\epsfbox{02603x02.eps}$$
+
+Explain how active loading creates the constant slew rate exhibited by operational amplifier circuits such as the 741.  What factors account for the {\it linear} ramping of voltage over time?
+
+\underbar{file 02603}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Active loads act as constant-current sources feeding a constant (maximum) current through any capacitances in their way.  This leads to constant ${dv \over dt}$ rates according to the "Ohm's Law" equation for capacitors:
+
+$$i = C {dv \over dt}$$
+
+\vskip 10pt
+
+Follow-up question: based on what you see here, determine what parameters could be changed within the internal circuitry of an operational amplifier to increase the slew rate.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question provides good review of fundamental capacitor behavior, and also explains {\it why} opamps have slew rates as they do.
+
+%INDEX% Active loading, common-emitter transistor amplifier
+%INDEX% Slew rate, opamp (explanation for linearity of)
+
+%(END_NOTES)
+
+

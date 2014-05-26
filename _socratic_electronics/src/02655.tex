@@ -1,0 +1,61 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose we were to compare the performance of two voltage divider circuits side-by-side.  The circuit on the left has one variable resistor ($R_2$), while the circuit on the right has two variable resistors ($R_1$ and $R_2$).  The right-hand circuit's resistors are ganged together in such a way that as one resistance increases, the other will decrease by the same amount, keeping the circuit's total resistance constant:
+
+$$\epsfbox{02655x01.eps}$$
+
+Knowing that the voltage output by a voltage divider is described by the following formula, determine which voltage divider circuit yields the greatest change in output voltage for a given change in $R_2$'s resistance.
+
+$$V_{out} = V_{battery} \left({R_2 \over {R_1 + R_2}}\right)$$
+
+\underbar{file 02655}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The voltage divider with the ganged rheostats will yield the greatest change in output voltage for a given change in $R_2$'s resistance, because only the numerator of the fraction in the voltage divider formula changes with $R_2$, not the denominator as well.
+
+\vskip 10pt
+
+Follow-up question \#1: what happens to the amount of current in each circuit for a given change in $R_2$ resistance?  Explain why.
+
+\vskip 10pt
+
+Follow-up question \#2: explain how a potentiometer performs the exact function as the second circuit with the two (complementarily) ganged rheostats.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Understanding the mathematical basis for the answer may be a significant leap for some students.  If they experience trouble understanding how the voltage divider formula proves the answer, have them try a "thought experiment" with really simple numbers:
+
+\medskip
+\goodbreak
+\item{$\bullet$} Initial conditions:
+\item{\hskip 20pt} $R_1$ = 1 $\Omega$ 
+\item{\hskip 20pt} $R_2$ = 1 $\Omega$ 
+\item{\hskip 20pt} $V_{battery}$ = 1 volt 
+\medskip
+
+Now, increase $R_2$ from 1 $\Omega$ to 2 $\Omega$ and see which voltage divider circuit has experienced the greatest change in output voltage.  Once these example quantities are placed into the respective formulae, it should become easy to see how the voltage divider formula explains the larger voltage swing of the second divider circuit.
+
+\vskip 10pt
+
+Point out to your students that this is an example of practical problem-solving: performing a "thought experiment" with really simple quantities to numerically explore how two different systems react to change.  Although there is nothing particularly difficult about this technique, many students avoid it because they think there must be some easier way (a ready-made explanation, as opposed to a thought experiment of their own) to understand the concept.  Getting students over this attitude barrier is a difficult yet crucial step in them developing self-teaching ability.
+
+%INDEX% Voltage divider, with and without "active" load resistor
+
+%(END_NOTES)
+
+

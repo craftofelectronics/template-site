@@ -1,0 +1,80 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Absolute rotary encoders often use a code known as {\it Gray code} rather than binary, to represent angular position.  This code was patented by Frank Gray of Bell Labs in 1953, as a means of reducing errors in rotary encoder output.  Examine each of these encoder disks, and determine which one is binary and which one is Gray code:
+
+$$\epsfbox{01237x01.eps}$$
+
+Assuming that the darkest areas on the illustration represent slots cut through the disk, and the grey areas represent parts of the disk that are opaque, mark the "zero," "one," and "two" sectors on each disk.
+
+\underbar{file 01237}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01237x02.eps}$$
+
+\vskip 10pt
+
+I won't directly tell you which disk is which, but I will provide a comparison of 5-bit binary versus Gray code, to help you in your analysis:
+
+\vskip 10pt
+
+\settabs 5 \columns
+
+\+ \hfil & Binary & Gray & \hfil & \hfil \cr
+\+ \hfil & 00000 & 00000 & \hfil & \hfil \cr
+\+ \hfil & 00001 & 00001 & \hfil & \hfil \cr
+\+ \hfil & 00010 & 00011 & \hfil & \hfil \cr
+\+ \hfil & 00011 & 00010 & \hfil & \hfil \cr
+\+ \hfil & 00100 & 00110 & \hfil & \hfil \cr
+\+ \hfil & 00101 & 00111 & \hfil & \hfil \cr
+\+ \hfil & 00110 & 00101 & \hfil & \hfil \cr
+\+ \hfil & 00111 & 00100 & \hfil & \hfil \cr
+\+ \hfil & 01000 & 01100 & \hfil & \hfil \cr
+\+ \hfil & 01001 & 01101 & \hfil & \hfil \cr
+\+ \hfil & 01010 & 01111 & \hfil & \hfil \cr
+\+ \hfil & 01011 & 01110 & \hfil & \hfil \cr
+\+ \hfil & 01100 & 01010 & \hfil & \hfil \cr
+\+ \hfil & 01101 & 01011 & \hfil & \hfil \cr
+\+ \hfil & 01110 & 01001 & \hfil & \hfil \cr
+\+ \hfil & 01111 & 01000 & \hfil & \hfil \cr
+\+ \hfil & 10000 & 11000 & \hfil & \hfil \cr
+\+ \hfil & 10001 & 11001 & \hfil & \hfil \cr
+\+ \hfil & 10010 & 11011 & \hfil & \hfil \cr
+\+ \hfil & 10011 & 11010 & \hfil & \hfil \cr
+\+ \hfil & 10100 & 11110 & \hfil & \hfil \cr
+\+ \hfil & 10101 & 11111 & \hfil & \hfil \cr
+\+ \hfil & 10110 & 11101 & \hfil & \hfil \cr
+\+ \hfil & 10111 & 11100 & \hfil & \hfil \cr
+\+ \hfil & 11000 & 10100 & \hfil & \hfil \cr
+\+ \hfil & 11001 & 10101 & \hfil & \hfil \cr
+\+ \hfil & 11010 & 10111 & \hfil & \hfil \cr
+\+ \hfil & 11011 & 10110 & \hfil & \hfil \cr
+\+ \hfil & 11100 & 10010 & \hfil & \hfil \cr
+\+ \hfil & 11101 & 10011 & \hfil & \hfil \cr
+\+ \hfil & 11110 & 10001 & \hfil & \hfil \cr
+\+ \hfil & 11111 & 10000 & \hfil & \hfil \cr
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students what patterns they notice in the Gray code sequence, as compared to the binary count.  What difference do they see between binary and Gray code, analyzing the bit transitions from one number to the next?
+
+%INDEX% Gray code, versus binary (rotary encoder)
+%INDEX% Binary, versus Gray code (rotary encoder)
+
+%(END_NOTES)
+
+

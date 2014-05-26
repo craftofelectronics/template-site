@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+It is common to see a capacitor connected between the "Control" terminal and ground in 555 timer circuits, especially when precise timing is important.  
+
+$$\epsfbox{01434x01.eps}$$
+
+Explain what purpose the capacitor $C_2$ serves in this circuit.
+
+\underbar{file 01434}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$C_2$ acts as a decoupling capacitor, to help stabilize the threshold and trigger reference voltages internal to the 555.
+
+\vskip 10pt
+
+Challenge question: what operational parameters of the circuit define the necessary capacitance value of $C_2$?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Decoupling power supply pins on a chip is important, but here students get to see another variation of decoupling.  If time permits, work through a sample problem with your students sizing capacitor $C_2$, given a certain operating frequency of the astable circuit.  Note: this will give you another opportunity to use Th\'evenin's Theorem . . .
+
+%INDEX% Decoupling capacitor
+%INDEX% Capacitor, decoupling
+
+%(END_NOTES)
+
+

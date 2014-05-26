@@ -1,0 +1,71 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose a technician is checking the operation of the following electronic circuit:
+
+$$\epsfbox{02733x01.eps}$$
+
+She decides to measure the voltage on either side of resistor R1 with reference to ground, and obtains these readings:
+
+$$\epsfbox{02733x02.eps}$$
+
+On the top side of R1, the voltage with reference to ground is -5.04 volts.  On the bottom side of R1, the voltage with reference to ground is -1.87 volts.  The color code of resistor R1 is Yellow, Violet, Orange, Gold.  From this information, determine the following:
+
+\medskip
+\goodbreak
+\item{$\bullet$} Voltage across R1 (between top to bottom):
+\item{$\bullet$} Polarity (+ and -) of voltage across R1:
+\item{$\bullet$} Current (magnitude) through R1:
+\item{$\bullet$} Direction of current through R1:
+\medskip
+
+Additionally, explain how this technician would make each one of these determinations.  What rules or laws of electric circuits would she apply?
+
+\underbar{file 02733}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Voltage across R1 (between top to bottom): {\bf 3.17 volts}
+\item{$\bullet$} Polarity (+ and -) of voltage across R1: {\bf (-) on top, (+) on bottom}
+\item{$\bullet$} Current (magnitude) through R1: {\bf 67.45 $\mu$A}
+\item{$\bullet$} Direction of current through R1: {\bf upward, following conventional flow}
+\medskip
+
+\vskip 10pt
+
+Follow-up question: calculate the range of possible currents, given the specified tolerance of resistor R1 (67.45 $\mu$A assumes 0\% error).
+
+\vskip 10pt
+
+Challenge question: if you recognize the type of circuit this is (by the part number of the IC "chip": TL082), identify the voltage between pin 3 and ground.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a good example of how Kirchhoff's Voltage Law is more than just an abstract tool for mathematical analysis -- it is also a powerful technique for practical circuit diagnosis.  Students must apply KVL to determine the voltage drop across R1, and then use Ohm's Law to calculate its current.
+
+If students experience difficulty visualizing how KVL plays a part in the solution of this problem, show them this illustration:
+
+$$\epsfbox{02733x03.eps}$$
+
+By the way, the answer to the challenge question may only be realized if students recognize this circuit as a noninverting opamp voltage amplifier.  The voltage at pin 3 (noninverting input) will be the same as the voltage at pin 2 (inverting input): -1.87 volts.
+
+%INDEX% Color code, resistor (4-band)
+%INDEX% Voltmeter usage, to estimate current through a resistor
+
+%(END_NOTES)
+
+

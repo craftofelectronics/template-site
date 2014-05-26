@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An interesting technique to achieve extremely high voltage gain from a single-stage transistor amplifier is to substitute an {\it active load} for the customary load resistor (located at the collector terminal):
+
+$$\epsfbox{02657x01.eps}$$
+
+Usually, this "active load" takes the form of a current mirror circuit, behaving as a current {\it regulator} rather than as a true current {\it source}.
+
+Explain why the presence of an active load results in significantly more voltage gain than a plain (passive) resistor.  If the active load were a {\it perfect} current regulator, holding collector current absolutely constant despite any change in collector-base conductivity for the main amplifying transistor, what would the voltage gain be?
+
+\underbar{file 02657}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+If the active load were a perfect current regulator, the voltage gain of this single-stage amplifier circuit would be infinite ($\infty$), because the Th\'evenin equivalent resistance for a current source is infinite ohms.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+There is more than one way to comprehend this effect, and why it works as it does.  One of the more sophisticated ways is to consider what the internal resistance of a perfect current source is: infinite.  Ask your students how they contemplated this effect, and what means they employed to grasp the concept.
+
+%INDEX% Active load, used in BJT amplifier
+
+%(END_NOTES)
+
+

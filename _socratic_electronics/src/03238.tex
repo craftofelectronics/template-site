@@ -1,0 +1,62 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+One day an electronics student decides to build her own variable-voltage power source using a 6-volt battery and a 10 k$\Omega$ potentiometer:
+
+$$\epsfbox{03238x01.eps}$$
+
+She tests her circuit by connecting a voltmeter to the output terminals and verifying that the voltage does indeed increase and decrease as the potentiometer knob is turned.
+
+Later that day, her instructor assigns a quick lab exercise: measure the current through a parallel resistor circuit with an applied voltage of 3 volts, as shown in the following schematic diagram.
+
+$$\epsfbox{03238x02.eps}$$
+
+Calculating current in this circuit is a trivial exercise, she thinks to herself: 3 V $\div$ 500 $\Omega$ = 6 mA.  This will be a great opportunity to use the new power source circuit, as 3 volts is well within the voltage adjustment range!
+
+She first sets up her circuit to output 3 volts precisely (turning the 10 k$\Omega$ potentiometer to the 50\% position), measuring with her voltmeter as she did when initially testing the circuit.  Then she connects the output leads to the two parallel resistors through her multimeter (configured as an ammeter), like this:
+
+$$\epsfbox{03238x03.eps}$$
+
+However, when she reads her ammeter display, the current only measures 1 mA, not 6 mA as she predicted.  This is a very large discrepancy between her prediction and the measured value for current!
+
+\vskip 10pt
+
+Use Th\'evenin's Theorem to explain what went wrong in this experiment.  Why didn't her circuit behave as she predicted it would?
+
+\underbar{file 03238}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+With the 10 k$\Omega$ potentiometer set in the 50\% position, this student's power source circuit resembles a 3 volt source in series with a 5 k$\Omega$ resistance (the Th\'evenin equivalent circuit) rather than an ideal 3 volt source as assumed when she made her prediction for circuit current.
+
+\vskip 10pt
+
+Follow-up question \#1: explain what this student would have to do to use her adjustable-voltage power source circuit to properly demonstrate the lab circuit as assigned.
+
+\vskip 10pt
+
+Follow-up question \#2: identify at least one circuit failure which would result in zero measured (ammeter) current.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This challenges students to apply Th\'evenin's Theorem to a practical scenario: a loaded voltage divider.  Be sure to ask your students to show what the Th\'evenin equivalent circuit for the student's power source is (set at 50\%, or 3 volts output unloaded), and how they arrived at that equivalent circuit.
+
+%INDEX% Potentiometer, as a loaded voltage divider
+%INDEX% Thevenin's Theorem, applied to potentiometer circuit
+
+%(END_NOTES)
+
+

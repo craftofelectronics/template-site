@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The choice of step-down transformers to use in a project such as this is not arbitrary.  We must consider several factors when choosing a particular transformer:
+
+\medskip
+\item{$\bullet$} Turns ratio
+\item{$\bullet$} Winding voltage rating(s)
+\item{$\bullet$} Isolation (safety) voltage rating
+\item{$\bullet$} Expense (transformers can be expensive!)
+\medskip
+
+A turns ratio between 20:1 and 10:1 seems to work good for a project such as this.  I recommend a transformer with a highest high-voltage winding rating and winding-to-winding isolation possible, to provide maximum resistance between the circuit under test (primary) and your headphones (secondary).  This is a safety feature -- to ensure that you will not receive an electric shock if the detector is accidently connected to a source of lethal voltage.  I also recommend using a recycled transformer (i.e. salvaged from some junk equipment) rather than purchasing a new one.
+
+Identify some commonly available transformers that fit these criteria.
+
+\underbar{file 01495}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Simple 120-volt to 6-volt step-down transformers of the type used in the power supply stage of consumer electronic devices such as clock radios work well.  I've even used the high-voltage transformer from an old microwave oven (120 volt primary, 2000 volt secondary) {\it backwards} as a step-down transformer, with very good results (not to mention superb safety isolation).  
+
+Of course, plain 1000:8 ohm audio matching transformers will function adequately as far as signal detection is concerned.  However, these transformers typically do not provide the same level of winding-to-winding isolation that a power transformer will, and so I do not recommend them for permanent construction (only for proof-of-concept circuits).
+
+\vskip 10pt
+
+NOTE: be sure to observe all appropriate safety precautions if salvaging transformers from old equipment, especially high-voltage devices such as microwave ovens!  If unsure of anything, consult your instructor before proceeding with the disassembly of a device.  Many pieces of electronic equipment contain high-voltage capacitors which may store lethal charges long after the device has been powered.  All capacitors must be discharged in a reasonable manner prior to touching conductors in old equipment!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Make sure your students do some actual research in arriving at their suggested transformer sources -- simply repeating what they read in the answer is not acceptable.
+
+It may seem odd to suggest the use of line-frequency power transformers for this purpose, where the (audio) signal frequency range may far exceed 60 Hz.  However, we are not aiming for high fidelity with this device, only maximum sensitivity and maximum safety.  Incidentally, I have found that AC line power transformers -- when operated at voltages far below their winding ratings -- do a decent job of audio signal reproduction because the magnetic field flux in the core is so incredibly low compared to what would be there transforming 50 Hz or 60 Hz line power.  The fidelity of an audio signal intercepted from a radio circuit with this detector, for example, is quite satisfactory for diagnostic purposes.
+
+%(END_NOTES)
+
+

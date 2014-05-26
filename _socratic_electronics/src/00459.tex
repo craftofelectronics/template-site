@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Mutual inductance can exist even in places where we would rather it not.  Take for instance the situation of a "heavy" (high-current) AC electric load, where each conductor is routed through its own metal conduit.  The oscillating magnetic field around each conductor induces currents in the metal conduits, causing them to resistively heat (Joule's Law, $P = I^2 R$):
+
+$$\epsfbox{00459x01.eps}$$
+
+It is standard industry practice to avoid running the conductors of a large AC load in separate metal conduits.  Rather, the conductors should be run in the same conduit to avoid inductive heating:
+
+$$\epsfbox{00459x02.eps}$$
+
+Explain why this wiring technique eliminates inductive heating of the conduit.
+
+\vskip 10pt
+
+Now, suppose two empty metal conduits stretch between the location of a large electric motor, and the motor control center (MCC) where the circuit breaker and on/off "contactor" equipment is located.  Each conduit is too small to hold both motor conductors, but we know we're not supposed to run each conductor in its own conduit, lest the conduits heat up from induction.  What do we do, then?
+
+$$\epsfbox{00459x03.eps}$$
+
+\underbar{file 00459}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use terminal blocks to "split up" the conductors from one pair into two pairs:
+
+$$\epsfbox{00459x04.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This wiring technique is very commonly used in industry, where conductor gauges for high-horsepower electric motors can be quite large, and conduits never quite large enough.
+
+%INDEX% Inductive heating of conduit
+
+%(END_NOTES)
+
+

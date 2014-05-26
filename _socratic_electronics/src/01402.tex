@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose we had two four-bit synchronous up/down counter circuits, which we wished to {\it cascade} to make one eight-bit counter.  Draw the necessary connecting wires (and any extra gates) between the two four-bit counters to make this possible:
+
+$$\epsfbox{01402x01.eps}$$
+
+After deciding how to cascade these counters, imagine that you are in charge of building and packaging four-bit counter circuits.  The customers who buy your counters might wish to cascade them as you did here, but they won't have the ability to "go inside" the packaging as you did to connect to any of the lines between the various flip-flops.  This means you will have to provide any necessary cascading lines as inputs and outputs on your pre-packaged counters.  Think carefully about how you would choose to build and package your four-bit "cascadable" counters, and then draw a schematic diagram.
+
+\underbar{file 01402}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This first solution requires some elimination of wires and one gate from the front end of the second counter . . .
+
+$$\epsfbox{01402x02.eps}$$
+
+. . . while this solution does only requires different AND gates (3-input instead of 2-input) on the first flip-flop stage of the second counter:
+
+$$\epsfbox{01402x03.eps}$$
+
+\vskip 10pt
+
+I'll let you decide how you might wish to package your four-bit counter circuits, so as to allow easy cascading.  This will be an excellent topic for classroom discussion!
+
+\vskip 10pt
+
+\goodbreak
+Follow-up question: why isn't the following circuit an acceptable solution?
+
+$$\epsfbox{01402x04.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Figuring out how to cascade the two four-bit counters is the easy part.  The challenge is to "think ahead" in designing a four-bit counter with all the necessary connections to make cascading easy for the end-user.  Make this the center of discussion on this particular question.
+
+%INDEX% Cascading digital counters
+%INDEX% Counter cascading
+
+%(END_NOTES)
+
+

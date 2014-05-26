@@ -1,0 +1,35 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An important use for read-only semiconductor memories is as {\it look-up tables}.  Describe what a "look-up table" is, and what one might be used for.
+
+\underbar{file 01477}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A {\it look-up table} is a set of data programmed into a memory device, used to map a function of some kind: for each unique input (address), there is an output (data) that means something to the system in which it is installed.
+
+An example of a look-up table is an EBCDIC-to-ASCII code converter, where an EBCDIC code input to the address lines of a ROM chip "looks up" the equivalent ASCII character value from memory, and outputs it as the result through the ROM chip's data lines.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The EBCDIC-to-ASCII code converter concept is not hypothetical!  I actually designed and helped build such a circuit to allow standard personal computers to "talk" to an obsolete CNC machine tool control computer which didn't understand ASCII data, only EBCDIC.  A look-up table implemented in a UVEPROM served as a neat way to implement this function, without a lot of complex circuitry.
+
+%INDEX% Look-up table
+
+%(END_NOTES)
+
+

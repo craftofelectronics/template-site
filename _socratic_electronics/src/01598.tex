@@ -1,0 +1,153 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+\centerline{{\bf Wire-by-Number project:} Two-stage, class A, audio transistor amplifier} \bigskip 
+
+\noindent Description:
+
+This circuit amplifies sounds detected by the microphone (actually, a small speaker used as a microphone), and amplifies them to be heard on a speaker.
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent Schematic diagram: 
+
+$$\epsfbox{01598x01.eps}$$
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent Components:
+
+\medskip
+\item{$\bullet$} Battery (9 V): A1=+ , A2=- (ground)
+\item{$\bullet$} Small speaker (used as microphone): A3, A4
+\item{$\bullet$} Capacitor C1, 0.47 $\mu$F: A5, A6
+\item{$\bullet$} Resistor R1, 220 k$\Omega$: A7, A8
+\item{$\bullet$} Resistor R2, 27 k$\Omega$: A9, A10
+\item{$\bullet$} Resistor R3, 10 k$\Omega$: A11, A12
+\item{$\bullet$} Transistor Q1, 2N3403 (NPN): A13=e, A14=c, A15=b
+\item{$\bullet$} Capacitor C4, 47 $\mu$F: B1=+, B2=-
+\item{$\bullet$} Capacitor C3, 33 $\mu$F: B4=+, B5=-
+\item{$\bullet$} Resistor R5, 1 k$\Omega$: B6, B7
+\item{$\bullet$} Transistor Q2, 2N3403 (NPN): B8=b, B9=c, B10=e
+\item{$\bullet$} Capacitor C2, 4.7 $\mu$F: B11=+, B12=-
+\item{$\bullet$} Resistor R4, 1.5 k$\Omega$: B13, B14
+\item{$\bullet$} Small speaker: B15, B16
+\medskip
+
+$$\epsfbox{01598x02.eps}$$
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent Pictorial diagram:
+
+$$\epsfbox{01598x03.eps}$$
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent Wiring sequence:
+
+\medskip
+\item{$\bullet$} B1-A1-A7-A11-B9
+\item{$\bullet$} B2-A2-A4-A10-B7-B12-B14-B16
+\item{$\bullet$} A3-A5
+\item{$\bullet$} A6-A8-A9-A15
+\item{$\bullet$} A12-A14-B8
+\item{$\bullet$} A13-B13-B11
+\item{$\bullet$} B4-B6-B10
+\item{$\bullet$} B5-B15
+\medskip
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent Tasks:
+
+% Verify correct operation and take measurements
+When you have the circuit built, you should be able to lightly touch the cone of the microphone with your fingertip and hear "scratching" sounds coming from the output speaker.  If you hear no sound from the output speaker at all, even when tapping the microphone cone with your finger, then your circuit has a problem.
+
+Predict the correct values for the following DC (quiescent) voltages, then verify by measuring with your voltmeter.  Don't forget to include the proper unit symbol (V) with your data!  Calculate the percentage error of the measured values using the following formula: Error = ${\hbox{Measured} - \hbox{Predicted} \over \hbox{Predicted}} \times 100 \%$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr 
+\noalign{\hrule}
+%
+{\bf Variable} & {\bf Formula} & {\bf Predicted} & {\bf Measured} & {\bf Error} \cr
+\noalign{\hrule}
+%
+$V_{R2}$  &  $\approx V_{battery}\left({R_2 \over {R_1 + R_2}}\right)$  &   &   &  \cr
+\noalign{\hrule}
+%
+$V_{R4}$  &  $\approx V_{R2} - 0.7$  &   &   &  \cr
+\noalign{\hrule}
+%
+$V_{b(Q2)}$  &  $V_{battery} - R_3 \left({V_{R4} \over R_4}\right)$  &   &   &  \cr
+\noalign{\hrule}
+%
+$V_{R5}$  &  $\approx V_{b(Q2)} - 0.7$  &   &   &  \cr
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+
+% Introduce specific faults and take measurements
+Remove the bypass capacitor C2 (terminals B11 and B12), and test the circuit again by lightly touching the microphone cone with your fingertip.  What do you notice about the volume level of the output, compared to when the capacitor was in place?  Explain why there is a change in volume when this capacitor is removed:
+
+$$\epsfbox{wbn_box.eps}$$
+
+Re-measure the DC voltages using your voltmeter.  Have they changed substantially since removing the capacitor?  Explain why or why not:
+
+$$\epsfbox{wbn_box.eps}$$
+
+% Modify circuit to perform differently
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent Questions remaining:
+
+{\it Here is where you write any questions or comments you have about this experiment.}
+
+\vskip 50pt
+
+\underbar{file 01598}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+
+%(END_NOTES)
+
+

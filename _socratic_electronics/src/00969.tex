@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student builds the following push-pull amplifier circuit, and notices that the output waveform is distorted from the original sine-wave shape output by the function generator:
+
+$$\epsfbox{00969x01.eps}$$
+
+Thinking that perhaps this circuit requires DC biasing, just like Class A amplifier circuits, the student turns on the "DC offset" feature of the function generator and introduces some DC voltage to the input signal.  The result is actually worse:
+
+$$\epsfbox{00969x02.eps}$$
+
+Obviously, the problem will not be fixed by biasing the AC input signal, so what causes this distortion in the output waveform?
+
+\underbar{file 00969}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I'll give you a hint: this type of distortion is called {\it crossover distortion}, and it is the most prevalent type of distortion in Class B amplifier designs.
+
+\vskip 10pt
+
+Challenge question: since this type of transistor amplifier is often referred to as a "push-pull" design, describe the cause of this distortion in terms of the transistors "pushing" and "pulling".
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Crossover distortion is fairly easy to understand, but more difficult to fix than the one-sided "clipping" distortion students are used to seeing in Class A amplifier designs.  If you think it might help your students understand better, ask them how a push-pull amplifier circuit would respond to a {\it slowly changing} DC input voltage: one that started negative, went to zero volts, then increased in the positive direction.  Carefully monitor the transistors' status as this input signal slowly changes from negative to positive, and the reason for this form of distortion should be evident to all.
+
+%INDEX% Crossover distortion, push-pull amplifier
+%INDEX% Push-pull amplifier, crossover distortion
+
+%(END_NOTES)
+
+

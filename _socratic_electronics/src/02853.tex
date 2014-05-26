@@ -1,0 +1,31 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+What performance parameters are important to consider for $U_1$ and $U_2$, considering their use in a logic probe circuit?  Hint: we may want to use this logic probe to troubleshoot CMOS as well as TTL circuits.
+
+\underbar{file 02853}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+First and foremost, we need to consider the supply voltage ranges for all integrated circuits used in this circuit.  Do {\it not} use 7400-series TTL NAND gate for $U_2$ if you ever plan to use this logic probe on digital circuits with power supply voltages in excess of 5 volts!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Note how the comparators {\it sink} current from the LEDs rather than {\it source} current to them.  This design feature was necessary, due to the construction of the LM339.  In fact, there are a lot of comparators that can only sink current and not source current due to the internal use of an open-collector output stage.
+
+%(END_NOTES)
+
+

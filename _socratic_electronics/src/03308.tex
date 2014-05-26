@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A passive integrator circuit is energized by a square wave signal with a peak-to-peak amplitude of 12 volts and a frequency of 65.79 Hz:
+
+$$\epsfbox{03308x01.eps}$$
+
+Determine the peak-to-peak voltage of the output waveform:
+
+$$\epsfbox{03308x02.eps}$$
+
+Hint: the output waveform will be centered exactly half-way between the two peaks of the input square wave as shown in the oscilloscope image.  Do {\it not} base your answer on relative sizes of the two waveforms, as I have purposely skewed the calibration of the oscilloscope screen image so the two waveforms are not to scale with each other.
+
+\underbar{file 03308}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$V_{out}$ (peak-to-peak) = 8.025 volts
+
+\vskip 10pt
+
+Follow-up question: the components comprising this circuit are improperly sized if it is actually expected to function as a reasonably accurate {\it integrator}.  Suggest better component values for the frequency of signal being integrated.
+
+\vskip 10pt
+
+Challenge question: write a formula that solves for this peak-to-peak output voltage ($V_{out}$) given the peak-to-peak input voltage ($V_{in}$), resistor value $R$, capacitor value $C$, and signal frequency $f$.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is an interesting problem to set up.  Ask your students what approach they used, so they all can see multiple problem-solving techniques.  I based my own solution on the RC circuit decay equation $e^{-t / \tau}$ with $x$ volts being my starting condition and -6 volts being my final condition (if time $t$ is infinite), then I just solved for $x$.  With my method, $x$ is the peak signal voltage, not the peak-to-peak, so I just doubled it to get the final answer.
+
+$$\epsfbox{03308x03.eps}$$
+
+My own answer for the challenge question is this:
+
+$$V_{out} = {{V_{in}\left(1 - e^{-1 \over 2RCf}\right)} \over {1 + e^{-1 \over 2RCf}}}$$
+
+Your mileage may vary . . .
+
+%INDEX% Passive integrator circuit, calculating output signal amplitude
+
+%(END_NOTES)
+
+

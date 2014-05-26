@@ -1,0 +1,44 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The formula for determining the cutoff frequency of a simple LR filter circuit looks substantially different from the formula used to determine cutoff frequency in a simple RC filter circuit.  Students new to this subject often resort to memorization to distinguish one formula from the other, but there is a better way.
+
+In simple filter circuits (comprised of one reactive component and one resistor), cutoff frequency is that frequency where circuit reactance equals circuit resistance.  Use this simple definition of cutoff frequency to derive both the RC and the LR filter circuit cutoff formulae, where $f_{cutoff}$ is defined in terms of $R$ and either $L$ or $C$.
+
+\underbar{file 02075}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$f_{cutoff} = {1 \over {2 \pi R C}} \hbox{\hskip 20pt (For simple RC filter circuits)}$$
+
+$$f_{cutoff} = {R \over {2 \pi L}} \hbox{\hskip 20pt (For simple LR filter circuits)}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is an exercise in algebraic substitution, taking the formula $X = R$ and introducing $f$ into it by way of substitution, then solving for $f$.  Too many students try to memorize every new thing rather than build their knowledge upon previously learned material.  It is surprising how many electrical and electronic formulae one may derive from just a handful of fundamental equations, if one knows how to use algebra.
+
+Some textbooks present the LR cutoff frequency formula like this:
+
+$$f_{cutoff} = {1 \over {2 \pi {L \over R}}}$$
+
+If students present this formula, you can be fairly sure they simply found it somewhere rather than derived it using algebra.  Of course, this formula is exactly equivalent to the one I give in my answer -- and it is good to show the class how these two are equivalent -- but the real point of this question is to get your students using algebra as a practical tool in their understanding of electrical theory.
+
+%INDEX% Algebra, manipulating equations
+%INDEX% Cutoff frequency, LR filter circuit
+
+%(END_NOTES)
+
+

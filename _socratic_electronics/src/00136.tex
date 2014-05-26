@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Some communications networks use cables to not only provide a path for data transmission, but also DC power to energize the circuits connected to the cable.
+
+$$\epsfbox{00136x01.eps}$$
+
+However, if we were to terminate the cable as shown, the termination resistor would dissipate a substantial amount of power.  This is wasted energy, and would unnecessarily burden the power supply providing DC power to the network cable.
+
+How can we eliminate the problem of power dissipated by the termination resistor in a DC power/signal cable and yet still maintain proper termination to avoid reflected signals?
+
+\underbar{file 00136}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A capacitor must be connected in series with the termination resistance to prevent the resistance from acting as a DC load on the network:
+
+$$\epsfbox{00136x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Understanding this answer requires that students recall the filtering behavior of a series capacitor in an AC circuit.
+
+%INDEX% Termination resistor, for AC+DC transmission line
+
+%(END_NOTES)
+
+

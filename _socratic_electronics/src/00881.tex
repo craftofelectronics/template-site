@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Photovoltaic solar panels produce the most output power when facing directly into sunlight.  To maintain proper positioning, "tracker" systems may be used to orient the panels' direction as the sun "moves" from east to west across the sky:
+
+$$\epsfbox{00881x01.eps}$$
+
+One way to detect the sun's position relative to the panel is to attach a pair of Light-Dependent Resistors (LDR's) to the solar panel in such a way that each LDR will receive an equal amount of light only if the panel is pointed directly at the sun:
+
+$$\epsfbox{00881x02.eps}$$
+
+Two comparators are used to sense the differential resistance produced by these two LDR's, and activate a tracking motor to tilt the solar panel on its axis when the differential resistance becomes too great.  An "H-drive" transistor switching circuit takes the comparators' output signals and amplifies them to drive a permanent-magnet DC motor one way or the other:
+
+$$\epsfbox{00881x03.eps}$$
+
+In this circuit, what guarantees that the two comparators never output a "high" (+V) voltage simultaneously, thus attempting to move the tracking motor clockwise and counter-clockwise at the same time?
+
+\underbar{file 00881}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+With the potentiometers connected in series like this, the upper comparator's reference voltage will always be greater than the lower comparator's reference voltage.  In order for both comparators to saturate their outputs "high," the voltage from the photoresistor divider would have to be greater than the upper potentiometer's voltage {\it and} less then the lower potentiometer's voltage at the same time, which is an impossibility.  This comparator configuration is commonly known as a {\it window comparator} circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+There is a lot going on in this comparator circuit for you and your students to discuss.  Take time to talk about the operation of the entire circuit in detail, making sure students understand how every bit of it works.
+
+If any of your students point out that there seem to be some power supply connections missing from the comparators ($U_1$ and $U_2$), discuss the fact that this notation is often used when multiple opamps or comparators are contained in the same integrated circuit.  Often, the power supply connections will be omitted entirely for the sake of simplicity!  Since everyone understands that opamps {\it need} DC power in order to function, the +V and -V (or ground) connections are simply assumed.
+
+One misunderstanding I've seen with beginning students is to assume that signal input connections and power connections to an opamp are equivalent.  That is, if an opamp does not receive +V/-V power through the normal power terminals, it will operate off of whatever voltages appear at its inverting and noninverting inputs.  Nothing could be further from the truth!  An "input" connection to a circuit denotes a signal to be detected, measured, or manipulated.  A "power" connection is completely different.  To use a stereo analogy, this is confusing the audio patch cable connections with the power cord.
+
+%INDEX% H-bridge motor control circuit (controlled by comparators)
+%INDEX% Window comparator circuit
+
+%(END_NOTES)
+
+

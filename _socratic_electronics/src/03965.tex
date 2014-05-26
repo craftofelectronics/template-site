@@ -1,0 +1,68 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This vocal eliminator circuit is supposed to strip the vocal track from any song where the vocals were recorded in monaural format (equal on both left and right channels).  Any signal exactly common to both left and right channels will be canceled by the "subtractor" circuit.  Low bass tones, which also tend to be common to both channels along with the vocals, are sampled by a summer circuit, selected by an active low-pass filter circuit, and then re-incorporated into the output by feeding into the final summer circuit:
+
+$$\epsfbox{03965x01.eps}$$
+
+Unfortunately, something has failed in it.  It used to function properly, but now vocals are plainly present in the output signal.  Listening to the output signal through a headphone, you note that both bass and treble tones are present in the signal as well as the vocal track.  In other words, the music sounds fairly normal.
+
+From this information, identify two possible faults that could account for the problem and all measured values in this circuit.  Then, choose one of those possible faults and explain why you think it could be to blame.  The circuit elements you identify as possibly faulted can be wires, traces, and connections as well as components.  Be as specific as you can in your answers, identifying both the circuit element and the type of fault.
+
+\medskip
+\goodbreak
+\item{$\bullet$} Circuit elements that are possibly faulted
+\item{1.}
+\item{2.} 
+\medskip
+
+\medskip
+\goodbreak
+\item{$\bullet$} Explanation of {\it why} you think one of the above faults could be to blame
+
+\vskip 30pt
+
+\underbar{file 03965}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Note: the following answers are not exhaustive.  There may be more circuit elements possibly at fault and more circuit elements known to be functioning properly!
+
+\medskip
+\goodbreak
+\item{$\bullet$} Circuit elements that are possibly faulted
+\item{1.} Resistor $R_1$ failed open
+\item{2.} Resistor $R_3$ failed open
+\item{3.} Resistor $R_2$ failed shorted
+\item{4.} Resistor $R_4$ failed shorted
+\item{5.} Opamp $U_1$ output failed high or low
+\item{6.} Opamp $U_2$ output failed high or low
+\medskip
+
+\medskip
+\goodbreak
+\item{$\bullet$} Explanation of {\it why} you think one of the above faults could be to blame
+\medskip
+
+Any fault that would result in the difference amplifier (the "subtractor") $U_3$ not subtracting one input from the other will cause this fault.  If only one channel makes it through, vocals will be present along with all tones.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+{\bf This question is intended for exams only and not worksheets!}.
+
+%(END_NOTES)
+
+

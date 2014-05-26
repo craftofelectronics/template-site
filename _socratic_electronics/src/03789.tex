@@ -1,0 +1,64 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Research the resistance equivalence equations for each of these switched-capacitor networks (using N-channel MOSFETs as switches), describing the emulated resistance ($R$) as a function of switching frequency ($f$) and capacitance ($C$):
+
+$$\epsfbox{03789x01.eps}$$
+
+Note: $\phi_1$ and $\phi_2$ are two-phase, non-overlapping clock signals.
+
+\vskip 10pt
+
+\underbar{file 03789}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Circuit {\bf A}: Parallel circuit \hskip 10pt $R = {1 \over {fC}}$
+
+\vskip 20pt
+
+Circuit {\bf B}: Series circuit \hskip 10pt $R = {1 \over {fC}}$ 
+
+\vskip 20pt
+
+Circuit {\bf C}: Series-parallel circuit \hskip 10pt $R = {1 \over {f(C_1 + C_2)}}$ 
+
+\vskip 20pt
+
+Circuit {\bf D}: Bilinear circuit \hskip 10pt $R = {1 \over {4fC}}$ 
+
+\vskip 20pt
+
+Circuit {\bf E}: Negative transresistor circuit \hskip 10pt $R = - {1 \over {fC}}$ (the negative sign indicates polarity inversion)
+
+\vskip 20pt
+
+Circuit {\bf F}:  Positive transresistor circuit \hskip 10pt $R = {1 \over {fC}}$ 
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The mathematics required to derive these equations directly may be beyond your students' ability, but they should still be able to research them!  Some of the networks are directly equivalent to one another, making it easier for your students to associate equations: for instance, circuit {\bf F} is equivalent to circuit {\bf B}, and circuit {\bf E} is the same thing as {\bf F} except for the polarity inversion.  It should not take a great deal of analysis to realize that circuits {\bf A} and {\bf B} must have the same equation as well.
+
+%INDEX% Switched capacitor network, resistor equivalent
+%INDEX% Switched capacitor network, bilinear type
+%INDEX% Switched capacitor network, parallel type
+%INDEX% Switched capacitor network, series type
+%INDEX% Switched capacitor network, series-parallel type
+%INDEX% Switched capacitor network, transresistor type
+
+%(END_NOTES)
+
+

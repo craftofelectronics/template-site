@@ -1,0 +1,70 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student builds this headphone audio source selector/amplifier circuit to be able to choose from one of four audio signal sources with the push of a single "Select" button.  As the Select button is pushed, the two-bit binary counter (made from JK flip-flops) goes through its counting sequence, driving the decoder to select one of the four CMOS bilateral analog switches to pass audio signal on to the opamp volume control.  LEDs indicate which input source is being selected at any given time:
+
+$$\epsfbox{03168x01.eps}$$
+
+The circuit works just fine for awhile, then suddenly the tape player channel falls silent.  Pushing the "Select" button, the student can still select other working sources (CD player, tuner, and MP3 player), but there is no sound at the headphone when the "tape" LED is on.
+
+Using an oscilloscope, the student measures a normal audio signal at TP12 with respect to ground (TP2) as the tape player plays a cassette.  From this information, identify two possible causes that could account for the problem and all measured values in this circuit.  Also, identify the next logical test point(s) from those shown on the schematic that you would check, and why you would check there.  Note that there may be more than one correct answer to this part of the question!
+
+\medskip
+\goodbreak
+\item{$\bullet$} Possible causes of the problem
+\item{1.}
+\item{2.} 
+\medskip
+
+\medskip
+\item{$\bullet$} Next logical test point(s) to check, with reason why you would check there
+\item{Next point(s):}
+\item{Reason:}
+\medskip
+
+\underbar{file 03168}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Note: the following answers are not exhaustive.  There may be more circuit elements possibly at fault than what is listed here!
+
+\medskip
+\goodbreak
+\item{$\bullet$} Possible causes of the problem
+\item{1.} Bilateral switch for "tape" channel failed open
+\item{2.} Break in wire between "tape" LED and TP5/bilateral switch control line
+\item{3.} Break in wire between TP9 and bilateral switch input
+\item{4.} Break in wire between TP16 and bilateral switch output
+\medskip
+
+\medskip
+\goodbreak
+\item{$\bullet$} Next logical test point(s) to check, with reason why you would check there
+\item{1.} TP5, to see if bilateral switch for the tape channel is being told to activate
+\item{2.} TP16, to see if signal is getting through the bilateral switch
+\medskip
+
+TP14 and TP15 would {\it not} be good places to check for signal, since we know the other input channels work, and they all have to pass through TP14 and TP15.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+{\bf This question is intended for exams only and not worksheets!}.
+
+%INDEX% Troubleshooting, analog multiplexer circuit
+
+%(END_NOTES)
+
+

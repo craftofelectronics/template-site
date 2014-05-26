@@ -1,0 +1,103 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student decides to build a light-flasher circuit using a microcontroller.  The LED is supposed to blink on and off only when the pushbutton switch is depressed.  It is supposed to turn off when the switch is released:
+
+$$\epsfbox{02598x01.eps}$$
+
+\noindent
+\underbar{\bf Pseudocode listing}
+
+{\tt Declare Pin0 as an output}
+
+{\tt Declare Pin1 as an input}
+
+{\tt WHILE Pin1 is HIGH}
+
+\hskip 10pt {\tt Set Pin0 HIGH}
+
+\hskip 10pt {\tt Pause for 0.5 seconds}
+
+\hskip 10pt {\tt Set Pin0 LOW}
+
+\hskip 10pt {\tt Pause for 0.5 seconds}
+
+{\tt ENDWHILE}
+
+\vskip 10pt
+
+The LED blinks on and off just fine as long as the pushbutton switch is held when the MCU is powered up or reset.  As soon as the switch is released, the LED turns off and never comes back on.  If the switch was never pressed during start-up, the LED never comes on!  Explain what is happening, and modify the program as necessary to fix this problem.
+
+\underbar{file 02598}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The conditional "WHILE" loop needs to be placed inside an unconditional loop:
+
+\vskip 10pt
+
+\noindent
+\underbar{\bf Pseudocode listing}
+
+{\tt Declare Pin0 as an output}
+
+{\tt Declare Pin1 as an input}
+
+{\tt LOOP}
+
+\hskip 10pt {\tt WHILE Pin1 is HIGH}
+
+\hskip 20pt {\tt Set Pin0 HIGH}
+
+\hskip 20pt {\tt Pause for 0.5 seconds}
+
+\hskip 20pt {\tt Set Pin0 LOW}
+
+\hskip 20pt {\tt Pause for 0.5 seconds}
+
+\hskip 10pt {\tt ENDWHILE}
+
+{\tt ENDLOOP}
+
+\vskip 10pt
+
+Follow-up question: what purpose does the resistor $R_{pulldown}$ serve in the pushbutton circuit?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is for students to understand what a "WHILE" loop represents in practical terms: a loop with condition(s).  It also contrasts conditional looping against unconditional looping, and shows how both play a part in interactive systems such as this one.
+
+\vskip 10pt
+
+In case you're wondering why I write in pseudocode, here are a few reasons:
+
+\medskip
+\goodbreak
+\item{$\bullet$} No prior experience with programming required to understand pseudocode
+\item{$\bullet$} It never goes out of style
+\item{$\bullet$} Hardware independent
+\item{$\bullet$} No syntax errors
+\medskip
+
+If I had decided to showcase code that would actually run in a microcontroller, I would be dooming the question to obsolescence.  This way, I can communicate the spirit of the program without being chained to an actual programming standard.  The only drawback is that students will have to translate my pseudocode to real code that will actually run on their particular MCU hardware, but that is a problem guaranteed for some regardless of which real programming language I would choose.
+
+Of course, I could have taken the Donald Knuth approach and invented my own (imaginary) hardware and instruction set . . . 
+
+%INDEX% Microcontroller, implementing a conditional flashing light loop
+
+%(END_NOTES)
+
+

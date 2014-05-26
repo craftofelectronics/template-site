@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Here is a truth table for a four-input logic circuit:
+
+$$\epsfbox{01311x01.eps}$$
+
+If we translate this truth table into a Karnaugh map, we obtain the following result:
+
+$$\epsfbox{01311x03.eps}$$
+
+Note how the only 1's in the map are clustered together in a group of four:
+
+$$\epsfbox{01311x02.eps}$$
+
+If you look at the input variables (A, B, C, and D), you should notice that only two of them actually change within this cluster of four 1's.  The other two variables hold the same value for each of these conditions where the output is a "1".  Identify which variables change, and which stay the same, for this cluster.
+
+\underbar{file 01311}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+For this cluster of four 1's, variables A and C are the only two inputs that change.  Variables B and D remain the same (B = 1 and D = 1) for each of the four "high" outputs.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question introduces students to the Karnaugh reduction principle of detecting {\it contradictory variables} in a grouped set.
+
+%INDEX% Karnaugh map, identifying clusters of 1's
+
+%(END_NOTES)
+
+

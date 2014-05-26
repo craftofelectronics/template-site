@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Most oscilloscopes can only directly measure voltage, not current.  One way to measure AC current with an oscilloscope is to measure the voltage dropped across a {\it shunt resistor}.  Since the voltage dropped across a resistor is proportional to the current through that resistor, whatever wave-shape the current is will be translated into a voltage drop with the exact same wave-shape.
+
+However, one must be very careful when connecting an oscilloscope to any part of a grounded system, as many electric power systems are.  Note what happens here when a technician attempts to connect the oscilloscope across a shunt resistor located on the "hot" side of a grounded 120 VAC motor circuit:
+
+$$\epsfbox{01820x01.eps}$$
+
+Here, the reference lead of the oscilloscope (the small alligator clip, not the sharp-tipped probe) creates a short-circuit in the power system.  Explain why this happens.
+
+\underbar{file 01820}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The "ground" clip on an oscilloscope probe is electrically common with the metal chassis of the oscilloscope, which in turn is connected to earth ground by the three-prong (grounded) power plug.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a very important lesson for students to learn about line-powered oscilloscopes.  If necessary, discuss the wiring of the power system, drawing a schematic showing the complete short-circuit fault current path, from AC voltage source to "hot" lead to ground clip to chassis to ground prong to ground wire to neutral wire to AC voltage source.
+
+%INDEX% Oscilloscope, earth-grounded probe reference lead
+
+%(END_NOTES)
+
+

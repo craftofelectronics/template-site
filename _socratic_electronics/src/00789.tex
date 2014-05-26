@@ -1,0 +1,41 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An essential part of an AC-DC power supply circuit is the {\it filter}, used to separate the residual AC (called the "ripple" voltage) from the DC voltage prior to output.  Here are two simple AC-DC power supply circuits, one without a filter and one with:
+
+$$\epsfbox{00789x01.eps}$$
+
+Draw the respective output voltage waveforms of these two power supply circuits ($V_{unfiltered}$ versus $V_{filtered}$).  Also identify the type of filter circuit needed for the task (low pass, high pass, band pass, or band stop), and explain why that type of filter circuit is needed.
+
+\underbar{file 00789}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{00789x02.eps}$$
+
+A low pass filter is the kind needed to filter "ripple voltage" from the power supply output.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Many years ago, when I was first learning about power supplies, I tried to power an automotive radio with voltage from a battery charger.  The battery charger was a simple power supply suitable for charging 12-volt automotive batteries, I reasoned, so what harm would there be in using it to power an automotive radio?  After a few moments of LOUD humming from the radio speaker, my rhetorical question was answered by a puff of smoke from the radio, then silence.
+
+Part of the problem was the output voltage of the battery charger, but a large part of the problem was the fact that the charger's output was {\it unfiltered} as well.  For the same reasons my radio did not function properly on unfiltered, rectified AC, many electronic circuits will not function on it either.
+
+%INDEX% Filter, power supply
+
+%(END_NOTES)
+
+

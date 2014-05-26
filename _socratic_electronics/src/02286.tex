@@ -1,0 +1,54 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student builds the following regulated AC-DC power supply circuit, but is dissatisfied with its performance:
+
+$$\epsfbox{02286x01.eps}$$
+
+The voltage regulation is not as good as the student hoped.  When loaded, the output voltage "sags" more than the student wants.  When the zener diode's voltage is measured under the same conditions (unloaded output, versus loaded output), its voltage is noted to sag a bit as well.  The student realizes that part of the problem here is loading of the zener diode through the transistor.  In an effort to improve the voltage regulation of this circuit, the student inserts an opamp "voltage follower" circuit between the zener diode and the transistor:
+
+$$\epsfbox{02286x02.eps}$$
+
+Now the zener diode is effectively isolated from the loading effects of the transistor, and by extension from the output load as well.  The opamp simply takes the zener's voltage and reproduces it at the transistor base, delivering as much current to the transistor as necessary without imposing any additional load on the zener diode.  
+
+\goodbreak
+
+This modification does indeed improve the circuit's ability to hold a steady output voltage under changing load conditions, but there is still room for improvement.  Another student looks at the modified circuit, and suggests one small change that dramatically improves the voltage regulation:
+
+$$\epsfbox{02286x03.eps}$$
+
+Now the output voltage holds steady at the zener diode's voltage with almost no "sag" under load!  The second student is pleased with the success, but the first student does not understand why this version of the circuit functions any better than previous version.  How would you explain this circuit's improved performance to the first student?  How is an understanding of negative feedback essential to being able to comprehend the operation of this circuit?
+
+\underbar{file 02286}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+With the relocated feedback connection, the opamp now "senses" the load voltage at the output terminals, and is able to correct for {\it any} voltage losses in the power transistor.
+
+\vskip 10pt
+
+Follow-up question: the new, improved circuit certainly exhibits better voltage regulation, but it also introduces something that the first student finds surprising: now the output voltage is approximately 0.7 volts greater than it used to be.  Explain why.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is one of my favorite questions to ask students as they begin to learn how negative feedback works.  It is an excellent "litmus test" for comprehension of negative feedback: those students who understand how and why negative feedback works will immediately grasp the significance of the modified feedback connection; those who do not understand negative feedback will fail to grasp why this circuit works at all.  Spend as much time as you need discussing this circuit, because it holds the key to student understanding of a great many opamp circuits!
+
+%INDEX% Negative feedback, application of concept using an opamp (this question is a MUST for your students!)
+%INDEX% Negative feedback, in opamp-controlled voltage regulator circuit
+
+%(END_NOTES)
+
+

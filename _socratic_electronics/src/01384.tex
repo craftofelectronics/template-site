@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A common type of rotary encoder is one built to produce a {\it quadrature} output:
+
+$$\epsfbox{01384x01.eps}$$
+
+The two LED/phototransistor pairs are arranged in such a way that their pulse outputs are always 90$^{o}$ out of phase with each other.  Quadrature output encoders are useful because they allow us to determine direction of motion as well as incremental position.
+
+Building a quadrature direction detector circuit is easy, if you use a D-type flip-flop:
+
+$$\epsfbox{01384x02.eps}$$
+
+Analyze this circuit, and explain how it works.
+
+\underbar{file 01384}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The operation of this circuit is quite easy to understand if you draw a pulse diagram for it and analyze the flip-flop's output over time.  When the encoder disk spins clockwise, the $Q$ output goes high; when counterclockwise, the $Q$ goes low.
+
+\vskip 10pt
+
+Follow-up question: comment on the notation used for this circuit's output.  What does the label "$CW / \overline{CCW}$" tell you, without having to analyze the circuit at all?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Quadrature direction-detection circuits such as this become important when encoders are linked to digital counter circuits.  The complemented notation is also very common in counter circuits.  
+
+Students may show a reluctance to draw a timing diagram when they approach this problem, even when they realize the utility of such a diagram.  Instead, many will try to figure the circuit out just by looking at it.  Note the emphasis on the word "try."  This circuit is much more difficult to figure out without a timing diagram!  Withhold your explanation of this circuit until each student shows you a timing diagram for it.  Emphasize the fact that this step, although it consumes a bit of time, is actually a time-saver in the end.
+
+%INDEX% D-type flip-flop, used to detect direction of quadrature encoder motion
+%INDEX% Encoder, rotary, quadrature output
+%INDEX% Quadrature encoder (rotary)
+%INDEX% Rotary encoder, quadrature output
+
+%(END_NOTES)
+
+

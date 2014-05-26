@@ -1,0 +1,150 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Complete the table of values for this opamp circuit, calculating the output voltage for each combination of input voltages shown:
+
+$$\epsfbox{02518x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_1$ & $V_2$ & $V_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 V & 0 V &  \cr
+%
+\noalign{\hrule}
+%
+% Third row
++1 V & 0 V &  \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 V & +1 V &  \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
++2 V & +1.5 V &  \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
++3.4 V & +1.2 V &  \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+-2 V & +4 V &  \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
++5 V & +5 V &  \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+-3 V & -3 V &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+What pattern do you notice in the data?  What mathematical relationship is there between the two input voltages and the output voltage?
+
+\underbar{file 02518}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_1$ & $V_2$ & $V_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 V & 0 V & 0 V \cr
+%
+\noalign{\hrule}
+%
+% Third row
++1 V & 0 V & -1 V \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 V & +1 V & +1 V \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
++2 V & +1.5 V & -0.5 V \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
++3.4 V & +1.2 V & -2.2 V \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+-2 V & +4 V & +6 V \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
++5 V & +5 V & 0 V \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+-3 V & -3 V & 0 V \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Thought it may be tedious to calculate the output voltage for each set of input voltages, working through all the voltage drops and currents in the opamp circuit one at a time, it shows students how they may be able to discern the function of an opamp circuit merely by applying basic laws of electricity (Ohm's Law, KVL, and KCL) and the "golden assumptions" of negative feedback opamp circuits (no input currents, zero differential input voltage).
+
+%INDEX% Difference amplifier, opamp
+%INDEX% Subtractor circuit, opamp
+
+%(END_NOTES)
+
+

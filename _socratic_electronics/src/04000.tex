@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+When only the most significant bit (MSB) of an R-2R ladder resistor network is activated (all other bits inactive, their switches connecting to ground), the output voltage will be the same, regardless of how many bits the network has:
+
+$$\epsfbox{04000x01.eps}$$
+
+Explain why this output voltage magnitude stands independent of the number of bits (sections) in the R-2R ladder network.
+
+\underbar{file 04000}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$V_{out} = {V_{ref} \over 2}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The key to understanding the answer is to apply Th\'evenin's theorem to the "inactive" sections of the network.  Here, the unique property of constant output impedance for an R-2R network yields a useful feature when applied to DAC circuitry.
+
+%INDEX% R-2R ladder network
+
+%(END_NOTES)
+
+

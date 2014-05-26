@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In each of the following circuits, the light bulb will energize when the pushbutton switch is actuated.  Assume that the supply voltage in each case is somewhere between 5 and 30 volts DC (with lamps and resistors appropriately sized):
+
+$$\epsfbox{02048x01.eps}$$
+
+However, not all of these circuits are properly designed.  Some of them will function perfectly, but others will function only once or twice before their transistors fail.  Identify the faulty circuits, and explain why they are flawed.
+
+\underbar{file 02048}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Circuits 3, 5, and 6 are flawed, because the emitter-base junctions of their transistors are overpowered every time the switch closes.
+
+\vskip 10pt
+
+Hint: draw the respective paths of switch and lamp current for each circuit!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a very important concept for students to learn if they are to do any switch circuit design -- a task not limited to engineers.  Technicians often must piece together simple transistor switching circuits to accomplish specific tasks on the job, so it is important for them to be able to design switching circuits that will be reliable.  A common mistake is to design a circuit so that the transistor receives full supply voltage across the emitter-base junction when "on," as three of the circuits in this question do.  The result is sure destruction of the transistor if the supply voltage is substantial.
+
+Circuit \#3 is a tricky one!  The presence of a resistor might fool some students into thinking base current is limited (as is the case with circuit \#2).
+
+%INDEX% Transistor switch circuit (BJT)
+
+%(END_NOTES)
+
+

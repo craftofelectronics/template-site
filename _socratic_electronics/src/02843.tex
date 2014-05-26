@@ -1,0 +1,147 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Use a Karnaugh map to generate a simple Boolean expression for this truth table, and draw a relay circuit equivalent to that expression:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+A & B & C & D & Output \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 0 & 1 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 0 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+0 & 1 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+0 & 1 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+0 & 1 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+0 & 1 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Tenth row
+1 & 0 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Eleventh row
+1 & 0 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Twelfth row
+1 & 0 & 1 & 0 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Thirteenth row
+1 & 0 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Fourteenth row
+1 & 1 & 0 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Fifteenth row
+1 & 1 & 0 & 1 & 0 \cr
+%
+\noalign{\hrule}
+%
+% Sixteenth row
+1 & 1 & 1 & 0 & 1 \cr
+%
+\noalign{\hrule}
+%
+% Seventeenth row
+1 & 1 & 1 & 1 & 0 \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 02843}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Simple expression and relay circuit:
+
+$$B\overline{D} + \overline{C} \> \overline{D}$$
+
+$$\epsfbox{02843x01.eps}$$
+
+\vskip 10pt
+
+Follow-up question: although the relay circuit shown above does satisfy the minimal SOP Boolean expression, there is a way to make it simpler yet.  Hint: done properly, you may eliminate one of the contacts in the circuit!
+
+\vskip 10pt
+
+Challenge question: use Boolean algebra techniques to simplify the table's raw SOP expression into minimal form without the use of a Karnaugh map.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+One of the things you may want to have your students share in front of the class is their Karnaugh maps, and how they grouped common output states to arrive at Boolean expression terms.  I have found that an overhead (acetate) or computer-projected image of a blank Karnaugh map on a whiteboard serves well to present Karnaugh maps on.  This way, cell entries may be easily erased and re-drawn without having to re-draw the map (grid lines) itself.
+
+This is one of those situations where an important group "wraps around" the edge of the Karnaugh map, and thus is likely to be overlooked by students.
+
+%INDEX% Boolean algebra, conversion of expression into relay logic
+%INDEX% Karnaugh map, used to derive SOP expression from a truth table
+
+%(END_NOTES)
+
+

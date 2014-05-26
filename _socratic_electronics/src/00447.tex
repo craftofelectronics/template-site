@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The ignition system of a gasoline-powered internal combustion automobile engine is an example of a transformer operated on DC by means of an oscillating switch contact, commonly referred to as the contact "points":
+
+$$\epsfbox{00447x01.eps}$$
+
+The cam-actuated "point" contacts open every time a spark is needed to ignite the air-fuel mixture in one of the engine's cylinders.  Naturally, these contacts suffer a substantial amount of wear over time due to the amount of current they must make and break, and the frequency of their cycling.
+
+This device was seen by automotive engineers as a prime candidate for replacement with solid-state technology (i.e., a transistor).  If a transistor could take the place of mechanical "point" contacts for making and breaking the ignition coil's current, it should result in increased service life.
+
+Insert a transistor into the following circuit in such a way that it controls the ignition coil's current, with the "point" contacts merely controlling the transistor's state (turning it on and off):
+
+$$\epsfbox{00447x02.eps}$$
+
+\underbar{file 00447}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{00447x03.eps}$$
+
+\vskip 10pt
+
+Follow-up question: assuming the primary winding of the "coil" has an inductance of 9 mH an a wire resistance of 0.4 $\Omega$, determine the amount of time necessary to build to full current once the transistor or points have turned on (after 5 time constants' worth of time).
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students, "what is the purpose of the capacitor in this circuit?"  Inform them that without it, the points would have "burned up" very quickly, and that the transistor will fail almost immediately!
+
+Some of your students familiar with engine ignition systems will notice that there is no distributor for multiple spark plugs.  In other words, this circuit is for a single-cylinder engine!  I chose not to draw a distributor in this schematic just to keep things simple.
+
+%INDEX% Ignition system, engine
+%INDEX% Transistor switch circuit (BJT)
+
+%(END_NOTES)
+
+

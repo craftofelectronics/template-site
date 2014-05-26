@@ -1,0 +1,60 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+There are several different methods of providing {\it reduced-voltage starting} for electric motors.  One of them is the {\it autotransformer} method.  Here is a diagram showing how this works:
+
+$$\epsfbox{00843x01.eps}$$
+
+"L1," "L2," and "L3" represent the three phase power supply conductors.  Three sets of contacts (R, S, and Y) serve to connect power to the motor at different times.  The starting sequence for the motor is as follows:
+
+\medskip
+\item{1.} Motor off (R open, S open, Y open) 
+\item{2.} Start button pressed (S and Y contacts all close)
+\item{3.} Time delay (depending on the size of the motor)
+\item{4.} Y contacts open
+\item{5.} Time delay (depending on the size of the motor)
+\item{6.} R contacts close, S contacts open
+\medskip
+
+Explain the operation of this system.  How do the autotransformers serve to reduce voltage to the electric motor during start-up?
+
+\underbar{file 00843}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+When the "S" and "Y" contacts are all closed, the autotransformers form a three-phase "Y" connection, with line voltage (L1, L2, and L3) applied to the "tips" of the "Y," and a reduced motor voltage tapped off a portion of each autotransformer winding.
+
+When the "Y" contacts open, the three autotransformers now function merely as series-connected inductors, limiting current with their inductive reactance.
+
+When the "R" contacts close, the motor receives direct power from L1, L2, and L3.
+
+\vskip 10pt
+
+Follow-up question: how do the overload heaters function in this circuit?  They aren't connected in series with the motor conductors as is typical with smaller motors!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+For each step of the start-up sequence, it is possible to re-draw the circuit feeding power to the motor, in order to make its function more apparent.  Do not create these re-drawings yourself, but have your students draw an equivalent circuit for each step in the start-up sequence.
+
+The follow-up question is a good review of current transformers (CT), as well as an introduction to the use of overload heaters in high-current electrical systems.
+
+%INDEX% Motor control circuit, "soft start"
+%INDEX% Motor control circuit, "reduced-voltage start"
+%INDEX% Time delay relay circuit, electric motor control
+
+%(END_NOTES)
+
+

@@ -1,0 +1,67 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Like real-number algebra, Boolean algebra is subject to certain rules which may be applied in the task of simplifying (reducing) expressions.  By being able to algebraically reduce Boolean expressions, it allows us to build equivalent logic circuits using fewer components.
+
+For each of the equivalent circuit pairs shown, write the corresponding Boolean rule next to it:
+
+$$\epsfbox{01306x01.eps}$$
+
+$$\epsfbox{01306x02.eps}$$
+
+$$\epsfbox{01306x03.eps}$$
+
+Note: the three short, parallel lines represent "equivalent to" in mathematics.
+
+\underbar{file 01306}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+In order, from top to bottom, left to right:
+
+$$A + A = A$$
+
+$$AA = A$$
+
+$$A + 0 = A$$
+
+$$A + 1 = 1$$
+
+$$\overline{\overline{A}} = A$$
+
+$$A \times 0 = 0$$
+
+$$A \times 1 = A$$
+
+$$A \overline{A} = 0$$
+
+$$A + \overline{A} = 1$$
+
+$$A + AB = A$$
+
+$$A + \overline{A}B = A + B$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Most of these Boolean rules are identical to their respective laws in real number algebra.  These should not be difficult concepts for your students to understand.  Some of them, however, are unique to Boolean algebra, having no analogue in real-number algebra.  These unique rules cause students the most trouble!
+
+An important benefit of working through these examples is to associate gate and relay logic circuits with Boolean expressions, and to see that Boolean algebra is nothing more than a symbolic means of representing electrical discrete-state (on/off) circuits.  In relating otherwise abstract mathematical concepts to something tangible, students build a much better comprehension of the concepts.
+
+%INDEX% Boolean algebra; miscellaneous identities and laws
+
+%(END_NOTES)
+
+

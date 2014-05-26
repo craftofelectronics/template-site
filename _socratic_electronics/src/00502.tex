@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The power dissipation of a transistor is given by the following equation:
+
+$$P = I_C \left(V_{CE} + {V_{BE} \over \beta}\right)$$
+
+Manipulate this equation to solve for beta, given all the other variables.
+
+\underbar{file 00502}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\beta = {V_{BE} \over {{P \over I_C} - V_{CE}}}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Although this question is essentially nothing more than an exercise in algebraic manipulation, it is also a good lead-in to a discussion on the importance of power dissipation as a semiconductor device rating.
+
+High temperature is the bane of most semiconductors, and high temperature is caused by excessive power dissipation.  A classic example of this, though a bit dated, is the temperature sensitivity of the original germanium transistors.  These devices were extremely sensitive to heat, and would fail rather quickly if allowed to overheat.  Solid state design engineers had to be very careful in the techniques they used for transistor circuits to ensure their sensitive germanium transistors would not suffer from "thermal runaway" and destroy themselves.
+
+Silicon is much more forgiving then germanium, but heat is still a problem with these devices.  At the time of this writing (2004), there is promising developmental work on silicon carbide and gallium nitride transistor technology, which is able to function under {\it much} higher temperatures than silicon.
+
+%INDEX% Algebra, manipulating equations
+%INDEX% Power dissipation, BJT
+
+%(END_NOTES)
+
+

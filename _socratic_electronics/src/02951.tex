@@ -1,0 +1,34 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose an analog-digital converter IC ("chip") inputs a voltage ranging from 0 to 5 volts DC and converts the magnitude of that voltage into an 8-bit binary number.  How many discrete "steps" are there in the output as the converter circuit resolves the input voltage from one end of its range (0 volts) to the other (5 volts)?  How much voltage does each of these steps represent?
+
+\underbar{file 02951}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This ADC (Analog-to-Digital Converter) circuit has 256 steps in its output range, each step representing 19.61 mV.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question is not so much about ADC circuitry as it is about digital resolution in general.  Any digital system with a finite number of parallel bits has a finite range.  When representing analog variables in digital form by the limited number of bits available, there will be a certain minimum voltage increment represented by each "step" in the digital output.  Here, students get to see how the discrete nature of a binary number translates to real-life measurement "rounding."
+
+%INDEX% Analog-digital converter (ADC) resolution
+%INDEX% Resolution, ADC
+
+%(END_NOTES)
+
+

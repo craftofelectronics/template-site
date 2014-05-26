@@ -1,0 +1,56 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+One method of driving pixels in a grid-based display is to organize the pixels into rows and columns, then select individual pixels for illumination by the intersection of a specific row line and a specific column line.  In this example, we are controlling an 8 $\times$ 8 grid of LEDs with two 8-bit (1-byte) ports of a microcontroller:
+
+$$\epsfbox{04053x01.eps}$$
+
+Note that a {\it high} state is required on one of port B's pins to activate a row, and a {\it low} state is required on one of port A's pins to activate a column, because the LED anodes connect to port A and the LED cathodes connect to port B.
+
+\vskip 10pt
+
+Determine the hexadecimal codes we would need to output at ports A and B to energize the LED in the far lower-left corner of the 8 $\times$ 8 grid.
+
+\vskip 10pt
+
+Port A = 
+
+\vskip 10pt
+
+Port B = 
+
+\vskip 10pt
+
+\underbar{file 04053}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Port A = \$FE
+
+\vskip 10pt
+
+Port B = \$80
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+
+%INDEX% Conversion, numeration base
+%INDEX% Microcontroller, used to drive 7-segment displays
+%INDEX% Port, microcomputer output
+
+%(END_NOTES)
+
+

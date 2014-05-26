@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Based on an analysis of a typical TTL logic gate circuit (consult a datasheet for a TTL logic gate if you need an internal schematic diagram for a gate circuit), determine what logic state is "assumed" by a TTL gate input when left "floating" (disconnected).
+
+What ramification does this have for us when choosing input devices for TTL logic gates?  If, for instance, we wished to use a single-pole, single-throw (SPST) switch as the input device for a TTL logic gate, what is the {\it best} way to connect such a device to a TTL input?  Should the switch connect the TTL input to $V_{CC}$ when closed, or should it connect the input to $V_{EE}$ when closed?  Why does it matter?  Explain your answer in detail.
+
+\underbar{file 01257}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+TTL input devices must be {\it current-sinking}: that is, they must {\it ground} the TTL gate input in one of their states.  I'll let you figure out why this is so, from the schematic diagrams of TTL logic gate circuits.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+For review, ask your students what the symbols $V_{CC}$ and $V_{EE}$ mean with reference to TTL circuits.
+
+Proper TTL "etiquette" is vitally important for students to understand, if they are to successfully build digital circuits (especially when interfacing TTL with other types of logic!).
+
+%INDEX% Floating input, TTL
+
+%(END_NOTES)
+
+

@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+An analog-to-digital converter is a circuit that inputs an analog signal and outputs a multiple-bit binary number equivalent to that signal's amplitude:
+
+$$\epsfbox{01465x01.eps}$$
+
+A {\it free-running} analog-to-digital converter is one that updates its digital output as often as it can, not waiting for any prompting from another device.  If we were to connect a free-running ADC to a computer (microprocessor or microcontroller), we would need some way to sample the ADC's output at times specified by the computer, and hold that binary number long enough for the computer to register it.  Otherwise, the ADC may update its output in the middle of one of the computer's "input" cycles, possibly resulting in corrupted data.
+
+We could build such a sample-and-hold circuit out of flip-flops.  What type of flip-flop would we use for this purpose, and how many would we need for the ADC circuit shown above?  This circuit we would build is also known as a {\it shift register}.  What kind of shift register inputs multiple bits of data all at once, and transfers that data to its output lines all at once, at the command of a clock pulse?
+
+\underbar{file 01465}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use twelve D-type flip-flops to build a parallel-in/parallel-out shift register.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This type of shift register is immensely useful for sample-and-hold applications such as this.
+
+%INDEX% Shift register, parallel in / parallel out
+
+%(END_NOTES)
+
+

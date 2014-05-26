@@ -1,0 +1,120 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{03171x01.eps}$$
+
+The behavior of this display driver IC is shown by the following truth table:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+D & C & B & A & a & b & c & d & e & f & g & Display\cr
+%
+\noalign{\hrule}
+%
+% Second row
+0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & "0" \cr
+%
+\noalign{\hrule}
+%
+% Third row
+0 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & "1" \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+0 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & "2" \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 1 & "3" \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+0 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & "4" \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & "5" \cr
+%
+\noalign{\hrule}
+%
+% Eighth row
+0 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & "6" \cr
+%
+\noalign{\hrule}
+%
+% Ninth row
+0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & "7" \cr
+%
+\noalign{\hrule}
+%
+% Tenth row
+1 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & "8" \cr
+%
+\noalign{\hrule}
+%
+% Eleventh row
+1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 1 & 1 & "9" \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Write the raw (unsimplified) SOP or POS expression (which ever is more appropriate) for output $a$.
+
+\underbar{file 03171}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$a = (D + C + B + \overline{A})(D + \overline{C} + B + A)(D + \overline{C} + \overline{B} + A)$$
+
+I recommend giving half-credit for a correct SOP expression.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+{\bf This question is intended for exams only and not worksheets!}.
+
+%INDEX% 7-segment decoder circuit
+%INDEX% POS expression, Boolean algebra (from analysis of a truth table)
+%INDEX% Product-of-Sums expression, Boolean algebra (from analysis of a truth table)
+%INDEX% SOP expression, Boolean algebra (from analysis of a truth table)
+%INDEX% Seven-segment decoder circuit
+%INDEX% Sum-of-Products expression, Boolean algebra (from analysis of a truth table)
+
+%(END_NOTES)
+
+

@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Shunt resistors are commonly used to measure current in power circuits, by producing a small voltage drop in direct proportion to the circuit current.  They are especially useful for measuring complex current waveforms in AC circuits, since they do not distort the waveform at all.
+
+Suppose you wished to measure the current waveform in this power circuit by using an oscilloscope to measure voltage dropped across the shunt resistor:
+
+$$\epsfbox{00250x01.eps}$$
+
+If you connect an oscilloscope to the power circuit as shown, very bad things will happen, like the oscilloscope's ground clip melting, with lots of sparks!
+
+After replacing the damaged probe assembly, and taking a long break to soothe your nerves, an experienced technician suggests you plug the oscilloscope's power cord into an {\it isolation transformer} to avoid this problem in the future.  Explain what an isolation transformer is, why it prevents the short-circuit problem experienced in this circuit, and what precautions must be taken when using one.
+
+\underbar{file 00250}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+An "isolation transformer" neither steps voltage up or down, but rather simply provides electrical isolation between primary and secondary windings.  In this particular case, an isolation transformer inserted into the oscilloscope's power circuit breaks a circuit formed by the probe ground clip's connection with the oscilloscope metal chassis, which in turn is connected to the ground prong on the power cord plug, which is connected to earth ground for safety.
+
+If an isolation transformer is used in such a way, it avoids the short-circuit problem, but only at the cost of "ungrounding" the oscilloscope chassis, making it unsafe to touch!!!
+
+\vskip 10pt
+
+Follow-up question: identify a way to safely use an oscilloscope to measure the shunt resistor's voltage, without having to use an isolation transformer.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This lesson on oscilloscope usage is a valuable one, as students are sure to encounter problems with their circuits resulting from earth ground connections through the oscilloscope's chassis ground.  Having an oscilloscope and an ohmmeter in the classroom during discussion time would be a good idea, so students may test the common connections themselves.
+
+%INDEX% Current measurement with shunt
+%INDEX% Isolation transformer
+%INDEX% Oscilloscope, earth-grounded probe reference lead
+%INDEX% Oscilloscope, use of isolation transformer to avoid ground loop
+%INDEX% Shunt resistor
+%INDEX% Resistor, shunt
+
+%(END_NOTES)
+
+

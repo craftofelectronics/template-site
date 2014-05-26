@@ -1,0 +1,76 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculating variables in reactive circuits using time-constant formulae can be time consuming, due to all the keystrokes necessary on a calculator.  Even worse is when a calculator is not available!  You should be prepared to estimate circuit values without the benefit of a calculator to do the math, though, because a calculator may not always be available when you need one.
+
+Note that Euler's constant ($e$) is approximately equal to 3.  This is not a close approximation, but close enough for "rough" estimations.  If we use a value of three instead of $e$'s true value of 2.718281828$\cdots$, we may greatly simplify the "decay" time constant formula:
+
+$$\hbox{Percentage of change } \approx 3^{-{t \over \tau}}$$
+
+Suppose that a capacitive discharge circuit begins with a full-charge voltage of 10 volts.  Calculate the capacitor's voltage at the following times as it discharges, assuming $\tau$ = 1 second:
+
+\medskip
+\item{} $t =$ 0 seconds ; $E_C = $
+\item{} $t =$ 1 second ; $E_C = $
+\item{} $t =$ 2 seconds ; $E_C = $
+\item{} $t =$ 3 seconds ; $E_C = $
+\item{} $t =$ 4 seconds ; $E_C = $
+\item{} $t =$ 5 seconds ; $E_C = $
+\medskip
+
+Without using a calculator, you should at least be able to calculate voltage values as {\it fractions} if not decimals!
+
+\underbar{file 01804}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\item{} $t =$ 0 seconds ; $E_C = $ 10 V
+
+\vskip 5pt
+
+\item{} $t =$ 1 second ; $E_C = {10 \over 3}$ V = 3.33 V
+
+\vskip 5pt
+
+\item{} $t =$ 2 seconds ; $E_C = {10 \over 9}$ V = 1.11 V 
+
+\vskip 5pt
+
+\item{} $t =$ 3 seconds ; $E_C = {10 \over 27}$ V = 0.370 V
+
+\vskip 5pt
+
+\item{} $t =$ 4 seconds ; $E_C = {10 \over 81}$ V = 0.123 V
+
+\vskip 5pt
+
+\item{} $t =$ 5 seconds ; $E_C = {10 \over 243}$ V = 0.0412 V
+
+\vskip 10pt
+
+Follow-up question: without using a calculator to check, determine whether these voltages are {\it over}-estimates or {\it under}-estimates.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Calculating the voltage for the first few time constants' worth of time should be easy without a calculator.  I strongly encourage your students to develop their estimation skills, so that they may solve problems without being dependent upon a calculator.  Too many students depend heavily on calculators -- some are even dependent on specific brands or models of calculators!
+
+Equally important as being able to estimate is knowing whether or not your estimations are over or under the exact values.  This is especially true when estimating quantities relevant to safety and/or reliability!
+
+%INDEX% Time constant estimation, RC or LR circuit
+
+%(END_NOTES)
+
+

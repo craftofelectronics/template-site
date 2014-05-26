@@ -1,0 +1,115 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Assume that the switch in this circuit is toggled (switched positions) once every 5 seconds, beginning in the "up" (charge) position at time $t = 0$, and that the capacitor begins in a fully discharged state at that time.  Determine the capacitor voltage at each switch toggle:
+
+$$\epsfbox{03668x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Time & Switch motion & $V_C$ (volts) \cr
+%
+\noalign{\hrule}
+%
+0 s & discharge $\to$ charge & 0 volts \cr
+%
+\noalign{\hrule}
+%
+5 s & charge $\to$ discharge &  \cr
+%
+\noalign{\hrule}
+%
+10 s & discharge $\to$ charge &  \cr
+%
+\noalign{\hrule}
+%
+15 s & charge $\to$ discharge &  \cr
+%
+\noalign{\hrule}
+%
+20 s & discharge $\to$ charge &  \cr
+%
+\noalign{\hrule}
+%
+25 s & charge $\to$ discharge &  \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 03668}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Time & Switch motion & $V_C$ (volts) \cr
+%
+\noalign{\hrule}
+%
+0 s & discharge $\to$ charge & 0 volts \cr
+%
+\noalign{\hrule}
+%
+5 s & charge $\to$ discharge & 6.549 volts \cr
+%
+\noalign{\hrule}
+%
+10 s & discharge $\to$ charge & 2.260 volts \cr
+%
+\noalign{\hrule}
+%
+15 s & charge $\to$ discharge & 7.329 volts \cr
+%
+\noalign{\hrule}
+%
+20 s & discharge $\to$ charge & 2.529 volts \cr
+%
+\noalign{\hrule}
+%
+25 s & charge $\to$ discharge & 7.422 volts \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Be sure to have your students share their problem-solving techniques (how they determined which equation to use, etc.) in class.  See how many of them notice that the exponential portion of the equation ($e^{t \over \tau}$) is the same for each calculation, and if they find an easy way to manage the calculations by storing charge/discharge percentages in their calculator memories!
+
+%INDEX% Time constant calculation, RC circuit
+
+%(END_NOTES)
+
+

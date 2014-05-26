@@ -1,0 +1,60 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A {\it microcontroller} is a specialized type of digital computer used to provide automatic sequencing or control of a system.  Microcontrollers differ from ordinary digital computers in being very small (typically a single integrated circuit chip), with several dedicated pins for input and/or output of digital signals, and limited memory.  Instructions programmed into the microcontroller's memory tell it how to react to input conditions, and what types of signals to send to the outputs.
+
+The simplest type of signal "understood" by a microcontroller is a discrete voltage level: either "high" (approximately +V) or "low" (approximately ground potential) measured at a specified pin on the chip.  Transistors internal to the microcontroller produce these "high" and "low" signals at the output pins, their actions being modeled by SPDT switches for simplicity's sake:
+
+$$\epsfbox{02422x01.eps}$$
+
+It does not require much imagination to visualize how microcontrollers may be used in practical systems: turning external devices on and off according to input pin and/or time conditions.  Examples include appliance control (oven timers, temperature controllers), automotive engine control (fuel injectors, ignition timing, self-diagnostic systems), and robotics (servo actuation, sensory processing, navigation logic).  In fact, if you live in an industrialized nation, you probably own several dozen microcontrollers (embedded in various devices) and don't even realize it!
+
+One of the practical limitations of microcontrollers, though, is their low output drive current limit: typically less than 50 mA.  The miniaturization of the microcontroller's internal circuitry prohibits the inclusion of output transistors having any significant power rating, and so we must connect transistors to the output pins in order to drive any significant load(s).
+
+Suppose we wished to have a microcontroller drive a DC-actuated solenoid valve requiring 2 amps of current at 24 volts.  A simple solution would be to use an NPN transistor as an "interposing" device between the microcontroller and the solenoid valve like this:
+
+$$\epsfbox{02422x02.eps}$$
+
+Unfortunately, a single BJT does not provide enough current gain to actuate the solenoid.  With 20 mA of output current from the microcontroller pin and a $\beta$ of only 25 (typical for a power transistor), this only provides about 500 mA to the solenoid coil.
+
+A solution to this problem involves two bipolar transistors in a {\it Darlington pair} arrangement:
+
+$$\epsfbox{02422x03.eps}$$
+
+However, there is another solution yet -- replace the single BJT with a single MOSFET, which requires no drive current at all.  Show how this may be done:
+
+$$\epsfbox{02422x04.eps}$$
+
+\underbar{file 02422}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{02422x05.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this long-winded question is not just to have students figure out how to replace a BJT with a MOSFET, but also to introduce them to the concept of the microcontroller, which is a device of increasing importance in modern electronic systems.
+
+Some students may inquire as to the purpose of the diode in this circuit.  Explain to them that this is a {\it commutating diode}, sometimes called a {\it free-wheeling diode}, necessary to prevent the transistor from being overstressed by high-voltage transients produced by the solenoid coil when de-energized ("inductive kickback").
+
+%INDEX% BJT versus MOSFET
+%INDEX% Darlington pair
+%INDEX% Microcontroller, introduced as a digital device
+%INDEX% MOSFET versus BJT
+
+%(END_NOTES)
+
+

@@ -1,0 +1,56 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following equations solve for the output voltage of various switching converter circuits (unloaded), given the switch duty cycle $D$ and the input voltage:
+
+$$V_{out} = D \> V_{in}  \hbox{\hskip 20pt (Buck converter circuit)}$$
+
+\vskip 10pt
+
+$$V_{out} = {V_{in} \over {1 - D}}  \hbox{\hskip 20pt (Boost converter circuit)}$$
+
+\vskip 10pt
+
+$$V_{out} = {{D \> V_{in}} \over {1 - D}}  \hbox{\hskip 20pt (Inverting or Cuk converter circuit)}$$
+
+Manipulate each of these equations to solve for duty cycle ($D$) in terms of the input voltage ($V_{in}$) and desired output voltage ($V_{out}$).  Remember that duty cycle is always a quantity between 0 and 1, inclusive.
+
+\underbar{file 02161}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$D = {V_{out} \over V_{in}}  \hbox{\hskip 20pt (Buck converter circuit)}$$
+
+\vskip 10pt
+
+$$D = 1 - \left( {V_{in} \over V_{out}} \right)  \hbox{\hskip 20pt (Boost converter circuit)}$$
+
+\vskip 10pt
+
+$$D = {V_{out} \over {V_{in} + V_{out}}}  \hbox{\hskip 20pt (Inverting or Cuk converter circuit)}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Given the equations for these converter circuit types solving for output voltage in terms of input voltage and duty cycle $D$, this question is nothing more than an exercise in algebraic manipulation.
+
+Note to your students that all of these equations assume a condition of zero load on the converter circuit.  When loads are present, of course, the output voltage will not be the same as what is predicted by these neat, simple formulae.  Although these DC-DC power converter circuits are commonly referred to as "regulators," it is somewhat misleading to do so because it falsely implies a capacity for self-correction of output voltage.  Only when coupled to a feedback control network are any of these converter circuits capable of actually {\it regulating} output voltage to a set value.
+
+%INDEX% Algebra, manipulating equations
+%INDEX% Duty cycle, for different types of converter circuits (Buck, Boost, and Inverting/Cuk)
+
+%(END_NOTES)
+
+

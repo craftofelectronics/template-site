@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following expression is frequently used to calculate values of changing variables (voltage and current) in RC and LR timing circuits:
+
+$$e^{-{t \over \tau}} \hbox{\hskip 30pt or \hskip 30pt} {1 \over {e^{t \over \tau}}}$$
+
+If we evaluate this expression for a time of $t = 0$, we find that it is equal to 1 (100\%).  If we evaluate this expression for increasingly larger values of time ($t \to \infty$), we find that it approaches 0 (0\%).
+
+Based on this simple analysis, would you say that the expression $e^{-{t \over \tau}}$ describes the percentage that a variable has changed from its initial value in a timing circuit, or the percentage that it has {\it left} to change before it reaches its final value?  To frame this question in graphical terms . . .
+
+$$\epsfbox{02946x01.eps}$$
+
+Which percentage does the expression $e^{-{t \over \tau}}$ represent in each case?  Explain your answer.
+
+\underbar{file 02946}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Whether the variable in question is increasing or decreasing over time, the expression $e^{-{t \over \tau}}$ describes the percentage that a variable has left to change before it reaches its final value.
+
+\vskip 10pt
+
+Follow-up question: what could you add to or modify about the expression to make it describe the percentage that a variable has already changed from its initial value?  In other words, alter the expression so that it is equal to 0\% at $t = 0$ and approaches 100\% as $t$ grows larger ($t \to \infty$).
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It is very important for students to understand what this expression means and how it works, lest they rely solely on memorization to use it in their calculations.  As I always tell my students, rote memorization {\it will} fail you!  If a student does not comprehend why the expression works as it does, they will be helpless to retain it as an effective "tool" for performing calculations in the future.
+
+A good way to suggest students approach a problem such as this is to imagine $t$ increasing in value.  As $t$ grows larger, what happens to the expression's overall value?  Then, compare which of the two percentages (percentage traversed, or percentage remaining) follow the same trend.  One not need touch a calculator to figure this out!
+
+%INDEX% Time constant calculation, RC or LR circuit
+
+%(END_NOTES)
+
+

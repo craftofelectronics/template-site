@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the voltage across a 2.5 H inductor after "charging" through a series-connected resistor with 50 $\Omega$ of resistance for 75 milliseconds, powered by a 6 volt battery.  Assume that the inductor has an internal resistance of 14 $\Omega$.
+
+Also, express this amount of time (75 milliseconds) in terms of how many {\it time constants} have elapsed.
+
+\vskip 10pt
+
+Hint: it would be helpful in your analysis to draw a schematic diagram of this circuit showing the inductor's inductance and 14 ohms of resistance as two separate (idealized) components.  This is a very common analysis technique in electrical engineering: to regard the parasitic characteristics of a component as a separate component in the same circuit.
+
+\underbar{file 00454}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Equivalent schematic:
+
+$$\epsfbox{00454x02.eps}$$
+
+$E_L =$ 2.00 V @ $t =$ 75 milliseconds
+
+75 ms = 1.92 time constants ($1.92\tau$)
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Although I have revealed a problem-solving technique in this question, it does not show the students exactly how to separate the inductor's 2.5 henrys of inductance and 14 ohms of resistance into two components, nor does it give away the answer.  Discuss the analytical technique of drawing idealized components ("lumped parameters") as a problem-solving technique, and encourage students to use it whenever they are faced with analyzing a component exhibiting parasitic characteristics.
+
+An excellent example of this technique is in "modeling" transformers.  Transformers exhibit much more than just mutual inductance.  They also exhibit self-inductance, leakage inductance, capacitance, resistance, and hysteretic losses.  A comprehensive model for a transformer is a very complex thing, and it appears on a schematic to be a whole network of components connected together:
+
+$$\epsfbox{00454x01.eps}$$
+
+Each of these components is regarded as ideal (i.e., pure: possessing no parasitic characteristics), but together they "model" the behavior of a real transformer in terms readily applicable to existing mathematical techniques.
+
+%INDEX% LR time constant circuit
+%INDEX% Time constant calculation, LR circuit
+
+%(END_NOTES)
+
+

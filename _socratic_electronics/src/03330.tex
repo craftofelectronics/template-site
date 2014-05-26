@@ -1,0 +1,66 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following bridge circuit uses two strain gauges (one to measure strain, the other to compensate for temperature changes), the amount of strain indicated by the voltmeter in the center of the bridge.  Unfortunately, though, it has a problem.  Instead of registering a very small voltage as it normally does, the voltmeter shows a large voltage difference, with point {\bf B} positive and point {\bf A} negative:
+
+$$\epsfbox{03330x01.eps}$$
+
+\goodbreak
+Something is wrong in the bridge circuit, because this voltage is present even when there is no physical stress on the specimen.  Identify which of the following faults could cause the excessive voltage to appear across the voltmeter, and which could not.  Consider only one of these faults at a time (no multiple, simultaneous faults):
+
+\medskip
+\item{$\bullet$} Resistor $R_1$ failed open
+\item{$\bullet$} Resistor $R_1$ failed shorted
+\item{$\bullet$} Resistor $R_2$ failed open
+\item{$\bullet$} Resistor $R_2$ failed shorted
+\item{$\bullet$} Strain gauge (measurement) failed open
+\item{$\bullet$} Strain gauge (measurement) failed shorted
+\item{$\bullet$} "Dummy" gauge (temperature compensation) failed open
+\item{$\bullet$} "Dummy" gauge (temperature compensation) failed shorted
+\item{$\bullet$} Voltage source is dead (no voltage output at all)
+\medskip
+
+\underbar{file 03330}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Resistor $R_1$ failed open {\it Possible}
+\item{$\bullet$} Resistor $R_1$ failed shorted {\it Not possible}
+\item{$\bullet$} Resistor $R_2$ failed open {\it Not possible}
+\item{$\bullet$} Resistor $R_2$ failed shorted {\it Possible}
+\item{$\bullet$} Strain gauge (measurement) failed open {\it Not possible}
+\item{$\bullet$} Strain gauge (measurement) failed shorted {\it Possible}
+\item{$\bullet$} "Dummy" gauge (temperature compensation) failed open {\it Possible}
+\item{$\bullet$} "Dummy" gauge (temperature compensation) failed shorted {\it Not possible}
+\item{$\bullet$} Voltage source is dead (no voltage output at all) {\it Not possible}
+\medskip
+
+\vskip 10pt
+
+Follow-up question: identify possible {\it wire} or {\it connection} failures in this circuit which could cause the same symptom to manifest.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question helps students build the skill of eliminating unlikely fault possibilities, allowing them to concentrate instead on what is more likely.  An important skill in system troubleshooting is the ability to formulate probabilities for various fault scenarios.  Without this skill, you will waste a lot of time looking for unlikely faults, thereby wasting time.
+
+For each fault scenario it is important to ask your students {\it why} they think it is possible or not possible.  It might be that some students get the right answer(s) for the wrong reasons, so it is good to explore the reasoning for each answer.
+
+%INDEX% Troubleshooting, strain gauge (bridge) circuit
+
+%(END_NOTES)
+
+

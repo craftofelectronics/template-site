@@ -1,0 +1,62 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following circuit has a problem.  Switch \#1 is able to control lamp \#1, but lamp \#2 never comes on no matter what is done with switch \#2:
+
+$$\epsfbox{03298x01.eps}$$
+
+\goodbreak
+Identify which of these hypothetical faults could account for this problem, and which could not account for the problem.  In other words, which of these faults are possible, and which are not possible, given the symptoms exhibited by the circuit?  Consider each of these hypothetical faults one at a time (no multiple, simultaneous faults):
+
+\medskip
+\item{$\bullet$} Battery is dead
+\item{$\bullet$} Switch \#2 failed open
+\item{$\bullet$} Switch \#2 failed shorted
+\item{$\bullet$} Switch \#1 failed open
+\item{$\bullet$} Switch \#1 failed shorted
+\item{$\bullet$} Open wire between test points 1 and 2 (between TP1 and TP2)
+\item{$\bullet$} Open wire between test points 5 and 6 (between TP5 and TP6)
+\medskip
+
+\underbar{file 03298}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Battery is dead: {\it Not possible}
+\item{$\bullet$} Switch \#2 failed open: {\it Possible}
+\item{$\bullet$} Switch \#2 failed shorted: {\it Not possible}
+\item{$\bullet$} Switch \#1 failed open: {\it Not possible}
+\item{$\bullet$} Switch \#1 failed shorted: {\it Not possible}
+\item{$\bullet$} Open wire between test points 1 and 2 (between TP1 and TP2): {\it Not possible}
+\item{$\bullet$} Open wire between test points 5 and 6 (between TP5 and TP6): {\it Possible}
+\medskip
+
+\vskip 10pt
+
+Follow-up question: if we allow ourselves to consider more than one fault occurring at the same time, which of these scenarios becomes possible?  Explain why.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question helps students build the skill of eliminating unlikely fault possibilities, allowing them to concentrate instead on what is more likely.  An important skill in system troubleshooting is the ability to formulate probabilities for various fault scenarios.  Without this skill, you will waste a lot of time looking for unlikely faults, thereby wasting time.
+
+For each fault scenario it is important to ask your students {\it why} they think it is possible or not possible.  It might be that some students get the right answer(s) for the wrong reasons, so it is good to explore the reasoning for each answer.
+
+%INDEX% Troubleshooting, simple circuit
+
+%(END_NOTES)
+
+

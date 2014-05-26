@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+At a party, you happen to notice a mathematician taking notes while looking over the food table where several pizzas are set.  Walking up to her, you ask what she is doing.  "I'm mathematically modeling the consumption of pizza," she tells you.  Before you have the chance to ask another question, she sets her notepad down on the table and excuses herself to go use the bathroom.
+
+Looking at the notepad, you see the following equation:
+
+$$\hbox{Percentage } = \left(1 - e^{-{t \over 5.8}}\right) \times 100\%$$
+
+\noindent
+Where,
+
+$t$ = Time in minutes since arrival of pizza.
+
+\vskip 10pt
+
+The problem is, you don't know whether the equation she wrote describes the percentage of pizza eaten or the percentage of pizza remaining on the table.  Explain how you would determine which percentage this equation describes.  How, exactly, can you tell if this equation describes the amount of pizza already eaten or the amount of pizza that remains to be eaten?
+
+\underbar{file 03309}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This equation models the percentage of pizza {\it eaten} at time $t$, not how much remains on the table.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+While some may wonder what this question has to do with electronics, it is an exercise in qualitative analysis.  This skill is very important for students to master if they are to be able to distinguish between the equations $e^{-{t \over \tau}}$ and $1 - e^{-{t \over \tau}}$, both used in time-constant circuit analysis.
+
+The actual procedure for determining the nature of the equation is simple: consider what happens as $t$ begins at 0 and as it increases to some arbitrary positive value.  Some students may rely on their calculators, performing actual calculations to see whether the percentage increases or decreases with increasing $t$.  Encourage them to analyze the equation qualitatively rather than quantitatively, though.  They should be able to tell which way the percentage changes with time without having to consider a single numerical value!
+
+%INDEX% Time constant calculation, pizza consumption
+
+%(END_NOTES)
+
+

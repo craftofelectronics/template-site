@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The circuit shown here indicates which pushbutton switch has been actuated {\it first}.  After actuating any one of the three pushbutton switches (and energizing its respective lamp), none of the other lamps can be made to energize:
+
+$$\epsfbox{01096x01.eps}$$
+
+Explain how this circuit works.  Why can't any of the other lamps turn on once any one of them has been energized?  Also, explain how the circuit could be modified so as to provide a "reset" to turn all lamps off again.
+
+\underbar{file 01096}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Once any one of the SCRs has been latched, the voltage available at the switches for triggering the other SCRs is substantially reduced.  A normally-closed "reset" switch may be installed in series with the battery to reset all lamps back to the "off" state.
+
+\vskip 10pt
+
+Challenge question: how could this circuit be modified to serve as a "first place" detector for runners competing on three different tracks?  Draw a schematic diagram showing suitable sensors (instead of pushbutton switches) for detecting the passage of the three runners.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss the operation of this circuit with your students in detail.  It serves as an excellent practical example of SCR action, as well as a good review of general diode action.  Ask them why an NC switch connected in series with the battery would serve to reset the SCRs.
+
+A good question to challenge students' understanding of this circuit is to ask them how to "expand" it to include four, five, or six lamps instead of just three.
+
+I found this circuit design in the October 2003 edition of \underbar{Electronics World} magazine.  The original circuit, submitted to this periodical by M.J. Nicholas, appears on page 35 of the magazine in a slightly different form, with four lamp circuits instead of three, and using regular rectifying diodes instead of Schottky diodes as I have shown.
+
+%INDEX% SCR switch circuit
+
+%(END_NOTES)
+
+

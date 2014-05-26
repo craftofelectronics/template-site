@@ -1,0 +1,56 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+It is often useful in AC circuit analysis to be able to convert a series combination of resistance and reactance into an equivalent parallel combination of conductance and susceptance, or visa-versa:
+
+$$\epsfbox{00856x01.eps}$$
+
+We know that resistance ($R$), reactance ($X$), and impedance ($Z$), as scalar quantities, relate to one another trigonometrically in a series circuit.  We also know that conductance ($G$), susceptance ($B$), and admittance ($Y$), as scalar quantities, relate to one another trigonometrically in a parallel circuit:
+
+$$\epsfbox{00856x02.eps}$$
+
+If these two circuits are truly equivalent to one another, having the same total impedance, then their representative triangles should be geometrically similar (identical angles, same proportions of side lengths).  With equal proportions, ${R \over Z}$ in the series circuit triangle should be the same ratio as ${G \over Y}$ in the parallel circuit triangle, that is ${R \over Z} = {G \over Y}$.  
+
+Building on this proportionality, prove the following equation to be true:
+
+$$R_{series} R_{parallel} = {Z_{total}}^2$$
+
+After this, derive a similar equation relating the series and parallel reactances ($X_{series}$ and $X_{parallel}$) with total impedance ($Z_{total}$).
+
+\underbar{file 00856}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I'll let you figure out how to turn ${R \over Z} = {G \over Y}$ into $R_{series} R_{parallel} = {Z_{total}}^2$ on your own!
+
+\vskip 10pt
+
+As for the reactance relation equation, here it is:
+
+$$X_{series} X_{parallel} = {Z_{total}}^2$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Being able to convert between series and parallel AC networks is a valuable skill for analyzing complex series-parallel combination circuits, because it means any series-parallel combination circuit may then be converted into an equivalent simple-series or simple-parallel, which is mush easier to analyze.
+
+Some students might ask why the conductance/susceptance triangle is "upside-down" compared to the resistance/reactance triangle.  The reason has to do with the sign reversal of imaginary quantities when inverted: ${1 \over j} = -j$.  The phase angle of a pure inductance's impedance is +90 degrees, while the phase angle of the same (pure) inductance's admittance is -90 degrees, due to reciprocation.  Thus, while the $X$ leg of the resistance/reactance triangle points up, the $B$ leg of the conductance/susceptance triangle must point down.
+
+%INDEX% Converting series impedances to parallel impedances, and visa-versa
+%INDEX% Equivalent networks, series and parallel impedances
+
+%(END_NOTES)
+
+

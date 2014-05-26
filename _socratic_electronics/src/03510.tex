@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Controlling electrical "noise" in automotive electrical systems can be problematic, as there are many sources of "noise" voltages throughout a car.  Spark ignitions and alternators can both generate substantial noise voltages, superimposed on the DC voltage in a car's electrical system.  A simple way to electrically model this noise is to draw it as an AC "noise voltage" source in series with the DC source.  If this noise enters a radio or audio amplifier, the result will be an irritating sound produced at the speakers:
+
+$$\epsfbox{03510x01.eps}$$
+
+What would you suggest as a "fix" for this problem if a friend asked you to apply your electronics expertise to their noisy car audio system?  Be sure to provide at least two practical suggestions.
+
+\underbar{file 03510}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This is perhaps the easiest solution, to install a very large capacitor ($C_{huge}$) in parallel with the audio load:
+
+$$\epsfbox{03510x02.eps}$$
+
+Other, more sophisticated solutions exist, however!
+
+\vskip 10pt
+
+Follow-up question: use superposition theorem to show {\it why} the capacitor mitigates the electrical noise without interfering with the transfer of DC power to the radio/amplifier.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The follow-up question is yet another example of how practical the superposition theorem is when analyzing filter circuits.
+
+%INDEX% Noise filter, for car audio system
+
+%(END_NOTES)
+
+

@@ -1,0 +1,59 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+One way to think of logic gate types is to consider what input states guarantee a certain output state.  For example, we could describe the function of an AND gate as such:
+
+$$\hbox{\it Any low input guarantees a low output.}$$
+
+Identify what type of gate is represented by each of the following phrases:
+
+\medskip
+\item{$\bullet$} Any low input guarantees a high output.
+\item{$\bullet$} Any high input guarantees a low output.
+\item{$\bullet$} Any high input guarantees a high output.
+\item{$\bullet$} Any difference in the inputs guarantees a high output.
+\item{$\bullet$} Any difference in the inputs guarantees a low output.
+\medskip
+
+Also, explain how this sort of gate identification could be useful in troubleshooting logic gate circuits.
+
+\underbar{file 03833}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Any low input guarantees a high output: {\bf NAND} gate.
+\item{$\bullet$} Any high input guarantees a low output: {\bf NOR} gate.
+\item{$\bullet$} Any high input guarantees a high output: {\bf OR} gate.
+\item{$\bullet$} Any difference in the inputs guarantees a high output: {\bf XOR} gate.
+\item{$\bullet$} Any difference in the inputs guarantees a low output: {\bf XNOR} gate.
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a very useful way to think of the different logic gate types, as often you are faced with a choice of which gate type to use for a specific function in a digital circuit based on a requirement cast in these terms ("Any {\it blank} input guarantees a {\it blank} output").
+
+For example, we might need a gate to perform a "disable" function for a digital signal:
+
+$$\epsfbox{03833x01.eps}$$
+
+Considered in terms of what input state forces a low output, the choice to use an AND gate becomes obvious.
+
+%INDEX% Truth tables for different gate types
+
+%(END_NOTES)
+
+

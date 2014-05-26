@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student builds this common-emitter amplifier so they he may amplify the audio signals from a microphone to power a speaker:
+
+$$\epsfbox{02235x01.eps}$$
+
+Unfortunately, the results are considerably less than expected: although some sound does come out of the speaker, it is not enough to be considered a success.  Another student inspects the design and cryptically mumbles something about "poor impedance matching," leaving the first student somewhat confused.
+
+Explain what {\it impedance matching} means in this context, where the mis-match might be in this circuit, and what might be done to correct it.
+
+\underbar{file 02235}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I won't reveal all the answers here, but I will provide a visual hint:
+
+$$\epsfbox{02235x02.eps}$$
+
+Ideally, the impedance-matching transformer will have a turns ratio of approximately 30:1 to match the output impedance of the amplifier circuit with the impedance of the speaker.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Note to your students that the addition of a transformer is not the only viable option for solving this impedance mis-match problem.  One could add another stage of transistor amplification (of the right type, of course).
+
+One point not touched upon in the answer is a possible mis-match of impedances between the microphone and the amplifier {\it input}.  Since the microphone impedance was not specified, one cannot tell whether there is an impedance mis-match or not.
+
+%INDEX% Impedance, amplifier output
+%INDEX% Output impedance, amplifier
+
+%(END_NOTES)
+
+

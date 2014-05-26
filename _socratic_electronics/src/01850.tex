@@ -1,0 +1,66 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+If the dielectric substance between a capacitor's plates is not a perfect insulator, there will be a path for direct current (DC) from one plate to the other.  This is typically called {\it leakage resistance}, and it is modeled as a shunt resistance to an ideal capacitance:
+
+$$\epsfbox{01850x01.eps}$$
+
+Calculate the magnitude and phase shift of the current drawn by this real capacitor, if powered by a sinusoidal voltage source of 30 volts RMS at 400 Hz:
+
+$$\epsfbox{01850x02.eps}$$
+
+Compare this against the magnitude and phase shift of the current for an ideal capacitor (no leakage).
+
+\underbar{file 01850}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+${\bf I} =$ 56.548671 mA $\angle$ 89.98$^{o}$ for the real capacitor with leakage resistance.
+
+${\bf I} =$ 56.548668 mA $\angle$ 90.00$^{o}$ for the ideal capacitor.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss with your students the fact that electrolytic capacitors typically have more leakage (less $R_{leakage}$) than most other capacitor types, due to the thinness of the dielectric oxide layer.
+
+\vskip 10pt
+
+Students often have difficulty formulating a method of solution: determining what steps to take to get from the given conditions to a final answer.  While it is helpful at first for you (the instructor) to show them, it is bad for you to show them too often, lest they stop thinking for themselves and merely follow your lead.  A teaching technique I have found very helpful is to have students come up to the board (alone or in teams) in front of class to write their problem-solving strategies for all the others to see.  They don't have to actually do the math, but rather outline the steps they would take, in the order they would take them.  The following is a sample of a written problem-solving strategy for analyzing a series resistive-reactive AC circuit:
+
+\vskip 10pt
+
+\goodbreak
+
+{\bf Step 1:} Calculate all reactances ($X$).
+
+{\bf Step 2:} Draw an impedance triangle ($Z$ ; $R$ ; $X$), solving for $Z$
+
+{\bf Step 3:} Calculate circuit current using Ohm's Law: $I = {V \over Z}$
+
+{\bf Step 4:} Calculate series voltage drops using Ohm's Law: $V = {I Z}$
+
+{\bf Step 5:} Check work by drawing a voltage triangle ($V_{total}$ ; $V_1$ ; $V_2$), solving for $V_{total}$
+
+\vskip 10pt
+
+By having students outline their problem-solving strategies, everyone gets an opportunity to see multiple methods of solution, and you (the instructor) get to see how (and if!) your students are thinking.  An especially good point to emphasize in these "open thinking" activities is how to check your work to see if any mistakes were made.
+
+%INDEX% Impedance calculation, parallel RC circuit
+%INDEX% Leakage resistance, capacitor
+
+%(END_NOTES)
+
+

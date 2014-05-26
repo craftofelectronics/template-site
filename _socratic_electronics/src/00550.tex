@@ -1,0 +1,40 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Explain how this strain gauge circuit exploits a property of bridge circuits to provide automatic temperature compensation (so that changes in specimen temperature do not compromise strain measurement accuracy):
+
+$$\epsfbox{00550x01.eps}$$
+
+\underbar{file 00550}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The "dummy" gauge is attached to the specimen in such a way that it is not subjected to strain like the "working" gauge is.  It it merely exposed to the same specimen temperature.  The action of this circuit is easiest to comprehend in a scenario where there is no stress applied to the specimen, but its temperature changes.
+
+\vskip 10pt
+
+Follow-up question: suppose the "dummy" strain gauge develops an open failure, so no current may pass through it.  Identify the polarity of the voltage drop that will develop across the voltmeter as a result of this fault.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Because bridge circuits are inherently {\it differential} circuits, it is possible to perform neat "tricks" such as this where the effects of the undesired influence (temperature) become canceled.  Incidentally, the principle of cancellation by differential measurement is one that is very common in electronic systems, especially instrumentation systems.
+
+%INDEX% Bridge circuit, used to measure strain
+%INDEX% Strain gauge
+
+%(END_NOTES)
+
+

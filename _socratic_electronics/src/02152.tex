@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The {\it oscillator} circuit in this diagram generates a square wave with an adjustable duty cycle:
+
+$$\epsfbox{02152x01.eps}$$
+
+A student desires to use this circuit as the basis for a {\it pulse-width modulation} (PWM) power controller, to vary the amount of power delivered to a DC load.  Since the oscillator circuit is built to produce weak signals and not deliver power directly to a load, the student adds a power MOSFET to switch heavy load currents:
+
+$$\epsfbox{02152x02.eps}$$
+
+Correlate the duty cycle of the oscillator's output signal with motor power.  In other words, describe how increases and decreases in signal duty cycle affect the amount of power delivered to the electric motor.
+
+\underbar{file 02152}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The greater the duty cycle, the more power delivered to the motor.
+
+\vskip 10pt
+
+Follow-up question: how do you recommend a suitable oscillator {\it frequency} be determined for this motor control circuit?  Describe how you might experiment with the circuit to determine a suitable frequency without performing any calculations.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+As review, ask your students to identify what type of MOSFET this is (type of channel, and either depletion or enhancement mode), and what the proper oscillator signal amplitude should be to drive the MOSFET alternately between cutoff and saturation.
+
+%INDEX Pulse-width modulation (PWM)
+%INDEX PWM motor speed control circuit
+
+%(END_NOTES)
+
+

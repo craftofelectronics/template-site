@@ -1,0 +1,42 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the amount of gate-to-source voltage necessary to regulate a JFET's drain current at a value of 2.5 mA, given the following transistor parameters:
+
+\medskip
+\item{$\bullet$} $V_{GS(off)} =$ 3 volts
+\item{$\bullet$} $I_{DSS} =$ 17 mA
+\medskip
+
+Also, write the equation used for obtaining the value of $V_{GS}$.
+
+\underbar{file 00998}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$V_{GS} =$ 1.85 volts
+
+$$V_{GS} = V_{GS(off)}\Biggl( 1 - \sqrt{I_D \over I_{DSS}} \Biggr)$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Once students have found the standard drain current formula (transconductance equation), the rest is algebraic manipulation.
+
+%INDEX% Gate voltage calculation, necessary to achieve specified drain current for a JFET
+
+%(END_NOTES)
+
+

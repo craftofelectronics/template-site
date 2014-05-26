@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A common mistake made when installing shielded cable is to connect both ends of the cable's shield conductor to earth ground:
+
+$$\epsfbox{01976x01.eps}$$
+
+Connecting both ends of a cable's shield conductor to ground creates something called a {\it ground loop}.  The longer the physical distance between the cable's ends, the worse the "ground loop" problem becomes.  Explain why.
+
+\underbar{file 01976}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Noise voltage sources present in the earth (natural phenomena, power system currents, radio transmitter ground currents, etc.) will cause noise current to exist in the "ground loop" circuit, which will couple to the cable's signal wiring via mutual inductance.
+
+\vskip 10pt
+
+Follow-up question: redraw the schematic, showing the noise voltage source(s) as a single AC voltage source symbol in the loop.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Note to your students that this problem is far more acute if the cable wiring is single conductor (unbalanced, like a coaxial cable) rather than twisted-pair (balanced).  However, even when using twisted-pair cable in a balanced circuit, care should be taken to avoid ground loops so as to not create any unnecessary paths for noise.
+
+In some cases, the noise currents may be so severe that wiring damage results.  I (Tony Kuphaldt) used to work as a technician at an aluminum smelter facility where extremely high levels of electrical current were used to smelt aluminum from ore.  Due to the nature of the process, several thousand amps of noisy "DC" current traveled through the earth from the "potline" system due to unavoidable ground faults.  Earth ground was an electrically noisy connection point at best in that facility!  Ground loops were simply not acceptable, as the cable shield wires would conduct enough DC current to actually cause damage in some locations!
+
+To give you a more graphic view of the problem's severity, I saw one instance where a construction contractor touched the tip of an electric drill (safety-grounded, through the extension cord plugged into a wall socket about 30 meters away) to a piece of steel reinforcement bar where concrete was to be poured, and actually drew a spark!  Such was the magnitude of ground current at this facility that enough potential existed between the span of distance covered by that extension cord to draw an arc between the two ground points (the rebar, and the safety ground near the receptacle).  Ironically, this was one instance where the grounded drill motor case presented a shock hazard to anyone working around the rebar!
+
+%INDEX% Ground loop, defined
+
+%(END_NOTES)
+
+

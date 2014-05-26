@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Determine the $Q$ and $\overline{Q}$ output states of this D-type gated latch, given the following input conditions:
+
+$$\epsfbox{01364x01.eps}$$
+
+Now, suppose we add a propagation-delay-based one-shot circuit to the Enable line of this D-type gated latch.  Re-analyze the output of the circuit, given the same input conditions:
+
+$$\epsfbox{01364x02.eps}$$
+
+Comment on the differences between these two circuits' responses, especially with reference to the enabling input signal (B).
+
+\underbar{file 01364}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{01364x03.eps}$$
+
+\vskip 20pt
+
+$$\epsfbox{01364x04.eps}$$
+
+\vskip 10pt
+
+Follow-up question: one of these circuits is referred to as {\it edge-triggered}.  Which one is it?
+
+\vskip 10pt
+
+Challenge question: in reality, the output waveforms for both these scenarios will be shifted slightly due to propagation delays within the constituent gates.  Re-draw the true outputs, accounting for these delays.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss with your students the concept of edge-triggering, and how it is implemented in (one of) the circuits in this question.  Ask them to describe any tips they may have discovered for analyzing pulse waveforms.  Specifically, are there any particular times where we need to pay close attention to the D input signal to determine what the outputs do, and any times where we can ignore the D input status?
+
+The challenge question regarding propagation delays is meant to remind students that the perfectly synchronized timing diagrams seen in textbooks are not exactly what happens in real life.  Ask your students to elaborate on what real-life conditions would make such propagation delays relevant.  Are there applications of digital circuits where we can all but ignore such delays?
+
+%INDEX% D-type flip-flop, edge triggered
+%INDEX% One-shot circuit, exploiting gate propagation delays
+%INDEX% Propagation delay, gate circuits
+
+%(END_NOTES)
+
+

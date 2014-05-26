@@ -1,0 +1,34 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose you need a memory array with 4k $\times$ 4 organization, but all you have on hand are 1k $\times$ 4 memory chips.  Explain how you could build a memory array of this size using multiple 1k $\times$ 4 chips.
+
+\underbar{file 01448}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use four memory chips: parallel the ten address lines from each 1k $\times$ 4 memory chip, then connect the $\overline{CS}$ line of each chip to the output of a 2-line to 4-line decoder.  The two decoder input lines will then become address lines $A_{10}$ and $A_{11}$ of the 4k $\times$ 4 memory array.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Although no schematic is given here in the answer, I expect my students to be able to draw one on their own.
+
+%INDEX% Memory expansion, address
+%INDEX% Address expansion, memory
+
+%(END_NOTES)
+
+

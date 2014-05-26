@@ -1,0 +1,843 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: 04054x01.eps
+%%Creator: Xcircuit v3.0
+%%CreationDate: Sat Jun 17 05:27:29 2006
+%%Pages: 1
+%%BoundingBox: 68 68 391 343
+%%DocumentNeededResources: font Helvetica font Courier 
+%%EndComments
+%%BeginProlog
+%
+%  PostScript prolog for output from xcircuit
+%  Version: 2.4
+%
+%  Electrical circuit (and otherwise general) drawing program
+%
+%  Written by Tim Edwards 8/5/93--5/16/01  (tim@bach.ece.jhu.edu)
+%  The Johns Hopkins University
+%
+%%BeginResource: procset XCIRCproc 2.4 1
+% supporting definitions --- these are the primary xcircuit types.
+
+/XCIRCsave save def
+/topmat matrix currentmatrix def
+
+/fontslant { /slant exch def [1 0 slant 1 0 0] 
+    exch findfont exch makefont dup length dict /ndict exch def
+    { 1 index /FID ne { ndict 3 1 roll put } { pop pop } ifelse } forall
+    ndict definefont pop} def
+/ul { dup type /stringtype eq showflag 1 eq and { gsave 
+   currentpoint topmat setmatrix 0 0 moveto 2 index stringwidth pop (_)
+   false charpath flattenpath pathbbox grestore exch pop 1 index
+   sub setlinewidth exch pop currentpoint 3 -1 roll add moveto 0
+   rlineto stroke moveto } if } def
+/ol { dup type /stringtype eq showflag 1 eq and { gsave gsave
+   currentpoint topmat setmatrix 2 index stringwidth pop 3 index
+   true charpath flattenpath pathbbox grestore exch pop
+   exch pop topmat setmatrix (_) true charpath pathbbox grestore
+   exch pop 1 index sub setlinewidth exch pop currentpoint
+   exch 4 1 roll exch sub add moveto pop 0 rlineto stroke
+   moveto } if } def
+/stW { gsave currentpoint newpath moveto true charpath flattenpath
+	pathbbox pop exch pop sub grestore } def
+/Ts {mark Tabs aload pop counttomark 1 add array astore /Tabs exch def Tabs
+	0 currentpoint pop put} def
+/Tbn {mark Tabs aload pop counttomark dup 2 add 1 roll cleartomark 1 sub} def
+/Tb { 0 1 Tbn {Tabs exch get dup currentpoint pop lt
+	{currentpoint exch pop moveto exit} {pop} ifelse } for } def
+/Tf { Tbn -1 0 {Tabs exch get dup currentpoint pop gt
+	{currentpoint exch pop moveto exit} {pop} ifelse } for } def
+/qS { (aa) stW (a a) stW sub 4 div 0 Kn } def
+/hS { qS qS } def
+/pspc 0 def
+/cf0 { scalefont setfont } bind def
+/Kn { dup kY add /kY exch def rmoveto } bind def
+/ss { /fscale fscale 0.67 mul def currentfont 0.67 cf0 0 fscale0 fscale mul
+	0.33 mul neg Kn} def
+/Ss { /fscale fscale 0.67 mul def currentfont 0.67 cf0 0 fscale0 fscale mul
+	0.67 mul Kn } def
+/ns { 0 kY neg Kn /kY 0 def /fscale 1.0 def xfont0 1.0 cf0 } def
+/CR { ns 0 /Bline Bline fscale0 neg add def Bline moveto } def
+/cf { dup type /realtype ne {1.0} if exch findfont exch kY 0 eq
+	{ 40 mul dup /fscale0 exch def cf0 /xfont0 currentfont def}
+	{fscale0 mul fscale mul cf0} ifelse } def
+/ctmk { counttomark dup 2 add -1 roll pop } bind def
+/label { gsave translate 0 0 moveto dup scale neg /rotval exch def
+	/just exch def just 16 and 0 gt {gsave rotval rotate 0 1 dtransform
+	gsave pagemat setmatrix idtransform exch grestore 1 0 dtransform
+	gsave pagemat setmatrix idtransform exch grestore dup abs 1e-9 lt
+	{pop mul 0 gt} {3 1 roll pop pop 0 lt} ifelse grestore {-1 /rotval
+	rotval neg def /just just dup 3 and 1 ne {3 xor} if def} {1} ifelse
+	exch -1e-9 lt {-1 /rotval rotval neg def /just just dup 12 and
+	4 ne {12 xor} if def} {1} ifelse scale } if /showflag 0 def
+	/fspc pspc def /Bline 0 def /Tabs 0 array def /fscale 1.0 def
+	/kY 0 def gsave dup 1 add copy 0 exch 1 0 dtransform exch atan rotate
+	{exch dup type /stringtype eq {true charpath flattenpath} {exec}
+	ifelse } repeat pop pathbbox grestore 3 -1 roll pop 3 1 roll just
+	1 and 0 gt {just 2 and 0 gt {exch pop neg fspc sub} {exch sub 0.5
+	mul neg} ifelse} {pop neg fspc add} ifelse exch Bline exch just 4
+	and 0 gt {just 8 and 0 gt {exch pop neg fspc sub} {add 0.5 mul neg}
+	ifelse} {pop neg fspc add} ifelse rotval rotate Kn currentpoint
+	translate /showflag 1 def /Bline 0 def /Tabs 0 array def /fscale
+	1.0 def /kY 0 def {dup type /stringtype eq {show}{exec} ifelse}
+	repeat grestore } def
+/pinlabel { 4 index 32 and 0 ne hlevel 0 eq or { /pspc 10 def label
+	/pspc 0 def } { pop pop pop pop pop {pop} repeat } ifelse } def
+/pinglobal { pinlabel } def
+/infolabel { pinlabel } def
+
+/scb { setrgbcolor } bind def  /sce { defColor aload pop scb } bind def
+/cRedef {/defColor currentcolor 3 array astore def} def
+/begingate { /hlevel hlevel 1 add def /defColor currentcolor sce 3 array
+	astore def gsave sce translate 0 0 moveto neg rotate dup abs scale
+	} bind def
+/makeparm  {3 string cvs dup length 1 add string /tstr exch def tstr exch
+	1 exch putinterval tstr 0 (v) putinterval tstr cvn} bind def
+/beginparm { -1 1 {makeparm exch def} for
+	dup type /arraytype eq { aload length -1 1 {makeparm exch def}
+	for } if begingate } bind def
+/endgate { /hlevel hlevel 1 sub def grestore defColor aload pop cRedef
+	scb} bind def
+
+/hlevel 0 def
+/tmpa [1 0 0 1 0 0] def
+/gar {8 8 true tmpa {<c0 c0 00 00 0c 0c 00 00>} imagemask} bind
+{8 8 true tmpa {<30 70 60 02 03 07 06 20>} imagemask} bind
+{8 8 true tmpa {<0c 1e 1e 0c c0 e1 e1 c0>} imagemask} bind
+{8 8 true tmpa {<0f 0f 0f 0f f0 f0 f0 f0>} imagemask} bind
+{8 8 true tmpa {<3f f3 e1 e1 f3 3f 1e 1e>} imagemask} bind
+{8 8 true tmpa {<df cf 8f 9f fd fc f8 f9>} imagemask} bind
+{8 8 true tmpa {<ff 3f 3f ff ff f3 f3 ff>} imagemask} bind 7 array astore def
+/ppaint { gsave clip tmpa dup setmatrix pathbbox neg exch neg 4 2 roll
+  neg 4 -1 roll 2 copy gt {exch} if 8 div ceiling 8 mul 4 2 roll neg 2 copy
+  gt {exch} if 8 div ceiling 8 mul 3 -1 roll -8 5 -1 roll
+  { 3 index exch 5 exch put dup -8 3 index { 3 index
+  exch 4 exch put 3 index exec } for } for pop pop pop pop grestore } bind def
+/setstyles {
+  currentlinewidth mul setlinewidth /style exch def
+  style 1 and 0 gt not {closepath} if
+  style 2 and 0 gt {currentlinewidth 4 mul dup 2 array astore 0 setdash} if 
+  style 4 and 0 gt {0.5 currentlinewidth 4 mul 2 array astore 0 setdash} if 
+  style dup 256 ge exch 480 lt and { gsave 1 setgray eofill grestore } if
+  style 16 and 0 gt { gsave style 224 and -5 bitshift dup 7 lt
+	{gar exch get ppaint} { pop eofill } ifelse grestore } if
+  style 8 and 0 gt style 512 eq or { newpath } { stroke } ifelse grestore } def
+
+/polygon { gsave /num exch def moveto num 1 sub {lineto} repeat setstyles } def
+/xcarc   { gsave newpath arc setstyles } def
+/elb { matrix currentmatrix 7 -1 roll 7 -1 roll translate 5 1 roll 4 -1 roll
+	3 index div 1 scale } def
+/ele { 0 4 1 roll 0 4 1 roll } bind def
+/ellipse { gsave elb newpath ele arc setmatrix setstyles } def
+/pellip  { elb ele arc setmatrix } def
+/nellip  { elb ele arcn setmatrix } def
+/spline  { gsave moveto curveto setstyles } def
+/polyc   { {lineto} repeat } bind def
+/beginpath { gsave moveto } bind def
+/endpath { setstyles } bind def
+/bop	 { 1 setlinecap 0 setlinejoin 6 setmiterlimit 0 0 0 scb cRedef } def
+/psinsertion {/PSobj save def /showpage {} def bop rotate translate dup scale} def
+/end_insert {PSobj restore} def
+/setpagemat {/pagemat matrix currentmatrix def} def
+/inchscale  {setpagemat 0.375 mul dup scale} def
+/cmscale    {setpagemat 0.35433071 mul dup scale} def
+
+%%EndResource
+%%EndProlog
+
+% XCircuit output starts here.
+
+%%Page: 14052 1
+%%PageOrientation: Portrait
+/pgsave save def bop
+% 512 792 offsets
+% 32.00 8.00 gridspace
+0.7500 inchscale
+2.6000 setlinewidth
+
+0 1.00 256 1208 256 1152 312 1152 312 1208 4 polygon
+0 1.00 312 1208 312 1152 368 1152 368 1208 4 polygon
+0 1.00 368 1208 368 1152 424 1152 424 1208 4 polygon
+0 1.00 424 1208 424 1152 480 1152 480 1208 4 polygon
+(A) {/Helvetica cf} 2 16 0 1.00 440 1168 label
+(B) {/Helvetica cf} 2 16 0 1.00 384 1168 label
+(C) {/Helvetica cf} 2 16 0 1.00 328 1168 label
+(D) {/Helvetica cf} 2 16 0 1.00 272 1168 label
+0 1.00 256 1152 256 1096 312 1096 312 1152 4 polygon
+0 1.00 312 1152 312 1096 368 1096 368 1152 4 polygon
+0 1.00 368 1152 368 1096 424 1096 424 1152 4 polygon
+0 1.00 424 1152 424 1096 480 1096 480 1152 4 polygon
+0 1.00 256 1096 256 1040 312 1040 312 1096 4 polygon
+0 1.00 312 1096 312 1040 368 1040 368 1096 4 polygon
+0 1.00 368 1096 368 1040 424 1040 424 1096 4 polygon
+0 1.00 424 1096 424 1040 480 1040 480 1096 4 polygon
+0 1.00 256 1040 256 984 312 984 312 1040 4 polygon
+0 1.00 312 1040 312 984 368 984 368 1040 4 polygon
+0 1.00 368 1040 368 984 424 984 424 1040 4 polygon
+0 1.00 424 1040 424 984 480 984 480 1040 4 polygon
+0 1.00 256 984 256 928 312 928 312 984 4 polygon
+0 1.00 312 984 312 928 368 928 368 984 4 polygon
+0 1.00 368 984 368 928 424 928 424 984 4 polygon
+0 1.00 424 984 424 928 480 928 480 984 4 polygon
+0 1.00 256 928 256 872 312 872 312 928 4 polygon
+0 1.00 312 928 312 872 368 872 368 928 4 polygon
+0 1.00 368 928 368 872 424 872 424 928 4 polygon
+0 1.00 424 928 424 872 480 872 480 928 4 polygon
+0 1.00 256 872 256 816 312 816 312 872 4 polygon
+0 1.00 312 872 312 816 368 816 368 872 4 polygon
+0 1.00 368 872 368 816 424 816 424 872 4 polygon
+0 1.00 424 872 424 816 480 816 480 872 4 polygon
+0 1.00 256 816 256 760 312 760 312 816 4 polygon
+0 1.00 312 816 312 760 368 760 368 816 4 polygon
+0 1.00 368 816 368 760 424 760 424 816 4 polygon
+0 1.00 424 816 424 760 480 760 480 816 4 polygon
+0 1.00 256 760 256 704 312 704 312 760 4 polygon
+0 1.00 312 760 312 704 368 704 368 760 4 polygon
+0 1.00 368 760 368 704 424 704 424 760 4 polygon
+0 1.00 424 760 424 704 480 704 480 760 4 polygon
+0 1.00 256 704 256 648 312 648 312 704 4 polygon
+0 1.00 312 704 312 648 368 648 368 704 4 polygon
+0 1.00 368 704 368 648 424 648 424 704 4 polygon
+0 1.00 424 704 424 648 480 648 480 704 4 polygon
+0 1.00 256 648 256 592 312 592 312 648 4 polygon
+0 1.00 312 648 312 592 368 592 368 648 4 polygon
+0 1.00 368 648 368 592 424 592 424 648 4 polygon
+0 1.00 424 648 424 592 480 592 480 648 4 polygon
+0 1.00 256 592 256 536 312 536 312 592 4 polygon
+0 1.00 312 592 312 536 368 536 368 592 4 polygon
+0 1.00 368 592 368 536 424 536 424 592 4 polygon
+0 1.00 424 592 424 536 480 536 480 592 4 polygon
+0 1.00 256 536 256 480 312 480 312 536 4 polygon
+0 1.00 312 536 312 480 368 480 368 536 4 polygon
+0 1.00 368 536 368 480 424 480 424 536 4 polygon
+0 1.00 424 536 424 480 480 480 480 536 4 polygon
+0 1.00 256 480 256 424 312 424 312 480 4 polygon
+0 1.00 312 480 312 424 368 424 368 480 4 polygon
+0 1.00 368 480 368 424 424 424 424 480 4 polygon
+0 1.00 424 480 424 424 480 424 480 480 4 polygon
+0 1.00 256 424 256 368 312 368 312 424 4 polygon
+0 1.00 312 424 312 368 368 368 368 424 4 polygon
+0 1.00 368 424 368 368 424 368 424 424 4 polygon
+0 1.00 424 424 424 368 480 368 480 424 4 polygon
+0 1.00 256 368 256 312 312 312 312 368 4 polygon
+0 1.00 312 368 312 312 368 312 368 368 4 polygon
+0 1.00 368 368 368 312 424 312 424 368 4 polygon
+0 1.00 424 368 424 312 480 312 480 368 4 polygon
+0 1.00 256 312 256 256 312 256 312 312 4 polygon
+0 1.00 312 312 312 256 368 256 368 312 4 polygon
+0 1.00 368 312 368 256 424 256 424 312 4 polygon
+0 1.00 424 312 424 256 480 256 480 312 4 polygon
+(0) {/Courier cf} 2 16 0 1.00 440 1112 label
+(1) {/Courier cf} 2 16 0 1.00 440 1056 label
+(0) {/Courier cf} 2 16 0 1.00 440 1000 label
+(1) {/Courier cf} 2 16 0 1.00 440 944 label
+(0) {/Courier cf} 2 16 0 1.00 440 888 label
+(1) {/Courier cf} 2 16 0 1.00 440 832 label
+(0) {/Courier cf} 2 16 0 1.00 440 776 label
+(1) {/Courier cf} 2 16 0 1.00 440 720 label
+(0) {/Courier cf} 2 16 0 1.00 440 664 label
+(1) {/Courier cf} 2 16 0 1.00 440 608 label
+(0) {/Courier cf} 2 16 0 1.00 440 552 label
+(1) {/Courier cf} 2 16 0 1.00 440 496 label
+(0) {/Courier cf} 2 16 0 1.00 440 440 label
+(1) {/Courier cf} 2 16 0 1.00 440 384 label
+(0) {/Courier cf} 2 16 0 1.00 440 328 label
+(1) {/Courier cf} 2 16 0 1.00 440 272 label
+(0) {/Courier cf} 2 16 0 1.00 384 1112 label
+(0) {/Courier cf} 2 16 0 1.00 384 1056 label
+(0) {/Courier cf} 2 16 0 1.00 384 888 label
+(0) {/Courier cf} 2 16 0 1.00 384 832 label
+(0) {/Courier cf} 2 16 0 1.00 384 664 label
+(0) {/Courier cf} 2 16 0 1.00 384 608 label
+(0) {/Courier cf} 2 16 0 1.00 384 440 label
+(0) {/Courier cf} 2 16 0 1.00 384 384 label
+(1) {/Courier cf} 2 16 0 1.00 384 272 label
+(1) {/Courier cf} 2 16 0 1.00 384 328 label
+(1) {/Courier cf} 2 16 0 1.00 384 496 label
+(1) {/Courier cf} 2 16 0 1.00 384 552 label
+(1) {/Courier cf} 2 16 0 1.00 384 720 label
+(1) {/Courier cf} 2 16 0 1.00 384 776 label
+(1) {/Courier cf} 2 16 0 1.00 384 944 label
+(1) {/Courier cf} 2 16 0 1.00 384 1000 label
+(0) {/Courier cf} 2 16 0 1.00 328 1112 label
+(0) {/Courier cf} 2 16 0 1.00 328 1056 label
+(0) {/Courier cf} 2 16 0 1.00 328 1000 label
+(0) {/Courier cf} 2 16 0 1.00 328 944 label
+(1) {/Courier cf} 2 16 0 1.00 328 832 label
+(1) {/Courier cf} 2 16 0 1.00 328 888 label
+(1) {/Courier cf} 2 16 0 1.00 328 720 label
+(1) {/Courier cf} 2 16 0 1.00 328 776 label
+(0) {/Courier cf} 2 16 0 1.00 328 664 label
+(0) {/Courier cf} 2 16 0 1.00 328 608 label
+(0) {/Courier cf} 2 16 0 1.00 328 552 label
+(0) {/Courier cf} 2 16 0 1.00 328 496 label
+(1) {/Courier cf} 2 16 0 1.00 328 384 label
+(1) {/Courier cf} 2 16 0 1.00 328 440 label
+(1) {/Courier cf} 2 16 0 1.00 328 272 label
+(1) {/Courier cf} 2 16 0 1.00 328 328 label
+(0) {/Courier cf} 2 16 0 1.00 272 1112 label
+(0) {/Courier cf} 2 16 0 1.00 272 1056 label
+(0) {/Courier cf} 2 16 0 1.00 272 1000 label
+(0) {/Courier cf} 2 16 0 1.00 272 944 label
+(0) {/Courier cf} 2 16 0 1.00 272 888 label
+(0) {/Courier cf} 2 16 0 1.00 272 832 label
+(0) {/Courier cf} 2 16 0 1.00 272 776 label
+(0) {/Courier cf} 2 16 0 1.00 272 720 label
+(1) {/Courier cf} 2 16 0 1.00 272 608 label
+(1) {/Courier cf} 2 16 0 1.00 272 664 label
+(1) {/Courier cf} 2 16 0 1.00 272 496 label
+(1) {/Courier cf} 2 16 0 1.00 272 552 label
+(1) {/Courier cf} 2 16 0 1.00 272 384 label
+(1) {/Courier cf} 2 16 0 1.00 272 440 label
+(1) {/Courier cf} 2 16 0 1.00 272 272 label
+(1) {/Courier cf} 2 16 0 1.00 272 328 label
+0 1.00 536 1208 536 1152 592 1152 592 1208 4 polygon
+0 1.00 592 1208 592 1152 648 1152 648 1208 4 polygon
+0 1.00 648 1208 648 1152 704 1152 704 1208 4 polygon
+0 1.00 704 1208 704 1152 760 1152 760 1208 4 polygon
+0 1.00 760 1208 760 1152 816 1152 816 1208 4 polygon
+0 1.00 816 1208 816 1152 872 1152 872 1208 4 polygon
+0 1.00 872 1208 872 1152 928 1152 928 1208 4 polygon
+0 1.00 928 1208 928 1152 984 1152 984 1208 4 polygon
+0 1.00 984 1208 984 1152 1040 1152 1040 1208 4 polygon
+0 1.00 1040 1208 1040 1152 1096 1152 1096 1208 4 polygon
+0 1.00 1096 1208 1096 1152 1152 1152 1152 1208 4 polygon
+0 1.00 1152 1208 1152 1152 1208 1152 1208 1208 4 polygon
+0 1.00 1208 1208 1208 1152 1264 1152 1264 1208 4 polygon
+0 1.00 1264 1208 1264 1152 1320 1152 1320 1208 4 polygon
+0 1.00 1320 1208 1320 1152 1376 1152 1376 1208 4 polygon
+0 1.00 536 1152 536 1096 592 1096 592 1152 4 polygon
+0 1.00 592 1152 592 1096 648 1096 648 1152 4 polygon
+0 1.00 648 1152 648 1096 704 1096 704 1152 4 polygon
+0 1.00 704 1152 704 1096 760 1096 760 1152 4 polygon
+0 1.00 760 1152 760 1096 816 1096 816 1152 4 polygon
+0 1.00 816 1152 816 1096 872 1096 872 1152 4 polygon
+0 1.00 872 1152 872 1096 928 1096 928 1152 4 polygon
+0 1.00 928 1152 928 1096 984 1096 984 1152 4 polygon
+0 1.00 984 1152 984 1096 1040 1096 1040 1152 4 polygon
+0 1.00 1040 1152 1040 1096 1096 1096 1096 1152 4 polygon
+0 1.00 1096 1152 1096 1096 1152 1096 1152 1152 4 polygon
+0 1.00 1152 1152 1152 1096 1208 1096 1208 1152 4 polygon
+0 1.00 1208 1152 1208 1096 1264 1096 1264 1152 4 polygon
+0 1.00 1264 1152 1264 1096 1320 1096 1320 1152 4 polygon
+0 1.00 1320 1152 1320 1096 1376 1096 1376 1152 4 polygon
+0 1.00 536 1096 536 1040 592 1040 592 1096 4 polygon
+0 1.00 592 1096 592 1040 648 1040 648 1096 4 polygon
+0 1.00 648 1096 648 1040 704 1040 704 1096 4 polygon
+0 1.00 704 1096 704 1040 760 1040 760 1096 4 polygon
+0 1.00 760 1096 760 1040 816 1040 816 1096 4 polygon
+0 1.00 816 1096 816 1040 872 1040 872 1096 4 polygon
+0 1.00 872 1096 872 1040 928 1040 928 1096 4 polygon
+0 1.00 928 1096 928 1040 984 1040 984 1096 4 polygon
+0 1.00 984 1096 984 1040 1040 1040 1040 1096 4 polygon
+0 1.00 1040 1096 1040 1040 1096 1040 1096 1096 4 polygon
+0 1.00 1096 1096 1096 1040 1152 1040 1152 1096 4 polygon
+0 1.00 1152 1096 1152 1040 1208 1040 1208 1096 4 polygon
+0 1.00 1208 1096 1208 1040 1264 1040 1264 1096 4 polygon
+0 1.00 1264 1096 1264 1040 1320 1040 1320 1096 4 polygon
+0 1.00 1320 1096 1320 1040 1376 1040 1376 1096 4 polygon
+0 1.00 536 1040 536 984 592 984 592 1040 4 polygon
+0 1.00 592 1040 592 984 648 984 648 1040 4 polygon
+0 1.00 648 1040 648 984 704 984 704 1040 4 polygon
+0 1.00 704 1040 704 984 760 984 760 1040 4 polygon
+0 1.00 760 1040 760 984 816 984 816 1040 4 polygon
+0 1.00 816 1040 816 984 872 984 872 1040 4 polygon
+0 1.00 872 1040 872 984 928 984 928 1040 4 polygon
+0 1.00 928 1040 928 984 984 984 984 1040 4 polygon
+0 1.00 984 1040 984 984 1040 984 1040 1040 4 polygon
+0 1.00 1040 1040 1040 984 1096 984 1096 1040 4 polygon
+0 1.00 1096 1040 1096 984 1152 984 1152 1040 4 polygon
+0 1.00 1152 1040 1152 984 1208 984 1208 1040 4 polygon
+0 1.00 1208 1040 1208 984 1264 984 1264 1040 4 polygon
+0 1.00 1264 1040 1264 984 1320 984 1320 1040 4 polygon
+0 1.00 1320 1040 1320 984 1376 984 1376 1040 4 polygon
+0 1.00 536 984 536 928 592 928 592 984 4 polygon
+0 1.00 592 984 592 928 648 928 648 984 4 polygon
+0 1.00 648 984 648 928 704 928 704 984 4 polygon
+0 1.00 704 984 704 928 760 928 760 984 4 polygon
+0 1.00 760 984 760 928 816 928 816 984 4 polygon
+0 1.00 816 984 816 928 872 928 872 984 4 polygon
+0 1.00 872 984 872 928 928 928 928 984 4 polygon
+0 1.00 928 984 928 928 984 928 984 984 4 polygon
+0 1.00 984 984 984 928 1040 928 1040 984 4 polygon
+0 1.00 1040 984 1040 928 1096 928 1096 984 4 polygon
+0 1.00 1096 984 1096 928 1152 928 1152 984 4 polygon
+0 1.00 1152 984 1152 928 1208 928 1208 984 4 polygon
+0 1.00 1208 984 1208 928 1264 928 1264 984 4 polygon
+0 1.00 1264 984 1264 928 1320 928 1320 984 4 polygon
+0 1.00 1320 984 1320 928 1376 928 1376 984 4 polygon
+0 1.00 536 928 536 872 592 872 592 928 4 polygon
+0 1.00 592 928 592 872 648 872 648 928 4 polygon
+0 1.00 648 928 648 872 704 872 704 928 4 polygon
+0 1.00 704 928 704 872 760 872 760 928 4 polygon
+0 1.00 760 928 760 872 816 872 816 928 4 polygon
+0 1.00 816 928 816 872 872 872 872 928 4 polygon
+0 1.00 872 928 872 872 928 872 928 928 4 polygon
+0 1.00 928 928 928 872 984 872 984 928 4 polygon
+0 1.00 984 928 984 872 1040 872 1040 928 4 polygon
+0 1.00 1040 928 1040 872 1096 872 1096 928 4 polygon
+0 1.00 1096 928 1096 872 1152 872 1152 928 4 polygon
+0 1.00 1152 928 1152 872 1208 872 1208 928 4 polygon
+0 1.00 1208 928 1208 872 1264 872 1264 928 4 polygon
+0 1.00 1264 928 1264 872 1320 872 1320 928 4 polygon
+0 1.00 1320 928 1320 872 1376 872 1376 928 4 polygon
+0 1.00 536 872 536 816 592 816 592 872 4 polygon
+0 1.00 592 872 592 816 648 816 648 872 4 polygon
+0 1.00 648 872 648 816 704 816 704 872 4 polygon
+0 1.00 704 872 704 816 760 816 760 872 4 polygon
+0 1.00 760 872 760 816 816 816 816 872 4 polygon
+0 1.00 816 872 816 816 872 816 872 872 4 polygon
+0 1.00 872 872 872 816 928 816 928 872 4 polygon
+0 1.00 928 872 928 816 984 816 984 872 4 polygon
+0 1.00 984 872 984 816 1040 816 1040 872 4 polygon
+0 1.00 1040 872 1040 816 1096 816 1096 872 4 polygon
+0 1.00 1096 872 1096 816 1152 816 1152 872 4 polygon
+0 1.00 1152 872 1152 816 1208 816 1208 872 4 polygon
+0 1.00 1208 872 1208 816 1264 816 1264 872 4 polygon
+0 1.00 1264 872 1264 816 1320 816 1320 872 4 polygon
+0 1.00 1320 872 1320 816 1376 816 1376 872 4 polygon
+0 1.00 536 816 536 760 592 760 592 816 4 polygon
+0 1.00 592 816 592 760 648 760 648 816 4 polygon
+0 1.00 648 816 648 760 704 760 704 816 4 polygon
+0 1.00 704 816 704 760 760 760 760 816 4 polygon
+0 1.00 760 816 760 760 816 760 816 816 4 polygon
+0 1.00 816 816 816 760 872 760 872 816 4 polygon
+0 1.00 872 816 872 760 928 760 928 816 4 polygon
+0 1.00 928 816 928 760 984 760 984 816 4 polygon
+0 1.00 984 816 984 760 1040 760 1040 816 4 polygon
+0 1.00 1040 816 1040 760 1096 760 1096 816 4 polygon
+0 1.00 1096 816 1096 760 1152 760 1152 816 4 polygon
+0 1.00 1152 816 1152 760 1208 760 1208 816 4 polygon
+0 1.00 1208 816 1208 760 1264 760 1264 816 4 polygon
+0 1.00 1264 816 1264 760 1320 760 1320 816 4 polygon
+0 1.00 1320 816 1320 760 1376 760 1376 816 4 polygon
+0 1.00 536 760 536 704 592 704 592 760 4 polygon
+0 1.00 592 760 592 704 648 704 648 760 4 polygon
+0 1.00 648 760 648 704 704 704 704 760 4 polygon
+0 1.00 704 760 704 704 760 704 760 760 4 polygon
+0 1.00 760 760 760 704 816 704 816 760 4 polygon
+0 1.00 816 760 816 704 872 704 872 760 4 polygon
+0 1.00 872 760 872 704 928 704 928 760 4 polygon
+0 1.00 928 760 928 704 984 704 984 760 4 polygon
+0 1.00 984 760 984 704 1040 704 1040 760 4 polygon
+0 1.00 1040 760 1040 704 1096 704 1096 760 4 polygon
+0 1.00 1096 760 1096 704 1152 704 1152 760 4 polygon
+0 1.00 1152 760 1152 704 1208 704 1208 760 4 polygon
+0 1.00 1208 760 1208 704 1264 704 1264 760 4 polygon
+0 1.00 1264 760 1264 704 1320 704 1320 760 4 polygon
+0 1.00 1320 760 1320 704 1376 704 1376 760 4 polygon
+0 1.00 536 704 536 648 592 648 592 704 4 polygon
+0 1.00 592 704 592 648 648 648 648 704 4 polygon
+0 1.00 648 704 648 648 704 648 704 704 4 polygon
+0 1.00 704 704 704 648 760 648 760 704 4 polygon
+0 1.00 760 704 760 648 816 648 816 704 4 polygon
+0 1.00 816 704 816 648 872 648 872 704 4 polygon
+0 1.00 872 704 872 648 928 648 928 704 4 polygon
+0 1.00 928 704 928 648 984 648 984 704 4 polygon
+0 1.00 984 704 984 648 1040 648 1040 704 4 polygon
+0 1.00 1040 704 1040 648 1096 648 1096 704 4 polygon
+0 1.00 1096 704 1096 648 1152 648 1152 704 4 polygon
+0 1.00 1152 704 1152 648 1208 648 1208 704 4 polygon
+0 1.00 1208 704 1208 648 1264 648 1264 704 4 polygon
+0 1.00 1264 704 1264 648 1320 648 1320 704 4 polygon
+0 1.00 1320 704 1320 648 1376 648 1376 704 4 polygon
+0 1.00 536 648 536 592 592 592 592 648 4 polygon
+0 1.00 592 648 592 592 648 592 648 648 4 polygon
+0 1.00 648 648 648 592 704 592 704 648 4 polygon
+0 1.00 704 648 704 592 760 592 760 648 4 polygon
+0 1.00 760 648 760 592 816 592 816 648 4 polygon
+0 1.00 816 648 816 592 872 592 872 648 4 polygon
+0 1.00 872 648 872 592 928 592 928 648 4 polygon
+0 1.00 928 648 928 592 984 592 984 648 4 polygon
+0 1.00 984 648 984 592 1040 592 1040 648 4 polygon
+0 1.00 1040 648 1040 592 1096 592 1096 648 4 polygon
+0 1.00 1096 648 1096 592 1152 592 1152 648 4 polygon
+0 1.00 1152 648 1152 592 1208 592 1208 648 4 polygon
+0 1.00 1208 648 1208 592 1264 592 1264 648 4 polygon
+0 1.00 1264 648 1264 592 1320 592 1320 648 4 polygon
+0 1.00 1320 648 1320 592 1376 592 1376 648 4 polygon
+0 1.00 536 592 536 536 592 536 592 592 4 polygon
+0 1.00 592 592 592 536 648 536 648 592 4 polygon
+0 1.00 648 592 648 536 704 536 704 592 4 polygon
+0 1.00 704 592 704 536 760 536 760 592 4 polygon
+0 1.00 760 592 760 536 816 536 816 592 4 polygon
+0 1.00 816 592 816 536 872 536 872 592 4 polygon
+0 1.00 872 592 872 536 928 536 928 592 4 polygon
+0 1.00 928 592 928 536 984 536 984 592 4 polygon
+0 1.00 984 592 984 536 1040 536 1040 592 4 polygon
+0 1.00 1040 592 1040 536 1096 536 1096 592 4 polygon
+0 1.00 1096 592 1096 536 1152 536 1152 592 4 polygon
+0 1.00 1152 592 1152 536 1208 536 1208 592 4 polygon
+0 1.00 1208 592 1208 536 1264 536 1264 592 4 polygon
+0 1.00 1264 592 1264 536 1320 536 1320 592 4 polygon
+0 1.00 1320 592 1320 536 1376 536 1376 592 4 polygon
+0 1.00 536 536 536 480 592 480 592 536 4 polygon
+0 1.00 592 536 592 480 648 480 648 536 4 polygon
+0 1.00 648 536 648 480 704 480 704 536 4 polygon
+0 1.00 704 536 704 480 760 480 760 536 4 polygon
+0 1.00 760 536 760 480 816 480 816 536 4 polygon
+0 1.00 816 536 816 480 872 480 872 536 4 polygon
+0 1.00 872 536 872 480 928 480 928 536 4 polygon
+0 1.00 928 536 928 480 984 480 984 536 4 polygon
+0 1.00 984 536 984 480 1040 480 1040 536 4 polygon
+0 1.00 1040 536 1040 480 1096 480 1096 536 4 polygon
+0 1.00 1096 536 1096 480 1152 480 1152 536 4 polygon
+0 1.00 1152 536 1152 480 1208 480 1208 536 4 polygon
+0 1.00 1208 536 1208 480 1264 480 1264 536 4 polygon
+0 1.00 1264 536 1264 480 1320 480 1320 536 4 polygon
+0 1.00 1320 536 1320 480 1376 480 1376 536 4 polygon
+0 1.00 536 480 536 424 592 424 592 480 4 polygon
+0 1.00 592 480 592 424 648 424 648 480 4 polygon
+0 1.00 648 480 648 424 704 424 704 480 4 polygon
+0 1.00 704 480 704 424 760 424 760 480 4 polygon
+0 1.00 760 480 760 424 816 424 816 480 4 polygon
+0 1.00 816 480 816 424 872 424 872 480 4 polygon
+0 1.00 872 480 872 424 928 424 928 480 4 polygon
+0 1.00 928 480 928 424 984 424 984 480 4 polygon
+0 1.00 984 480 984 424 1040 424 1040 480 4 polygon
+0 1.00 1040 480 1040 424 1096 424 1096 480 4 polygon
+0 1.00 1096 480 1096 424 1152 424 1152 480 4 polygon
+0 1.00 1152 480 1152 424 1208 424 1208 480 4 polygon
+0 1.00 1208 480 1208 424 1264 424 1264 480 4 polygon
+0 1.00 1264 480 1264 424 1320 424 1320 480 4 polygon
+0 1.00 1320 480 1320 424 1376 424 1376 480 4 polygon
+0 1.00 536 424 536 368 592 368 592 424 4 polygon
+0 1.00 592 424 592 368 648 368 648 424 4 polygon
+0 1.00 648 424 648 368 704 368 704 424 4 polygon
+0 1.00 704 424 704 368 760 368 760 424 4 polygon
+0 1.00 760 424 760 368 816 368 816 424 4 polygon
+0 1.00 816 424 816 368 872 368 872 424 4 polygon
+0 1.00 872 424 872 368 928 368 928 424 4 polygon
+0 1.00 928 424 928 368 984 368 984 424 4 polygon
+0 1.00 984 424 984 368 1040 368 1040 424 4 polygon
+0 1.00 1040 424 1040 368 1096 368 1096 424 4 polygon
+0 1.00 1096 424 1096 368 1152 368 1152 424 4 polygon
+0 1.00 1152 424 1152 368 1208 368 1208 424 4 polygon
+0 1.00 1208 424 1208 368 1264 368 1264 424 4 polygon
+0 1.00 1264 424 1264 368 1320 368 1320 424 4 polygon
+0 1.00 1320 424 1320 368 1376 368 1376 424 4 polygon
+0 1.00 536 368 536 312 592 312 592 368 4 polygon
+0 1.00 592 368 592 312 648 312 648 368 4 polygon
+0 1.00 648 368 648 312 704 312 704 368 4 polygon
+0 1.00 704 368 704 312 760 312 760 368 4 polygon
+0 1.00 760 368 760 312 816 312 816 368 4 polygon
+0 1.00 816 368 816 312 872 312 872 368 4 polygon
+0 1.00 872 368 872 312 928 312 928 368 4 polygon
+0 1.00 928 368 928 312 984 312 984 368 4 polygon
+0 1.00 984 368 984 312 1040 312 1040 368 4 polygon
+0 1.00 1040 368 1040 312 1096 312 1096 368 4 polygon
+0 1.00 1096 368 1096 312 1152 312 1152 368 4 polygon
+0 1.00 1152 368 1152 312 1208 312 1208 368 4 polygon
+0 1.00 1208 368 1208 312 1264 312 1264 368 4 polygon
+0 1.00 1264 368 1264 312 1320 312 1320 368 4 polygon
+0 1.00 1320 368 1320 312 1376 312 1376 368 4 polygon
+0 1.00 536 312 536 256 592 256 592 312 4 polygon
+0 1.00 592 312 592 256 648 256 648 312 4 polygon
+0 1.00 648 312 648 256 704 256 704 312 4 polygon
+0 1.00 704 312 704 256 760 256 760 312 4 polygon
+0 1.00 760 312 760 256 816 256 816 312 4 polygon
+0 1.00 816 312 816 256 872 256 872 312 4 polygon
+0 1.00 872 312 872 256 928 256 928 312 4 polygon
+0 1.00 928 312 928 256 984 256 984 312 4 polygon
+0 1.00 984 312 984 256 1040 256 1040 312 4 polygon
+0 1.00 1040 312 1040 256 1096 256 1096 312 4 polygon
+0 1.00 1096 312 1096 256 1152 256 1152 312 4 polygon
+0 1.00 1152 312 1152 256 1208 256 1208 312 4 polygon
+0 1.00 1208 312 1208 256 1264 256 1264 312 4 polygon
+0 1.00 1264 312 1264 256 1320 256 1320 312 4 polygon
+0 1.00 1320 312 1320 256 1376 256 1376 312 4 polygon
+(1) {/Helvetica cf} 2 16 0 1.00 552 1168 label
+(2) {/Helvetica cf} 2 16 0 1.00 608 1168 label
+(3) {/Helvetica cf} 2 16 0 1.00 664 1168 label
+(4) {/Helvetica cf} 2 16 0 1.00 720 1168 label
+(5) {/Helvetica cf} 2 16 0 1.00 776 1168 label
+(6) {/Helvetica cf} 2 16 0 1.00 832 1168 label
+(7) {/Helvetica cf} 2 16 0 1.00 888 1168 label
+(8) {/Helvetica cf} 2 16 0 1.00 944 1168 label
+(9) {/Helvetica cf} 2 16 0 1.00 1000 1168 label
+(10) {/Helvetica cf} 2 16 0 1.00 1048 1168 label
+(11) {/Helvetica cf} 2 16 0 1.00 1104 1168 label
+(12) {/Helvetica cf} 2 16 0 1.00 1160 1168 label
+(13) {/Helvetica cf} 2 16 0 1.00 1216 1168 label
+(14) {/Helvetica cf} 2 16 0 1.00 1272 1168 label
+(15) {/Helvetica cf} 2 16 0 1.00 1328 1168 label
+(0) {/Courier cf} 2 16 0 1.00 720 1112 label
+(0) {/Courier cf} 2 16 0 1.00 664 1112 label
+(0) {/Courier cf} 2 16 0 1.00 608 1112 label
+(0) {/Courier cf} 2 16 0 1.00 552 1112 label
+(0) {/Courier cf} 2 16 0 1.00 944 1112 label
+(0) {/Courier cf} 2 16 0 1.00 888 1112 label
+(0) {/Courier cf} 2 16 0 1.00 832 1112 label
+(0) {/Courier cf} 2 16 0 1.00 776 1112 label
+(0) {/Courier cf} 2 16 0 1.00 1168 1112 label
+(0) {/Courier cf} 2 16 0 1.00 1112 1112 label
+(0) {/Courier cf} 2 16 0 1.00 1056 1112 label
+(0) {/Courier cf} 2 16 0 1.00 1000 1112 label
+(0) {/Courier cf} 2 16 0 1.00 1336 1112 label
+(0) {/Courier cf} 2 16 0 1.00 1280 1112 label
+(0) {/Courier cf} 2 16 0 1.00 1224 1112 label
+(1) {/Courier cf} 2 16 0 1.00 552 1056 label
+(0) {/Courier cf} 2 16 0 1.00 720 1056 label
+(0) {/Courier cf} 2 16 0 1.00 664 1056 label
+(0) {/Courier cf} 2 16 0 1.00 608 1056 label
+(0) {/Courier cf} 2 16 0 1.00 944 1056 label
+(0) {/Courier cf} 2 16 0 1.00 888 1056 label
+(0) {/Courier cf} 2 16 0 1.00 832 1056 label
+(0) {/Courier cf} 2 16 0 1.00 776 1056 label
+(0) {/Courier cf} 2 16 0 1.00 1168 1056 label
+(0) {/Courier cf} 2 16 0 1.00 1112 1056 label
+(0) {/Courier cf} 2 16 0 1.00 1056 1056 label
+(0) {/Courier cf} 2 16 0 1.00 1000 1056 label
+(0) {/Courier cf} 2 16 0 1.00 1336 1056 label
+(0) {/Courier cf} 2 16 0 1.00 1280 1056 label
+(0) {/Courier cf} 2 16 0 1.00 1224 1056 label
+(1) {/Courier cf} 2 16 0 1.00 608 1000 label
+(1) {/Courier cf} 2 16 0 1.00 664 944 label
+(1) {/Courier cf} 2 16 0 1.00 720 888 label
+(1) {/Courier cf} 2 16 0 1.00 776 832 label
+(1) {/Courier cf} 2 16 0 1.00 832 776 label
+(1) {/Courier cf} 2 16 0 1.00 888 720 label
+(1) {/Courier cf} 2 16 0 1.00 944 664 label
+(1) {/Courier cf} 2 16 0 1.00 1000 608 label
+(1) {/Courier cf} 2 16 0 1.00 1056 552 label
+(1) {/Courier cf} 2 16 0 1.00 1112 496 label
+(1) {/Courier cf} 2 16 0 1.00 1168 440 label
+(1) {/Courier cf} 2 16 0 1.00 1224 384 label
+(1) {/Courier cf} 2 16 0 1.00 1280 328 label
+(1) {/Courier cf} 2 16 0 1.00 1336 272 label
+(0) {/Courier cf} 2 16 0 1.00 720 1000 label
+(0) {/Courier cf} 2 16 0 1.00 664 1000 label
+(0) {/Courier cf} 2 16 0 1.00 944 1000 label
+(0) {/Courier cf} 2 16 0 1.00 888 1000 label
+(0) {/Courier cf} 2 16 0 1.00 832 1000 label
+(0) {/Courier cf} 2 16 0 1.00 776 1000 label
+(0) {/Courier cf} 2 16 0 1.00 1168 1000 label
+(0) {/Courier cf} 2 16 0 1.00 1112 1000 label
+(0) {/Courier cf} 2 16 0 1.00 1056 1000 label
+(0) {/Courier cf} 2 16 0 1.00 1000 1000 label
+(0) {/Courier cf} 2 16 0 1.00 1336 1000 label
+(0) {/Courier cf} 2 16 0 1.00 1280 1000 label
+(0) {/Courier cf} 2 16 0 1.00 1224 1000 label
+(0) {/Courier cf} 2 16 0 1.00 720 944 label
+(0) {/Courier cf} 2 16 0 1.00 944 944 label
+(0) {/Courier cf} 2 16 0 1.00 888 944 label
+(0) {/Courier cf} 2 16 0 1.00 832 944 label
+(0) {/Courier cf} 2 16 0 1.00 776 944 label
+(0) {/Courier cf} 2 16 0 1.00 1168 944 label
+(0) {/Courier cf} 2 16 0 1.00 1112 944 label
+(0) {/Courier cf} 2 16 0 1.00 1056 944 label
+(0) {/Courier cf} 2 16 0 1.00 1000 944 label
+(0) {/Courier cf} 2 16 0 1.00 1336 944 label
+(0) {/Courier cf} 2 16 0 1.00 1280 944 label
+(0) {/Courier cf} 2 16 0 1.00 1224 944 label
+(0) {/Courier cf} 2 16 0 1.00 944 888 label
+(0) {/Courier cf} 2 16 0 1.00 888 888 label
+(0) {/Courier cf} 2 16 0 1.00 832 888 label
+(0) {/Courier cf} 2 16 0 1.00 776 888 label
+(0) {/Courier cf} 2 16 0 1.00 1168 888 label
+(0) {/Courier cf} 2 16 0 1.00 1112 888 label
+(0) {/Courier cf} 2 16 0 1.00 1056 888 label
+(0) {/Courier cf} 2 16 0 1.00 1000 888 label
+(0) {/Courier cf} 2 16 0 1.00 1336 888 label
+(0) {/Courier cf} 2 16 0 1.00 1280 888 label
+(0) {/Courier cf} 2 16 0 1.00 1224 888 label
+(0) {/Courier cf} 2 16 0 1.00 944 832 label
+(0) {/Courier cf} 2 16 0 1.00 888 832 label
+(0) {/Courier cf} 2 16 0 1.00 832 832 label
+(0) {/Courier cf} 2 16 0 1.00 1168 832 label
+(0) {/Courier cf} 2 16 0 1.00 1112 832 label
+(0) {/Courier cf} 2 16 0 1.00 1056 832 label
+(0) {/Courier cf} 2 16 0 1.00 1000 832 label
+(0) {/Courier cf} 2 16 0 1.00 1336 832 label
+(0) {/Courier cf} 2 16 0 1.00 1280 832 label
+(0) {/Courier cf} 2 16 0 1.00 1224 832 label
+(0) {/Courier cf} 2 16 0 1.00 944 776 label
+(0) {/Courier cf} 2 16 0 1.00 888 776 label
+(0) {/Courier cf} 2 16 0 1.00 1168 776 label
+(0) {/Courier cf} 2 16 0 1.00 1112 776 label
+(0) {/Courier cf} 2 16 0 1.00 1056 776 label
+(0) {/Courier cf} 2 16 0 1.00 1000 776 label
+(0) {/Courier cf} 2 16 0 1.00 1336 776 label
+(0) {/Courier cf} 2 16 0 1.00 1280 776 label
+(0) {/Courier cf} 2 16 0 1.00 1224 776 label
+(0) {/Courier cf} 2 16 0 1.00 944 720 label
+(0) {/Courier cf} 2 16 0 1.00 1168 720 label
+(0) {/Courier cf} 2 16 0 1.00 1112 720 label
+(0) {/Courier cf} 2 16 0 1.00 1056 720 label
+(0) {/Courier cf} 2 16 0 1.00 1000 720 label
+(0) {/Courier cf} 2 16 0 1.00 1336 720 label
+(0) {/Courier cf} 2 16 0 1.00 1280 720 label
+(0) {/Courier cf} 2 16 0 1.00 1224 720 label
+(0) {/Courier cf} 2 16 0 1.00 1168 664 label
+(0) {/Courier cf} 2 16 0 1.00 1112 664 label
+(0) {/Courier cf} 2 16 0 1.00 1056 664 label
+(0) {/Courier cf} 2 16 0 1.00 1000 664 label
+(0) {/Courier cf} 2 16 0 1.00 1336 664 label
+(0) {/Courier cf} 2 16 0 1.00 1280 664 label
+(0) {/Courier cf} 2 16 0 1.00 1224 664 label
+(0) {/Courier cf} 2 16 0 1.00 1168 608 label
+(0) {/Courier cf} 2 16 0 1.00 1112 608 label
+(0) {/Courier cf} 2 16 0 1.00 1056 608 label
+(0) {/Courier cf} 2 16 0 1.00 1336 608 label
+(0) {/Courier cf} 2 16 0 1.00 1280 608 label
+(0) {/Courier cf} 2 16 0 1.00 1224 608 label
+(0) {/Courier cf} 2 16 0 1.00 1168 552 label
+(0) {/Courier cf} 2 16 0 1.00 1112 552 label
+(0) {/Courier cf} 2 16 0 1.00 1336 552 label
+(0) {/Courier cf} 2 16 0 1.00 1280 552 label
+(0) {/Courier cf} 2 16 0 1.00 1224 552 label
+1 3.00 480 1208 480 256 2 polygon
+(0) {/Courier cf} 2 16 0 1.00 1168 496 label
+(0) {/Courier cf} 2 16 0 1.00 1336 496 label
+(0) {/Courier cf} 2 16 0 1.00 1280 496 label
+(0) {/Courier cf} 2 16 0 1.00 1224 496 label
+(0) {/Courier cf} 2 16 0 1.00 1336 440 label
+(0) {/Courier cf} 2 16 0 1.00 1280 440 label
+(0) {/Courier cf} 2 16 0 1.00 1224 440 label
+(0) {/Courier cf} 2 16 0 1.00 1336 384 label
+(0) {/Courier cf} 2 16 0 1.00 1280 384 label
+(0) {/Courier cf} 2 16 0 1.00 1336 328 label
+(0) {/Courier cf} 2 16 0 1.00 552 1000 label
+(0) {/Courier cf} 2 16 0 1.00 608 944 label
+(0) {/Courier cf} 2 16 0 1.00 552 944 label
+(0) {/Courier cf} 2 16 0 1.00 664 888 label
+(0) {/Courier cf} 2 16 0 1.00 608 888 label
+(0) {/Courier cf} 2 16 0 1.00 552 888 label
+(0) {/Courier cf} 2 16 0 1.00 552 832 label
+(0) {/Courier cf} 2 16 0 1.00 720 832 label
+(0) {/Courier cf} 2 16 0 1.00 664 832 label
+(0) {/Courier cf} 2 16 0 1.00 608 832 label
+(0) {/Courier cf} 2 16 0 1.00 664 776 label
+(0) {/Courier cf} 2 16 0 1.00 608 776 label
+(0) {/Courier cf} 2 16 0 1.00 552 776 label
+(0) {/Courier cf} 2 16 0 1.00 776 776 label
+(0) {/Courier cf} 2 16 0 1.00 720 776 label
+(0) {/Courier cf} 2 16 0 1.00 608 720 label
+(0) {/Courier cf} 2 16 0 1.00 552 720 label
+(0) {/Courier cf} 2 16 0 1.00 832 720 label
+(0) {/Courier cf} 2 16 0 1.00 776 720 label
+(0) {/Courier cf} 2 16 0 1.00 720 720 label
+(0) {/Courier cf} 2 16 0 1.00 664 720 label
+(0) {/Courier cf} 2 16 0 1.00 552 664 label
+(0) {/Courier cf} 2 16 0 1.00 776 664 label
+(0) {/Courier cf} 2 16 0 1.00 720 664 label
+(0) {/Courier cf} 2 16 0 1.00 664 664 label
+(0) {/Courier cf} 2 16 0 1.00 608 664 label
+(0) {/Courier cf} 2 16 0 1.00 888 664 label
+(0) {/Courier cf} 2 16 0 1.00 832 664 label
+(0) {/Courier cf} 2 16 0 1.00 552 608 label
+(0) {/Courier cf} 2 16 0 1.00 776 608 label
+(0) {/Courier cf} 2 16 0 1.00 720 608 label
+(0) {/Courier cf} 2 16 0 1.00 664 608 label
+(0) {/Courier cf} 2 16 0 1.00 608 608 label
+(0) {/Courier cf} 2 16 0 1.00 888 608 label
+(0) {/Courier cf} 2 16 0 1.00 832 608 label
+(0) {/Courier cf} 2 16 0 1.00 552 552 label
+(0) {/Courier cf} 2 16 0 1.00 776 552 label
+(0) {/Courier cf} 2 16 0 1.00 720 552 label
+(0) {/Courier cf} 2 16 0 1.00 664 552 label
+(0) {/Courier cf} 2 16 0 1.00 608 552 label
+(0) {/Courier cf} 2 16 0 1.00 888 552 label
+(0) {/Courier cf} 2 16 0 1.00 832 552 label
+(0) {/Courier cf} 2 16 0 1.00 552 496 label
+(0) {/Courier cf} 2 16 0 1.00 776 496 label
+(0) {/Courier cf} 2 16 0 1.00 720 496 label
+(0) {/Courier cf} 2 16 0 1.00 664 496 label
+(0) {/Courier cf} 2 16 0 1.00 608 496 label
+(0) {/Courier cf} 2 16 0 1.00 888 496 label
+(0) {/Courier cf} 2 16 0 1.00 832 496 label
+(0) {/Courier cf} 2 16 0 1.00 552 440 label
+(0) {/Courier cf} 2 16 0 1.00 776 440 label
+(0) {/Courier cf} 2 16 0 1.00 720 440 label
+(0) {/Courier cf} 2 16 0 1.00 664 440 label
+(0) {/Courier cf} 2 16 0 1.00 608 440 label
+(0) {/Courier cf} 2 16 0 1.00 888 440 label
+(0) {/Courier cf} 2 16 0 1.00 832 440 label
+(0) {/Courier cf} 2 16 0 1.00 552 384 label
+(0) {/Courier cf} 2 16 0 1.00 776 384 label
+(0) {/Courier cf} 2 16 0 1.00 720 384 label
+(0) {/Courier cf} 2 16 0 1.00 664 384 label
+(0) {/Courier cf} 2 16 0 1.00 608 384 label
+(0) {/Courier cf} 2 16 0 1.00 888 384 label
+(0) {/Courier cf} 2 16 0 1.00 832 384 label
+(0) {/Courier cf} 2 16 0 1.00 552 328 label
+(0) {/Courier cf} 2 16 0 1.00 776 328 label
+(0) {/Courier cf} 2 16 0 1.00 720 328 label
+(0) {/Courier cf} 2 16 0 1.00 664 328 label
+(0) {/Courier cf} 2 16 0 1.00 608 328 label
+(0) {/Courier cf} 2 16 0 1.00 888 328 label
+(0) {/Courier cf} 2 16 0 1.00 832 328 label
+(0) {/Courier cf} 2 16 0 1.00 552 272 label
+(0) {/Courier cf} 2 16 0 1.00 776 272 label
+(0) {/Courier cf} 2 16 0 1.00 720 272 label
+(0) {/Courier cf} 2 16 0 1.00 664 272 label
+(0) {/Courier cf} 2 16 0 1.00 608 272 label
+(0) {/Courier cf} 2 16 0 1.00 888 272 label
+(0) {/Courier cf} 2 16 0 1.00 832 272 label
+(0) {/Courier cf} 2 16 0 1.00 944 272 label
+(0) {/Courier cf} 2 16 0 1.00 1168 272 label
+(0) {/Courier cf} 2 16 0 1.00 1112 272 label
+(0) {/Courier cf} 2 16 0 1.00 1056 272 label
+(0) {/Courier cf} 2 16 0 1.00 1000 272 label
+(0) {/Courier cf} 2 16 0 1.00 1280 272 label
+(0) {/Courier cf} 2 16 0 1.00 1224 272 label
+(0) {/Courier cf} 2 16 0 1.00 1112 328 label
+(0) {/Courier cf} 2 16 0 1.00 1056 328 label
+(0) {/Courier cf} 2 16 0 1.00 1000 328 label
+(0) {/Courier cf} 2 16 0 1.00 944 328 label
+(0) {/Courier cf} 2 16 0 1.00 1224 328 label
+(0) {/Courier cf} 2 16 0 1.00 1168 328 label
+(0) {/Courier cf} 2 16 0 1.00 1056 384 label
+(0) {/Courier cf} 2 16 0 1.00 1000 384 label
+(0) {/Courier cf} 2 16 0 1.00 944 384 label
+(0) {/Courier cf} 2 16 0 1.00 1168 384 label
+(0) {/Courier cf} 2 16 0 1.00 1112 384 label
+(0) {/Courier cf} 2 16 0 1.00 1000 440 label
+(0) {/Courier cf} 2 16 0 1.00 944 440 label
+(0) {/Courier cf} 2 16 0 1.00 1112 440 label
+(0) {/Courier cf} 2 16 0 1.00 1056 440 label
+(0) {/Courier cf} 2 16 0 1.00 944 496 label
+(0) {/Courier cf} 2 16 0 1.00 1056 496 label
+(0) {/Courier cf} 2 16 0 1.00 1000 496 label
+(0) {/Courier cf} 2 16 0 1.00 1000 552 label
+(0) {/Courier cf} 2 16 0 1.00 944 552 label
+(0) {/Courier cf} 2 16 0 1.00 944 608 label
+0 1.00 480 1208 480 1152 536 1152 536 1208 4 polygon
+0 1.00 480 1152 480 1096 536 1096 536 1152 4 polygon
+0 1.00 480 1096 480 1040 536 1040 536 1096 4 polygon
+0 1.00 480 1040 480 984 536 984 536 1040 4 polygon
+0 1.00 480 984 480 928 536 928 536 984 4 polygon
+0 1.00 480 928 480 872 536 872 536 928 4 polygon
+0 1.00 480 872 480 816 536 816 536 872 4 polygon
+0 1.00 480 816 480 760 536 760 536 816 4 polygon
+0 1.00 480 760 480 704 536 704 536 760 4 polygon
+0 1.00 480 704 480 648 536 648 536 704 4 polygon
+0 1.00 480 648 480 592 536 592 536 648 4 polygon
+0 1.00 480 592 480 536 536 536 536 592 4 polygon
+0 1.00 480 536 480 480 536 480 536 536 4 polygon
+0 1.00 480 480 480 424 536 424 536 480 4 polygon
+0 1.00 480 424 480 368 536 368 536 424 4 polygon
+0 1.00 480 368 480 312 536 312 536 368 4 polygon
+0 1.00 480 312 480 256 536 256 536 312 4 polygon
+(1) {/Courier cf} 2 16 0 1.00 496 1112 label
+(0) {/Helvetica cf} 2 16 0 1.00 496 1168 label
+(0) {/Courier cf} 2 16 0 1.00 496 1000 label
+(0) {/Courier cf} 2 16 0 1.00 496 944 label
+(0) {/Courier cf} 2 16 0 1.00 496 888 label
+(0) {/Courier cf} 2 16 0 1.00 496 832 label
+(0) {/Courier cf} 2 16 0 1.00 496 776 label
+(0) {/Courier cf} 2 16 0 1.00 496 720 label
+(0) {/Courier cf} 2 16 0 1.00 496 664 label
+(0) {/Courier cf} 2 16 0 1.00 496 608 label
+(0) {/Courier cf} 2 16 0 1.00 496 552 label
+(0) {/Courier cf} 2 16 0 1.00 496 496 label
+(0) {/Courier cf} 2 16 0 1.00 496 440 label
+(0) {/Courier cf} 2 16 0 1.00 496 384 label
+(0) {/Courier cf} 2 16 0 1.00 496 328 label
+(0) {/Courier cf} 2 16 0 1.00 496 272 label
+(0) {/Courier cf} 2 16 0 1.00 496 1056 label
+pgsave restore showpage
+
+%%Trailer
+XCIRCsave restore
+%%EOF

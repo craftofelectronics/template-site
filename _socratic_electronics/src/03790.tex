@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Identify what type of passive filter circuit this is, and then sketch a schematic diagram for an equivalent circuit using a switched-capacitor network instead of a resistor:
+
+$$\epsfbox{03790x01.eps}$$
+
+Also, write an equation describing the cutoff frequency in terms of switching frequency and capacitor values.
+
+\underbar{file 03790}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This is a {\it lowpass} filter circuit:
+
+$$\epsfbox{03790x02.eps}$$
+
+$$f_{-3dB} = {{f_{switch} C_1} \over {2 \pi C_2}}$$
+
+\vskip 10pt
+
+Note: in order for this circuit to be practical, $f_{switch} >> f_{signal}$.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question asks students to substitute a switched capacitor network for the fixed resistor in the original filter circuit.  Similarly, algebraic substitution is required to derive the equation for cutoff frequency.
+
+%INDEX% Switched capacitor network, used in passive filter circuit
+
+%(END_NOTES)
+
+

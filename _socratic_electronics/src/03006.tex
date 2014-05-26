@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A variety of practical electronic applications require {\it multiplexing}, where several input signals are individually selected, one at a time but very rapidly, to be communicated through a single channel.  Telephony systems use this technique to "concentrate" multiple voice conversations over a single wire pair, and most analog dual-trace oscilloscopes use this technique to allow a single-gun CRT to display more than one signal trace on the screen at a time.
+
+In order to rapidly select (or switch) analog signals in these multiplexing applications, we need some form of semiconductor on/off switch capable of fast switching time, low pass-through ("on" state) impedance, and high blocking ("off" state) impedance.  Thankfully, there is such a device commonly and inexpensively produced, called a {\it CMOS bilateral switch}:
+
+$$\epsfbox{03006x01.eps}$$
+
+This hybrid analog/digital device uses digital logic signals (high/low) to activate the gates of CMOS transistor assemblies to switch analog signals on and off.  It is like having four low-current solid-state relays in a single integrated circuit.  When the control line is made "high" (standard CMOS logic level), the respective switch goes into its conductive ("on") state.  When the control line is made "low," the switch turns off.  Because it is MOSFETs we are turning on and off, the control lines draw negligible current (just like CMOS logic gate inputs).
+
+If we are to use such bilateral switches to multiplex analog signals along a common signal line, though, we must add some accessory components to control which switch (out of the four) is active at any given time.  Take for instance this circuit where we use four bilateral switches to multiplex the voltage signals from four accelerometers (measuring acceleration on a vibration-testing jig):
+
+$$\epsfbox{03006x02.eps}$$
+
+Identify the necessary "mystery device" shown in the schematic, which allows a binary input ($S_0$ and $S_1$ with four combinations of high/low states: 00, 01, 10, and 11) to activate just {\it one} bilateral switch at a time.
+
+\underbar{file 03006}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+This "mystery device" is a 2-line to 4-line binary {\it decoder}.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question serves a few purposes: to introduce students to the 4066 quad bilateral switch, to showcase a practical application for analog multiplexing, and to review a previous subject (decoders).
+
+%INDEX% 4066 CMOS quad bilateral switch IC
+%INDEX% Bilateral switch circuit, CMOS
+%INDEX% Multiplexer, analog
+
+%(END_NOTES)
+
+

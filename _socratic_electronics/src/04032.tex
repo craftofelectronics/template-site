@@ -1,0 +1,33 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose a student builds this circuit, using 10 M$\Omega$ resistors for $R_1$ and $R_2$, and a 22 $\mu$F capacitor for $C_1$, and finds that he must frequently adjust the potentiometer to keep the circuit at a reasonable level of sensitivity.  A fellow student has encountered and overcome this same problem, and offers to fix the first student's circuit by replacing the 22 $\mu$F capacitor with something much smaller: a 0.001 $\mu$F (1 nF) capacitor.
+
+Now, the modified circuit responds predictably.  No longer must the student frequently adjust the potentiometer to achieve the desired sensitivity.  Explain why a change in capacitance made such a difference, and what the problem was in the original circuit (with the much larger capacitor).
+
+\underbar{file 04032}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Here's a hint: calculate the time constant ($\tau$) for the RC network formed by $R_1$, $R_2$, and $C_1$.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In order to understand the problem, students must recognize the function of this RC network: to filter out the DC bias voltage created by ambient light falling on the LED array, and to replace that changing bias with a fixed bias voltage equal to $1 \over 2$ $V_{\hbox{supply}}$.  Once this purpose is grasped, the problem of a slow time constant should be much more apparent.
+
+%(END_NOTES)
+
+

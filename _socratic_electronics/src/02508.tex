@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Many different types of sensors work on the principle of a variable resistance representing a different physical quantity.  One such sensor is the common fuel level sensor used in automotive, marine, and industrial fuel storage applications:
+
+$$\epsfbox{02508x02.eps}$$
+
+As the fuel level in the tank changes, the float position will change, changing the sensor's resistance.  This resistance change is detected by an electric gauge (a special type of meter), which then provides visual indication of fuel level in the tank.
+
+We must have some accurate way of measuring electrical resistance in order for this scheme to work.  One common technique for doing this is to pass a constant current through the sensor resistance and then measure the voltage dropped across it.  Since current mirror circuits function as current regulators, and therefore may be used as current sources if supplied with an external voltage, we could use a current mirror to force constant current through the fuel level sensor:
+
+$$\epsfbox{02508x01.eps}$$
+
+One problem with the circuit shown is that the sensor current will change as the supply voltage (+V) changes.  This may be important to us, because the DC system voltage on an automobile may not be very stable, and this could lead to inaccuracies in fuel level measurement.
+
+Figure out a way we could use a zener diode to stabilize the voltage in this current mirror circuit so that supply voltage changes would have minimal effect on the amount of current through the variable-resistance sensor.
+
+\underbar{file 02508}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{02508x03.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Students may try to implement a voltage regulation system for the entire circuit, sensor and everything, but this is unnecessary.  Using a zener diode to regulate voltage for the right-hand portion of the current mirror circuit so that the right-hand transistor (acting as diode) receives constant current is all that is necessary.  The left-hand transistor should faithfully regulate current through the sensor despite changes in sensor resistance {\it and} changes in supply voltage.
+
+%INDEX% Current mirror circuit, practical application for
+
+%(END_NOTES)
+
+

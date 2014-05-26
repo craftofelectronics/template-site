@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A student decides to build a motor start/stop control circuit based on the logic of a NOR gate S-R latch, rather than the usual simple "seal-in" contact circuit:
+
+$$\epsfbox{01379x01.eps}$$
+
+The circuit works fine, except that sometimes the motor starts all by itself when the circuit is first powered up!  Other times, the motor remains off after power-up.  In other words, the power-up state of this circuit is unpredictable.
+
+Explain why this is so, and what might be done to prevent the motor from powering up in the "run" state.
+
+\underbar{file 01379}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+What you have here is something called a {\it race condition}, where two or more relays "race" each other to attain mutually exclusive states.  This is a difficult problem to fix, but the solution (and yes, there is more than one valid solution!) invariably involves "rigging" the race so that one of the relays is guaranteed to "win."
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Analyze the power-up states of this circuit with your students, and the "race" condition will become apparent.  Such problems can be very difficult to locate and fix in real life, so it is good to expose students to them early in their education, and in contexts where the circuitry is not too confusing.  
+
+%(END_NOTES)
+
+

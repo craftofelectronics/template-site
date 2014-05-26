@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{01623x01.eps}$$
+
+The $V_{supply}$ (min) parameter is the minimum voltage setting that $V_{supply}$ may be adjusted to with the regulator circuit maintaining constant load voltage at $R_{load}$.  $V_{supply}$ (max) is the maximum voltage that $V_{supply}$ may be adjusted to without exceeding the zener diode's power rating.  $V_{load}$ (nominal) is simply the regulated voltage output of the circuit under normal conditions.
+
+\underbar{file 01623}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Use a variable-voltage, regulated power supply to supply any amount of DC voltage below 30 volts.  Specify standard load resistor values, all between 1 k$\Omega$ and 100 k$\Omega$ (1k5, 2k2, 2k7, 3k3, 4k7, 5k1, 6k8, 10k, 22k, 33k, 39k 47k, 68k, etc.), and let the students determine the proper resistance values for their series dropping resistors.
+
+I recommend specifying a series resistor value ($R_{series}$) high enough that there will little danger in damaging the zener diode due to excessive supply voltage, but also low enough so that the normal operating current of the zener diode is great enough for it to drop its rated voltage.  If $R_{series}$ is too large, the zener diode's current will be too small, resulting in lower than expected voltage drop and poorer regulation (operating near the flatter end of the characteristic curve).
+
+Values I have used with success are as follows:
+
+\medskip
+\goodbreak
+\item{$\bullet$} $R_{series}$ = 1 k$\Omega$
+\item{$\bullet$} $R_{load}$ = 10 k$\Omega$
+\item{$\bullet$} $V_{zener}$ = 5.1 volts (diode part number 1N4733)
+\item{$\bullet$} $V_{supply}$ = 12 volts
+\medskip
+
+Measuring the minimum supply voltage is a difficult thing to do, because students must look for a point where the output voltage begins to directly follow the input voltage (going down) instead of holding relatively stable.  One interesting way to measure the rate of output voltage change is to set a DMM on the {\it AC} voltage setting, then use that to measure $V_{load}$ as $V_{supply}$ is decreased.  While turning the voltage adjustment knob on $V_{supply}$ at a steady rate, students will look for an increase in AC voltage (a greater rate of change) at $V_{load}$.  Essentially, what students are looking for is the point where ${dV_{load} \over dV_{supply}}$ begins to increase.
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (Zener diode voltage regulator)
+
+%(END_NOTES)
+
+

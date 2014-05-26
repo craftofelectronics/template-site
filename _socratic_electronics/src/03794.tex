@@ -1,0 +1,63 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how the operation of this active filter circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03794x01.eps}$$
+
+\medskip
+\item{$\bullet$} Resistor $R_1$ fails open:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_2$ fails open:
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_1$ fails open:
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across resistor $R_1$:
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across resistor $R_2$:
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across capacitor $C_1$:
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03794}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Resistor $R_1$ fails open: {\it No output signal at all.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_2$ fails open: {\it Output saturates (either positive or negative) when there is any DC voltage input to the circuit.}
+\vskip 5pt
+\item{$\bullet$} Capacitor $C_1$ fails open: {\it No filtering action at all, merely operates as a fixed-gain amplifier.}
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across resistor $R_1$: {\it Output signal is always a square wave.} 
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across resistor $R_2$: {\it No output signal at all.}
+\vskip 5pt
+\item{$\bullet$} Solder bridge (short) across capacitor $C_1$: {\it No output signal at all.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in active filter circuit
+
+%(END_NOTES)
+
+

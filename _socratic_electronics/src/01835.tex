@@ -1,0 +1,96 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the total impedance offered by these two capacitors to a sinusoidal signal with a frequency of 900 Hz:
+
+$$\epsfbox{01835x01.eps}$$
+
+Show your work using three different problem-solving strategies:
+
+\medskip
+\item{$\bullet$} Calculating total capacitance ($C_{total}$) first, then total impedance ($Z_{total}$).
+\item{$\bullet$} Calculating individual admittances first ($Y_{C1}$ and $Y_{C2}$), then total admittance ($Y_{total}$), then total impedance ($Z_{total}$).
+\item{$\bullet$} Using complex numbers: calculating individual impedances first (${\bf Z_{C1}}$ and ${\bf Z_{C2}}$), then total impedance (${\bf Z_{total}}$).
+\medskip
+
+Do these two strategies yield the same total impedance value?  Why or why not?
+
+\underbar{file 01835}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\noindent
+{\bf First strategy:}
+
+$C_{total} = 0.43 \> \mu \hbox{F}$
+
+$X_{total} = 411.3 \> \Omega$
+
+${\bf Z_{total}} = 411.3 \> \Omega \> \angle -90^o$ or ${\bf Z_{total}} = 0 - j411.3 \> \Omega$
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent
+{\bf Second strategy:}
+
+$Z_{C1} = X_{C1} = 535.9 \> \Omega$
+
+\vskip 5pt
+
+$Y_{C1} = {1 \over Z_{C1}} = 1.866 \> \hbox{mS}$
+
+\vskip 5pt
+
+$Z_{C1} = X_{C2} = 1.768 \hbox{ k}\Omega$
+
+\vskip 5pt
+
+$Y_{C2} = {1 \over Z_{C2}} = 565.5 \> \mu \hbox{S}$
+
+\vskip 5pt
+
+$Y_{total} = 2.432 \> \hbox{mS}$
+
+\vskip 5pt
+
+$Z_{total} = {1 \over Y_{total}} = 411.3 \> \Omega$
+
+\vskip 10pt
+
+\goodbreak
+
+\noindent
+{\bf Third strategy:} (using complex numbers)
+
+$X_{C1} = 535.9 \> \Omega$ \hskip 10pt ${\bf Z_{C1}} = 535.9 \> \Omega \> \angle -90^o$
+
+$X_{C2} = 1.768 \hbox{ k}\Omega$ \hskip 10pt ${\bf Z_{C1}} = 1.768 \hbox{ k}\Omega \> \angle -90^o$
+
+${\bf Z_{total}} = 411.3 \> \Omega \> \angle -90^o$ or ${\bf Z_{total}} = 0 - j411.3 \> \Omega$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+A common misconception many students have about capacitive reactances and impedances is that they must interact "oppositely" to how one would normally consider electrical opposition.  That is, many students believe capacitive reactances and impedances should add in parallel and diminish in series, because that's what capacitance (in Farads) does!  This is not true, however.  Impedances {\it always} add in series and diminish in parallel, at least from the perspective of complex numbers.  This is one of the reasons I favor AC circuit calculations using complex numbers: because then students may conceptually treat impedance just like they treat DC resistance.
+
+The purpose of this question is to get students to realize that {\it any} way they can calculate total impedance is correct, whether calculating total capacitance and then calculating impedance from that, or by calculating the impedance of each capacitor and then combining impedances to find a total impedance.  This should be reassuring, because it means students have a way to check their work when analyzing circuits such as this!
+
+%INDEX% Impedance calculation, series C circuit
+
+%(END_NOTES)
+
+

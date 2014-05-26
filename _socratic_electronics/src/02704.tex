@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+We know that the output of an integrator circuit is proportional to the time-integral of the input voltage:
+
+$$\epsfbox{02704x01.eps}$$
+
+$$V_{out} \propto \int_0^T V_{in} \> dt$$
+
+But how do we turn this proportionality into an exact equality, so that it accounts for the values of $R$ and $C$?  Although the answer to this question is easy enough to simply look up in an electronics reference book, it would be great to actually derive the exact equation from your knowledge of electronic component behaviors!  Here are a couple of hints:
+
+$$I = {V \over R} \hbox{\hskip 50pt} i = C {dv \over dt}$$
+
+\underbar{file 02704}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$V_{out} = -{1 \over RC} \int_0^T V_{in} \> dt$$
+
+\vskip 10pt
+
+Follow-up question: why is there a negative sign in the equation?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The two "hint" equations given at the end of the question beg for algebraic substitution, but students must be careful which variable(s) to substitute!  Both equations contain an $I$, and both equations also contain a $V$.  The answer to that question can only be found by looking at the schematic diagram: do the resistor and capacitor share the same current, the same voltage, or both?
+
+%INDEX% Calculus, integral
+%INDEX% Integrator circuit (opamp), exact equation for
+
+%(END_NOTES)
+
+

@@ -1,0 +1,37 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Many switching converter circuits use a switched MOSFET in place of a free-wheeling diode, like this:
+
+$$\epsfbox{02480x01.eps}$$
+
+The diode is a simple solution for providing the inductor a path for current when the main switching transistor is off.  Why would anyone use another MOSFET in place of it, especially if this means the drive circuit has to become more complex (to drive two transistors at different times instead of just one transistor) to do the same task?
+
+\underbar{file 02480}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+A MOSFET in its enhanced mode will drop less voltage than a diode (even a Schottky diode) in this circuit, improving power efficiency.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+It might not be obvious to some students why less voltage drop (across the MOSFET versus across the diode) has an impact on conversion efficiency.  Remind them that power equals voltage times current, and that for any given current, a reduced voltage drop means reduced power dissipation.  For the free-wheeling current path, less power dissipation means less power wasted, and less power that needs to be supplied by the source (for the same load power), hence greater efficiency.
+
+%INDEX% Switching converter circuits, MOSFETs versus free-wheeling diodes
+
+%(END_NOTES)
+
+

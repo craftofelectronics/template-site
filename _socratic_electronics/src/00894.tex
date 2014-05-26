@@ -1,0 +1,43 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A very useful feature for a regulated voltage source is an electronic {\it current limit}: a circuit that limits the amount of current deliverable to a load, so as to avoid needless fuse-blowing.  The combination of transistor Q2 and resistor R2 provides just this feature for the following voltage regulator circuit:
+
+$$\epsfbox{00894x01.eps}$$
+
+Describe how transistor Q2 limits the current sourced to a direct short-circuit across the load terminals.
+
+\underbar{file 00894}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Transistor Q2 turns on in the event that excessive current goes through the load, effectively connecting the zener diode's cathode to the +V output terminal, which decreases the regulation setpoint voltage until the load current diminishes to an acceptable level.
+
+\vskip 10pt
+
+Follow-up question: what component value(s) would we have to change in order to adjust the current limit in this power supply circuit?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to identify what it is that turns transistor Q2 on.
+
+If students have difficulty understanding the limiting function of transistor Q2, just tell them to replace Q2 with a direct short (between the collector and emitter terminals of Q2), and re-analyze the circuit.  They should see that transistor Q1 is unable to turn on in this condition.
+
+A very helpful strategy in analyzing what happens in an electronic circuit as variables change is to imagine those variables assuming extreme states.  In this case, to see the trend that occurs when Q2 starts to conduct, imagine Q2 conducting perfectly (a short between collector and emitter).  Conversely, if we wanted to see what the circuit would do under conditions where Q2 is in cutoff mode, just replace Q2 with an open-circuit.  While not always reliable, this technique often helps to overcome mental obstacles in analysis, and is a skill you should encourage in your students' discussion sessions often.
+
+%(END_NOTES)
+
+

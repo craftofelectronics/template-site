@@ -1,0 +1,66 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In this time-delay relay circuit, the motor will immediately start when the pushbutton is pressed, and continue to run for about 5 seconds after the pushbutton is released.  The green light-emitting diode (LED) is supposed to be on whenever the motor is stopped, and off whenever the motor is running:
+
+$$\epsfbox{03536x01.eps}$$
+
+However, a problem has developed with this circuit.  Every time the pushbutton switch is pressed, the green LED turns off but the motor never starts.  The LED turns back on after the 5 second delay time.  Based on this information, determine the following:
+
+\vskip 10pt
+
+\medskip
+\item{$\bullet$} \underbar{Two} components or wires in the circuit that you know cannot be failed either open or shorted, besides the 24 volt source.
+\vskip 40pt
+\item{$\bullet$} \underbar{Two} components or wires in the circuit you think could possibly be bad (either one independently capable of causing the problem), and the type of failure each would be (either open or shorted).
+\medskip
+
+\underbar{file 03536}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\goodbreak
+\noindent
+{\bf Components known to be in good working condition:}
+
+\medskip
+\item{$\bullet$} Wire from TP1 to TP4
+\item{$\bullet$} All wires from TP2 to LED cathode
+\item{$\bullet$} $R_1$
+\item{$\bullet$} LED
+\medskip
+
+\vskip 10pt
+
+\goodbreak
+\noindent
+{\bf Components which could possibly be faulted:}
+
+\medskip
+\item{$\bullet$} $R_2$ failed open.
+\item{$\bullet$} Motor winding failed open.
+\item{$\bullet$} Wire from TP5 to motor failed open.
+\item{$\bullet$} Wire from TP7 to motor failed open.
+\item{$\bullet$} Lower contact on relay failed open.
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+{\bf This question is intended for exams only and not worksheets!}.
+
+%(END_NOTES)
+
+

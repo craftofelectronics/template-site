@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Choose appropriate values for this Sallen-Key low-pass filter circuit to give it a cutoff frequency of 4.2 kHz with a "Butterworth" response:
+
+$$\epsfbox{02574x01.eps}$$
+
+$$f_{-3dB} = {1 \over {2 \sqrt{2} \> \pi R C}}$$
+
+A good guideline to follow is to make sure no component impedance ($Z_R$ or $Z_C$) at the cutoff frequency is less than 1 k$\Omega$ or greater than 100 k$\Omega$.
+
+\underbar{file 02574}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Bear in mind that this is just one possible set of component values:
+
+\medskip
+\item{$\bullet$} $C$ = 0.0047 $\mu$F
+\item{$\bullet$} $2C$ = 0.0094 $\mu$F
+\item{$\bullet$} $R$ = 5.701 k$\Omega$
+\item{$\bullet$} $2R$ = 11.402 k$\Omega$
+\medskip
+
+\vskip 10pt
+
+Follow-up question: while 0.0047 $\mu$F is a common capacitor size, 0.0094 $\mu$F is not.  Explain how you could obtain this precise value of capacitance needed to build this circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In order for students to solve for $R$, they must algebraically manipulate the cutoff frequency formula.  Ask them why we might choose a standard value for capacitance and then calculate a non-standard value for resistance.  Why not the other way around (first choose $R$, then calculate $C$)?
+
+%INDEX% Active filter circuit cutoff calculation, Sallen-Key (low-pass)
+
+%(END_NOTES)
+
+

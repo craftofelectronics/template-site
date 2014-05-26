@@ -1,0 +1,87 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Explain how the following power-line harmonic analyzer circuit works:
+
+$$\epsfbox{03694x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Harmonic \# & $L_{\#}$ value & $C_{\#}$ value \cr
+%
+\noalign{\hrule}
+%
+% Another row
+1st & 20 to 22 H & 0.33 $\mu$F \cr
+%
+\noalign{\hrule}
+%
+% Another row
+2nd & 11 to 12 H & 0.15 $\mu$F \cr
+%
+\noalign{\hrule}
+%
+% Another row
+3rd & 5 to 6 H & 0.15 $\mu$F \cr
+%
+\noalign{\hrule}
+%
+% Another row
+4th & 1.5 to 2.5 H & 0.22 $\mu$F \cr
+%
+\noalign{\hrule}
+%
+% Another row
+5th & 1 to 1.5 H & 0.27 $\mu$F \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+\underbar{file 03694}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Each series LC section is a resonant band-pass filter, tuned to successive harmonics of a 60 Hz sine wave.  The selector switch enables a single voltmeter to measure the RMS amplitude of each harmonic.
+
+\vskip 10pt
+
+Follow-up question: calculate the {\it exact} inductance values necessary for precise tuning of the five LC filters, for the first five harmonics of a 60 Hz waveform.
+
+\vskip 10pt
+
+Challenge question: the voltmeter in this circuit would not have to be a true-RMS meter.  It could simply be an average-responding (RMS-calibrated) voltmeter and it would work the same.  Explain why.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question provides students with some review of passive filter circuit theory, as well as insight into a practical circuit they could conceivably build as a project.
+
+A very important design feature of this circuit is the narrow bandwidth of each harmonic "channel."  The filter pass-bands must {\it not} come close to overlapping, or else the meter response will not be exclusively indicative of the harmonic it is switched to.  High Q values for each filter section ensure that the meter will {\it only} register the particular harmonic that is selected for measurement.
+
+%INDEX% Harmonic analyzer circuit, for 60 Hz power systems
+
+%(END_NOTES)
+
+

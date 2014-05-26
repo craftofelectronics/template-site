@@ -1,0 +1,73 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A set of batteries are connected in parallel to form a battery bank.  Ideally, their individual voltages would be exactly equal, and there would be no stray resistance anywhere in the circuit, but in reality what we have is something like this:
+
+$$\epsfbox{00474x01.eps}$$
+
+Use Millman's theorem to calculate the total voltage between the two busses for the battery bank, given these specifications for the four batteries:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil & 
+\vrule \quad\hfil $#$ \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% Title row
+\hbox{Battery} & \hbox{Voltage} & R_{connection +} & R_{connection -} & R_{internal}  \cr
+\noalign{\hrule}
+%
+% First row
+1 & 11.9 & 1.2 \> \Omega & 1.1 \> \Omega & 5.5 \> \Omega \cr
+\noalign{\hrule}
+%
+% Second row
+2 & 12.2 & 1.0 \> \Omega & 1.3 \> \Omega & 5.1 \> \Omega \cr
+\noalign{\hrule}
+%
+% Third row
+3 & 12.0 & 1.4 \> \Omega & 0.9 \> \Omega & 4.7 \> \Omega \cr
+\noalign{\hrule}
+%
+% Fourth row
+4 & 12.1 & 1.1 \> \Omega & 1.2 \> \Omega & 5.5 \> \Omega \cr
+\noalign{\hrule}
+%
+} % End of \halign 
+}$$ % End of \vbox
+
+
+\underbar{file 00474}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Bus voltage = 12.051 V
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Millman's theorem is especially useful in making bus voltage calculations for power systems, where multiple sources (and loads!) are connected to the same two wires.
+
+%INDEX% Millman's theorem, applied to parallel batteries
+
+%(END_NOTES)
+
+

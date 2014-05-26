@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A scientist is using a microprocessor system to monitor the boolean ("high" or "low") status of a particle sensor in her high-speed nuclear experiment.  The problem is, the nuclear events detected by the sensor come and go much faster than the microprocessor is able to sample them.  Simply put, the pulses output by the sensor are too brief to be "caught" by the microprocessor every time:
+
+$$\epsfbox{01464x01.eps}$$
+
+She asks several technicians to try and fix the problem.  One tries altering the microprocessor's program to achieve a faster sampling rater, to no avail.  Another recalibrates the particle sensor to react slower, but this only results in missed data (because the real world data does not slow down accordingly!).  No solution tried so far works, because the fundamental problem is that the microprocessor is just too slow to "catch" the extremely short pulse events coming from the particle sensor.  What is required is some kind of external circuit to "read" the sensor's state at the leading edge of a sample pulse, and then hold that digital state long enough for the microprocessor to reliably register it.
+
+Finally, another electronics technician comes along and proposes this solution, but then goes on vacation, leaving you to implement it:
+
+$$\epsfbox{01464x02.eps}$$
+
+Explain how this D-type flip-flop works to solve the problem, and what action the microprocessor has to take on the output pin to make the flip-flop function as a detector for multiple pulses.
+
+\underbar{file 01464}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The flip-flop becomes "set" every time a pulse comes from the sensor.  The microprocessor must clear the flip-flop after reading the captured pulse, so the flip-flop will be ready to capture and hold a new pulse.
+
+\vskip 10pt
+
+Challenge question: what logic family of flip-flop would you recommend be used for this application, given the need for extremely fast response?  Don't just say "TTL," either.  Research the fastest modern logic family in current manufacture!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a very practical application for a D-type flip-flop, and also an introduction to one of the pitfalls of microprocessor-based data acquisition systems.  Explain to your students that the finite time required for a microprocessor to cycle through its program may lead to conditions such as this where real-time events are missed because the microprocessor was "busy" doing other things at the time.
+
+%INDEX% D-type flip-flop, used as a pulse detector (sample-and-hold) circuit
+%INDEX% Sample-and-hold circuit, digital
+
+%(END_NOTES)
+
+

@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A complementary push-pull transistor amplifier built exactly as shown would perform rather poorly, exhibiting crossover distortion:
+
+$$\epsfbox{02291x01.eps}$$
+
+The simplest way to reduce or eliminate this distortion is by adding some bias voltage to each of the transistors' inputs, so there will never be a period of time when the two transistors are simultaneously cutoff:
+
+$$\epsfbox{02291x02.eps}$$
+
+One problem with this solution is that just a little too much bias voltage will result in overheating of the transistors, as they simultaneously conduct current near the zero-crossing point of the AC signal.  A more sophisticated method of mitigating crossover distortion is to use an opamp with negative feedback, like this:
+
+$$\epsfbox{02291x03.eps}$$
+
+Explain how the opamp is able to eliminate crossover distortion in this push-pull amplifier circuit without the need for biasing.
+
+\underbar{file 02291}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+By sensing $V_{out}$, the opamp is able to "tell" whether or not the output voltage matches the input voltage, so it can drive the transistors as hard as they need to be driven to get the output voltage where it should be.
+
+\vskip 10pt
+
+Challenge question: a more practical design blends the two strategies like this:
+
+$$\epsfbox{02291x04.eps}$$
+
+Explain why using less bias voltage {\it and} negative feedback with an opamp results in better performance than either method used alone.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Much could be said about good amplifier circuit design in this question, but the fundamental point is for students to see how negative feedback coupled with the extremely high gain of the opamp minimizes crossover distortion.  Be sure to focus students' attention on that point until they understand it well before launching into a discussion about the finer points of amplifier design.
+
+It should be noted that this solution to crossover distortion in a push-pull amplifier circuit does not always yield the best results.  In order for the opamp to ensure a smooth transition between half-cycles, its output must jump about 1.4 volts {\it instantaneously} to go from turning one transistor off to turning the other transistor on.  Of course, no opamp can do this, because all have slew rate limitations.  So, there {\it will} still be some crossover distortion, but not nearly as much as without the opamp (and with far less quiescent power dissipation that the two-diode solution!).
+
+%INDEX% Negative feedback, in power opamp circuit
+
+%(END_NOTES)
+
+

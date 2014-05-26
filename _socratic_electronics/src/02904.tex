@@ -1,0 +1,54 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Draw the paths of all currents in this circuit with the input in a "low" state:
+
+$$\epsfbox{02904x01.eps}$$
+
+Now, draw the paths of all currents in this circuit with the input in a "high" state:
+
+$$\epsfbox{02904x02.eps}$$
+
+Where is the power supplied for each LED?  What relationship is there between the load current (LED) and the gate input current (through the SPDT switch)?
+
+Also, explain how you would calculate the values for appropriate LED current-limiting resistors in this circuit.
+
+\underbar{file 02904}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{02904x03.eps}$$
+
+$$\epsfbox{02904x04.eps}$$
+
+In each scenario, the LED's power is supplied by $V_{CC}$ and ground: the DC power source.  Note that the input switch merely "tells" the output what to do rather than handle actual load current, just like the inputs of an operational amplifier or comparator.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The utility of conventional flow notation (as opposed to electron flow) becomes especially apparent in this answer, as the upper circuit is the one {\it sourcing} current and the lower circuit is the one {\it sinking} current.
+
+As with operational amplifiers, I find it necessary to point out to some students that the inputs of a logic gate circuit do not sink or source load current.  This fact underscores the need to supply DC power to the logic gate for proper operation.
+
+%INDEX% Current sink, TTL logic
+%INDEX% Current source, TTL logic
+%INDEX% Sinking current, TTL logic
+%INDEX% Sourcing current, TTL logic
+%INDEX% Totem-pole output, TTL
+%INDEX% TTL gate circuit, internal schematic
+
+%(END_NOTES)
+
+

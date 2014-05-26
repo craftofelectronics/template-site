@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In this automatic cooling fan circuit, a comparator is used to turn a DC motor on and off when the sensed temperature reaches the "setpoint" established by the potentiometer:
+
+$$\epsfbox{00877x01.eps}$$
+
+The circuit works just as it is supposed to in turning the motor on and off, but it has a strange problem: the transistor gets warm when the motor is {\it off}!  Oddly enough, the transistor actually cools down when the motor turns on.  
+
+Describe what you would measure first in troubleshooting this problem.  Based on the particular model of op-amp used (a model LM741C), what do you suspect is the problem here?
+
+\underbar{file 00877}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The problem here is that the model 741 op-amp cannot "swing" its output rail-to-rail.  An op-amp with rail-to-rail output voltage capability would not make the transistor heat up in the "off" mode.
+
+\vskip 10pt
+
+Challenge question: what purpose does the capacitor serve in this circuit?  Hint: the capacitor is not required in a "perfect world," but it helps eliminate spurious problems in the real world!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I've actually encountered this transistor heating problem in designing and building a very similar DC motor control circuit using the 741.  There is a way to overcome this problem without switching to a different model of op-amp! 
+
+After discussing the nature of the problem with your students, you should talk about the virtues of getting a "low performance" op-amp such as the model 741 to work in a scenario like this rather than changing to an op-amp model capable of rail-to-rail operation.  In my estimation, switching to a more modern op-amp in a circuit as simple as this is "cheating".  There is nothing about this circuit that fundamentally taxes the capabilities of a 741 op-amp.  All it takes is a little creativity to make it work properly.
+
+%INDEX% Opamp, rail-to-rail output swing
+
+%(END_NOTES)
+
+

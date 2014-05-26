@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+At what load resistance value will this voltage regulator circuit begin to lose its ability to regulate voltage?  Also, determine whether the voltage regulation is lost for load resistance values greater than this threshold value, or less than this threshold value.
+
+$$\epsfbox{01066x01.eps}$$
+
+\underbar{file 01066}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+There will be no load voltage regulation for any load resistance values {\it less} than 15 k$\Omega$.
+
+\vskip 10pt
+
+Follow-up question: calculate the power dissipated by all components in this circuit, if $R_{load} =$ 30 k$\Omega$.
+
+\vskip 10pt
+
+Challenge question: write an equation solving for the minimum load resistance required to maintain voltage regulation.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+For those students struggling with the "greater than"/"less than" issue, suggest to them that they imagine the load resistance assuming extreme values: first 0 ohms, and then infinite ohms.  After they do this, ask them to determine under which of these extreme conditions is the load voltage regulation still maintained.
+
+Performing "thought experiments" with extreme component values is a highly effective problem-solving technique for many applications, and is one you should stress to your students often.
+
+It should be noted that the calculated answer shown here will {\it not} precisely match a real zener diode circuit, due to the fact that zener diodes tend to gradually taper off in current as the applied voltage nears the zener voltage rating rather than current sharply dropping to zero as a simpler model would predict.
+
+%INDEX% Zener diode as a voltage regulator
+
+%(END_NOTES)
+
+

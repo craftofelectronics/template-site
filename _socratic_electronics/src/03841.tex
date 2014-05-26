@@ -1,0 +1,61 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2006, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Calculate the current through the zener diode for the given values of input (source) voltage in this circuit:
+
+$$\epsfbox{03841x01.eps}$$
+
+\medskip
+\item{$\bullet$} $V_{source}$ = 25 V ; $I_{zener}$ = 
+\item{$\bullet$} $V_{source}$ = 20 V ; $I_{zener}$ = 
+\item{$\bullet$} $V_{source}$ = 15 V ; $I_{zener}$ = 
+\item{$\bullet$} $V_{source}$ = 10 V ; $I_{zener}$ = 
+\item{$\bullet$} $V_{source}$ = 5 V ; $I_{zener}$ = 
+\medskip
+
+Do you see any relationship between source voltage and zener diode current?  If so, explain what that relationship is.
+
+\underbar{file 03841}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+As the source voltage decreases, zener diode current also decreases:
+
+\medskip
+\item{$\bullet$} $V_{source}$ = 25 V ; $I_{zener}$ = 41.49 mA
+\item{$\bullet$} $V_{source}$ = 20 V ; $I_{zener}$ = 30.85 mA
+\item{$\bullet$} $V_{source}$ = 15 V ; $I_{zener}$ = 20.21 mA
+\item{$\bullet$} $V_{source}$ = 10 V ; $I_{zener}$ = 9.58 mA
+\item{$\bullet$} $V_{source}$ = 5 V ; $I_{zener}$ = 0 mA
+\medskip
+
+\vskip 10pt
+
+Follow-up question: what value of source voltage input will result in {\it zero} current through the zener diode (while still maintaining an output voltage of 5.1 volts)?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This exercise in current calculation is supposed to get students to realize the inverse relationship between input voltage and zener current: that the zener diode regulates voltage by acting as a parasitic load of varying proportion.  Simply put, the diode loads down the circuit as much as needed to maintain a stable voltage at the load terminals.
+
+It should be noted that the calculated answers shown here will {\it not} precisely match a real zener diode circuit, due to the fact that zener diodes tend to gradually taper off in current as the applied voltage nears the zener voltage rating rather than current sharply dropping to zero as a simpler model would predict.
+
+The follow-up question is very important.  All zener diode regulator circuits have a minimum input voltage value that must be adhered to, lest the output voltage droop below the regulation point.  Discuss with your students how the zener diode's "loading" behavior explains the need for a certain minimum source voltage.
+
+%INDEX% Zener diode as a voltage regulator
+
+%(END_NOTES)
+
+

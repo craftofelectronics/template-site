@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A technician is using a digital multimeter (with a "diode check" feature) to identify the terminals of a power MOSFET:
+
+$$\epsfbox{03451x01.eps}$$
+
+\goodbreak
+The technician obtains the following "diode check" voltage measurements, in this order:
+
+\medskip
+\item{$1.$} Black lead on middle terminal, Red lead on right terminal = 0.583 volts ({\it shown in illustration})
+\item{$2.$} Red lead on middle terminal, Black lead on right terminal = O.L. (open)
+\item{$3.$} Black lead on middle terminal, Red lead on left terminal = O.L. (open)
+\item{$4.$} Black lead on middle terminal, Red lead on right terminal = 0.001 volts
+\item{$5.$} Red lead on middle terminal, Black lead on right terminal = 0.001 volts
+\medskip
+
+Explain why the fourth and fifth measurements are so different from the first and second, respectively, when they were taken between the same terminals on the MOSFET.  Hint: this particular MOSFET is an N-channel, enhancement-type.
+
+\underbar{file 03451}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The act of taking the third measurement enhanced the transistor into the on (saturated) state by means of the multimeter's output voltage in the diode test mode.  The MOSFET then remained in its on state for the fourth and fifth measurements.
+
+\vskip 10pt
+
+Follow-up question: where would the meter have to be connected in order to force the MOSFET into is off (cutoff) state?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Field-effect transistors, by their very nature being voltage-activated devices with extremely high input impedance, are more difficult to identify than bipolar junction transistors because the meter's output in the "diode check" mode is sufficient to activate and de-activate them.  This question showcases a practical example of this (the values actually came from real-life testing of an IRF510 transistor!).
+
+%INDEX% IGFET, terminal identification
+%INDEX% MOSFET, terminal identification
+
+%(END_NOTES)
+
+

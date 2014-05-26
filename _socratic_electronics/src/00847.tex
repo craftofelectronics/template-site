@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Ideally, when the two input terminals of an op-amp are shorted together (creating a condition of {\it zero differential voltage}), and those two inputs are connected directly to ground (creating a condition of {\it zero common-mode voltage}), what should this op-amp's output voltage be?
+
+$$\epsfbox{00847x01.eps}$$
+
+In reality, the output voltage of an op-amp under these conditions is not the same as what would be ideally predicted.  Identify the fundamental problem in real op-amps, and also identify the best solution.
+
+\underbar{file 00847}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Ideally, $V_{out} =$ 0 volts.  However, the output voltage of a real op-amp under these conditions will invariably be "saturated" at full positive or full negative voltage due to differences in the two branches of its (internal) differential pair input circuitry.  To counter this, the op-amp needs to be "trimmed" by external circuitry.
+
+\vskip 10pt
+
+Follow-up question: the amount of differential voltage required to make the output of a real opamp settle at 0 volts is typically referred to as the {\it input offset voltage}.  Research some typical input offset voltages for real operational amplifiers.
+
+\vskip 10pt
+
+Challenge question: identify a model of op-amp that provides extra terminals for this "trimming" feature, and explain how it works.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In many ways, real op-amps fall short of their ideal expectations.  However, modern op-amps are far, far better than the first models manufactured.  And with such a wide variety of models to choose from, it is possible to obtain an almost perfect match for whatever design application you have, for a modest price.
+
+If possible, discuss how "trimming" works in a real op-amp.  If your students took the "challenge" and found some op-amp datasheets describing how to implement trimming, have them relate the connection of external components to the op-amp's internal circuitry.
+
+%INDEX% Input offset voltage, opamp
+%INDEX% Opamp offset voltage, input
+%INDEX% Opamp output "trimming"
+%INDEX% Trimming, opamp
+
+%(END_NOTES)
+
+

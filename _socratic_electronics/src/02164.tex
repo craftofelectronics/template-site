@@ -1,0 +1,49 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Many technical references will tell you that bipolar junction transistors (BJTs) are {\it current-controlled} devices: collector current is controlled by base current.  This concept is reinforced by the notion of "beta" ($\beta$), the ratio between collector current and base current:
+
+$$\beta = {I_C \over I_B}$$
+
+Students learning about bipolar transistors are often confused when they encounter datasheet specifications for transistor $\beta$ ratios.  Far from being a constant parameter, the "beta" ratio of a transistor may vary significantly over its operating range, in some cases exceeding an order of magnitude (ten times)!
+
+Explain how this fact agrees or disagrees with the notion of BJTs being "current-controlled" devices.  If collector current really is a direct function of base current, then why would the constant of proportionality between the two ($\beta$) change so much?
+
+\underbar{file 02164}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Sit down before you read this, and brace yourself for the hard truth: bipolar junction transistors are technically {\it not} current-controlled devices.  You were sitting down, right?  Good.
+
+\vskip 10pt
+
+Follow-up question: if BJTs are not controlled by base current, then what {\it are} they controlled by?  Express this in the form of an equation if possible.  Hint: research the "diode equation" for clues.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+For discussion purposes, you might want to show your students this equation, accurate over a wide range of operating conditions for base-emitter voltages in excess of 100 mV:
+
+$$I_C = I_{ES} \left( e^{V_{BE} / V_T} - 1 \right) $$
+
+This equation is nonlinear: increases in $V_{BE}$ do not produce proportional increases in $I_C$.  It is therefore much easier to think of BJT operation in terms of base and collector {\it currents}, the relationship between those two variables being more linear.  Except when it isn't, of course.  Such is the tradeoff between simplicity and accuracy.  In an effort to make things simpler, we often end up making them {\it wrong}.
+
+It should be noted here that although bipolar junction transistors aren't really current-controlled devices, they still may be considered to be (approximately) current-{\it controlling} devices.  This is an important distinction that is easily lost in questions such as this when basic assumptions are challenged.
+
+%INDEX% BJT, voltage-controlled and NOT current controlled (!)
+
+%(END_NOTES)
+
+

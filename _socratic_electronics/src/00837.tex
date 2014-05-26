@@ -1,0 +1,45 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A special type of overcurrent protection device used commonly in motor control circuits is the {\it overload heater}.  These devices are connected in series with the motor conductors, and heat up slightly under normal current conditions:
+
+$$\epsfbox{00837x01.eps}$$
+
+Although the "heater" elements are connected in series with the motor lines as fuses would be, they are {\it not} fuses!  In other words, it is not the purpose of an overload heater to burn open under an overcurrent fault condition, although it is possible for them to do so.  
+
+The key to understanding the purpose of an overload heater is found by examining the single-phase (L1 / L2) control circuit, where a normally-closed switch contact by the same name ("OL") is connected in series with the motor relay coil.
+
+How, exactly, do overload heaters protect an electric motor against "burnout" from overcurrent conditions?  How does this purpose differ from that of fuses or circuit breakers?  Does the presence of overload heaters in this circuit negate that need for a circuit breaker or regular fuses?  Explain your answers.
+
+\underbar{file 00837}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+When the overload "heaters" become excessively warm from overcurrent, they trigger the opening of the "OL" contact, thus stopping the motor.  The heaters do not take the place of regular overcurrent protection devices (circuit breakers, fuses), but serve a different purpose entirely.  It is the task of the overload heaters to protect the {\it motor} against overcurrent by mimicking the thermal characteristics of the motor itself.  Circuit breakers and fuses, on the other hand, protect an entirely different part of the circuit!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ask your students to describe the information they found on overload heaters through their research.  There are different styles and variations of overload heaters, but they all perform the same function.  Also, be sure to review with your students the purpose of fuses and circuit breakers.  These devices are not intended to protect the load (motor), but rather another important component of an electrical system!
+
+An interesting way to explain the function of overload heaters is to refer to them as {\it analog models} of the motor windings.  They are designed such that at any given current level, they will take as long to heat up and reach their trip point as the real motor itself will take to heat up to a point of impending damage.  Likewise, they also cool off at the same rate as the real motor cools off when no power is applied.  Overload heaters are like small motor-models with a thermostat mechanism attached, to trip the overload contact at the appropriate time.  It is an elegant concept, and quite practical in real motor control applications.
+
+%INDEX% Control circuit, AC motor
+%INDEX% Ladder logic diagram
+%INDEX% Overload "heater," motor control circuit
+
+%(END_NOTES)
+
+

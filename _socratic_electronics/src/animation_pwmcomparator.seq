@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+# "Concatenating" all selected questions/answers/notes into a single TeX file.
+# This is where you specify the questions you want included in your worksheet, in the
+# order you want them to appear.
+cat \
+03235.tex \
+> all.tex
+
+
+echo "Creating GIF animation of PWM comparator circuit (file #03235)"
+convert -delay 10 03235x*eps animation_pwm_fast.gif
+convert -delay 50 03235x*eps animation_pwm_slow.gif
+
+mv -v animation*gif ../output
+
+

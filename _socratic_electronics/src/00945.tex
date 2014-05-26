@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+We know that graphs are nothing more than collections of individual points representing correlated data in a system.  Here is a plot of a transistor's characteristic curve (for a single value of base current):
+
+$$\epsfbox{00945x01.eps}$$
+
+And here is a plot of the "load line" for a transistor amplifier circuit:
+
+$$\epsfbox{00945x02.eps}$$
+
+For each of these graphs, pick a single point along the curve (or line) and describe what that single point represents, in real-life terms.  What does any single point of data along either of these graphs {\it mean} in a transistor circuit?
+
+If a transistor's characteristic curve is superimposed with a load line on the same graph, what is the significance of those two plots' intersection?
+
+\underbar{file 00945}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+For a transistor's characteristic curve, one point of data represents the amount of current that will go through the collector terminal for a given amount of base current, and a given amount of collector-emitter voltage drop.
+
+\vskip 10pt
+
+For a load line, one point of data represents the amount of collector-emitter voltage available to the transistor for a given amount of collector current.
+
+\vskip 10pt
+
+The intersection of a characteristic curve and a load line represents the one collector current (and corresponding $V_{CE}$ voltage drop) that will "satisfy" all components' conditions.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss this question thoroughly with your students.  So many students of electronics learn to plot load lines for amplifier circuits without ever really understanding {\it why} they must do so.  Load line plots are very useful tools in amplifier circuit analysis, but the meaning of each curve/line must be well understood before it becomes useful as an instrument of understanding.
+
+Ask your students which of the two types of graphs (characteristic curves, or load lines) represents a component's natural, or "free", behavior, and which one represents the bounded conditions within a particular circuit.  
+
+%INDEX% Load line, concept illustrated with transistor amplifier circuit
+
+%(END_NOTES)
+
+

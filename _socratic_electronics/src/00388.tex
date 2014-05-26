@@ -1,0 +1,48 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A technician measures voltage across the terminals of a burned-out solenoid valve, in order to check for the presence of dangerous voltage before touching the wire connections.  The circuit breaker for this solenoid has been turned off and secured with a lock, but the technician's digital voltmeter still registers about three and a half volts AC across the solenoid terminals!
+
+$$\epsfbox{00388x01.eps}$$
+
+Now, three and a half volts AC is not enough voltage to cause any harm, but its presence confuses and worries the technician.  Shouldn't there be 0 volts, with the breaker turned off?  
+
+Explain why the technician is able to measure voltage in a circuit that has been "locked out."  Hint: digital voltmeters have extremely high {\it input impedance}, typically in excess of 10 M$\Omega$.
+
+\underbar{file 00388}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The stray capacitance existing between the open contacts of the breaker provides a high-impedance path for AC voltage to reach the voltmeter test leads.
+
+\vskip 10pt
+
+Follow-up question: while the measured voltage in this case was well below the general industry threshold for shock hazard (30 volts), a slightly different scenario could have resulted in a much greater "phantom" voltage measurement.  Could a capacitively-coupled voltage of this sort possibly pose a safety hazard?  Why or why not?
+
+\vskip 10pt
+
+Challenge question: is it possible for the technician to discern whether or not the 3.51 volts measured by the voltmeter is "real"?  In other words, what if this small voltage is not the result of stray capacitance across the breaker contacts, but rather some other source of AC capable of delivering substantial current?  How can the technician determine whether or not the 3.51 volts is capable of sourcing significant amounts of current?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I cannot tell you how many times I encountered this phenomenon: "phantom" AC voltages registered by high-impedance DMM's in circuits that are supposed to be "dead."  Industrial electricians often use a different instrument to check for the presence of dangerous voltage, a crude device commonly known as a "Wiggy."
+
+%INDEX% Phantom voltage readings, high-impedance voltmeter
+%INDEX% Voltmeter impedance and "phantom" readings
+
+%(END_NOTES)
+
+

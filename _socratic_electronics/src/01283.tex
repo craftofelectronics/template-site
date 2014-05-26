@@ -1,0 +1,40 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In Claude Shannon's famous 1948 paper entitled {\it A Mathematical Theory of Communication}, he opens with the following statement:
+
+\vskip 10pt {\narrower \noindent \baselineskip5pt
+{\it ``The recent development of various methods of modulation such as PCM and PPM which exchange bandwidth for signal-to-noise ratio has intensified the interest in a general theory of communication.''}
+\par} \vskip 10pt
+
+Explain what Shannon was referring to when he said, "exchange bandwidth for signal-to-noise ratio".  In many cases, the superior signal-to-noise ratio of digital communication over analog communication is the primary reason justifying the much greater complexity of digital communications equipment.  Also, elaborate on how bandwidth becomes sacrificed in order to achieve relatively noiseless signal transmission.
+
+\underbar{file 01283}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Digital signals are highly resistant to corruption from noise, because they are composed of discrete ("high" and "low") states rather than continuously-variable quantities as analog signals are.  However, in order to communicate any significant measure of digital information in serial form, many pulses are needed.  This requires a high-bandwidth data path to be comparable in speed to analog.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Shannon's language is perhaps a bit above the norm for technician-level education, but it nevertheless captures an important quality of digital communication: that the noise immunity enjoyed by digital communication comes at a price: high bandwidth.  Without a high-bandwidth medium in which to exchange digital information, communication is either slow or completely impractical.
+
+%INDEX% Bandwidth versus noise immunity
+%INDEX% Noise immunity versus bandwidth
+
+%(END_NOTES)
+
+

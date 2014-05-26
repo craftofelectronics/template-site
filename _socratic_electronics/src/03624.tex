@@ -1,0 +1,80 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Working on a job site with an experienced technician, you are tasked with trying to determine whether the line currents going to a three-phase electric motor are balanced.  If everything is okay with the motor and the power circuitry, of course, the three line currents should be precisely equal to each other.
+
+The problem is, neither of you brought a clamp-on ammeter for measuring the line currents.  Your multimeters are much too small to measure the large currents in this circuit, and connecting an ammeter in series with such a large motor could be dangerous anyway.  So, the experienced technician decides to try something different -- he uses his multimeter as an AC milli-voltmeter to measure the small voltage drop across each fuse, using the fuses as crude shunt resistors:
+
+$$\epsfbox{03624x01.eps}$$
+
+He obtains the following measurements:
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+Line & Fuse voltage drop \cr
+%
+\noalign{\hrule}
+%
+% Another row
+1 & 24.3 mV \cr
+%
+\noalign{\hrule}
+%
+% Another row
+2 & 37.9 mV \cr
+%
+\noalign{\hrule}
+%
+% Another row
+3 & 15.4 mV \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Do these voltage drop measurements suggest imbalanced motor line currents?  Why or why not?
+
+\underbar{file 03624}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The results are inconclusive, because resistance for the whole fuse and holder assembly is not a reliably stable quantity.  Corrosion between one of the fuse ends and the fuse holder clip, for example, would increase resistance between the points where millivoltage is shown measured.
+
+\vskip 10pt
+
+Follow-up question: just because the results of these millivoltage measurements are inconclusive in this scenario does not necessarily mean the principle of using fuses as current-indicating shunt resistors is useless.  Describe one application where using a fuse as a current-indicating shunt would yield trustworthy information about the current.
+
+\vskip 10pt
+
+Challenge question: determine where you could measure millivoltage, that might be more reliable in terms of quantitatively indicating line current.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+While measuring millivoltage across a {\it fuse} may seem like a strange diagnostic technique, it is one I have gainfully applied for years.  The "catch" is you have to know what it is good for and what it is not.  It is {\it not} a precise, quantitative technique by any means!
+
+%INDEX% Fuse, used as current-indicating shunt resistance
+
+%(END_NOTES)
+
+

@@ -1,0 +1,52 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The model "555" integrated circuit is a very popular and useful "chip" used for timing purposes in electronic circuits.  The basis for this circuit's timing function is a resistor-capacitor (RC) network:
+
+$$\epsfbox{01807x01.eps}$$
+
+In this configuration, the "555" chip acts as an {\it oscillator}: switching back and forth between "high" (full voltage) and "low" (no voltage) output states.  The time duration of one of these states is set by the charging action of the capacitor, through both resistors ($R_1$ and $R_2$ in series).  The other state's time duration is set by the capacitor discharging through one resistor ($R_2$):
+
+$$\epsfbox{01807x02.eps}$$
+
+Obviously, the charging time constant must be $\tau_{charge} = (R_1 + R_2)C$, while the discharging time constant is $\tau_{discharge} = R_2C$.  In each of the states, the capacitor is either charging or discharging 50\% of the way between its starting and final values (by virtue of how the 555 chip operates), so we know the expression $e^{-t \over \tau} = 0.5$, or 50 percent.\footnote{$^{\dag}$}{For those who must know why, the 555 timer in this configuration is designed to keep the capacitor voltage cycling between ${1 \over 3}$ of the supply voltage and ${2 \over 3}$ of the supply voltage.  So, when the capacitor is charging from ${1 \over 3}V_{CC}$ to its (final) value of full supply voltage ($V_{CC}$), having this charge cycle interrupted at ${2 \over 3}V_{CC}$ by the 555 chip constitutes charging to the half-way point, since ${2 \over 3}$ of half-way between ${1 \over 3}$ and 1.  When discharging, the capacitor starts at ${2 \over 3}V_{CC}$ and is interrupted at ${1 \over 3}V_{CC}$, which again constitutes 50\% of the way from where it started to where it was (ultimately) headed.}
+
+Develop two equations for predicting the "charge" time and "discharge" time of this 555 timer circuit, so that anyone designing such a circuit for specific time delays will know what resistor and capacitor values to use.
+
+\underbar{file 01807}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$t_{charge} = - \ln 0.5 (R_1 + R_2)C$$
+
+$$t_{discharge} = - \ln 0.5 R_2 C$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Although it may seem premature to introduce the 555 timer chip when students are just finishing their study of DC, I wanted to provide a practical application of RC circuits, and also of algebra in generating useful equations.  If you deem this question too advanced for your student group, by all means skip it.
+
+Incidentally, I simplified the diagram where I show the capacitor discharging: there is actually another current at work here.  Since it wasn't relevant to the problem, I omitted it.  However, some students may be adept enough to catch the omission, so I show it here:
+
+$$\epsfbox{01807x03.eps}$$
+
+Note that this second current (through the battery) does not go anywhere near the capacitor, and so is irrelevant to the discharge cycle time.
+
+%INDEX% 555 timer (suitable for students first studying RC circuits)
+%INDEX% Algebra, manipulating equations
+
+%(END_NOTES)
+
+

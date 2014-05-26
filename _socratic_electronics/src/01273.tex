@@ -1,0 +1,38 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In CMOS circuitry, one side of the DC power supply is usually labeled as "$V_{DD}$", while the other side is labeled as "$V_{SS}$".  Why is this?  What do the subscripts "DD" and "SS" represent?
+
+\underbar{file 01273}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The labels $V_{DD}$ and $V_{SS}$ are supposed to mean "power supply to {\it drain} and {\it source} sides of MOSFETs, respectively.  This nomenclature is actually a holdover from obsolete NMOS gate designs, which used N-channel MOSFETS exclusively.  Even though it doesn't make much sense in CMOS circuits (you'll see why if you examine the internal schematic diagram for a CMOS gate), it is the standard way of denoting power supply terminals for CMOS circuits.
+
+\vskip 10pt
+
+Follow-up question: what polarities do these respective labels represent?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Ahhh, the vestiges of yesterday's technology!  What can I say?  Sometimes terms "stick" even when it makes little sense for them to.
+
+%INDEX% Vdd, defined
+%INDEX% Vss, defined
+
+%(END_NOTES)
+
+

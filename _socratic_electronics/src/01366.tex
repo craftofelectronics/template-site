@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Explain how the addition of a propagation-delay-based one-shot circuit to the enable input of an S-R latch changes its behavior:
+
+$$\epsfbox{01366x01.eps}$$
+
+Specifically, reference your answer to a truth table for this circuit.
+
+\underbar{file 01366}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The outputs of this device are allowed to change state only when the "clock" signal (C) is transitioning from low to high:
+
+$$\epsfbox{01366x02.eps}$$
+
+\vskip 10pt
+
+Challenge question: what exactly happens in the "invalid" state for this S-R flip-flop?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss with your students what happens in this circuit when the clock signal is doing anything other than transitioning from low to high.  What condition(s) are equivalent in a regular S-R gated latch circuit?
+
+The challenge question is especially tricky to answer.  "Invalid" states are easy to determine in regular S-R latch circuits, gated or ungated.  However, because an S-R {\it flip-flop} is only momentarily "gated" by the edge of the clock signal, the states its outputs fall to after that edge event has passed is much more difficult to determine.
+
+%INDEX% S-R flip-flop, edge triggered
+%INDEX% One-shot circuit, exploiting gate propagation delays
+%INDEX% Propagation delay, gate circuits
+
+%(END_NOTES)
+
+

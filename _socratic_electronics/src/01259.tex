@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A very important concept to understand in digital circuitry is the difference between {\it current sourcing} and {\it current sinking}.  For instance, examine this CMOS inverting buffer gate circuit, connected to a load:
+
+$$\epsfbox{01259x01.eps}$$
+
+Is this gate circuit configured to {\it source} load current, {\it sink} load current, or do both?
+
+\underbar{file 01259}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+In this particular case, the way the load (LED) is connected to the output of the gate, the gate will only {\it sink} current.  However, the gate is capable of sourcing current to a load, if only the load were connected differently.
+
+\vskip 10pt
+
+Follow-up question: re-draw the circuit to show the gate {\it sourcing} current to an LED load.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This very important concept is best understood from the perspective of {\it conventional} current flow notation.  The terms seem backward when electron flow notation is used to track current through the output transistor.
+
+One point of confusion I've experienced among students is that current may go either direction (in or out) of a gate with totem-pole output transistors (able to sink or source current).  Some students seem to have a conceptual difficulty with current going {\it in} to the {\it output} terminal of a gate circuit, because they mistakenly associate the "out" in {\it out}put as being a reference to direction of current, rather than direction of information or data.
+
+An analogy I've used to help students overcome this problem is that of two people carrying a long pole:
+
+$$\epsfbox{01259x02.eps}$$
+
+Suppose these people are in a dark, noisy room, and they use the pole as a means of simple communication between them.  For example, one person could tug on the pole to get the other person's attention.  Perhaps they could even develop a simple code system for communicating thoughts (1 tug = hello ; 2 tugs = good-bye ; 3 tugs = I think this is a silly way to communicate ; 4 tugs = let's leave this room ; etc.).  If one of the persons {\it pushes} on the pole rather than {\it pulls} on the pole to get the other person's attention, does the direction of the pole's motion change the direction of the communication between the two persons?  Of course not.  Well, then, does the direction of current through the output terminal of a gate change the direction that {\it information} flows between two interconnected gates?  Whether a gate sources current or sinks current to a load has no bearing on the "output" designation of that gate terminal.  Either way, the gate is still "telling the load what to do" by exercising control over the load current.
+
+%INDEX% CMOS gate circuit, internal schematic
+%INDEX% Current source, CMOS logic
+%INDEX% Current sink, CMOS logic
+%INDEX% Sinking current, CMOS logic
+%INDEX% Sourcing current, CMOS logic
+
+%(END_NOTES)
+
+

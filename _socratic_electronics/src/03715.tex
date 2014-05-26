@@ -1,0 +1,55 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This circuit uses a "555" integrated circuit to produce a low-frequency square-wave voltage signal (seen between the "Out" terminal of the chip and ground), which is used to turn a pair of transistors on and off to flash a large lamp.  Predict how this circuit will be affected as a result of the following faults.  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03715x01.eps}$$
+
+\medskip
+\item{$\bullet$} Transistor $Q_1$ fails open (collector-to-emitter):
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_2$ fails open (collector-to-emitter):
+\vskip 5pt
+\item{$\bullet$} Resistor $R_3$ fails open:
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_1$ fails shorted (collector-to-emitter):
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03715}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Transistor $Q_1$ fails open (collector-to-emitter): {\it Lamp remains off, no current through any terminal of $Q_2$.}
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_2$ fails open (collector-to-emitter): {\it Lamp remains off, no current through any terminal of $Q_2$, normal base current through $Q_1$, no current through collector of $Q_1$.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_3$ fails open: {\it Lamp remains off, no current through any terminal of $Q_1$ or $Q_2$.}
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_1$ fails shorted (collector-to-emitter): {\it Lamp remains on, full "on" current levels through terminals of $Q_1$ and $Q_2$.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of fault in lamp flasher circuit
+
+%(END_NOTES)
+
+

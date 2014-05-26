@@ -1,0 +1,54 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In an SOP expression, the minimum requirement for the expression's total value to be equal to 1 is that at least one of the product terms must be equal to 1.  For instance, in the following SOP expression, we know that the value will be equal to 1 if $ABC = 1$ or if $A\overline{B}\> \overline{C} = 1$ or if $AB\overline{C} = 1$:
+
+$$ABC + A\overline{B}\> \overline{C} + AB\overline{C}$$
+
+What is the minimum requirement for a POS expression to be equal to 0?  Take the following POS expression, for instance:
+
+$$(A + B + C)(A + \overline{B} + C)(\overline{A} + B + C)$$
+
+At the very least, what has to occur in order for this expression to equal 0?
+
+\underbar{file 01337}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+At least one of the sum terms must be equal to zero.
+
+\vskip 10pt
+
+Follow-up question: in order for one of these terms to be equal to zero, thus making the whole expression equal to zero, what must be true about each of the Boolean literals (a {\it literal} is either a variable or the complement of a variable) within at least one of the sum terms?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question foreshadows the derivation of POS expressions from truth tables.  It also parallels the subject of polynomial roots in real-number algebra.  For instance, the polynomial $x^2 - 2x - 8$ may be factored as such:
+
+$$(x - 4)(x + 2)$$
+
+If we were to set this equation equal to zero, the {\it roots} of the equation would be 4 and -2: the values for $x$ which would make either one of the terms equal to zero.
+
+You may find this mini-review of "normal" algebra to be helpful to your students, as they try to understand POS expressions.
+
+%INDEX% Product-of-Sums expression, Boolean algebra (minimum requirement for a 0 result)
+%INDEX% POS expression, Boolean algebra (minimum requirement for a 0 result)
+%INDEX% Sum-of-Products expression, Boolean algebra (minimum requirement for a 1 result)
+%INDEX% SOP expression, Boolean algebra (minimum requirement for a 1 result)
+
+%(END_NOTES)
+
+

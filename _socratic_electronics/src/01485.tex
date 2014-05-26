@@ -1,0 +1,51 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In some applications where transistors must amplify very high currents, bipolar transistors are paralleled together so that their current ratings add:
+
+$$\epsfbox{01485x01.eps}$$
+
+However, if transistors are directly paralleled as shown, reliability problems may develop.  A better way of "ganging" multiple transistors together is to connect a low-value {\it swamping resistor} to each emitter terminal:
+
+$$\epsfbox{01485x02.eps}$$
+
+Explain what purpose these resistors serve in a paralleled transistor network.  And what exactly does "swamping" mean, anyway?
+
+\underbar{file 01485}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+{\it Swamping} is a design term, meaning to introduce a quantity or quantities into a circuit such that any intrinsic differences between components become insignificant in comparison.  In this circuit, the swamping resistors help ensure that the total controlled current is more evenly split between the three transistors.
+
+\vskip 10pt
+
+Follow-up question: can you think of any disadvantages to using swamping resistors in high-power circuitry?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+I once had the misfortune of performing component-level repair on a large power inverter (208 volt, three-phase) that used large "banks" of directly paralleled bipolar transistors for the final switching elements.  These inverters had a bad habit of destroying transistors, and I noticed that invariably there would be only one or two transistors out of about a dozen on each heat sink rail that were blown -- and I mean {\it blown}, holes blasted through the metal TO-3 cases! -- while the rest were perfectly fine.  These transistor banks did not employ swamping resistors, and so the current distribution between them was quite unbalanced.
+
+In case students ask, you should let them know that swamping resistors are not just used in transistor banks.  Large rectifier diode banks (where multiple diodes are paralleled) also benefit from swamping resistors.
+
+As for applications where swamping resistors are impractical, it is possible to gain better reliability by using more transistors (or diodes) than necessary with an even current split.  In other words, over-build the circuit.
+
+%INDEX% BJTs, paralleling for extra current
+%INDEX% Swamping resistor, parallel transistors
+%INDEX% Transistors, paralleling for extra current
+
+%(END_NOTES)
+
+

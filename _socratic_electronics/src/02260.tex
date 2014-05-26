@@ -1,0 +1,71 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The Fourier series for a square wave is as follows:
+
+$$v_{square} = {4 \over \pi}V_m \left(\sin \omega t + {1 \over 3}\sin 3 \omega t + {1 \over 5}\sin 5 \omega t + {1 \over 7} \sin 7 \omega t + \cdots + {1 \over n} \sin n \omega t \right)$$
+
+\noindent
+Where,
+
+$V_m$ = Peak amplitude of square wave
+
+$\omega$ = Angular velocity of square wave (equal to $2 \pi f$, where $f$ is the fundamental frequency)
+
+$n$ = An odd integer
+
+\vskip 10pt
+
+Electrically, we might represent a square-wave voltage source as a circle with a square-wave symbol inside, like this:
+
+$$\epsfbox{02260x01.eps}$$
+
+Knowing the Fourier series of this voltage, however, allows us to represent the same voltage source as a set of series-connected voltage sources, each with its own (sinusoidal) frequency.  Draw the equivalent schematic for a 10 volt (peak), 200 Hz square-wave source in this manner showing only the first four harmonics, labeling each sinusoidal voltage source with its own RMS voltage value and frequency:
+
+\vskip 60pt
+
+Hint: $\omega = 2 \pi f$
+
+\vskip 10pt
+
+\underbar{file 02260}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{02260x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+To be honest, the four-harmonic equivalent circuit is a rather poor approximation for a square wave.  The real purpose of this question, though, is to have students relate the sinusoidal terms of a common Fourier series (for a square wave) to a schematic diagram, translating between angular velocity and frequency, peak values and RMS values.
+
+Please note that the voltage magnitudes shown in the answer are {\it RMS} and not peak!  If you were to calculate peak sinusoid source values, you would obtain these results:
+
+\medskip
+\goodbreak
+\item{$\bullet$} 1st harmonic: ${40 \over \pi}$ volts peak = 12.73 volts peak
+\vskip 5pt
+\item{$\bullet$} 3rd harmonic: ${40 \over {3 \pi}}$ volts peak = 4.244 volts peak
+\vskip 5pt
+\item{$\bullet$} 5th harmonic: ${40 \over {5 \pi}}$ volts peak = 2.546 volts peak
+\vskip 5pt
+\item{$\bullet$} 7th harmonic: ${40 \over {7 \pi}}$ volts peak = 1.819 volts peak
+\medskip
+
+%INDEX% Fourier series, electrically defined
+
+%(END_NOTES)
+
+

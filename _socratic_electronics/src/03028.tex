@@ -1,0 +1,69 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This sound-controlled lamp has a problem.  A loud noise (such as a hand clap) is supposed to toggle it on and off, but instead it never turns on no matter how loud you clap.
+
+$$\epsfbox{03028x01.eps}$$
+
+You begin troubleshooting by plugging it in and noticing that the lamp does not turn on.  You clap your hands loudly to verify the problem, and sure enough the lamp remains off.  Listening closely, you also notice that the relay $RLY_1$ does not appear to "click" either when a hand-clap is presented before the microphone.  
+
+Connecting an oscilloscope to test point TP4 (with the ground clip connected to TP5), you measure a strong pulse (peak-to-peak amplitude extending from 0.3 volts to 5 volts -- almost the full range of the power supply rails) every time you clap your hands.  Touching the scope probe to test point TP7, you read 5 volts DC, then 0 volts DC after clapping your hands once, then 5 volts DC again when clapping your hands once more.  From this information, identify two possible causes that could account for the problem and all measured values in this circuit.
+
+Also, identify the next logical test point(s) from those shown on the schematic that you would check with some electronic instrument (voltmeter, ohmmeter, or oscilloscope), and why you would check there.  Note that there may be more than one correct answer to this part of the question!
+
+\medskip
+\goodbreak
+\item{$\bullet$} Possible causes of the problem
+\item{1.}
+\item{2.} 
+\medskip
+
+\medskip
+\item{$\bullet$} Next logical test point(s) to check, with reason why you would check there
+\item{Next point(s):}
+\item{Reason:}
+\medskip
+
+\underbar{file 03028}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Note: the following answers are not exhaustive.  There may be more circuit elements possibly at fault than what is listed here!
+
+\medskip
+\goodbreak
+\item{$\bullet$} Possible causes of the problem
+\item{1.} $\overline{Q}$ output failed low on $U_1$
+\item{2.} Transistor $Q_2$ failed open
+\item{3.} Relay coil failed open
+\medskip
+
+\medskip
+\goodbreak
+\item{$\bullet$} Next logical test point(s) to check, with reason why you would check there
+\item{Next point(s):} TP8 (flip-flop $\overline{Q}$ output) with voltmeter or scope, to see if the transistor is being "told" to turn on or if the flip-flop is not sending the proper control signal to it.
+\item{Next point(s):} TP10 (transistor $Q_2$ drain) with voltmeter or scope, as a mid-point between $U_1$ and the relay coil power source (TP9) to divide the output problem in half.  Normally, TP10 should read low (grounded) when the light is on and high (floating) when the light is off.
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+{\bf This question is intended for exams only and not worksheets!}.
+
+%INDEX% Troubleshooting, sound-activated lamp circuit
+
+%(END_NOTES)
+
+

@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+This one-way street is equipped with an alarm to signal drivers going the wrong way.  The sensors work by light beams being broken when an automobile passes between them.  The distance between the sensors is less than the length of a normal car, which means as a car passes by, first one beam is broken, then both beams become broken, then only the last beam is broken, then neither beam is broken.  The sensors are phototransistors sensitive only to the narrow spectrum of light emitted by the laser light sources, so that ambient sunlight will not "fool" them:
+
+$$\epsfbox{01361x01.eps}$$
+
+Both sensors connect to inputs on a D-type latch, which is then connected to some other circuitry to sound an alarm when a car goes down the road the wrong way:
+
+$$\epsfbox{01361x02.eps}$$
+
+The first question is this: which way is the {\it correct} way to drive down this street?  From left to right, or from right to left (as shown in the illustration)?
+
+\vskip 10pt
+
+The second question is, how will the system respond if sensor A's laser light source fails?  What will happen if sensor B's laser light source fails?
+
+\underbar{file 01361}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Left-to-right is the correct driving direction for this street.
+
+\vskip 10pt
+
+If sensor A's light source fails, the alarm will never activate.  A failed light source for sensor B will have different effects on the system, depending on whether sensor A was sending a "high" or a "low" signal to the latch circuit at the time B's light source failed.  I'll let you figure out which way triggers the alarm!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question is a great problem-solving exercise.  Students must figure out how to set it up so that they may apply the rules of latch circuits and gate circuits, then they must analyze it correctly!  Devote plenty of classroom time to a discussion of this problem.
+
+Students may show a reluctance to draw a timing diagram when they approach this problem, even when they realize the utility of such a diagram.  Instead, many will try to figure the circuit out just by looking at it.  Note the emphasis on the word "try."  This circuit is much more difficult to figure out without a timing diagram!  Withhold your explanation of this circuit until each student shows you a timing diagram for it.  Emphasize the fact that this step, although it consumes a bit of time, is actually a time-saver in the end.
+
+It is easy as an instructor to focus so intently on teaching electronic theory that other practical matters become neglected.  Electronic technicians and engineers do not simply work on circuits; they work on {\it systems} that happen to employ electronic circuits.  Ultimately, nearly every electronic circuit they work with will have some relationship to the physical world.  Problem solving exercises in school must include scenarios similar to real life, where conditions and functions other than electronics have a role in determining the solution.  Only by exposing students to problems requiring them to think beyond pure electronics will they become adequately prepared to meet the challenges of their future careers.
+
+%INDEX% D latch, practical application for
+
+%(END_NOTES)
+
+

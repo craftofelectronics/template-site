@@ -1,8 +1,6 @@
 ---
 todo: sleep
 file: reading
-image: sleeping-dog.jpg
-layout: default
 ---
 
 {% callout warning %}

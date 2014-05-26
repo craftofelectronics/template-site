@@ -1,0 +1,63 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Predict how the operation of this operational amplifier circuit will be affected as a result of the following faults.  Specifically, identify whether the output voltage ($V_{out}$) will move in a positive direction (closer to the +V rail) or in a negative direction (closer to the -V rail).  Consider each fault independently (i.e. one at a time, no multiple faults):
+
+$$\epsfbox{03766x01.eps}$$
+
+\medskip
+\item{$\bullet$} Diode $D_1$ fails open:
+\vskip 5pt
+\item{$\bullet$} Resistor $R_1$ fails shorted:
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_2$ fails shorted (drain-to-source):
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_5$ fails shorted (collector-to-emitter):
+\vskip 5pt
+\item{$\bullet$} Resistor $R_2$ fails open:
+\vskip 5pt
+\item{$\bullet$} Current source $I_2$ fails open:
+\medskip
+
+For each of these conditions, explain {\it why} the resulting effects will occur.
+
+\underbar{file 03766}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Diode $D_1$ fails open: {\it $V_{out}$ goes positive.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_1$ fails shorted: {\it $V_{out}$ goes negative.}
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_2$ fails shorted (drain-to-source): {\it $V_{out}$ goes negative.}
+\vskip 5pt
+\item{$\bullet$} Transistor $Q_5$ fails shorted (collector-to-emitter): {\it $V_{out}$ goes positive.}
+\vskip 5pt
+\item{$\bullet$} Resistor $R_2$ fails open: {\it $V_{out}$ goes negative.}
+\vskip 5pt
+\item{$\bullet$} Current source $I_2$ fails open: {\it $V_{out}$ goes negative.}
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are.  Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data.  Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.
+
+%INDEX% Troubleshooting, predicting effects of internal fault in TL08x opamp circuit
+
+%(END_NOTES)
+
+

@@ -1,0 +1,40 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Dynamic RAM chips often contain more addresses than they have address lines to select them with.  For example, the MCM516100 DRAM chip has an organization of 16M $\times$ 1, yet it only has twelve address lines.
+
+Explain how it is possible to select one out of 16 {\it million} unique addresses while using only twelve address lines.  Hint: the technique is known as {\it address multiplexing}.  Be sure to refer to one or more dynamic RAM datasheets when doing your research!
+
+\underbar{file 01451}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+With address multiplexing, the address lines going in to the memory chip are used {\it twice} to select any arbitrary address, bringing in 12 bits worth of the 24-bit address at a time.
+
+\vskip 10pt
+
+Follow-up question: explain how the memory chip "knows" which 12 bits of the address are being read at any given time.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Explain to your students that address multiplexing is not technically limited to application in {\it dynamic} RAM chips only, but that it is usually applied there because of the high address density afforded by dynamic RAM technology.  Most static RAMS, by contrast, are not dense enough to require address lines serve double-duty!
+
+%INDEX% Address multiplexing
+%INDEX% Multiplexing, memory address
+
+%(END_NOTES)
+
+

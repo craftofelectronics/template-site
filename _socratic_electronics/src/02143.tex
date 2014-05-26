@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The following schematic diagram shows a simple {\it crowbar circuit} used to protect a sensitive DC load from accidental overvoltages in the supply power (+V):
+
+$$\epsfbox{02143x01.eps}$$
+
+Here, the UJT serves as an overvoltage detection device, triggering the SCR when necessary.  Explain how this circuit works, and what the function of each of its components is.
+
+\underbar{file 02143}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\goodbreak
+\item{$\bullet$} $F_1$ protects the voltage source from damage
+\item{$\bullet$} $R_1$ and $R_2$ provide a divided sample of +V
+\item{$\bullet$} $R_3$ and $D_1$ provide a reference ("threshold") voltage
+\item{$\bullet$} $Q_1$ detects the overvoltage condition
+\item{$\bullet$} $R_4$ de-sensitizes the SCR gate
+\item{$\bullet$} $SCR_1$ clamps the output voltage
+\medskip
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In this question, students must piece together their knowledge of both UJTs and SCRs to analyze the function of the circuit.  Perhaps the most complex aspect of it is the divided voltage sensing, whereby the UJT senses only a fraction of the supply voltage in determining whether to trigger or not.
+
+%INDEX% Crowbar circuit
+%INDEX% UJT, used as a threshold triggering device
+
+%(END_NOTES)
+
+

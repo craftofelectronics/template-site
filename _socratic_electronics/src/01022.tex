@@ -1,0 +1,54 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+A mechanic has an idea for upgrading the electrical system in an automobile originally designed for 6 volt operation.  He wants to upgrade the 6 volt headlights, starter motor, battery, etc, to 12 volts, but wishes to retain the original 6-volt generator and regulator.  Shown here is the original 6-volt electrical system:
+
+$$\epsfbox{01022x01.eps}$$
+
+The mechanic's plan is to replace all the 6-volt loads with 12-volt loads, and use two 6-volt batteries connected in series, with the original (6-volt) regulator sensing voltage across only one of those batteries:
+
+$$\epsfbox{01022x02.eps}$$
+
+Explain how this system is supposed to work.  Do you think the mechanic's plan is practical, or are there any problems with it?
+
+\underbar{file 01022}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+So long as the generator is capable of outputting 12 volts, this system will work!
+
+\vskip 10pt
+
+Challenge question: identify factors that may prevent the generator from outputting enough voltage with the regulator connected as shown in the last diagram.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+In this question, we see a foreshadowing of op-amp theory, with the regulator's negative feedback applied to what is essentially a voltage divider (two equal-voltage batteries being charged by the generator).  The regulator circuit senses only 6 volts, but the generator outputs 12 volts.
+
+Fundamentally, the focus of this question is {\it negative feedback} and one of its many practical applications in electrical engineering.  The depth to which you discuss this concept will vary according to the students' readiness, but it is something you should at least mention during discussion on this question.
+
+This idea actually came from one of the readers of my textbook series \underbar{Lessons In Electric Circuits}.  He was trying to upgrade a vehicle from 12 volts to 24 volts, but the principle is the same.  An important difference in his plan was that he was still planning on having some 12-volt loads in the vehicle (dashboard gauges, starter solenoid, etc.), with the full 24 volts supplying only the high-power loads (such as the starter motor itself):
+
+$$\epsfbox{01022x03.eps}$$
+
+As a challenge for your students, ask them how well they think {\it this} system would work.  It is a bit more complex than the system shown in the question, due to the two different load banks.
+
+%INDEX% Negative feedback, in DC generator voltage regulation system
+%INDEX% Voltage regulator, DC generator
+
+%(END_NOTES)
+
+

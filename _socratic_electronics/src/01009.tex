@@ -1,0 +1,68 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+A {\it Rogowski Coil} is essentially an air-core current transformer that may be used to measure DC currents as well as AC currents.  Like all current transformers, it measures the current going through whatever conductor(s) it encircles.
+
+Normally transformers are considered AC-only devices, because electromagnetic induction requires a {\it changing} magnetic field (${d \phi \over dt}$) to induce voltage in a conductor.  The same is true for a Rogowski coil: it produces a voltage only when there is a change in the measured current.  However, we may measure any current (DC or AC) using a Rogowski coil if its output signal feeds into an integrator circuit as shown:
+
+$$\epsfbox{01009x01.eps}$$
+
+Connected as such, the output of the integrator circuit will be a direct representation of the amount of current going through the wire.
+
+\vskip 10pt
+
+Explain why an integrator circuit is necessary to condition the Rogowski coil's output so that output voltage truly represents conductor current.
+
+\underbar{file 01009}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The coil produces a voltage proportional to the conductor current's rate of change over time ($v_{coil} = M {di \over dt}$).  The integrator circuit produces an output voltage changing at a rate proportional to the input voltage magnitude (${dv_{out} \over dt} \propto v_{in}$).  Substituting algebraically: 
+
+$${dv_{out} \over dt} = M{di \over dt}$$
+
+\vskip 10pt
+
+Review question: Rogowski coils are rated in terms of their {\it mutual inductance} ($M$).  Define what "mutual inductance" is, and why this is an appropriate parameter to specify for a Rogowski coil.
+
+\vskip 10pt
+
+Follow-up question: the operation of a Rogowski coil (and the integrator circuit) is probably easiest to comprehend if one imagines the measured current starting at 0 amps and linearly increasing over time.  Qualitatively explain what the coil's output would be in this scenario and then what the integrator's output would be.
+
+\vskip 10pt
+
+Challenge question: the integrator circuit shown here is an "active" integrator rather than a "passive" integrator.  That is, it contains an amplifier (an "active" device).  We could use a passive integrator circuit instead to condition the output signal of the Rogowski coil, but only if the measured current is purely AC.  A passive integrator circuit would be insufficient for the task if we tried to measure a DC current -- only an active integrator would be adequate to measure DC.  Explain why.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This question provides a great opportunity to review Faraday's Law of electromagnetic induction, and also to apply simple calculus concepts to a practical problem.  The coil's natural function is to {\it differentiate} the current going through the conductor, producing an output voltage proportional to the current's rate of change over time ($v_{out} \propto {di_{in} \over dt}$).  The integrator's function is just the opposite.  Discuss with your students how the integrator circuit "undoes" the natural calculus operation inherent to the coil (differentiation).
+
+The subject of Rogowski coils also provides a great opportunity to review what mutual inductance is.  Usually introduced at the beginning of lectures on transformers and quickly forgotten, the principle of mutual inductance is at the heart of every Rogowski coil: the coefficient relating instantaneous current change through one conductor to the voltage induced in an {\it adjacent} conductor (magnetically linked).
+
+$$v_2 = M {di_1 \over dt}$$
+
+Unlike the iron-core current transformers (CT's) widely used for AC power system current measurement, Rogowski coils are inherently linear.  Being air-core devices, they lack the potential for saturation, hysteresis, and other nonlinearities which may corrupt the measured current signal.  This makes Rogowski coils well-suited for high frequency (even RF!) current measurements, as well as measurements of current where there is a strong DC bias current in the conductor.  By the way, this DC bias current may be "nulled" simply by re-setting the integrator after the initial DC power-up!
+
+If time permits, this would be an excellent point of departure to other realms of physics, where op-amp signal conditioning circuits can be used to "undo" the calculus functions inherent to certain physical measurements (acceleration vs. velocity vs. position, for example).
+
+%INDEX% Rogowski coil
+
+%(END_NOTES)
+
+

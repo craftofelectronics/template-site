@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+The {\it superposition principle} describes how AC signals of different frequencies may be "mixed" together and later separated in a linear network, without one signal distorting another.  DC may also be similarly mixed with AC, with the same results.
+
+This phenomenon is frequently exploited in computer networks, where DC power and AC data signals (on-and-off pulses of voltage representing 1-and-0 binary bits) may be combined on the same pair of wires, and later separated by filter circuits, so that the DC power goes to energize a circuit, and the AC signals go to another circuit where they are interpreted as digital data:
+
+$$\epsfbox{00612x01.eps}$$
+
+Filter circuits are also necessary on the transmission end of the cable, to prevent the AC signals from being shunted by the DC power supply's capacitors, and to prevent the DC voltage from damaging the sensitive circuitry generating the AC voltage pulses.
+
+Draw some filter circuits on each end of this two-wire cable that perform these tasks, of separating the two sources from each other, and also separating the two signals (DC and AC) from each other at the receiving end so they may be directed to different loads:
+
+$$\epsfbox{00612x02.eps}$$
+
+\underbar{file 00612}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+$$\epsfbox{00612x03.eps}$$
+
+\vskip 10pt
+
+Follow-up question \#1: how might the {\it superposition theorem} be applied to this circuit, for the purposes of analyzing its function?
+
+\vskip 10pt
+
+Follow-up question \#2: suppose one of the capacitors were to fail shorted.  Identify what effect, if any, this would have on the operation of the circuit.  What if two capacitors were to fail shorted?  Would it matter if those two capacitors were both on either the transmitting or the receiving side, or if one of the failed capacitors was on the transmitting side and the other was on the receiving side?
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Discuss with your students why inductors were chosen as filtering elements for the DC power, while capacitors were chosen as filtering elements for the AC data signals.  What are the relative reactances of these components when subjected to the respective frequencies of the AC data signals (many kilohertz or megahertz) versus the DC power supply (frequency = 0 hertz).
+
+This question is also a good review of the "superposition theorem," one of the most useful and easiest-to-understand of the network theorems.  Note that no quantitative values need be considered to grasp the function of this communications network.  Analyze it {\it qualitatively} with your students instead.
+
+%INDEX% Superposition theorem, conceptual with AC + DC
+
+%(END_NOTES)
+
+

@@ -1,0 +1,53 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+While many students find it easy to understand how the value of $R$ affects the time constant of a resistor-capacitor charging circuit (more $R$ means slower charging; less $R$ means faster charging), the opposite behavior of resistor-inductor circuits (less $R$ means slower charging; more $R$ means faster charging) seems incomprehensible:
+
+$$\epsfbox{03533x01.eps}$$
+
+Resistor-capacitor circuit charging behavior probably makes more sense to students because they realize resistance controls charging current, which in turn directly effects how quickly the capacitor's voltage may rise:
+
+$$i = C {dv \over dt}$$
+
+Current ($i$) is proportional to the rate of change of voltage ($dv \over dt$).  Since current is inversely proportional to resistance in a circuit powered by a voltage source, so must be the capacitor charging rate.
+
+\vskip 10pt
+
+One way to help make the inductor charging circuit more sensible is to replace the series voltage-source/resistor combination with its Norton equivalent, a parallel current-source/resistor combination:
+
+$$\epsfbox{03533x02.eps}$$
+
+Re-analyze the circuit in this form, and try to explain why more resistance makes the inductor charging time faster and less resistance makes the inductor charging time slower.
+
+\underbar{file 03533}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The answer relates to this equation (of course!):
+
+$$v = L {di \over dt}$$
+
+The inductor's "charge" is a direct function of current, the change of which (rate of charge) is directly proportional to the amount of voltage impressed across the inductor.  In a Norton equivalent circuit, the output voltage is directly proportional to the internal resistance.  So, a greater resistance results in a faster charging time.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+My answer could stand to be a little more detailed, but the main idea here is to have students piece together their own argument explaining why inductor charging rate is directly proportional to resistance.  Of course, this is yet another example of the usefulness of Th\'evenin/Norton equivalent circuits.  Sometimes a simple source conversion from one form to the other is all that is needed to achieve a conceptual breakthrough!
+
+%INDEX% Time constant, how to calculate for LR circuit
+
+%(END_NOTES)
+
+

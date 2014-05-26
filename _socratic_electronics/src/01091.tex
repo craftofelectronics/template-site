@@ -1,0 +1,40 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose a student builds the following TRIAC circuit and finds that it does not work:
+
+$$\epsfbox{01091x01.eps}$$
+
+When the pushbutton switch is actuated, nothing happens.  What is wrong with this circuit?  Hint: the problem in this circuit is very subtle, and may be very difficult to discern.
+
+\underbar{file 01091}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Terminals MT1 and MT2 on the TRIAC need to be reversed, like this:
+
+$$\epsfbox{01091x02.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This aspect of TRIACs is often omitted from texts on thyristor devices, but it is important for students to understand.  Even though TRIACs are bilateral devices, it still {\it does} matter where the triggering voltage is applied (between Gate and MT1, versus Gate and MT2).
+
+%INDEX% Power control circuit, TRIAC
+%INDEX% Troubleshooting, TRIAC power circuit
+
+%(END_NOTES)
+
+

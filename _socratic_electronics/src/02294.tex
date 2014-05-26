@@ -1,0 +1,46 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Determine the "trip" voltage of this comparator circuit: the value of input voltage at which the opamp's output changes state from fully positive to fully negative or visa-versa:
+
+$$\epsfbox{02294x01.eps}$$
+
+Now, what do you suppose would happen if the output were fed back to the noninverting input through a resistor?  You answer merely has to be qualitative, not quantitative:
+
+$$\epsfbox{02294x02.eps}$$
+
+For your information, this circuit configuration is often referred to as a {\it Schmitt trigger}.
+
+\underbar{file 02294}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+With no feedback resistor, the "trip" voltage would be 9.21 volts.  With the feedback resistor in place, the "trip" voltage would change depending on the state of the opamp's output!
+
+\vskip 10pt
+
+Follow-up question: describe what effect this changing "trip" voltage value will have on the operation of this comparator circuit.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Schmitt trigger circuits are very popular for their ability to "cleanly" change states given a noisy input signal.  I have intentionally avoided numerical calculations in this question, so that students may concentrate on the {\it concept} of positive feedback and how it affects this circuit.
+
+%INDEX% Positive feedback, in opamp comparator circuit
+%INDEX% Schmitt trigger, made from an opamp (comparator)
+
+%(END_NOTES)
+
+

@@ -1,0 +1,50 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+$$\epsfbox{01968x01.eps}$$
+
+\underbar{file 01968}
+\vfil \eject
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use circuit simulation software to verify your predicted and measured parameter values.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Use a dual-voltage, regulated power supply to supply power to the opamp.
+
+I have had good success using the following values:
+
+\medskip
+\item{$\bullet$} +V = +12 volts
+\item{$\bullet$} -V = -12 volts
+\item{$\bullet$} $V_{TP1}$ = Any voltage well between +V and -V
+\item{$\bullet$} $R_{pot}$ = 10 k$\Omega$ linear potentiometer
+\item{$\bullet$} $U_1$ = TL081 BiFET operational amplifier (or one-half of a TL082)
+\medskip
+
+In order to demonstrate latch-up, you must have an op-amp capable of latching up.  Thus, you should avoid op-amps such as the LM741 and LM1458.  I recommend using an op-amp such as the TL082 for this exercise because it not only latches up, but also does not swing its output voltage rail-to-rail.  Students need to see both these common limitations when they first learn how to use op-amps.
+
+In case your students ask, test point {\bf TP1} is for measuring the output of the potentiometer rather than as a place to inject external signals into.  All you need to connect to {\bf TP1} is a voltmeter!
+
+An extension of this exercise is to incorporate troubleshooting questions.  Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students' results by asking them to predict the consequences of certain circuit faults.
+
+%INDEX% Assessment, performance-based (Opamp voltage follower)
+
+%(END_NOTES)
+
+

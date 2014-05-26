@@ -1,0 +1,47 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+In the early 1800's, French mathematician Jean Fourier discovered an important principle of waves that allows us to more easily analyze non-sinusoidal signals in AC circuits.  Describe the principle of the {\it Fourier series}, in your own words.
+
+\underbar{file 00650}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\vskip 10pt {\narrower \noindent \baselineskip5pt
+
+``{\it Any periodic waveform}, no matter how complex, is equivalent to a series of sinusoidal waveforms added together at different amplitudes and different frequencies, plus a DC component.''
+
+\par} \vskip 10pt
+
+\vskip 10pt
+
+Follow-up question: what does this equation represent?
+
+$$f(t) = A_0 + (A_1 \sin \omega t) + (B_1 \cos \omega t) + (A_2 \sin 2 \omega t) + (B_2 \cos 2 \omega t) + \dots$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+So far, all the "tools" students have learned about reactance, impedance, Ohm's Law, and such in AC circuits assume sinusoidal waveforms.  Being able to equate any non-sinusoidal waveform to a series of sinusoidal waveforms allows us to apply these "sinusoidal-only" tools to {\it any} waveform, theoretically.
+
+An important caveat of Fourier's theorem is that the waveform in question must be {\it periodic}.  That is, it must repeat itself on some fixed period of time.  Non-repetitive waveforms do not reduce to a definite series of sinusoidal terms.  Fortunately for us, a great many waveforms encountered in electronic circuits are periodic and therefore may be represented by, and analyzed in terms of, definite Fourier series.
+
+It would be good to mention the so-called {\it FFT} algorithm in this discussion while you're on this topic: the digital algorithm that computers use to separate any sampled waveform into multiple constituent sinusoidal frequencies.  Modern computer hardware is able to easily implement the FFT algorithm, and it finds extensive use in analytical and test equipment.
+
+%INDEX% Fourier series, conceptually defined
+
+%(END_NOTES)
+
+

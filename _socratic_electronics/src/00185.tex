@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Suppose a technician were troubleshooting the following circuit, whose light bulb refused to light up:
+
+$$\epsfbox{00185x01.eps}$$
+
+The technician records their steps on a piece of paper divided into two columns: {\bf Observations}, and {\bf Conclusions}, drawing a horizontal line underneath each conclusion after it is made:
+
+$$\epsfbox{00185x02.eps}$$
+
+Critique this technician's troubleshooting job, noting any errors or unnecessary steps.
+
+\underbar{file 00185}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The first step and conclusion, while seemingly unnecessary, are actually good to check.  Just because someone tells you there is a problem with a circuit does not necessarily mean there is a problem with it.  People can make mistakes, and it is usually a good idea to verify the nature of the problem with a system before troubleshooting.
+
+The second conclusion ("Power supply is functioning properly") is understated.  In actuality, the presence of voltage between these two points proves that not only is the power supply functioning properly, but both wires between the power supply and terminals TB1-1 and TB2-1 have good continuity, and the connections between the wires and their respective terminals are good as well.  This eliminates several portions of the circuit as being problematic.
+
+Checking for voltage across the light bulb terminals is a good step, but the lack of voltage does not prove the light bulb is not failed!  All it means is that there is some other problem between the light bulb and the last two connections where voltage was measured (between TB1-1 and TB2-1).  For all we know at this point, the light bulb could be failed {\it as well} as there being a failure somewhere else in the circuit.
+
+Checking for voltage across the switch is another good step, but the lack of voltage there does not prove that the switch has good continuity, any more than a lack of voltage proved the light bulb's filament had good continuity either.  There still could be multiple "opens" in this circuit.
+
+The presence of voltage between TB2-1 and TB2-3 narrows the possibility of failure in the circuit quite a bit.  Knowing that there is voltage between these two terminals proves there is good continuity from TB2-3 to TB1-3, through the switch, and all the way back to the power supply.  From step 2 we already know there is good continuity from TB2-1 back to the power supply as well.  This conclusively tells us that the problem(s) must lie between TB2-1 and TB2-3.
+
+It is a wasted step to check for voltage between TB1-3 and TB2-1.
+
+The measurement of voltage between TB2-1 and TB2-2 proves the location of the failure: an "open" between those two points.  It also proves that there are no other "open" failures in the circuit.
+
+The final step documenting replacement of the wire between TB2-1 and TB2-2, while not essential, is not really wasted, either.  Troubleshooting journals such as this are helpful when searching for complex problems in large systems, where more than one person may have to work on finding the problem(s).  If there is more than one failure in a system, it is helpful to document the repair for the benefit of anyone else working on solving the problem later!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+Circuit troubleshooting is the highest level of thinking required of many electrical and electronics professionals: to identify faults efficiently based on a knowledge of fundamental principles and test equipment usage.  Good troubleshooters are rare, and in my opinion that has more to do with the lack of effective technical education than it does a lack of natural ability. 
+
+It is not enough to merely tell students what they should do in troubleshooting, or to give them easy-to-follow steps.  Students must be placed in scenarios where they are required to {\it think} their way through to a solution.  Fortunately, electrical circuit troubleshooting is an activity that works well for small groups of students to engage in as well as individual students.  A "virtual" troubleshooting exercise such as this one is a good way to start students thinking in the right ways to becoming effective troubleshooters.
+
+%INDEX% Troubleshooting, simple circuit
+
+%(END_NOTES)
+
+

@@ -1,0 +1,60 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+If we need to produce a discrete logic signal ("high" or "low") from a mechanical switch, the most direct way of doing so is to use a single-pole, double-throw switch (SPDT) like this:
+
+$$\epsfbox{03001x01.eps}$$
+
+In the "High" position, the switch directly connects the signal line to +V, ensuring a high logic state; in the "Low" position, the switch directly connects the signal line to ground, ensuring a low logic state.  What could be simpler?
+
+However, often a SPDT switch is not feasible and we must use a SPST (single-pole, single-throw) switch instead:
+
+$$\epsfbox{03001x02.eps}$$
+
+A problem often arises with such configurations because in the open position there is neither a connection to +V nor ground.  In other words, these two SPST configurations produce the exact same indeterminate logic state ("floating") when their respective switches are open.  To remedy this, resistors are often added to such circuits:
+
+$$\epsfbox{03001x03.eps}$$
+
+Explain what functions the {\it pulldown} and {\it pullup} resistors serve, and also why they are referred to by those names.
+
+\underbar{file 03001}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+The "pulldown" and "pullup" resistors do exactly what their names imply: they {\it pull} the logic state of the wire in the direction opposite what the switch does when closed.
+
+\vskip 10pt
+
+Follow-up question: to better understand the purpose of these resistors, examine the following circuits without pulldown and pullup resistors to determine what the logic states of the wires will be in both switch positions.  Then, add either pulldown or pullup resistors and re-examine the circuits:
+
+\vskip 10pt
+
+Challenge question: how does one calculate the proper resistance (in ohms) for a pulldown or pullup resistor?  Will any size work, or is there such a thing as too large or too small?
+
+$$\epsfbox{03001x04.eps}$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+If students do not understand the purpose of these resistors after reading the question and researching their texts, they should when they see the follow-up question.  Discuss this question with your students, for the concept of pulldown and pullup resistors is one that confuses some students.
+
+%INDEX% Pulldown resistor
+%INDEX% Pullup resistor
+%INDEX% Resistor, pulldown (digital)
+%INDEX% Resistor, pullup (digital)
+
+%(END_NOTES)
+
+

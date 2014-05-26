@@ -1,0 +1,57 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+If an electrical device is modeled by fixed values of resistance, inductance, and/or capacitance, it is not difficult to calculate its power factor:
+
+$$\epsfbox{02180x01.eps}$$
+
+$$\hbox{P.F.} = {R \over {\sqrt{R^2 + ({\omega L})^2}}}$$
+
+In real life, though, things are not so simple.  An electric motor will not come labeled with an ideal-component model expressed in terms of $R$ and $L$.  In fact, that would be impossible, as the resistance $R$ in the circuit model represents the sum total of mechanical work being done by the motor in addition to the energy losses.  These variables change depending on how heavily loaded the motor is, meaning that the motor's power factor will also change with mechanical loading.
+
+However, it may be very important to calculate power factor for electrical loads such as multi-thousand horsepower electric motors.  How is this possible to do when we do not know the equivalent circuit configuration or values for such a load?  In other words, how do we determine the power factor of a {\it real} electrical device as it operates?
+
+$$\epsfbox{02180x02.eps}$$
+
+Of course, there do exist special meters to measure true power (wattmeters) and reactive power ("var" meters), as well as power factor directly.  Unfortunately, these instruments may not be readily available for our use.  What we need is a way to measure power factor using nothing more than standard electrical/electronic test equipment such as multimeters and oscilloscopes.  How may we do this?
+
+\vskip 10pt
+
+Hint: remember that the angle $\Theta$ of the $S$-$Q$-$P$ "power triangle" is the same as the angle in a circuit's $Z$-$X$-$R$ impedance triangle, and also the same as the phase shift angle between total voltage and total current.
+
+\underbar{file 02180}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+Use an oscilloscope to measure the circuit's $\Theta$ (phase shift between voltage and current), and then calculate the power factor from that angle.
+
+\vskip 10pt
+
+Follow-up question \#1: explain how you could safely measure currents in the range of hundreds or thousands of amps, and also measure voltages in the range of hundreds or thousands of volts, using an {\it oscilloscope}.  Bear in mind that you need to simultaneously plot both variables on the oscilloscope in order to measure phase shift!
+
+\vskip 10pt
+
+Follow-up question \#2: explain how you could measure either $S$, $Q$, or $P$ using a multimeter.
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This is a very practical question!  There is a lot to discuss here, including what specific devices to use for measuring voltage and current, what safety precautions to take, how to interpret the oscilloscope's display, and so on.  Of course, one of the most important aspects of this question to discuss is the concept of empirically determining power factor by measuring a circuit's $V/I$ phase shift.
+
+%INDEX% Power factor calculation, empirical
+
+%(END_NOTES)
+
+

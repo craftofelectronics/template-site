@@ -1,0 +1,76 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2005, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+% Uncomment the following line if the question involves calculus at all:
+\vbox{\hrule \hbox{\strut \vrule{} $\int f(x) \> dx$ \hskip 5pt {\sl Calculus alert!} \vrule} \hrule}
+
+A familiar context in which to apply and understand basic principles of calculus is the motion of an object, in terms of {\it position} ($x$), {\it velocity} ($v$), and {\it acceleration} ($a$).  We know that velocity is the time-derivative of position ($v = {dx \over dt}$) and that acceleration is the time-derivative of velocity ($a = {dv \over dt}$).  Another way of saying this is that velocity is the rate of position change over time, and that acceleration is the rate of velocity change over time.
+
+It is easy to construct circuits which input a voltage signal and output either the {\it time-derivative} or the {\it time-integral} (the opposite of the derivative) of that input signal.  We call these circuits "differentiators" and "integrators," respectively.
+
+$$\epsfbox{02701x02.eps}$$
+
+Integrator and differentiator circuits are highly useful for motion signal processing, because they allow us to take voltage signals from motion sensors and convert them into signals representing other motion variables.  For each of the following cases, determine whether we would need to use an integrator circuit or a differentiator circuit to convert the first type of motion signal into the second:
+
+\medskip
+\goodbreak
+\item{$\bullet$} Converting velocity signal to position signal: ({\it integrator} or {\it differentiator}?)
+\item{$\bullet$} Converting acceleration signal to velocity signal: ({\it integrator} or {\it differentiator}?)
+\item{$\bullet$} Converting position signal to velocity signal: ({\it integrator} or {\it differentiator}?)
+\item{$\bullet$} Converting velocity signal to acceleration signal: ({\it integrator} or {\it differentiator}?)
+\item{$\bullet$} Converting acceleration signal to position signal: ({\it integrator} or {\it differentiator}?)
+\medskip
+
+\vskip 10pt
+
+Also, draw the schematic diagrams for these two different circuits.
+
+\underbar{file 02701}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+\medskip
+\item{$\bullet$} Converting velocity signal to position signal: ({\bf integrator})
+\item{$\bullet$} Converting acceleration signal to velocity signal: ({\bf integrator})
+\item{$\bullet$} Converting position signal to velocity signal: ({\bf differentiator})
+\item{$\bullet$} Converting velocity signal to acceleration signal: ({\bf differentiator})
+\item{$\bullet$} Converting acceleration signal to position signal: ({\bf two integrators!})
+\medskip
+
+\vskip 10pt
+
+I'll let you figure out the schematic diagrams on your own!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question is to have students apply the concepts of time-integration and time-differentiation to the variables associated with moving objects.  I like to use the context of moving objects to teach basic calculus concepts because of its everyday familiarity: anyone who has ever driven a car knows what position, velocity, and acceleration are, and the differences between them.
+
+One way I like to think of these three variables is as a verbal sequence:
+
+$$\epsfbox{02701x01.eps}$$
+
+Arranged as shown, differentiation is the process of stepping to the right (measuring the {\it rate of change} of the previous variable).  Integration, then, is simply the process of stepping to the left.
+
+\vskip 10pt
+
+Ask your students to come to the front of the class and draw their integrator and differentiator circuits.  Then, ask the whole class to think of some scenarios where these circuits would be used in the same manner suggested by the question: motion signal processing.  Having them explain how their schematic-drawn circuits would work in such scenarios will do much to strengthen their grasp on the concept of practical integration and differentiation.
+
+%INDEX% Calculus, derivative (applied to motion)
+%INDEX% Calculus, integral (applied to motion)
+
+%(END_NOTES)
+
+

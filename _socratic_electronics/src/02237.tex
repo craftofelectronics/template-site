@@ -1,0 +1,138 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2004, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+Complete the table of output voltages, output currents, and input currents for several given values of input voltage in this common-collector amplifier circuit.  Assume that the transistor is a standard silicon NPN unit, with a nominal base-emitter junction forward voltage of 0.7 volts:
+
+$$\epsfbox{02237x01.eps}$$
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_{in}$ & $V_{out}$ & $I_{in}$ & $I_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0.8 V &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Third row
+1.5 V &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+3.0 V &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+4.5 V &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+6.0 V &  &  & \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+7.5 V &  &  & \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+Calculate the amount of impedance "seen" by the input voltage source $V_{in}$, given the following definition for impedance:
+
+$$Z_{in} = {\Delta V_{in} \over \Delta I_{in}}$$
+
+\underbar{file 02237}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+% No blank lines allowed between lines of an \halign structure!
+% I use comments (%) instead, so that TeX doesn't choke.
+
+$$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+%
+% First row
+$V_{in}$ & $V_{out}$ & $I_{in}$ & $I_{out}$ \cr
+%
+\noalign{\hrule}
+%
+% Second row
+0.8 V & 0.1 V & 2.80 $\mu$A & 0.213 mA \cr
+%
+\noalign{\hrule}
+%
+% Third row
+1.5 V & 0.8 V & 22.4 $\mu$A & 1.70 mA \cr
+%
+\noalign{\hrule}
+%
+% Fourth row
+3.0 V & 2.3 V & 64.4 $\mu$A & 4.89 mA \cr
+%
+\noalign{\hrule}
+%
+% Fifth row
+4.5 V & 3.8 V & 106 $\mu$A & 8.09 mA \cr
+%
+\noalign{\hrule}
+%
+% Sixth row
+6.0 V & 5.3 V & 148 $\mu$A & 11.3 mA \cr
+%
+\noalign{\hrule}
+%
+% Seventh row
+7.5 V & 6.8 V & 190 $\mu$A & 14.5 mA \cr
+%
+\noalign{\hrule}
+} % End of \halign 
+}$$ % End of \vbox
+
+$$Z_{in} = {\Delta V_{in} \over \Delta I_{in}} = 35.72 \hbox{ k}\Omega$$
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+The purpose of this question, besides providing practice for common-collector circuit DC analysis, is to show the current-amplification properties of the common-collector amplifier.  This is an important feature, as there is no voltage amplification in this type of amplifier circuit.
+
+This approach to determining transistor amplifier circuit impedance is one that does not require prior knowledge of amplifier configurations.  In order to obtain the necessary data to calculate voltage gain, all one needs to know are the "first principles" of Ohm's Law, Kirchhoff's Laws, and basic operating principles of a bipolar junction transistor.  This question is really just a {\it thought experiment}: exploring an unknown form of circuit by applying known rules of circuit components.  If students doubt the efficacy of "thought experiments," one need only to reflect on the success of Albert Einstein, whose thought experiments as a patent clerk (without the aid of experimental equipment) allowed him to formulate the basis of his Theories of Relativity.
+
+%INDEX% Impedance, amplifier input
+%INDEX% Input impedance, amplifier
+
+%(END_NOTES)
+
+

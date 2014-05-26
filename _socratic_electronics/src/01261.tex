@@ -1,0 +1,39 @@
+
+%(BEGIN_QUESTION)
+% Copyright 2003, Tony R. Kuphaldt, released under the Creative Commons Attribution License (v 1.0)
+% This means you may do almost anything with this work of mine, so long as you give me proper credit
+
+True story: once upon a time, there was a machine shop containing a number of computer-controlled machine tools (lathes, mills, grinders, etc.), where one of the machines proved to be very "finicky" when starting.  Sometimes, it would function properly when you pushed the "Start" button, and other times it refused to work at all.  The problem was so bad, it got to the point where the machinists responsible for operating this tool became almost superstitious about it, performing a ritual dance before pressing the "Start" button, whimsically hoping to improve their luck.
+
+An electrician was called to service this machine, but he could find nothing wrong with the electrical power circuitry.  All of the high-voltage equipment (transformers, relays, motors, motor control circuits, etc.) seemed to be in good working order.  The problem, whatever it was, resided within the machine's electronic control computer.  The computer was not sending the "start" signal to the motor control circuits when the "Start" button was pushed.
+
+An electronics technician was called to troubleshoot the computer, and he was able to fix it in a matter of minutes.  The problem, he said, was the computer's DC power supply: the voltage regulator was out of adjustment.  With just a twist of a potentiometer, the technician was able to "trim" the regulated voltage to 5.00 volts, right where it should be for TTL circuitry.
+
+The power supply voltage was not very far from 5.00 volts before the technician adjusted it.  How far is the supply voltage allowed to deviate for TTL logic circuits, and still have guaranteed proper operation?  Consult one or more IC datasheets for legacy TTL logic circuits (not the newer high-speed CMOS 54HCxx and 74HCxx chips) to obtain your answer.
+
+\underbar{file 01261}
+%(END_QUESTION)
+
+
+
+
+
+%(BEGIN_ANSWER)
+
+I'll let you do your own research on this question.  DO NOT obtain your answer from a textbook, but consult a manufacturer's datasheet instead!
+
+%(END_ANSWER)
+
+
+
+
+
+%(BEGIN_NOTES)
+
+This true story was told to me by one of my former students, who had some previous experience with electronics maintenance prior to enrolling in my class.  The moral of this story, of course, is the sensitivity of TTL logic circuits to power supply voltage variations.  This will (and should!) surprise many of your students, who are probably used to seeing the rather wide voltage limits of opamps and other analog circuitry.
+
+%INDEX% TTL logic, power supply voltage for
+
+%(END_NOTES)
+
+
