@@ -1,0 +1,21 @@
+<p>A student builds this headphone audio source selector/amplifier circuit to be able to choose from one of four audio signal sources with the push of a single &quot;Select&quot; button. As the Select button is pushed, the two-bit binary counter (made from JK flip-flops) goes through its counting sequence, driving the decoder to select one of the four CMOS bilateral analog switches to pass audio signal on to the opamp volume control. LEDs indicate which input source is being selected at any given time:</p>
+<p><br /><span class="math">$\epsfbox{03166x01.eps}$</span><br /></p>
+<p>The circuit works just fine for awhile, then suddenly the CD player channel falls silent. Pushing the &quot;Select&quot; button, the student can still select other working sources (tuner, MP3 player, and tape player), but there is no sound at the headphone when the &quot;CD&quot; LED is on.</p>
+<p>Using an oscilloscope, the student measures a normal audio signal at TP12 with respect to ground (TP2) as the CD player plays a disk. From this information, identify two possible causes that could account for the problem and all measured values in this circuit. Also, identify the next logical test point(s) from those shown on the schematic that you would check, and why you would check there. Note that there may be more than one correct answer to this part of the question!</p>
+<p><span class="math"> • </span> Possible causes of the problem</p>
+<p>1.</p>
+<p>2.</p>
+<p><span class="math"> • </span> Next logical test point(s) to check, with reason why you would check there</p>
+<p>Next point(s):</p>
+<p>Reason:</p>
+<p>Note: the following answers are not exhaustive. There may be more circuit elements possibly at fault than what is listed here!</p>
+<p><span class="math"> • </span> Possible causes of the problem</p>
+<p>1. Bilateral switch for &quot;CD&quot; channel failed open</p>
+<p>2. Break in wire between &quot;CD&quot; LED and TP8/bilateral switch control line</p>
+<p>3. Break in wire between TP12 and bilateral switch input</p>
+<p>4. Break in wire between TP13 and bilateral switch output</p>
+<p><span class="math"> • </span> Next logical test point(s) to check, with reason why you would check there</p>
+<p>1. TP8, to see if bilateral switch for the CD channel is being told to activate</p>
+<p>2. TP13, to see if signal is getting through the bilateral switch</p>
+<p>TP14 would <em>not</em> be a good place to check for signal, since we know the other input channels work, and they all have to pass through TP14.</p>
+<p><strong>This question is intended for exams only and not worksheets!</strong>.</p>

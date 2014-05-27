@@ -1,0 +1,12 @@
+<p>Predict how the operation of this &quot;flash&quot; analog-to-digital converter (ADC) circuit will be affected as a result of the following faults. Consider each fault independently (i.e. one at a time, no multiple faults):</p>
+<p><br /><span class="math">$\epsfbox{03912x01.eps}$</span><br /></p>
+<p><span class="math"> • </span> Resistor <span class="math"><em>R</em><sub>16</sub></span> fails open:</p>
+<p><span class="math"> • </span> Resistor <span class="math"><em>R</em><sub>1</sub></span> fails open:</p>
+<p><span class="math"> • </span> Comparator <span class="math"><em>U</em><sub>13</sub></span> output fails low:</p>
+<p><span class="math"> • </span> Solder bridge (short) across resistor <span class="math"><em>R</em><sub>14</sub></span>:</p>
+<p>For each of these conditions, explain <em>why</em> the resulting effects will occur.</p>
+<p><span class="math"> • </span> Resistor <span class="math"><em>R</em><sub>16</sub></span> fails open: <em>Output code will be 15 (1111) all the time.</em></p>
+<p><span class="math"> • </span> Resistor <span class="math"><em>R</em><sub>1</sub></span> fails open: <em>If <span class="math"><em>V</em><sub><em>i</em><em>n</em></sub> &lt; <em>V</em><sub><em>r</em><em>e</em><em>f</em></sub></span>, output will be 0 (0000); if <span class="math"><em>V</em><sub><em>i</em><em>n</em></sub> &gt; <em>V</em><sub><em>r</em><em>e</em><em>f</em></sub></span>, output will be 15 (1111).</em></p>
+<p><span class="math"> • </span> Comparator <span class="math"><em>U</em><sub>13</sub></span> output fails low: <em>Output will assume the &quot;13&quot; state (1101) unless <span class="math"><em>V</em><sub><em>i</em><em>n</em></sub></span> exceeds that analog value, then the ADC will register properly.</em></p>
+<p><span class="math"> • </span> Solder bridge (short) across resistor <span class="math"><em>R</em><sub>14</sub></span>: <em>There will be no distinctive &quot;13&quot; state (1101), the analog values for all the other states adjusting slightly to fill the gap.</em></p>
+<p>The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are. Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data. Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.</p>

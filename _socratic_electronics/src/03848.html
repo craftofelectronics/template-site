@@ -1,0 +1,15 @@
+<p>This <em>bargraph driver</em> circuit takes an audio input signal and displays the amplitude as a moving &quot;bar&quot; of lights. The stronger the amplitude of the signal, the more LEDs energize in the bargraph display. Predict how the operation of this circuit will be affected as a result of the following faults. Consider each fault independently (i.e. one at a time, no multiple faults):</p>
+<p><br /><span class="math">$\epsfbox{03848x01.eps}$</span><br /></p>
+<p><span class="math"> • </span> Resistor <span class="math"><em>R</em><sub>4</sub></span> failed open:</p>
+<p><span class="math"> • </span> Solder bridge (short) past resistor <span class="math"><em>R</em><sub>3</sub></span>:</p>
+<p><span class="math"> • </span> Resistor <span class="math"><em>R</em><sub>11</sub></span> failed open:</p>
+<p><span class="math"> • </span> Zener diode <span class="math"><em>D</em><sub>1</sub></span> failed shorted:</p>
+<p><span class="math"> • </span> Schottky diode <span class="math"><em>D</em><sub>2</sub></span> failed shorted:</p>
+<p><span class="math"> • </span> Resistor <span class="math"><em>R</em><sub>4</sub></span> failed open: <em>LEDs 1 through 3 always off, LEDs 4 through 6 always on (with any substantial input signal amplitude at all).</em></p>
+<p><span class="math"> • </span> Solder bridge (short) past resistor <span class="math"><em>R</em><sub>3</sub></span>: <em>LEDs 2 and 3 always energize at the same time.</em></p>
+<p><span class="math"> • </span> Resistor <span class="math"><em>R</em><sub>11</sub></span> failed open: <em>LED 4 never lights up.</em></p>
+<p><span class="math"> • </span> Zener diode <span class="math"><em>D</em><sub>1</sub></span> failed shorted: <em>All LEDs light up together with any substantial input signal amplitude at all.</em></p>
+<p><span class="math"> • </span> Schottky diode <span class="math"><em>D</em><sub>2</sub></span> failed shorted: <em>None of the LEDs ever light up.</em></p>
+<p>Follow-up question: does each comparator <em>source</em> or <em>sink</em> current to its respective LED?</p>
+<p>Challenge question: if resistors <span class="math"><em>R</em><sub>1</sub></span> through <span class="math"><em>R</em><sub>7</sub></span> are all equal value, the response of the bargraph will be linear (twice the signal amplitude results in twice as many LEDs energized). What would have to be changed in this circuit to give the bargraph a <em>logarithmic</em> response, so it registered proportional to a decibel scale rather than a voltage scale?</p>
+<p>Questions like this help students hone their troubleshooting skills by forcing them to think through the consequences of each possibility. This is an essential step in troubleshooting, and it requires a firm understanding of circuit function.</p>

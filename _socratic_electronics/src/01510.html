@@ -1,0 +1,34 @@
+<p>Differential equations may be used to model the charging behavior of an RC circuit. Take, for instance, this simple RC circuit:</p>
+<p><br /><span class="math">$\epsfbox{01510x01.eps}$</span><br /></p>
+<p>We may develop a loop equation based on Kirchhoff’s Voltage Law, knowing that the voltage of the power source is constant (30 volts), and that the voltage drops across the capacitor and resistor are <span class="math">$V_C = {Q \over C}$</span> and <span class="math"><em>V</em><sub><em>R</em></sub> = <em>I</em><em>R</em></span>, respectively:</p>
+<p><br /><span class="math">$30 - IR - {Q \over C} = 0$</span><br /></p>
+<p>To turn this into a true differential equation, we must express one of the variables as the derivative of the other. In this case, it makes sense to define <span class="math"><em>I</em></span> as the time-derivative of <span class="math"><em>Q</em></span>:</p>
+<p><br /><span class="math">$30 - {dQ \over dt}R - {Q \over C} = 0$</span><br /></p>
+<p>Show that the specific solution to this differential equation, assuming an initial condition of <span class="math"><em>Q</em> = 0</span> at <span class="math"><em>t</em> = 0</span>, is as follows:</p>
+<p><br /><span class="math"><em>Q</em> = 0. 0003(1 − <em>e</em><sup> − 50<em>t</em></sup>)</span><br /></p>
+<p>Also, show this solution in a form where it solves for capacitor voltage (<span class="math"><em>V</em><sub><em>C</em></sub></span>) instead of capacitor charge (<span class="math"><em>Q</em></span>).</p>
+<p><br /><span class="math">$30 - {dQ \over dt}R - {Q \over C} = 0$</span><br /></p>
+<p><br /><span class="math">$30 - {Q \over C} = {dQ \over dt}R$</span><br /></p>
+<p><br /><span class="math">${{30 - {Q \over C}} \over R} = {dQ \over dt}$</span><br /></p>
+<p><br /><span class="math">${{{30C \over C} - {Q \over C}} \over R} = {dQ \over dt}$</span><br /></p>
+<p><br /><span class="math">${{30C - Q} \over RC} = {dQ \over dt}$</span><br /></p>
+<p><br /><span class="math">${dt \over RC} = {dQ \over {30C - Q}}$</span><br /></p>
+<p><br /><span class="math">$\int {1 \over RC} \&gt; dt = \int {1 \over {30C - Q}} \&gt; dQ$</span><br /></p>
+<p><br /><span class="math">$\hbox{Substitution: } u = 30C - Q \hbox{\hskip 10pt ; \hskip 10pt} {du \over dQ} = -1 \hbox{\hskip 10pt ; \hskip 10pt} dQ = -du$</span><br /></p>
+<p><br /><span class="math">${1 \over RC} \int dt = - \int {1 \over u} \&gt; du$</span><br /></p>
+<p><br /><span class="math">${t \over RC} + K_1 = - | \ln u |$</span><br /></p>
+<p><br /><span class="math">$-{t \over RC} - K_1 = | \ln u |$</span><br /></p>
+<p><br /><span class="math">$e^{-{t \over RC} - K_1} = | u |$</span><br /></p>
+<p><br /><span class="math">$K_2e^{-{t \over RC}} = u$</span><br /></p>
+<p><br /><span class="math">$K_2e^{-{t \over RC}} = 30C - Q$</span><br /></p>
+<p><br /><span class="math">$\hbox{General solution: } Q = 30C - K_2e^{-{t \over RC}}$</span><br /></p>
+<p>Given the initial condition that the charge stored in the capacitor is zero (<span class="math"><em>Q</em> = 0</span>) at time zero (<span class="math"><em>t</em> = 0</span>), the constant of integration must be equal to <span class="math">30<em>C</em></span> in our specific solution:</p>
+<p><br /><span class="math">$Q = 30C - 30Ce^{-{t \over RC}}$</span><br /></p>
+<p><br /><span class="math">$Q = 30C (1 - e^{-{t \over RC}})$</span><br /></p>
+<p>Substituting the given component values into this specific solution gives us the final equation:</p>
+<p><br /><span class="math"><em>Q</em> = 0. 0003(1 − <em>e</em><sup> − 50<em>t</em></sup>)</span><br /></p>
+<p>Showing a final equation in terms of capacitor voltage instead of capacitor charge:</p>
+<p><br /><span class="math">${Q \over C} = {30C \over C}(1 - e^{-{t \over RC}})$</span><br /></p>
+<p><br /><span class="math"><em>V</em><sub><em>C</em></sub> = 30(1 − <em>e</em><sup> − 50<em>t</em></sup>)</span><br /></p>
+<p>RC time constant circuits are an excellent example of how to apply simple differential equations. In this case, we see that the differential equation is first-order, with separable variables, making it comparatively easy to solve.</p>
+<p>It should also be evident to students that <em>any</em> initial condition of capacitor charge may be set into the general solution (by changing the value of the constant).</p>

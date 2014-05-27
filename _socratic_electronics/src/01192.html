@@ -1,0 +1,10 @@
+<p>Draw a complete schematic diagram showing how this IGBT can be used to control a DC motor, at the command of the toggle switch:</p>
+<p><br /><span class="math">$\epsfbox{01192x01.eps}$</span><br /></p>
+<p>Note: the DC power supply voltage is 240 VDC, and the IGBT’s maximum gate-to-emitter control voltage is 20 volts!</p>
+<p><br /><span class="math">$\epsfbox{01192x02.eps}$</span><br /></p>
+<p>Follow-up question: calculate the values necessary for the two resistors shown, to provide a gate-to-emitter voltage of 10 volts, using 1/2 watt resistors.</p>
+<p>Challenge question: why might it be a good idea to include a diode in the circuit, like this?</p>
+<p><br /><span class="math">$\epsfbox{01192x03.eps}$</span><br /></p>
+<p>Ask your students what purpose the voltage divider serves. The first purpose should be obvious, as hinted in the &quot;Note&quot; at the end of the question. However, a second purpose is not so obvious. If the lower resistor were to fail open, the IGBT would turn on when the switch closes, but it would not turn off (at least not reliably) when the switch opens! Present this scenario to your students, and ask them to explain why this would happen.</p>
+<p>Check your students’ math when they present resistor values. Do not be surprised if some students specify the resistor values such that the actual power dissipation runs right at 1/2 watt each! Use this as an opportunity to discuss component reliability versus power dissipation, and good engineering practices.</p>
+<p>Regarding the challenge question, the diode is <em>not</em> there to provide a path for inductive &quot;free-wheeling&quot; current. Some of your students may suggest this as its purpose, but a close examination of polarity will show otherwise. The true answer to this question, in the context of a DC motor control circuit, has to do with the behavior of DC motors.</p>

@@ -1,0 +1,12 @@
+<p>While many students find it easy to understand how the value of <span class="math"><em>R</em></span> affects the time constant of a resistor-capacitor charging circuit (more <span class="math"><em>R</em></span> means slower charging; less <span class="math"><em>R</em></span> means faster charging), the opposite behavior of resistor-inductor circuits (less <span class="math"><em>R</em></span> means slower charging; more <span class="math"><em>R</em></span> means faster charging) seems incomprehensible:</p>
+<p><br /><span class="math">$\epsfbox{03533x01.eps}$</span><br /></p>
+<p>Resistor-capacitor circuit charging behavior probably makes more sense to students because they realize resistance controls charging current, which in turn directly effects how quickly the capacitor’s voltage may rise:</p>
+<p><br /><span class="math">$i = C {dv \over dt}$</span><br /></p>
+<p>Current (<span class="math"><em>i</em></span>) is proportional to the rate of change of voltage (<span class="math">$dv \over dt$</span>). Since current is inversely proportional to resistance in a circuit powered by a voltage source, so must be the capacitor charging rate.</p>
+<p>One way to help make the inductor charging circuit more sensible is to replace the series voltage-source/resistor combination with its Norton equivalent, a parallel current-source/resistor combination:</p>
+<p><br /><span class="math">$\epsfbox{03533x02.eps}$</span><br /></p>
+<p>Re-analyze the circuit in this form, and try to explain why more resistance makes the inductor charging time faster and less resistance makes the inductor charging time slower.</p>
+<p>The answer relates to this equation (of course!):</p>
+<p><br /><span class="math">$v = L {di \over dt}$</span><br /></p>
+<p>The inductor’s &quot;charge&quot; is a direct function of current, the change of which (rate of charge) is directly proportional to the amount of voltage impressed across the inductor. In a Norton equivalent circuit, the output voltage is directly proportional to the internal resistance. So, a greater resistance results in a faster charging time.</p>
+<p>My answer could stand to be a little more detailed, but the main idea here is to have students piece together their own argument explaining why inductor charging rate is directly proportional to resistance. Of course, this is yet another example of the usefulness of Thévenin/Norton equivalent circuits. Sometimes a simple source conversion from one form to the other is all that is needed to achieve a conceptual breakthrough!</p>

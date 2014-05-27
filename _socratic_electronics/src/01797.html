@@ -1,0 +1,19 @@
+<p>There are many, many processes in the natural sciences where variables either grow (become larger) or decay (become smaller) over time. Often, the rate at which these processes grow or decay is directly proportional to the growing or decaying quantity. Radioactive decay is one example, where the rate of decay of a radioactive substance is proportional to the quantity of that substance remaining. The growth of small bacterial cultures is another example, where the growth rate is proportional to the number of live cells.</p>
+<p>In processes where the rate of decay is proportional to the decaying quantity (such as in radioactive decay), a convenient way of expressing this decay rate is in terms of time: how long it takes for a certain percentage of decay to occur. With radioactive substances, the decay rate is commonly expressed as <em>half-life</em>: the time it takes for exactly half of the substance to decay:</p>
+<p><br /><span class="math">$\epsfbox{01797x01.eps}$</span><br /></p>
+<p>In RC and LR circuits, decay time is expressed in a slightly different way. Instead of measuring decay rate in units of <em>half-lives</em>, we measure decay rate in units of <em>time constants</em>, symbolized by the Greek letter &quot;tau&quot; (<span class="math"><em>τ</em></span>).</p>
+<p>What is the percentage of decay that takes place in an RC or LR circuit after one &quot;time constant’s&quot; worth of time, and how is this percentage value calculated? Note: it is not 50%, as it is for &quot;half life,&quot; but rather a different percentage figure.</p>
+<p>Graph the curve of this decay, plotting points at 0, 1, 2, and 3 time constants:</p>
+<p><br /><span class="math">$\epsfbox{01797x02.eps}$</span><br /></p>
+<p>The percentage is 63.2% for each time constant.</p>
+<p><br /><span class="math">$\epsfbox{01797x03.eps}$</span><br /></p>
+<p>I like to use the example of radioactive decay to introduce time constants, because it seems most people have at least heard of something called &quot;half-life,&quot; even if they don’t know exactly what it is.</p>
+<p>Incidentally, the choice to measure decay in either &quot;half lives&quot; or &quot;time constants&quot; is arbitrary. The curve for radioactive decay is the exact same curve as that of an RC or LR discharge process, and is characterized by the same differential equation:</p>
+<p><br /><span class="math">${dQ \over dt} = -kQ$</span><br /></p>
+<p>Where,</p>
+<p><span class="math"><em>Q</em> = </span> Decaying variable (grams of substance, volts, amps, whatever)</p>
+<p><span class="math"><em>k</em> = </span> Relative decay rate</p>
+<p><span class="math"><em>t</em> = </span> Time</p>
+<p>By solving this separable differential equation, we naturally arrive at an equation expressing <span class="math"><em>Q</em></span> in terms of an exponential function of <span class="math"><em>e</em></span>:</p>
+<p><br /><span class="math"><em>Q</em> = <em>Q</em><sub>0</sub><em>e</em><sup> − <em>k</em><em>t</em></sup></span><br /></p>
+<p>Thus, it makes more sense to work with units of &quot;time constants&quot; based on <span class="math"><em>e</em></span> than with &quot;half lives,&quot; although admittedly &quot;half-life&quot; is a concept that makes more intuitive sense. Incidentally, 1 half-life is equal to 0.693 time constants, and 1 time constant is equal to 1.443 half-lives.</p>

@@ -1,0 +1,3 @@
+<p>What purpose does the 1N4001 diode serve in this circuit?</p>
+<p>The diode serves to establish a small bias voltage between the two transistors’ bases, to minimize the amount of crossover distortion.</p>
+<p>Theoretically, the op-amp should be able to handle the &quot;handoff&quot; between the two transistors even with no bias voltage, but since no op-amp has an infinite slew rate, there will be some crossover distortion under load (such as when driving am 8 <span class="math">Ω </span> speaker). Placing a bit of DC bias voltage between the two transistor bases helps push them closer to ideal class-B operation, giving the op-amp an easier time of managing the crossover periods.</p>

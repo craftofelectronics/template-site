@@ -1,0 +1,21 @@
+<p>This sound-controlled lamp has a problem. A loud noise (such as a hand clap) is supposed to toggle it on and off, but instead it either stays on or stays off (depending on which state it begins at when plugged in to a power receptacle) no matter how loud you clap.</p>
+<p><br /><span class="math">$\epsfbox{03027x01.eps}$</span><br /></p>
+<p>You begin troubleshooting by plugging it in and noticing that the lamp does not turn on this time. You clap your hands loudly to verify the problem, and sure enough the lamp remains off. Connecting an oscilloscope to test point TP4 (with the ground clip connected to TP5), you read about 0.24 volts DC continually even when you clap your hands next to the microphone. Touching the scope probe to test point TP1, you read 5 volts DC, which is normal for <span class="math"><em>V</em><sub><em>D</em><em>D</em></sub></span>. From this information, identify two possible causes that could account for the problem and all measured values in this circuit.</p>
+<p>Also, identify the next logical test point(s) from those shown on the schematic that you would check with some electronic instrument (voltmeter, ohmmeter, or oscilloscope), and why you would check there. Note that there may be more than one correct answer to this part of the question!</p>
+<p><span class="math"> • </span> Possible causes of the problem</p>
+<p>1.</p>
+<p>2.</p>
+<p><span class="math"> • </span> Next logical test point(s) to check, with reason why you would check there</p>
+<p>Next point(s):</p>
+<p>Reason:</p>
+<p>Note: the following answers are not exhaustive. There may be more circuit elements possibly at fault than what is listed here!</p>
+<p><span class="math"> • </span> Possible causes of the problem</p>
+<p>1. Transistor <span class="math"><em>Q</em><sub>1</sub></span> failed shorted</p>
+<p>2. Resistor <span class="math"><em>R</em><sub>4</sub></span> failed open</p>
+<p>3. Resistor <span class="math"><em>R</em><sub>3</sub></span> failed open</p>
+<p>4. Clock signal input of <span class="math"><em>U</em><sub>1</sub></span> internally shorted to ground</p>
+<p><span class="math"> • </span> Next logical test point(s) to check, with reason why you would check there</p>
+<p>Next point(s): TP3 (transistor <span class="math"><em>Q</em><sub>1</sub></span> base) with voltmeter or scope (not with a logic probe!), to see if the transistor is being &quot;told&quot; to turn on. Using an ohmmeter between TP4 and TP5 to check for a shorted transistor <span class="math"><em>Q</em><sub>1</sub></span>.</p>
+<p>Reason:</p>
+<p>It would be incorrect to check the microphone output at TP2 to see if there is a signal there, because no failure there would cause TP4 to remain continually low, being that the microphone is capacitively coupled (DC-blocking) to the base of <span class="math"><em>Q</em><sub>1</sub></span>.</p>
+<p><strong>This question is intended for exams only and not worksheets!</strong>.</p>

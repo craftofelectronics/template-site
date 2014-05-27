@@ -1,0 +1,21 @@
+<p>This microcontroller is programmed to vary the perceived brightness of an LED by means of pulse-width modulation (PWM) control of pin 0’s output:</p>
+<p><br /><span class="math">$\epsfbox{03990x01.eps}$</span><br /></p>
+<p>Declare Pin0 as an output</p>
+<p>Declare X as an integer variable</p>
+<p>LOOP</p>
+<p>Set Pin0 LOW</p>
+<p>Pause for 100 - X microseconds</p>
+<p>Set Pin0 HIGH</p>
+<p>Pause for X microseconds</p>
+<p>ENDLOOP</p>
+<p>Determine what the value of X must be to set the LED’s brightness at 80%, and also what the frequency of the PWM signal is.</p>
+<p>This question is probably best answered by drawing a timing diagram of Pin 0’s output, noting the times of 100 - X <span class="math"><em>μ</em></span>s and X <span class="math"><em>μ</em></span>s.</p>
+<p>Follow-up question: what is the resolution of this PWM control, given that X is an integer variable? How might we improve the resolution of this PWM control scheme?</p>
+<p>Pulse-width modulation (PWM) is a very common and useful way of generating an analog output from a microcontroller (or other digital electronic circuit) capable only of &quot;high&quot; and &quot;low&quot; voltage level output. With PWM, time (or more specifically, <em>duty cycle</em>) is the analog domain, while amplitude is the digital domain. This allows us to &quot;sneak&quot; an analog signal through a digital (on-off) data channel.</p>
+<p>In case you’re wondering why I write in pseudocode, here are a few reasons:</p>
+<p><span class="math"> • </span> No prior experience with programming required to understand pseudocode</p>
+<p><span class="math"> • </span> It never goes out of style</p>
+<p><span class="math"> • </span> Hardware independent</p>
+<p><span class="math"> • </span> No syntax errors</p>
+<p>If I had decided to showcase code that would actually run in a microcontroller, I would be dooming the question to obsolescence. This way, I can communicate the spirit of the program without being chained to an actual programming standard. The only drawback is that students will have to translate my pseudocode to real code that will actually run on their particular MCU hardware, but that is a problem guaranteed for some regardless of which real programming language I would choose.</p>
+<p>Of course, I could have taken the Donald Knuth approach and invented my own (imaginary) hardware and instruction set . . .</p>

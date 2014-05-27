@@ -1,0 +1,48 @@
+<p>A <em>seven segment decoder</em> is a digital circuit designed to drive a very common type of digital display device: a set of LED (or LCD) segments that render numerals 0 through 9 at the command of a four-bit code:</p>
+<p><br /><span class="math">$\epsfbox{02824x01.eps}$</span><br /></p>
+<p>The behavior of the display driver IC may be represented by a truth table with seven outputs: one for each segment of the seven-segment display (<span class="math"><em>a</em></span> through <span class="math"><em>g</em></span>). In the following table, a &quot;1&quot; output represents an active display segment, while a &quot;0&quot; output represents an inactive segment:</p>
+<p><br /><span class="math">$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+D &amp; C &amp; B &amp; A &amp; a &amp; b &amp; c &amp; d &amp; e &amp; f &amp; g &amp; Display\cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; &quot;0&quot; \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; &quot;1&quot; \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; &quot;2&quot; \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; &quot;3&quot; \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; &quot;4&quot; \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; &quot;5&quot; \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; &quot;6&quot; \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; &quot;7&quot; \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; &quot;8&quot; \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; &quot;9&quot; \cr
+\noalign{\hrule}
+} }$</span><br /> Write the unsimplified SOP or POS expressions (choose the most appropriate form) for outputs <span class="math"><em>a</em></span>, <span class="math"><em>b</em></span>, <span class="math"><em>c</em></span>, and <span class="math"><em>e</em></span>.</p>
+<p>Raw (unsimplified) expressions:</p>
+<p><br /><span class="math">$a = (D + C + B + \overline{A})(D + \overline{C} + B + A)$</span><br /></p>
+<p><br /><span class="math">$b = (D + \overline{C} + B + \overline{A})(D + \overline{C} + \overline{B} + A)$</span><br /></p>
+<p><br /><span class="math">$c = D + C + \overline{B} + A$</span><br /></p>
+<p><br /><span class="math">$e = \overline{D} \&gt; \overline{C} \&gt; \overline{B} \&gt; \overline{A} + \overline{D} \&gt; \overline{C} B \overline{A} + \overline{D} C B \overline{A} + D \overline{C} \&gt; \overline{B} \&gt; \overline{A}$</span><br /></p>
+<p>Challenge question: use the laws of Boolean algebra to simplify each of the above expressions into their simplest forms.</p>
+<p>This shows a very practical example of SOP and POS Boolean forms, and why simplification is necessary to reduce the number of required gates to a practical minimum.</p>

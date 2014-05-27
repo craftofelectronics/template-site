@@ -1,0 +1,7 @@
+<p>The following solid-state motor control circuit is called an <em>H-bridge</em>, and it uses four MOSFETs to switch polarity to a DC motor. When the &quot;Fwd&quot; input line is driven to a logical &quot;high&quot; state, the motor spins in the forward direction. Conversely, when the &quot;Rvs&quot; input line is driven &quot;high,&quot; the motor spins in the opposite direction:</p>
+<p><br /><span class="math">$\epsfbox{03214x01.eps}$</span><br /></p>
+<p>Complete this circuit with interlock logic, placing solid-state logic circuitry between the two pushbutton switches and the H-drive input terminals to prevent the motor from trying to go forward and reverse simultaneously.</p>
+<p>This is perhaps the most straightforward solution, but by no means the only one:</p>
+<p><br /><span class="math">$\epsfbox{03214x02.eps}$</span><br /></p>
+<p>Another possible solution would be to use an S-R latch when a low-low invalid state, with the <span class="math"><em>Q</em></span> and <span class="math">$\overline{Q}$</span> outputs driving the two H-bridge input lines. However, this would require a third switch in order to stop the motor.</p>
+<p><strong>This question is intended for exams only and not worksheets!</strong>.</p>

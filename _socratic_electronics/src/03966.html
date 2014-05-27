@@ -1,0 +1,17 @@
+<p>This vocal eliminator circuit is supposed to strip the vocal track from any song where the vocals were recorded in monaural format (equal on both left and right channels). Any signal exactly common to both left and right channels will be canceled by the &quot;subtractor&quot; circuit. Low bass tones, which also tend to be common to both channels along with the vocals, are sampled by a summer circuit, selected by an active low-pass filter circuit, and then re-incorporated into the output by feeding into the final summer circuit:</p>
+<p><br /><span class="math">$\epsfbox{03966x01.eps}$</span><br /></p>
+<p>Unfortunately, something has failed in it. It used to function properly, but now nothing can be heard at the output except for a highly distorted &quot;buzzing&quot; sound. Checking the output signal with an oscilloscope indicates a strong, square-wave clipped sort of waveshape that dominates any trace of normal audio signal.</p>
+<p>From this information, identify two possible faults that could account for the problem and all measured values in this circuit. Then, choose one of those possible faults and explain why you think it could be to blame. The circuit elements you identify as possibly faulted can be wires, traces, and connections as well as components. Be as specific as you can in your answers, identifying both the circuit element and the type of fault.</p>
+<p><span class="math"> • </span> Circuit elements that are possibly faulted</p>
+<p>1.</p>
+<p>2.</p>
+<p><span class="math"> • </span> Explanation of <em>why</em> you think one of the above faults could be to blame</p>
+<p>Note: the following answers are not exhaustive. There may be more circuit elements possibly at fault and more circuit elements known to be functioning properly!</p>
+<p><span class="math"> • </span> Circuit elements that are possibly faulted</p>
+<p>1. Resistor <span class="math"><em>R</em><sub>2</sub></span> failed open</p>
+<p>2. Resistor <span class="math"><em>R</em><sub>7</sub></span> failed open</p>
+<p>3. Resistor <span class="math"><em>R</em><sub>10</sub></span> failed open</p>
+<p>4. Resistor <span class="math"><em>R</em><sub>13</sub></span> failed open</p>
+<p><span class="math"> • </span> Explanation of <em>why</em> you think one of the above faults could be to blame</p>
+<p>Any fault that would result in any of the operational amplifier circuits having near-infinite gain would cause this problem to happen. An open feedback resistor is the most likely trouble.</p>
+<p><strong>This question is intended for exams only and not worksheets!</strong>.</p>

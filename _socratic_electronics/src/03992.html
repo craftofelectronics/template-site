@@ -1,0 +1,29 @@
+<p>Pulse-width modulation (PWM) is not only useful for generating an analog output with a microcontroller, but it is also useful for receiving an analog input through a pin that only handles on-off (high-low) digital voltage levels. The following circuit takes an analog voltage signal in to a comparator, generates PWM, then sends that PWM signal to the input of a microcontroller:</p>
+<p><br /><span class="math">$\epsfbox{03992x01.eps}$</span><br /></p>
+<p>Declare Pin0 as an input</p>
+<p>Declare Last_Pin0 as a boolean variable</p>
+<p>Declare Time_High as an integer variable</p>
+<p>Declare Time_Low as an integer variable</p>
+<p>Declare Duty_Cycle as a floating-point variable</p>
+<p>Set Time_High and Time_Low both to zero</p>
+<p>LOOP</p>
+<p>Set Last_Pin0 equal to Pin0</p>
+<p>If Pin0 is HIGH, increment Time_High by one</p>
+<p>If Pin0 is LOW, increment Time_Low by one</p>
+<p>If Last_Pin0 is not equal to Pin0, go to SUBROUTINE</p>
+<p>ENDLOOP</p>
+<p>SUBROUTINE</p>
+<p>Set Duty_Cycle equal to (Time_High / (Time_High + Time_Low))</p>
+<p>Set Time_High and Time_Low both to zero</p>
+<p>Return to calling loop</p>
+<p>ENDSUBROUTINE</p>
+<p>Explain how this program works. Hint: the Last_Pin0 boolean variable is used to detect when the state of Pin0 has changed from 0 to 1 or from 1 to 0.</p>
+<p>The trickiest part of this program is figuring out the Last_Pin0 variable’s function, and how it determines when to execute the subroutine. I strongly recommend you perform a &quot;thought experiment&quot; with a slow square-wave input signal to the microcontroller, examining how the Time_High and Time_Low variables become incremented with the square wave’s state.</p>
+<p>Pulse-width modulation (PWM) is a very common and useful way of generating an analog output from a microcontroller (or other digital electronic circuit) capable only of &quot;high&quot; and &quot;low&quot; voltage level output. Here, we also see it used as a form of <em>input</em> signal modulation. With PWM, time (or more specifically, <em>duty cycle</em>) is the analog domain, while amplitude is the digital domain. This allows us to &quot;sneak&quot; an analog signal through a digital (on-off) data channel.</p>
+<p>In case you’re wondering why I write in pseudocode, here are a few reasons:</p>
+<p><span class="math"> • </span> No prior experience with programming required to understand pseudocode</p>
+<p><span class="math"> • </span> It never goes out of style</p>
+<p><span class="math"> • </span> Hardware independent</p>
+<p><span class="math"> • </span> No syntax errors</p>
+<p>If I had decided to showcase code that would actually run in a microcontroller, I would be dooming the question to obsolescence. This way, I can communicate the spirit of the program without being chained to an actual programming standard. The only drawback is that students will have to translate my pseudocode to real code that will actually run on their particular MCU hardware, but that is a problem guaranteed for some regardless of which real programming language I would choose.</p>
+<p>Of course, I could have taken the Donald Knuth approach and invented my own (imaginary) hardware and instruction set . . .</p>

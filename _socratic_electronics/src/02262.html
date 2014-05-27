@@ -1,0 +1,22 @@
+<p>In this Wien bridge circuit (with equal-value components all around), both output voltages will have the same phase angle only at one frequency:</p>
+<p><br /><span class="math">$\epsfbox{02262x01.eps}$</span><br /></p>
+<p>At this same frequency, <span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em>2</sub></span> will be exactly one-third the amplitude of <span class="math"><em>V</em><sub><em>i</em><em>n</em></sub></span>. Write an equation in terms of <span class="math"><em>R</em></span> and <span class="math"><em>C</em></span> to solve for this frequency.</p>
+<p>It’s your luck day! Here, I show one method of solution:</p>
+<p><br /><span class="math">$R - j{1 \over \omega C} = 2 \left({1 \over {{1 \over R} + j \omega C}}\right)$</span><br /></p>
+<p><br /><span class="math">$R - j{1 \over \omega C} = {2 \over {{1 \over R} + j \omega C}}$</span><br /></p>
+<p><br /><span class="math">$\left( R - j{1 \over \omega C} \right) \left( {{1 \over R} + j \omega C} \right) = 2$</span><br /></p>
+<p><br /><span class="math">${R \over R} + j \omega RC - j {1 \over {\omega R C}} - j^2 {{\omega C} \over {\omega C}} = 2$</span><br /></p>
+<p><br /><span class="math">$1 + j \omega RC - j {1 \over {\omega R C}} + 1 = 2$</span><br /></p>
+<p><br /><span class="math">$j \omega RC - j {1 \over {\omega R C}} = 0$</span><br /></p>
+<p><br /><span class="math">$j \omega RC = j {1 \over {\omega R C}}$</span><br /></p>
+<p><br /><span class="math">$\omega RC = {1 \over {\omega R C}}$</span><br /></p>
+<p><br /><span class="math">$\omega^2 = {1 \over {R^2 C^2}}$</span><br /></p>
+<p><br /><span class="math">$\omega = {1 \over {R C}}$</span><br /></p>
+<p><br /><span class="math">$2 \pi f = {1 \over {R C}}$</span><br /></p>
+<p><br /><span class="math">$f = {1 \over {2 \pi R C}}$</span><br /></p>
+<p>I chose to show the method of solution here because I find many of my students weak in manipulating imaginary algebraic terms (anything with a <span class="math"><em>j</em></span> in it). The answer is not exactly a give-away, as students still have to figure out how I arrived at the first equation. This involves both an understanding of the voltage divider formula as well as the algebraic expression of series impedances and parallel admittances.</p>
+<p>It is also possible to solve for the frequency by only considering phase angles and not amplitudes. Since the only way <span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em>2</sub></span> can have a phase angle of zero degrees in relation to the excitation voltage is for the upper and lower arms of that side of the bridge to have equal impedance phase angles, one might approach the problem in this fashion:</p>
+<p><br /><span class="math">$\theta = \tan^{-1} \left( {X_{series} \over R_{series}} \right)$</span><br /></p>
+<p><br /><span class="math">$\theta = \tan^{-1} \left( {B_{parallel} \over G_{parallel}} \right)$</span><br /></p>
+<p><br /><span class="math">${X_{series} \over R_{series}} = {B_{parallel} \over G_{parallel}}$</span><br /></p>
+<p>You might try presenting this solution to your students if imaginary algebra is too much for them at this point.</p>

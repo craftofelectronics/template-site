@@ -1,0 +1,33 @@
+<p>Write a Boolean expression for this truth table, then simplify that expression as much as possible, and draw a logic gate circuit equivalent to that simplified expression:</p>
+<p><br /><span class="math">$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+A &amp; B &amp; C &amp; Output \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 0 &amp; 1 \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 1 &amp; 1 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 0 &amp; 1 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 1 &amp; 1 \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 0 &amp; 1 \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 1 &amp; 1 \cr
+\noalign{\hrule}
+1 &amp; 1 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+1 &amp; 1 &amp; 1 &amp; 0 \cr
+\noalign{\hrule}
+} }$</span><br /></p>
+<p>Original POS expression:</p>
+<p><br /><span class="math">$(\overline{A} + \overline{B} + C)(\overline{A} + \overline{B} + \overline{C})$</span><br /></p>
+<p>Simplified gate circuit:</p>
+<p><br /><span class="math">$\epsfbox{02826x01.eps}$</span><br /></p>
+<p>Challenge question: what other single gate type will satisfy the truth table (besides a Negative-OR gate)?</p>
+<p>Challenge your students to implement the original POS expression directly with logic gates (three-input gates are acceptable to use). Is the &quot;simplified&quot; POS expression shown in the answer simpler in the context of real gate circuits? Ask your students what lesson this comparison holds for Boolean simplification techniques and their application to real-world circuits.</p>

@@ -1,0 +1,7 @@
+<p>Synchronous counter circuits tend to confuse students. The circuit shown here is the design that most students think ought to work, but actually doesn’t:</p>
+<p><br /><span class="math">$\epsfbox{01400x01.eps}$</span><br /></p>
+<p>Shown here is an up/down synchronous counter design that <em>does</em> work:</p>
+<p><br /><span class="math">$\epsfbox{01400x02.eps}$</span><br /></p>
+<p>Explain why this circuit is able to function properly (counting in either direction), while the first circuit is not able to count properly at all. What do those &quot;extra&quot; gates do to make the counter circuit function as it should. Hint: to more easily compare the up/down counter to the faulty up counter initially shown, connect the Up/<span class="math">$\overline{\hbox{Down}}$</span> control line high, and then disregard any lines and gates that become disabled as a result.</p>
+<p>The &quot;extra&quot; AND gates allow higher-level bits to toggle if and only if <em>all</em> preceding bits are high.</p>
+<p>Although the up/down counter circuit may look overwhelmingly complex at first, it is actually quite simple once students recognize the intent of the AND and OR gates: to &quot;select&quot; either the <span class="math"><em>Q</em></span> or <span class="math">$\overline{Q}$</span> signal to control subsequent flip-flops.</p>

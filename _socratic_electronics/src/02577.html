@@ -1,0 +1,15 @@
+<p><br /><span class="math">$\epsfbox{02577x01.eps}$</span><br /></p>
+<p>Use circuit simulation software to verify your predicted and measured parameter values.</p>
+<p>I recommend setting the function generator output for 1 volt, to make it easier for students to measure the point of &quot;cutoff&quot;. You may set it at some other value, though, if you so choose (or let students set the value themselves when they test the circuit!).</p>
+<p>For capacitors, I recommend students choose three (3) capacitors of equal value if they wish to build the Sallen-Key circuit with a Butterworth response (where <span class="math"><em>C</em><sub>2</sub> = 2<em>C</em><sub>1</sub></span>). Capacitor <span class="math"><em>C</em><sub>1</sub></span> will be a single capacitor, while capacitor <span class="math"><em>C</em><sub>2</sub></span> will be two capacitors connected in parallel. This generally ensures a more precise 1:2 ratio than choosing individual components.</p>
+<p>I also recommend having students use an oscilloscope to measure AC voltage in a circuit such as this, because some digital multimeters have difficulty accurately measuring AC voltage much beyond line frequency range. I find it particularly helpful to set the oscilloscope to the &quot;X-Y&quot; mode so that it draws a thin line on the screen rather than sweeps across the screen to show an actual waveform. This makes it easier to measure peak-to-peak voltage.</p>
+<p>Values that have proven to work well for this exercise are given here, although of course many other values are possible:</p>
+<p><span class="math"> • </span> +V = +12 volts</p>
+<p><span class="math"> • </span> -V = -12 volts</p>
+<p><span class="math"> • </span> <span class="math"><em>R</em><sub>1</sub></span> = 10 k<span class="math">Ω </span></p>
+<p><span class="math"> • </span> <span class="math"><em>R</em><sub>2</sub></span> = 10 k<span class="math">Ω </span></p>
+<p><span class="math"> • </span> <span class="math"><em>R</em><sub><em>c</em><em>o</em><em>m</em><em>p</em></sub></span> = 20 k<span class="math">Ω </span> (actually, two 10 k<span class="math">Ω </span> resistors in series)</p>
+<p><span class="math"> • </span> <span class="math"><em>C</em><sub>1</sub></span> = 0.001 <span class="math"><em>μ</em></span>F</p>
+<p><span class="math"> • </span> <span class="math"><em>C</em><sub>2</sub></span> = 0.002 <span class="math"><em>μ</em></span>F (actually, two 0.001 <span class="math"><em>μ</em></span>F capacitors in parallel)</p>
+<p><span class="math"> • </span> <span class="math"><em>U</em><sub>1</sub></span> = one-half of LM1458 dual operational amplifier</p>
+<p>This combination of components gave a predicted cutoff frequency of 11.25 kHz, with an actual cutoff frequency (not factoring in component tolerances) of 11.36 kHz.</p>

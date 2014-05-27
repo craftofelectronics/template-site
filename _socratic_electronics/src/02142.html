@@ -1,0 +1,7 @@
+<p>One way that SCRs may be triggered into their &quot;on&quot; state is by a <em>transient</em> voltage applied between the anode and cathode terminals. Normally, this method of triggering is considered a flaw of the device, as it opens the possibility of unwanted triggering resulting from disturbances in the power supply voltage.</p>
+<p>Explain why a high <span class="math">${dv \over dt}$</span> present on the power supply rail is able to trigger an SCR, with reference to the SCR’s equivalent circuit. Also suggest what means might be employed to prevent false triggering from power supply transients.</p>
+<p>Parasitic (Miller-effect) capacitances inside the SCR’s bipolar structure make the device vulnerable to voltage transients, large <span class="math">${dv \over dt}$</span> rates creating base currents large enough to initiate conduction. Snubber circuits are typically provided to mitigate these effects:</p>
+<p><br /><span class="math">$\epsfbox{02142x01.eps}$</span><br /></p>
+<p>The expression <span class="math">${dv \over dt}$</span> is, of course, a calculus term meaning rate-of-change of voltage over time. An important review concept for this question is the &quot;Ohm’s Law&quot; formula for a capacitance:</p>
+<p><br /><span class="math">$i = C {dv \over dt}$</span><br /></p>
+<p>Only by understanding the effects of a rapidly changing voltage on a capacitance are students able to comprehend why large rates of <span class="math">${dv \over dt}$</span> could cause trouble for an SCR.</p>

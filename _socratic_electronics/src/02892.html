@@ -1,0 +1,15 @@
+<p>The output of the following gate circuit is always low, no matter what states the input switches are in. Assume that CMOS logic gates are being used here:</p>
+<p><br /><span class="math">$\epsfbox{02892x01.eps}$</span><br /></p>
+<p>Identify which of these possibilities could account for the output always being low:</p>
+<p><span class="math"> • </span> Output of <span class="math"><em>U</em><sub>1</sub></span> stuck in a high state</p>
+<p><span class="math"> • </span> Output of <span class="math"><em>U</em><sub>1</sub></span> stuck in a low state</p>
+<p><span class="math"> • </span> <span class="math"><em>R</em><sub>1</sub></span> failed open</p>
+<p><span class="math"> • </span> Switch C failed open</p>
+<p><span class="math"> • </span> Switch B failed open</p>
+<p><span class="math"> • </span> Switch A failed shorted</p>
+<p>Only these two possibilities could account for the output always being low:</p>
+<p><span class="math"> • </span> Output of <span class="math"><em>U</em><sub>1</sub></span> stuck in a low state</p>
+<p><span class="math"> • </span> Switch C failed open</p>
+<p>Follow-up question: determine what each of the other faults would do to the circuit.</p>
+<p>Questions like this help students hone their troubleshooting skills by forcing them to think through the consequences of each possibility. This is an essential step in troubleshooting, and it requires a firm understanding of circuit function.</p>
+<p>If a student suggests switch B failing open could cause the output to remain low, they are either misunderstanding the operation of an OR gate, or they are assuming switch A has also failed open (or something else happening that keeps input A low all the time). I find this kind of assumption frequently in students new to troubleshooting: assuming multiple faults. While multiple faults are not impossible, they are less likely than single faults. Therefore, the good technician <em>first</em> looks for single faults capable of accounting for all observed states before looking for (less likely) combinations of faults. This is a practical application of Occam’s Razor.</p>

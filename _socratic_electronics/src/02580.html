@@ -1,0 +1,14 @@
+<p><br /><span class="math">$\epsfbox{02580x01.eps}$</span><br /></p>
+<p>Use circuit simulation software to verify your predicted and measured parameter values.</p>
+<p>Use a sine-wave function generator for the AC voltage source. Specify components giving a notch frequency within the audio range:</p>
+<p><br /><span class="math">$f_{notch} = {1 \over {2 \pi R C}}$</span><br /></p>
+<p>I have had good success using the following values:</p>
+<p><span class="math"> • </span> <span class="math"><em>R</em><sub>1</sub></span> = 10 k<span class="math">Ω </span></p>
+<p><span class="math"> • </span> <span class="math"><em>R</em><sub>2</sub></span> = 10 k<span class="math">Ω </span></p>
+<p><span class="math"> • </span> <span class="math"><em>R</em><sub>3</sub></span> = 5 k<span class="math">Ω </span> (actually, two 10 k<span class="math">Ω </span> resistors in parallel)</p>
+<p><span class="math"> • </span> <span class="math"><em>C</em><sub>1</sub></span> = 0.001 <span class="math"><em>μ</em></span>F</p>
+<p><span class="math"> • </span> <span class="math"><em>C</em><sub>2</sub></span> = 0.001 <span class="math"><em>μ</em></span>F</p>
+<p><span class="math"> • </span> <span class="math"><em>C</em><sub>3</sub></span> = 0.002 <span class="math"><em>μ</em></span>F (actually, two 0.001 <span class="math"><em>μ</em></span>F capacitors in parallel)</p>
+<p>These component values yield a theoretical notch frequency of 16.13 kHz (the very high end of audio range), with the actual measured notch frequency for my circuit (without considering component tolerances) being 15.92 kHz.</p>
+<p>I recommend setting the function generator output for 1 volt, to make it easier for students to measure the point of &quot;cutoff&quot;. You may set it at some other value, though, if you so choose (or let students set the value themselves when they test the circuit!).</p>
+<p>I also recommend having students use an oscilloscope to measure AC voltage in a circuit such as this, because some digital multimeters have difficulty accurately measuring AC voltage much beyond line frequency range. I find it particularly helpful to set the oscilloscope to the &quot;X-Y&quot; mode so that it draws a thin line on the screen rather than sweeps across the screen to show an actual waveform. This makes it easier to measure peak-to-peak voltage.</p>

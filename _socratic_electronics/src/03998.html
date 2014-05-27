@@ -1,0 +1,7 @@
+<p>The following circuit generates an analog output voltage proportional to the value of the binary input, using pulse-width modulation (PWM) as an interim format. An eight-bit binary counter (<strong>CTR</strong>) continually counts in the &quot;up&quot; direction, while an 8-bit magnitude comparator (<strong>CMP</strong>) checks when the 8-bit binary input value matches the counter’s output value. The AND gate and inverter simply prevent the S-R latch from being &quot;set&quot; and &quot;reset&quot; simultaneously (when both A and B are maximum, both at a hex value of $FF), which would cause the output to be &quot;invalid&quot; when S and R were both active, and unpredictable when both S and R inputs returned to their inactive states:</p>
+<p><br /><span class="math">$\epsfbox{03998x01.eps}$</span><br /></p>
+<p>Explain how this circuit works, using timing diagrams if necessary to help show the PWM signal at <span class="math">$\overline{Q}$</span> for different input values.</p>
+<p>Here is a timing diagram to help get you started on a complete answer:</p>
+<p><br /><span class="math">$\epsfbox{03998x02.eps}$</span><br /></p>
+<p>I’ll leave it to you to explain the relationship between the input value (A), the PWM duty cycle, and the analog output voltage.</p>
+<p>This circuit provides students with an interesting exercise in timing analysis, as well as being a simple means of converting large binary values into analog output voltages without resorting to using <em>large</em> resistor networks.</p>

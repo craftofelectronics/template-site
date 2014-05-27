@@ -1,0 +1,16 @@
+<p>Predict how the operation of this logic gate circuit will be affected as a result of the following faults. Consider each fault independently (i.e. one at a time, no multiple faults):</p>
+<p><br /><span class="math">$\epsfbox{03824x01.eps}$</span><br /></p>
+<p><span class="math"> • </span> Diode <span class="math"><em>D</em><sub>1</sub></span> fails open:</p>
+<p><span class="math"> • </span> Diode <span class="math"><em>D</em><sub>1</sub></span> fails shorted:</p>
+<p><span class="math"> • </span> Diode <span class="math"><em>D</em><sub>2</sub></span> fails open:</p>
+<p><span class="math"> • </span> Diode <span class="math"><em>D</em><sub>2</sub></span> fails shorted:</p>
+<p><span class="math"> • </span> Transistor <span class="math"><em>Q</em><sub>1</sub></span> fails open (drain to source):</p>
+<p><span class="math"> • </span> Transistor <span class="math"><em>Q</em><sub>2</sub></span> fails open (drain to source):</p>
+<p>For each of these conditions, explain <em>why</em> the resulting effects will occur.</p>
+<p><span class="math"> • </span> Diode <span class="math"><em>D</em><sub>1</sub></span> fails open: <em>No effect.</em></p>
+<p><span class="math"> • </span> Diode <span class="math"><em>D</em><sub>1</sub></span> fails shorted: <em>Output always in low state, possible damage to circuit when input is forced low by another gate (or switch).</em></p>
+<p><span class="math"> • </span> Diode <span class="math"><em>D</em><sub>2</sub></span> fails open: <em>No effect.</em></p>
+<p><span class="math"> • </span> Diode <span class="math"><em>D</em><sub>2</sub></span> fails shorted: <em>Output always in high state, possible damage to circuit when input is forced high by another gate (or switch).</em></p>
+<p><span class="math"> • </span> Transistor <span class="math"><em>Q</em><sub>1</sub></span> fails open (drain to source): <em>Output cannot source current in high state, but is still able to sink current in low state.</em></p>
+<p><span class="math"> • </span> Transistor <span class="math"><em>Q</em><sub>2</sub></span> fails open (drain to source): <em>Output cannot sink current in low state, but is still able to source current in high state.</em></p>
+<p>The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are. Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data. Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.</p>

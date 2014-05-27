@@ -1,0 +1,13 @@
+<p>If we need to produce a discrete logic signal (&quot;high&quot; or &quot;low&quot;) from a mechanical switch, the most direct way of doing so is to use a single-pole, double-throw switch (SPDT) like this:</p>
+<p><br /><span class="math">$\epsfbox{03001x01.eps}$</span><br /></p>
+<p>In the &quot;High&quot; position, the switch directly connects the signal line to +V, ensuring a high logic state; in the &quot;Low&quot; position, the switch directly connects the signal line to ground, ensuring a low logic state. What could be simpler?</p>
+<p>However, often a SPDT switch is not feasible and we must use a SPST (single-pole, single-throw) switch instead:</p>
+<p><br /><span class="math">$\epsfbox{03001x02.eps}$</span><br /></p>
+<p>A problem often arises with such configurations because in the open position there is neither a connection to +V nor ground. In other words, these two SPST configurations produce the exact same indeterminate logic state (&quot;floating&quot;) when their respective switches are open. To remedy this, resistors are often added to such circuits:</p>
+<p><br /><span class="math">$\epsfbox{03001x03.eps}$</span><br /></p>
+<p>Explain what functions the <em>pulldown</em> and <em>pullup</em> resistors serve, and also why they are referred to by those names.</p>
+<p>The &quot;pulldown&quot; and &quot;pullup&quot; resistors do exactly what their names imply: they <em>pull</em> the logic state of the wire in the direction opposite what the switch does when closed.</p>
+<p>Follow-up question: to better understand the purpose of these resistors, examine the following circuits without pulldown and pullup resistors to determine what the logic states of the wires will be in both switch positions. Then, add either pulldown or pullup resistors and re-examine the circuits:</p>
+<p>Challenge question: how does one calculate the proper resistance (in ohms) for a pulldown or pullup resistor? Will any size work, or is there such a thing as too large or too small?</p>
+<p><br /><span class="math">$\epsfbox{03001x04.eps}$</span><br /></p>
+<p>If students do not understand the purpose of these resistors after reading the question and researching their texts, they should when they see the follow-up question. Discuss this question with your students, for the concept of pulldown and pullup resistors is one that confuses some students.</p>

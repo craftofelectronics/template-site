@@ -1,0 +1,18 @@
+<p>Examine the following schematic diagram and program listing (written in &quot;pseudocode&quot; rather than a formal programming language) to determine what type of basic logic function is being implemented in this microcontroller unit:</p>
+<p><br /><span class="math">$\epsfbox{02586x01.eps}$</span><br /></p>
+<p>Declare Pin0 as an output</p>
+<p>Declare Pin1 and Pin2 as inputs</p>
+<p>LOOP</p>
+<p>IF Pin1 is same as Pin2, set Pin0 LOW</p>
+<p>ELSE set Pin0 HIGH</p>
+<p>ENDIF</p>
+<p>ENDLOOP</p>
+<p>This microcontroller implements the logical Exclusive-OR function.</p>
+<p>Although this logic function could have been implemented easier and cheaper in hard-wired (gate) logic, the purpose is to get students to think of performing logical operations by a sequenced set of instructions inside a programmable device (the MCU). This is a conceptual leap, basic but very important.</p>
+<p>In case you’re wondering why I write in pseudocode, here are a few reasons:</p>
+<p><span class="math"> • </span> No prior experience with programming required to understand pseudocode</p>
+<p><span class="math"> • </span> It never goes out of style</p>
+<p><span class="math"> • </span> Hardware independent</p>
+<p><span class="math"> • </span> No syntax errors</p>
+<p>If I had decided to showcase code that would actually run in a microcontroller, I would be dooming the question to obsolescence. This way, I can communicate the spirit of the program without being chained to an actual programming standard. The only drawback is that students will have to translate my pseudocode to real code that will actually run on their particular MCU hardware, but that is a problem guaranteed for some regardless of which real programming language I would choose.</p>
+<p>Of course, I could have taken the Donald Knuth approach and invented my own (imaginary) hardware and instruction set . . .</p>

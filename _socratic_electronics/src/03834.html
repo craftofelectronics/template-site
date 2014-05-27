@@ -1,0 +1,14 @@
+<p>A different way to view the functions of two-input logic gates is to think of them in terms of <em>signal controllers</em>, where the status of one input affects how the other input’s signal passes through to the output. The generic schematic diagram for this format is as such:</p>
+<p><br /><span class="math">$\epsfbox{03834x01.eps}$</span><br /></p>
+<p>Identify the types of logic gates which do the following (there is more than one type of gate for each of the following rules!):</p>
+<p><span class="math"> • </span> <span class="math"><em>B</em> = <em>A</em></span> when Control is high</p>
+<p><span class="math"> • </span> <span class="math"><em>B</em> = <em>A</em></span> when Control is low</p>
+<p><span class="math"> • </span> <span class="math">$B = \overline{A}$</span> when Control is high</p>
+<p><span class="math"> • </span> <span class="math">$B = \overline{A}$</span> when Control is low</p>
+<p>Also, explain how an understanding of this can be helpful in troubleshooting faulted logic gates.</p>
+<p><span class="math"> • </span> <span class="math"><em>B</em> = <em>A</em></span> when Control is high: <strong>AND</strong> gate and <strong>XNOR</strong> gate.</p>
+<p><span class="math"> • </span> <span class="math"><em>B</em> = <em>A</em></span> when Control is low: <strong>OR</strong> gate and <strong>XOR</strong> gate.</p>
+<p><span class="math"> • </span> <span class="math">$B = \overline{A}$</span> when Control is high: <strong>NAND</strong> gate and <strong>XOR</strong> gate.</p>
+<p><span class="math"> • </span> <span class="math">$B = \overline{A}$</span> when Control is low: <strong>NOR</strong> gate and <strong>XNOR</strong> gate.</p>
+<p>Follow-up question: explain why XOR and XNOR gates are so useful as signal controllers.</p>
+<p>This is a very useful way to think of the different logic gate types, as it is often required to use a gate as a controlled buffer or controlled inverter.</p>

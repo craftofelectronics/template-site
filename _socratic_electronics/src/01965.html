@@ -1,0 +1,14 @@
+<p><br /><span class="math">$\epsfbox{01965x01.eps}$</span><br /></p>
+<p>Use circuit simulation software to verify your predicted and measured parameter values.</p>
+<p>I have had success with the following values:</p>
+<p><span class="math"> • </span> <span class="math"><em>V</em><sub><em>C</em><em>C</em></sub></span> = 12 to 24 volts</p>
+<p><span class="math"> • </span> <span class="math"><em>C</em><sub>1</sub></span> = 0.47 <span class="math"><em>μ</em></span>F</p>
+<p><span class="math"> • </span> <span class="math"><em>C</em><sub>2</sub></span> = 0.47 <span class="math"><em>μ</em></span>F</p>
+<p><span class="math"> • </span> <span class="math"><em>T</em><sub>1</sub></span> = 1000:8 <span class="math">Ω </span> audio matching transformer (used as center-tap inductor)</p>
+<p><span class="math"> • </span> <span class="math"><em>R</em><sub>1</sub></span> = 1.5 M<span class="math">Ω </span></p>
+<p><span class="math"> • </span> <span class="math"><em>Q</em><sub>1</sub></span> = part number 2N3403</p>
+<p>Capacitors <span class="math"><em>C</em><sub>1</sub></span> and <span class="math"><em>C</em><sub>2</sub></span> need not be equal value, since they serve entirely different purposes: <span class="math"><em>C</em><sub>1</sub></span> is the tank circuit capacitance, while <span class="math"><em>C</em><sub>2</sub></span> is merely a coupling capacitor. I just happened to be blessed with an abundance of 0.47 <span class="math"><em>μ</em></span>F capacitors when I prototyped this circuit, so I chose that value for both capacitors!</p>
+<p>With these component values, the output waveform I measured was not very sinusoidal, but at least it was oscillating. The harmonic output of a Hartley oscillator is substantially greater than a Colpitts, primary because the two capacitors in the Colpitts design act as decoupling capacitances, shunting high-order harmonic signals to ground.</p>
+<p>Of course, in order to predict the frequency of oscillation in this Hartley oscillator circuit, you must know the inductance of the audio transformer’s primary winding!</p>
+<p>You might want to quiz your students on the purpose of resistor <span class="math"><em>R</em><sub>1</sub></span>, since it usually only has to be present at power-up to initiate oscillation!</p>
+<p>An extension of this exercise is to incorporate troubleshooting questions. Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students’ results by asking them to predict the consequences of certain circuit faults.</p>

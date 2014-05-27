@@ -5,4 +5,4 @@ remote:
 	jekyll build --config _config.yml,_config_remote.yml
 	rsync -vrz \
 		-e ssh _site/ \
-		craftoeorg@craftofelectronics.org:~/craftofelectronics.org/wider/
+		craftoeorg@craftofelectronics.org:~/craftofelectronics.org/

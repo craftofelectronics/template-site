@@ -1,0 +1,8 @@
+<p>One method of driving pixels in a grid-based display is to organize the pixels into rows and columns, then select individual pixels for illumination by the intersection of a specific row line and a specific column line. In this example, we are controlling an 8 <span class="math"> × </span> 8 grid of LEDs with two 8-bit (1-byte) ports of a microcontroller:</p>
+<p><br /><span class="math">$\epsfbox{04053x01.eps}$</span><br /></p>
+<p>Note that a <em>high</em> state is required on one of port B’s pins to activate a row, and a <em>low</em> state is required on one of port A’s pins to activate a column, because the LED anodes connect to port A and the LED cathodes connect to port B.</p>
+<p>Determine the hexadecimal codes we would need to output at ports A and B to energize the LED in the far lower-left corner of the 8 <span class="math"> × </span> 8 grid.</p>
+<p>Port A =</p>
+<p>Port B =</p>
+<p>Port A = $FE</p>
+<p>Port B = $80</p>

@@ -1,0 +1,13 @@
+<p>A passive integrator circuit is energized by a square wave signal with a peak-to-peak amplitude of 12 volts and a frequency of 65.79 Hz:</p>
+<p><br /><span class="math">$\epsfbox{03308x01.eps}$</span><br /></p>
+<p>Determine the peak-to-peak voltage of the output waveform:</p>
+<p><br /><span class="math">$\epsfbox{03308x02.eps}$</span><br /></p>
+<p>Hint: the output waveform will be centered exactly half-way between the two peaks of the input square wave as shown in the oscilloscope image. Do <em>not</em> base your answer on relative sizes of the two waveforms, as I have purposely skewed the calibration of the oscilloscope screen image so the two waveforms are not to scale with each other.</p>
+<p><span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em></sub></span> (peak-to-peak) = 8.025 volts</p>
+<p>Follow-up question: the components comprising this circuit are improperly sized if it is actually expected to function as a reasonably accurate <em>integrator</em>. Suggest better component values for the frequency of signal being integrated.</p>
+<p>Challenge question: write a formula that solves for this peak-to-peak output voltage (<span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em></sub></span>) given the peak-to-peak input voltage (<span class="math"><em>V</em><sub><em>i</em><em>n</em></sub></span>), resistor value <span class="math"><em>R</em></span>, capacitor value <span class="math"><em>C</em></span>, and signal frequency <span class="math"><em>f</em></span>.</p>
+<p>This is an interesting problem to set up. Ask your students what approach they used, so they all can see multiple problem-solving techniques. I based my own solution on the RC circuit decay equation <span class="math"><em>e</em><sup> − <em>t</em> / <em>τ</em></sup></span> with <span class="math"><em>x</em></span> volts being my starting condition and -6 volts being my final condition (if time <span class="math"><em>t</em></span> is infinite), then I just solved for <span class="math"><em>x</em></span>. With my method, <span class="math"><em>x</em></span> is the peak signal voltage, not the peak-to-peak, so I just doubled it to get the final answer.</p>
+<p><br /><span class="math">$\epsfbox{03308x03.eps}$</span><br /></p>
+<p>My own answer for the challenge question is this:</p>
+<p><br /><span class="math">$V_{out} = {{V_{in}\left(1 - e^{-1 \over 2RCf}\right)} \over {1 + e^{-1 \over 2RCf}}}$</span><br /></p>
+<p>Your mileage may vary . . .</p>

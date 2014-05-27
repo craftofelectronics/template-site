@@ -1,0 +1,6 @@
+<p>Explain what <em>common-mode rejection ratio</em> means for a differential amplifier, and give a formula for calculating it.</p>
+<p>Common-mode rejection ratio compares an amplifier’s differential voltage gain to its common-mode voltage gain. Ideally, CMRR is infinite.</p>
+<p><br /><span class="math">$\hbox{CMRR} = 20 \log \left( {A_{diff(ratio)} \over A_{CM(ratio)}} \right)$</span><br /></p>
+<p>The fundamental mechanism causing a common-mode signal to make it through to the output of a differential amplifier is a change in input offset voltage resulting from shifts in bias caused by that common-mode voltage. So, sometimes you may see CMRR defined as such:</p>
+<p><br /><span class="math">$\hbox{CMRR} = 20 \log \left( {\Delta V_{in(common)} \over \Delta V_{offset}} \right)$</span><br /></p>
+<p>An application that really shows the value of a high CMRR is differential signal transmission, as shown in question #02519. For those students not grasping the significance of CMRR, this would be a good example circuit to show them.</p>

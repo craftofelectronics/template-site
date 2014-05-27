@@ -1,0 +1,13 @@
+<p>If both these circuits are energized by an AC sine-wave source providing a perfectly undistorted signal, the resulting output waveforms will differ in phase and possibly in amplitude, but not in shape:</p>
+<p><br /><span class="math">$\epsfbox{01600x01.eps}$</span><br /></p>
+<p>If, however, the excitation voltage is slightly distorted, one of the outputs will be more sinusoidal than the other. Explain whether it is the differentiator or the integrator that produces the signal most resembling a pure sine wave, and why.</p>
+<p>Hint: I recommend building this circuit and powering it with a triangle wave, to simulate a mildly distorted sine wave.</p>
+<p>The <em>differentiator</em> circuit will output a much more distorted waveshape, because differentiation magnifies harmonics:</p>
+<p><br /><span class="math">${d \over dt} \left( \sin t \right) = \cos t$</span><br /></p>
+<p><br /><span class="math">${d \over dt} \left( \sin 2t \right) = 2 \cos 2t$</span><br /></p>
+<p><br /><span class="math">${d \over dt} \left( \sin 3t \right) = 3 \cos 3t$</span><br /></p>
+<p><br /><span class="math">${d \over dt} \left( \sin 4t \right) = 4 \cos 4t$</span><br /></p>
+<p><br /><span class="math">⋯</span><br /></p>
+<p><br /><span class="math">${d \over dt} \left( \sin nt \right) = n \cos nt$</span><br /></p>
+<p>As an interesting footnote, this is precisely why differentiation is rarely performed on real-world signals. Since the frequency of noise often exceeds the frequency of the signal, differentiating a &quot;noisy&quot; signal will only lead to a decreased signal-to-noise ratio.</p>
+<p>For a practical example of this, tell your students about vibration measurement, where it is more common to calculate velocity based on time-integration of an acceleration signal than it is to calculate acceleration based on time-differentiation of a velocity signal.</p>

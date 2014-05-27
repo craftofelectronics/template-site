@@ -1,0 +1,87 @@
+<p>A <em>seven segment decoder</em> is a digital circuit designed to drive a very common type of digital display device: a set of LED (or LCD) segments that render numerals 0 through 9 at the command of a four-bit code:</p>
+<p><br /><span class="math">$\epsfbox{02838x01.eps}$</span><br /></p>
+<p>The behavior of the display driver IC may be represented by a truth table with seven outputs: one for each segment of the seven-segment display (<span class="math"><em>a</em></span> through <span class="math"><em>g</em></span>). In the following table, a &quot;1&quot; output represents an active display segment, while a &quot;0&quot; output represents an inactive segment:</p>
+<p><br /><span class="math">$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+D &amp; C &amp; B &amp; A &amp; a &amp; b &amp; c &amp; d &amp; e &amp; f &amp; g &amp; Display\cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; &quot;0&quot; \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; &quot;1&quot; \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; &quot;2&quot; \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; &quot;3&quot; \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; &quot;4&quot; \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; &quot;5&quot; \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; &quot;6&quot; \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; &quot;7&quot; \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; &quot;8&quot; \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; &quot;9&quot; \cr
+\noalign{\hrule}
+} }$</span><br /> A real-life example such as this provides an excellent showcase for techniques such as Karnaugh mapping. Let’s take output <span class="math"><em>a</em></span> for example, showing it without all the other outputs included in the truth table:</p>
+<p><br /><span class="math">$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+D &amp; C &amp; B &amp; A &amp; a \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 \cr
+\noalign{\hrule}
+} }$</span><br /> Plotting a Karnaugh map for output <span class="math"><em>a</em></span>, we get this result:</p>
+<p><br /><span class="math">$\epsfbox{02838x02.eps}$</span><br /></p>
+<p>Identify adjacent groups of 1’s in this Karnaugh map, and generate a minimal SOP expression from those groupings.</p>
+<p>Note that six of the cells are blank because the truth table does not list all the possible input combinations with four variables (A, B, C, and D). With these large gaps in the Karnaugh map, it is difficult to form large groupings of 1’s, and thus the resulting &quot;minimal&quot; SOP expression has several terms.</p>
+<p>However, if we do not care about output <span class="math"><em>a</em></span>’s state in the six non-specified truth table rows, we can fill in the remaining cells of the Karnaugh map with &quot;don’t care&quot; symbols (usually the letter <span class="math"><em>X</em></span>) and use those cells as &quot;wildcards&quot; in determining groupings:</p>
+<p><br /><span class="math">$\epsfbox{02838x03.eps}$</span><br /></p>
+<p>With this new Karnaugh map, identify adjacent groups of 1’s, and generate a minimal SOP expression from those groupings.</p>
+<p>Karnaugh map groupings with strict &quot;1&quot; groups:</p>
+<p><br /><span class="math">$\overline{D}B + \overline{D}CA + D\overline{C} \&gt; \overline{B} + \overline{C} \&gt; \overline{B} \&gt; \overline{A}$</span><br /></p>
+<p><br /><span class="math">$\epsfbox{02838x04.eps}$</span><br /></p>
+<p>Karnaugh map groupings with &quot;don’t care&quot; wildcards:</p>
+<p><br /><span class="math">$D + B + CA + \overline{C} \&gt; \overline{A}$</span><br /></p>
+<p><br /><span class="math">$\epsfbox{02838x05.eps}$</span><br /></p>
+<p>Follow-up question: this question and answer merely focused on the <span class="math"><em>a</em></span> output for the BCD-to-7-segment decoder circuit. Imagine if we were to approach all seven outputs of the decoder circuit in these two fashions, first developing SOP expressions using strict groupings of &quot;1&quot; outputs, and then using &quot;don’t care&quot; wildcards. Which of these two approaches do you suppose would yield the simplest gate circuitry overall? What impact would the two different solutions have on the decoder circuit’s behavior for the six unspecified input combinations 1010, 1011, 1100, 1101, 1110, and 1111?</p>
+<p>One of the points of this question is for students to realize that bigger groups are better, in that they yield simpler SOP terms. Also, students should realize that the ability to use &quot;don’t care&quot; states as &quot;wildcard&quot; placeholders in the Karnaugh map cells increases the chances of creating bigger groups.</p>
+<p>Truth be known, I chose a pretty bad example to try to make an SOP expression from, since there are only two non-zero output conditions out of ten! Formulating a POS expression would have been easier, but that’s a subject for another question!</p>

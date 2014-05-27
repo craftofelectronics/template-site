@@ -1,0 +1,10 @@
+<p><em>Ethernet</em> is a popular communications standard for many digital devices, personal computers included. Originally, Ethernet was intended to be a network standard for conveying digital data only, without power. In later years, however, upgrades to the standard allowed DC power to be conveyed over the same wire pairs. The IEEE standard 802.3af is one example of a power-over-Ethernet standard.</p>
+<p>Shown here is a schematic showing how two Ethernet devices connect together over a Category 5 (&quot;Cat 5&quot;) twisted-pair cable, with no DC power conveyed over the cabling:</p>
+<p><br /><span class="math">$\epsfbox{02123x01.eps}$</span><br /></p>
+<p>Digital data consists of voltage pulses over time (AC, essentially), conducted between the two devices over two sets of twisted-pair wires.</p>
+<p>The next schematic shows the 802.3af standard allowing both DC power and digital data to be communicated over the same pairs of wires. Note the use of transformers at each device:</p>
+<p><br /><span class="math">$\epsfbox{02123x02.eps}$</span><br /></p>
+<p>Explain what function(s) the transformers provide in this system, and how they allow DC power to travel through the wire pairs from source to load without interfering with the Ethernet data signals, which are AC.</p>
+<p>Trace the DC current from source to load and you will see that there is zero net magnetic flux in the transformer cores resulting from the DC, meaning that the transformers do not &quot;see&quot; the DC current for all practical purposes.</p>
+<p>This is an interesting application of transformers: isolation of DC allowing a form of &quot;power line carrier&quot; system to be made without the use of filter networks.</p>
+<p>Actually, there is more to the 802.3af standard than what is shown in the second schematic diagram. This standard also allows the use of the other two pairs of wires in Cat 5 cable as dedicated power conductors. I omit this aspect for simplicity.</p>

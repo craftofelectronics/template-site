@@ -1,0 +1,16 @@
+<p>This relaxation oscillator circuit uses a resistor-capacitor combination (<span class="math"><em>R</em><sub>1</sub></span> - <span class="math"><em>C</em><sub>1</sub></span>) to establish the time delay between output pulses:</p>
+<p><br /><span class="math">$\epsfbox{01186x01.eps}$</span><br /></p>
+<p>The voltage measured between TP1 and ground looks like this on the oscilloscope display:</p>
+<p><br /><span class="math">$\epsfbox{01186x02.eps}$</span><br /></p>
+<p>A slightly different version of this circuit adds a JFET to the capacitor’s charge current path:</p>
+<p><br /><span class="math">$\epsfbox{01186x03.eps}$</span><br /></p>
+<p>Now, the voltage at TP1 looks like this:</p>
+<p><br /><span class="math">$\epsfbox{01186x04.eps}$</span><br /></p>
+<p>What function does the JFET perform in this circuit, based on your analysis of the new TP1 signal waveform? The straight-line charging voltage pattern shown on the second oscilloscope display indicates what the JFET is doing in this circuit.</p>
+<p>Hint: you don’t need to know anything about the function of the unijunction transistor (at the circuit’s output) other than it acts as an on/off switch to periodically discharge the capacitor when the TP1 voltage reaches a certain threshold level.</p>
+<p>Challenge question: write a formula predicting the <em>slope</em> of the ramping voltage waveform measured at TP1.</p>
+<p>The JFET in this circuit functions as a constant current regulator.</p>
+<p>Answer to challenge question: Slope = <span class="math">$dv \over dt$</span> = <span class="math">${I_D \over C}$</span></p>
+<p>Ask your students how they would know to relate &quot;constant current&quot; to the peculiar charging action of this capacitor. Ask them to explain this mathematically.</p>
+<p>Then, ask them to explain exactly how the JFET works to regulate charging current.</p>
+<p>Note: the schematic diagram for this circuit was derived from one found on page 958 of John Markus’ , first edition. Apparently, the design originated from a Motorola publication on using unijunction transistors (&quot;Unijunction Transistor Timers and Oscillators,&quot; AN-294, 1972).</p>

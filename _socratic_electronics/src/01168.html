@@ -1,0 +1,9 @@
+<p>A comparator is used as a high wind speed alarm in this circuit, triggering an audio tone to sound whenever the wind speed exceeds a pre-set alarm point:</p>
+<p><br /><span class="math">$\epsfbox{01168x01.eps}$</span><br /></p>
+<p>The circuit works well to warn of high wind speed, but when the wind speed is just near the threshold level, every little gust causes the alarm to briefly sound, then turn off again. What would be better is for the alarm to sound at a set wind speed, then <em>stay on</em> until the wind speed falls below a substantially lower threshold value (example: alarm at 60 km/h, reset at 50 km/h).</p>
+<p>An experienced electronics technician decides to add this functionality to the circuit by adding two resistors:</p>
+<p><br /><span class="math">$\epsfbox{01168x02.eps}$</span><br /></p>
+<p>Explain why this circuit alteration works to solve the problem.</p>
+<p>The added resistors provide <em>positive feedback</em> to the opamp circuit, causing it to exhibit hysteresis.</p>
+<p>Challenge question: suppose you wished to increase the gap between the upper and lower alarm thresholds. What resistor value(s) would you have to alter to accomplish this adjustment?</p>
+<p>A practical illustration for positive feedback in an opamp circuit. There is much to discuss here, even beyond the immediate context of positive feedback. Take for instance the oscillator circuit and on/off control transistor. For review, ask your students to explain how both these circuit sections function.</p>

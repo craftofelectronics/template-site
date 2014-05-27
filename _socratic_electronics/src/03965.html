@@ -1,0 +1,19 @@
+<p>This vocal eliminator circuit is supposed to strip the vocal track from any song where the vocals were recorded in monaural format (equal on both left and right channels). Any signal exactly common to both left and right channels will be canceled by the &quot;subtractor&quot; circuit. Low bass tones, which also tend to be common to both channels along with the vocals, are sampled by a summer circuit, selected by an active low-pass filter circuit, and then re-incorporated into the output by feeding into the final summer circuit:</p>
+<p><br /><span class="math">$\epsfbox{03965x01.eps}$</span><br /></p>
+<p>Unfortunately, something has failed in it. It used to function properly, but now vocals are plainly present in the output signal. Listening to the output signal through a headphone, you note that both bass and treble tones are present in the signal as well as the vocal track. In other words, the music sounds fairly normal.</p>
+<p>From this information, identify two possible faults that could account for the problem and all measured values in this circuit. Then, choose one of those possible faults and explain why you think it could be to blame. The circuit elements you identify as possibly faulted can be wires, traces, and connections as well as components. Be as specific as you can in your answers, identifying both the circuit element and the type of fault.</p>
+<p><span class="math"> • </span> Circuit elements that are possibly faulted</p>
+<p>1.</p>
+<p>2.</p>
+<p><span class="math"> • </span> Explanation of <em>why</em> you think one of the above faults could be to blame</p>
+<p>Note: the following answers are not exhaustive. There may be more circuit elements possibly at fault and more circuit elements known to be functioning properly!</p>
+<p><span class="math"> • </span> Circuit elements that are possibly faulted</p>
+<p>1. Resistor <span class="math"><em>R</em><sub>1</sub></span> failed open</p>
+<p>2. Resistor <span class="math"><em>R</em><sub>3</sub></span> failed open</p>
+<p>3. Resistor <span class="math"><em>R</em><sub>2</sub></span> failed shorted</p>
+<p>4. Resistor <span class="math"><em>R</em><sub>4</sub></span> failed shorted</p>
+<p>5. Opamp <span class="math"><em>U</em><sub>1</sub></span> output failed high or low</p>
+<p>6. Opamp <span class="math"><em>U</em><sub>2</sub></span> output failed high or low</p>
+<p><span class="math"> • </span> Explanation of <em>why</em> you think one of the above faults could be to blame</p>
+<p>Any fault that would result in the difference amplifier (the &quot;subtractor&quot;) <span class="math"><em>U</em><sub>3</sub></span> not subtracting one input from the other will cause this fault. If only one channel makes it through, vocals will be present along with all tones.</p>
+<p><strong>This question is intended for exams only and not worksheets!</strong>.</p>

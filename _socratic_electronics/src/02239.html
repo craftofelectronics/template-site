@@ -1,0 +1,14 @@
+<p><em>Models</em> of complex electronic components are useful for circuit analysis, because they allow us to express the approximate behavior of the device in terms of ideal components with relatively simple mathematical behaviors. Transistors are a good example of components frequently modeled for the sake of amplifier circuit analysis:</p>
+<p><br /><span class="math">$\epsfbox{02239x01.eps}$</span><br /></p>
+<p>It must be understood that models are never <em>perfect</em> replicas of the real thing. At some point, all models fail to precisely emulate the thing being modeled. The only real concern is how accurate we want our approximation to be: which characteristics of the component most concern us, and which do not.</p>
+<p>For example, when analyzing the response of transistor amplifier circuits to small AC signals, it is often assumed that the transistor will be &quot;biased&quot; by a DC signal such that the base-emitter diode is always conducting. If this is the case, and all we are concerned with is how the transistor responds to <em>AC</em> signals, we may safely eliminate the diode junction from our transistor model:</p>
+<p><br /><span class="math">$\epsfbox{02239x02.eps}$</span><br /></p>
+<p>However, even with the 0.7 volt (nominal) DC voltage drop absent from the model, there is still some impedance that an AC signal will encounter as it flows through the transistor. In fact, several distinct impedances exist within the transistor itself, customarily symbolized by resistors and lower-case <span class="math"><em>r</em>ʹ</span> designators:</p>
+<p><br /><span class="math">$\epsfbox{02239x03.eps}$</span><br /></p>
+<p><em>From the perspective of an AC current passing through the base-emitter junction of the transistor</em>, explain why the following transistor models are equivalent:</p>
+<p><br /><span class="math">$\epsfbox{02239x04.eps}$</span><br /></p>
+<p>These two models are equivalent because a given current (<span class="math"><em>i</em><sub><em>b</em></sub></span>) will cause the exact same amount of voltage drop between base and emitter (<span class="math"><em>v</em> = <em>i</em><em>r</em></span>):</p>
+<p><br /><span class="math">$v = i_b r'_b + (i_b + \beta i_b)r'_e \hbox{\hskip 20pt Left-hand model}$</span><br /></p>
+<p><br /><span class="math">$v = i_b \left[ r'_b + (\beta +1)r'_e \right] \hbox{\hskip 20pt Right-hand model}$</span><br /></p>
+<p>The mathematical equivalence of these two expressions may be shown by factoring <span class="math"><em>i</em><sub><em>b</em></sub></span> from all the terms in the left-hand model equation.</p>
+<p>The purpose of this question is to introduce students to the concept of BJT modeling, and also to familiarize them with some of the symbols and expressions commonly used in these models (as well as a bit of DC resistor network theory and algebra review, of course!).</p>

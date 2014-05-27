@@ -1,0 +1,6 @@
+<p>Logic gates are limited in the number of gate inputs which one output can reliably drive. This limit is referred to as <em>fan-out</em>:</p>
+<p><br /><span class="math">$\epsfbox{01267x01.eps}$</span><br /></p>
+<p>Explain why this limit exists. What is it about the construction of TTL logic gates that inherently limits the number of TTL inputs that any one TTL output can drive? What might happen if this limit is exceeded?</p>
+<p>Locate a datasheet for a TTL gate and research its fan-out limit. Note: this number will vary with the particular type of TTL referenced (L, LS, H, AS, ALS, etc.).</p>
+<p>A fan-out limit for TTL exists because TTL outputs have to sink current from TTL inputs in the &quot;low&quot; state, and their current-sinking ability is limited by the output transistor in the driving gate. If this fan-out limit is exceeded, the voltage level at the driven gate inputs may rise above the lower compliance limit.</p>
+<p>For the relatively simple digital circuits that beginning students build, fan-out is rarely a problem. More likely is that students will try to drive a load that is too &quot;heavy,&quot; causing the same voltage level problem.</p>

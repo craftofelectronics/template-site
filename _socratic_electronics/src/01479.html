@@ -1,0 +1,8 @@
+<p>Design a circuit that adds two binary bits and a &quot;Carry in&quot; (<span class="math"><em>C</em><sub><em>i</em><em>n</em></sub></span>) bit together, producing a &quot;Sum&quot; (<span class="math">Σ </span>) and a &quot;Carry out&quot; (<span class="math"><em>C</em><sub><em>o</em><em>u</em><em>t</em></sub></span>) output:</p>
+<p><br /><span class="math">$\epsfbox{01479x01.eps}$</span><br /></p>
+<p>Begin the design process by drawing a truth table for the circuit, writing a boolean SOP expression for each output, then determining the necessary gate circuitry to fulfill each output function.</p>
+<p><br /><span class="math">$\Sigma = \overline{A} \&gt; \overline{B} C + \overline{A} \&gt; B \overline{C} + A \overline{B} \&gt; \overline{C} + ABC$</span><br /></p>
+<p><br /><span class="math">$C_{out} = \overline{A}BC + A\overline{B}C + AB\overline{C} + ABC$</span><br /></p>
+<p><br /><span class="math">$\epsfbox{01479x02.eps}$</span><br /></p>
+<p>Have your students explain their design process to you, step by step. This circuit diagram is easy enough to discover in the pages of a textbook, so don’t be surprised if students simply copy what they see without trying to understand how it works!</p>
+<p>Deriving the two cascaded Ex-OR gates from the boolean expression is a bit tricky, but not impossible. Remind your students if necessary that the boolean equivalent for the Ex-OR function is <span class="math">$\overline{A}B + A\overline{B}$</span>, and that the Ex-NOR function is <span class="math">$AB + \overline{A} \&gt; \overline{B}$</span>.</p>

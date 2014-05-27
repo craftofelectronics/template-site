@@ -1,0 +1,5 @@
+<p>A student builds a four-bit asynchronous <em>up</em> counter out of individual J-K flip-flops, but is dissatisfied with its performance:</p>
+<p><br /><span class="math">$\epsfbox{03901x01.eps}$</span><br /></p>
+<p>Although the counting sequence is proper, the circuit usually does not begin counting from 0000 at power-up. The fact that the circuit counts correctly suggests that there is nothing failed or mis-wired, so what could possibly be wrong?</p>
+<p>The flip-flops’ initial states at power-up are essentially random because they are subject to internal <em>race conditions</em> between the constituent gates. What is needed is some form of <em>automatic reset</em> to force all flip-flops to the reset state at power-up.</p>
+<p>This is a very practical issue for state-machine circuits: making sure the circuit begins in the desired state rather than in some random condition.</p>

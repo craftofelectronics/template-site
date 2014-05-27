@@ -1,0 +1,61 @@
+<p>Develop a verbal description of this truth table, specifying what conditions must be met (&quot;<em>true</em>&quot; in a Boolean sense) in order for the output to assume a high state:</p>
+<p><br /><span class="math">$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+A &amp; B &amp; C &amp; Output \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 1 &amp; 0 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 1 &amp; 0 \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 1 &amp; 1 \cr
+\noalign{\hrule}
+1 &amp; 1 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+1 &amp; 1 &amp; 1 &amp; 0 \cr
+\noalign{\hrule}
+} }$</span><br /></p>
+<p>Do the same for this truth table as well:</p>
+<p><br /><span class="math">$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+A &amp; B &amp; C &amp; Output \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 1 &amp; 1 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 0 &amp; 1 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 1 &amp; 0 \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 1 &amp; 0 \cr
+\noalign{\hrule}
+1 &amp; 1 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+1 &amp; 1 &amp; 1 &amp; 0 \cr
+\noalign{\hrule}
+} }$</span><br /></p>
+<p>For the first truth table: the output of this circuit is high when <span class="math"><em>A</em></span> is true and <span class="math">$\overline{B}$</span> is true and <span class="math"><em>C</em></span> is true:</p>
+<p><br /><span class="math">$A \hbox{ AND } \overline{B} \hbox{ AND } C$</span><br /></p>
+<p>For the second truth table: the output of this circuit is high when <span class="math">$\overline{A}$</span> is true and <span class="math">$\overline{B}$</span> is true and <span class="math"><em>C</em></span> is true, or when <span class="math">$\overline{A}$</span> is true and <span class="math"><em>B</em></span> is true and <span class="math">$\overline{C}$</span> is true:</p>
+<p><br /><span class="math">$(\overline{A} \hbox{ AND } \overline{B} \hbox{ AND } C) \hbox{ OR } (\overline{A} \hbox{ AND } B \hbox{ AND } \overline{C})$</span><br /></p>
+<p>Follow-up question: do you suspect we could write a formal Boolean expression for each of these truth tables? What would those expressions be, and what form would they be in (SOP or POS)?</p>
+<p>I find this &quot;verbal&quot; approach works well to introduce students to the concept of deriving Boolean expressions from truth tables.</p>
+<p>Be sure to ask your students what Boolean expressions they derived for both these truth tables. Given the answers in &quot;verbal&quot; form, this should not be difficult for them!</p>

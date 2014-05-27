@@ -1,0 +1,12 @@
+<p>Predict how the operation of this &quot;concentrator&quot; circuit (which takes eight digital inputs and &quot;concentrates&quot; them into a single, multiplexed, communication line to be expanded into eight outputs at the receiving end) will be affected as a result of the following faults. Consider each fault independently (i.e. one at a time, no multiple faults):</p>
+<p><br /><span class="math">$\epsfbox{03918x01.eps}$</span><br /></p>
+<p><span class="math"> • </span> Clock pulse generator stops pulsing:</p>
+<p><span class="math"> • </span> Pin breaks on the <span class="math"><em>W</em></span> output of 74151 chip, leaving that wire floating:</p>
+<p><span class="math"> • </span> Pin breaks on G2A input of 74138 chip, leaving it floating:</p>
+<p><span class="math"> • </span> Enable pin breaks on 74151 chip, leaving it floating:</p>
+<p>For each of these conditions, explain <em>why</em> the resulting effects will occur.</p>
+<p><span class="math"> • </span> Clock pulse generator stops pulsing: <em>Only one channel out of the eight will work, and it works all the time without interruption. Data cannot get through any of the other seven channels.</em></p>
+<p><span class="math"> • </span> Pin breaks on the <span class="math"><em>W</em></span> output of 74151 chip, leaving that wire floating: <em>All selected outputs on the 74138 chip go low, instead of repeating the respective logic states input at the 74151 chip.</em></p>
+<p><span class="math"> • </span> Pin breaks on G2A input of 74138 chip, leaving it floating: <em>All outputs on the 74138 chip go high, all the time.</em></p>
+<p><span class="math"> • </span> Enable pin breaks on 74151 chip, leaving it floating: <em>All selected outputs on the 74138 chip go low, instead of repeating the respective logic states input at the 74151 chip.</em></p>
+<p>The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are. Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data. Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.</p>

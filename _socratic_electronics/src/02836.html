@@ -1,0 +1,45 @@
+<p>A student is asked to use Karnaugh mapping to generate a minimal SOP expression for the following truth table:</p>
+<p><br /><span class="math">$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+A &amp; B &amp; C &amp; Output \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 1 &amp; 0 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 1 &amp; 1 \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 1 &amp; 1 \cr
+\noalign{\hrule}
+1 &amp; 1 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+1 &amp; 1 &amp; 1 &amp; 1 \cr
+\noalign{\hrule}
+} }$</span><br /> Following the truth table shown, the student plots this Karnaugh map:</p>
+<p><br /><span class="math">$\epsfbox{02836x01.eps}$</span><br /></p>
+<p>&quot;This is easy,&quot; says the student to himself. &quot;All the ’1’ conditions fall within the same group!&quot; The student then highlights a triplet of 1’s as a single group:</p>
+<p><br /><span class="math">$\epsfbox{02836x02.eps}$</span><br /></p>
+<p>Looking at this cluster of 1’s, the student identifies <span class="math"><em>C</em></span> as remaining constant (1) for all three conditions in the group. Therefore, the student concludes, the minimal expression for this truth table must simply be <span class="math"><em>C</em></span>.</p>
+<p>However, a second student decides to use Boolean algebra on this problem instead of Karnaugh mapping. Beginning with the original truth table and generating a Sum-of-Products (SOP) expression for it, the simplification goes as follows:</p>
+<p><br /><span class="math">$\overline{A}BC + A \overline{B}C + ABC$</span><br /></p>
+<p><br /><span class="math">$BC(\overline{A} + A) + A \overline{B}C$</span><br /></p>
+<p><br /><span class="math">$BC + A \overline{B}C$</span><br /></p>
+<p><br /><span class="math">$C(B + A \overline{B})$</span><br /></p>
+<p><br /><span class="math"><em>C</em>(<em>B</em> + <em>A</em>)</span><br /></p>
+<p><br /><span class="math"><em>A</em><em>C</em> + <em>B</em><em>C</em></span><br /></p>
+<p>Obviously, the answer given by the second student’s Boolean reduction (<span class="math"><em>A</em><em>C</em> + <em>B</em><em>C</em></span>) does not match the answer given by the first student’s Karnaugh map analysis (<span class="math"><em>C</em></span>).</p>
+<p>Perplexed by the disagreement between these two methods, and failing to see a mistake in the Boolean algebra used by the second student, the first student decides to check his Karnaugh mapping again. Upon reflection, it becomes apparent that if the answer really were <span class="math"><em>C</em></span>, the Karnaugh map would look different. Instead of having three cells with 1’s in them, there would be four cells with 1’s in them (the output of the function being &quot;1&quot; <em>any</em> time <span class="math"><em>C</em> = 1</span>:</p>
+<p><br /><span class="math">$\epsfbox{02836x03.eps}$</span><br /></p>
+<p>Somewhere, there must have been a mistake made in the first student’s grouping of 1’s in the Karnaugh map, because the map shown above is the only one proper for an answer of <span class="math"><em>C</em></span>, and it is not the same as the real map for the given truth table. Explain where the mistake was made, and what the proper grouping of 1’s should be.</p>
+<p>Proper grouping of 1’s in the Karnaugh map:</p>
+<p><br /><span class="math">$\epsfbox{02836x04.eps}$</span><br /></p>
+<p>The purpose of this question is to illustrate how it is incorrect to identify clusters of arbitrary size in a Karnaugh map. A cluster of three, as seen in this scenario, leads to an incorrect conclusion. Of course, one could easily quote a textbook as to the proper numbers and patterns of 1’s to identify in a Karnaugh map, but it is so much more informative (in my opinion) to illustrate by example. Posing a dilemma such as this makes students <em>think</em> about why the answer is wrong, rather than asking them to remember seemingly arbitrary rules.</p>

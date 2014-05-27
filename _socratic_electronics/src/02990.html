@@ -1,0 +1,13 @@
+<p><em>Switch contact bounce</em> is often a problem when connecting mechanical contact switches or relays to the inputs of digital semiconductor circuits. When a switch transitions from open to closed, or from closed to open, there is usually a burst of on/off pulses rather than a single, crisp, change of logic state:</p>
+<p><br /><span class="math">$\epsfbox{02990x01.eps}$</span><br /></p>
+<p>Digital electronic circuits, of course, react to these pulses as though they were very rapid actuations/de-actuations of the switch. This may cause problems, especially in applications where a mechanical switch input causes a counter to increment or decrement!</p>
+<p>To fix this problem we must properly condition the switch signal to eliminate the spurious on/off pulses. The process of doing this is called <em>debouncing</em>. There is more than one way to de-bounce a switch, but one of the more sophisticated ways uses a serial-in, serial-out shift register with an asynchronous reset (clear) input:</p>
+<p><br /><span class="math">$\epsfbox{02990x02.eps}$</span><br /></p>
+<p>Explain how this circuit works to de-bounce the switch’s &quot;dirty&quot; signal, producing a &quot;clean&quot; (de-bounced) signal for a subsequent digital circuit’s input.</p>
+<p>The &quot;de-bounced&quot; output line will go high only when the switch signal has been continuously high for at least four clock pulses.</p>
+<p>Follow-up question #1: which switch (input) transition is seen <em>immediately</em> at the output, a low-to-high transition or a high-to-low transition?</p>
+<p>Follow-up question #2: does this circuit de-bounce a noisy low-to-high switch (input) transition, a noisy high-to-low switch transition, or both?</p>
+<p>Follow-up question #3: does the pushbutton switch <em>source</em> or <em>sink</em> current in this circuit?</p>
+<p>Challenge question: how would you go about selecting an appropriate clock frequency for this circuit?</p>
+<p>Some students may need to see a pulse diagram for this circuit before they fully grasp how it functions. If so, have students come up to the board in the front of the room and work through an analysis of it rather than doing it yourself.</p>
+<p>Not only does this question review shift register operation, but it also reviews the problem of switch contact bounce and showcases a practical solution for it. Incidentally, this question provides a good excuse for a hands-on demonstration of switch bounce using the switch/pulldown circuit first shown and a digital storage oscilloscope to capture the switching action. Students are likely to be surprised by just how &quot;dirty&quot; the switch signal is!</p>

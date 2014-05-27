@@ -1,0 +1,31 @@
+<p>A student decides to build a light-flasher circuit using a microcontroller. The LED is supposed to blink on and off only when the pushbutton switch is depressed. It is supposed to turn off when the switch is released:</p>
+<p><br /><span class="math">$\epsfbox{02598x01.eps}$</span><br /></p>
+<p>Declare Pin0 as an output</p>
+<p>Declare Pin1 as an input</p>
+<p>WHILE Pin1 is HIGH</p>
+<p>Set Pin0 HIGH</p>
+<p>Pause for 0.5 seconds</p>
+<p>Set Pin0 LOW</p>
+<p>Pause for 0.5 seconds</p>
+<p>ENDWHILE</p>
+<p>The LED blinks on and off just fine as long as the pushbutton switch is held when the MCU is powered up or reset. As soon as the switch is released, the LED turns off and never comes back on. If the switch was never pressed during start-up, the LED never comes on! Explain what is happening, and modify the program as necessary to fix this problem.</p>
+<p>The conditional &quot;WHILE&quot; loop needs to be placed inside an unconditional loop:</p>
+<p>Declare Pin0 as an output</p>
+<p>Declare Pin1 as an input</p>
+<p>LOOP</p>
+<p>WHILE Pin1 is HIGH</p>
+<p>Set Pin0 HIGH</p>
+<p>Pause for 0.5 seconds</p>
+<p>Set Pin0 LOW</p>
+<p>Pause for 0.5 seconds</p>
+<p>ENDWHILE</p>
+<p>ENDLOOP</p>
+<p>Follow-up question: what purpose does the resistor <span class="math"><em>R</em><sub><em>p</em><em>u</em><em>l</em><em>l</em><em>d</em><em>o</em><em>w</em><em>n</em></sub></span> serve in the pushbutton circuit?</p>
+<p>The purpose of this question is for students to understand what a &quot;WHILE&quot; loop represents in practical terms: a loop with condition(s). It also contrasts conditional looping against unconditional looping, and shows how both play a part in interactive systems such as this one.</p>
+<p>In case you’re wondering why I write in pseudocode, here are a few reasons:</p>
+<p><span class="math"> • </span> No prior experience with programming required to understand pseudocode</p>
+<p><span class="math"> • </span> It never goes out of style</p>
+<p><span class="math"> • </span> Hardware independent</p>
+<p><span class="math"> • </span> No syntax errors</p>
+<p>If I had decided to showcase code that would actually run in a microcontroller, I would be dooming the question to obsolescence. This way, I can communicate the spirit of the program without being chained to an actual programming standard. The only drawback is that students will have to translate my pseudocode to real code that will actually run on their particular MCU hardware, but that is a problem guaranteed for some regardless of which real programming language I would choose.</p>
+<p>Of course, I could have taken the Donald Knuth approach and invented my own (imaginary) hardware and instruction set . . .</p>

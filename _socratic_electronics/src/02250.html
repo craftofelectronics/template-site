@@ -1,0 +1,14 @@
+<p>The voltage gain for a &quot;bypassed&quot; common-emitter BJT amplifier circuit is as follows:</p>
+<p><br /><span class="math">$\epsfbox{02250x01.eps}$</span><br /></p>
+<p>Common-source JFET amplifier circuits are very similar:</p>
+<p><br /><span class="math">$\epsfbox{02250x02.eps}$</span><br /></p>
+<p>One of the problems with &quot;bypassed&quot; amplifier configurations such as the common-emitter and common-source is voltage gain variability. It is difficult to keep the voltage gain stable in either type of amplifier, due to changing factors within the transistors themselves which cannot be tightly controlled (<span class="math"><em>r</em>ʹ<sub><em>e</em></sub></span> and <span class="math"><em>g</em><sub><em>m</em></sub></span>, respectively). One solution to this dilemma is to &quot;swamp&quot; those uncontrollable factors by not bypassing the emitter (or source) resistor. The result is greater <span class="math"><em>A</em><sub><em>V</em></sub></span> stability at the expense of <span class="math"><em>A</em><sub><em>V</em></sub></span> magnitude:</p>
+<p><br /><span class="math">$\epsfbox{02250x03.eps}$</span><br /></p>
+<p>Write the voltage gain equations for both &quot;swamped&quot; BJT and JFET amplifier configurations, and explain why they are similar to each other.</p>
+<p><br /><span class="math">$A_V \approx {R_C \over R_E} \hbox{\hskip 20pt Common-emitter BJT amplifier}$</span><br /></p>
+<p><br /><span class="math">$A_V \approx {R_D \over R_S} \hbox{\hskip 20pt Common-source JFET amplifier}$</span><br /></p>
+<p>I’ll let you explain why these two voltage gain approximations share the same form. Hint: it has something to do with the magnitudes of the currents through each transistor terminal!</p>
+<p>Follow-up question: explain mathematically why the emitter/source resistances succeed in &quot;swamping&quot; <span class="math"><em>r</em>ʹ<sub><em>e</em></sub></span> and <span class="math"><em>g</em><sub><em>m</em></sub></span>, respectively, in these more precise formulae. You should provide typical values for <span class="math"><em>r</em>ʹ<sub><em>e</em></sub></span> and <span class="math"><em>g</em><sub><em>m</em></sub></span> as part of your argument:</p>
+<p><br /><span class="math">$A_V = {R_C \over {R_E + r'_e}} \hbox{\hskip 20pt Common-emitter BJT amplifier}$</span><br /></p>
+<p><br /><span class="math">$A_V = {R_D \over {R_S + {1 \over g_m}}} \hbox{\hskip 20pt Common-source JFET amplifier}$</span><br /></p>
+<p>Swamping is a common engineering practice, and one that students would do well to understand. It is unfortunate that parameters such as dynamic emitter resistance (<span class="math"><em>r</em>ʹ<sub><em>e</em></sub></span>) and transconductance (<span class="math"><em>g</em><sub><em>m</em></sub></span>) are so variable, but this does not have to be the end of the story. To be able to work around practical limitations such as these is the essence of engineering practice, in my opinion.</p>

@@ -1,0 +1,74 @@
+<p><strong>ELTR 145 (Digital 2), section 1</strong></p>
+<hr />
+<p>Topics: <em>Latch circuits</em></p>
+<p>Questions: <em>1 through 10</em></p>
+<p>Lab Exercise: <em>S-R latch from individual gates (question 51)</em></p>
+<hr />
+<p>Topics: <em>555 timer circuit</em></p>
+<p>Questions: <em>11 through 20</em></p>
+<p>Lab Exercise: <em>555 timer in astable mode (question 52)</em></p>
+<hr />
+<p>Topics: <em>Gated latch circuits</em></p>
+<p>Questions: <em>21 through 30</em></p>
+<p>Lab Exercise: <em>Troubleshooting practice (decade counter circuit – question 54)</em></p>
+<hr />
+<p>Topics: <em>Flip-flops</em></p>
+<p>Questions: <em>31 through 40</em></p>
+<p>Lab Exercise: <em>Troubleshooting practice (decade counter circuit – question 54)</em></p>
+<hr />
+<p>Topics: <em>Flip-flops (continued)</em></p>
+<p>Questions: <em>41 through 50</em></p>
+<p>Lab Exercise: <em>J-K flip-flop IC (question 53)</em></p>
+<hr />
+<p>Exam 1: <em>includes S-R latch circuit performance assessment</em></p>
+<p>Lab Exercise: <em>Troubleshooting practice (decade counter circuit – question 54)</em></p>
+<hr />
+<p>Questions: <em>57 through 66</em></p>
+<hr />
+<p>Questions: <em>67 through 86</em></p>
+<hr />
+<p>Questions: <em>87 through the end of the worksheet</em></p>
+<hr />
+<p><strong>Troubleshooting assessment (counter circuit) due at end of ELTR145, Section 3</strong></p>
+<p>Question 55: Troubleshooting log</p>
+<p>Question 56: Sample troubleshooting assessment grading criteria</p>
+<p><strong>ELTR 145 (Digital 2), section 1</strong></p>
+<hr />
+<p><strong>F</strong> <strong>Technical Skills – Digital Circuits</strong></p>
+<p><strong>F.11</strong> Understand principles and operations of types of flip-flop circuits.</p>
+<p><strong>F.12</strong> Fabricate and demonstrate types of flip-flop circuits.</p>
+<p><strong>F.13</strong> Troubleshoot and repair flip-flop circuits.</p>
+<p><strong>F.17</strong> Understand principles and operations of clock and timing circuits.</p>
+<p><strong>F.18</strong> Fabricate and demonstrate clock and timing circuits.</p>
+<p><strong>F.19</strong> Troubleshoot and repair clock and timing circuits.</p>
+<p><strong>B</strong> <strong>Basic and Practical Skills – Communicating on the Job</strong></p>
+<p><strong>B.01</strong> Use effective written and other communication skills. <em>Met by group discussion and completion of labwork.</em></p>
+<p><strong>B.03</strong> Employ appropriate skills for gathering and retaining information. <em>Met by research and preparation prior to group discussion.</em></p>
+<p><strong>B.04</strong> Interpret written, graphic, and oral instructions. <em>Met by completion of labwork.</em></p>
+<p><strong>B.06</strong> Use language appropriate to the situation. <em>Met by group discussion and in explaining completed labwork.</em></p>
+<p><strong>B.07</strong> Participate in meetings in a positive and constructive manner. <em>Met by group discussion.</em></p>
+<p><strong>B.08</strong> Use job-related terminology. <em>Met by group discussion and in explaining completed labwork.</em></p>
+<p><strong>B.10</strong> Document work projects, procedures, tests, and equipment failures. <em>Met by project construction and/or troubleshooting assessments.</em></p>
+<p><strong>C</strong> <strong>Basic and Practical Skills – Solving Problems and Critical Thinking</strong></p>
+<p><strong>C.01</strong> Identify the problem. <em>Met by research and preparation prior to group discussion.</em></p>
+<p><strong>C.03</strong> Identify available solutions and their impact including evaluating credibility of information, and locating information. <em>Met by research and preparation prior to group discussion.</em></p>
+<p><strong>C.07</strong> Organize personal workloads. <em>Met by daily labwork, preparatory research, and project management.</em></p>
+<p><strong>C.08</strong> Participate in brainstorming sessions to generate new ideas and solve problems. <em>Met by group discussion.</em></p>
+<p><strong>D</strong> <strong>Basic and Practical Skills – Reading</strong></p>
+<p><strong>D.01</strong> Read and apply various sources of technical information (e.g. manufacturer literature, codes, and regulations). <em>Met by research and preparation prior to group discussion.</em></p>
+<p><strong>E</strong> <strong>Basic and Practical Skills – Proficiency in Mathematics</strong></p>
+<p><strong>E.01</strong> Determine if a solution is reasonable.</p>
+<p><strong>E.02</strong> Demonstrate ability to use a simple electronic calculator.</p>
+<p><strong>E.06</strong> Translate written and/or verbal statements into mathematical expressions.</p>
+<p><strong>E.07</strong> Compare, compute, and solve problems involving binary, octal, decimal, and hexadecimal numbering systems.</p>
+<p><strong>E.12</strong> Interpret and use tables, charts, maps, and/or graphs.</p>
+<p><strong>E.13</strong> Identify patterns, note trends, and/or draw conclusions from tables, charts, maps, and/or graphs.</p>
+<p><strong>E.15</strong> Simplify and solve algebraic expressions and formulas.</p>
+<p><strong>E.16</strong> Select and use formulas appropriately.</p>
+<p><strong>E.21</strong> Use Boolean algebra to break down logic circuits.</p>
+<p><strong>ELTR 145 (Digital 2), section 1</strong></p>
+<hr />
+<p>The very wording of this &quot;difficult concept&quot; may seem difficult to the reader! What I am saying here is that latches and flip-flops are difficult to figure out because their outputs not only depend on the logic levels of the inputs, but also on the <em>previous</em> output states. For this reason, these devices fall into the category of &quot;state machines:&quot; they &quot;remember&quot; what logic state they were last in.</p>
+<p>I have but one tool for you to use in understanding state machine circuits: the lowly timing diagram. Truth tables fail to fully capture the essence of state machines unless they are expanded to include column(s) showing the last output(s) as well as the inputs. Timing diagrams keep a record of a circuit’s last output states as you check to see what will happen for each new input condition. Learn how to draw and interpret timing diagrams, and you will have a powerful tool to apply toward the study of latches and flip-flop circuits!</p>
+<p>Many students find the time-constant equation difficult because it involves exponents, particularly exponents of Euler’s constant <span class="math"><em>e</em></span>. This exponent is often expressed as a negative quantity, making it even more difficult to understand. The single most popular mathematical mistake I see students make with this equation is failing to properly follow algebraic order of operations. Some students try to overcome this weakness by using calculators which allow parenthetical entries, nesting parentheses in such a way that the calculator performs the proper order of operations. However, if you don’t understand order of operations yourself, you will not know where to properly place the parentheses. If you have trouble with algebraic order of operations, there is no solution but to invest the necessary time and learn it!</p>
+<p>Beyond mathematical errors, though, the most common mistake I see students make with the time constant equation is mis-application. One version of this equation expresses increasing quantities, while another version expresses decreasing quantities. You must already know what the variables are going to do in your time-constant circuit before you know which equation to use! You must also be able to recognize one version of this equation from the other: not by memory, lest you should forget; but by noting what the result of the equation does as time (<span class="math"><em>t</em></span>) increases. Here again there will be trouble if you are not adept applying algebraic order of operations.</p>

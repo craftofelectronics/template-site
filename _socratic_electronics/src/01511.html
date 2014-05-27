@@ -1,0 +1,27 @@
+<p>Differential equations may be used to model the charging behavior of an L/R circuit. Take, for instance, this simple L/R circuit:</p>
+<p><br /><span class="math">$\epsfbox{01511x01.eps}$</span><br /></p>
+<p>We may develop a loop equation based on Kirchhoff’s Voltage Law, knowing that the voltage of the power source is constant (40 volts), and that the voltage drops across the inductor and resistor are <span class="math">$V_L = L{dI \over dt}$</span> and <span class="math"><em>V</em><sub><em>R</em></sub> = <em>I</em><em>R</em></span>, respectively:</p>
+<p><br /><span class="math">$40 - IR - L{dI \over dt} = 0$</span><br /></p>
+<p>Show that the specific solution to this differential equation, assuming an initial condition of <span class="math"><em>I</em> = 0</span> at <span class="math"><em>t</em> = 0</span>, is as follows:</p>
+<p><br /><span class="math"><em>I</em> = 0. 8(1 − <em>e</em><sup> − 25<em>t</em></sup>)</span><br /></p>
+<p><br /><span class="math">$40 - IR - L{dI \over dt} = 0$</span><br /></p>
+<p><br /><span class="math">$40 - IR = L{dI \over dt}$</span><br /></p>
+<p><br /><span class="math">${{40 - IR} \over L} = {dI \over dt}$</span><br /></p>
+<p><br /><span class="math">${dt \over L} = {dI \over {40 - IR}}$</span><br /></p>
+<p><br /><span class="math">$\int {1 \over L} \&gt; dt = \int {1 \over {40 - IR}} \&gt; dI$</span><br /></p>
+<p><br /><span class="math">$\hbox{Substitution: } u = 40 - IR \hbox{\hskip 10pt ; \hskip 10pt} {du \over dI} = -R \hbox{\hskip 10pt ; \hskip 10pt} dI = -{1 \over R}du$</span><br /></p>
+<p><br /><span class="math">${1 \over L} \int dt = -{1 \over R} \int {1 \over u} \&gt; du$</span><br /></p>
+<p><br /><span class="math">${t \over L} + K_1 = -{1 \over R} | \ln u |$</span><br /></p>
+<p><br /><span class="math">$-{tR \over L} + K_2 = | \ln u |$</span><br /></p>
+<p><br /><span class="math">$e^{-{tR \over L} + K_2} = | u |$</span><br /></p>
+<p><br /><span class="math">$K_3e^{-{tR \over L}} = u$</span><br /></p>
+<p><br /><span class="math">$K_3e^{-{tR \over L}} = 40 - IR$</span><br /></p>
+<p><br /><span class="math">$IR = 40 - K_3e^{-{tR \over L}}$</span><br /></p>
+<p><br /><span class="math">$I = {40 \over R} - K_4e^{-{tR \over L}}$</span><br /></p>
+<p>Given the initial condition of zero current (<span class="math"><em>I</em> = 0</span>) at time zero (<span class="math"><em>t</em> = 0</span>), the constant of integration must be equal to <span class="math">${40 \over R}$</span> in our specific solution:</p>
+<p><br /><span class="math">$I = {40 \over R} - {40 \over R}e^{-{tR \over L}}$</span><br /></p>
+<p><br /><span class="math">$I = {40 \over R} (1 - e^{-{tR \over L}})$</span><br /></p>
+<p>Substituting the given component values into this specific solution gives us the final equation:</p>
+<p><br /><span class="math"><em>I</em> = 0. 8(1 − <em>e</em><sup> − 25<em>t</em></sup>)</span><br /></p>
+<p>L/R time constant circuits are an excellent example of how to apply simple differential equations. In this case, we see that the differential equation is first-order, with separable variables, making it comparatively easy to solve.</p>
+<p>It should also be evident to students that <em>any</em> initial condition for current may be set into the general solution (by changing the value of the constant).</p>

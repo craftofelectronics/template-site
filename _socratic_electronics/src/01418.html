@@ -1,0 +1,13 @@
+<p>The type &quot;555&quot; integrated circuit is a highly versatile <em>timer</em>, used in a wide variety of electronic circuits for time-delay and oscillator functions. The heart of the 555 timer is a pair of comparators and an S-R latch:</p>
+<p><br /><span class="math">$\epsfbox{01418x01.eps}$</span><br /></p>
+<p>The various inputs and outputs of this circuit are labeled in the above schematic as they often appear in datasheets (&quot;Thresh&quot; for <em>threshold</em>, &quot;Ctrl&quot; or &quot;Cont&quot; for <em>control</em>, etc.).</p>
+<p>To use the 555 timer as an astable multivibrator, simply connect it to a capacitor, a pair of resistors, and a DC power source as such:</p>
+<p><br /><span class="math">$\epsfbox{01418x02.eps}$</span><br /></p>
+<p>If were were to measure the voltage waveforms at test points <strong>A</strong> and <strong>B</strong> with a dual-trace oscilloscope, we would see the following:</p>
+<p><br /><span class="math">$\epsfbox{01418x03.eps}$</span><br /></p>
+<p>Explain what is happening in this astable circuit when the output is &quot;high,&quot; and also when it is &quot;low.&quot;</p>
+<p>When the output is high, the capacitor is charging through the two resistors, its voltage increasing. When the output is low, the capacitor is discharging through one resistor, current sinking through the 555’s &quot;Disch&quot; terminal.</p>
+<p>Follow-up question: algebraically manipulate the equation for this astable circuit’s operating frequency, so as to solve for <span class="math"><em>R</em><sub>2</sub></span>.</p>
+<p><br /><span class="math">$f = {1 \over {(\ln 2)(R_1 + 2R_2)C}}$</span><br /></p>
+<p>Challenge question: explain why the duty cycle of this circuit’s output is always greater than 50%.</p>
+<p>This popular configuration of the 555 integrated circuit is well worth spending time analyzing and discussing with your students.</p>

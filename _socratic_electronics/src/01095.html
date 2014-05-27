@@ -1,0 +1,7 @@
+<p>The following circuit exhibits very interesting behavior:</p>
+<p><br /><span class="math">$\epsfbox{01095x01.eps}$</span><br /></p>
+<p>When the power is first turned on, neither lamp will energize. If either pushbutton switch is then momentarily actuated, the lamp controlled by that SCR will energize. If, after one of the lamps has been energized, the <em>other</em> pushbutton switch is then actuated, its lamp will energize <em>and the other lamp will de-energize</em>.</p>
+<p>Stated simply, each pushbutton switch not only serves to energize its respective lamp, but it also serves to de-energize the other lamp as well. Explain how this is possible. It should be no mystery to you why each switch turns on its respective lamp, but how is the other switch able to exert control over the other SCR, to turn it off?</p>
+<p>Hint: the secret is in the capacitor, connected between the two SCRs’ anode terminals.</p>
+<p>This circuit is an example of a <em>parallel capacitor, forced commutation</em> circuit. When one SCR fires, the capacitor is effectively connected in parallel with the other SCR, causing it to drop out due to low current.</p>
+<p>This method of switching load current between two thyristors is a common technique in power control circuits using SCRs as the switching devices. If students are confused about this circuit’s operation, it will help them greatly to analyze the capacitor’s voltage drop when SCR<span class="math">$_{1}$</span> is conducting, versus when SCR<span class="math">$_{2}$</span> is conducting.</p>

@@ -1,0 +1,14 @@
+<p>One day an electronics student decides to build her own variable-voltage power source using a 6-volt battery and a 10 k<span class="math">Ω </span> potentiometer:</p>
+<p><br /><span class="math">$\epsfbox{03238x01.eps}$</span><br /></p>
+<p>She tests her circuit by connecting a voltmeter to the output terminals and verifying that the voltage does indeed increase and decrease as the potentiometer knob is turned.</p>
+<p>Later that day, her instructor assigns a quick lab exercise: measure the current through a parallel resistor circuit with an applied voltage of 3 volts, as shown in the following schematic diagram.</p>
+<p><br /><span class="math">$\epsfbox{03238x02.eps}$</span><br /></p>
+<p>Calculating current in this circuit is a trivial exercise, she thinks to herself: 3 V <span class="math"> ÷ </span> 500 <span class="math">Ω </span> = 6 mA. This will be a great opportunity to use the new power source circuit, as 3 volts is well within the voltage adjustment range!</p>
+<p>She first sets up her circuit to output 3 volts precisely (turning the 10 k<span class="math">Ω </span> potentiometer to the 50% position), measuring with her voltmeter as she did when initially testing the circuit. Then she connects the output leads to the two parallel resistors through her multimeter (configured as an ammeter), like this:</p>
+<p><br /><span class="math">$\epsfbox{03238x03.eps}$</span><br /></p>
+<p>However, when she reads her ammeter display, the current only measures 1 mA, not 6 mA as she predicted. This is a very large discrepancy between her prediction and the measured value for current!</p>
+<p>Use Thévenin’s Theorem to explain what went wrong in this experiment. Why didn’t her circuit behave as she predicted it would?</p>
+<p>With the 10 k<span class="math">Ω </span> potentiometer set in the 50% position, this student’s power source circuit resembles a 3 volt source in series with a 5 k<span class="math">Ω </span> resistance (the Thévenin equivalent circuit) rather than an ideal 3 volt source as assumed when she made her prediction for circuit current.</p>
+<p>Follow-up question #1: explain what this student would have to do to use her adjustable-voltage power source circuit to properly demonstrate the lab circuit as assigned.</p>
+<p>Follow-up question #2: identify at least one circuit failure which would result in zero measured (ammeter) current.</p>
+<p>This challenges students to apply Thévenin’s Theorem to a practical scenario: a loaded voltage divider. Be sure to ask your students to show what the Thévenin equivalent circuit for the student’s power source is (set at 50%, or 3 volts output unloaded), and how they arrived at that equivalent circuit.</p>

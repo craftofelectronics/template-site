@@ -1,0 +1,9 @@
+<p>An interesting addition to the basic Class B push-pull amplifier circuit is <em>overcurrent protection</em>, in the form of two more transistors and two more resistors added to the circuit:</p>
+<p><br /><span class="math">$\epsfbox{00978x01.eps}$</span><br /></p>
+<p>This form of overcurrent protection is common in voltage-regulated DC power supply circuitry, but it works well in amplifier circuitry, too. Explain how the additional transistors and resistors work together to protect the main power transistors from damage in the event of an overload.</p>
+<p>If there happens to be excessive current going through a power transistor, the voltage drop across that emitter resistor will be enough to turn on the auxiliary transistor, which then &quot;shunts&quot; the overloaded power transistor’s base current to the load.</p>
+<p>Challenge question: what mathematical procedure would you use to size the emitter resistors? How much resistance is appropriate in this application?</p>
+<p>If students are having difficulty understanding how this circuitry works, it might be worthwhile to show them this circuit (from a regulated DC power supply):</p>
+<p><br /><span class="math">$\epsfbox{00978x02.eps}$</span><br /></p>
+<p>Ask them how transistor Q2 in this circuit works to protect transistor Q1 from overload.</p>
+<p>An interesting way to explain the operation of this form of overcurrent protection is to say that when the auxiliary transistor begins to conduct (shorting base current away from the main power transistor), it effectively decreases the <span class="math"><em>β</em></span> of the main power transistor. By suddenly making the main power transistor less effective at amplifying, the signal source &quot;feels&quot; more of the load. This causes the signal source’s voltage to sag, ultimately limiting load current in the process.</p>

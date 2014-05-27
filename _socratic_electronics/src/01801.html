@@ -1,0 +1,11 @@
+<p>Electromechanical relays are extremely useful devices, but they have their idiosyncrasies. One of them is a consequence of the fact that the relay’s coil acts as an inductor, storing energy in its magnetic field.</p>
+<p>In the following circuit, a relay is used to switch power to a large electric motor, while being controlled by a light-duty pushbutton switch:</p>
+<p><br /><span class="math">$\epsfbox{01801x01.eps}$</span><br /></p>
+<p>The problem here is every time the pushbutton switch is released, the contacts arc significantly. This happens because the inductor releases all of its stored energy as a high-voltage spark across the opening contacts. <em>Inductive kickback</em> is the phrase commonly used to describe this effect, and over time it will prematurely destroy the switch.</p>
+<p>An electronics technician understands the nature of the problem and proposes a solution. By connecting a light bulb in parallel with the relay coil, the coil’s energy now has a safer place to dissipate whenever the pushbutton switch contacts open:</p>
+<p><br /><span class="math">$\epsfbox{01801x02.eps}$</span><br /></p>
+<p>Instead of that stored energy manifesting itself as a high-voltage arc at the switch, it powers the light bulb for a brief time after the switch opens, dissipating in a non-destructive manner.</p>
+<p>However, the addition of the light bulb introduces a new, unexpected problem to the circuit. Now, when the pushbutton switch is released, the relay delays for a fraction of a second before disengaging. This causes the motor to &quot;overshoot&quot; its position instead of stopping when it is supposed to.</p>
+<p>Explain why this happens, with reference to the LR time constant of this circuit before and after the addition of the lamp.</p>
+<p>Adding the light bulb to this circuit <em>increased</em> the circuit’s time constant, causing the coil’s inductance to discharge at a slower rate.</p>
+<p>This answer is rather minimal, if not obvious. Of course, if the relay takes longer to de-energize, and we were told this has something to do with time constants, then the time constant of the circuit must have increased. What is not so obvious is <em>why</em> <span class="math"><em>τ</em></span> increased. Discuss this with your students, and see what conclusions they reached.</p>

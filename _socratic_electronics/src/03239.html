@@ -1,0 +1,15 @@
+<p>Resistive voltage dividers are very useful and popular circuits. However, it should be realized that their output voltages &quot;sag&quot; under load:</p>
+<p><br /><span class="math">$\epsfbox{03239x01.eps}$</span><br /></p>
+<p>Just how much a voltage divider’s output will sag under a given load may be a very important question in some applications. Take for instance the following application where we are using a resistive voltage divider to supply an engine sensor with reduced voltage (8 volts) from the 12 volt battery potential in the automobile:</p>
+<p><br /><span class="math">$\epsfbox{03239x02.eps}$</span><br /></p>
+<p>If the sensor draws no current (<span class="math"><em>I</em><sub><em>s</em><em>e</em><em>n</em><em>s</em><em>o</em><em>r</em></sub></span> = 0 mA), then the voltage across the sensor supply terminals will be 8 volts. However, if we were asked to predict the voltage across the sensor supply terminals for a variety of different sensor current conditions, we would be faced with a much more complex problem:</p>
+<p><span class="math"></span><br /><span class="math">$One technique we could use to simplify this problem is to reduce the voltage divider resistor network into a Th\'evenin equivalent circuit.  With the three-resistor divider reduced to a single resistor in series with an equivalent voltage source, the calculations for sensor supply voltage become much simpler.
+
+Show how this could be done, then complete the table of sensor supply voltages shown above.
+
+\underbar{file 03239}$</span><br /><br /><span class="math"></span><br /><span class="math"></span></p>
+<p>Follow-up question: if we cannot allow the sensor supply voltage to fall below 6.5 volts, what is the maximum amount of current it may draw from this voltage divider circuit?</p>
+<p>Challenge question: figure out how to solve for these same voltage figures without reducing the voltage divider circuit to a Thévenin equivalent.</p>
+<p>Students are known to ask, &quot;When are we ever going to use Thévenin’s Theorem?&quot; as this concept is introduced in their electronics coursework. This is a valid question, and should be answered with immediate, practical examples. This question does exactly that: demonstrate how to predict voltage &quot;sag&quot; for a loaded voltage divider in such a way that is much easier than using Ohm’s Law and Kirchhoff’s Laws directly.</p>
+<p>Note the usage of European schematic symbols in this question. Nothing significant about this choice – just an opportunity for students to see other ways of drawing schematics.</p>
+<p>Note also how this question makes use of ground symbols, but in a way where the concept is introduced gently: the first (example) schematics do not use ground symbols, whereas the practical (automotive) circuit does.</p>

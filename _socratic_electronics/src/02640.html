@@ -1,0 +1,14 @@
+<p><br /><span class="math">$\epsfbox{02640x01.eps}$</span><br /></p>
+<p>Use circuit simulation software to verify your predicted and measured parameter values.</p>
+<p>Choose values for <span class="math"><em>V</em><sub><em>i</em><em>n</em></sub></span> that show the circuit’s ability to &quot;hold&quot; the last highest (most positive) input voltage.</p>
+<p>I have found these values to work well:</p>
+<p><span class="math"> • </span> +V = +12 volts</p>
+<p><span class="math"> • </span> -V = -12 volts</p>
+<p><span class="math"> • </span> <span class="math"><em>R</em><sub>1</sub></span> = <span class="math"><em>R</em><sub>2</sub></span> = 10 k<span class="math">Ω </span></p>
+<p><span class="math"> • </span> <span class="math"><em>R</em><sub>3</sub></span> = 10 k<span class="math">Ω </span></p>
+<p><span class="math"> • </span> <span class="math"><em>R</em><sub><em>p</em><em>o</em><em>t</em></sub></span> = 10 k<span class="math">Ω </span></p>
+<p><span class="math"> • </span> <span class="math"><em>C</em><sub>1</sub></span> = 1 <span class="math"><em>μ</em></span>F (non-electrolytic, low leakage polyester or ceramic)</p>
+<p><span class="math"> • </span> <span class="math"><em>D</em><sub>1</sub></span> = <span class="math"><em>D</em><sub>2</sub></span> = 1N4148 switching diode</p>
+<p><span class="math"> • </span> <span class="math"><em>U</em><sub>1</sub></span> = <span class="math"><em>U</em><sub>2</sub></span> = TL082 dual BiFET opamp</p>
+<p>The TL082 opamp works well in this circuit for three reasons: first, it is a dual opamp, providing both necessary opamps in a single 8-pin package. Second, its JFET input stage provides the low input bias currents necessary to avoid draining the capacitor too rapidly. Third, it is free from latch-up, which makes it possible to reset the capacitor voltage to the full (negative) rail voltage and still have a valid output.</p>
+<p>An extension of this exercise is to incorporate troubleshooting questions. Whether using this exercise as a performance assessment or simply as a concept-building lab, you might want to follow up your students’ results by asking them to predict the consequences of certain circuit faults.</p>

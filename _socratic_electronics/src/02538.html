@@ -1,0 +1,25 @@
+<p>A forward-biased PN semiconductor junction does not possess a &quot;resistance&quot; in the same manner as a resistor or a length of wire. Any attempt at applying Ohm’s Law to a diode, then, is doomed from the start.</p>
+<p>This is not to say that we cannot assign a <em>dynamic</em> value of resistance to a PN junction, though. The fundamental definition of resistance comes from Ohm’s Law, and it is expressed in derivative form as such:</p>
+<p><br /><span class="math">$R = {dV \over dI}$</span><br /></p>
+<p>The fundamental equation relating current and voltage together for a PN junction is Shockley’s diode equation:</p>
+<p><br /><span class="math">$I = I_S (e^{qV \over NkT} - 1)$</span><br /></p>
+<p>At room temperature (approximately 21 degrees C, or 294 degrees K), the thermal voltage of a PN junction is about 25 millivolts. Substituting 1 for the nonideality coefficient, we may simply the diode equation as such:</p>
+<p><br /><span class="math">$I = I_S (e^{V \over 0.025} - 1) \hbox{\hskip 30pt or \hskip 30pt} I = I_S (e^{40 V} - 1)$</span><br /></p>
+<p>Differentiate this equation with respect to <span class="math"><em>V</em></span>, so as to determine <span class="math">${dI \over dV}$</span>, and then reciprocate to find a mathematical definition for dynamic resistance (<span class="math">${dV \over dI}$</span>) of a PN junction. Hints: saturation current (<span class="math"><em>I</em><sub><em>S</em></sub></span>) is a very small constant for most diodes, and the final equation should express dynamic resistance in terms of thermal voltage (25 mV) and diode current (<span class="math"><em>I</em></span>).</p>
+<p><br /><span class="math">$r \approx {\hbox{25 mV} \over I}$</span><br /></p>
+<p>The result of this derivation is important in the analysis of certain transistor amplifiers, where the dynamic resistance of the base-emitter PN junction is significant to bias and gain approximations. I show the solution steps for you here because it is a neat application of differentiation (and substitution) to solve a real-world problem:</p>
+<p><br /><span class="math"><em>I</em> = <em>I</em><sub><em>S</em></sub>(<em>e</em><sup>40<em>V</em></sup> − 1)</span><br /></p>
+<p><br /><span class="math">${dI \over dV} = I_S (40e^{40 V} - 0)$</span><br /></p>
+<p><br /><span class="math">${dI \over dV} = 40 I_S e^{40 V}$</span><br /></p>
+<p>Now, we manipulate the original equation to obtain a definition for <span class="math"><em>I</em><sub><em>S</em></sub><em>e</em><sup>40<em>V</em></sup></span> in terms of current, for the sake of substitution:</p>
+<p><br /><span class="math"><em>I</em> = <em>I</em><sub><em>S</em></sub>(<em>e</em><sup>40<em>V</em></sup> − 1)</span><br /></p>
+<p><br /><span class="math"><em>I</em> = <em>I</em><sub><em>S</em></sub><em>e</em><sup>40<em>V</em></sup> − <em>I</em><sub><em>S</em></sub></span><br /></p>
+<p><br /><span class="math"><em>I</em> + <em>I</em><sub><em>S</em></sub> = <em>I</em><sub><em>S</em></sub><em>e</em><sup>40<em>V</em></sup></span><br /></p>
+<p>Substituting this expression into the derivative:</p>
+<p><br /><span class="math">${dI \over dV} = 40 (I + I_S)$</span><br /></p>
+<p>Reciprocating to get voltage over current (the proper form for resistance):</p>
+<p><br /><span class="math">${dV \over dI} = {0.025 \over {I + I_S}}$</span><br /></p>
+<p>Now we may get rid of the saturation current term, because it is negligibly small:</p>
+<p><br /><span class="math">${dV \over dI} \approx {0.025 \over I}$</span><br /></p>
+<p><br /><span class="math">$r \approx {\hbox{25 mV} \over I}$</span><br /></p>
+<p>The constant of 25 millivolts is not set in stone, by any means. Its value varies with temperature, and is sometimes given as 26 millivolts or even 30 millivolts.</p>

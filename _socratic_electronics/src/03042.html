@@ -1,0 +1,11 @@
+<p>Digital computers communicate with external devices through <em>ports</em>: sets of terminals usually arranged in groups of 4, 8, 16, or more. These terminals may be set to high or low logic states by writing a program for the computer that sends a numerical value to the port. For example, here is an illustration of a microcontroller being instructed to send the hexadecimal number 2B to port A and A9 to port B:</p>
+<p><br /><span class="math">$\epsfbox{03042x01.eps}$</span><br /></p>
+<p>Suppose we wished to use the first seven bits of each port (pins 0 through 6) to drive two 7-segment, common-cathode displays, rather than use BCD-to-7-segment decoder ICs:</p>
+<p><br /><span class="math">$\epsfbox{03042x02.eps}$</span><br /></p>
+<p>Write the necessary hexadecimal values to be output at ports A and B to generate the display &quot;42&quot; at the two 7-segment display units.</p>
+<p>Port A = 5B<span class="math">$_{16}$</span> Port B = 66<span class="math">$_{16}$</span></p>
+<p>Note that the following answers are also valid:</p>
+<p>Port A = DB<span class="math">$_{16}$</span> Port B = E6<span class="math">$_{16}$</span></p>
+<p>Follow-up question: write these same numerical values in decimal rather than hexadecimal.</p>
+<p>The root of this question is little more than binary-to-hexadecimal conversion, but it also introduces students to the concept of controlling bit states in microcomputer ports by writing hex values. As such, this question is <em>very</em> practical! Although it is unlikely that someone would omit BCD-to-7-segment decoders when building a two-digit decimal display (because doing it this way uses so many more precious microcontroller I/O pins), it is certainly possible! There are many applications other than this where you need to get the microcontroller to output a certain combination of high and low states, and the fastest way to program this is to output hex values to the ports.</p>
+<p>In case students ask, let them know that a dollar sign prefix is sometimes used to denote a hexadecimal number. Other times, the prefix 0x is used (e.g., $F3 and 0xF3 mean the same thing).</p>

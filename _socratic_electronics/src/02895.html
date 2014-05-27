@@ -1,0 +1,32 @@
+<p>Digital computers communicate with external devices through <em>ports</em>: sets of terminals usually arranged in groups of 4, 8, 16, or more (4 bits = 1 <em>nybble</em>, 8 bits = 1 <em>byte</em>, 16 bits = 2 bytes). These terminals may be set to high or low logic states by writing a program for the computer that sends a numerical value to the port. For example, here is an illustration of a microcontroller being instructed to send the hexadecimal number F3 to port A and 2C to port B:</p>
+<p><br /><span class="math">$\epsfbox{02895x01.eps}$</span><br /></p>
+<p>Suppose we wished to use the upper four bits of port A (pins 7, 6, 5, and 4) to drive the coils of a stepper motor in this eight-step sequence:</p>
+<p>Step <span class="math">1</span>: 0001</p>
+<p>Step <span class="math">2</span>: 0011</p>
+<p>Step <span class="math">3</span>: 0010</p>
+<p>Step <span class="math">4</span>: 0110</p>
+<p>Step <span class="math">5</span>: 0100</p>
+<p>Step <span class="math">6</span>: 1100</p>
+<p>Step <span class="math">7</span>: 1000</p>
+<p>Step <span class="math">8</span>: 1001</p>
+<p>As each pin goes high, it drives a power MOSFET on, which sends current through that respective coil of the stepper motor. By following a &quot;shift&quot; sequence as shown, the motor will rotate a small amount for each cycle.</p>
+<p>Write the necessary sequence of numbers to be sent to port A to generate this specific order of bit shifts, in hexadecimal. Leave the lower four bit of port A all in the low logic state.</p>
+<p>Step <span class="math">1</span>: <span class="math">10<sub>16</sub></span></p>
+<p>Step <span class="math">2</span>: <span class="math">30<sub>16</sub></span></p>
+<p>Step <span class="math">3</span>: <span class="math">20<sub>16</sub></span></p>
+<p>Step <span class="math">4</span>: <span class="math">60<sub>16</sub></span></p>
+<p>Step <span class="math">5</span>: <span class="math">40<sub>16</sub></span></p>
+<p>Step <span class="math">6</span>: <span class="math">$\hbox{C}0_{16}$</span></p>
+<p>Step <span class="math">7</span>: <span class="math">80<sub>16</sub></span></p>
+<p>Step <span class="math">8</span>: <span class="math">90<sub>16</sub></span></p>
+<p>Follow-up question: write the same sequence in decimal rather than hexadecimal:</p>
+<p>Step <span class="math">1</span>:</p>
+<p>Step <span class="math">2</span>:</p>
+<p>Step <span class="math">3</span>:</p>
+<p>Step <span class="math">4</span>:</p>
+<p>Step <span class="math">5</span>:</p>
+<p>Step <span class="math">6</span>:</p>
+<p>Step <span class="math">7</span>:</p>
+<p>Step <span class="math">8</span>:</p>
+<p>Although the root of this question is nothing more than binary-to-hexadecimal conversion, it also introduces students to the concept of controlling bit states in microcomputer ports by writing hex values. As such, this question is <em>very</em> practical!</p>
+<p>In case students ask, let them know that a dollar sign prefix is sometimes used to denote a hexadecimal number. Other times, the prefix 0x is used (e.g., $F3 and 0xF3 mean the same thing).</p>

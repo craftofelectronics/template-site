@@ -1,0 +1,11 @@
+<p>Suppose we had two four-bit synchronous up/down counter circuits, which we wished to <em>cascade</em> to make one eight-bit counter. Draw the necessary connecting wires (and any extra gates) between the two four-bit counters to make this possible:</p>
+<p><br /><span class="math">$\epsfbox{01402x01.eps}$</span><br /></p>
+<p>After deciding how to cascade these counters, imagine that you are in charge of building and packaging four-bit counter circuits. The customers who buy your counters might wish to cascade them as you did here, but they won’t have the ability to &quot;go inside&quot; the packaging as you did to connect to any of the lines between the various flip-flops. This means you will have to provide any necessary cascading lines as inputs and outputs on your pre-packaged counters. Think carefully about how you would choose to build and package your four-bit &quot;cascadable&quot; counters, and then draw a schematic diagram.</p>
+<p>This first solution requires some elimination of wires and one gate from the front end of the second counter . . .</p>
+<p><br /><span class="math">$\epsfbox{01402x02.eps}$</span><br /></p>
+<p>. . . while this solution does only requires different AND gates (3-input instead of 2-input) on the first flip-flop stage of the second counter:</p>
+<p><br /><span class="math">$\epsfbox{01402x03.eps}$</span><br /></p>
+<p>I’ll let you decide how you might wish to package your four-bit counter circuits, so as to allow easy cascading. This will be an excellent topic for classroom discussion!</p>
+<p>Follow-up question: why isn’t the following circuit an acceptable solution?</p>
+<p><br /><span class="math">$\epsfbox{01402x04.eps}$</span><br /></p>
+<p>Figuring out how to cascade the two four-bit counters is the easy part. The challenge is to &quot;think ahead&quot; in designing a four-bit counter with all the necessary connections to make cascading easy for the end-user. Make this the center of discussion on this particular question.</p>

@@ -1,0 +1,9 @@
+<p>Ideally, the input terminals of an operational amplifier conduct zero current, allowing us to simplify the analysis of many opamp circuits. However, in actuality there is a very small amount of current going through each of the input terminals of any opamp with BJT input circuitry. This may cause unexpected voltage errors in circuits.</p>
+<p>Consider the following voltage buffer circuit:</p>
+<p><br /><span class="math">$\epsfbox{02462x01.eps}$</span><br /></p>
+<p><span class="math"><em>I</em><sub><em>b</em><em>i</em><em>a</em><em>s</em>( − )</sub></span> does not cause any trouble for us, because it is completely supplied by the opamp’s output. The other bias current, though, <em>does</em> cause trouble, because it must go through the source’s Thévenin resistance. When it does, it drops some voltage across that intrinsic source resistance, skewing the amount of voltage actually seen at the noninverting terminal of the opamp.</p>
+<p>A common solution to this is to add another resistor to the circuit, like this:</p>
+<p><br /><span class="math">$\epsfbox{02462x02.eps}$</span><br /></p>
+<p>Explain why the addition of a resistor fixes the problem.</p>
+<p>The additional resistor should drop an equal amount of voltage, thus canceling out any bias voltage introduced by the bias current passing through the source’s internal resistance. Sizing this &quot;compensating&quot; resistor equal to the source’s Thévenin resistance assumes zero input <em>offset</em> current.</p>
+<p>A simple voltage buffer circuit is the easiest context in which to understand the function of a bias current compensating resistor, and so it is presented here to allow students to see its impact.</p>

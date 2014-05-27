@@ -1,0 +1,20 @@
+<p>This sound-controlled lamp has a problem. A loud noise (such as a hand clap) is supposed to toggle it on and off, but instead it never turns on no matter how loud you clap.</p>
+<p><br /><span class="math">$\epsfbox{03028x01.eps}$</span><br /></p>
+<p>You begin troubleshooting by plugging it in and noticing that the lamp does not turn on. You clap your hands loudly to verify the problem, and sure enough the lamp remains off. Listening closely, you also notice that the relay <span class="math"><em>R</em><em>L</em><em>Y</em><sub>1</sub></span> does not appear to &quot;click&quot; either when a hand-clap is presented before the microphone.</p>
+<p>Connecting an oscilloscope to test point TP4 (with the ground clip connected to TP5), you measure a strong pulse (peak-to-peak amplitude extending from 0.3 volts to 5 volts – almost the full range of the power supply rails) every time you clap your hands. Touching the scope probe to test point TP7, you read 5 volts DC, then 0 volts DC after clapping your hands once, then 5 volts DC again when clapping your hands once more. From this information, identify two possible causes that could account for the problem and all measured values in this circuit.</p>
+<p>Also, identify the next logical test point(s) from those shown on the schematic that you would check with some electronic instrument (voltmeter, ohmmeter, or oscilloscope), and why you would check there. Note that there may be more than one correct answer to this part of the question!</p>
+<p><span class="math"> • </span> Possible causes of the problem</p>
+<p>1.</p>
+<p>2.</p>
+<p><span class="math"> • </span> Next logical test point(s) to check, with reason why you would check there</p>
+<p>Next point(s):</p>
+<p>Reason:</p>
+<p>Note: the following answers are not exhaustive. There may be more circuit elements possibly at fault than what is listed here!</p>
+<p><span class="math"> • </span> Possible causes of the problem</p>
+<p>1. <span class="math">$\overline{Q}$</span> output failed low on <span class="math"><em>U</em><sub>1</sub></span></p>
+<p>2. Transistor <span class="math"><em>Q</em><sub>2</sub></span> failed open</p>
+<p>3. Relay coil failed open</p>
+<p><span class="math"> • </span> Next logical test point(s) to check, with reason why you would check there</p>
+<p>Next point(s): TP8 (flip-flop <span class="math">$\overline{Q}$</span> output) with voltmeter or scope, to see if the transistor is being &quot;told&quot; to turn on or if the flip-flop is not sending the proper control signal to it.</p>
+<p>Next point(s): TP10 (transistor <span class="math"><em>Q</em><sub>2</sub></span> drain) with voltmeter or scope, as a mid-point between <span class="math"><em>U</em><sub>1</sub></span> and the relay coil power source (TP9) to divide the output problem in half. Normally, TP10 should read low (grounded) when the light is on and high (floating) when the light is off.</p>
+<p><strong>This question is intended for exams only and not worksheets!</strong>.</p>

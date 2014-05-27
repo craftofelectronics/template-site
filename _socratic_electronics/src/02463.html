@@ -1,0 +1,12 @@
+<p>The same problem of input bias current affecting the precision of opamp voltage buffer circuits also affects noninverting opamp voltage amplifier circuits:</p>
+<p><br /><span class="math">$\epsfbox{02463x01.eps}$</span><br /></p>
+<p><br /><span class="math">$\epsfbox{02463x02.eps}$</span><br /></p>
+<p>To fix this problem in the voltage buffer circuit, we added a &quot;compensating&quot; resistor:</p>
+<p><br /><span class="math">$\epsfbox{02463x03.eps}$</span><br /></p>
+<p>To fix the same problem in the noninverting voltage amplifier circuit, we must carefully choose resistors <span class="math"><em>R</em><sub>1</sub></span> and <span class="math"><em>R</em><sub>2</sub></span> so that their parallel equivalent equals the source resistance:</p>
+<p><br /><span class="math"><em>R</em><sub>1</sub>∣∣<em>R</em><sub>2</sub> = <em>R</em><sub><em>s</em><em>o</em><em>u</em><em>r</em><em>c</em><em>e</em></sub></span><br /></p>
+<p>Of course, we must also be sure the values of <span class="math"><em>R</em><sub>1</sub></span> and <span class="math"><em>R</em><sub>2</sub></span> are such that the voltage gain of the circuit is what we want it to be.</p>
+<p>Determine values for <span class="math"><em>R</em><sub>1</sub></span> and <span class="math"><em>R</em><sub>2</sub></span> to give a voltage gain of 7 while compensating for a source resistance of 1.45 k<span class="math">Ω </span>.</p>
+<p><span class="math"><em>R</em><sub>1</sub></span> = 1.692 k<span class="math">Ω </span> <span class="math"><em>R</em><sub>2</sub></span> = 10.15 k<span class="math">Ω </span></p>
+<p>Students must apply algebra to solve for the values of these two resistances. The solution is an application of algebraic <em>substitution</em>, and it is worthwhile to examine and discuss together in class.</p>
+<p>Discuss how this solution to the bias current problem is a practical application of Thévenin’s theorem: looking at the two voltage divider resistors as a network that may be Thévenized to serve as a compensating resistance as well as a voltage divider for the necessary circuit gain.</p>

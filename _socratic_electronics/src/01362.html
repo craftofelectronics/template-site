@@ -1,0 +1,10 @@
+<p>Usually, propagation delay is considered an undesirable characteristic of logic gates, which we simply have to live with. Other times, it is a useful, even necessary, trait. Take for example this circuit:</p>
+<p><br /><span class="math">$\epsfbox{01362x01.eps}$</span><br /></p>
+<p>If the gates constituting this circuit had zero propagation delay, it would perform no useful function at all. To verify this sad fact, analyze its steady-state response to a &quot;low&quot; input signal, then to a &quot;high&quot; input signal. What state is the AND gate’s output always in?</p>
+<p>Now, consider propagation delay in your analysis by completing a timing diagram for each gate’s output, as the input signal transitions from low to high, then from high to low:</p>
+<p><br /><span class="math">$\epsfbox{01362x02.eps}$</span><br /></p>
+<p>What do you notice about the state of the AND gate’s output now?</p>
+<p><br /><span class="math">$\epsfbox{01362x03.eps}$</span><br /></p>
+<p>Follow-up question: describe exactly what conditions are necessary to obtain a &quot;high&quot; signal from the output of this circuit, and what determines the duration of this &quot;high&quot; pulse.</p>
+<p>Tell your students that this circuit is a special type of <em>one-shot</em>, outputting a single pulse of limited duration for each leading-edge transition of the input signal.</p>
+<p>Ask your students what we might do if we wanted to make the output pulse of this one-shot circuit longer (or shorter).</p>

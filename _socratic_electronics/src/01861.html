@@ -1,0 +1,23 @@
+<p>Mathematical analysis of the Maxwell-Wien bridge is as follows:</p>
+<p><br /><span class="math">$\epsfbox{01861x01.eps}$</span><br /></p>
+<p><br /><span class="math">${\bf Z}_x = R_x + j\omega L_x \hskip 10pt \hbox{Impedance of unknown inductance/resistance arm}$</span><br /></p>
+<p><br /><span class="math">${\bf Z}_s = {1 \over {{1 \over R_s} + {1 \over -j{1 \over \omega C_s}}}} \hskip 10pt \hbox{Impedance of standard capacitance/resistance arm}$</span><br /></p>
+<p><br /><span class="math">${\bf Y}_s = {1 \over R_s} + j\omega C_s \hskip 10pt \hbox{Admittance of standard capacitance/resistance arm}$</span><br /></p>
+<p><br /><span class="math">${{\bf Z_x} \over {\bf Z_R}} = {{\bf Z_R} \over {\bf Z_s}} \hskip 10pt \hbox{ or } \hskip 10pt {{\bf Z_x} \over {\bf Z_R}} = {{\bf Z_R}{\bf Y_s}} \hskip 10pt \hbox{Bridge balance equation}$</span><br /></p>
+<p><br /><span class="math">${\bf Z_x} = R^2 {\bf Y}_s$</span><br /></p>
+<p><br /><span class="math">$R_x + j\omega L_x = R^2 \left( {1 \over R_s} + j\omega C_s \right)$</span><br /></p>
+<p><br /><span class="math">$R_x + j\omega L_x = {R^2 \over R_s} + j\omega R^2 C_s$</span><br /></p>
+<p><br /><span class="math">$\hbox{Separating real and imaginary terms . . .}$</span><br /></p>
+<p><br /><span class="math">$R_x = {R^2 \over R_s} \hskip 10pt \hbox{(Real)}$</span><br /></p>
+<p><br /><span class="math">$j\omega L_x = j\omega R^2 C_s  \hskip 10pt \hbox{(Imaginary)}$</span><br /></p>
+<p><br /><span class="math"><em>L</em><sub><em>x</em></sub> = <em>R</em><sup>2</sup><em>C</em><sub><em>s</em></sub></span><br /></p>
+<p>Note that neither of the two equations solving for unknown quantities (<span class="math">$R_x = {R^2 \over R_s}$</span> and <span class="math"><em>L</em><sub><em>x</em></sub> = <em>R</em><sup>2</sup><em>C</em><sub><em>s</em></sub></span>) contain the variable <span class="math"><em>ω</em></span>. What does this indicate about the Maxwell-Wien bridge?</p>
+<p>This means the source frequency is irrelevant to bridge balance.</p>
+<p>A rule that students will need to be aware of in order to follow all the algebra shown here is <span class="math">${1 \over j} = -j$</span>. A brief proof is given here:</p>
+<p><br /><span class="math"><em>j</em><sup>2</sup> =  − 1</span><br /></p>
+<p><br /><span class="math">${1 \over j^2} = {1 \over -1}$</span><br /></p>
+<p><br /><span class="math">${j \over j^2} = {j \over -1}$</span><br /></p>
+<p><br /><span class="math">${j \over j^2} = -j$</span><br /></p>
+<p><br /><span class="math">${1 \over j} = -j$</span><br /></p>
+<p>Otherwise, the admittance equation (<span class="math">${\bf Y}_s = {1 \over R_s} + j\omega C_s$</span>) will not make sense.</p>
+<p>One type of AC bridge is called a <em>noise bridge</em>, using a &quot;noise&quot; (broadly mixed frequencies) source as the excitation voltage. Discuss with your students how the Maxwell-Wien bridge would be a suitable topology for use with a noise source, whereas other bridge topologies might not.</p>

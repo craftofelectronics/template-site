@@ -1,0 +1,18 @@
+<p>Predict how this power supply circuit’s output voltage will be affected as a result of the following faults. Also note whether or not any other components in this circuit will become stressed as a result of each fault. Consider each fault independently (i.e. one at a time, no multiple faults):</p>
+<p><br /><span class="math">$\epsfbox{03736x01.eps}$</span><br /></p>
+<p><span class="math"> • </span> Transformer <span class="math"><em>T</em><sub>1</sub></span> primary winding fails shorted:</p>
+<p><span class="math"> • </span> Transformer <span class="math"><em>T</em><sub>1</sub></span> secondary winding fails open:</p>
+<p><span class="math"> • </span> Rectifying diode <span class="math"><em>D</em><sub>3</sub></span> fails open:</p>
+<p><span class="math"> • </span> Zener diode <span class="math"><em>D</em><sub>5</sub></span> fails open:</p>
+<p><span class="math"> • </span> Zener diode <span class="math"><em>D</em><sub>5</sub></span> fails shorted:</p>
+<p><span class="math"> • </span> Resistor <span class="math"><em>R</em><sub>1</sub></span> fails open:</p>
+<p><span class="math"> • </span> Capacitor <span class="math"><em>C</em><sub>2</sub></span> fails shorted:</p>
+<p>For each of these conditions, explain <em>why</em> the resulting effects will occur.</p>
+<p><span class="math"> • </span> Transformer <span class="math"><em>T</em><sub>1</sub></span> primary winding fails shorted: <em>Fuse immediately blows, then output voltage falls to zero (after filter capacitors have discharged).</em></p>
+<p><span class="math"> • </span> Transformer <span class="math"><em>T</em><sub>1</sub></span> secondary winding fails open: <em>Output voltage falls to zero (after filter capacitors <span class="math"><em>C</em><sub>1</sub></span> and <span class="math"><em>C</em><sub>2</sub></span> have discharged).</em></p>
+<p><span class="math"> • </span> Rectifying diode <span class="math"><em>D</em><sub>3</sub></span> fails open: <em>No change in output voltage (except when heavily loaded, where there will be increased ripple voltage).</em></p>
+<p><span class="math"> • </span> Zener diode <span class="math"><em>D</em><sub>5</sub></span> fails open: <em>Output voltage rises to approximately same level as unregulated voltage (across capacitor <span class="math"><em>C</em><sub>1</sub></span>).</em></p>
+<p><span class="math"> • </span> Zener diode <span class="math"><em>D</em><sub>5</sub></span> fails shorted: <em>Output voltage falls to zero (as quickly as <span class="math"><em>C</em><sub>2</sub></span> can discharge), resistor <span class="math"><em>R</em><sub>1</sub></span> may overheat.</em></p>
+<p><span class="math"> • </span> Resistor <span class="math"><em>R</em><sub>1</sub></span> fails open: <em>Output voltage falls to zero (as quickly as <span class="math"><em>C</em><sub>2</sub></span> can discharge).</em></p>
+<p><span class="math"> • </span> Capacitor <span class="math"><em>C</em><sub>2</sub></span> fails shorted: <em>Output voltage falls to a very low value, transistor <span class="math"><em>Q</em><sub>1</sub></span> will most likely overheat.</em></p>
+<p>The purpose of this question is to approach the domain of circuit troubleshooting from a perspective of knowing what the fault is, rather than only knowing what the symptoms are. Although this is not necessarily a realistic perspective, it helps students build the foundational knowledge necessary to diagnose a faulted circuit from empirical data. Questions such as this should be followed (eventually) by other questions asking students to identify likely faults based on measurements.</p>

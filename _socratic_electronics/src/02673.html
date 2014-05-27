@@ -1,0 +1,6 @@
+<p>A variation on the common opamp relaxation oscillator design is this, which gives it variable duty cycle capability:</p>
+<p><br /><span class="math">$\epsfbox{02673x01.eps}$</span><br /></p>
+<p>Explain how this circuit works, and which direction the potentiometer wiper must be moved to increase the duty cycle (more time spent with the opamp output saturated at +V and less time spent saturated at -V).</p>
+<p>Move the wiper <em>up</em> to increase the duty cycle.</p>
+<p>This circuit is best understood by building and testing. If you use large capacitor values and/or a large-value resistor in the capacitor’s current path, the oscillation will be slow enough to analyze with a voltmeter rather than an oscilloscope.</p>
+<p>Incidentally, the Schottky diodes are not essential to this circuit’s operation, unless the expected frequency is very high. Really, the purpose of the Schottky diodes, with their low forward voltage drops (0.4 volts typical) and minimal charge storage, is to make the opamp’s job easier at every reversal of output polarity. Remember that this circuit is not exploiting negative feedback! Essentially, it is a <em>positive</em> feedback circuit, and every voltage drop and nonlinearity in the capacitor’s current path will have an effect on capacitor charging/discharging.</p>

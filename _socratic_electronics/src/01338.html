@@ -1,0 +1,15 @@
+<p>Examine the following truth table:</p>
+<p><br /><span class="math">$\epsfbox{01338x01.eps}$</span><br /></p>
+<p>We know that this table represents the function of a NAND gate. But suppose we wished to generate a Boolean expression for this gate as though we didn’t know what it already was, and we chose to generate an SOP expression based on all the &quot;high&quot; output conditions in the truth table:</p>
+<p><br /><span class="math">$\overline{A} \&gt; \overline{B} + \overline{A}B + A\overline{B}$</span><br /></p>
+<p>Seems like a lot of work for just one gate, doesn’t it? The fact that this truth table’s output is mostly 1’s causes us to have to write a relatively lengthy SOP expression. Wouldn’t it be easier if we had a technique to generate a Boolean expression from the single <em>zero</em> output condition in this table? If we had such a technique, our resulting Boolean expression would have a lot fewer terms in it!</p>
+<p>We know that a Negative-OR gate has the exact same functionality as a NAND gate. We also know that a Negative-OR gate’s Boolean representation is <span class="math">$\overline{A} + \overline{B}$</span>. If there is such a thing as a technique for deriving Boolean expressions from the &quot;0&quot; outputs of a truth table, this instance ought to fit it!</p>
+<p>Now, examine the following truth table and logic gate circuit:</p>
+<p><br /><span class="math">$\epsfbox{01338x02.eps}$</span><br /></p>
+<p>Derive a Boolean expression from the gate circuit shown here, and then compare that expression with the truth table shown for this circuit. Do you see a pattern that would suggest a rule for deriving a Boolean expression directly from the truth table in this example (and the previous example)?</p>
+<p>Hint: the rule involves <em>Product-of-Sums</em> form.</p>
+<p>Boolean expression for second gate circuit:</p>
+<p><br /><span class="math">$(\overline{A} + B)(\overline{A} + \overline{B})$</span><br /></p>
+<p>Challenge question: we know that <span class="math">$\overline{AB}$</span> is also a valid Boolean expression for the first gate (NAND) circuit, in addition to <span class="math">$\overline{A} + \overline{B}$</span>. Is there a rule you can think of to derive <span class="math">$\overline{AB}$</span> directly from an inspection of the truth table? Can you apply this rule to the second gate circuit and the manipulate the resulting expression using Boolean laws and rules to obtain the expression <span class="math">$(\overline{A} + B)(\overline{A} + \overline{B})$</span>?</p>
+<p>The purpose of this question, if it isn’t obvious to you by now, is to have students &quot;discover&quot; the technique for deriving POS expressions from truth tables, based on an evaluation of all the &quot;low&quot; output states.</p>
+<p>Your more advanced students should enjoy the challenge question, for it allows one to generate Boolean expressions using a rule more similar to the first one learned: table-to-SOP.</p>

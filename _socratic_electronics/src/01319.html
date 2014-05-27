@@ -1,0 +1,13 @@
+<p>A student makes a mistake somewhere in the process of simplifying the Boolean expression <span class="math">$\overline{\overline{X}Y + Z}$</span>. Determine what the mistake is:</p>
+<p><br /><span class="math">$\overline{\overline{X}Y + Z}$</span><br /></p>
+<p><br /><span class="math">$\overline{\overline{X}Y} \&gt; \overline{Z}$</span><br /></p>
+<p><br /><span class="math">$\overline{\overline{X}} + \overline{Y} \&gt; \overline{Z}$</span><br /></p>
+<p><br /><span class="math">$X + \overline{Y} \&gt; \overline{Z}$</span><br /></p>
+<p>The correct answer is:</p>
+<p><br /><span class="math">$(X + \overline{Y})\overline{Z}$</span><br /></p>
+<p><br /><span class="math">$\hbox{\it or}$</span><br /></p>
+<p><br /><span class="math">$X\overline{Z} + \overline{Y} \&gt; \overline{Z}$</span><br /></p>
+<p>If it is not apparent to you why the student’s steps are in error, try this exercise: draw the equivalent gate circuit for each of the expressions written in the student’s work. At the mistaken step, a dramatic change in the circuit configuration will be evident – a change that clearly cannot be correct. If all steps are proper, though, changes exhibited in the equivalent gate circuits should all make sense, culminating in a final (simplified) circuit.</p>
+<p>An important aspect of long &quot;bars&quot; for students to recognize is that they function as <em>grouping symbols</em>. When applying DeMorgan’s Theorem to breaking these bars, students often make the mistake of ignoring the grouping implicit in the original bars.</p>
+<p>I highly recommend you take your class through the exercise suggested in the answer, for those who do not understand the nature of the mistake. Let students draw each expression’s equivalent circuit on the board in front of the class so everyone can see, and then let them observe the dramatic change spoken of at the place where the mistake is made. If students understand what DeMorgan’s Theorem means for an individual gate (Neg-AND to NOR, Neg-OR to NAND, etc.), the gate diagrams will clearly reveal to them that something has gone wrong at that step.</p>
+<p>For comparison, perform the same step-by-step translation of the <em>proper</em> Boolean simplification into gate diagrams. The transitions between diagrams will make far more sense, and students should be able to get a &quot;circuit’s view&quot; of why complementation bars function as grouping symbols.</p>

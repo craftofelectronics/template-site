@@ -1,0 +1,11 @@
+<p>This is a digitally-set motor speed controller circuit, using PWM to modulate power to the motor. Predict how the operation of this circuit will be affected as a result of the following faults. Consider each fault independently (i.e. one at a time, no multiple faults):</p>
+<p><br /><span class="math">$\epsfbox{03850x01.eps}$</span><br /></p>
+<p><span class="math"> • </span> DAC output fails low (output = 0 volts DC):</p>
+<p><span class="math"> • </span> DAC output fails high (output = +V):</p>
+<p><span class="math"> • </span> IGBT <span class="math"><em>Q</em><sub>1</sub></span> fails open (collector to emitter):</p>
+<p><span class="math"> • </span> Solder bridge (short) between MSB input on <span class="math"><em>U</em><sub>1</sub></span> and ground:</p>
+<p><span class="math"> • </span> DAC output fails low (output = 0 volts DC): <em>Motor will not run.</em></p>
+<p><span class="math"> • </span> DAC output fails high (output = +V): <em>Motor runs full speed all the time.</em></p>
+<p><span class="math"> • </span> IGBT <span class="math"><em>Q</em><sub>1</sub></span> fails open (collector to emitter): <em>Motor will not run.</em></p>
+<p><span class="math"> • </span> Solder bridge (short) between MSB input on <span class="math"><em>U</em><sub>1</sub></span> and ground: <em>Speeds 0 through 127 work normally, but speeds 128 through 255 just duplicate speeds 0 through 127, respectively.</em></p>
+<p>Questions like this help students hone their troubleshooting skills by forcing them to think through the consequences of each possibility. This is an essential step in troubleshooting, and it requires a firm understanding of circuit function.</p>

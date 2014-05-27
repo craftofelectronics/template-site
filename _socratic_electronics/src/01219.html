@@ -1,0 +1,10 @@
+<p>Suppose a fellow electronics technician approaches you with a design problem. He needs a simple circuit that outputs brief pulses of voltage every time a switch is actuated, so that a computer receives a single pulse signal every time the switch is actuated, rather than a continuous &quot;on&quot; signal for as long as the switch is actuated:</p>
+<p><br /><span class="math">$\epsfbox{01219x01.eps}$</span><br /></p>
+<p>The technician suggests you build a <em>passive differentiator circuit</em> for his application. You have never heard of this circuit before, but you probably know where you can research to find out what it is! He tells you it is perfectly okay if the circuit generates negative voltage pulses when the switch is de-actuated: all he cares about is a single positive voltage pulse to the computer each time the switch actuates. Also, the pulse needs to be very short: no longer than 2 milliseconds in duration.</p>
+<p>Given this information, draw a schematic diagram for a practical passive differentiator circuit within the dotted lines, complete with component values.</p>
+<p><br /><span class="math">$\epsfbox{01219x02.eps}$</span><br /></p>
+<p>Did you really think I would give you the component values, too? I can’t make it too easy for you!</p>
+<p>Challenge question: An alternative design to the differentiator circuit shown above is this:</p>
+<p><br /><span class="math">$\epsfbox{01219x03.eps}$</span><br /></p>
+<p>This circuit would certainly work to create brief pulses of voltage to the computer input, but it would also likely <em>destroy</em> the computer’s input circuitry after a few switch actuations! Explain why.</p>
+<p>The behavior of a differentiator circuit may be confusing to students with exposure to calculus, because the output of such a circuit is not <em>strictly</em> related to the rate of change of the input voltage over time. However, if the time constant of the circuit is short in comparison to the period of the input signal, the result is close enough for many applications.</p>

@@ -1,0 +1,17 @@
+<p>A common topology for DC-AC power converter circuits uses a pair of transistors to switch DC current through the center-tapped winding of a step-up transformer, like this:</p>
+<p><br /><span class="math">$\epsfbox{03452x01.eps}$</span><br /></p>
+<p>In order for this form of circuit to function properly, the transistor &quot;firing&quot; signals must be precisely synchronized to ensure the two are never turned on simultaneously. The following schematic diagram shows a circuit to generate the necessary signals:</p>
+<p><br /><span class="math">$\epsfbox{03452x02.eps}$</span><br /></p>
+<p>Explain how this circuit works, and identify the locations of the frequency control and pulse duty-cycle control potentiometers.</p>
+<p>A timing diagram is worth a thousand words:</p>
+<p><br /><span class="math">$\epsfbox{03452x04.eps}$</span><br /></p>
+<p><span class="math"> • </span> <span class="math"><em>V</em><sub><em>r</em><em>e</em><em>f</em></sub></span> = DC reference voltage set by duty cycle potentiometer</p>
+<p><span class="math"> • </span> <span class="math"><em>V</em><sub><em>c</em><em>a</em><em>p</em></sub></span> = Voltage measured at top terminal of the 555’s capacitor</p>
+<p><span class="math"> • </span> <span class="math"><em>V</em><sub><em>c</em><em>o</em><em>m</em><em>p</em></sub></span> = Comparator output voltage</p>
+<p><span class="math"> • </span> <span class="math"><em>V</em><sub>555(<em>o</em><em>u</em><em>t</em>)</sub></span> = 555 timer output voltage</p>
+<p><span class="math"> • </span> <span class="math"><em>Q</em></span> = Noninverted output of J-K flip-flop</p>
+<p><span class="math"> • </span> <span class="math">$\overline{Q}$</span> = Inverted output of J-K flip-flop</p>
+<p><br /><span class="math">$\epsfbox{03452x03.eps}$</span><br /></p>
+<p>Follow-up question: which direction would you have to move the frequency potentiometer to increase the output frequency of this circuit? Which direction would you have to move the duty cycle potentiometer to increase that as well?</p>
+<p>Challenge question: suppose you were prototyping this circuit without the benefit of an oscilloscope. How could you test the circuit to ensure the final output pulses to the transistors are never simultaneously in the &quot;high&quot; logic state? Assume you had a parts assortment complete with light-emitting diodes and other passive components.</p>
+<p>This question is an exercise in schematic diagram and timing diagram interpretation. By the way, I have built and tested this circuit and I can say it works very well.</p>

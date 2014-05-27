@@ -1,0 +1,7 @@
+<p>Two electronics students attempt to build 7-segment display circuits, one using a 7447 decoder/driver IC and the other using a 7448. Both students connect their ICs to common-cathode 7-segment displays as such:</p>
+<p><br /><span class="math">$\epsfbox{03916x01.eps}$</span><br /></p>
+<p>The student using the 7448 notices the LED segments glowing faintly, but the patterns are not correct for the digits that are supposed to be displayed. The student using the 7447 has an even worse problem: no light at all! Both have checked and re-checked their wiring, to no avail. It seems as though all the connections are in the right place.</p>
+<p>What do you think the problem is? Hint: consult datasheets for both chips to find clues!</p>
+<p>Neither the 7447 nor the 7448 are designed to <em>source</em> current to the LED segments, only <em>sink</em> current. I’ll let you figure out why the 7448 chip has the ability to make any of the LED segments light up at all.</p>
+<p>Follow-up question: trace the direction of electron flow through the wires between the decoder chip and the display.</p>
+<p>This question provides an excellent opportunity to discuss the difference between <em>sourcing</em> and <em>sinking</em> current, as well as the importance of knowing what the output stage of an IC looks like internally.</p>

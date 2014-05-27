@@ -1,0 +1,35 @@
+<p>Examine this truth table and then write both SOP and POS Boolean expressions describing the Output:</p>
+<p><br /><span class="math">$\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil &amp; 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule}
+A &amp; B &amp; C &amp; Output \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 0 &amp; 1 \cr
+\noalign{\hrule}
+0 &amp; 0 &amp; 1 &amp; 0 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 0 &amp; 1 \cr
+\noalign{\hrule}
+0 &amp; 1 &amp; 1 &amp; 0 \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 0 &amp; 0 \cr
+\noalign{\hrule}
+1 &amp; 0 &amp; 1 &amp; 1 \cr
+\noalign{\hrule}
+1 &amp; 1 &amp; 0 &amp; 1 \cr
+\noalign{\hrule}
+1 &amp; 1 &amp; 1 &amp; 0 \cr
+\noalign{\hrule}
+} }$</span><br /> Which of those Boolean expressions is simpler for this particular truth table? Which will be easier to reduce to simplest form (for the purpose of creating a gate circuit to implement it)?</p>
+<p>SOP expression:</p>
+<p><br /><span class="math">$\overline{A} \&gt; \overline{B} \&gt; \overline{C} + \overline{A} B \overline{C} + A \overline{B} C + A B \overline{C}$</span><br /></p>
+<p>POS expression:</p>
+<p><br /><span class="math">$(A + B + \overline{C})(A + \overline{B} + \overline{C})(\overline{A} + B + C)(\overline{A} + \overline{B} + \overline{C})$</span><br /></p>
+<p>Note: before deciding which expression is simpler, remember that the POS expression must be distributed before we may apply any of the standard Boolean simplification rules.</p>
+<p>Follow-up question: compare and contrast the procedures for generating SOP versus POS expressions from a truth table. What states (1 or 0) are you looking for when writing each type of expression? Explain why.</p>
+<p>Challenge question: what truth table scenarios do you suppose would &quot;favor&quot; an SOP expression over a POS expression, and visa-versa? In other words, under what conditions does a truth table yield a simpler SOP expression, versus a simpler POS expression?</p>
+<p>This question is really asking students to compare and contrast SOP against POS expressions, rather than being a question specific to the given truth table. The actual expressions given in the answer are there only for &quot;drill,&quot; so students may check their work. The <em>real</em> answers relate to the follow-up and challenge questions!</p>

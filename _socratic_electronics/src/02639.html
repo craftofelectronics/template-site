@@ -1,0 +1,10 @@
+<p>This circuit is referred to as a <em>peak follower-and-hold</em>, taking the last greatest positive input voltage and &quot;holding&quot; that value at the output until a greater positive input voltage comes along:</p>
+<p><br /><span class="math">$\epsfbox{02639x01.eps}$</span><br /></p>
+<p>Give a brief explanation of how this circuit works, as well as the purpose and function of the &quot;reset&quot; switch. Also, explain why a FET input opamp is required for the last stage of amplification.</p>
+<p>I’ll let you figure out how the circuit works! With regard to the necessity of FET inputs, let me say this: if the bias current of the last opamp were too great, the circuit would &quot;lose its memory&quot; of the last positive peak value over time.</p>
+<p>Follow-up question: how would you suggest choosing the values of resistor <span class="math"><em>R</em></span> and capacitor <span class="math"><em>C</em></span>?</p>
+<p>Challenge question: redraw the circuit, replacing the mechanical reset switch with a JFET for electronic reset capability.</p>
+<p>Ask your students if they can think of any practical applications for this type of circuit. There are many!</p>
+<p>I find it interesting that in two very respectable texts on opamp circuitry, I have found the following peak follower-and-hold circuit given as a practical example:</p>
+<p><br /><span class="math">$\epsfbox{02639x02.eps}$</span><br /></p>
+<p>This circuit contains two mistakes: the first is by having the reset switch go to ground, rather than -V. This makes the reset function set the default output to 0 volts, which makes it impossible for the circuit to subsequently follow and hold any input signal below ground potential. The second mistake is not having a resistor before the reset switch. Without a resistor in place, closing the reset switch places a momentary short-circuit on the output of the first opamp. Granted, the presence of a resistor creates a passive integrator stage (RC time constant) which must be kept considerably fast in order that rapid changes in input will be followed and held, but this is not a difficult factor to engineer.</p>

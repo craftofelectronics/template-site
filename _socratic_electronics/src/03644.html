@@ -1,0 +1,13 @@
+<p>Potentiometers are very useful devices in the field of robotics, because they allow us to represent the position of a machine part in terms of a voltage. In this particular case, a potentiometer mechanically linked to the joint of a robotic arm represents that arm’s angular position by outputting a corresponding voltage signal:</p>
+<p><br /><span class="math">$\epsfbox{03644x01.eps}$</span><br /></p>
+<p>As the robotic arm rotates up and down, the potentiometer wire moves along the resistive strip inside, producing a voltage directly proportional to the arm’s position. A voltmeter connected between the potentiometer wiper and ground will then indicate arm position. A computer with an analog input port connected to the same points will be able to measure, record, and (if also connected to the arm’s motor drive circuits) control the arm’s position.</p>
+<p>If we connect the potentiometer’s output to a <em>differentiator</em> circuit, we will obtain another signal representing something else about the robotic arm’s action. What physical variable does the differentiator output signal represent?</p>
+<p><br /><span class="math">$\epsfbox{03644x02.eps}$</span><br /></p>
+<p>The differentiator circuit’s output signal represents the angular <em>velocity</em> of the robotic arm, according to the following equation:</p>
+<p><br /><span class="math">$v = {dx \over dt}$</span><br /></p>
+<p>Where,</p>
+<p><span class="math"><em>v</em></span> = velocity</p>
+<p><span class="math"><em>x</em></span> = position</p>
+<p><span class="math"><em>t</em></span> = time</p>
+<p>Follow-up question: what type of signal will we obtain if we differentiate the position signal twice (i.e. connect the output of the first differentiator circuit to the input of a second differentiator circuit)?</p>
+<p>This question asks students to relate the concept of time-differentiation to physical motion, as well as giving them a very practical example of how a passive differentiator circuit could be used. In reality, one must be very careful to use differentiator circuits for real-world signals because differentiators tend to amplify high-frequency noise. Since real-world signals are often &quot;noisy,&quot; this leads to a lot of noise in the differentiated signals.</p>

@@ -1,0 +1,45 @@
+<p>The decay of a variable over time in an RC or LR circuit follows this mathematical expression:</p>
+<p><br /><span class="math">$e^{-{t \over \tau}}$</span><br /></p>
+<p>Where,</p>
+<p><span class="math"><em>e</em> = </span> Euler’s constant (<span class="math"> ≈ 2. 718281828</span>)</p>
+<p><span class="math"><em>t</em> = </span> Time, in seconds</p>
+<p><span class="math"><em>τ</em> = </span> Time constant of circuit, in seconds</p>
+<p>For example, if we were to evaluate this expression and arrive at a value of 0.398, we would know the variable in question has decayed from 100% to 39.8% over the period of time specified.</p>
+<p>However, calculating the amount of time it takes for a decaying variable to reach a specified percentage is more difficult. We would have to manipulate the equation to solve for <span class="math"><em>t</em></span>, which is part of an exponent.</p>
+<p>Show how the following equation could be algebraically manipulated to solve for <span class="math"><em>t</em></span>, where <span class="math"><em>x</em></span> is the number between 0 and 1 (inclusive) representing the percentage of original value for the variable in question:</p>
+<p><br /><span class="math">$x = e^{-{t \over \tau}}$</span><br /></p>
+<p>Note: the &quot;trick&quot; here is how to isolate the exponent <span class="math">$-t \over \tau$</span>. You will have to use the natural logarithm function!</p>
+<p>Showing all the necessary steps:</p>
+<p><br /><span class="math">$x = e^{-{t \over \tau}}$</span><br /></p>
+<p><br /><span class="math">$\ln x = \ln \left( e^{-{t \over \tau}} \right)$</span><br /></p>
+<p><br /><span class="math">$\ln x = {-{t \over \tau}}$</span><br /></p>
+<p><br /><span class="math"><em>t</em> =  − <em>τ</em>ln<em>x</em></span><br /></p>
+<p>In my experience, most American high school graduates are extremely weak in logarithms. Apparently this is not taught very well at the high school level, which is a shame because logarithms are a powerful mathematical tool. You may find it necessary to explain to your students what a logarithm is, and exactly why it &quot;un-does&quot; the exponent.</p>
+<p>When forced to give a quick presentation on logarithms, I usually start with a generic definition:</p>
+<p><br /><span class="math">$\hbox{Given: } b^a = c$</span><br /></p>
+<p><br /><span class="math">$\hbox{Logarithm defined: } \log_b c = a$</span><br /></p>
+<p>Verbally defined, the logarithm function asks us to find the power (<span class="math"><em>a</em></span>) of the base (<span class="math"><em>b</em></span>) that will yield <span class="math"><em>c</em></span>.</p>
+<p>Next, I introduce the common logarithm. This, of course, is a logarithm with a base of 10. A few quick calculator exercises help students grasp what the common logarithm function is all about:</p>
+<p><br /><span class="math">log10 = </span><br /></p>
+<p><br /><span class="math">log100 = </span><br /></p>
+<p><br /><span class="math">log1000 = </span><br /></p>
+<p><br /><span class="math">log10000 = </span><br /></p>
+<p><br /><span class="math">log100000 = </span><br /></p>
+<p><br /><span class="math">$\log {1 \over 10} =$</span><br /></p>
+<p><br /><span class="math">$\log {1 \over 100} =$</span><br /></p>
+<p><br /><span class="math">$\log {1 \over 1000} =$</span><br /></p>
+<p>After this, I introduce the <em>natural logarithm</em>: a logarithm with a base of <span class="math"><em>e</em></span> (Euler’s constant):</p>
+<p><br /><span class="math">$\hbox{Natural logarithm defined: } \ln x = \log_e x$</span><br /></p>
+<p>Have your students do this simple calculation on their calculators, and explain the result:</p>
+<p><br /><span class="math">ln2. 71828 = </span><br /></p>
+<p>Next comes an exercise to help them understand how logarithms can &quot;undo&quot; exponentiation. Have your students calculate the following values:</p>
+<p><br /><span class="math"><em>e</em><sup>2</sup> = </span><br /></p>
+<p><br /><span class="math"><em>e</em><sup>3</sup> = </span><br /></p>
+<p><br /><span class="math"><em>e</em><sup>4</sup> = </span><br /></p>
+<p>Now, have them take the natural logarithms of each of those answers. They will find that they arrive at the original exponent values (2, 3, and 4, respectively). Write this relationship on the board as such for your students to view:</p>
+<p><br /><span class="math">ln<em>e</em><sup>2</sup> = 2</span><br /></p>
+<p><br /><span class="math">ln<em>e</em><sup>3</sup> = 3</span><br /></p>
+<p><br /><span class="math">ln<em>e</em><sup>4</sup> = 4</span><br /></p>
+<p>Ask your students to express this relationship in general form, using the variable <span class="math"><em>x</em></span> for the power instead of an actual number:</p>
+<p><br /><span class="math">ln<em>e</em><sup><em>x</em></sup> = <em>x</em></span><br /></p>
+<p>It should now be apparent that the natural logarithm function has the ability to &quot;undo&quot; a power of <span class="math"><em>e</em></span>. Now it should be clear to your students why the given sequence of algebraic manipulations in the answer for this question is true.</p>

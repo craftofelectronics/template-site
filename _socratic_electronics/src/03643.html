@@ -1,0 +1,17 @@
+<p>According to the &quot;Ohm’s Law&quot; formula for a capacitor, capacitor current is proportional to the <em>time-derivative</em> of capacitor voltage:</p>
+<p><br /><span class="math">$i = C {dv \over dt}$</span><br /></p>
+<p>Another way of saying this is to state that the capacitors <em>differentiate</em> voltage with respect to time, and express this <em>time-derivative</em> of voltage as a current.</p>
+<p>We may build a simple circuit to produce an output voltage proportional to the current through a capacitor, like this:</p>
+<p><br /><span class="math">$\epsfbox{03643x01.eps}$</span><br /></p>
+<p>The resistor is called a <em>shunt</em> because it is designed to produce a voltage proportional to current, for the purpose of a parallel (&quot;shunt&quot;)-connected voltmeter or oscilloscope to measure that current. Ideally, the shunt resistor is there only to help us measure current, and not to impede current through the capacitor. In other words, its value in ohms should be very small compared to the reactance of the capacitor (<span class="math"><em>R</em><sub><em>s</em><em>h</em><em>u</em><em>n</em><em>t</em></sub> &lt;  &lt; <em>X</em><sub><em>C</em></sub></span>).</p>
+<p>Suppose that we connect AC voltage sources with the following wave-shapes to the input of this passive differentiator circuit. Sketch the ideal (time-derivative) output waveform shape on each oscilloscope screen, as well as the shape of the actual circuit’s output voltage (which will be non-ideal, of course):</p>
+<p><br /><span class="math">$\epsfbox{03643x02.eps}$</span><br /></p>
+<p><br /><span class="math">$\epsfbox{03643x03.eps}$</span><br /></p>
+<p><br /><span class="math">$\epsfbox{03643x04.eps}$</span><br /></p>
+<p>Note: the amplitude of your plots is arbitrary. What I’m interested in here is the <em>shape</em> of the ideal and actual output voltage waveforms!</p>
+<p>Hint: I strongly recommend building this circuit and testing it with triangle, sine, and square-wave input voltage signals to obtain the corresponding actual output voltage wave-shapes!</p>
+<p><br /><span class="math">$\epsfbox{03643x05.eps}$</span><br /></p>
+<p><br /><span class="math">$\epsfbox{03643x06.eps}$</span><br /></p>
+<p><br /><span class="math">$\epsfbox{03643x07.eps}$</span><br /></p>
+<p>Follow-up question: given that <span class="math"><em>R</em><sub><em>s</em><em>h</em><em>u</em><em>n</em><em>t</em></sub> &lt;  &lt; <em>X</em><sub><em>C</em></sub></span> in order that the resistance does not impede the capacitor current to any significant extent, what does this suggest about the necessary time-constant (<span class="math"><em>τ</em></span>) of a passive differentiator circuit? In other words, what values of <span class="math"><em>R</em></span> and <span class="math"><em>C</em></span> would work best in such a circuit to produce an output waveform that is as close to ideal as possible?</p>
+<p>This question really is best answered by experimentation. I recommend having a signal generator and oscilloscope on-hand in the classroom to demonstrate the operation of this passive differentiator circuit. Challenge students with setting up the equipment and operating it!</p>

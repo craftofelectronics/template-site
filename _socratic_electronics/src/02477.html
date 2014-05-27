@@ -1,0 +1,16 @@
+<p>The output voltage of a <em>Cuk converter</em> circuit (named after the engineer who invented it) is a function of the input voltage and the duty cycle of the switching signal, represented by the variable <span class="math"><em>D</em></span> (ranging in value from 0% to 100%), where <span class="math">$D = {{t_{on}} \over {t_{on} + t_{off}}}$</span>:</p>
+<p><br /><span class="math">$\epsfbox{02477x01.eps}$</span><br /></p>
+<p>Based on this mathematical relationship, calculate the output voltage of this converter circuit at these duty cycles, assuming an input voltage of 25 volts:</p>
+<p><span class="math"> • </span> <span class="math"><em>D</em></span> = 0% ; <span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em></sub></span> =</p>
+<p><span class="math"> • </span> <span class="math"><em>D</em></span> = 25% ; <span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em></sub></span> =</p>
+<p><span class="math"> • </span> <span class="math"><em>D</em></span> = 50% ; <span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em></sub></span> =</p>
+<p><span class="math"> • </span> <span class="math"><em>D</em></span> = 75% ; <span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em></sub></span> =</p>
+<p><span class="math"> • </span> <span class="math"><em>D</em></span> = 100% ; <span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em></sub></span> =</p>
+<p><span class="math"> • </span> <span class="math"><em>D</em></span> = 0% ; <span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em></sub></span> = 0 volts</p>
+<p><span class="math"> • </span> <span class="math"><em>D</em></span> = 25% ; <span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em></sub></span> = 8.33 volts</p>
+<p><span class="math"> • </span> <span class="math"><em>D</em></span> = 50% ; <span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em></sub></span> = 25 volts</p>
+<p><span class="math"> • </span> <span class="math"><em>D</em></span> = 75% ; <span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em></sub></span> = 75 volts</p>
+<p><span class="math"> • </span> <span class="math"><em>D</em></span> = 100% ; <span class="math"><em>V</em><sub><em>o</em><em>u</em><em>t</em></sub></span> = 0 volts</p>
+<p>The calculations for this circuit should be straightforward, except for the last calculation with a duty cycle of <span class="math"><em>D</em></span> = 100%. Here, students must take a close look at the circuit and not just follow the formula blindly.</p>
+<p>Note that the switching element in the schematic diagram is shown in generic form. It would never be a mechanical switch, but rather a transistor of some kind.</p>
+<p>Astute students will note that there is no difference between the standard <em>inverting</em> converter circuit and the <em>Cuk</em> design, as far as output voltage calculations are concerned. This, however, does not mean the two circuits are equivalent in all ways! One definite advantage of the Cuk converter over the standard inverting converter is that the Cuk’s input current never goes to zero during the switch’s &quot;off&quot; cycle. This makes the Cuk circuit a &quot;quieter&quot; load as seen from the power source. Both inverting and buck converter circuits create a lot of electrical noise on the supply side if their inputs are unfiltered!</p>

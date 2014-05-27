@@ -1,0 +1,20 @@
+<p>This digital combination lock circuit controls access through a door with a solenoid-actuated latch. The pushbutton switches (<span class="math"><em>a</em></span>, <span class="math"><em>b</em></span>, <span class="math"><em>c</em></span>, and <span class="math"><em>d</em></span>) must be pressed to match the combination set by four toggle switches in a concealed location (<span class="math"><em>A</em></span>, <span class="math"><em>B</em></span>, <span class="math"><em>C</em></span>, and <span class="math"><em>D</em></span>). If the correct four-bit &quot;code&quot; is entered through the pushbuttons, the door latch will electrically open:</p>
+<p><br /><span class="math">$\epsfbox{02963x01.eps}$</span><br /></p>
+<p>One day the door refuses to open. Not only that, but there isn’t even the familiar &quot;click&quot; of the solenoid latch energizing – just silence. You are asked to troubleshoot the lock circuit through a control panel outside the door where you have access to all circuit test points.</p>
+<p>With an authorized person holding the pushbutton switches in the correct positions, you take your logic probe and measure a &quot;low&quot; state at TP13 and a &quot;high&quot; state at TP14. From this information, identify two possible causes that could account for the problem and all measured values in this circuit.</p>
+<p>Also, identify the next logical test point(s) from those shown on the schematic that you would check with your logic probe, and the reason why you would check there.</p>
+<p><span class="math"> • </span> Possible causes of the problem</p>
+<p>1.</p>
+<p>2.</p>
+<p><span class="math"> • </span> Next logical test point(s) to check, with reason why you would check there</p>
+<p>Next point(s):</p>
+<p>Reason:</p>
+<p>Note: the following answers are not exhaustive. There may be more circuit elements possibly at fault than what is listed here!</p>
+<p><span class="math"> • </span> Possible causes of the problem</p>
+<p>1. Any XOR gate output stuck high</p>
+<p>2. Any switch, and/or any wires between switches and XOR gates</p>
+<p>3. NOR gate output (TP13) stuck in the low state</p>
+<p><span class="math"> • </span> Next logical test point(s) to check, with reason why you would check there</p>
+<p>- All inputs of the NOR gate (TP9, TP10, TP11, and TP12), to see if any one or more are high</p>
+<p>Really, there is only one logical place to check after seeing that TP13 is low and we have power (TP14 is high) and that is the input of the NOR gate (TP9 though TP12), because we need to know whether the NOR gate is being <em>told</em> to go low (i.e. a high input) or whether the NOR gate output is <em>stuck</em> low. Nothing to the right of the NOR gate matters because we know the NOR gate isn’t even telling the SSR to energize (TP13 is low).</p>
+<p><strong>This question is intended for exams only and not worksheets!</strong>.</p>

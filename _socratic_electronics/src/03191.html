@@ -1,0 +1,38 @@
+<p>A student builds a microcontroller circuit to turn on an LED once for every five actuations of the input switch. The circuit is simple, with the microcontroller using a conditional loop to increment a variable each time the switch is pressed:</p>
+<p><br /><span class="math">$\epsfbox{03191x01.eps}$</span><br /></p>
+<p>Declare Pin0 as an output</p>
+<p>Declare Pin1 as an input</p>
+<p>Declare X as an integer variable</p>
+<p>LOOP</p>
+<p>WHILE Pin1 is HIGH</p>
+<p>Add 1 to X (X=X+1)</p>
+<p>ENDWHILE</p>
+<p>IF X is equal to 5, set Pin0 HIGH and set X to 0</p>
+<p>ELSE set Pin0 LOW</p>
+<p>ENDIF</p>
+<p>ENDLOOP</p>
+<p>Unfortunately, the program does not execute as planned. Instead of the LED coming on once every five switch actuations, it seems to come on randomly when the switch is released. Sometimes the LED turns on after the first switch actuation, while other times it takes more than five pushes of the switch to get it to turn on.</p>
+<p>After some careful analysis, it occurs to the student that the problem lies in the WHILE loop. As the microcontroller is much faster than the human hand, that loop executes many times while the switch is being pressed rather than only once, meaning that the variable X counts from 0 to 5 many times around for each switch actuation. It is only by chance, then, that X will be equal to five after the WHILE loop exits.</p>
+<p>What the student needs is for the switch to increment by 1 only for an off-to-on switch transition: at the <em>positive edge</em> of the input pulse. The problem is how to do this using programming.</p>
+<p>Another student, when faced with the same problem, chose to solve it this way and it worked just fine:</p>
+<p>Declare Pin0 as an output</p>
+<p>Declare Pin1 as an input</p>
+<p>Declare Switch as a Boolean (0 or 1) variable</p>
+<p>Declare Last_Switch as a Boolean (0 or 1) variable</p>
+<p>Declare X as an integer variable</p>
+<p>LOOP</p>
+<p>Set Last_Switch equal to Switch</p>
+<p>Set Switch equal to Pin1</p>
+<p>IF Switch = 1 and Last_Switch = 0 THEN add 1 to X (X=X+1)</p>
+<p>ELSE do nothing to X</p>
+<p>ENDIF</p>
+<p>IF X is equal to 5, set Pin0 HIGH and set X to 0</p>
+<p>ELSE set Pin0 LOW</p>
+<p>ENDIF</p>
+<p>ENDLOOP</p>
+<p>Explain how this program successfully increments X only on each off-to-on transition of the pushbutton switch while the other program increments X rapidly during the entire duration the pushbutton switch is pressed.</p>
+<p>The key to understanding how this algorithm works is to realize the variable Last_Switch will always be one scan (loop execution) behind the variable Switch.</p>
+<p>Challenge question: does it matter where in the program the following two lines go? Must they be placed immediately prior to the IF/THEN conditional statement?</p>
+<p>Set Last_Switch equal to Switch</p>
+<p>Set Switch equal to Pin1</p>
+<p>This pulse-detection algorithm is very commonly used in programs dealing with real-world switch inputs. It performs in software what the pulse detection network does inside edge-triggered flip-flops, for the same effect: to initiate some kind of action only at the edge of a pulse signal.</p>

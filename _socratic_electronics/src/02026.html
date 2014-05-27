@@ -1,0 +1,6 @@
+<p>Is it possible to reduce this zener diode voltage regulator circuit to a Thévenin equivalent circuit? Explain why or why not.</p>
+<p><br /><span class="math">$\epsfbox{02026x01.eps}$</span><br /></p>
+<p>Technically, this circuit cannot be reduced to either a Thévenin or Norton equivalent, because the zener diode is a <em>nonlinear</em> component. However, it <em>is</em> possible to create two different Thévenin equivalent circuits: one representing the circuit when regulating voltage at <span class="math"><em>V</em><sub><em>z</em><em>e</em><em>n</em><em>e</em><em>r</em></sub></span>, and the other representing the circuit when the load resistance is below the critical value and the voltage is no longer being regulated:</p>
+<p><br /><span class="math">$\epsfbox{02026x03.eps}$</span><br /></p>
+<p><br /><span class="math">$\epsfbox{02026x02.eps}$</span><br /></p>
+<p>Some students may protest at the first Thévenin equivalent circuit (with a 0 ohm series resistance), because this would be a <em>perfect</em> voltage source. In reality, there would be a very small series resistance accounting for the slight voltage &quot;sag&quot; experienced under changing loads within the regulation range, but this is difficult to calculate.</p>

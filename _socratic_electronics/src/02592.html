@@ -1,0 +1,5 @@
+<p>Some operational amplifiers come equipped with compensation capacitors built inside. The classic 741 design is one such opamp:</p>
+<p><br /><span class="math">$\epsfbox{02592x01.eps}$</span><br /></p>
+<p>Find the compensation capacitor in this schematic diagram, and identify how it provides frequency-dependent negative feedback within the opamp to reduce gain at high frequencies.</p>
+<p>Identifying the capacitor is easy: it is the only one in the whole circuit! It couples signal from the collector of <span class="math"><em>Q</em><sub>17</sub></span>, which is an active-loaded common-emitter amplifier, to the base of <span class="math"><em>Q</em><sub>16</sub></span>, which is an emitter-follower driving <span class="math"><em>Q</em><sub>17</sub></span>. Since <span class="math"><em>Q</em><sub>17</sub></span> inverts the signal applied to <span class="math"><em>Q</em><sub>16</sub></span>’s base, the feedback is degenerative.</p>
+<p>Answering this question will require a review of basic transistor amplifier theory, specifically different configurations of transistor amplifiers and their respective signal phase relationships.</p>

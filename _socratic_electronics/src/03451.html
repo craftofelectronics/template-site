@@ -1,0 +1,12 @@
+<p>A technician is using a digital multimeter (with a &quot;diode check&quot; feature) to identify the terminals of a power MOSFET:</p>
+<p><br /><span class="math">$\epsfbox{03451x01.eps}$</span><br /></p>
+<p>The technician obtains the following &quot;diode check&quot; voltage measurements, in this order:</p>
+<p><span class="math">1. </span> Black lead on middle terminal, Red lead on right terminal = 0.583 volts (<em>shown in illustration</em>)</p>
+<p><span class="math">2. </span> Red lead on middle terminal, Black lead on right terminal = O.L. (open)</p>
+<p><span class="math">3. </span> Black lead on middle terminal, Red lead on left terminal = O.L. (open)</p>
+<p><span class="math">4. </span> Black lead on middle terminal, Red lead on right terminal = 0.001 volts</p>
+<p><span class="math">5. </span> Red lead on middle terminal, Black lead on right terminal = 0.001 volts</p>
+<p>Explain why the fourth and fifth measurements are so different from the first and second, respectively, when they were taken between the same terminals on the MOSFET. Hint: this particular MOSFET is an N-channel, enhancement-type.</p>
+<p>The act of taking the third measurement enhanced the transistor into the on (saturated) state by means of the multimeter’s output voltage in the diode test mode. The MOSFET then remained in its on state for the fourth and fifth measurements.</p>
+<p>Follow-up question: where would the meter have to be connected in order to force the MOSFET into is off (cutoff) state?</p>
+<p>Field-effect transistors, by their very nature being voltage-activated devices with extremely high input impedance, are more difficult to identify than bipolar junction transistors because the meter’s output in the &quot;diode check&quot; mode is sufficient to activate and de-activate them. This question showcases a practical example of this (the values actually came from real-life testing of an IRF510 transistor!).</p>

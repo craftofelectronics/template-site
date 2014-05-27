@@ -1,0 +1,9 @@
+<p>This astable 555 circuit has a potentiometer allowing for variable duty cycle:</p>
+<p><br /><span class="math">$\epsfbox{01419x01.eps}$</span><br /></p>
+<p>With the diode in place, the output waveform’s duty cycle may be adjusted to less than 50% if desired. Explain why the diode is necessary for that capability. Also, identify which way the potentiometer wiper must be moved to decrease the duty cycle.</p>
+<p>The diode allows part of the potentiometer’s resistance to be bypassed during the capacitor’s charging cycle, allowing (potentially) less resistance in the charging circuit than in the discharging circuit.</p>
+<p>To decrease the duty cycle, move the wiper up (toward the fixed resistor, away from the capacitor).</p>
+<p>Challenge question: write an equation solving for the average current drawn by the 555 timer circuit as it charges and discharges the capacitor while generating a 50% duty cycle pulse. Assume that no current is drawn from the power supply by the circuit while the capacitor is discharging, and use this approximation of the capacitor &quot;Ohm’s Law&quot; equation for figuring average current through the charge cycle:</p>
+<p><br /><span class="math">$i = C {dv \over dt} \hbox{\hskip 10pt True &quot;Ohm's Law&quot; for a capacitor}$</span><br /></p>
+<p><br /><span class="math">$I_{avg} = C {\Delta V \over \Delta t} \hbox{\hskip 10pt Capacitive &quot;Ohm's Law&quot; solving for {\it average} current}$</span><br /></p>
+<p>This question really probes students’ conceptual understanding of the 555 timer, used as an astable multivibrator (oscillator). If some students just can’t seem to grasp the function of the diode, illuminate their understanding by having them trace the charging and discharging current paths. Once they understand which way current goes in both cycles of the timer, they should be able to recognize what the diode does and why it is necessary.</p>

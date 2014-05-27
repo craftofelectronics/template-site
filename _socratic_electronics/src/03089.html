@@ -1,0 +1,14 @@
+<p>Substitution is a technique whereby we let a variable represent (stand in the place of) another variable or an expression made of other variables. One application where we might use substitution is when we must manipulate an algebraic expression containing a lot of similar-looking variables, as is often the case with science problems.</p>
+<p>Take this series-parallel resistor circuit for example:</p>
+<p><br /><span class="math">$\epsfbox{03089x01.eps}$</span><br /></p>
+<p>The equation expressing total resistance as a function of the four resistor values looks like this:</p>
+<p><br /><span class="math">$R_{total} = R_1 + {{R_2 (R_3 + R_4)} \over {R_2 + R_3 + R_4}}$</span><br /></p>
+<p>Now imagine being asked to manipulate this equation to solve for <span class="math"><em>R</em><sub>3</sub></span>. When the only visual feature distinguishing each of the variables is the subscript (<em>total</em>, <em>1</em>, <em>2</em>, <em>3</em>, or <em>4</em>), it becomes very easy to lose track of where one is in the algebraic manipulation. A very common mistake is to exchange or needlessly repeat subscripts during the process, effectively mis-placing one or more variables. To help avoid such mistakes, you may <em>substitute</em> different letter variables for <span class="math"><em>R</em><sub><em>t</em><em>o</em><em>t</em><em>a</em><em>l</em></sub></span>, <span class="math"><em>R</em><sub>1</sub></span>, <span class="math"><em>R</em><sub>2</sub></span>, <span class="math"><em>R</em><sub>3</sub></span>, and <span class="math"><em>R</em><sub>4</sub></span> like this:</p>
+<p><strong>Substitution table</strong></p>
+<p><span class="math"></span><br /><span class="math"></span><br />y = a + b (c + d) <span class="math"></span></p>
+<p>After doing the algebraic manipulation to solve for <span class="math"><em>c</em></span> (<span class="math"><em>R</em><sub>3</sub></span>), the equation looks like this:</p>
+<p><br /><span class="math">$c = {{(y-a)(b+d) - bd}\over {a + b - y}}$</span><br /></p>
+<p>Back-substitute the original <span class="math"><em>R</em></span> variables in place of <span class="math"><em>a</em></span>, <span class="math"><em>b</em></span>, <span class="math"><em>c</em></span>, <span class="math"><em>d</em></span>, and <span class="math"><em>y</em></span> as you see them in the above equation to arrive at a form that directly relates to the schematic diagram.</p>
+<p><br /><span class="math">$R_3 = {{(R_{total}-R_1)(R_2 + R_4) - R_2 R_4}\over {R_1 + R_2 - R_{total}}}$</span><br /></p>
+<p>Challenge question: show all the steps you would take to solve for <span class="math"><em>R</em><sub>3</sub></span> in the original equation.</p>
+<p>Here I show an application of substitution that is useful only because the human brain has difficulty distinguishing similar-looking symbols. More powerful uses of algebraic substitution exist, of course, but this is a start for students who have never seen the concept before.</p>

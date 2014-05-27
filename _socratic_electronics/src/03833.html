@@ -1,0 +1,18 @@
+<p>One way to think of logic gate types is to consider what input states guarantee a certain output state. For example, we could describe the function of an AND gate as such:</p>
+<p><br /><span class="math">$\hbox{\it Any low input guarantees a low output.}$</span><br /></p>
+<p>Identify what type of gate is represented by each of the following phrases:</p>
+<p><span class="math"> • </span> Any low input guarantees a high output.</p>
+<p><span class="math"> • </span> Any high input guarantees a low output.</p>
+<p><span class="math"> • </span> Any high input guarantees a high output.</p>
+<p><span class="math"> • </span> Any difference in the inputs guarantees a high output.</p>
+<p><span class="math"> • </span> Any difference in the inputs guarantees a low output.</p>
+<p>Also, explain how this sort of gate identification could be useful in troubleshooting logic gate circuits.</p>
+<p><span class="math"> • </span> Any low input guarantees a high output: <strong>NAND</strong> gate.</p>
+<p><span class="math"> • </span> Any high input guarantees a low output: <strong>NOR</strong> gate.</p>
+<p><span class="math"> • </span> Any high input guarantees a high output: <strong>OR</strong> gate.</p>
+<p><span class="math"> • </span> Any difference in the inputs guarantees a high output: <strong>XOR</strong> gate.</p>
+<p><span class="math"> • </span> Any difference in the inputs guarantees a low output: <strong>XNOR</strong> gate.</p>
+<p>This is a very useful way to think of the different logic gate types, as often you are faced with a choice of which gate type to use for a specific function in a digital circuit based on a requirement cast in these terms (&quot;Any <em>blank</em> input guarantees a <em>blank</em> output&quot;).</p>
+<p>For example, we might need a gate to perform a &quot;disable&quot; function for a digital signal:</p>
+<p><br /><span class="math">$\epsfbox{03833x01.eps}$</span><br /></p>
+<p>Considered in terms of what input state forces a low output, the choice to use an AND gate becomes obvious.</p>

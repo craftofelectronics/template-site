@@ -1,0 +1,33 @@
+<p>A student decides to build a light-flasher circuit using a microcontroller instead of a 555 timer or some other hard-wired astable circuit. Unfortunately, there is a problem somewhere. When first powered up, the LED lights on for 1 second, then turns off and never turns back on. The only way the LED ever comes back on is if the MCU is reset or its power is cycled off and on:</p>
+<p><br /><span class="math">$\epsfbox{02597x01.eps}$</span><br /></p>
+<p>Declare Pin0 as an output</p>
+<p>BEGIN</p>
+<p>Set Pin0 HIGH</p>
+<p>Pause for 1 second</p>
+<p>Set Pin0 LOW</p>
+<p>END</p>
+<p>A fellow student, when asked for help, modifies the program listing and re-sends it from the personal computer where it is being edited to the microcontroller, through a programming cable. The program listing now reads as such:</p>
+<p>Declare Pin0 as an output</p>
+<p>LOOP</p>
+<p>Set Pin0 HIGH</p>
+<p>Pause for 1 second</p>
+<p>Set Pin0 LOW</p>
+<p>ENDLOOP</p>
+<p>When the MCU is reset with the new program, the LED starts blinking on and off . . . sort of. The LED is &quot;on&quot; most of the time, but once every second it turns off and then immediately comes back on. In fact, the &quot;off&quot; period is so brief it is barely noticeable.</p>
+<p>What the student wanted was a 50% duty cycle: &quot;on&quot; for 1 second, then &quot;off&quot; for 1 second, repeating that cycle indefinitely. First, explain the significance of the classmate’s program modification, and then modify the program listing again so that the LED does what the student wants it to.</p>
+<p>A &quot;loop&quot; is necessary for the MCU to repeat the on/pause/off sequence. What is needed now is another time delay within the loop:</p>
+<p>Declare Pin0 as an output</p>
+<p>LOOP</p>
+<p>Set Pin0 HIGH</p>
+<p>Pause for 1 second</p>
+<p>Set Pin0 LOW</p>
+<p>Pause for 1 second (<em>new line of code</em>)</p>
+<p>ENDLOOP</p>
+<p>The purpose of this question is for students to realize that the microcontroller must be told to &quot;loop&quot; through the light blinking instructions. Really, this is just an illustration of loops in a practical context.</p>
+<p>In case you’re wondering why I write in pseudocode, here are a few reasons:</p>
+<p><span class="math"> • </span> No prior experience with programming required to understand pseudocode</p>
+<p><span class="math"> • </span> It never goes out of style</p>
+<p><span class="math"> • </span> Hardware independent</p>
+<p><span class="math"> • </span> No syntax errors</p>
+<p>If I had decided to showcase code that would actually run in a microcontroller, I would be dooming the question to obsolescence. This way, I can communicate the spirit of the program without being chained to an actual programming standard. The only drawback is that students will have to translate my pseudocode to real code that will actually run on their particular MCU hardware, but that is a problem guaranteed for some regardless of which real programming language I would choose.</p>
+<p>Of course, I could have taken the Donald Knuth approach and invented my own (imaginary) hardware and instruction set . . .</p>

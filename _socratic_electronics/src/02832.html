@@ -1,0 +1,10 @@
+<p>Shown here is the ladder logic diagram for a fire alarm system, where the activation of any alarm switch opens that (normally-closed) switch contact and sounds the alarm:</p>
+<p><br /><span class="math">$\epsfbox{02832x01.eps}$</span><br /></p>
+<p>Write the Boolean expression for this relay circuit, then simplify that expression using DeMorgan’s Theorem and draw a new relay circuit implementing the simplified expression.</p>
+<p>Original circuit expression:</p>
+<p><br /><span class="math">$\overline{ \overline{A} \&gt; \overline{B} \&gt; \overline{C} \&gt; \overline{D} \&gt; \overline{E} }$</span><br /></p>
+<p>Simplified expression and circuit:</p>
+<p><br /><span class="math"><em>A</em> + <em>B</em> + <em>C</em> + <em>D</em> + <em>E</em></span><br /></p>
+<p><br /><span class="math">$\epsfbox{02832x02.eps}$</span><br /></p>
+<p>Follow-up question: which circuit (the original or the one show above) is more practical from a fail-safe standpoint? In other words, which circuit will give the <em>safest</em> result in the event of a switch or wiring failure?</p>
+<p>Here students see that even though two circuits are functionally identical (at least according to their respective Boolean expressions), they may not behave quite the same under adverse conditions (i.e. faulted switches or wiring). This is a very important thing for them to see, because it underscores the practical need to look beyond the immediate design criteria (Boolean function) and consider other parameters (failure mode).</p>

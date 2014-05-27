@@ -1,0 +1,11 @@
+<p>Calculate the voltage across a 2.5 H inductor after &quot;charging&quot; through a series-connected resistor with 50 <span class="math">Ω </span> of resistance for 75 milliseconds, powered by a 6 volt battery. Assume that the inductor has an internal resistance of 14 <span class="math">Ω </span>.</p>
+<p>Also, express this amount of time (75 milliseconds) in terms of how many <em>time constants</em> have elapsed.</p>
+<p>Hint: it would be helpful in your analysis to draw a schematic diagram of this circuit showing the inductor’s inductance and 14 ohms of resistance as two separate (idealized) components. This is a very common analysis technique in electrical engineering: to regard the parasitic characteristics of a component as a separate component in the same circuit.</p>
+<p>Equivalent schematic:</p>
+<p><br /><span class="math">$\epsfbox{00454x02.eps}$</span><br /></p>
+<p><span class="math"><em>E</em><sub><em>L</em></sub> = </span> 2.00 V @ <span class="math"><em>t</em> = </span> 75 milliseconds</p>
+<p>75 ms = 1.92 time constants (<span class="math">1. 92<em>τ</em></span>)</p>
+<p>Although I have revealed a problem-solving technique in this question, it does not show the students exactly how to separate the inductor’s 2.5 henrys of inductance and 14 ohms of resistance into two components, nor does it give away the answer. Discuss the analytical technique of drawing idealized components (&quot;lumped parameters&quot;) as a problem-solving technique, and encourage students to use it whenever they are faced with analyzing a component exhibiting parasitic characteristics.</p>
+<p>An excellent example of this technique is in &quot;modeling&quot; transformers. Transformers exhibit much more than just mutual inductance. They also exhibit self-inductance, leakage inductance, capacitance, resistance, and hysteretic losses. A comprehensive model for a transformer is a very complex thing, and it appears on a schematic to be a whole network of components connected together:</p>
+<p><br /><span class="math">$\epsfbox{00454x01.eps}$</span><br /></p>
+<p>Each of these components is regarded as ideal (i.e., pure: possessing no parasitic characteristics), but together they &quot;model&quot; the behavior of a real transformer in terms readily applicable to existing mathematical techniques.</p>

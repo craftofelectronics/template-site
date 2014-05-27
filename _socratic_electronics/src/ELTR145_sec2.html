@@ -1,0 +1,67 @@
+<p><strong>ELTR 145 (Digital 2), section 2</strong></p>
+<hr />
+<p>Topics: <em>Counter circuits</em></p>
+<p>Questions: <em>1 through 10</em></p>
+<p>Lab Exercise: <em>2-bit counter from flip-flops (question 56)</em></p>
+<hr />
+<p>Topics: <em>Counter circuits (continued)</em></p>
+<p>Questions: <em>11 through 20</em></p>
+<p>Lab Exercise: <em>4-bit up/down counter IC (question 57)</em></p>
+<hr />
+<p>Topics: <em>Shift registers</em></p>
+<p>Questions: <em>21 through 30</em></p>
+<p>Lab Exercise: <em>Troubleshooting practice (decade counter circuit – question 60)</em></p>
+<hr />
+<p>Topics: <em>Shift registers and serial data communication</em></p>
+<p>Questions: <em>31 through 40</em></p>
+<p>Lab Exercise: <em>Frequency divider circuit (question 58)</em></p>
+<hr />
+<p>Topics: <em>Memory technologies</em></p>
+<p>Questions: <em>41 through 55</em></p>
+<p>Lab Exercise: <em>4-bit universal shift register IC (question 59)</em></p>
+<hr />
+<p>Exam 2: <em>includes Counter circuit performance assessment</em></p>
+<p>Lab Exercise: <em>Troubleshooting practice (decade counter circuit – question 60)</em></p>
+<hr />
+<p>Questions: <em>63 through 72</em></p>
+<hr />
+<p>Questions: <em>73 through 92</em></p>
+<hr />
+<p>Questions: <em>93 through the end of the worksheet</em></p>
+<hr />
+<p><strong>Troubleshooting assessment (counter circuit) due at end of ELTR145, Section 3</strong></p>
+<p>Question 61: Troubleshooting log</p>
+<p>Question 62: Sample troubleshooting assessment grading criteria</p>
+<p><strong>ELTR 145 (Digital 2), section 2</strong></p>
+<hr />
+<p><strong>F</strong> <strong>Technical Skills – Digital Circuits</strong></p>
+<p><strong>F.14</strong> Understand principles and operations of types of registers and counters.</p>
+<p><strong>F.15</strong> Fabricate and demonstrate types of registers and counters.</p>
+<p><strong>F.16</strong> Troubleshoot and repair types of registers and counters.</p>
+<p><strong>B</strong> <strong>Basic and Practical Skills – Communicating on the Job</strong></p>
+<p><strong>B.01</strong> Use effective written and other communication skills. <em>Met by group discussion and completion of labwork.</em></p>
+<p><strong>B.03</strong> Employ appropriate skills for gathering and retaining information. <em>Met by research and preparation prior to group discussion.</em></p>
+<p><strong>B.04</strong> Interpret written, graphic, and oral instructions. <em>Met by completion of labwork.</em></p>
+<p><strong>B.06</strong> Use language appropriate to the situation. <em>Met by group discussion and in explaining completed labwork.</em></p>
+<p><strong>B.07</strong> Participate in meetings in a positive and constructive manner. <em>Met by group discussion.</em></p>
+<p><strong>B.08</strong> Use job-related terminology. <em>Met by group discussion and in explaining completed labwork.</em></p>
+<p><strong>B.10</strong> Document work projects, procedures, tests, and equipment failures. <em>Met by project construction and/or troubleshooting assessments.</em></p>
+<p><strong>C</strong> <strong>Basic and Practical Skills – Solving Problems and Critical Thinking</strong></p>
+<p><strong>C.01</strong> Identify the problem. <em>Met by research and preparation prior to group discussion.</em></p>
+<p><strong>C.03</strong> Identify available solutions and their impact including evaluating credibility of information, and locating information. <em>Met by research and preparation prior to group discussion.</em></p>
+<p><strong>C.07</strong> Organize personal workloads. <em>Met by daily labwork, preparatory research, and project management.</em></p>
+<p><strong>C.08</strong> Participate in brainstorming sessions to generate new ideas and solve problems. <em>Met by group discussion.</em></p>
+<p><strong>D</strong> <strong>Basic and Practical Skills – Reading</strong></p>
+<p><strong>D.01</strong> Read and apply various sources of technical information (e.g. manufacturer literature, codes, and regulations). <em>Met by research and preparation prior to group discussion.</em></p>
+<p><strong>E</strong> <strong>Basic and Practical Skills – Proficiency in Mathematics</strong></p>
+<p><strong>E.01</strong> Determine if a solution is reasonable.</p>
+<p><strong>E.02</strong> Demonstrate ability to use a simple electronic calculator.</p>
+<p><strong>E.06</strong> Translate written and/or verbal statements into mathematical expressions.</p>
+<p><strong>E.07</strong> Compare, compute, and solve problems involving binary, octal, decimal, and hexadecimal numbering systems.</p>
+<p><strong>E.12</strong> Interpret and use tables, charts, maps, and/or graphs.</p>
+<p><strong>E.13</strong> Identify patterns, note trends, and/or draw conclusions from tables, charts, maps, and/or graphs.</p>
+<p><strong>E.15</strong> Simplify and solve algebraic expressions and formulas.</p>
+<p><strong>E.16</strong> Select and use formulas appropriately.</p>
+<p><strong>ELTR 145 (Digital 2), section 2</strong></p>
+<hr />
+<p>When many students first examine cascaded, synchronous flip-flop circuits (where the <span class="math"><em>Q</em></span> output of one enters the input of the next), they wonder why pulses don’t just ripple through the whole chain of flip-flops with one clock pulse. The reason this does not happen is that each flip-flop has a finite amount of <em>set-up time</em> required for the input state to be stable before it is recognized at the active edge of a new clock pulse. Even with instantaneous flip-flop output state changes, the cascaded signal still cannot reach the input of the next flip-flop <em>before</em> the clock pulse arrives at that next flip-flop. Therefore, the fastest a logic state can progress from one flip-flop to another in a synchronous counter circuit is one flip-flop per clock pulse.</p>

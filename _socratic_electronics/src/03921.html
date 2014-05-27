@@ -1,0 +1,11 @@
+<p>Here, a differential pair circuit is driven by an input voltage at the base of <span class="math"><em>Q</em><sub>2</sub></span>, while the output is taken at the collector of <span class="math"><em>Q</em><sub>2</sub></span>. Meanwhile, the other input (<span class="math"><em>Q</em><sub>1</sub></span> base) is connected to ground:</p>
+<p><br /><span class="math">$\epsfbox{03921x01.eps}$</span><br /></p>
+<p>Identify what types of amplifier circuits the two transistors are functioning as (common-collector, common-emitter, common-base) when the differential pair is used like this, and write an equation describing the circuit’s voltage gain. Here is another schematic, showing the transistors modeled as controlled current sources, to help you with the equation:</p>
+<p><br /><span class="math">$\epsfbox{03921x02.eps}$</span><br /></p>
+<p><span class="math"><em>Q</em><sub>2</sub></span> operates as a common-emitter amplifier, while <span class="math"><em>Q</em><sub>1</sub></span> does not really act as an amplifier at all (given that no input or output connects to it). The gain equation is as such:</p>
+<p><br /><span class="math">$A_{V(invert)} = {R_C \over {r'_e + (r'_e || R_E)}}$</span><br /></p>
+<p>Follow-up question #1: explain why it is appropriate to simplify the gain equation to this:</p>
+<p><br /><span class="math">$A_{V(invert)} \approx {R_C \over 2r'_e}$</span><br /></p>
+<p>Follow-up question #2: explain why the simplified gain equation is sometimes written with a negative sign in it:</p>
+<p><br /><span class="math">$A_{V(invert)} \approx - {R_C \over 2r'_e}$</span><br /></p>
+<p>The purpose of this question is to have students analyze the resistances in the differential pair circuit to develop their own gain equation, based on their understanding of how simpler transistor amplifier circuit gains are derived. Ultimately, this question should lead into another one asking students to express the <em>differential</em> voltage gain of the circuit (a superposition of the gain equations for each input considered separately).</p>
