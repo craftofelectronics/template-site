@@ -139,3 +139,11 @@
    #:method #"GET"
    #:headers (list (string->bytes/locale (format "apiKey: ~a" (api-key))))
    ))
+
+(require net/url)
+(current-proxy-servers
+   (list (list "http" "127.0.0.1" 8888)))
+(define (test-post)
+  (let-values ([(code headers port)
+                (post "/user/forms" t1)])
+    (port->lines port)))
